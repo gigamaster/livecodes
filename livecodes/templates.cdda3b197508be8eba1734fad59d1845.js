@@ -1768,7 +1768,7 @@ new Vue({
     },
   },
 });
-`.trimStart()},stylesheets:[],scripts:["{{ __CDN_URL__ }}vue@2"],cssPreset:"",imports:{},types:{}};var V={name:"wat",title:"WebAssembly Text Starter",thumbnail:"assets/templates/webassembly.svg",activeEditor:"script",markup:{language:"html",content:`
+`.trimStart()},stylesheets:[],scripts:["{{ __CDN_URL__ }}vue@2"],cssPreset:"",imports:{},types:{}};var V={name:"wat",title:"WebAssembly Text",thumbnail:"assets/templates/webassembly.svg",activeEditor:"script",markup:{language:"html",content:`
 <div class="container">
   <h1>Hello, <span id="title">World</span>!</h1>
   <img class="logo" alt="logo" src="{{ __livecodes_baseUrl__ }}assets/templates/webassembly.svg" />
