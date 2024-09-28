@@ -68,6 +68,11 @@ export const isMobile = /* @__PURE__ */ () => {
   return mobile;
 };
 
+export const isFirefox = /* @__PURE__ */ () => {
+  const userAgent = navigator.userAgent.toLowerCase();
+  return userAgent.includes('firefox') || userAgent.includes('fxios');
+};
+
 export const isRelativeUrl = /* @__PURE__ */ (url?: string) =>
   !url?.startsWith('http') && !url?.startsWith('data:');
 
@@ -454,3 +459,11 @@ export const doOnce = (fn: () => Promise<void>) => {
   let dependency: Promise<void> | undefined;
   return () => (dependency ??= fn());
 };
+
+export const predefinedValues = {
+  APP_VERSION: process.env.VERSION || '',
+  SDK_VERSION: process.env.SDK_VERSION || '',
+  COMMIT_SHA: process.env.GIT_COMMIT || '',
+  REPO_URL: process.env.REPO_URL || '',
+  DOCS_BASE_URL: process.env.DOCS_BASE_URL || '',
+} as const satisfies Record<string, string>;

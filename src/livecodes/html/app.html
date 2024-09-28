@@ -1,8 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     {{codeiumMeta}}
     <title>LiveCodes</title>
     <style>
@@ -39,94 +39,135 @@
   <body>
     <div id="container">
       <div id="toolbar">
-        <div id="logo">
-          <a href="/" title="LiveCodes: Code playground that runs in the browser!"
-            ><img
-              alt="LiveCodes Logo"
-              src="{{baseUrl}}assets/images/livecodes-logo.svg"
-              width="50"
-              loading="lazy"
-          /></a>
+        <div class="toolbar-app">
+          <div class="toolbar-menu">
+            <a
+              href="/"
+              id="logo"
+              title="LiveCodes: Code playground that runs in the browser!"
+              data-i18n="app.logo.title"
+              data-i18n-prop="title"
+            >
+              <img
+                alt="LiveCodes Logo"
+                src="{{baseUrl}}assets/images/livecodes-logo.svg"
+                width="24"
+                height="auto"
+                loading="lazy"
+              />
+            </a>
+            <a
+              href="javascript:void(0)"
+              id="app-menu-button-project"
+              class="menu hint--right"
+              data-hint="Project"
+              data-i18n="app.menuProject.hint"
+              data-i18n-prop="data-hint"
+              aria-label="Project"
+            >
+              <i class="icon-nav"></i>
+              <span class="menu-text" data-i18n="app.menuProject.heading">Project</span>
+            </a>
+            <div id="app-menu-container-project" class="menu-scroller"></div>
+            <a
+              href="javascript:void(0)"
+              id="app-menu-button-settings"
+              class="menu hint--right"
+              data-hint="App Settings"
+              data-i18n="app.menuSettings.hint"
+              data-i18n-prop="data-hint"
+              aria-label="Settings"
+            >
+              <i class="icon-settings"></i>
+              <span class="menu-text" data-i18n="app.menuSettings.heading">Setttings</span>
+            </a>
+            <div id="app-menu-container-settings" class="menu-scroller"></div>
+            <a
+              href="javascript:void(0)"
+              id="app-menu-button-help"
+              class="menu hint--right"
+              data-hint="Help"
+              data-i18n="app.menuHelp.hint"
+              data-i18n-prop="data-hint"
+              aria-label="Help"
+            >
+              <i class="icon-help"></i>
+              <span class="menu-text" data-i18n="app.menuHelp.heading">Help</span>
+            </a>
+            <div id="app-menu-container-help" class="menu-scroller"></div>
+          </div>
+          <div id="select-editor"></div>
         </div>
-        <div id="select-editor"></div>
-        <div id="project-title" contenteditable="true" tabindex="8">Untitled Project</div>
-        <div id="buttons">
+        <div class="toolbar-render">
+          <div>
+            <div
+              id="project-title"
+              contenteditable="true"
+              data-i18n="app.untitledProject"
+            >
+              Untitled Project
+            </div>
+            <a
+              href="javascript:void(0)"
+              id="run-button"
+              class="button hint--bottom"
+              data-hint="Run"
+              data-i18n="app.run.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-run"></i>
+            </a>
+            <a
+              href="javascript:void(0)"
+              id="share-button"
+              class="button hint--bottom"
+              data-hint="Share"
+              data-i18n="app.share.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-share"></i>
+            </a>
+            <div class="enable-motion"></div>
+            <a
+              href="javascript:void(0)"
+              id="result-button"
+              class="button hint--bottom"
+              data-hint="Result"
+              data-i18n="app.result.hint"
+              data-i18n-prop="data-hint"
+            >
+            <i class="icon-result"></i>
+            </a>
+            <a
+              href="javascript:void(0)"
+              id="fullscreen-button"
+              class="button hint--bottom"
+              data-i18n="app.fullscreen.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-full-screen"></i>
+            </a>
+          </div>
           <a
-            href="javascript:void(0)"
-            id="run-button"
-            class="button hint--bottom"
-            data-hint="Run (Shift + Enter)"
-            tabindex="9"
+            href="#"
+            id="login-link"
+            class="menu hint--bottom-left"
+            data-hint="Login"
+            aria-label="Login"
           >
-            <img
-              width="20"
-              height="20"
-              alt="Run"
-              src="{{baseUrl}}assets/images/play.svg"
-              loading="lazy"
-            />
-          </a>
+            <i class="icon-login"></i>
+            <span class="menu-text" data-i18n="menu.login">Login</span></a
+          >
           <a
-            href="javascript:void(0)"
-            id="share-button"
-            class="button hint--bottom"
-            data-hint="Share"
-            tabindex="10"
+            href="#"
+            id="logout-link"
+            class="menu hint--bottom"
+            aria-label="Logout"
+            style="display: none"
           >
-            <img
-              width="20"
-              height="20"
-              alt="Run"
-              src="{{baseUrl}}assets/images/share.svg"
-              loading="lazy"
-            />
-          </a>
-          <a
-            href="javascript:void(0)"
-            id="result-button"
-            class="button hint--bottom"
-            data-hint="Toggle Result"
-            tabindex="11"
+            <i class="logout"></i>
+            <span class="menu-text" data-i18n="menu.logout">Log out</span></a
           >
-            <img
-              width="28"
-              height="28"
-              alt="Result"
-              src="{{baseUrl}}assets/images/document.svg"
-              loading="lazy"
-            />
-          </a>
-          <a
-            href="javascript:void(0)"
-            id="fullscreen-button"
-            class="button hint--bottom"
-            data-hint="Full Screen"
-            tabindex="12"
-          >
-            <img
-              width="28"
-              height="28"
-              alt="Fullscreen"
-              src="{{baseUrl}}assets/images/expand.svg"
-              loading="lazy"
-            />
-          </a>
-          <a
-            href="javascript:void(0)"
-            id="settings-button"
-            class="button"
-            aria-label="Menu"
-            tabindex="13"
-          >
-            <img
-              width="30"
-              height="30"
-              alt="Menu"
-              src="{{baseUrl}}assets/images/menu.svg"
-              loading="lazy"
-            />
-          </a>
-          <div id="settings-menu-container" class="menu-scroller"></div>
         </div>
       </div>
       <div id="editor-container">
@@ -134,60 +175,116 @@
           <div id="markup" class="editor"></div>
           <div id="style" class="editor"></div>
           <div id="script" class="editor"></div>
-
           <div id="editor-tools" class="tool-buttons">
-            <span id="focus-btn" class="hint--top-right" data-hint="Toggle Focus mode">
-              <img src="{{baseUrl}}assets/images/focus.svg" alt="focus" />
-            </span>
-            <span
+            <button
+              type="button"
+              id="focus-btn"
+              class="hint--top-right"
+              data-hint="Toggle Focus mode"
+              data-i18n="app.focus.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-editor-focus"></i>
+            </button>
+            <button
+              type="button"
+              id="format-btn"
+              class="hint--top-right"
+              data-hint="Format (Alt + Shift + F)"
+              data-i18n="app.format.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-editor-format"></i>
+            </button>
+            <button
+              type="button"
+              id="undo-btn"
+              class="hint--top-right"
+              data-hint="Undo (Ctrl/Cmd + Z)"
+              data-i18n="app.undo.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-editor-undo"></i>
+            </button>
+            <button
+              type="button"
+              id="redo-btn"
+              class="hint--top-right"
+              data-hint="Redo (Ctrl/Cmd + Shift + Z)"
+              data-i18n="app.redo.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-editor-redo"></i>
+            </button>
+            <button
+              type="button"
               id="copy-btn"
               class="hint--top-right"
               data-hint="Copy (Ctrl/Cmd + A, Ctrl/Cmd + C)"
+              data-i18n="app.copy.hint"
+              data-i18n-prop="data-hint"
             >
-              <img src="{{baseUrl}}assets/images/copy.svg" alt="copy" />
-            </span>
-            <span id="undo-btn" class="hint--top-right" data-hint="Undo (Ctrl/Cmd + Z)">
-              <img src="{{baseUrl}}assets/images/undo.svg" alt="undo" />
-            </span>
-            <span id="redo-btn" class="hint--top-right" data-hint="Redo (Ctrl/Cmd + Shift + Z)">
-              <img src="{{baseUrl}}assets/images/redo.svg" alt="redo" />
-            </span>
-            <span id="format-btn" class="hint--top-right" data-hint="Format (Alt + Shift + F)">
-              <img src="{{baseUrl}}assets/images/format.svg" alt="format" />
-            </span>
-            <span id="copy-as-url-btn" class="hint--top-right" data-hint="Copy code as data URL">
-              <img src="{{baseUrl}}assets/images/copy-as-url.svg" alt="copy" />
-            </span>
+              <i class="icon-editor-copy"></i>
+            </button>
+            <button
+              type="button"
+              id="copy-as-url-btn"
+              class="hint--top-right"
+              data-hint="Copy code as data URL"
+              data-i18n="app.copyAsUrl.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-editor-copy-url"></i>
+            </button>
             <span id="editor-status">
               <span id="editor-mode" class="hint--top-right" data-hint="Editor Mode"></span>
               <span data-status="markup"></span>
               <span data-status="style"></span>
               <span data-status="script"></span>
             </span>
-            <span id="external-resources-btn" class="hint--top-left" data-hint="External Resources">
-              <img src="{{baseUrl}}assets/images/script-sheet.svg" alt="external resources" />
+            <button
+              type="button"
+              id="external-resources-btn"
+              class="hint--top-left"
+              data-hint="External Resources"
+              data-i18n="app.externalResources.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-editor-external"></i>
               <span id="external-resources-mark" class="mark"></span>
-            </span>
-            <span id="project-info-btn" class="hint--top-left" data-hint="Project Info">
-              <img src="{{baseUrl}}assets/images/info.svg" alt="project info" />
-            </span>
-            <span id="custom-settings-btn" class="hint--top-left" data-hint="Custom Settings">
-              <img src="{{baseUrl}}assets/images/curly-braces.svg" alt="custom settings" />
+            </button>
+            <button
+              type="button"
+              id="project-info-btn"
+              class="hint--top-left"
+              data-hint="Project Info"
+              data-i18n="app.projectInfo.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-editor-project"></i>
+            </button>
+            <button
+              type="button"
+              id="custom-settings-btn"
+              class="hint--top-left"
+              data-hint="Custom Settings"
+              data-i18n="app.customSettings.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-editor-settings-custom"></i>
               <span id="custom-settings-mark" class="mark"></span>
-            </span>
-            <span id="editor-settings-btn" class="hint--top-left" data-hint="Editor Settings">
-              <img src="{{baseUrl}}assets/images/gear.svg" alt="editor settings" />
-            </span>
+            </button>
+            <button
+              type="button"
+              id="editor-settings-btn"
+              class="hint--top-left"
+              data-hint="Editor Settings"
+              data-i18n="app.editorSettings.hint"
+              data-i18n-prop="data-hint"
+            >
+              <i class="icon-editor-settings"></i>
+            </button>
           </div>
-          <button id="code-run-button" class="hint--top-left" data-hint="Run (Shift + Enter)">
-            <img
-              width="20"
-              height="20"
-              alt="Run"
-              src="{{baseUrl}}assets/images/play.svg"
-              loading="lazy"
-            />
-          </button>
         </div>
         <div id="output">
           <div id="result" class="full"></div>
@@ -210,6 +307,135 @@
     <script type="module">
       import { app } from '{{baseUrl}}{{script}}';
       window.app = app;
+    </script>
+    <script
+    src="https://unpkg.com/@yaireo/knobs@latest"
+    crossorigin="anonymous"
+    ></script>
+    <script>
+      window.parent.frames['app'].document.style = "--uifocus: hidden;"
+      var settings = {
+        theme: {
+          flow: 'compact',
+          position: 'bottom right',
+          styles      : `html,body{background:#151718;border:1px solid #252728;border-radius:8px;}.knobs{--toggleSize:32px;--toggleOffset:0;}.knobs>label{padding:4px!important;}#knobsToggle:checked+.knobs[data-position~=bottom]>label{left:.25em;top:.25em!important;}.knobs__groups{margin-top:1rem;!important;}.knobs__controls{width:50%;}.knobs__controls>input{margin:0 auto 0 -.5em;}.poweredBy{display:none}.toggleSection:not(:checked)~.fieldset__group .fieldset__group__wrap{height:var(--height);}`,
+          border      : '2px solid #252728;'
+        },
+        // live: false, // should update immediately (default true)
+        knobsToggle: true,
+        persist: 0, // persist changes using localstorage
+        visible: 0, // 0 - starts as hidden, 1 - starts as visible, 2 - always visible
+        CSSVarTarget: document.querySelector('html'),
+        knobs: [
+          "Monochromatic Color Scheme",
+          {
+            cssVar: ['hue'],
+            label: 'Hue: 0 red, 120 green, 214 blue',
+            type: 'range',
+            value: 214,
+            min: 0,
+            max: 360,
+            onChange: console.log
+          },
+          {
+            cssVar: ['st', '%'],
+            label: 'Saturation',
+            type: 'range',
+            // value: 40,
+            min: 20,
+            max: 100,
+            onChange: console.log
+          },
+          {
+            cssVar: ['lt', '%'],
+            label: 'Lightness',
+            type: 'range',
+            // value: 100,
+            min: 20,
+            max: 100,
+            CSSVarTarget: document.querySelector('html.dark'),
+            onChange: console.log
+          },
+          "Spacing Elements",
+          {
+            cssVar: ['uidir', null, document.body], // document.body document.dir[alias for the CSS variable, units, applies on element]
+            label: 'Direction',
+            type: 'radio',
+            name: 'align-radio-group',
+            options: [
+              { value:'ltr', hidden:true, label: '<svg viewBox="0 0 28 28"><path d="M28 21v2c0 0.547-0.453 1-1 1h-26c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h26c0.547 0 1 0.453 1 1zM22 15v2c0 0.547-0.453 1-1 1h-20c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h20c0.547 0 1 0.453 1 1zM26 9v2c0 0.547-0.453 1-1 1h-24c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h24c0.547 0 1 0.453 1 1zM20 3v2c0 0.547-0.453 1-1 1h-18c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h18c0.547 0 1 0.453 1 1z"></path></svg>' },
+              { value:'rtl', hidden:true, label:'<svg viewBox="0 0 28 28"><path d="M28 21v2c0 0.547-0.453 1-1 1h-26c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h26c0.547 0 1 0.453 1 1zM28 15v2c0 0.547-0.453 1-1 1h-20c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h20c0.547 0 1 0.453 1 1zM28 9v2c0 0.547-0.453 1-1 1h-24c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h24c0.547 0 1 0.453 1 1zM28 3v2c0 0.547-0.453 1-1 1h-18c-0.547 0-1-0.453-1-1v-2c0-0.547 0.453-1 1-1h18c0.547 0 1 0.453 1 1z"></path></svg>' }
+            ],
+            value: 'ltr',
+            defaultValue: 'ltr'
+          },
+          {
+            cssVar: ['font-size', 'px'],
+            label: 'Font Size',
+            type: 'range',
+            value: 16,
+            min: 12,
+            max: 20,
+            onChange: console.log
+          },
+          {
+            cssVar: ['toolbar-height', 'px'],
+            label: 'Toolbar height',
+            type: 'range',
+            value: 42,
+            min: 32,
+            max: 50,
+            onChange: console.log
+          },
+          {
+            isToggled: true,
+            cssVar: ['rl', 'px'],
+            label: 'Radius container (modal)',
+            type: 'range',
+            value: 8,
+            min: 0,
+            max: 16,
+            onChange: console.log
+          },
+          {
+            isToggled: true,
+            cssVar: ['rs', 'px'],
+            label: 'Radius element (button, tab)',
+            type: 'range',
+            value: 4,
+            min: 0,
+            max: 16,
+            onChange: console.log
+          },
+          {
+            isToggled: true,
+            cssVar: ['s4', 'px'],
+            label: 'Spacing ~ padding',
+            type: 'select',
+            options: [[4, '4 default'], 6, 8, 10, 12, 14, 16],
+            value: 4,
+            defaultValue: 4
+          },
+          {
+            isToggled: true,
+            cssVar: ['s8', 'px'],
+            label: 'Spacing ~ margin',
+            type: 'select',
+            options: [4, 6, [8, '8 default'], 10, 12, 14, 16],
+            value: 8,
+            defaultValue: 8
+          },
+          {
+            cssVar: ['uifocus'],
+            label: 'UI Focus',
+            type: 'checkbox',
+            checked: false,
+            value: 'hidden',
+            onChange: console.log
+          }
+        ]
+      }
+      var uiKnobs = new Knobs(settings)
     </script>
   </body>
 </html>
