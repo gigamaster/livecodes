@@ -45,7 +45,7 @@ export async function createPlayground(
   }
 
   const {
-    appUrl = 'https://livecodes.io/',
+    appUrl = 'https://gigamaster.github.io/livecodes/',
     params = {},
     config = {},
     import: importFrom,
@@ -404,7 +404,7 @@ export function getPlaygroundUrl(options: EmbedOptions = {}): string {
       }),
     ),
   ).toString();
-  return (appUrl || 'https://livecodes.io') + (allParams ? '?' + allParams : '');
+  return (appUrl || 'https://gigamaster.github.io/livecodes/') + (allParams ? '?' + allParams : '');
 }
 
 if (

@@ -9,7 +9,7 @@ export const codeium = (editors: CodeiumEditor[], mapLanguage: (lang: string) =>
       editors.map((editor) => {
         const language = editor.getLanguage();
         return {
-          absolutePath: `https://livecodes.io/v/${editor.editorId}/${language}`,
+          absolutePath: `https://gigamaster.github.io/livecodes/v/${editor.editorId}/${language}`,
           text: editor.getValue(),
           language:
             Language[mapLanguage(language).toUpperCase() as keyof typeof Language] ||

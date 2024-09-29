@@ -1622,13 +1622,13 @@ pre[class*='language-'].line-numbers > code {
 
 /* codejar */
 .line-numbers .line-numbers-rows {
+  border-right: 1px solid #999;
   font-size: 100%;
   left: -3.8em;
   letter-spacing: -1px; /* works for line-numbers below 1000 lines */
   pointer-events: none;
   position: absolute;
   top: 0;
-  border-right: 1px solid #999;
   user-select: none;
   width: 3em;
 }
