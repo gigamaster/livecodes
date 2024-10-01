@@ -323,7 +323,7 @@ declare module 'livecodes/models' {
                 * (e.g. a [self-hosted app](https://livecodes.io/docs/features/self-hosting) or a [permanent URL](https://livecodes.io/docs/features/permanent-url)).
                 *
                 * If supplied with an invalid URL, an error is thrown.
-                * @default 'https://gigamaster.github.io/livecodes'
+                * @default 'https://gigamaster.github.io/livecodes/'
                 */
             appUrl?: string;
             /**
@@ -1122,7 +1122,7 @@ declare module 'livecodes/models' {
             xml?: string;
             js?: string;
     }
-    export type AppLanguage = 'auto' | 'en' | 'zh-CN';
+    export type AppLanguage = 'auto' | 'ar' | 'de' | 'en' | 'es' | 'fr' | 'hi' | 'it' | 'ja' | 'pt' | 'ru' | 'ur' | 'zh-CN';
     export interface User {
             uid: string;
             token: string | null;

@@ -298,7 +298,7 @@ declare module "sdk/models" {
          * (e.g. a [self-hosted app](https://livecodes.io/docs/features/self-hosting) or a [permanent URL](https://livecodes.io/docs/features/permanent-url)).
          *
          * If supplied with an invalid URL, an error is thrown.
-         * @default 'https://gigamaster.github.io/livecodes'
+         * @default 'https://gigamaster.github.io/livecodes/'
          */
         appUrl?: string;
         /**
@@ -1097,7 +1097,7 @@ declare module "sdk/models" {
         xml?: string;
         js?: string;
     }
-    export type AppLanguage = 'auto' | 'en' | 'zh-CN';
+    export type AppLanguage = 'auto' | 'ar' | 'de' | 'en' | 'es' | 'fr' | 'hi' | 'it' | 'ja' | 'pt' | 'ru' | 'ur' | 'zh-CN';
     export interface User {
         uid: string;
         token: string | null;
@@ -3924,7 +3924,7 @@ declare module "livecodes/i18n/models" {
      * @param isNs Whether it is a namespace.
      */
     type InferKeys<Base, isNs extends boolean = false, KeyStr extends string = ''> = {
-        [K in keyof Base]: Base[K] extends object ? KeyStr extends '' ? InferKeys<Base[K], true, `${K & string}`> : KeyStr extends CustomTypeOptions['defaultNS'] ? InferKeys<Base[K], false, `${KeyStr}${isNs extends true ? ':' : '.'}${K & string}`> | InferKeys<Base[K], false, `${K & string}`> : InferKeys<Base[K], false, `${KeyStr}${isNs extends true ? ':' : '.'}${K & string}`> : `${KeyStr}${KeyStr extends '' ? '' : '.'}${K & string}`;
+        [K in keyof Base]: Base[K] extends Record<string, unknown> ? KeyStr extends '' ? InferKeys<Base[K], true, `${K & string}`> : KeyStr extends CustomTypeOptions['defaultNS'] ? InferKeys<Base[K], false, `${KeyStr}${isNs extends true ? ':' : '.'}${K & string}`> | InferKeys<Base[K], false, `${K & string}`> : InferKeys<Base[K], false, `${KeyStr}${isNs extends true ? ':' : '.'}${K & string}`> : `${KeyStr}${KeyStr extends '' ? '' : '.'}${K & string}`;
     }[keyof Base];
     /**
      * Extract all interpolations from the given string.
@@ -3988,7 +3988,7 @@ declare module "livecodes/i18n/utils" {
 }
 declare module "livecodes/i18n/i18n" {
     import type { I18nInterpolationType, I18nKeyType, I18nValueType } from "livecodes/i18n/models";
-    export const init: (lng: string | undefined, baseUrl: string) => {
+    export const init: (lng: string | undefined, baseUrl: string) => Promise<{
         translate: (container: HTMLElement) => void;
         translateString: <Key extends I18nKeyType, Value extends string>(key: Key, value: I18nValueType<Key, Value>, ...args: I18nInterpolationType<Value>) => string;
         translateKey: import("i18next").TFunction<["translation", ..."lang-info"[]], undefined>;
@@ -3996,7 +3996,7 @@ declare module "livecodes/i18n/i18n" {
         getLanguageDirection: (lng?: string | undefined) => "ltr" | "rtl";
         changeLanguage: (lng?: string | undefined, callback?: import("i18next").Callback | undefined) => Promise<import("i18next").TFunction<"translation", undefined>>;
         loadNamespaces: (ns: string | readonly string[], callback?: import("i18next").Callback | undefined) => Promise<void>;
-    };
+    }>;
 }
 declare module "livecodes/i18n/locales/en/translation" {
     const translation: {
@@ -7193,6 +7193,11561 @@ declare module "livecodes/i18n/locales/ar/language-info" {
 declare module "livecodes/i18n/locales/ar/translation" {
     import type { I18nTranslation } from "livecodes/i18n/locales/models";
     const translation: I18nTranslation;
+    export default translation;
+}
+declare module "livecodes/i18n/locales/de/language-info" {
+    const languageInfo: {
+        readonly artTemplate: {
+            readonly desc: "High performance JavaScript templating engine.";
+            readonly link: "<1> <2>art-template official website</2> </1> <3> <4>art-template documentation</4> </3>";
+            readonly name: "art-template";
+        };
+        readonly asciidoc: {
+            readonly desc: "AsciiDoc compiled to HTML using Asciidoctor.";
+            readonly link: "<1> <2>AsciiDoc official website</2> </1> <3> <4>Asciidoctor official website</4> </3> <5> <6>Asciidoctor documentation</6> </5> <7> <8>Learn X in Y minutes, where X=asciidoc</8> </7>";
+            readonly name: "AsciiDoc";
+        };
+        readonly assemblyscript: {
+            readonly desc: "A TypeScript-like language for WebAssembly.";
+            readonly link: "<1> <2>AssemblyScript official website</2> </1> <3> <4>AssemblyScript documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "AssemblyScript";
+        };
+        readonly astro: {
+            readonly desc: "Build faster websites with less client-side Javascript. (Still in Beta)";
+            readonly link: "<1> <2>Astro official website</2> </1> <3> <4>Astro documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Astro";
+        };
+        readonly babel: {
+            readonly desc: "The JavaScript compiler";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Babel documentation</4> </3>";
+            readonly name: "Babel";
+        };
+        readonly bbcode: {
+            readonly desc: "BBCode (\"Bulletin Board Code\") is a lightweight markup language used to format messages in many Internet forum software.";
+            readonly link: "<1><2>bbcode.org</2></1> <3> <4>BBCode guide</4> </3> <5> <6>BBCode on Wikipedia</6> </5>";
+            readonly name: "BBCode";
+        };
+        readonly blockly: {
+            readonly desc: "A JavaScript library for building visual programming editors.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>Guides</4> </3> <5> <6>Reference</6> </5> <7> <8>Samples</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Blockly";
+        };
+        readonly civet: {
+            readonly desc: "Civet is a programming language that compiles to TypeScript or JavaScript, so you can use existing tooling but enable concise and powerful syntax.";
+            readonly link: "<1> <2>Civet official website</2> </1> <3> <4>Civet cheatsheet</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Civet";
+        };
+        readonly clio: {
+            readonly desc: "Clio is a fast, distributed, functional programming language that compiles to JavaScript.";
+            readonly link: "<1> <2>Clio official website</2> </1> <3> <4>Clio documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Clio";
+        };
+        readonly clojurescript: {
+            readonly desc: "ClojureScript is a compiler for <1>Clojure</1> that targets JavaScript. <2></2>In LiveCodes, it runs in the browser using <3>Cherry</3>.";
+            readonly link: "<1> <2>ClojureScript official website</2> </1> <3> <4>Clojure official website</4> </3> <5> <6>Cherry repo</6> </5> <7> <8>Learn X in Y minutes, where X=clojure</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "ClojureScript (CLJS)";
+        };
+        readonly coffeescript: {
+            readonly desc: "Unfancy JavaScript.";
+            readonly link: "<1> <2>CoffeeScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=coffeescript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "CoffeeScript";
+        };
+        readonly commonlisp: {
+            readonly desc: "A Common Lisp implementation on Javascript using JSCL (a Lisp-to-Javascript compiler bootstrapped from Common Lisp).";
+            readonly link: "<1> <2>Common-Lisp.net</2> </1> <3> <4>JSCL Project</4> </3> <5> <6>Common Lisp Resources</6> </5> <7> <8>Learn X in Y minutes, where X=Common Lisp</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Common Lisp";
+        };
+        readonly cpp: {
+            readonly desc1: "C++ support using JSCPP (a simple C++ interpreter written in JavaScript).";
+            readonly desc2: "It is not a complete implementation of C++. Please refer to <1>JSCPP documentation</1> for details.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>JSCPP</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C++";
+        };
+        readonly cppWasm: {
+            readonly desc: "Clang C/C++ compiler running on WebAssembly, using <1>wasm-clang</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>Clang official website</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C/C++ (Wasm)";
+        };
+        readonly diagrams: {
+            readonly desc1: "(Experimental)";
+            readonly desc2: "Diagrams-as-code. Supports:";
+            readonly desc3: "<1> <2>Cytoscape</2> </1> <3> <4>ELK</4> (using <5>elkjs</5>) </3> <6> <7>Gnuplot</7> (using <8>gnuplot-JS</8>) </6> <9> <10>Graphviz</10> (using <11>@hpcc-js/wasm</11>) </9> <12> <13>Mermaid</13> </12> <14> <15>Nomnoml</15> </14> <16> <17>Pintora</17> </16> <18> <19>Plotly</19> </18> <20> <21>Svgbob</21> </20> <22> <23>Vega</23> </22> <24> <25>VegaLite</25> </24> <26> <27>WaveDrom</27> </26>";
+            readonly link: "<1> <2>Load starter template</2> </1> <3> <4>LiveCodes Documentation</4> </3>";
+            readonly name: "Diagrams";
+        };
+        readonly dot: {
+            readonly desc: "The fastest + concise javascript template engine for Node.js and browsers.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "doT.js";
+        };
+        readonly ejs: {
+            readonly desc: "Embedded JavaScript templating.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "EJS";
+        };
+        readonly eta: {
+            readonly desc: "Embedded JS template engine for Node, Deno, and the browser. Lighweight, fast, and pluggable. Written in TypeScript.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Eta";
+        };
+        readonly fennel: {
+            readonly desc: "Fennel is a programming language that brings together the speed, simplicity, and reach of Lua with the flexibility of a lisp syntax and macro system.";
+            readonly link: "<1> <2>Fennel official website</2> </1> <3> <4>Getting Started with Fennel</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Fennel";
+        };
+        readonly flow: {
+            readonly desc: "Flow is a static type checker for JavaScript.";
+            readonly link: "<1> <2>Flow official website</2> </1> <3> <4>Flow documentation</4> </3>";
+            readonly name: "Flow";
+        };
+        readonly gleam: {
+            readonly desc1: "Gleam is a friendly language for building type-safe systems that scale!";
+            readonly desc2: "Gleam is a statically-typed functional programming language, which compiles to Erlang or JavaScript.";
+            readonly link: "<1><2>Gleam website</2></1> <3> <4>Gleam documentation</4> </3> <5> <6>Gleam language tour</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Gleam";
+        };
+        readonly go: {
+            readonly desc1: "Go (Golang) is an open source programming language that makes it easy to build simple, reliable, and efficient software.";
+            readonly desc2: "Here, it is compiled to JavaScript using GopherJS.";
+            readonly link: "<1><2>Go website</2></1> <3><4>Go documentation</4></3> <5> <6>GopherJS repo</6> </5> <7> <8>Learn X in Y minutes, where X=Go</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Go";
+        };
+        readonly haml: {
+            readonly desc: "Haml compiler for client side javascript view templates using clientside-haml-js.";
+            readonly link: "<1><2>Haml official website</2></1> <3> <4>Haml documentation</4> </3> <5> <6>clientside-haml-js GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=haml</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Haml";
+        };
+        readonly handlebars: {
+            readonly desc: "Minimal templating on steroids.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Handlebars";
+        };
+        readonly imba: {
+            readonly desc: "The friendly full-stack language.";
+            readonly link: "<1><2>Official website</2></1>";
+            readonly name: "Imba";
+        };
+        readonly jsx: {
+            readonly desc: "JSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler.  By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "JSX";
+        };
+        readonly julia: {
+            readonly desc1: "(Julia language support in LiveCodes is still experimental)";
+            readonly desc2: "Julia compiler and Julia Base running on WASM, using <1>julia-wasm</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Julia official website</2> </1> <3> <4>Julia documentation</4> </3> <5> <6>Learn X in Y minutes, where X=Julia</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Julia";
+        };
+        readonly less: {
+            readonly desc: "It's CSS, with just a little more.";
+            readonly link: "<1><2>Less official website</2></1> <3> <4>Learn X in Y minutes, where X=less</4> </3>";
+            readonly name: "Less";
+        };
+        readonly liquid: {
+            readonly desc: "A simple, expressive and safe template engine.";
+            readonly link: "<1> <2>LiquidJS official website</2> </1> <3> <4>LiquidJS documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "LiquidJS";
+        };
+        readonly livescript: {
+            readonly desc: "A language which compiles to JavaScript.";
+            readonly link: "<1> <2>LiveScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=LiveScript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "LiveScript";
+        };
+        readonly lua: {
+            readonly desc: "Lua running in the browser using fengari-web.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Fengari official website</6> </5> <7> <8>fengari-web GitHub repo</8> </7> <9> <10>Learn X in Y minutes, where X=Lua</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "Lua";
+        };
+        readonly luaWasm: {
+            readonly desc: "Lua running in the browser using Wasmoon, a real lua 5.4 VM with JS bindings made with WebAssembly.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Wasmoon GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=Lua</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Lua (Wasm)";
+        };
+        readonly malina: {
+            readonly desc: "Frontend compiler, inspired by Svelte.";
+            readonly link: "<1> <2>Malina.js repo</2> </1> <3> <4>Malina.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Malina.js";
+        };
+        readonly markdown: {
+            readonly desc: "Markdown compiled to HTML using Marked.";
+            readonly link: "<1> <2>Markdown official website</2> </1> <3> <4>Marked documentation</4> </3> <5> <6>Learn X in Y minutes, where X=markdown</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Markdown";
+        };
+        readonly mdx: {
+            readonly desc: "Markdown for the component era. <1></1>MDX lets you seamlessly write JSX in your Markdown documents.";
+            readonly link: "<1><2>MDX documentation</2></1> <3><4>Load starter template</4></3>";
+            readonly name: "MDX";
+        };
+        readonly mjml: {
+            readonly desc: "MJML is a markup language designed to reduce the pain of coding a responsive email.";
+            readonly link: "<1><2>MJML official website</2></1> <3> <4>MJML documentation</4> </3> <5> <6>MJML official templates</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "MJML";
+        };
+        readonly mustache: {
+            readonly desc: "Logic-less templates.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>mustache(5) manual</4> </3> <5> <6>JavaScript implementation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "Mustache";
+        };
+        readonly nunjucks: {
+            readonly desc: "A rich and powerful templating language for JavaScript. Nunjucks is essentially a port of <1>jinja2</1>.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Nunjucks";
+        };
+        readonly ocaml: {
+            readonly desc1: "OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles.";
+            readonly desc2: "ReScript compiler is used here to compile OCaml to JavaScript.";
+            readonly link: "<1><2>OCaml website</2></1> <3> <4>OCaml documentation</4> </3> <5> <6>ReScript website</6> </5> <7> <8>Learn X in Y minutes, where X=OCaml</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "OCaml";
+        };
+        readonly perl: {
+            readonly desc: "Perl running in the browser using Perlito.";
+            readonly link: "<1> <2>Perl official website</2> </1> <3> <4>Perl documentation</4> </3> <5> <6>Perlito5 Readme</6> </5> <7> <8>Learn X in Y minutes, where X=perl</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Perl";
+        };
+        readonly php: {
+            readonly desc: "PHP running in the browser using Uniter.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>Uniter GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11><12>Load starter template</12></11>";
+            readonly name: "PHP";
+        };
+        readonly phpWasm: {
+            readonly desc: "PHP in Browser, powered by WebAssembly, using php-wasm.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>php-wasm GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "PHP (Wasm)";
+        };
+        readonly postgresql: {
+            readonly desc: "PostgreSQL packaged as WASM using PGlite";
+            readonly link: "<1> <2>PostgreSQL official website</2> </1> <3> <4>PostgreSQL documentation</4> </3> <5> <6>PGlite GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "PostgreSQL";
+        };
+        readonly prolog: {
+            readonly desc: "An open source Prolog interpreter in JavaScript.";
+            readonly link: "<1> <2>Tau Prolog official website</2> </1> <3> <4>Tau Prolog documentation</4> </3> <5> <6>SWI-Prolog</6> </5> <7> <8>Learn X in Y minutes, where X=Prolog</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Tau Prolog";
+        };
+        readonly pug: {
+            readonly desc: "Robust, elegant, feature rich template engine.";
+            readonly link: "<1> <2>Pug documentation</2> </1> <3> <4>Learn X in Y minutes, where X=Pug</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Pug";
+        };
+        readonly python: {
+            readonly desc: "Python running in the browser using Brython.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5> <6>Brython documentation</6> </5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python";
+        };
+        readonly pythonWasm: {
+            readonly desc1: "Python with the scientific stack, compiled to WebAssembly using Pyodide.";
+            readonly desc2: "Pyodide allows using Python scientific stack including NumPy, Pandas, Matplotlib, SciPy, scikit-learn and many more. In addition it’s possible to install pure Python wheels from PyPi.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5><6>Pyodide documentation</6></5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python (Wasm)";
+        };
+        readonly r: {
+            readonly desc: "R running in the browser using WebR.";
+            readonly link: "<1> <2>R project official website</2> </1> <3> <4>The R Manuals</4> </3> <5> <6>R for Data Science (2e)</6> </5> <7> <8>WebR documentation</8> </7> <9> <10>Learn X in Y minutes, where X=R</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "R";
+        };
+        readonly reactNative: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "React Native for Web";
+        };
+        readonly reactNativeTsx: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>TypeScript website</10> </9> <11> <12>TypeScript documentation</12> </11> <13> <14>LiveCodes Documentations</14> </13> <15> <16>Load starter template (JSX)</16> </15>";
+            readonly name: "React Native for Web (with TypeScript)";
+        };
+        readonly reason: {
+            readonly desc1: "Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.";
+            readonly desc2: "ReScript compiler is used here to compile Reason to JavaScript.";
+            readonly link: "<1><2>Reason website</2></1> <3> <4>Reason documentation</4> </3> <5> <6>ReasonReact</6> </5> <7> <8>ReScript website</8> </7> <9> <10>Learn X in Y minutes, where X=reason</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Reason";
+        };
+        readonly rescript: {
+            readonly desc: "ReScript is a robustly typed language that compiles to efficient and human-readable JavaScript.";
+            readonly link: "<1> <2>ReScript website</2> </1> <3> <4>ReScript / React</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "ReScript";
+        };
+        readonly richtext: {
+            readonly desc1: "Using Quill:";
+            readonly desc2: "Your powerful rich text editor.";
+            readonly link: "<1> <2>Quill official website</2> </1>";
+            readonly name: "Rich Text Editor";
+        };
+        readonly riot: {
+            readonly desc: "Simple and elegant component-based UI library.";
+            readonly link: "<1> <2>Riot.js official website</2> </1> <3> <4>Riot.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Riot.js";
+        };
+        readonly ruby: {
+            readonly desc: "Ruby running in the browser using Opal.";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5><6>Opal official website</6></5> <7> <8>Opal standard library CDN</8> </7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby";
+        };
+        readonly rubyWasm: {
+            readonly desc: "Ruby running in the browser using ruby-wasm (a collection of WebAssembly ports of the CRuby).";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5> <6>ruby.wasm website</6> </5> <7><8>CRuby</8></7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby (WASM)";
+        };
+        readonly sass: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>Sass (the indented) syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "Sass";
+        };
+        readonly scheme: {
+            readonly desc: "Scheme running in the browser using biwascheme.";
+            readonly link: "<1> <2>The Scheme Programming Language</2> </1> <3> <4>BiwaScheme official website</4> </3> <5> <6>BiwaScheme reference</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Scheme";
+        };
+        readonly scss: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>SCSS syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "SCSS";
+        };
+        readonly solid: {
+            readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+            readonly link: "<1><2>Official website</2></1> <3><4>Documentation</4></3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template (TSX)</8> </7>";
+            readonly name: "Solid";
+            readonly tsx: {
+                readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+                readonly link: "<1><2>Official website</2></1> <3> <4>Solid documentation</4> </3> <5> <6>TypeScript website</6> </5> <7> <8>TypeScript documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+                readonly name: "Solid (with TypeScript)";
+            };
+        };
+        readonly sql: {
+            readonly desc: "SQLite compiled to JavaScript using SQL.js";
+            readonly link: "<1> <2>SQLite official website</2> </1> <3> <4>SQLite syntax documentation</4> </3> <5> <6>SQL.js official website</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "SQLite";
+        };
+        readonly stencil: {
+            readonly desc: "A Compiler for Web Components and High Performance Web Apps.";
+            readonly link: "<1> <2>Stencil official website</2> </1> <3> <4>Stencil documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Stencil";
+        };
+        readonly styleProcessors: {
+            readonly link: "<1> <2>Tailwind CSS</2> </1> <3> <4>Windi CSS</4> </3> <5> <6>UnoCSS</6> </5> <7> <8>Lightning CSS</8> </7> <9> <10>PostCSS</10> Plugins: <11> <12> <13>Autoprefixer</13> </12> <14> <15>postcss-preset-env</15> </14> <16> <17>postcss-import-url</17> </16> <18> <19>postcss-modules</19> </18> </11> </9>";
+            readonly name: "CSS Frameworks and Processors";
+        };
+        readonly stylis: {
+            readonly desc: "Light-weight css preprocessor.";
+            readonly link: "<1> <2>Stylis official website</2> </1>";
+            readonly name: "Stylis";
+        };
+        readonly stylus: {
+            readonly desc: "Expressive, Dynamic, Robust CSS.";
+            readonly link: "<1> <2>Stylus official website</2> </1> <3> <4>Learn X in Y minutes, where X=stylus</4> </3>";
+            readonly name: "Stylus";
+        };
+        readonly sucrase: {
+            readonly desc: "Super-fast alternative to Babel for when you can target modern JS runtimes.";
+            readonly link: "<1> <2>Sucrase official website</2> </1> <3> <4>Sucrase GitHub Repo</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Sucrase";
+        };
+        readonly svelte: {
+            readonly desc: "Cybernetically enhanced web apps.";
+            readonly link: "<1> <2>Svelte official website</2> </1> <3> <4>Svelte documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Svelte";
+        };
+        readonly tcl: {
+            readonly desc: "Tcl running in the browser, using <1>wacl</1>.";
+            readonly link: "<1> <2>Tcl official website</2> </1> <3> <4>wacl repo</4> </3> <5> <6>Learn X in Y minutes, where X=Tcl</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Tcl (Tool Command Language)";
+        };
+        readonly teal: {
+            readonly desc: "A typed dialect of Lua.";
+            readonly link: "<1> <2>Teal GitHub repo</2> </1> <3> <4>Teal docs</4> </3> <5> <6>Teal tutorial</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Teal";
+        };
+        readonly tsx: {
+            readonly desc: "TypeScript in JSX. TSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler. By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>Typescript documentation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "TSX";
+        };
+        readonly twig: {
+            readonly desc: "A JavaScript implementation of the <1>Twig</1> PHP templating language by <2>Twig.js</2> .";
+            readonly link: "<1> <2>Twig official website</2> </1> <3> <4>Twig Documentation</4> </3> <5> <6>Twig.js Repo</6> </5> <7> <8>Twig.js Documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Twig";
+        };
+        readonly typescript: {
+            readonly desc: "A Typed Superset of JavaScript.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>TypeScript documentation</4> </3> <5> <6>Learn X in Y minutes, where X=TypeScript</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "TypeScript";
+        };
+        readonly vue: {
+            readonly link: "<1> <2>Vue.js v3 official website</2> </1> <3> <4>Vue3 documentation</4> </3> <5> <6>Vue3 single file components</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Vue3 Single File Components";
+        };
+        readonly vue2: {
+            readonly desc: "Loaded using vue3-sfc-loader.";
+            readonly link: "<1><2>Vue.js official website</2></1> <3> <4>Vue2 documentation</4> </3> <5> <6>Vue2 single file components</6> </5> <7> <8>vue3-sfc-loader GitHub repo</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Vue2 Single File Components";
+        };
+        readonly wat: {
+            readonly desc1: "Low-level textual representation of the WebAssembly (wasm) binary format.";
+            readonly desc2: "It is converted to wasm using wabt.js.";
+            readonly link: "<1><2>WebAssembly.org</2></1> <3> <4>WebAssembly Text Specs</4> </3> <5> <6>WebAssembly on MDN</6> </5> <7> <8>Understanding WebAssembly text format</8> </7> <9> <10>wabt.js documentation</10> </9> <11> <12>Learn X in Y minutes, where X=WebAssembly</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "WebAssembly Text Format";
+        };
+    };
+    export default languageInfo;
+}
+declare module "livecodes/i18n/locales/de/translation" {
+    const translation: {
+        readonly about: {
+            readonly documentations: {
+                readonly aboutUs: "About us";
+                readonly contact: "Contact";
+                readonly heading: "Documentations";
+                readonly home: "Home";
+                readonly license: "License";
+            };
+            readonly heading: "About LiveCodes";
+            readonly livecodes: {
+                readonly para1: "<1><2>LiveCodes</2></1> is an <3>open-source</3>, <4>feature-rich</4>, <5>client-side</5> code playground. Currently, <6>80+ languages/<7></7>frameworks</6> are supported. It can be used as a standalone app or can be <8>embedded</8> in any web page. There are many ways to <9>prefill playgrounds</9> with code.";
+                readonly para2: "A wide range of <1>configuration options</1> makes it very flexible. A powerful <2>SDK</2> (for <3>JS/TS</3>, <4>React</4>, <5>Vue</5> and <6>Svelte</6>) facilitates <7>embedding</7> and <8>communicating</8> with playgrounds. <9>Comprehensive documentations</9> are available with code samples, live demos and screenshots.";
+            };
+            readonly version: {
+                readonly app: "App version: {{APP_VERSION}}";
+                readonly appPermanentUrl: "App Permanent URL";
+                readonly commit: "Git commit: {{COMMIT_SHA}}";
+                readonly heading: "Version";
+                readonly sdk: "SDK version: {{SDK_VERSION}}";
+                readonly sdkPermanentUrl: "SDK Permanent URL";
+            };
+        };
+        readonly app: {
+            readonly copy: {
+                readonly hint: "Copy (Ctrl/Cmd + A, Ctrl/Cmd + C)";
+            };
+            readonly copyAsUrl: {
+                readonly hint: "Copy code as data URL";
+            };
+            readonly customSettings: {
+                readonly hint: "Custom Settings";
+            };
+            readonly editorMode: {
+                readonly hint: "Editor Mode";
+            };
+            readonly editorSettings: {
+                readonly hint: "Editor Settings";
+            };
+            readonly externalResources: {
+                readonly hint: "External Resources";
+            };
+            readonly focus: {
+                readonly hint: "Toggle Focus mode";
+            };
+            readonly format: {
+                readonly hint: "Format (Alt + Shift + F)";
+            };
+            readonly fullscreen: {
+                readonly hint: "Full Screen";
+            };
+            readonly logo: {
+                readonly title: "LiveCodes: Code playground that runs in the browser!";
+            };
+            readonly projectInfo: {
+                readonly hint: "Project Info";
+            };
+            readonly redo: {
+                readonly hint: "Redo (Ctrl/Cmd + Shift + Z)";
+            };
+            readonly result: {
+                readonly hint: "Toggle Result";
+            };
+            readonly run: {
+                readonly hint: "Run (Shift + Enter)";
+            };
+            readonly share: {
+                readonly hint: "Share";
+            };
+            readonly undo: {
+                readonly hint: "Undo (Ctrl/Cmd + Z)";
+            };
+            readonly untitledProject: "Untitled Project";
+        };
+        readonly assets: {
+            readonly add: {
+                readonly dataURL: {
+                    readonly desc: "Add asset as a base64-encoded <1>data url</1>.";
+                    readonly heading: "Data URL";
+                    readonly label: "Add file";
+                };
+                readonly githubPages: {
+                    readonly desc: "Deploy asset to GitHub Pages. The file is pushed to <1>gh-pages</1> branch of the repo <2>livecodes-assets</2> on your GitHub account. If the repo does not already exist, a public repo will be created.";
+                    readonly heading: "GitHub Pages";
+                    readonly label: "Upload file";
+                };
+                readonly heading: "Add Asset";
+            };
+            readonly delete: {
+                readonly all: "Delete {{assets}} assets?";
+                readonly one: "Delete asset: {{asset}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly generic: {
+                readonly clickToCopyURL: "Click to copy URL";
+            };
+            readonly heading: "Assets";
+            readonly link: {
+                readonly date: "Date: {{modified}}";
+                readonly type: "Type: {{type}}";
+                readonly url: "URL: {{url}}";
+            };
+            readonly loadFile: {
+                readonly error: {
+                    readonly failedToUpload: "Error: Failed to upload file";
+                    readonly unauthenticated: "Error: Unauthenticated user";
+                };
+                readonly upload: "Upload file";
+                readonly uploading: "Uploading...";
+            };
+            readonly noMatch: "No assets match these filters.";
+            readonly noSavedAssets: "You have no saved assets.";
+            readonly processAsset: {
+                readonly addFile: "Added file: ";
+                readonly deployNotice: "The asset should be available on this URL soon (~1 min).";
+                readonly success: "File added to assets!";
+                readonly urlLabel: "URL: ";
+            };
+            readonly resetFilters: "Reset";
+            readonly search: "Search";
+            readonly sort: {
+                readonly date: "Date";
+                readonly fileName: "File Name";
+                readonly heading: "Sort By:";
+            };
+            readonly type: {
+                readonly archive: "Archive";
+                readonly audio: "Audio";
+                readonly csv: "CSV";
+                readonly font: "Font";
+                readonly html: "HTML";
+                readonly icon: "Icon";
+                readonly image: "Image";
+                readonly json: "JSON";
+                readonly other: "Other";
+                readonly script: "Script";
+                readonly stylesheet: "Stylesheet";
+                readonly text: "Text";
+                readonly video: "Video";
+                readonly xml: "XML";
+            };
+            readonly types: {
+                readonly all: "All types";
+            };
+            readonly url: {
+                readonly fail: "Failed to copy URL.";
+                readonly success: "URL is copied to clipboard.";
+            };
+        };
+        readonly backup: {
+            readonly backup: {
+                readonly assets: "Assets";
+                readonly button: "Backup";
+                readonly desc: "Backup LiveCodes data, so that it can be later restored on this or other devices. <1></1> Please visit the <2>documentations</2> for details.";
+                readonly heading: "Backup";
+                readonly projects: "Projects";
+                readonly settings: "User Settings";
+                readonly snippets: "Code Snippets";
+                readonly templates: "User Templates";
+            };
+            readonly backupBtn: "Backup";
+            readonly error: {
+                readonly atLeastOneStore: "Please select at least one store to backup";
+                readonly incorrectFileType: "Error: Incorrect file type";
+            };
+            readonly fileInputLabel: "Restore from file";
+            readonly heading: "Backup / Restore";
+            readonly inProgress: "In progress...";
+            readonly restore: {
+                readonly desc: "Restore previously backed-up LiveCodes data. <1></1> If you choose to replace current content, you may want to back it up first. <2></2> Please visit the <3>documentations</3> for details.";
+                readonly fromFile: "Restore from file";
+                readonly heading: "Restore";
+                readonly mode: {
+                    readonly merge: "Merge with current content";
+                    readonly replace: "Replace current content";
+                };
+                readonly success: "Restored Successfully!";
+            };
+        };
+        readonly broadcast: {
+            readonly broadcastBtn: {
+                readonly start: "Broadcast";
+                readonly stop: "Stop broadcast";
+            };
+            readonly broadcasting: "Broadcasting...";
+            readonly channelURL: "Channel URL";
+            readonly connecting: "Connecting...";
+            readonly desc: "Broadcast the result page to other browsers/devices in real time. Please visit the <1>documentations</1> for details.";
+            readonly error: {
+                readonly generic: "Broadcast failed!";
+                readonly serverURLRequired: "Server URL is required!";
+            };
+            readonly heading: "Broadcast";
+            readonly includeSourceCode: "Include source code";
+            readonly serverURL: {
+                readonly heading: "Server URL";
+            };
+        };
+        readonly core: {
+            readonly broadcast: {
+                readonly heading: "Broadcast";
+                readonly successSetToken: "Broadcast user token set successfully";
+            };
+            readonly changeLanguage: {
+                readonly hint: "Change Language";
+                readonly message: "Loading {{lang}}. This may take a while!";
+            };
+            readonly copy: {
+                readonly copied: "Code copied to clipboard";
+                readonly copiedAsDataURL: "Code copied as data URL";
+                readonly hint: "Copied!";
+                readonly title: "Copy";
+            };
+            readonly error: {
+                readonly couldNotLoadTemplate: "Could not load template: {{template}}";
+                readonly failedToCopyCode: "Failed to copy code";
+                readonly failedToLoadTemplate: "Failed loading template";
+                readonly failedToLoadTemplates: "Failed loading starter templates";
+                readonly failedToParseSettings: "Failed parsing settings as JSON";
+                readonly invalidCommand: "Invalid command!";
+                readonly invalidImport: "Invalid import URL";
+                readonly invalidPanelId: "Invalid panel id";
+                readonly invalidToken: "Invalid token!";
+                readonly login: "Login error!";
+                readonly logout: "Logout error!";
+                readonly noResultContainer: "Result container not found";
+                readonly unavailable: "Command unavailable";
+                readonly unavailableForEmbeds: "Command unavailable for embeds";
+            };
+            readonly export: {
+                readonly gist: "Creating a public GitHub gist...";
+            };
+            readonly fork: {
+                readonly success: "Forked as a new project";
+            };
+            readonly fullScreen: {
+                readonly enter: "Full Screen";
+                readonly exit: "Exit Full Screen";
+            };
+            readonly import: {
+                readonly loading: "Loading Project...";
+            };
+            readonly layout: {
+                readonly horizontal: "Horizontal layout";
+                readonly responsive: "Responsive layout";
+                readonly vertical: "Vertical layout";
+            };
+            readonly loadDefaults: {
+                readonly template: "Loading default template";
+            };
+            readonly login: {
+                readonly success: "Logged in successfully";
+                readonly successWithName: "Logged in as: {{name}}";
+            };
+            readonly logout: {
+                readonly success: "Logged out successfully";
+            };
+            readonly result: {
+                readonly hint: "Show result in new window";
+            };
+            readonly save: {
+                readonly success: "Project locally saved to device!";
+                readonly successWithName: "Project \"{{name}}\" saved to device.";
+            };
+            readonly template: {
+                readonly blank: "Blank Project";
+                readonly delete: "Delete template \"{{item}}\"?";
+                readonly javascript: "JavaScript Starter";
+                readonly react: "React Starter";
+                readonly saved: "Saved as a new template";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 Starter";
+            };
+            readonly unload: {
+                readonly notSaved: "Changes you made may not be saved.";
+            };
+            readonly zoom: {
+                readonly hint: "Zoom";
+            };
+        };
+        readonly customSettings: {
+            readonly JSON: "Custom Settings JSON";
+            readonly heading: "Custom Settings";
+            readonly load: "Load";
+        };
+        readonly deploy: {
+            readonly create: {
+                readonly desc: "A new <1>public</1> repo will be created. The result page will be pushed to <2>gh-pages</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name <1></1>";
+            };
+            readonly error: {
+                readonly generic: "Deployment failed!";
+                readonly repoNameExists: "Repo name already exists";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "A new commit will be added to <1>gh-pages</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly generic: {
+                readonly commitMessage: "Commit Message";
+                readonly commitSourceCodePublic: "Commit source code (public)";
+                readonly deployBtn: "Deploy";
+                readonly deploying: "Deploying...";
+            };
+            readonly heading: "Deploy to GitHub Pages";
+            readonly searchRepo: "Search your public repos...";
+        };
+        readonly editorSettings: {
+            readonly appLanguage: {
+                readonly heading: "App UI Language";
+                readonly note: "Will reload the app to apply the changes after switching the language.";
+            };
+            readonly closeBrackets: "Auto-close brackets and quotes";
+            readonly codeJarDesc: "* The marked features are not available in CodeJar.";
+            readonly default: "Default";
+            readonly desc: "Please check the <1>documentations</1> for details.";
+            readonly editor: {
+                readonly codejar: "CodeJar";
+                readonly codemirror: "CodeMirror";
+                readonly heading: "Editor";
+                readonly monaco: "Monaco";
+            };
+            readonly editorMode: {
+                readonly emacs: "Emacs";
+                readonly heading: "Editor Mode *";
+                readonly vim: "Vim";
+            };
+            readonly editorTheme: "Editor Theme";
+            readonly emmet: "Enable Emmet *";
+            readonly enableAI: {
+                readonly heading: "Enable AI Code Assistant";
+                readonly note: "Powered by <1><2></2></1>";
+            };
+            readonly fontFamily: "Font Family";
+            readonly fontSize: "Font Size";
+            readonly format: "Format";
+            readonly heading: "Editor Settings";
+            readonly lineNumbers: "Show line numbers";
+            readonly notAvailableInCodeJar: "Not available in CodeJar";
+            readonly preview: "Preview";
+            readonly semicolons: "Format: Use Semicolons";
+            readonly singleQuote: "Format: Use Single Quotes";
+            readonly tabSize: "Tab Size";
+            readonly theme: "Dark Mode";
+            readonly trailingComma: "Format: Use Trailing Commas";
+            readonly useTabs: {
+                readonly heading: "Indentation";
+                readonly spaces: "Spaces";
+                readonly tabs: "Tabs";
+            };
+            readonly wordWrap: "Word-wrap";
+        };
+        readonly embed: {
+            readonly activeEditor: {
+                readonly heading: "Active Editor";
+                readonly markup: "{{markup}}";
+                readonly script: "{{script}}";
+                readonly style: "{{style}}";
+            };
+            readonly activeTool: {
+                readonly compiled: "Compiled";
+                readonly console: "Console";
+                readonly heading: "Active Tool";
+                readonly tests: "Tests";
+            };
+            readonly code: {
+                readonly copy: "Copy Code";
+                readonly heading: "Code";
+            };
+            readonly desc: "Please check the <1>documentations</1> for advanced configurations.";
+            readonly embedType: {
+                readonly cdn: "Script (CDN)";
+                readonly heading: "Embed Type";
+                readonly html: "HTML";
+                readonly iframe: "Iframe";
+                readonly npm: "JS (npm)";
+                readonly react: "React";
+                readonly svelte: "Svelte";
+                readonly vue: "Vue";
+            };
+            readonly heading: "Embed Project";
+            readonly lite: "Lite Mode";
+            readonly loading: {
+                readonly click: "On-click";
+                readonly eager: "Eager";
+                readonly heading: "Loading";
+                readonly lazy: "Lazy";
+            };
+            readonly mode: {
+                readonly codeblock: "Code Block";
+                readonly editor: "Editor";
+                readonly full: "Full";
+                readonly heading: "Display Mode";
+                readonly result: "Result";
+            };
+            readonly permanentUrl: "Permanent URL";
+            readonly preview: "Preview";
+            readonly previewLoading: "Loading Preview...";
+            readonly readonly: "Read only";
+            readonly theme: {
+                readonly dark: "Dark";
+                readonly heading: "Theme";
+                readonly light: "Light";
+            };
+            readonly tools: {
+                readonly closed: "Closed";
+                readonly full: "Full";
+                readonly heading: "Tools";
+                readonly none: "None";
+                readonly open: "Open";
+            };
+            readonly view: {
+                readonly editor: "Editor";
+                readonly heading: "Default View";
+                readonly result: "Result";
+                readonly split: "Split";
+            };
+        };
+        readonly generic: {
+            readonly about: {
+                readonly blog: "Blog";
+                readonly configuration: "Configuration";
+                readonly features: "Features";
+                readonly gettingStarted: "Getting Started";
+                readonly github: "GitHub";
+                readonly sdk: "SDK";
+                readonly sponsor: "Sponsor LiveCodes";
+                readonly twitter: "𝕏 / Twitter";
+            };
+            readonly clickForInfo: "Click for info...";
+            readonly close: "Close";
+            readonly error: {
+                readonly authentication: "Authentication error!";
+                readonly exceededSize: "Error: Exceeded size {{size}} MB";
+                readonly failedToReadFile: "Error: Failed to read file";
+            };
+            readonly loading: "Loading...";
+            readonly more: "More...";
+            readonly optional: "Optional";
+            readonly required: "Required";
+        };
+        readonly import: {
+            readonly bulk: {
+                readonly desc: "Bulk import multiple projects to your saved projects. Projects can be exported from the <1>Saved Projects</1> screen.";
+                readonly fromFile: "Bulk import from local file";
+                readonly fromURL: "Bulk import from URL";
+                readonly heading: "Bulk Import";
+                readonly started: "Bulk import started...";
+            };
+            readonly code: {
+                readonly desc: "Supported Sources: <1> <2>GitHub gist</2> <3>GitHub file</3> <4>Directory in a GitHub repo</4> <5>Gitlab snippet</5> <6>Gitlab file</6> <7>Directory in a Gitlab repo</7> <8>JS Bin</8> <9>Raw code</9> <10>Code in web page DOM</10> <11>Code in zip file</11> <12>Official playgrounds<13></13>(TypeScript, Vue and Svelte)</12> </1> Please visit the <14>documentations</14> for details.";
+                readonly fromFile: "Import local files";
+                readonly fromURL: "Import from URL";
+                readonly heading: "Import Code";
+            };
+            readonly error: {
+                readonly failedToLoadURL: "Error: failed to load URL";
+                readonly invalidConfigFile: "Invalid configuration file";
+                readonly invalidFile: "Error: Invalid file";
+            };
+            readonly generic: {
+                readonly file: "Local file";
+                readonly url: "URL";
+            };
+            readonly heading: "Import";
+            readonly json: {
+                readonly desc: "Import a single project JSON to editor. A project can be exported from app&nbsp;menu&nbsp;→ Export&nbsp;→ Export&nbsp;Project&nbsp;(JSON).";
+                readonly fromFile: "Import project from local file";
+                readonly fromURL: "Import project from URL";
+                readonly heading: "Import Project JSON";
+            };
+            readonly success: "Import Successful!";
+        };
+        readonly login: {
+            readonly accessAllowed: "Allow access to:";
+            readonly desc: "<1>By logging in, you agree that <2>cookies</2> may be stored on your device.</1> <3> <4>Why are these permissions required?</4> </3> <5> <6>How to change/revoke permissions?</6> </5>";
+            readonly gist: "Gists";
+            readonly heading: "Login with GitHub";
+            readonly loginAs: "Logged in as {{name}}";
+            readonly loginBtn: "Login";
+            readonly logout: "Log out";
+            readonly privateRepo: "Private Repos";
+            readonly publicRepo: "Repos";
+        };
+        readonly menu: {
+            readonly about: "About";
+            readonly assets: "Assets …";
+            readonly autoSave: "Auto Save";
+            readonly autoUpdate: "Auto Update";
+            readonly backup: "Backup / Restore …";
+            readonly broadcast: "Broadcast …";
+            readonly customSettings: "Custom Settings …";
+            readonly delay: {
+                readonly heading: "Delay: <1>1.5</1>s";
+                readonly hint: "Delay before auto-update";
+            };
+            readonly deploy: "Deploy …";
+            readonly editorSettings: "Editor Settings …";
+            readonly embed: "Embed …";
+            readonly export: {
+                readonly codepen: "Edit in CodePen";
+                readonly gist: "Export to GitHub Gist";
+                readonly heading: "Export";
+                readonly jsfiddle: "Edit in JSFiddle";
+                readonly json: "Export Project (JSON)";
+                readonly result: "Export Result (HTML)";
+                readonly src: "Export Source (ZIP)";
+            };
+            readonly formatOnsave: "Format On-save";
+            readonly import: "Import …";
+            readonly layout: "Vertical Layout";
+            readonly login: "Login …";
+            readonly logout: "Log out";
+            readonly new: "New …";
+            readonly open: "Open …";
+            readonly project: "Project Info …";
+            readonly recoverUnsaved: "Recover Unsaved";
+            readonly resources: "External Resources …";
+            readonly save: "Save";
+            readonly saveAs: {
+                readonly fork: "Fork (New Project)";
+                readonly heading: "Save as";
+                readonly template: "Template";
+            };
+            readonly share: "Share …";
+            readonly showSpacing: {
+                readonly heading: "Show Spacing";
+                readonly hint: "Press Alt/Option and move your cursor over result page";
+            };
+            readonly snippets: "Code Snippets …";
+            readonly sync: "Sync (beta) … <1> ⏳</1>";
+            readonly theme: "Dark Theme";
+            readonly welcome: {
+                readonly heading: "Welcome …";
+                readonly hint: "Show Welcome screen on startup";
+            };
+        };
+        readonly open: {
+            readonly defaultTemplate: "Default template ";
+            readonly delete: {
+                readonly all: "Delete {{projects}} projects?";
+                readonly deleting: "Deleting projects...";
+                readonly one: "Delete project: {{project}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly exportAll: "Export All";
+            readonly filter: {
+                readonly language: "filter by language";
+                readonly tag: "filter by tag";
+            };
+            readonly heading: "Saved Projects";
+            readonly import: "Import";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noData: {
+                readonly desc: "You can save a project from (settings&nbsp;menu&nbsp;&gt;&nbsp;Save) or by the keyboard shortcut (Ctrl/Cmd&nbsp;+&nbsp;S).";
+                readonly heading: "You have no saved projects.";
+            };
+            readonly noMatch: "No projects match these filters.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly filterByTags: "Filter by tags";
+                readonly search: "Search";
+            };
+            readonly removeDefault: "(unset)";
+            readonly reset: "Reset";
+            readonly setAsDefault: "Set as default";
+            readonly sort: {
+                readonly heading: "Sort By:";
+                readonly lastModified: "Last Modified";
+                readonly title: "Title";
+            };
+        };
+        readonly project: {
+            readonly desc: "Description";
+            readonly head: "Add to &lt;head&gt;";
+            readonly heading: "Project Info";
+            readonly htmlAttr: "Attributes for &lt;html&gt;";
+            readonly tags: "Tags";
+            readonly title: "Project Title";
+        };
+        readonly recoverPrompt: {
+            readonly desc: "Your last project has unsaved changes!";
+            readonly heading: "Recover unsaved project?";
+            readonly meta: "Title: <1></1> <2></2> Last modified: <3></3>";
+            readonly notShowAgain: "Do not show this again.";
+            readonly prompt: {
+                readonly discard: "Discard unsaved project";
+                readonly heading: "<1></1>Do you want to recover it now?";
+                readonly recover: "Recover project to editor";
+                readonly save: "Save to device and continue";
+            };
+        };
+        readonly resources: {
+            readonly browseOnJsDelivr: "Browse package files on jsDelivr";
+            readonly cssPresets: {
+                readonly heading: "CSS Presets";
+                readonly none: "None";
+                readonly normalizeCss: "Normalize.css";
+                readonly resetCss: "Reset CSS";
+            };
+            readonly error: {
+                readonly failedToLoadResults: "Failed to load results!";
+                readonly noResultsFound: "No results found for: ";
+            };
+            readonly fonts: {
+                readonly add: "Add";
+                readonly heading: "Fonts <1>(powered by Google Fonts)</1>";
+                readonly select: "Select font ...";
+            };
+            readonly heading: "External Resources";
+            readonly scripts: "External Scripts";
+            readonly search: {
+                readonly heading: "Search Packages <1>(powered by jsDelivr)</1>";
+                readonly placeholder: "e.g. jquery, lodash@4, bootstrap@5.2.3, ...";
+            };
+            readonly stylesheets: "External Stylesheets";
+            readonly urlDesc: "Add stylesheet/script URLs. Each URL should be in a separate line.";
+        };
+        readonly savePrompt: {
+            readonly heading: "Unsaved changes";
+            readonly prompt: {
+                readonly cancel: "Cancel";
+                readonly discard: "Do not save";
+                readonly heading: "The changes you made may not be saved. <1></1> Do you want to save now?";
+                readonly save: "Save";
+            };
+        };
+        readonly share: {
+            readonly characters: "{{urlLength}} characters";
+            readonly copy: {
+                readonly clickToCopy: "Click to copy";
+                readonly copied: "URL copied to clipboard";
+            };
+            readonly encodedURL: "Get encoded URL";
+            readonly error: {
+                readonly failedToCopy: "Copy to clipboard failed!";
+                readonly failedToGenerateURL: "Failed to generate short URL!";
+            };
+            readonly expireInOneYear: "Expires in 1 year";
+            readonly generateURL: "Generating URL …";
+            readonly heading: "Share";
+            readonly permanentURL: "Permanent URL";
+            readonly qrcode: {
+                readonly clickToDownload: "Click to download";
+                readonly generating: "Generating...";
+            };
+            readonly services: {
+                readonly copyUrl: "Copy URL";
+                readonly devTo: "Dev.to";
+                readonly email: "Email";
+                readonly facebook: "Facebook";
+                readonly hackerNews: "Hacker News";
+                readonly linkedIn: "LinkedIn";
+                readonly pinterest: "Pinterest";
+                readonly pocket: "Pocket";
+                readonly qrCode: "QR code";
+                readonly reddit: "Reddit";
+                readonly share: "Share via …";
+                readonly telegram: "Telegram";
+                readonly tumblr: "Tumblr";
+                readonly twitter: "𝕏 / Twitter";
+                readonly whatsApp: "WhatsApp";
+            };
+            readonly shortURL: "Get short URL";
+        };
+        readonly snippets: {
+            readonly action: {
+                readonly copy: "Copy";
+                readonly delete: "Delete";
+                readonly edit: "Edit";
+            };
+            readonly add: {
+                readonly code: "Code";
+                readonly desc: "Description";
+                readonly heading: "Add Snippet";
+                readonly language: "Language";
+                readonly save: "Save";
+                readonly snippets: "Snippets";
+                readonly title: "Title";
+            };
+            readonly copy: {
+                readonly clickToCopySnippet: "Click to copy snippet";
+                readonly copied: "Snippet is copied to clipboard.";
+            };
+            readonly delete: {
+                readonly all: "Delete {{snippets}} snippets?";
+                readonly one: "Delete snippet: {{snippet}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly error: {
+                readonly failedToCopy: "Failed to copy URL.";
+                readonly noTitle: "Please add snippet title.";
+            };
+            readonly filter: {
+                readonly language: "filter by language";
+            };
+            readonly heading: "Code Snippets";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noMatch: "No snippets match these filters.";
+            readonly noSavedSnippets: "You have no saved snippets.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly search: "Search";
+            };
+            readonly reset: "Reset";
+            readonly save: {
+                readonly success: "Snippet locally saved to device!";
+            };
+            readonly sort: {
+                readonly date: "Date";
+                readonly heading: "Sort By:";
+                readonly title: "Title";
+            };
+            readonly text: "Plain Text";
+        };
+        readonly splash: {
+            readonly loading: "Loading LiveCodes…";
+        };
+        readonly sync: {
+            readonly autoSync: "Auto sync";
+            readonly create: {
+                readonly desc: "A new <1>private</1> repo will be created. Your LiveCodes local data will be synchronized with <2>main</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly error: {
+                readonly generic: "Sync failed!";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "Your LiveCodes local data will be synchronized with <1>main</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly heading: "Sync to GitHub Repo";
+            readonly searchRepos: "Search your repos...";
+            readonly success: "Sync complete!";
+            readonly syncBtn: "Sync";
+            readonly syncInProgress: "Sync in progress...";
+            readonly syncStarted: "Sync started...";
+        };
+        readonly templates: {
+            readonly heading: "New Project";
+            readonly noUserTemplates: {
+                readonly desc: "You can save a project as a template from <1></1>(App&nbsp;menu&nbsp;&gt;&nbsp;Save&nbsp;as&nbsp;&gt; Template).";
+                readonly heading: "You have no saved templates.";
+            };
+            readonly starter: {
+                readonly angular: "Angular Starter";
+                readonly assemblyscript: "AssemblyScript Starter";
+                readonly astro: "Astro Starter";
+                readonly backbone: "Backbone Starter";
+                readonly blank: "Blank Project";
+                readonly blockly: "Blockly Starter";
+                readonly bootstrap: "Bootstrap Starter";
+                readonly civet: "Civet Starter";
+                readonly clio: "Clio Starter";
+                readonly clojurescript: "ClojureScript Starter";
+                readonly coffeescript: "CoffeeScript Starter";
+                readonly commonlisp: "Common Lisp Starter";
+                readonly cpp: "C++ Starter";
+                readonly diagrams: "Diagrams Starter";
+                readonly fennel: "Fennel Starter";
+                readonly gleam: "Gleam Starter";
+                readonly go: "Go Starter";
+                readonly heading: "Starter Templates";
+                readonly imba: "Imba Starter";
+                readonly javascript: "JavaScript Starter";
+                readonly jest: "Jest Starter";
+                readonly 'jest-react': "Jest/React Starter";
+                readonly jquery: "jQuery Starter";
+                readonly julia: "Julia Starter";
+                readonly knockout: "Knockout Starter";
+                readonly lit: "Lit Starter";
+                readonly livescript: "LiveScript Starter";
+                readonly loading: "Loading starter templates...";
+                readonly lua: "Lua Starter";
+                readonly 'lua-wasm': "Lua (Wasm) Starter";
+                readonly malina: "Malina.js Starter";
+                readonly markdown: "Markdown Starter";
+                readonly mdx: "MDX Starter";
+                readonly ocaml: "Ocaml Starter";
+                readonly perl: "Perl Starter";
+                readonly php: "PHP Starter";
+                readonly 'php-wasm': "PHP (Wasm) Starter";
+                readonly postgresql: "PostgreSQL Starter";
+                readonly preact: "Preact Starter";
+                readonly prolog: "Prolog Starter";
+                readonly python: "Python Starter";
+                readonly r: "R Starter";
+                readonly react: "React Starter";
+                readonly 'react-native': "React Native Starter";
+                readonly reason: "Reason Starter";
+                readonly rescript: "ReScript Starter";
+                readonly riot: "Riot.js Starter";
+                readonly ruby: "Ruby Starter";
+                readonly 'ruby-wasm': "Ruby (Wasm) Starter";
+                readonly scheme: "Scheme Starter";
+                readonly solid: "Solid Starter";
+                readonly sql: "SQL Starter";
+                readonly stencil: "Stencil Starter";
+                readonly svelte: "Svelte Starter";
+                readonly tailwindcss: "Tailwind CSS Starter";
+                readonly tcl: "Tcl Starter";
+                readonly teal: "Teal Starter";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 SFC Starter";
+                readonly vue2: "Vue 2 Starter";
+                readonly wat: "WebAssembly Text Starter";
+            };
+            readonly user: {
+                readonly heading: "My Templates";
+                readonly loading: "Loading user templates...";
+            };
+        };
+        readonly testEditor: {
+            readonly heading: "Edit Tests";
+            readonly load: "Load";
+            readonly tests: "Tests";
+        };
+        readonly toolspane: {
+            readonly close: "Close";
+            readonly compiled: {
+                readonly title: "Compiled";
+            };
+            readonly console: {
+                readonly clear: "Clear console";
+                readonly title: "Console";
+            };
+            readonly test: {
+                readonly edit: "Edit";
+                readonly error: "<1><2>Test error!</2></1>";
+                readonly loading: "<1>Loading tests...</1>";
+                readonly noTest: "<1>This project has no tests!</1>";
+                readonly reset: "Reset";
+                readonly run: {
+                    readonly desc: "Ctrl/Cmd + Alt + T";
+                    readonly heading: "Run";
+                };
+                readonly summary: {
+                    readonly desc: "Tests: {{failed}}\n       {{passed}}\n       {{skipped}}\n       {{total}}<1></1>\nTime: {{duration}}s";
+                    readonly failed: "{{failedNum}} failed";
+                    readonly passed: "{{passedNum}} passed";
+                    readonly skipped: "{{skippedNum}} skipped";
+                    readonly total: "{{totalNum}} total";
+                };
+                readonly title: "Tests";
+                readonly watch: {
+                    readonly desc: "Run tests when code changes";
+                    readonly heading: "Watch";
+                };
+            };
+        };
+        readonly welcome: {
+            readonly about: {
+                readonly documentation: "Documentations";
+                readonly heading: "About LiveCodes";
+            };
+            readonly heading: "Welcome";
+            readonly recent: {
+                readonly heading: "Recent";
+            };
+            readonly recover: {
+                readonly cancel: "Cancel";
+                readonly heading: "Recover";
+                readonly lastModified: "Last modified: <1></1>";
+                readonly recover: "Recover";
+                readonly save: "Save";
+                readonly unsavedChanges: "Your last project had unsaved changes:";
+            };
+            readonly showOnStartup: "Show on startup";
+            readonly start: {
+                readonly heading: "Start";
+                readonly import: "Import...";
+                readonly loadDefaultTemplate: "Load default template";
+                readonly new: "New...";
+                readonly noDefaultTemplate: "No default template";
+                readonly open: "Open...";
+            };
+            readonly templates: {
+                readonly heading: "Starter Templates";
+            };
+        };
+    };
+    export default translation;
+}
+declare module "livecodes/i18n/locales/es/language-info" {
+    const languageInfo: {
+        readonly artTemplate: {
+            readonly desc: "High performance JavaScript templating engine.";
+            readonly link: "<1> <2>art-template official website</2> </1> <3> <4>art-template documentation</4> </3>";
+            readonly name: "art-template";
+        };
+        readonly asciidoc: {
+            readonly desc: "AsciiDoc compiled to HTML using Asciidoctor.";
+            readonly link: "<1> <2>AsciiDoc official website</2> </1> <3> <4>Asciidoctor official website</4> </3> <5> <6>Asciidoctor documentation</6> </5> <7> <8>Learn X in Y minutes, where X=asciidoc</8> </7>";
+            readonly name: "AsciiDoc";
+        };
+        readonly assemblyscript: {
+            readonly desc: "A TypeScript-like language for WebAssembly.";
+            readonly link: "<1> <2>AssemblyScript official website</2> </1> <3> <4>AssemblyScript documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "AssemblyScript";
+        };
+        readonly astro: {
+            readonly desc: "Build faster websites with less client-side Javascript. (Still in Beta)";
+            readonly link: "<1> <2>Astro official website</2> </1> <3> <4>Astro documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Astro";
+        };
+        readonly babel: {
+            readonly desc: "The JavaScript compiler";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Babel documentation</4> </3>";
+            readonly name: "Babel";
+        };
+        readonly bbcode: {
+            readonly desc: "BBCode (\"Bulletin Board Code\") is a lightweight markup language used to format messages in many Internet forum software.";
+            readonly link: "<1><2>bbcode.org</2></1> <3> <4>BBCode guide</4> </3> <5> <6>BBCode on Wikipedia</6> </5>";
+            readonly name: "BBCode";
+        };
+        readonly blockly: {
+            readonly desc: "A JavaScript library for building visual programming editors.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>Guides</4> </3> <5> <6>Reference</6> </5> <7> <8>Samples</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Blockly";
+        };
+        readonly civet: {
+            readonly desc: "Civet is a programming language that compiles to TypeScript or JavaScript, so you can use existing tooling but enable concise and powerful syntax.";
+            readonly link: "<1> <2>Civet official website</2> </1> <3> <4>Civet cheatsheet</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Civet";
+        };
+        readonly clio: {
+            readonly desc: "Clio is a fast, distributed, functional programming language that compiles to JavaScript.";
+            readonly link: "<1> <2>Clio official website</2> </1> <3> <4>Clio documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Clio";
+        };
+        readonly clojurescript: {
+            readonly desc: "ClojureScript is a compiler for <1>Clojure</1> that targets JavaScript. <2></2>In LiveCodes, it runs in the browser using <3>Cherry</3>.";
+            readonly link: "<1> <2>ClojureScript official website</2> </1> <3> <4>Clojure official website</4> </3> <5> <6>Cherry repo</6> </5> <7> <8>Learn X in Y minutes, where X=clojure</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "ClojureScript (CLJS)";
+        };
+        readonly coffeescript: {
+            readonly desc: "Unfancy JavaScript.";
+            readonly link: "<1> <2>CoffeeScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=coffeescript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "CoffeeScript";
+        };
+        readonly commonlisp: {
+            readonly desc: "A Common Lisp implementation on Javascript using JSCL (a Lisp-to-Javascript compiler bootstrapped from Common Lisp).";
+            readonly link: "<1> <2>Common-Lisp.net</2> </1> <3> <4>JSCL Project</4> </3> <5> <6>Common Lisp Resources</6> </5> <7> <8>Learn X in Y minutes, where X=Common Lisp</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Common Lisp";
+        };
+        readonly cpp: {
+            readonly desc1: "C++ support using JSCPP (a simple C++ interpreter written in JavaScript).";
+            readonly desc2: "It is not a complete implementation of C++. Please refer to <1>JSCPP documentation</1> for details.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>JSCPP</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C++";
+        };
+        readonly cppWasm: {
+            readonly desc: "Clang C/C++ compiler running on WebAssembly, using <1>wasm-clang</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>Clang official website</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C/C++ (Wasm)";
+        };
+        readonly diagrams: {
+            readonly desc1: "(Experimental)";
+            readonly desc2: "Diagrams-as-code. Supports:";
+            readonly desc3: "<1> <2>Cytoscape</2> </1> <3> <4>ELK</4> (using <5>elkjs</5>) </3> <6> <7>Gnuplot</7> (using <8>gnuplot-JS</8>) </6> <9> <10>Graphviz</10> (using <11>@hpcc-js/wasm</11>) </9> <12> <13>Mermaid</13> </12> <14> <15>Nomnoml</15> </14> <16> <17>Pintora</17> </16> <18> <19>Plotly</19> </18> <20> <21>Svgbob</21> </20> <22> <23>Vega</23> </22> <24> <25>VegaLite</25> </24> <26> <27>WaveDrom</27> </26>";
+            readonly link: "<1> <2>Load starter template</2> </1> <3> <4>LiveCodes Documentation</4> </3>";
+            readonly name: "Diagrams";
+        };
+        readonly dot: {
+            readonly desc: "The fastest + concise javascript template engine for Node.js and browsers.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "doT.js";
+        };
+        readonly ejs: {
+            readonly desc: "Embedded JavaScript templating.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "EJS";
+        };
+        readonly eta: {
+            readonly desc: "Embedded JS template engine for Node, Deno, and the browser. Lighweight, fast, and pluggable. Written in TypeScript.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Eta";
+        };
+        readonly fennel: {
+            readonly desc: "Fennel is a programming language that brings together the speed, simplicity, and reach of Lua with the flexibility of a lisp syntax and macro system.";
+            readonly link: "<1> <2>Fennel official website</2> </1> <3> <4>Getting Started with Fennel</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Fennel";
+        };
+        readonly flow: {
+            readonly desc: "Flow is a static type checker for JavaScript.";
+            readonly link: "<1> <2>Flow official website</2> </1> <3> <4>Flow documentation</4> </3>";
+            readonly name: "Flow";
+        };
+        readonly gleam: {
+            readonly desc1: "Gleam is a friendly language for building type-safe systems that scale!";
+            readonly desc2: "Gleam is a statically-typed functional programming language, which compiles to Erlang or JavaScript.";
+            readonly link: "<1><2>Gleam website</2></1> <3> <4>Gleam documentation</4> </3> <5> <6>Gleam language tour</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Gleam";
+        };
+        readonly go: {
+            readonly desc1: "Go (Golang) is an open source programming language that makes it easy to build simple, reliable, and efficient software.";
+            readonly desc2: "Here, it is compiled to JavaScript using GopherJS.";
+            readonly link: "<1><2>Go website</2></1> <3><4>Go documentation</4></3> <5> <6>GopherJS repo</6> </5> <7> <8>Learn X in Y minutes, where X=Go</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Go";
+        };
+        readonly haml: {
+            readonly desc: "Haml compiler for client side javascript view templates using clientside-haml-js.";
+            readonly link: "<1><2>Haml official website</2></1> <3> <4>Haml documentation</4> </3> <5> <6>clientside-haml-js GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=haml</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Haml";
+        };
+        readonly handlebars: {
+            readonly desc: "Minimal templating on steroids.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Handlebars";
+        };
+        readonly imba: {
+            readonly desc: "The friendly full-stack language.";
+            readonly link: "<1><2>Official website</2></1>";
+            readonly name: "Imba";
+        };
+        readonly jsx: {
+            readonly desc: "JSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler.  By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "JSX";
+        };
+        readonly julia: {
+            readonly desc1: "(Julia language support in LiveCodes is still experimental)";
+            readonly desc2: "Julia compiler and Julia Base running on WASM, using <1>julia-wasm</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Julia official website</2> </1> <3> <4>Julia documentation</4> </3> <5> <6>Learn X in Y minutes, where X=Julia</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Julia";
+        };
+        readonly less: {
+            readonly desc: "It's CSS, with just a little more.";
+            readonly link: "<1><2>Less official website</2></1> <3> <4>Learn X in Y minutes, where X=less</4> </3>";
+            readonly name: "Less";
+        };
+        readonly liquid: {
+            readonly desc: "A simple, expressive and safe template engine.";
+            readonly link: "<1> <2>LiquidJS official website</2> </1> <3> <4>LiquidJS documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "LiquidJS";
+        };
+        readonly livescript: {
+            readonly desc: "A language which compiles to JavaScript.";
+            readonly link: "<1> <2>LiveScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=LiveScript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "LiveScript";
+        };
+        readonly lua: {
+            readonly desc: "Lua running in the browser using fengari-web.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Fengari official website</6> </5> <7> <8>fengari-web GitHub repo</8> </7> <9> <10>Learn X in Y minutes, where X=Lua</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "Lua";
+        };
+        readonly luaWasm: {
+            readonly desc: "Lua running in the browser using Wasmoon, a real lua 5.4 VM with JS bindings made with WebAssembly.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Wasmoon GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=Lua</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Lua (Wasm)";
+        };
+        readonly malina: {
+            readonly desc: "Frontend compiler, inspired by Svelte.";
+            readonly link: "<1> <2>Malina.js repo</2> </1> <3> <4>Malina.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Malina.js";
+        };
+        readonly markdown: {
+            readonly desc: "Markdown compiled to HTML using Marked.";
+            readonly link: "<1> <2>Markdown official website</2> </1> <3> <4>Marked documentation</4> </3> <5> <6>Learn X in Y minutes, where X=markdown</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Markdown";
+        };
+        readonly mdx: {
+            readonly desc: "Markdown for the component era. <1></1>MDX lets you seamlessly write JSX in your Markdown documents.";
+            readonly link: "<1><2>MDX documentation</2></1> <3><4>Load starter template</4></3>";
+            readonly name: "MDX";
+        };
+        readonly mjml: {
+            readonly desc: "MJML is a markup language designed to reduce the pain of coding a responsive email.";
+            readonly link: "<1><2>MJML official website</2></1> <3> <4>MJML documentation</4> </3> <5> <6>MJML official templates</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "MJML";
+        };
+        readonly mustache: {
+            readonly desc: "Logic-less templates.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>mustache(5) manual</4> </3> <5> <6>JavaScript implementation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "Mustache";
+        };
+        readonly nunjucks: {
+            readonly desc: "A rich and powerful templating language for JavaScript. Nunjucks is essentially a port of <1>jinja2</1>.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Nunjucks";
+        };
+        readonly ocaml: {
+            readonly desc1: "OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles.";
+            readonly desc2: "ReScript compiler is used here to compile OCaml to JavaScript.";
+            readonly link: "<1><2>OCaml website</2></1> <3> <4>OCaml documentation</4> </3> <5> <6>ReScript website</6> </5> <7> <8>Learn X in Y minutes, where X=OCaml</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "OCaml";
+        };
+        readonly perl: {
+            readonly desc: "Perl running in the browser using Perlito.";
+            readonly link: "<1> <2>Perl official website</2> </1> <3> <4>Perl documentation</4> </3> <5> <6>Perlito5 Readme</6> </5> <7> <8>Learn X in Y minutes, where X=perl</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Perl";
+        };
+        readonly php: {
+            readonly desc: "PHP running in the browser using Uniter.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>Uniter GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11><12>Load starter template</12></11>";
+            readonly name: "PHP";
+        };
+        readonly phpWasm: {
+            readonly desc: "PHP in Browser, powered by WebAssembly, using php-wasm.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>php-wasm GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "PHP (Wasm)";
+        };
+        readonly postgresql: {
+            readonly desc: "PostgreSQL packaged as WASM using PGlite";
+            readonly link: "<1> <2>PostgreSQL official website</2> </1> <3> <4>PostgreSQL documentation</4> </3> <5> <6>PGlite GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "PostgreSQL";
+        };
+        readonly prolog: {
+            readonly desc: "An open source Prolog interpreter in JavaScript.";
+            readonly link: "<1> <2>Tau Prolog official website</2> </1> <3> <4>Tau Prolog documentation</4> </3> <5> <6>SWI-Prolog</6> </5> <7> <8>Learn X in Y minutes, where X=Prolog</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Tau Prolog";
+        };
+        readonly pug: {
+            readonly desc: "Robust, elegant, feature rich template engine.";
+            readonly link: "<1> <2>Pug documentation</2> </1> <3> <4>Learn X in Y minutes, where X=Pug</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Pug";
+        };
+        readonly python: {
+            readonly desc: "Python running in the browser using Brython.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5> <6>Brython documentation</6> </5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python";
+        };
+        readonly pythonWasm: {
+            readonly desc1: "Python with the scientific stack, compiled to WebAssembly using Pyodide.";
+            readonly desc2: "Pyodide allows using Python scientific stack including NumPy, Pandas, Matplotlib, SciPy, scikit-learn and many more. In addition it’s possible to install pure Python wheels from PyPi.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5><6>Pyodide documentation</6></5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python (Wasm)";
+        };
+        readonly r: {
+            readonly desc: "R running in the browser using WebR.";
+            readonly link: "<1> <2>R project official website</2> </1> <3> <4>The R Manuals</4> </3> <5> <6>R for Data Science (2e)</6> </5> <7> <8>WebR documentation</8> </7> <9> <10>Learn X in Y minutes, where X=R</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "R";
+        };
+        readonly reactNative: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "React Native for Web";
+        };
+        readonly reactNativeTsx: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>TypeScript website</10> </9> <11> <12>TypeScript documentation</12> </11> <13> <14>LiveCodes Documentations</14> </13> <15> <16>Load starter template (JSX)</16> </15>";
+            readonly name: "React Native for Web (with TypeScript)";
+        };
+        readonly reason: {
+            readonly desc1: "Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.";
+            readonly desc2: "ReScript compiler is used here to compile Reason to JavaScript.";
+            readonly link: "<1><2>Reason website</2></1> <3> <4>Reason documentation</4> </3> <5> <6>ReasonReact</6> </5> <7> <8>ReScript website</8> </7> <9> <10>Learn X in Y minutes, where X=reason</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Reason";
+        };
+        readonly rescript: {
+            readonly desc: "ReScript is a robustly typed language that compiles to efficient and human-readable JavaScript.";
+            readonly link: "<1> <2>ReScript website</2> </1> <3> <4>ReScript / React</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "ReScript";
+        };
+        readonly richtext: {
+            readonly desc1: "Using Quill:";
+            readonly desc2: "Your powerful rich text editor.";
+            readonly link: "<1> <2>Quill official website</2> </1>";
+            readonly name: "Rich Text Editor";
+        };
+        readonly riot: {
+            readonly desc: "Simple and elegant component-based UI library.";
+            readonly link: "<1> <2>Riot.js official website</2> </1> <3> <4>Riot.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Riot.js";
+        };
+        readonly ruby: {
+            readonly desc: "Ruby running in the browser using Opal.";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5><6>Opal official website</6></5> <7> <8>Opal standard library CDN</8> </7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby";
+        };
+        readonly rubyWasm: {
+            readonly desc: "Ruby running in the browser using ruby-wasm (a collection of WebAssembly ports of the CRuby).";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5> <6>ruby.wasm website</6> </5> <7><8>CRuby</8></7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby (WASM)";
+        };
+        readonly sass: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>Sass (the indented) syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "Sass";
+        };
+        readonly scheme: {
+            readonly desc: "Scheme running in the browser using biwascheme.";
+            readonly link: "<1> <2>The Scheme Programming Language</2> </1> <3> <4>BiwaScheme official website</4> </3> <5> <6>BiwaScheme reference</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Scheme";
+        };
+        readonly scss: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>SCSS syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "SCSS";
+        };
+        readonly solid: {
+            readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+            readonly link: "<1><2>Official website</2></1> <3><4>Documentation</4></3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template (TSX)</8> </7>";
+            readonly name: "Solid";
+            readonly tsx: {
+                readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+                readonly link: "<1><2>Official website</2></1> <3> <4>Solid documentation</4> </3> <5> <6>TypeScript website</6> </5> <7> <8>TypeScript documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+                readonly name: "Solid (with TypeScript)";
+            };
+        };
+        readonly sql: {
+            readonly desc: "SQLite compiled to JavaScript using SQL.js";
+            readonly link: "<1> <2>SQLite official website</2> </1> <3> <4>SQLite syntax documentation</4> </3> <5> <6>SQL.js official website</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "SQLite";
+        };
+        readonly stencil: {
+            readonly desc: "A Compiler for Web Components and High Performance Web Apps.";
+            readonly link: "<1> <2>Stencil official website</2> </1> <3> <4>Stencil documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Stencil";
+        };
+        readonly styleProcessors: {
+            readonly link: "<1> <2>Tailwind CSS</2> </1> <3> <4>Windi CSS</4> </3> <5> <6>UnoCSS</6> </5> <7> <8>Lightning CSS</8> </7> <9> <10>PostCSS</10> Plugins: <11> <12> <13>Autoprefixer</13> </12> <14> <15>postcss-preset-env</15> </14> <16> <17>postcss-import-url</17> </16> <18> <19>postcss-modules</19> </18> </11> </9>";
+            readonly name: "CSS Frameworks and Processors";
+        };
+        readonly stylis: {
+            readonly desc: "Light-weight css preprocessor.";
+            readonly link: "<1> <2>Stylis official website</2> </1>";
+            readonly name: "Stylis";
+        };
+        readonly stylus: {
+            readonly desc: "Expressive, Dynamic, Robust CSS.";
+            readonly link: "<1> <2>Stylus official website</2> </1> <3> <4>Learn X in Y minutes, where X=stylus</4> </3>";
+            readonly name: "Stylus";
+        };
+        readonly sucrase: {
+            readonly desc: "Super-fast alternative to Babel for when you can target modern JS runtimes.";
+            readonly link: "<1> <2>Sucrase official website</2> </1> <3> <4>Sucrase GitHub Repo</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Sucrase";
+        };
+        readonly svelte: {
+            readonly desc: "Cybernetically enhanced web apps.";
+            readonly link: "<1> <2>Svelte official website</2> </1> <3> <4>Svelte documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Svelte";
+        };
+        readonly tcl: {
+            readonly desc: "Tcl running in the browser, using <1>wacl</1>.";
+            readonly link: "<1> <2>Tcl official website</2> </1> <3> <4>wacl repo</4> </3> <5> <6>Learn X in Y minutes, where X=Tcl</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Tcl (Tool Command Language)";
+        };
+        readonly teal: {
+            readonly desc: "A typed dialect of Lua.";
+            readonly link: "<1> <2>Teal GitHub repo</2> </1> <3> <4>Teal docs</4> </3> <5> <6>Teal tutorial</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Teal";
+        };
+        readonly tsx: {
+            readonly desc: "TypeScript in JSX. TSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler. By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>Typescript documentation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "TSX";
+        };
+        readonly twig: {
+            readonly desc: "A JavaScript implementation of the <1>Twig</1> PHP templating language by <2>Twig.js</2> .";
+            readonly link: "<1> <2>Twig official website</2> </1> <3> <4>Twig Documentation</4> </3> <5> <6>Twig.js Repo</6> </5> <7> <8>Twig.js Documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Twig";
+        };
+        readonly typescript: {
+            readonly desc: "A Typed Superset of JavaScript.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>TypeScript documentation</4> </3> <5> <6>Learn X in Y minutes, where X=TypeScript</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "TypeScript";
+        };
+        readonly vue: {
+            readonly link: "<1> <2>Vue.js v3 official website</2> </1> <3> <4>Vue3 documentation</4> </3> <5> <6>Vue3 single file components</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Vue3 Single File Components";
+        };
+        readonly vue2: {
+            readonly desc: "Loaded using vue3-sfc-loader.";
+            readonly link: "<1><2>Vue.js official website</2></1> <3> <4>Vue2 documentation</4> </3> <5> <6>Vue2 single file components</6> </5> <7> <8>vue3-sfc-loader GitHub repo</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Vue2 Single File Components";
+        };
+        readonly wat: {
+            readonly desc1: "Low-level textual representation of the WebAssembly (wasm) binary format.";
+            readonly desc2: "It is converted to wasm using wabt.js.";
+            readonly link: "<1><2>WebAssembly.org</2></1> <3> <4>WebAssembly Text Specs</4> </3> <5> <6>WebAssembly on MDN</6> </5> <7> <8>Understanding WebAssembly text format</8> </7> <9> <10>wabt.js documentation</10> </9> <11> <12>Learn X in Y minutes, where X=WebAssembly</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "WebAssembly Text Format";
+        };
+    };
+    export default languageInfo;
+}
+declare module "livecodes/i18n/locales/es/translation" {
+    const translation: {
+        readonly about: {
+            readonly documentations: {
+                readonly aboutUs: "About us";
+                readonly contact: "Contact";
+                readonly heading: "Documentations";
+                readonly home: "Home";
+                readonly license: "License";
+            };
+            readonly heading: "About LiveCodes";
+            readonly livecodes: {
+                readonly para1: "<1><2>LiveCodes</2></1> is an <3>open-source</3>, <4>feature-rich</4>, <5>client-side</5> code playground. Currently, <6>80+ languages/<7></7>frameworks</6> are supported. It can be used as a standalone app or can be <8>embedded</8> in any web page. There are many ways to <9>prefill playgrounds</9> with code.";
+                readonly para2: "A wide range of <1>configuration options</1> makes it very flexible. A powerful <2>SDK</2> (for <3>JS/TS</3>, <4>React</4>, <5>Vue</5> and <6>Svelte</6>) facilitates <7>embedding</7> and <8>communicating</8> with playgrounds. <9>Comprehensive documentations</9> are available with code samples, live demos and screenshots.";
+            };
+            readonly version: {
+                readonly app: "App version: {{APP_VERSION}}";
+                readonly appPermanentUrl: "App Permanent URL";
+                readonly commit: "Git commit: {{COMMIT_SHA}}";
+                readonly heading: "Version";
+                readonly sdk: "SDK version: {{SDK_VERSION}}";
+                readonly sdkPermanentUrl: "SDK Permanent URL";
+            };
+        };
+        readonly app: {
+            readonly copy: {
+                readonly hint: "Copy (Ctrl/Cmd + A, Ctrl/Cmd + C)";
+            };
+            readonly copyAsUrl: {
+                readonly hint: "Copy code as data URL";
+            };
+            readonly customSettings: {
+                readonly hint: "Custom Settings";
+            };
+            readonly editorMode: {
+                readonly hint: "Editor Mode";
+            };
+            readonly editorSettings: {
+                readonly hint: "Editor Settings";
+            };
+            readonly externalResources: {
+                readonly hint: "External Resources";
+            };
+            readonly focus: {
+                readonly hint: "Toggle Focus mode";
+            };
+            readonly format: {
+                readonly hint: "Format (Alt + Shift + F)";
+            };
+            readonly fullscreen: {
+                readonly hint: "Full Screen";
+            };
+            readonly logo: {
+                readonly title: "LiveCodes: Code playground that runs in the browser!";
+            };
+            readonly projectInfo: {
+                readonly hint: "Project Info";
+            };
+            readonly redo: {
+                readonly hint: "Redo (Ctrl/Cmd + Shift + Z)";
+            };
+            readonly result: {
+                readonly hint: "Toggle Result";
+            };
+            readonly run: {
+                readonly hint: "Run (Shift + Enter)";
+            };
+            readonly share: {
+                readonly hint: "Share";
+            };
+            readonly undo: {
+                readonly hint: "Undo (Ctrl/Cmd + Z)";
+            };
+            readonly untitledProject: "Untitled Project";
+        };
+        readonly assets: {
+            readonly add: {
+                readonly dataURL: {
+                    readonly desc: "Add asset as a base64-encoded <1>data url</1>.";
+                    readonly heading: "Data URL";
+                    readonly label: "Add file";
+                };
+                readonly githubPages: {
+                    readonly desc: "Deploy asset to GitHub Pages. The file is pushed to <1>gh-pages</1> branch of the repo <2>livecodes-assets</2> on your GitHub account. If the repo does not already exist, a public repo will be created.";
+                    readonly heading: "GitHub Pages";
+                    readonly label: "Upload file";
+                };
+                readonly heading: "Add Asset";
+            };
+            readonly delete: {
+                readonly all: "Delete {{assets}} assets?";
+                readonly one: "Delete asset: {{asset}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly generic: {
+                readonly clickToCopyURL: "Click to copy URL";
+            };
+            readonly heading: "Assets";
+            readonly link: {
+                readonly date: "Date: {{modified}}";
+                readonly type: "Type: {{type}}";
+                readonly url: "URL: {{url}}";
+            };
+            readonly loadFile: {
+                readonly error: {
+                    readonly failedToUpload: "Error: Failed to upload file";
+                    readonly unauthenticated: "Error: Unauthenticated user";
+                };
+                readonly upload: "Upload file";
+                readonly uploading: "Uploading...";
+            };
+            readonly noMatch: "No assets match these filters.";
+            readonly noSavedAssets: "You have no saved assets.";
+            readonly processAsset: {
+                readonly addFile: "Added file: ";
+                readonly deployNotice: "The asset should be available on this URL soon (~1 min).";
+                readonly success: "File added to assets!";
+                readonly urlLabel: "URL: ";
+            };
+            readonly resetFilters: "Reset";
+            readonly search: "Search";
+            readonly sort: {
+                readonly date: "Date";
+                readonly fileName: "File Name";
+                readonly heading: "Sort By:";
+            };
+            readonly type: {
+                readonly archive: "Archive";
+                readonly audio: "Audio";
+                readonly csv: "CSV";
+                readonly font: "Font";
+                readonly html: "HTML";
+                readonly icon: "Icon";
+                readonly image: "Image";
+                readonly json: "JSON";
+                readonly other: "Other";
+                readonly script: "Script";
+                readonly stylesheet: "Stylesheet";
+                readonly text: "Text";
+                readonly video: "Video";
+                readonly xml: "XML";
+            };
+            readonly types: {
+                readonly all: "All types";
+            };
+            readonly url: {
+                readonly fail: "Failed to copy URL.";
+                readonly success: "URL is copied to clipboard.";
+            };
+        };
+        readonly backup: {
+            readonly backup: {
+                readonly assets: "Assets";
+                readonly button: "Backup";
+                readonly desc: "Backup LiveCodes data, so that it can be later restored on this or other devices. <1></1> Please visit the <2>documentations</2> for details.";
+                readonly heading: "Backup";
+                readonly projects: "Projects";
+                readonly settings: "User Settings";
+                readonly snippets: "Code Snippets";
+                readonly templates: "User Templates";
+            };
+            readonly backupBtn: "Backup";
+            readonly error: {
+                readonly atLeastOneStore: "Please select at least one store to backup";
+                readonly incorrectFileType: "Error: Incorrect file type";
+            };
+            readonly fileInputLabel: "Restore from file";
+            readonly heading: "Backup / Restore";
+            readonly inProgress: "In progress...";
+            readonly restore: {
+                readonly desc: "Restore previously backed-up LiveCodes data. <1></1> If you choose to replace current content, you may want to back it up first. <2></2> Please visit the <3>documentations</3> for details.";
+                readonly fromFile: "Restore from file";
+                readonly heading: "Restore";
+                readonly mode: {
+                    readonly merge: "Merge with current content";
+                    readonly replace: "Replace current content";
+                };
+                readonly success: "Restored Successfully!";
+            };
+        };
+        readonly broadcast: {
+            readonly broadcastBtn: {
+                readonly start: "Broadcast";
+                readonly stop: "Stop broadcast";
+            };
+            readonly broadcasting: "Broadcasting...";
+            readonly channelURL: "Channel URL";
+            readonly connecting: "Connecting...";
+            readonly desc: "Broadcast the result page to other browsers/devices in real time. Please visit the <1>documentations</1> for details.";
+            readonly error: {
+                readonly generic: "Broadcast failed!";
+                readonly serverURLRequired: "Server URL is required!";
+            };
+            readonly heading: "Broadcast";
+            readonly includeSourceCode: "Include source code";
+            readonly serverURL: {
+                readonly heading: "Server URL";
+            };
+        };
+        readonly core: {
+            readonly broadcast: {
+                readonly heading: "Broadcast";
+                readonly successSetToken: "Broadcast user token set successfully";
+            };
+            readonly changeLanguage: {
+                readonly hint: "Change Language";
+                readonly message: "Loading {{lang}}. This may take a while!";
+            };
+            readonly copy: {
+                readonly copied: "Code copied to clipboard";
+                readonly copiedAsDataURL: "Code copied as data URL";
+                readonly hint: "Copied!";
+                readonly title: "Copy";
+            };
+            readonly error: {
+                readonly couldNotLoadTemplate: "Could not load template: {{template}}";
+                readonly failedToCopyCode: "Failed to copy code";
+                readonly failedToLoadTemplate: "Failed loading template";
+                readonly failedToLoadTemplates: "Failed loading starter templates";
+                readonly failedToParseSettings: "Failed parsing settings as JSON";
+                readonly invalidCommand: "Invalid command!";
+                readonly invalidImport: "Invalid import URL";
+                readonly invalidPanelId: "Invalid panel id";
+                readonly invalidToken: "Invalid token!";
+                readonly login: "Login error!";
+                readonly logout: "Logout error!";
+                readonly noResultContainer: "Result container not found";
+                readonly unavailable: "Command unavailable";
+                readonly unavailableForEmbeds: "Command unavailable for embeds";
+            };
+            readonly export: {
+                readonly gist: "Creating a public GitHub gist...";
+            };
+            readonly fork: {
+                readonly success: "Forked as a new project";
+            };
+            readonly fullScreen: {
+                readonly enter: "Full Screen";
+                readonly exit: "Exit Full Screen";
+            };
+            readonly import: {
+                readonly loading: "Loading Project...";
+            };
+            readonly layout: {
+                readonly horizontal: "Horizontal layout";
+                readonly responsive: "Responsive layout";
+                readonly vertical: "Vertical layout";
+            };
+            readonly loadDefaults: {
+                readonly template: "Loading default template";
+            };
+            readonly login: {
+                readonly success: "Logged in successfully";
+                readonly successWithName: "Logged in as: {{name}}";
+            };
+            readonly logout: {
+                readonly success: "Logged out successfully";
+            };
+            readonly result: {
+                readonly hint: "Show result in new window";
+            };
+            readonly save: {
+                readonly success: "Project locally saved to device!";
+                readonly successWithName: "Project \"{{name}}\" saved to device.";
+            };
+            readonly template: {
+                readonly blank: "Blank Project";
+                readonly delete: "Delete template \"{{item}}\"?";
+                readonly javascript: "JavaScript Starter";
+                readonly react: "React Starter";
+                readonly saved: "Saved as a new template";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 Starter";
+            };
+            readonly unload: {
+                readonly notSaved: "Changes you made may not be saved.";
+            };
+            readonly zoom: {
+                readonly hint: "Zoom";
+            };
+        };
+        readonly customSettings: {
+            readonly JSON: "Custom Settings JSON";
+            readonly heading: "Custom Settings";
+            readonly load: "Load";
+        };
+        readonly deploy: {
+            readonly create: {
+                readonly desc: "A new <1>public</1> repo will be created. The result page will be pushed to <2>gh-pages</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name <1></1>";
+            };
+            readonly error: {
+                readonly generic: "Deployment failed!";
+                readonly repoNameExists: "Repo name already exists";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "A new commit will be added to <1>gh-pages</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly generic: {
+                readonly commitMessage: "Commit Message";
+                readonly commitSourceCodePublic: "Commit source code (public)";
+                readonly deployBtn: "Deploy";
+                readonly deploying: "Deploying...";
+            };
+            readonly heading: "Deploy to GitHub Pages";
+            readonly searchRepo: "Search your public repos...";
+        };
+        readonly editorSettings: {
+            readonly appLanguage: {
+                readonly heading: "App UI Language";
+                readonly note: "Will reload the app to apply the changes after switching the language.";
+            };
+            readonly closeBrackets: "Auto-close brackets and quotes";
+            readonly codeJarDesc: "* The marked features are not available in CodeJar.";
+            readonly default: "Default";
+            readonly desc: "Please check the <1>documentations</1> for details.";
+            readonly editor: {
+                readonly codejar: "CodeJar";
+                readonly codemirror: "CodeMirror";
+                readonly heading: "Editor";
+                readonly monaco: "Monaco";
+            };
+            readonly editorMode: {
+                readonly emacs: "Emacs";
+                readonly heading: "Editor Mode *";
+                readonly vim: "Vim";
+            };
+            readonly editorTheme: "Editor Theme";
+            readonly emmet: "Enable Emmet *";
+            readonly enableAI: {
+                readonly heading: "Enable AI Code Assistant";
+                readonly note: "Powered by <1><2></2></1>";
+            };
+            readonly fontFamily: "Font Family";
+            readonly fontSize: "Font Size";
+            readonly format: "Format";
+            readonly heading: "Editor Settings";
+            readonly lineNumbers: "Show line numbers";
+            readonly notAvailableInCodeJar: "Not available in CodeJar";
+            readonly preview: "Preview";
+            readonly semicolons: "Format: Use Semicolons";
+            readonly singleQuote: "Format: Use Single Quotes";
+            readonly tabSize: "Tab Size";
+            readonly theme: "Dark Mode";
+            readonly trailingComma: "Format: Use Trailing Commas";
+            readonly useTabs: {
+                readonly heading: "Indentation";
+                readonly spaces: "Spaces";
+                readonly tabs: "Tabs";
+            };
+            readonly wordWrap: "Word-wrap";
+        };
+        readonly embed: {
+            readonly activeEditor: {
+                readonly heading: "Active Editor";
+                readonly markup: "{{markup}}";
+                readonly script: "{{script}}";
+                readonly style: "{{style}}";
+            };
+            readonly activeTool: {
+                readonly compiled: "Compiled";
+                readonly console: "Console";
+                readonly heading: "Active Tool";
+                readonly tests: "Tests";
+            };
+            readonly code: {
+                readonly copy: "Copy Code";
+                readonly heading: "Code";
+            };
+            readonly desc: "Please check the <1>documentations</1> for advanced configurations.";
+            readonly embedType: {
+                readonly cdn: "Script (CDN)";
+                readonly heading: "Embed Type";
+                readonly html: "HTML";
+                readonly iframe: "Iframe";
+                readonly npm: "JS (npm)";
+                readonly react: "React";
+                readonly svelte: "Svelte";
+                readonly vue: "Vue";
+            };
+            readonly heading: "Embed Project";
+            readonly lite: "Lite Mode";
+            readonly loading: {
+                readonly click: "On-click";
+                readonly eager: "Eager";
+                readonly heading: "Loading";
+                readonly lazy: "Lazy";
+            };
+            readonly mode: {
+                readonly codeblock: "Code Block";
+                readonly editor: "Editor";
+                readonly full: "Full";
+                readonly heading: "Display Mode";
+                readonly result: "Result";
+            };
+            readonly permanentUrl: "Permanent URL";
+            readonly preview: "Preview";
+            readonly previewLoading: "Loading Preview...";
+            readonly readonly: "Read only";
+            readonly theme: {
+                readonly dark: "Dark";
+                readonly heading: "Theme";
+                readonly light: "Light";
+            };
+            readonly tools: {
+                readonly closed: "Closed";
+                readonly full: "Full";
+                readonly heading: "Tools";
+                readonly none: "None";
+                readonly open: "Open";
+            };
+            readonly view: {
+                readonly editor: "Editor";
+                readonly heading: "Default View";
+                readonly result: "Result";
+                readonly split: "Split";
+            };
+        };
+        readonly generic: {
+            readonly about: {
+                readonly blog: "Blog";
+                readonly configuration: "Configuration";
+                readonly features: "Features";
+                readonly gettingStarted: "Getting Started";
+                readonly github: "GitHub";
+                readonly sdk: "SDK";
+                readonly sponsor: "Sponsor LiveCodes";
+                readonly twitter: "𝕏 / Twitter";
+            };
+            readonly clickForInfo: "Click for info...";
+            readonly close: "Close";
+            readonly error: {
+                readonly authentication: "Authentication error!";
+                readonly exceededSize: "Error: Exceeded size {{size}} MB";
+                readonly failedToReadFile: "Error: Failed to read file";
+            };
+            readonly loading: "Loading...";
+            readonly more: "More...";
+            readonly optional: "Optional";
+            readonly required: "Required";
+        };
+        readonly import: {
+            readonly bulk: {
+                readonly desc: "Bulk import multiple projects to your saved projects. Projects can be exported from the <1>Saved Projects</1> screen.";
+                readonly fromFile: "Bulk import from local file";
+                readonly fromURL: "Bulk import from URL";
+                readonly heading: "Bulk Import";
+                readonly started: "Bulk import started...";
+            };
+            readonly code: {
+                readonly desc: "Supported Sources: <1> <2>GitHub gist</2> <3>GitHub file</3> <4>Directory in a GitHub repo</4> <5>Gitlab snippet</5> <6>Gitlab file</6> <7>Directory in a Gitlab repo</7> <8>JS Bin</8> <9>Raw code</9> <10>Code in web page DOM</10> <11>Code in zip file</11> <12>Official playgrounds<13></13>(TypeScript, Vue and Svelte)</12> </1> Please visit the <14>documentations</14> for details.";
+                readonly fromFile: "Import local files";
+                readonly fromURL: "Import from URL";
+                readonly heading: "Import Code";
+            };
+            readonly error: {
+                readonly failedToLoadURL: "Error: failed to load URL";
+                readonly invalidConfigFile: "Invalid configuration file";
+                readonly invalidFile: "Error: Invalid file";
+            };
+            readonly generic: {
+                readonly file: "Local file";
+                readonly url: "URL";
+            };
+            readonly heading: "Import";
+            readonly json: {
+                readonly desc: "Import a single project JSON to editor. A project can be exported from app&nbsp;menu&nbsp;→ Export&nbsp;→ Export&nbsp;Project&nbsp;(JSON).";
+                readonly fromFile: "Import project from local file";
+                readonly fromURL: "Import project from URL";
+                readonly heading: "Import Project JSON";
+            };
+            readonly success: "Import Successful!";
+        };
+        readonly login: {
+            readonly accessAllowed: "Allow access to:";
+            readonly desc: "<1>By logging in, you agree that <2>cookies</2> may be stored on your device.</1> <3> <4>Why are these permissions required?</4> </3> <5> <6>How to change/revoke permissions?</6> </5>";
+            readonly gist: "Gists";
+            readonly heading: "Login with GitHub";
+            readonly loginAs: "Logged in as {{name}}";
+            readonly loginBtn: "Login";
+            readonly logout: "Log out";
+            readonly privateRepo: "Private Repos";
+            readonly publicRepo: "Repos";
+        };
+        readonly menu: {
+            readonly about: "About";
+            readonly assets: "Assets …";
+            readonly autoSave: "Auto Save";
+            readonly autoUpdate: "Auto Update";
+            readonly backup: "Backup / Restore …";
+            readonly broadcast: "Broadcast …";
+            readonly customSettings: "Custom Settings …";
+            readonly delay: {
+                readonly heading: "Delay: <1>1.5</1>s";
+                readonly hint: "Delay before auto-update";
+            };
+            readonly deploy: "Deploy …";
+            readonly editorSettings: "Editor Settings …";
+            readonly embed: "Embed …";
+            readonly export: {
+                readonly codepen: "Edit in CodePen";
+                readonly gist: "Export to GitHub Gist";
+                readonly heading: "Export";
+                readonly jsfiddle: "Edit in JSFiddle";
+                readonly json: "Export Project (JSON)";
+                readonly result: "Export Result (HTML)";
+                readonly src: "Export Source (ZIP)";
+            };
+            readonly formatOnsave: "Format On-save";
+            readonly import: "Import …";
+            readonly layout: "Vertical Layout";
+            readonly login: "Login …";
+            readonly logout: "Log out";
+            readonly new: "New …";
+            readonly open: "Open …";
+            readonly project: "Project Info …";
+            readonly recoverUnsaved: "Recover Unsaved";
+            readonly resources: "External Resources …";
+            readonly save: "Save";
+            readonly saveAs: {
+                readonly fork: "Fork (New Project)";
+                readonly heading: "Save as";
+                readonly template: "Template";
+            };
+            readonly share: "Share …";
+            readonly showSpacing: {
+                readonly heading: "Show Spacing";
+                readonly hint: "Press Alt/Option and move your cursor over result page";
+            };
+            readonly snippets: "Code Snippets …";
+            readonly sync: "Sync (beta) … <1> ⏳</1>";
+            readonly theme: "Dark Theme";
+            readonly welcome: {
+                readonly heading: "Welcome …";
+                readonly hint: "Show Welcome screen on startup";
+            };
+        };
+        readonly open: {
+            readonly defaultTemplate: "Default template ";
+            readonly delete: {
+                readonly all: "Delete {{projects}} projects?";
+                readonly deleting: "Deleting projects...";
+                readonly one: "Delete project: {{project}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly exportAll: "Export All";
+            readonly filter: {
+                readonly language: "filter by language";
+                readonly tag: "filter by tag";
+            };
+            readonly heading: "Saved Projects";
+            readonly import: "Import";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noData: {
+                readonly desc: "You can save a project from (settings&nbsp;menu&nbsp;&gt;&nbsp;Save) or by the keyboard shortcut (Ctrl/Cmd&nbsp;+&nbsp;S).";
+                readonly heading: "You have no saved projects.";
+            };
+            readonly noMatch: "No projects match these filters.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly filterByTags: "Filter by tags";
+                readonly search: "Search";
+            };
+            readonly removeDefault: "(unset)";
+            readonly reset: "Reset";
+            readonly setAsDefault: "Set as default";
+            readonly sort: {
+                readonly heading: "Sort By:";
+                readonly lastModified: "Last Modified";
+                readonly title: "Title";
+            };
+        };
+        readonly project: {
+            readonly desc: "Description";
+            readonly head: "Add to &lt;head&gt;";
+            readonly heading: "Project Info";
+            readonly htmlAttr: "Attributes for &lt;html&gt;";
+            readonly tags: "Tags";
+            readonly title: "Project Title";
+        };
+        readonly recoverPrompt: {
+            readonly desc: "Your last project has unsaved changes!";
+            readonly heading: "Recover unsaved project?";
+            readonly meta: "Title: <1></1> <2></2> Last modified: <3></3>";
+            readonly notShowAgain: "Do not show this again.";
+            readonly prompt: {
+                readonly discard: "Discard unsaved project";
+                readonly heading: "<1></1>Do you want to recover it now?";
+                readonly recover: "Recover project to editor";
+                readonly save: "Save to device and continue";
+            };
+        };
+        readonly resources: {
+            readonly browseOnJsDelivr: "Browse package files on jsDelivr";
+            readonly cssPresets: {
+                readonly heading: "CSS Presets";
+                readonly none: "None";
+                readonly normalizeCss: "Normalize.css";
+                readonly resetCss: "Reset CSS";
+            };
+            readonly error: {
+                readonly failedToLoadResults: "Failed to load results!";
+                readonly noResultsFound: "No results found for: ";
+            };
+            readonly fonts: {
+                readonly add: "Add";
+                readonly heading: "Fonts <1>(powered by Google Fonts)</1>";
+                readonly select: "Select font ...";
+            };
+            readonly heading: "External Resources";
+            readonly scripts: "External Scripts";
+            readonly search: {
+                readonly heading: "Search Packages <1>(powered by jsDelivr)</1>";
+                readonly placeholder: "e.g. jquery, lodash@4, bootstrap@5.2.3, ...";
+            };
+            readonly stylesheets: "External Stylesheets";
+            readonly urlDesc: "Add stylesheet/script URLs. Each URL should be in a separate line.";
+        };
+        readonly savePrompt: {
+            readonly heading: "Unsaved changes";
+            readonly prompt: {
+                readonly cancel: "Cancel";
+                readonly discard: "Do not save";
+                readonly heading: "The changes you made may not be saved. <1></1> Do you want to save now?";
+                readonly save: "Save";
+            };
+        };
+        readonly share: {
+            readonly characters: "{{urlLength}} characters";
+            readonly copy: {
+                readonly clickToCopy: "Click to copy";
+                readonly copied: "URL copied to clipboard";
+            };
+            readonly encodedURL: "Get encoded URL";
+            readonly error: {
+                readonly failedToCopy: "Copy to clipboard failed!";
+                readonly failedToGenerateURL: "Failed to generate short URL!";
+            };
+            readonly expireInOneYear: "Expires in 1 year";
+            readonly generateURL: "Generating URL …";
+            readonly heading: "Share";
+            readonly permanentURL: "Permanent URL";
+            readonly qrcode: {
+                readonly clickToDownload: "Click to download";
+                readonly generating: "Generating...";
+            };
+            readonly services: {
+                readonly copyUrl: "Copy URL";
+                readonly devTo: "Dev.to";
+                readonly email: "Email";
+                readonly facebook: "Facebook";
+                readonly hackerNews: "Hacker News";
+                readonly linkedIn: "LinkedIn";
+                readonly pinterest: "Pinterest";
+                readonly pocket: "Pocket";
+                readonly qrCode: "QR code";
+                readonly reddit: "Reddit";
+                readonly share: "Share via …";
+                readonly telegram: "Telegram";
+                readonly tumblr: "Tumblr";
+                readonly twitter: "𝕏 / Twitter";
+                readonly whatsApp: "WhatsApp";
+            };
+            readonly shortURL: "Get short URL";
+        };
+        readonly snippets: {
+            readonly action: {
+                readonly copy: "Copy";
+                readonly delete: "Delete";
+                readonly edit: "Edit";
+            };
+            readonly add: {
+                readonly code: "Code";
+                readonly desc: "Description";
+                readonly heading: "Add Snippet";
+                readonly language: "Language";
+                readonly save: "Save";
+                readonly snippets: "Snippets";
+                readonly title: "Title";
+            };
+            readonly copy: {
+                readonly clickToCopySnippet: "Click to copy snippet";
+                readonly copied: "Snippet is copied to clipboard.";
+            };
+            readonly delete: {
+                readonly all: "Delete {{snippets}} snippets?";
+                readonly one: "Delete snippet: {{snippet}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly error: {
+                readonly failedToCopy: "Failed to copy URL.";
+                readonly noTitle: "Please add snippet title.";
+            };
+            readonly filter: {
+                readonly language: "filter by language";
+            };
+            readonly heading: "Code Snippets";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noMatch: "No snippets match these filters.";
+            readonly noSavedSnippets: "You have no saved snippets.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly search: "Search";
+            };
+            readonly reset: "Reset";
+            readonly save: {
+                readonly success: "Snippet locally saved to device!";
+            };
+            readonly sort: {
+                readonly date: "Date";
+                readonly heading: "Sort By:";
+                readonly title: "Title";
+            };
+            readonly text: "Plain Text";
+        };
+        readonly splash: {
+            readonly loading: "Loading LiveCodes…";
+        };
+        readonly sync: {
+            readonly autoSync: "Auto sync";
+            readonly create: {
+                readonly desc: "A new <1>private</1> repo will be created. Your LiveCodes local data will be synchronized with <2>main</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly error: {
+                readonly generic: "Sync failed!";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "Your LiveCodes local data will be synchronized with <1>main</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly heading: "Sync to GitHub Repo";
+            readonly searchRepos: "Search your repos...";
+            readonly success: "Sync complete!";
+            readonly syncBtn: "Sync";
+            readonly syncInProgress: "Sync in progress...";
+            readonly syncStarted: "Sync started...";
+        };
+        readonly templates: {
+            readonly heading: "New Project";
+            readonly noUserTemplates: {
+                readonly desc: "You can save a project as a template from <1></1>(App&nbsp;menu&nbsp;&gt;&nbsp;Save&nbsp;as&nbsp;&gt; Template).";
+                readonly heading: "You have no saved templates.";
+            };
+            readonly starter: {
+                readonly angular: "Angular Starter";
+                readonly assemblyscript: "AssemblyScript Starter";
+                readonly astro: "Astro Starter";
+                readonly backbone: "Backbone Starter";
+                readonly blank: "Blank Project";
+                readonly blockly: "Blockly Starter";
+                readonly bootstrap: "Bootstrap Starter";
+                readonly civet: "Civet Starter";
+                readonly clio: "Clio Starter";
+                readonly clojurescript: "ClojureScript Starter";
+                readonly coffeescript: "CoffeeScript Starter";
+                readonly commonlisp: "Common Lisp Starter";
+                readonly cpp: "C++ Starter";
+                readonly diagrams: "Diagrams Starter";
+                readonly fennel: "Fennel Starter";
+                readonly gleam: "Gleam Starter";
+                readonly go: "Go Starter";
+                readonly heading: "Starter Templates";
+                readonly imba: "Imba Starter";
+                readonly javascript: "JavaScript Starter";
+                readonly jest: "Jest Starter";
+                readonly 'jest-react': "Jest/React Starter";
+                readonly jquery: "jQuery Starter";
+                readonly julia: "Julia Starter";
+                readonly knockout: "Knockout Starter";
+                readonly lit: "Lit Starter";
+                readonly livescript: "LiveScript Starter";
+                readonly loading: "Loading starter templates...";
+                readonly lua: "Lua Starter";
+                readonly 'lua-wasm': "Lua (Wasm) Starter";
+                readonly malina: "Malina.js Starter";
+                readonly markdown: "Markdown Starter";
+                readonly mdx: "MDX Starter";
+                readonly ocaml: "Ocaml Starter";
+                readonly perl: "Perl Starter";
+                readonly php: "PHP Starter";
+                readonly 'php-wasm': "PHP (Wasm) Starter";
+                readonly postgresql: "PostgreSQL Starter";
+                readonly preact: "Preact Starter";
+                readonly prolog: "Prolog Starter";
+                readonly python: "Python Starter";
+                readonly r: "R Starter";
+                readonly react: "React Starter";
+                readonly 'react-native': "React Native Starter";
+                readonly reason: "Reason Starter";
+                readonly rescript: "ReScript Starter";
+                readonly riot: "Riot.js Starter";
+                readonly ruby: "Ruby Starter";
+                readonly 'ruby-wasm': "Ruby (Wasm) Starter";
+                readonly scheme: "Scheme Starter";
+                readonly solid: "Solid Starter";
+                readonly sql: "SQL Starter";
+                readonly stencil: "Stencil Starter";
+                readonly svelte: "Svelte Starter";
+                readonly tailwindcss: "Tailwind CSS Starter";
+                readonly tcl: "Tcl Starter";
+                readonly teal: "Teal Starter";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 SFC Starter";
+                readonly vue2: "Vue 2 Starter";
+                readonly wat: "WebAssembly Text Starter";
+            };
+            readonly user: {
+                readonly heading: "My Templates";
+                readonly loading: "Loading user templates...";
+            };
+        };
+        readonly testEditor: {
+            readonly heading: "Edit Tests";
+            readonly load: "Load";
+            readonly tests: "Tests";
+        };
+        readonly toolspane: {
+            readonly close: "Close";
+            readonly compiled: {
+                readonly title: "Compiled";
+            };
+            readonly console: {
+                readonly clear: "Clear console";
+                readonly title: "Console";
+            };
+            readonly test: {
+                readonly edit: "Edit";
+                readonly error: "<1><2>Test error!</2></1>";
+                readonly loading: "<1>Loading tests...</1>";
+                readonly noTest: "<1>This project has no tests!</1>";
+                readonly reset: "Reset";
+                readonly run: {
+                    readonly desc: "Ctrl/Cmd + Alt + T";
+                    readonly heading: "Run";
+                };
+                readonly summary: {
+                    readonly desc: "Tests: {{failed}}\n       {{passed}}\n       {{skipped}}\n       {{total}}<1></1>\nTime: {{duration}}s";
+                    readonly failed: "{{failedNum}} failed";
+                    readonly passed: "{{passedNum}} passed";
+                    readonly skipped: "{{skippedNum}} skipped";
+                    readonly total: "{{totalNum}} total";
+                };
+                readonly title: "Tests";
+                readonly watch: {
+                    readonly desc: "Run tests when code changes";
+                    readonly heading: "Watch";
+                };
+            };
+        };
+        readonly welcome: {
+            readonly about: {
+                readonly documentation: "Documentations";
+                readonly heading: "About LiveCodes";
+            };
+            readonly heading: "Welcome";
+            readonly recent: {
+                readonly heading: "Recent";
+            };
+            readonly recover: {
+                readonly cancel: "Cancel";
+                readonly heading: "Recover";
+                readonly lastModified: "Last modified: <1></1>";
+                readonly recover: "Recover";
+                readonly save: "Save";
+                readonly unsavedChanges: "Your last project had unsaved changes:";
+            };
+            readonly showOnStartup: "Show on startup";
+            readonly start: {
+                readonly heading: "Start";
+                readonly import: "Import...";
+                readonly loadDefaultTemplate: "Load default template";
+                readonly new: "New...";
+                readonly noDefaultTemplate: "No default template";
+                readonly open: "Open...";
+            };
+            readonly templates: {
+                readonly heading: "Starter Templates";
+            };
+        };
+    };
+    export default translation;
+}
+declare module "livecodes/i18n/locales/fr/language-info" {
+    const languageInfo: {
+        readonly artTemplate: {
+            readonly desc: "High performance JavaScript templating engine.";
+            readonly link: "<1> <2>art-template official website</2> </1> <3> <4>art-template documentation</4> </3>";
+            readonly name: "art-template";
+        };
+        readonly asciidoc: {
+            readonly desc: "AsciiDoc compiled to HTML using Asciidoctor.";
+            readonly link: "<1> <2>AsciiDoc official website</2> </1> <3> <4>Asciidoctor official website</4> </3> <5> <6>Asciidoctor documentation</6> </5> <7> <8>Learn X in Y minutes, where X=asciidoc</8> </7>";
+            readonly name: "AsciiDoc";
+        };
+        readonly assemblyscript: {
+            readonly desc: "A TypeScript-like language for WebAssembly.";
+            readonly link: "<1> <2>AssemblyScript official website</2> </1> <3> <4>AssemblyScript documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "AssemblyScript";
+        };
+        readonly astro: {
+            readonly desc: "Build faster websites with less client-side Javascript. (Still in Beta)";
+            readonly link: "<1> <2>Astro official website</2> </1> <3> <4>Astro documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Astro";
+        };
+        readonly babel: {
+            readonly desc: "The JavaScript compiler";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Babel documentation</4> </3>";
+            readonly name: "Babel";
+        };
+        readonly bbcode: {
+            readonly desc: "BBCode (\"Bulletin Board Code\") is a lightweight markup language used to format messages in many Internet forum software.";
+            readonly link: "<1><2>bbcode.org</2></1> <3> <4>BBCode guide</4> </3> <5> <6>BBCode on Wikipedia</6> </5>";
+            readonly name: "BBCode";
+        };
+        readonly blockly: {
+            readonly desc: "A JavaScript library for building visual programming editors.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>Guides</4> </3> <5> <6>Reference</6> </5> <7> <8>Samples</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Blockly";
+        };
+        readonly civet: {
+            readonly desc: "Civet is a programming language that compiles to TypeScript or JavaScript, so you can use existing tooling but enable concise and powerful syntax.";
+            readonly link: "<1> <2>Civet official website</2> </1> <3> <4>Civet cheatsheet</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Civet";
+        };
+        readonly clio: {
+            readonly desc: "Clio is a fast, distributed, functional programming language that compiles to JavaScript.";
+            readonly link: "<1> <2>Clio official website</2> </1> <3> <4>Clio documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Clio";
+        };
+        readonly clojurescript: {
+            readonly desc: "ClojureScript is a compiler for <1>Clojure</1> that targets JavaScript. <2></2>In LiveCodes, it runs in the browser using <3>Cherry</3>.";
+            readonly link: "<1> <2>ClojureScript official website</2> </1> <3> <4>Clojure official website</4> </3> <5> <6>Cherry repo</6> </5> <7> <8>Learn X in Y minutes, where X=clojure</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "ClojureScript (CLJS)";
+        };
+        readonly coffeescript: {
+            readonly desc: "Unfancy JavaScript.";
+            readonly link: "<1> <2>CoffeeScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=coffeescript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "CoffeeScript";
+        };
+        readonly commonlisp: {
+            readonly desc: "A Common Lisp implementation on Javascript using JSCL (a Lisp-to-Javascript compiler bootstrapped from Common Lisp).";
+            readonly link: "<1> <2>Common-Lisp.net</2> </1> <3> <4>JSCL Project</4> </3> <5> <6>Common Lisp Resources</6> </5> <7> <8>Learn X in Y minutes, where X=Common Lisp</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Common Lisp";
+        };
+        readonly cpp: {
+            readonly desc1: "C++ support using JSCPP (a simple C++ interpreter written in JavaScript).";
+            readonly desc2: "It is not a complete implementation of C++. Please refer to <1>JSCPP documentation</1> for details.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>JSCPP</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C++";
+        };
+        readonly cppWasm: {
+            readonly desc: "Clang C/C++ compiler running on WebAssembly, using <1>wasm-clang</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>Clang official website</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C/C++ (Wasm)";
+        };
+        readonly diagrams: {
+            readonly desc1: "(Experimental)";
+            readonly desc2: "Diagrams-as-code. Supports:";
+            readonly desc3: "<1> <2>Cytoscape</2> </1> <3> <4>ELK</4> (using <5>elkjs</5>) </3> <6> <7>Gnuplot</7> (using <8>gnuplot-JS</8>) </6> <9> <10>Graphviz</10> (using <11>@hpcc-js/wasm</11>) </9> <12> <13>Mermaid</13> </12> <14> <15>Nomnoml</15> </14> <16> <17>Pintora</17> </16> <18> <19>Plotly</19> </18> <20> <21>Svgbob</21> </20> <22> <23>Vega</23> </22> <24> <25>VegaLite</25> </24> <26> <27>WaveDrom</27> </26>";
+            readonly link: "<1> <2>Load starter template</2> </1> <3> <4>LiveCodes Documentation</4> </3>";
+            readonly name: "Diagrams";
+        };
+        readonly dot: {
+            readonly desc: "The fastest + concise javascript template engine for Node.js and browsers.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "doT.js";
+        };
+        readonly ejs: {
+            readonly desc: "Embedded JavaScript templating.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "EJS";
+        };
+        readonly eta: {
+            readonly desc: "Embedded JS template engine for Node, Deno, and the browser. Lighweight, fast, and pluggable. Written in TypeScript.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Eta";
+        };
+        readonly fennel: {
+            readonly desc: "Fennel is a programming language that brings together the speed, simplicity, and reach of Lua with the flexibility of a lisp syntax and macro system.";
+            readonly link: "<1> <2>Fennel official website</2> </1> <3> <4>Getting Started with Fennel</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Fennel";
+        };
+        readonly flow: {
+            readonly desc: "Flow is a static type checker for JavaScript.";
+            readonly link: "<1> <2>Flow official website</2> </1> <3> <4>Flow documentation</4> </3>";
+            readonly name: "Flow";
+        };
+        readonly gleam: {
+            readonly desc1: "Gleam is a friendly language for building type-safe systems that scale!";
+            readonly desc2: "Gleam is a statically-typed functional programming language, which compiles to Erlang or JavaScript.";
+            readonly link: "<1><2>Gleam website</2></1> <3> <4>Gleam documentation</4> </3> <5> <6>Gleam language tour</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Gleam";
+        };
+        readonly go: {
+            readonly desc1: "Go (Golang) is an open source programming language that makes it easy to build simple, reliable, and efficient software.";
+            readonly desc2: "Here, it is compiled to JavaScript using GopherJS.";
+            readonly link: "<1><2>Go website</2></1> <3><4>Go documentation</4></3> <5> <6>GopherJS repo</6> </5> <7> <8>Learn X in Y minutes, where X=Go</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Go";
+        };
+        readonly haml: {
+            readonly desc: "Haml compiler for client side javascript view templates using clientside-haml-js.";
+            readonly link: "<1><2>Haml official website</2></1> <3> <4>Haml documentation</4> </3> <5> <6>clientside-haml-js GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=haml</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Haml";
+        };
+        readonly handlebars: {
+            readonly desc: "Minimal templating on steroids.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Handlebars";
+        };
+        readonly imba: {
+            readonly desc: "The friendly full-stack language.";
+            readonly link: "<1><2>Official website</2></1>";
+            readonly name: "Imba";
+        };
+        readonly jsx: {
+            readonly desc: "JSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler.  By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "JSX";
+        };
+        readonly julia: {
+            readonly desc1: "(Julia language support in LiveCodes is still experimental)";
+            readonly desc2: "Julia compiler and Julia Base running on WASM, using <1>julia-wasm</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Julia official website</2> </1> <3> <4>Julia documentation</4> </3> <5> <6>Learn X in Y minutes, where X=Julia</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Julia";
+        };
+        readonly less: {
+            readonly desc: "It's CSS, with just a little more.";
+            readonly link: "<1><2>Less official website</2></1> <3> <4>Learn X in Y minutes, where X=less</4> </3>";
+            readonly name: "Less";
+        };
+        readonly liquid: {
+            readonly desc: "A simple, expressive and safe template engine.";
+            readonly link: "<1> <2>LiquidJS official website</2> </1> <3> <4>LiquidJS documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "LiquidJS";
+        };
+        readonly livescript: {
+            readonly desc: "A language which compiles to JavaScript.";
+            readonly link: "<1> <2>LiveScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=LiveScript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "LiveScript";
+        };
+        readonly lua: {
+            readonly desc: "Lua running in the browser using fengari-web.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Fengari official website</6> </5> <7> <8>fengari-web GitHub repo</8> </7> <9> <10>Learn X in Y minutes, where X=Lua</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "Lua";
+        };
+        readonly luaWasm: {
+            readonly desc: "Lua running in the browser using Wasmoon, a real lua 5.4 VM with JS bindings made with WebAssembly.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Wasmoon GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=Lua</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Lua (Wasm)";
+        };
+        readonly malina: {
+            readonly desc: "Frontend compiler, inspired by Svelte.";
+            readonly link: "<1> <2>Malina.js repo</2> </1> <3> <4>Malina.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Malina.js";
+        };
+        readonly markdown: {
+            readonly desc: "Markdown compiled to HTML using Marked.";
+            readonly link: "<1> <2>Markdown official website</2> </1> <3> <4>Marked documentation</4> </3> <5> <6>Learn X in Y minutes, where X=markdown</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Markdown";
+        };
+        readonly mdx: {
+            readonly desc: "Markdown for the component era. <1></1>MDX lets you seamlessly write JSX in your Markdown documents.";
+            readonly link: "<1><2>MDX documentation</2></1> <3><4>Load starter template</4></3>";
+            readonly name: "MDX";
+        };
+        readonly mjml: {
+            readonly desc: "MJML is a markup language designed to reduce the pain of coding a responsive email.";
+            readonly link: "<1><2>MJML official website</2></1> <3> <4>MJML documentation</4> </3> <5> <6>MJML official templates</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "MJML";
+        };
+        readonly mustache: {
+            readonly desc: "Logic-less templates.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>mustache(5) manual</4> </3> <5> <6>JavaScript implementation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "Mustache";
+        };
+        readonly nunjucks: {
+            readonly desc: "A rich and powerful templating language for JavaScript. Nunjucks is essentially a port of <1>jinja2</1>.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Nunjucks";
+        };
+        readonly ocaml: {
+            readonly desc1: "OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles.";
+            readonly desc2: "ReScript compiler is used here to compile OCaml to JavaScript.";
+            readonly link: "<1><2>OCaml website</2></1> <3> <4>OCaml documentation</4> </3> <5> <6>ReScript website</6> </5> <7> <8>Learn X in Y minutes, where X=OCaml</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "OCaml";
+        };
+        readonly perl: {
+            readonly desc: "Perl running in the browser using Perlito.";
+            readonly link: "<1> <2>Perl official website</2> </1> <3> <4>Perl documentation</4> </3> <5> <6>Perlito5 Readme</6> </5> <7> <8>Learn X in Y minutes, where X=perl</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Perl";
+        };
+        readonly php: {
+            readonly desc: "PHP running in the browser using Uniter.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>Uniter GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11><12>Load starter template</12></11>";
+            readonly name: "PHP";
+        };
+        readonly phpWasm: {
+            readonly desc: "PHP in Browser, powered by WebAssembly, using php-wasm.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>php-wasm GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "PHP (Wasm)";
+        };
+        readonly postgresql: {
+            readonly desc: "PostgreSQL packaged as WASM using PGlite";
+            readonly link: "<1> <2>PostgreSQL official website</2> </1> <3> <4>PostgreSQL documentation</4> </3> <5> <6>PGlite GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "PostgreSQL";
+        };
+        readonly prolog: {
+            readonly desc: "An open source Prolog interpreter in JavaScript.";
+            readonly link: "<1> <2>Tau Prolog official website</2> </1> <3> <4>Tau Prolog documentation</4> </3> <5> <6>SWI-Prolog</6> </5> <7> <8>Learn X in Y minutes, where X=Prolog</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Tau Prolog";
+        };
+        readonly pug: {
+            readonly desc: "Robust, elegant, feature rich template engine.";
+            readonly link: "<1> <2>Pug documentation</2> </1> <3> <4>Learn X in Y minutes, where X=Pug</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Pug";
+        };
+        readonly python: {
+            readonly desc: "Python running in the browser using Brython.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5> <6>Brython documentation</6> </5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python";
+        };
+        readonly pythonWasm: {
+            readonly desc1: "Python with the scientific stack, compiled to WebAssembly using Pyodide.";
+            readonly desc2: "Pyodide allows using Python scientific stack including NumPy, Pandas, Matplotlib, SciPy, scikit-learn and many more. In addition it’s possible to install pure Python wheels from PyPi.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5><6>Pyodide documentation</6></5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python (Wasm)";
+        };
+        readonly r: {
+            readonly desc: "R running in the browser using WebR.";
+            readonly link: "<1> <2>R project official website</2> </1> <3> <4>The R Manuals</4> </3> <5> <6>R for Data Science (2e)</6> </5> <7> <8>WebR documentation</8> </7> <9> <10>Learn X in Y minutes, where X=R</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "R";
+        };
+        readonly reactNative: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "React Native for Web";
+        };
+        readonly reactNativeTsx: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>TypeScript website</10> </9> <11> <12>TypeScript documentation</12> </11> <13> <14>LiveCodes Documentations</14> </13> <15> <16>Load starter template (JSX)</16> </15>";
+            readonly name: "React Native for Web (with TypeScript)";
+        };
+        readonly reason: {
+            readonly desc1: "Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.";
+            readonly desc2: "ReScript compiler is used here to compile Reason to JavaScript.";
+            readonly link: "<1><2>Reason website</2></1> <3> <4>Reason documentation</4> </3> <5> <6>ReasonReact</6> </5> <7> <8>ReScript website</8> </7> <9> <10>Learn X in Y minutes, where X=reason</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Reason";
+        };
+        readonly rescript: {
+            readonly desc: "ReScript is a robustly typed language that compiles to efficient and human-readable JavaScript.";
+            readonly link: "<1> <2>ReScript website</2> </1> <3> <4>ReScript / React</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "ReScript";
+        };
+        readonly richtext: {
+            readonly desc1: "Using Quill:";
+            readonly desc2: "Your powerful rich text editor.";
+            readonly link: "<1> <2>Quill official website</2> </1>";
+            readonly name: "Rich Text Editor";
+        };
+        readonly riot: {
+            readonly desc: "Simple and elegant component-based UI library.";
+            readonly link: "<1> <2>Riot.js official website</2> </1> <3> <4>Riot.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Riot.js";
+        };
+        readonly ruby: {
+            readonly desc: "Ruby running in the browser using Opal.";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5><6>Opal official website</6></5> <7> <8>Opal standard library CDN</8> </7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby";
+        };
+        readonly rubyWasm: {
+            readonly desc: "Ruby running in the browser using ruby-wasm (a collection of WebAssembly ports of the CRuby).";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5> <6>ruby.wasm website</6> </5> <7><8>CRuby</8></7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby (WASM)";
+        };
+        readonly sass: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>Sass (the indented) syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "Sass";
+        };
+        readonly scheme: {
+            readonly desc: "Scheme running in the browser using biwascheme.";
+            readonly link: "<1> <2>The Scheme Programming Language</2> </1> <3> <4>BiwaScheme official website</4> </3> <5> <6>BiwaScheme reference</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Scheme";
+        };
+        readonly scss: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>SCSS syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "SCSS";
+        };
+        readonly solid: {
+            readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+            readonly link: "<1><2>Official website</2></1> <3><4>Documentation</4></3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template (TSX)</8> </7>";
+            readonly name: "Solid";
+            readonly tsx: {
+                readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+                readonly link: "<1><2>Official website</2></1> <3> <4>Solid documentation</4> </3> <5> <6>TypeScript website</6> </5> <7> <8>TypeScript documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+                readonly name: "Solid (with TypeScript)";
+            };
+        };
+        readonly sql: {
+            readonly desc: "SQLite compiled to JavaScript using SQL.js";
+            readonly link: "<1> <2>SQLite official website</2> </1> <3> <4>SQLite syntax documentation</4> </3> <5> <6>SQL.js official website</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "SQLite";
+        };
+        readonly stencil: {
+            readonly desc: "A Compiler for Web Components and High Performance Web Apps.";
+            readonly link: "<1> <2>Stencil official website</2> </1> <3> <4>Stencil documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Stencil";
+        };
+        readonly styleProcessors: {
+            readonly link: "<1> <2>Tailwind CSS</2> </1> <3> <4>Windi CSS</4> </3> <5> <6>UnoCSS</6> </5> <7> <8>Lightning CSS</8> </7> <9> <10>PostCSS</10> Plugins: <11> <12> <13>Autoprefixer</13> </12> <14> <15>postcss-preset-env</15> </14> <16> <17>postcss-import-url</17> </16> <18> <19>postcss-modules</19> </18> </11> </9>";
+            readonly name: "CSS Frameworks and Processors";
+        };
+        readonly stylis: {
+            readonly desc: "Light-weight css preprocessor.";
+            readonly link: "<1> <2>Stylis official website</2> </1>";
+            readonly name: "Stylis";
+        };
+        readonly stylus: {
+            readonly desc: "Expressive, Dynamic, Robust CSS.";
+            readonly link: "<1> <2>Stylus official website</2> </1> <3> <4>Learn X in Y minutes, where X=stylus</4> </3>";
+            readonly name: "Stylus";
+        };
+        readonly sucrase: {
+            readonly desc: "Super-fast alternative to Babel for when you can target modern JS runtimes.";
+            readonly link: "<1> <2>Sucrase official website</2> </1> <3> <4>Sucrase GitHub Repo</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Sucrase";
+        };
+        readonly svelte: {
+            readonly desc: "Cybernetically enhanced web apps.";
+            readonly link: "<1> <2>Svelte official website</2> </1> <3> <4>Svelte documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Svelte";
+        };
+        readonly tcl: {
+            readonly desc: "Tcl running in the browser, using <1>wacl</1>.";
+            readonly link: "<1> <2>Tcl official website</2> </1> <3> <4>wacl repo</4> </3> <5> <6>Learn X in Y minutes, where X=Tcl</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Tcl (Tool Command Language)";
+        };
+        readonly teal: {
+            readonly desc: "A typed dialect of Lua.";
+            readonly link: "<1> <2>Teal GitHub repo</2> </1> <3> <4>Teal docs</4> </3> <5> <6>Teal tutorial</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Teal";
+        };
+        readonly tsx: {
+            readonly desc: "TypeScript in JSX. TSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler. By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>Typescript documentation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "TSX";
+        };
+        readonly twig: {
+            readonly desc: "A JavaScript implementation of the <1>Twig</1> PHP templating language by <2>Twig.js</2> .";
+            readonly link: "<1> <2>Twig official website</2> </1> <3> <4>Twig Documentation</4> </3> <5> <6>Twig.js Repo</6> </5> <7> <8>Twig.js Documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Twig";
+        };
+        readonly typescript: {
+            readonly desc: "A Typed Superset of JavaScript.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>TypeScript documentation</4> </3> <5> <6>Learn X in Y minutes, where X=TypeScript</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "TypeScript";
+        };
+        readonly vue: {
+            readonly link: "<1> <2>Vue.js v3 official website</2> </1> <3> <4>Vue3 documentation</4> </3> <5> <6>Vue3 single file components</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Vue3 Single File Components";
+        };
+        readonly vue2: {
+            readonly desc: "Loaded using vue3-sfc-loader.";
+            readonly link: "<1><2>Vue.js official website</2></1> <3> <4>Vue2 documentation</4> </3> <5> <6>Vue2 single file components</6> </5> <7> <8>vue3-sfc-loader GitHub repo</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Vue2 Single File Components";
+        };
+        readonly wat: {
+            readonly desc1: "Low-level textual representation of the WebAssembly (wasm) binary format.";
+            readonly desc2: "It is converted to wasm using wabt.js.";
+            readonly link: "<1><2>WebAssembly.org</2></1> <3> <4>WebAssembly Text Specs</4> </3> <5> <6>WebAssembly on MDN</6> </5> <7> <8>Understanding WebAssembly text format</8> </7> <9> <10>wabt.js documentation</10> </9> <11> <12>Learn X in Y minutes, where X=WebAssembly</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "WebAssembly Text Format";
+        };
+    };
+    export default languageInfo;
+}
+declare module "livecodes/i18n/locales/fr/translation" {
+    const translation: {
+        readonly about: {
+            readonly documentations: {
+                readonly aboutUs: "À propos";
+                readonly contact: "Contact";
+                readonly heading: "Documentation";
+                readonly home: "Accueil";
+                readonly licence: "Licence";
+            };
+            readonly heading: "À propos de LiveCodes";
+            readonly livecodes: {
+                readonly para1: "<1><2>LiveCodes</2></1> is an <3>open-source</3>, <4>feature-rich</4>, <5>client-side</5> code playground. Currently, <6>80+ languages/<7></7>frameworks</6> are supported. It can be used as a standalone app or can be <8>embedded</8> in any web page. There are many ways to <9>prefill playgrounds</9> with code.";
+                readonly para2: "A wide range of <1>configuration options</1> makes it very flexible. A powerful <2>SDK</2> (for <3>JS/TS</3>, <4>React</4>, <5>Vue</5> and <6>Svelte</6>) facilitates <7>embedding</7> and <8>communicating</8> with playgrounds. <9>Comprehensive documentations</9> are available with code samples, live demos and screenshots.";
+            };
+            readonly version: {
+                readonly app: "App version: {{APP_VERSION}}";
+                readonly appPermanentUrl: "App URL permanente";
+                readonly commit: "Validation Git: {{COMMIT_SHA}}";
+                readonly heading: "Version";
+                readonly sdk: "SDK version: {{SDK_VERSION}}";
+                readonly sdkPermanentUrl: "SDK URL permanente";
+            };
+        };
+        readonly app: {
+            readonly copy: {
+                readonly hint: "Copier (Ctrl/Cmd + A, Ctrl/Cmd + C)";
+            };
+            readonly copyAsUrl: {
+                readonly hint: "Copier le code comme URL de données";
+            };
+            readonly customSettings: {
+                readonly hint: "Paramètres personnalisés";
+            };
+            readonly editorMode: {
+                readonly hint: "Mode éditeur";
+            };
+            readonly editorSettings: {
+                readonly hint: "Paramètres de l'éditeur";
+            };
+            readonly externalResources: {
+                readonly hint: "Ressources externes";
+            };
+            readonly focus: {
+                readonly hint: "Basculer le mode de mise au point";
+            };
+            readonly format: {
+                readonly hint: "Format (Alt + Shift + F)";
+            };
+            readonly fullscreen: {
+                readonly hint: "Plein écran";
+            };
+            readonly logo: {
+                readonly title: "LiveCodes : un éditeur de code dans le navigateur !";
+            };
+            readonly projectInfo: {
+                readonly hint: "Informations sur le projet";
+            };
+            readonly redo: {
+                readonly hint: "Refaire (Ctrl/Cmd + Shift + Z)";
+            };
+            readonly result: {
+                readonly hint: "Basculer le résultat";
+            };
+            readonly run: {
+                readonly hint: "Exécuter (Shift + Enter)";
+            };
+            readonly share: {
+                readonly hint: "Partager";
+            };
+            readonly undo: {
+                readonly hint: "Défaire (Ctrl/Cmd + Z)";
+            };
+            readonly untitledProject: "Projet sans titre";
+        };
+        readonly assets: {
+            readonly add: {
+                readonly dataURL: {
+                    readonly desc: "Ajouter un élément en tant que fichier codé en base64 <1>data url</1>.";
+                    readonly heading: "URL des données";
+                    readonly label: "Ajouter un fichier";
+                };
+                readonly githubPages: {
+                    readonly desc: "Déployer l’actif sur les pages GitHub. Le fichier est transféré vers la branche <1>gh-pages</1> du dépôt <2>livecodes-assets</2> sur votre compte GitHub. Si le dépôt n'existe pas déjà, un dépôt public sera créé.";
+                    readonly heading: "GitHub Pages";
+                    readonly label: "Télécharger le fichier";
+                };
+                readonly heading: "Ajouter";
+            };
+            readonly delete: {
+                readonly all: "Supprimer {{assets}} ressources?";
+                readonly one: "Supprimer ressource: {{asset}}?";
+            };
+            readonly deleteAll: "Supprimer tout";
+            readonly generic: {
+                readonly clickToCopyURL: "Cliquez pour copier l'URL";
+            };
+            readonly heading: "Ressources";
+            readonly link: {
+                readonly date: "Date: {{modified}}";
+                readonly type: "Type: {{type}}";
+                readonly url: "URL: {{url}}";
+            };
+            readonly loadFile: {
+                readonly error: {
+                    readonly failedToUpload: "Erreur : échec de téléchargement du fichier";
+                    readonly unauthenticated: "Erreur : Utilisateur non authentifié";
+                };
+                readonly upload: "Télécharger le fichier";
+                readonly uploading: "Téléchargement...";
+            };
+            readonly noMatch: "Aucune ressource ne correspond à ces filtres.";
+            readonly noSavedAssets: "Vous n'avez aucune ressource enregistrée.";
+            readonly processAsset: {
+                readonly addFile: "Fichier ajouté: ";
+                readonly deployNotice: "Le fichier devrait bientôt être disponible sur cette URL (~1 min).";
+                readonly success: "Fichier ajouté aux ressources!";
+                readonly urlLabel: "URL: ";
+            };
+            readonly resetFilters: "Réinitialiser";
+            readonly search: "Rechercher";
+            readonly sort: {
+                readonly date: "Date";
+                readonly fileName: "Nom de fichier";
+                readonly heading: "Trier par:";
+            };
+            readonly type: {
+                readonly archive: "Archive";
+                readonly audio: "Audio";
+                readonly csv: "CSV";
+                readonly font: "Font";
+                readonly html: "HTML";
+                readonly icon: "Icon";
+                readonly image: "Image";
+                readonly json: "JSON";
+                readonly other: "Other";
+                readonly script: "Script";
+                readonly stylesheet: "Stylesheet";
+                readonly text: "Text";
+                readonly video: "Video";
+                readonly xml: "XML";
+            };
+            readonly types: {
+                readonly all: "Tous types";
+            };
+            readonly url: {
+                readonly fail: "Échec de la copie de l'URL.";
+                readonly success: "L'URL est copiée dans le presse-papiers.";
+            };
+        };
+        readonly backup: {
+            readonly backup: {
+                readonly assets: "Ressources";
+                readonly button: "Sauvegarde";
+                readonly desc: "Sauvegardez les données LiveCodes afin qu'elles puissent être restaurées ultérieurement sur cet appareil ou autres. <1></1> Veuillez visiter la <2>documentation</2> pour plus de détails.";
+                readonly heading: "Sauvegarder";
+                readonly projects: "Projets";
+                readonly settings: "Paramètres utilisateur";
+                readonly snippets: "Extraits de code";
+                readonly templates: "Modèles d'utilisateur";
+            };
+            readonly backupBtn: "Sauvegarder";
+            readonly error: {
+                readonly atLeastOneStore: "Veuillez sélectionner au moins un option à sauvegarder";
+                readonly incorrectFileType: "Erreur : type de fichier incorrect";
+            };
+            readonly fileInputLabel: "Restaurer à partir du fichier";
+            readonly heading: "Sauvegarder / Restaurer";
+            readonly inProgress: "En cours...";
+            readonly restore: {
+                readonly desc: "Restaurer les données LiveCodes précédemment sauvegardées. <1></1> Si vous choisissez de remplacer le contenu actuel, vous souhaiterez peut-être d’abord le sauvegarder. <2></2> Veuillez visiter la <3>documentations</3> pour plus de détails.";
+                readonly fromFile: "Restaurer à partir du fichier";
+                readonly heading: "Restaurer";
+                readonly mode: {
+                    readonly merge: "Fusionner avec le contenu actuel";
+                    readonly replace: "Remplacer le contenu actuel";
+                };
+                readonly success: "Restauré avec succès!";
+            };
+        };
+        readonly broadcast: {
+            readonly broadcastBtn: {
+                readonly start: "Diffuser";
+                readonly stop: "Arrêter la diffusion";
+            };
+            readonly broadcasting: "Diffusion...";
+            readonly channelURL: "URL de chaîne";
+            readonly connecting: "Connexion...";
+            readonly desc: "Diffusez la page de résultats vers d’autres navigateurs ou appareils en temps réel. Veuillez visiter la <1>documentation</1> pour plus de détails.";
+            readonly error: {
+                readonly generic: "La diffusion a échoué !";
+                readonly serverURLRequired: "L'URL du serveur est requise !";
+            };
+            readonly heading: "Diffuser";
+            readonly includeSourceCode: "Inclure le code source";
+            readonly serverURL: {
+                readonly heading: "URL du serveur";
+            };
+        };
+        readonly core: {
+            readonly broadcast: {
+                readonly heading: "Diffuser";
+                readonly successSetToken: "Le jeton d'utilisateur de diffusion a été défini avec succès";
+            };
+            readonly changeLanguage: {
+                readonly hint: "Change Language";
+                readonly message: "Chargement {{lang}}. Cela peut prendre un certain temps!";
+            };
+            readonly copy: {
+                readonly copied: "Code copié dans le presse-papiers";
+                readonly copiedAsDataURL: "Code copié comme URL de données";
+                readonly hint: "Copié!";
+                readonly title: "Copier";
+            };
+            readonly error: {
+                readonly couldNotLoadTemplate: "Impossible de charger le modèle: {{template}}";
+                readonly failedToCopyCode: "Impossible de copier le code";
+                readonly failedToLoadTemplate: "Échec du chargement du modèle";
+                readonly failedToLoadTemplates: "Échec du chargement des modèles de démarrage";
+                readonly failedToParseSettings: "Échec de l'analyse des paramètres au format JSON";
+                readonly invalidCommand: "Commande invalide!";
+                readonly invalidImport: "URL d'importation non valide";
+                readonly invalidPanelId: "ID de panneau non valide";
+                readonly invalidToken: "Jeton invalide!";
+                readonly login: "Erreur de connexion!";
+                readonly logout: "Erreur de déconnexion !";
+                readonly noResultContainer: "Conteneur de résultat non trouvé";
+                readonly unavailable: "Commande indisponible";
+                readonly unavailableForEmbeds: "Commande indisponible pour les intégrations";
+            };
+            readonly export: {
+                readonly gist: "Créer un gist GitHub public...";
+            };
+            readonly fork: {
+                readonly success: "Dupliquer (fork) comme nouveau projet";
+            };
+            readonly fullScreen: {
+                readonly enter: "Plein écran";
+                readonly exit: "Quitter le mode plein écran";
+            };
+            readonly import: {
+                readonly loading: "Chargement du projet...";
+            };
+            readonly layout: {
+                readonly horizontal: "Disposition horizontale";
+                readonly responsive: "Disposition réactive";
+                readonly vertical: "Disposition verticale";
+            };
+            readonly loadDefaults: {
+                readonly template: "Chargement du modèle par défaut";
+            };
+            readonly login: {
+                readonly success: "Connecté avec succès";
+                readonly successWithName: "Connecté en tant que: {{name}}";
+            };
+            readonly logout: {
+                readonly success: "Déconnexion réussie";
+            };
+            readonly result: {
+                readonly hint: "Afficher le résultat dans une nouvelle fenêtre";
+            };
+            readonly save: {
+                readonly success: "Projet enregistré localement sur l'appareil!";
+                readonly successWithName: "Projet \"{{name}}\" enregistré localement.";
+            };
+            readonly template: {
+                readonly blank: "Projet vide";
+                readonly delete: "Supprimer le modèle \"{{item}}\"?";
+                readonly javascript: "JavaScript Starter";
+                readonly react: "React Starter";
+                readonly saved: "Enregistré comme nouveau modèle";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 Starter";
+            };
+            readonly unload: {
+                readonly notSaved: "Les modifications que vous avez apportées peuvent ne pas être enregistrées.";
+            };
+            readonly zoom: {
+                readonly hint: "Zoom";
+            };
+        };
+        readonly customSettings: {
+            readonly JSON: "Paramètres personnalisés JSON";
+            readonly heading: "Paramètres personnalisés";
+            readonly load: "Charger";
+        };
+        readonly deploy: {
+            readonly create: {
+                readonly desc: "Un nouveau dépôt <1>public</1> sera créé. La page de résultat sera envoyée (push) vers la branche <2>gh-pages</2>.";
+                readonly heading: "Créer un nouveau dépôt";
+                readonly repoName: "Nom du dépôt <1></1>";
+            };
+            readonly error: {
+                readonly generic: "Le déploiement a échoué!";
+                readonly repoNameRequired: "Le nom du dépôt est obligatoire";
+            };
+            readonly existing: {
+                readonly desc: "Un nouveau commit sera ajouté à la branche <1>gh-pages</1>.";
+                readonly heading: "Dépôt existant";
+                readonly repoName: "Nom du dépôt";
+            };
+            readonly generic: {
+                readonly commitMessage: "Commit Message";
+                readonly commitSourceCodePublic: "Commit source code (public)";
+                readonly deployBtn: "Déployer";
+                readonly deploying: "Déploiement...";
+            };
+            readonly heading: "Déployer sur les pages GitHub";
+            readonly searchRepo: "Recherchez vos dépôts publics...";
+        };
+        readonly editorSettings: {
+            readonly appLanguage: {
+                readonly heading: "Langue de l'interface utilisateur";
+                readonly note: "Recharge l'application pour appliquer les modifications après avoir changé de langue.";
+            };
+            readonly closeBrackets: "Fermeture automatique des crochets et des guillemets";
+            readonly codeJarDesc: "* Les fonctionnalités marquées ne sont pas disponibles dans CodeJar.";
+            readonly default: "Par défaut";
+            readonly desc: "Veuillez vérifier la <1>documentation</1> pour plus de détails.";
+            readonly editor: {
+                readonly codejar: "CodeJar";
+                readonly codemirror: "CodeMirror";
+                readonly heading: "Éditeur";
+                readonly monaco: "Monaco";
+            };
+            readonly editorMode: {
+                readonly emacs: "Emacs";
+                readonly heading: "Mode éditeur *";
+                readonly vim: "Vim";
+            };
+            readonly editorTheme: "Thème de l'éditeur";
+            readonly emmet: "Activer Emmet *";
+            readonly enableAI: {
+                readonly heading: "Activer l'assistant de code IA";
+                readonly note: "Powered by <1><2></2></1>";
+            };
+            readonly fontFamily: "Famille de polices";
+            readonly fontSize: "Taille de la police";
+            readonly format: "Format";
+            readonly heading: "Paramètres de l'éditeur";
+            readonly lineNumbers: "Afficher les numéros de ligne";
+            readonly notAvailableInCodeJar: "Non disponible dans CodeJar";
+            readonly preview: "Aperçu";
+            readonly semicolons: "Format: Utiliser des points-virgules";
+            readonly singleQuote: "Format: Utiliser des guillemets simples";
+            readonly tabSize: "Taille de tabulation";
+            readonly theme: "Mode sombre";
+            readonly trailingComma: "Format: Utilisez des virgules de fin";
+            readonly useTabs: {
+                readonly heading: "Indentations";
+                readonly spaces: "Espaces";
+                readonly tabs: "Tabulations";
+            };
+            readonly wordWrap: "Retour à la ligne";
+        };
+        readonly embed: {
+            readonly activeEditor: {
+                readonly heading: "Éditeur actif";
+                readonly markup: "{{markup}}";
+                readonly script: "{{script}}";
+                readonly style: "{{style}}";
+            };
+            readonly activeTool: {
+                readonly compiled: "Compilé";
+                readonly console: "Console";
+                readonly heading: "Outil actif";
+                readonly tests: "Tests";
+            };
+            readonly code: {
+                readonly copy: "Copier le code";
+                readonly heading: "Code";
+            };
+            readonly desc: "Veuillez vérifier la <1>documentation</1> pour les configurations avancées.";
+            readonly embedType: {
+                readonly cdn: "Script (CDN)";
+                readonly heading: "Type d'intégration";
+                readonly html: "HTML";
+                readonly iframe: "Iframe";
+                readonly npm: "JS (npm)";
+                readonly react: "React";
+                readonly svelte: "Svelte";
+                readonly vue: "Vue";
+            };
+            readonly heading: "Projet intégré";
+            readonly lite: "Mode simplifié";
+            readonly loading: {
+                readonly click: "Au clic";
+                readonly eager: "Anticipé";
+                readonly heading: "Chargement";
+                readonly lazy: "Différé.";
+            };
+            readonly mode: {
+                readonly codeblock: "Code Block";
+                readonly editor: "Editor";
+                readonly full: "Full";
+                readonly heading: "Mode d'affichage";
+                readonly result: "Résultat";
+            };
+            readonly permanentUrl: "URL Permanent";
+            readonly preview: "Aperçu";
+            readonly previewLoading: "Chargement de l'aperçu...";
+            readonly readonly: "Lecture seule";
+            readonly theme: {
+                readonly dark: "Sombre";
+                readonly heading: "Thème";
+                readonly light: "Clair";
+            };
+            readonly tools: {
+                readonly closed: "Fermé";
+                readonly full: "Complet";
+                readonly heading: "Outils";
+                readonly none: "Aucun";
+                readonly open: "Ouvrir";
+            };
+            readonly view: {
+                readonly editor: "Éditeur";
+                readonly heading: "Vue par défaut";
+                readonly result: "Résultat";
+                readonly split: "Scinder";
+            };
+        };
+        readonly generic: {
+            readonly about: {
+                readonly blog: "Blog";
+                readonly configuration: "Configuration";
+                readonly features: "Caractéristiques";
+                readonly gettingStarted: "Mise en route";
+                readonly github: "GitHub";
+                readonly sdk: "SDK";
+                readonly sponsor: "Parrainer";
+                readonly twitter: "𝕏 / Twitter";
+            };
+            readonly clickForInfo: "Cliquez pour info...";
+            readonly close: "Fermer";
+            readonly error: {
+                readonly authentication: "Erreur d'authentification !";
+                readonly exceededSize: "Erreur: taille dépassée {{size}} MB";
+                readonly failedToReadFile: "Erreur: impossible de lire le fichier";
+            };
+            readonly loading: "Chargement...";
+            readonly more: "Plus...";
+            readonly optional: "Facultatif";
+            readonly required: "Requis";
+        };
+        readonly import: {
+            readonly bulk: {
+                readonly desc: "Importez en masse plusieurs projets dans vos projets enregistrés. Les projets peuvent être exportés depuis l'écran <1>Projets enregistrés</1>.";
+                readonly fromFile: "Importation groupée depuis un fichier local";
+                readonly fromURL: "Importation groupée depuis un URL";
+                readonly heading: "Importation groupée";
+                readonly started: "Importation groupée a démarré...";
+            };
+            readonly code: {
+                readonly desc: "Sources prises en charge: <1> <2>GitHub gist</2> <3>GitHub file</3> <4>Directory in a GitHub repo</4> <5>Gitlab snippet</5> <6>Gitlab file</6> <7>Directory in a Gitlab repo</7> <8>JS Bin</8> <9>Raw code</9> <10>Code in web page DOM</10> <11>Code in zip file</11> <12>Official playgrounds<13></13>(TypeScript, Vue and Svelte)</12> </1> Please visit the <14>documentations</14> for details.";
+                readonly fromFile: "Importer des fichiers locaux";
+                readonly fromURL: "Importer depuis une URL";
+                readonly heading: "Importer code";
+            };
+            readonly error: {
+                readonly failedToLoadURL: "Erreur: échec du chargement de l'URL";
+                readonly invalidConfigFile: "Fichier de configuration non valide";
+                readonly invalidFile: "Erreur: fichier non valide";
+            };
+            readonly generic: {
+                readonly file: "Fichier local";
+                readonly url: "URL";
+            };
+            readonly heading: "Importer";
+            readonly json: {
+                readonly desc: "Importez un seul projet JSON dans l'éditeur. Un projet peut être exporté depuis app&nbsp;menu&nbsp;→ Exporter&nbsp;→ Exporter&nbsp;Projet&nbsp;(JSON).";
+                readonly fromFile: "Importer un projet à partir d'un fichier local";
+                readonly fromURL: "Importer un projet depuis une URL";
+                readonly heading: "Importer un projet JSON";
+            };
+            readonly success: "Importation réussie!";
+        };
+        readonly login: {
+            readonly accessAllowed: "Autoriser l'accès à:";
+            readonly desc: "<1>En vous connectant, vous acceptez que des <2>cookies</2> peuvent être stockés sur votre appareil.</1> <3> <4>Pourquoi ces autorisations sont-elles nécessaires ?</4> </3> <5> <6>Comment modifier/révoquer les autorisations ?</6> </5>";
+            readonly gist: "Gists";
+            readonly heading: "Connectez-vous avec GitHub";
+            readonly loginAs: "Connecté en tant que {{name}}";
+            readonly loginBtn: "Se connecter";
+            readonly logout: "Se déconnecter";
+            readonly privateRepo: "Dépôts privés";
+            readonly publicRepo: "Dépôts";
+        };
+        readonly menu: {
+            readonly about: "À propos";
+            readonly assets: "Ressources …";
+            readonly autoSave: "Auto Enregistrer";
+            readonly autoUpdate: "Mise à jour automatique";
+            readonly backup: "Sauvegarde / Restauration …";
+            readonly broadcast: "Diffuser …";
+            readonly customSettings: "Paramètres personnalisés …";
+            readonly delay: {
+                readonly heading: "Délai: <1>1.5</1>s";
+                readonly hint: "Délai avant la mise à jour automatique";
+            };
+            readonly deploy: "Déployer …";
+            readonly editorSettings: "Paramètres de l'éditeur …";
+            readonly embed: "Intégrer …";
+            readonly export: {
+                readonly codepen: "Modifier dans CodePen";
+                readonly gist: "Exporter vers GitHub Gist";
+                readonly heading: "Exporter";
+                readonly jsfiddle: "Modifier dans JSFiddle";
+                readonly json: "Exporter Projet (JSON)";
+                readonly result: "Exporter Résultat (HTML)";
+                readonly src: "Exporter Source (ZIP)";
+            };
+            readonly formatOnsave: "Format On-save";
+            readonly import: "Importer …";
+            readonly layout: "Disposition verticale";
+            readonly login: "Se connecter";
+            readonly logout: "Se déconnecter";
+            readonly new: "Nouveau …";
+            readonly open: "Ouvrir …";
+            readonly project: "Information du Projet …";
+            readonly recoverUnsaved: "Récupérer non enregistré";
+            readonly resources: "Ressources externes …";
+            readonly save: "Enregistrer";
+            readonly saveAs: {
+                readonly fork: "Fork (Nouveau projet)";
+                readonly heading: "Enregistrer sous";
+                readonly template: "Modèle";
+            };
+            readonly share: "Partager …";
+            readonly showSpacing: {
+                readonly heading: "Afficher l'espacement";
+                readonly hint: "Appuyez sur Alt/Option et déplacez votre curseur sur le résultat";
+            };
+            readonly snippets: "Extraits de code …";
+            readonly sync: "Sync (beta) … <1> ⏳</1>";
+            readonly theme: "Thème sombre";
+            readonly welcome: {
+                readonly heading: "Écran de Bienvenue …";
+                readonly hint: "Afficher l'écran de bienvenue au démarrage";
+            };
+        };
+        readonly open: {
+            readonly defaultTemplate: "Modèle par défaut ";
+            readonly delete: {
+                readonly all: "Supprimer {{projects}} projets?";
+                readonly deleting: "Suppression de projets...";
+                readonly one: "Supprimer le projet: {{project}}?";
+            };
+            readonly deleteAll: "Supprimer tout";
+            readonly exportAll: "Exporter tout";
+            readonly filter: {
+                readonly language: "Filtrer par langage ";
+                readonly tag: "Filtrer par étiquette";
+            };
+            readonly heading: "Projets Enregistrés";
+            readonly import: "Importer";
+            readonly lastModified: "Dernière modification: {{modified}}";
+            readonly noData: {
+                readonly desc: "Vous pouvez enregistrer un projet à partir de (settings&nbsp;menu&nbsp;&gt;&nbsp;Enregistrer ) ou par le raccourci clavier (Ctrl/Cmd&nbsp;+&nbsp;S).";
+                readonly heading: "Vous n'avez aucun projet enregistré.";
+            };
+            readonly noMatch: "Aucun projet ne correspond à ces filtres.";
+            readonly placeholder: {
+                readonly allLanguages: "Touts les langages";
+                readonly filterByTags: "Filtrer par étiquettes";
+                readonly search: "Rechercher";
+            };
+            readonly removeDefault: "(unset)";
+            readonly reset: "Réinitialiser";
+            readonly setAsDefault: "Définir par défaut";
+            readonly sort: {
+                readonly heading: "Trier par:";
+                readonly lastModified: "Dernière modification";
+                readonly title: "Titre";
+            };
+        };
+        readonly project: {
+            readonly desc: "Description";
+            readonly head: "Ajouter à &lt;head&gt;";
+            readonly heading: "Informations sur le projet";
+            readonly htmlAttr: "Attributs pour &lt;html&gt;";
+            readonly tags: "Étiquettes";
+            readonly title: "Titre du projet";
+        };
+        readonly recoverPrompt: {
+            readonly desc: "Votre dernier projet comporte des modifications non enregistrées !";
+            readonly heading: "Récupérer le projet non enregistré?";
+            readonly meta: "Titre: <1></1> <2></2> Dernière modification : <3></3>";
+            readonly notShowAgain: "Ne plus afficher ceci.";
+            readonly prompt: {
+                readonly discard: "Supprimer le projet non enregistré";
+                readonly heading: "<1></1>Voulez-vous le récupérer maintenant?";
+                readonly recover: "Récupérer le projet dans l'éditeur";
+                readonly save: "Enregistrer sur l'appareil et continuer";
+            };
+        };
+        readonly resources: {
+            readonly browseOnJsDelivr: "Parcourir les fichiers du package sur jsDelivr";
+            readonly cssPresets: {
+                readonly heading: "CSS Presets";
+                readonly none: "None";
+                readonly normalizeCss: "Normalize.css";
+                readonly resetCss: "Reset CSS";
+            };
+            readonly error: {
+                readonly failedToLoadResults: "Échec du chargement des résultats !";
+                readonly noResultsFound: "Aucun résultat trouvé pour: ";
+            };
+            readonly fonts: {
+                readonly add: "Ajouter";
+                readonly heading: "Polices <1>(powered by Google Fonts)</1>";
+                readonly select: "Sélectionner la police ...";
+            };
+            readonly heading: "Ressources externes";
+            readonly scripts: "Scripts externes";
+            readonly search: {
+                readonly heading: "Rechercher des packages <1>(powered by jsDelivr)</1>";
+                readonly placeholder: "e.g. jquery, lodash@4, bootstrap@5.2.3, ...";
+            };
+            readonly stylesheets: "Feuilles de style externes";
+            readonly urlDesc: "Ajoutez les URL de feuille de style/script et cliquez sur « Charger ». Chaque URL doit figurer sur une ligne distincte.";
+        };
+        readonly savePrompt: {
+            readonly heading: "Modifications non enregistrées";
+            readonly prompt: {
+                readonly cancel: "Annuler";
+                readonly discard: "Ne pas enregistrer";
+                readonly heading: "Les modifications ne sont peuvent peut-être pas être enregistrées. <1></1> Voulez-vous enregistrer maintenant?";
+                readonly save: "Enregistrer";
+            };
+        };
+        readonly share: {
+            readonly characters: "{{urlLength}} characters";
+            readonly copy: {
+                readonly clickToCopy: "Cliquez pour copier";
+                readonly copied: "URL copiée dans le presse-papiers";
+            };
+            readonly encodedURL: "Obtenir l'URL codée";
+            readonly error: {
+                readonly failedToCopy: "La copie dans le presse-papiers a échoué!";
+                readonly failedToGenerateURL: "Échec de la génération de l'URL courte!";
+            };
+            readonly expireInOneYear: "Expire dans 1 an";
+            readonly generateURL: "Génération d'URL …";
+            readonly heading: "Partager";
+            readonly permanentURL: "URL Permanent";
+            readonly qrcode: {
+                readonly clickToDownload: "Cliquez pour télécharger";
+                readonly generating: "Générateur...";
+            };
+            readonly services: {
+                readonly copyUrl: "Copier l'URL";
+                readonly devTo: "Dev.to";
+                readonly email: "Email";
+                readonly facebook: "Facebook";
+                readonly hackerNews: "Hacker News";
+                readonly linkedIn: "LinkedIn";
+                readonly pinterest: "Pinterest";
+                readonly pocket: "Pocket";
+                readonly qrCode: "QR code";
+                readonly reddit: "Reddit";
+                readonly share: "Partager via …";
+                readonly telegram: "Telegram";
+                readonly tumblr: "Tumblr";
+                readonly twitter: "𝕏 / Twitter";
+                readonly whatsApp: "WhatsApp";
+            };
+            readonly shortURL: "Obtenir une URL courte";
+        };
+        readonly snippets: {
+            readonly action: {
+                readonly copy: "Copier";
+                readonly delete: "Supprimer";
+                readonly edit: "Modifier";
+            };
+            readonly add: {
+                readonly code: "Code";
+                readonly desc: "Description";
+                readonly heading: "Ajouter un extrait";
+                readonly language: "Langage";
+                readonly save: "Enregistrer";
+                readonly snippets: "Extraits";
+                readonly title: "Titre";
+            };
+            readonly copy: {
+                readonly clickToCopySnippet: "Cliquez pour copier l'extrait";
+                readonly copied: "L'extrait est copié dans le presse-papiers.";
+            };
+            readonly delete: {
+                readonly all: "Supprimer {{snippets}} extraits?";
+                readonly one: "Supprimer extrait: {{snippet}}?";
+            };
+            readonly deleteAll: "Supprimer tout";
+            readonly error: {
+                readonly failedToCopy: "Échec de la copie de l'URL.";
+                readonly noTitle: "Veuillez ajouter un titre d'extrait.";
+            };
+            readonly filter: {
+                readonly language: "filtrer par langage";
+            };
+            readonly heading: "Extraits de code";
+            readonly lastModified: "Dernière modification: {{modified}}";
+            readonly noMatch: "Aucun extrait ne correspond à ces filtres.";
+            readonly noSavedSnippets: "Vous n'avez aucun extrait enregistré.";
+            readonly placeholder: {
+                readonly allLanguages: "Touts les langages";
+                readonly search: "Rechercher";
+            };
+            readonly reset: "Réinitialiser";
+            readonly save: {
+                readonly success: "Extrait enregistré localement sur l'appareil!";
+            };
+            readonly sort: {
+                readonly date: "Date";
+                readonly heading: "Trier par:";
+                readonly title: "Titre";
+            };
+            readonly text: "Texte brut";
+        };
+        readonly splash: {
+            readonly loading: "Chargement de LiveCodes…";
+        };
+        readonly sync: {
+            readonly autoSync: "Auto sync";
+            readonly create: {
+                readonly desc: "Un nouveau dépôt <1>privé</1> sera créé. Vos données locales LiveCodes seront synchronisées avec la branche <2>principale</2>.";
+                readonly heading: "Créer un nouveau dépôt";
+                readonly repoName: "Nom du dépôt";
+            };
+            readonly error: {
+                readonly generic: "La synchronisation a échoué!";
+                readonly repoNameRequired: "Le nom du dépôt est obligatoire";
+            };
+            readonly existing: {
+                readonly desc: "Vos données locales LiveCodes seront synchronisées avec la branche <1>principale</1>.";
+                readonly heading: "Dépôt existant";
+                readonly repoName: "Nom du dépôt";
+            };
+            readonly heading: "Synchroniser avec le dépôt GitHub";
+            readonly searchRepos: "Search your repos...";
+            readonly success: "Synchronisation terminée!";
+            readonly syncBtn: "Synchroniser";
+            readonly syncInProgress: "Synchronisation en cours...";
+            readonly syncStarted: "Synchronisation démarrée...";
+        };
+        readonly templates: {
+            readonly heading: "Nouveau Projet";
+            readonly noUserTemplates: {
+                readonly desc: "Vous pouvez enregistrer un projet en tant que modèle à partir de <1></1>(App&nbsp;menu&nbsp;&gt;&nbsp;Sauvegarder&nbsp;sous&nbsp;&gt; Modèle).";
+                readonly heading: "Vous n'avez aucun modèle enregistré.";
+            };
+            readonly starter: {
+                readonly angular: "Angular";
+                readonly assemblyscript: "AssemblyScript";
+                readonly astro: "Astro";
+                readonly backbone: "Backbone";
+                readonly blank: "Blank";
+                readonly blockly: "Blockly";
+                readonly bootstrap: "Bootstrap";
+                readonly civet: "Civet";
+                readonly clio: "Clio";
+                readonly clojurescript: "ClojureScript";
+                readonly coffeescript: "CoffeeScript";
+                readonly commonlisp: "Common Lisp";
+                readonly cpp: "C++";
+                readonly diagrams: "Diagrams";
+                readonly fennel: "Fennel";
+                readonly gleam: "Gleam";
+                readonly go: "Go";
+                readonly heading: "Modèles de démarrage";
+                readonly imba: "Imba";
+                readonly javascript: "JavaScript";
+                readonly jest: "Jest";
+                readonly 'jest-react': "Jest/React";
+                readonly jquery: "jQuery";
+                readonly julia: "Julia";
+                readonly knockout: "Knockout";
+                readonly lit: "Lit";
+                readonly livescript: "LiveScript";
+                readonly loading: "Chargement des modèles de démarrage...";
+                readonly lua: "Lua";
+                readonly 'lua-wasm': "Lua (Wasm)";
+                readonly malina: "Malina.js";
+                readonly markdown: "Markdown";
+                readonly mdx: "MDX";
+                readonly ocaml: "Ocaml";
+                readonly perl: "Perl";
+                readonly php: "PHP";
+                readonly 'php-wasm': "PHP (Wasm)";
+                readonly postgresql: "PostgreSQL";
+                readonly preact: "Preact";
+                readonly prolog: "Prolog";
+                readonly python: "Python";
+                readonly r: "R";
+                readonly react: "React";
+                readonly 'react-native': "React Native";
+                readonly reason: "Reason";
+                readonly rescript: "ReScript";
+                readonly riot: "Riot.js";
+                readonly ruby: "Ruby";
+                readonly 'ruby-wasm': "Ruby (Wasm)";
+                readonly scheme: "Scheme";
+                readonly solid: "Solid";
+                readonly sql: "SQL";
+                readonly stencil: "Stencil";
+                readonly svelte: "Svelte";
+                readonly tailwindcss: "Tailwind CSS";
+                readonly tcl: "Tcl";
+                readonly teal: "Teal";
+                readonly typescript: "TypeScript";
+                readonly vue: "Vue 3 SFC";
+                readonly vue2: "Vue 2";
+                readonly wat: "WebAssembly Text";
+            };
+            readonly user: {
+                readonly heading: "Mes modèles";
+                readonly loading: "Chargement des modèles d'utilisateur...";
+            };
+        };
+        readonly testEditor: {
+            readonly heading: "Éditer les Tests";
+            readonly load: "Exécuter";
+            readonly tests: "Tests";
+        };
+        readonly toolspane: {
+            readonly close: "Fermer";
+            readonly compiled: {
+                readonly title: "Compilé";
+            };
+            readonly console: {
+                readonly clear: "Effacer console";
+                readonly title: "Console";
+            };
+            readonly test: {
+                readonly edit: "Éditer";
+                readonly error: "<1><2>Erreur de test!</2></1>";
+                readonly loading: "<1>Chargement des tests...</1>";
+                readonly noTest: "<1>Aucun test pour ce projet!</1>";
+                readonly reset: "Réinitialiser";
+                readonly run: {
+                    readonly desc: "Ctrl/Cmd + Alt + T";
+                    readonly heading: "Exécuter";
+                };
+                readonly summary: {
+                    readonly desc: "Tests: {{failed}}\n       {{passed}}\n       {{skipped}}\n       {{total}}<1></1>\nTemps: {{duration}}s";
+                    readonly failed: "{{failedNum}} échoué";
+                    readonly passed: "{{passedNum}} passé";
+                    readonly skipped: "{{skippedNum}} ignoré";
+                    readonly total: "{{totalNum}} total";
+                };
+                readonly title: "Tests";
+                readonly watch: {
+                    readonly desc: "Exécuter des tests lorsque le code change";
+                    readonly heading: "Voir";
+                };
+            };
+        };
+        readonly welcome: {
+            readonly about: {
+                readonly documentation: "Documentation";
+                readonly heading: "À propos de LiveCodes";
+            };
+            readonly heading: "Bienvenue";
+            readonly recent: {
+                readonly heading: "Récent";
+            };
+            readonly recover: {
+                readonly cancel: "Annuler";
+                readonly heading: "Récupération";
+                readonly lastModified: "Dernière modification: <1></1>";
+                readonly recover: "Récupérer";
+                readonly save: "Enregistrer";
+                readonly unsavedChanges: "Votre dernier projet comportait des modifications non enregistrées:";
+            };
+            readonly showOnStartup: "Afficher au démarrage";
+            readonly start: {
+                readonly heading: "Démarrer";
+                readonly import: "Importer...";
+                readonly loadDefaultTemplate: "Charger le modèle par défaut";
+                readonly new: "Nouveau...";
+                readonly noDefaultTemplate: "Aucun modèle par défaut";
+                readonly open: "Ouvrir...";
+            };
+            readonly templates: {
+                readonly heading: "Modèles de démarrage";
+            };
+        };
+    };
+    export default translation;
+}
+declare module "livecodes/i18n/locales/hi/language-info" {
+    const languageInfo: {
+        readonly artTemplate: {
+            readonly desc: "High performance JavaScript templating engine.";
+            readonly link: "<1> <2>art-template official website</2> </1> <3> <4>art-template documentation</4> </3>";
+            readonly name: "art-template";
+        };
+        readonly asciidoc: {
+            readonly desc: "AsciiDoc compiled to HTML using Asciidoctor.";
+            readonly link: "<1> <2>AsciiDoc official website</2> </1> <3> <4>Asciidoctor official website</4> </3> <5> <6>Asciidoctor documentation</6> </5> <7> <8>Learn X in Y minutes, where X=asciidoc</8> </7>";
+            readonly name: "AsciiDoc";
+        };
+        readonly assemblyscript: {
+            readonly desc: "A TypeScript-like language for WebAssembly.";
+            readonly link: "<1> <2>AssemblyScript official website</2> </1> <3> <4>AssemblyScript documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "AssemblyScript";
+        };
+        readonly astro: {
+            readonly desc: "Build faster websites with less client-side Javascript. (Still in Beta)";
+            readonly link: "<1> <2>Astro official website</2> </1> <3> <4>Astro documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Astro";
+        };
+        readonly babel: {
+            readonly desc: "The JavaScript compiler";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Babel documentation</4> </3>";
+            readonly name: "Babel";
+        };
+        readonly bbcode: {
+            readonly desc: "BBCode (\"Bulletin Board Code\") is a lightweight markup language used to format messages in many Internet forum software.";
+            readonly link: "<1><2>bbcode.org</2></1> <3> <4>BBCode guide</4> </3> <5> <6>BBCode on Wikipedia</6> </5>";
+            readonly name: "BBCode";
+        };
+        readonly blockly: {
+            readonly desc: "A JavaScript library for building visual programming editors.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>Guides</4> </3> <5> <6>Reference</6> </5> <7> <8>Samples</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Blockly";
+        };
+        readonly civet: {
+            readonly desc: "Civet is a programming language that compiles to TypeScript or JavaScript, so you can use existing tooling but enable concise and powerful syntax.";
+            readonly link: "<1> <2>Civet official website</2> </1> <3> <4>Civet cheatsheet</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Civet";
+        };
+        readonly clio: {
+            readonly desc: "Clio is a fast, distributed, functional programming language that compiles to JavaScript.";
+            readonly link: "<1> <2>Clio official website</2> </1> <3> <4>Clio documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Clio";
+        };
+        readonly clojurescript: {
+            readonly desc: "ClojureScript is a compiler for <1>Clojure</1> that targets JavaScript. <2></2>In LiveCodes, it runs in the browser using <3>Cherry</3>.";
+            readonly link: "<1> <2>ClojureScript official website</2> </1> <3> <4>Clojure official website</4> </3> <5> <6>Cherry repo</6> </5> <7> <8>Learn X in Y minutes, where X=clojure</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "ClojureScript (CLJS)";
+        };
+        readonly coffeescript: {
+            readonly desc: "Unfancy JavaScript.";
+            readonly link: "<1> <2>CoffeeScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=coffeescript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "CoffeeScript";
+        };
+        readonly commonlisp: {
+            readonly desc: "A Common Lisp implementation on Javascript using JSCL (a Lisp-to-Javascript compiler bootstrapped from Common Lisp).";
+            readonly link: "<1> <2>Common-Lisp.net</2> </1> <3> <4>JSCL Project</4> </3> <5> <6>Common Lisp Resources</6> </5> <7> <8>Learn X in Y minutes, where X=Common Lisp</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Common Lisp";
+        };
+        readonly cpp: {
+            readonly desc1: "C++ support using JSCPP (a simple C++ interpreter written in JavaScript).";
+            readonly desc2: "It is not a complete implementation of C++. Please refer to <1>JSCPP documentation</1> for details.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>JSCPP</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C++";
+        };
+        readonly cppWasm: {
+            readonly desc: "Clang C/C++ compiler running on WebAssembly, using <1>wasm-clang</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>Clang official website</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C/C++ (Wasm)";
+        };
+        readonly diagrams: {
+            readonly desc1: "(Experimental)";
+            readonly desc2: "Diagrams-as-code. Supports:";
+            readonly desc3: "<1> <2>Cytoscape</2> </1> <3> <4>ELK</4> (using <5>elkjs</5>) </3> <6> <7>Gnuplot</7> (using <8>gnuplot-JS</8>) </6> <9> <10>Graphviz</10> (using <11>@hpcc-js/wasm</11>) </9> <12> <13>Mermaid</13> </12> <14> <15>Nomnoml</15> </14> <16> <17>Pintora</17> </16> <18> <19>Plotly</19> </18> <20> <21>Svgbob</21> </20> <22> <23>Vega</23> </22> <24> <25>VegaLite</25> </24> <26> <27>WaveDrom</27> </26>";
+            readonly link: "<1> <2>Load starter template</2> </1> <3> <4>LiveCodes Documentation</4> </3>";
+            readonly name: "Diagrams";
+        };
+        readonly dot: {
+            readonly desc: "The fastest + concise javascript template engine for Node.js and browsers.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "doT.js";
+        };
+        readonly ejs: {
+            readonly desc: "Embedded JavaScript templating.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "EJS";
+        };
+        readonly eta: {
+            readonly desc: "Embedded JS template engine for Node, Deno, and the browser. Lighweight, fast, and pluggable. Written in TypeScript.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Eta";
+        };
+        readonly fennel: {
+            readonly desc: "Fennel is a programming language that brings together the speed, simplicity, and reach of Lua with the flexibility of a lisp syntax and macro system.";
+            readonly link: "<1> <2>Fennel official website</2> </1> <3> <4>Getting Started with Fennel</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Fennel";
+        };
+        readonly flow: {
+            readonly desc: "Flow is a static type checker for JavaScript.";
+            readonly link: "<1> <2>Flow official website</2> </1> <3> <4>Flow documentation</4> </3>";
+            readonly name: "Flow";
+        };
+        readonly gleam: {
+            readonly desc1: "Gleam is a friendly language for building type-safe systems that scale!";
+            readonly desc2: "Gleam is a statically-typed functional programming language, which compiles to Erlang or JavaScript.";
+            readonly link: "<1><2>Gleam website</2></1> <3> <4>Gleam documentation</4> </3> <5> <6>Gleam language tour</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Gleam";
+        };
+        readonly go: {
+            readonly desc1: "Go (Golang) is an open source programming language that makes it easy to build simple, reliable, and efficient software.";
+            readonly desc2: "Here, it is compiled to JavaScript using GopherJS.";
+            readonly link: "<1><2>Go website</2></1> <3><4>Go documentation</4></3> <5> <6>GopherJS repo</6> </5> <7> <8>Learn X in Y minutes, where X=Go</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Go";
+        };
+        readonly haml: {
+            readonly desc: "Haml compiler for client side javascript view templates using clientside-haml-js.";
+            readonly link: "<1><2>Haml official website</2></1> <3> <4>Haml documentation</4> </3> <5> <6>clientside-haml-js GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=haml</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Haml";
+        };
+        readonly handlebars: {
+            readonly desc: "Minimal templating on steroids.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Handlebars";
+        };
+        readonly imba: {
+            readonly desc: "The friendly full-stack language.";
+            readonly link: "<1><2>Official website</2></1>";
+            readonly name: "Imba";
+        };
+        readonly jsx: {
+            readonly desc: "JSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler.  By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "JSX";
+        };
+        readonly julia: {
+            readonly desc1: "(Julia language support in LiveCodes is still experimental)";
+            readonly desc2: "Julia compiler and Julia Base running on WASM, using <1>julia-wasm</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Julia official website</2> </1> <3> <4>Julia documentation</4> </3> <5> <6>Learn X in Y minutes, where X=Julia</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Julia";
+        };
+        readonly less: {
+            readonly desc: "It's CSS, with just a little more.";
+            readonly link: "<1><2>Less official website</2></1> <3> <4>Learn X in Y minutes, where X=less</4> </3>";
+            readonly name: "Less";
+        };
+        readonly liquid: {
+            readonly desc: "A simple, expressive and safe template engine.";
+            readonly link: "<1> <2>LiquidJS official website</2> </1> <3> <4>LiquidJS documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "LiquidJS";
+        };
+        readonly livescript: {
+            readonly desc: "A language which compiles to JavaScript.";
+            readonly link: "<1> <2>LiveScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=LiveScript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "LiveScript";
+        };
+        readonly lua: {
+            readonly desc: "Lua running in the browser using fengari-web.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Fengari official website</6> </5> <7> <8>fengari-web GitHub repo</8> </7> <9> <10>Learn X in Y minutes, where X=Lua</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "Lua";
+        };
+        readonly luaWasm: {
+            readonly desc: "Lua running in the browser using Wasmoon, a real lua 5.4 VM with JS bindings made with WebAssembly.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Wasmoon GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=Lua</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Lua (Wasm)";
+        };
+        readonly malina: {
+            readonly desc: "Frontend compiler, inspired by Svelte.";
+            readonly link: "<1> <2>Malina.js repo</2> </1> <3> <4>Malina.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Malina.js";
+        };
+        readonly markdown: {
+            readonly desc: "Markdown compiled to HTML using Marked.";
+            readonly link: "<1> <2>Markdown official website</2> </1> <3> <4>Marked documentation</4> </3> <5> <6>Learn X in Y minutes, where X=markdown</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Markdown";
+        };
+        readonly mdx: {
+            readonly desc: "Markdown for the component era. <1></1>MDX lets you seamlessly write JSX in your Markdown documents.";
+            readonly link: "<1><2>MDX documentation</2></1> <3><4>Load starter template</4></3>";
+            readonly name: "MDX";
+        };
+        readonly mjml: {
+            readonly desc: "MJML is a markup language designed to reduce the pain of coding a responsive email.";
+            readonly link: "<1><2>MJML official website</2></1> <3> <4>MJML documentation</4> </3> <5> <6>MJML official templates</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "MJML";
+        };
+        readonly mustache: {
+            readonly desc: "Logic-less templates.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>mustache(5) manual</4> </3> <5> <6>JavaScript implementation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "Mustache";
+        };
+        readonly nunjucks: {
+            readonly desc: "A rich and powerful templating language for JavaScript. Nunjucks is essentially a port of <1>jinja2</1>.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Nunjucks";
+        };
+        readonly ocaml: {
+            readonly desc1: "OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles.";
+            readonly desc2: "ReScript compiler is used here to compile OCaml to JavaScript.";
+            readonly link: "<1><2>OCaml website</2></1> <3> <4>OCaml documentation</4> </3> <5> <6>ReScript website</6> </5> <7> <8>Learn X in Y minutes, where X=OCaml</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "OCaml";
+        };
+        readonly perl: {
+            readonly desc: "Perl running in the browser using Perlito.";
+            readonly link: "<1> <2>Perl official website</2> </1> <3> <4>Perl documentation</4> </3> <5> <6>Perlito5 Readme</6> </5> <7> <8>Learn X in Y minutes, where X=perl</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Perl";
+        };
+        readonly php: {
+            readonly desc: "PHP running in the browser using Uniter.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>Uniter GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11><12>Load starter template</12></11>";
+            readonly name: "PHP";
+        };
+        readonly phpWasm: {
+            readonly desc: "PHP in Browser, powered by WebAssembly, using php-wasm.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>php-wasm GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "PHP (Wasm)";
+        };
+        readonly postgresql: {
+            readonly desc: "PostgreSQL packaged as WASM using PGlite";
+            readonly link: "<1> <2>PostgreSQL official website</2> </1> <3> <4>PostgreSQL documentation</4> </3> <5> <6>PGlite GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "PostgreSQL";
+        };
+        readonly prolog: {
+            readonly desc: "An open source Prolog interpreter in JavaScript.";
+            readonly link: "<1> <2>Tau Prolog official website</2> </1> <3> <4>Tau Prolog documentation</4> </3> <5> <6>SWI-Prolog</6> </5> <7> <8>Learn X in Y minutes, where X=Prolog</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Tau Prolog";
+        };
+        readonly pug: {
+            readonly desc: "Robust, elegant, feature rich template engine.";
+            readonly link: "<1> <2>Pug documentation</2> </1> <3> <4>Learn X in Y minutes, where X=Pug</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Pug";
+        };
+        readonly python: {
+            readonly desc: "Python running in the browser using Brython.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5> <6>Brython documentation</6> </5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python";
+        };
+        readonly pythonWasm: {
+            readonly desc1: "Python with the scientific stack, compiled to WebAssembly using Pyodide.";
+            readonly desc2: "Pyodide allows using Python scientific stack including NumPy, Pandas, Matplotlib, SciPy, scikit-learn and many more. In addition it’s possible to install pure Python wheels from PyPi.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5><6>Pyodide documentation</6></5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python (Wasm)";
+        };
+        readonly r: {
+            readonly desc: "R running in the browser using WebR.";
+            readonly link: "<1> <2>R project official website</2> </1> <3> <4>The R Manuals</4> </3> <5> <6>R for Data Science (2e)</6> </5> <7> <8>WebR documentation</8> </7> <9> <10>Learn X in Y minutes, where X=R</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "R";
+        };
+        readonly reactNative: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "React Native for Web";
+        };
+        readonly reactNativeTsx: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>TypeScript website</10> </9> <11> <12>TypeScript documentation</12> </11> <13> <14>LiveCodes Documentations</14> </13> <15> <16>Load starter template (JSX)</16> </15>";
+            readonly name: "React Native for Web (with TypeScript)";
+        };
+        readonly reason: {
+            readonly desc1: "Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.";
+            readonly desc2: "ReScript compiler is used here to compile Reason to JavaScript.";
+            readonly link: "<1><2>Reason website</2></1> <3> <4>Reason documentation</4> </3> <5> <6>ReasonReact</6> </5> <7> <8>ReScript website</8> </7> <9> <10>Learn X in Y minutes, where X=reason</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Reason";
+        };
+        readonly rescript: {
+            readonly desc: "ReScript is a robustly typed language that compiles to efficient and human-readable JavaScript.";
+            readonly link: "<1> <2>ReScript website</2> </1> <3> <4>ReScript / React</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "ReScript";
+        };
+        readonly richtext: {
+            readonly desc1: "Using Quill:";
+            readonly desc2: "Your powerful rich text editor.";
+            readonly link: "<1> <2>Quill official website</2> </1>";
+            readonly name: "Rich Text Editor";
+        };
+        readonly riot: {
+            readonly desc: "Simple and elegant component-based UI library.";
+            readonly link: "<1> <2>Riot.js official website</2> </1> <3> <4>Riot.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Riot.js";
+        };
+        readonly ruby: {
+            readonly desc: "Ruby running in the browser using Opal.";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5><6>Opal official website</6></5> <7> <8>Opal standard library CDN</8> </7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby";
+        };
+        readonly rubyWasm: {
+            readonly desc: "Ruby running in the browser using ruby-wasm (a collection of WebAssembly ports of the CRuby).";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5> <6>ruby.wasm website</6> </5> <7><8>CRuby</8></7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby (WASM)";
+        };
+        readonly sass: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>Sass (the indented) syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "Sass";
+        };
+        readonly scheme: {
+            readonly desc: "Scheme running in the browser using biwascheme.";
+            readonly link: "<1> <2>The Scheme Programming Language</2> </1> <3> <4>BiwaScheme official website</4> </3> <5> <6>BiwaScheme reference</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Scheme";
+        };
+        readonly scss: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>SCSS syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "SCSS";
+        };
+        readonly solid: {
+            readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+            readonly link: "<1><2>Official website</2></1> <3><4>Documentation</4></3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template (TSX)</8> </7>";
+            readonly name: "Solid";
+            readonly tsx: {
+                readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+                readonly link: "<1><2>Official website</2></1> <3> <4>Solid documentation</4> </3> <5> <6>TypeScript website</6> </5> <7> <8>TypeScript documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+                readonly name: "Solid (with TypeScript)";
+            };
+        };
+        readonly sql: {
+            readonly desc: "SQLite compiled to JavaScript using SQL.js";
+            readonly link: "<1> <2>SQLite official website</2> </1> <3> <4>SQLite syntax documentation</4> </3> <5> <6>SQL.js official website</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "SQLite";
+        };
+        readonly stencil: {
+            readonly desc: "A Compiler for Web Components and High Performance Web Apps.";
+            readonly link: "<1> <2>Stencil official website</2> </1> <3> <4>Stencil documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Stencil";
+        };
+        readonly styleProcessors: {
+            readonly link: "<1> <2>Tailwind CSS</2> </1> <3> <4>Windi CSS</4> </3> <5> <6>UnoCSS</6> </5> <7> <8>Lightning CSS</8> </7> <9> <10>PostCSS</10> Plugins: <11> <12> <13>Autoprefixer</13> </12> <14> <15>postcss-preset-env</15> </14> <16> <17>postcss-import-url</17> </16> <18> <19>postcss-modules</19> </18> </11> </9>";
+            readonly name: "CSS Frameworks and Processors";
+        };
+        readonly stylis: {
+            readonly desc: "Light-weight css preprocessor.";
+            readonly link: "<1> <2>Stylis official website</2> </1>";
+            readonly name: "Stylis";
+        };
+        readonly stylus: {
+            readonly desc: "Expressive, Dynamic, Robust CSS.";
+            readonly link: "<1> <2>Stylus official website</2> </1> <3> <4>Learn X in Y minutes, where X=stylus</4> </3>";
+            readonly name: "Stylus";
+        };
+        readonly sucrase: {
+            readonly desc: "Super-fast alternative to Babel for when you can target modern JS runtimes.";
+            readonly link: "<1> <2>Sucrase official website</2> </1> <3> <4>Sucrase GitHub Repo</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Sucrase";
+        };
+        readonly svelte: {
+            readonly desc: "Cybernetically enhanced web apps.";
+            readonly link: "<1> <2>Svelte official website</2> </1> <3> <4>Svelte documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Svelte";
+        };
+        readonly tcl: {
+            readonly desc: "Tcl running in the browser, using <1>wacl</1>.";
+            readonly link: "<1> <2>Tcl official website</2> </1> <3> <4>wacl repo</4> </3> <5> <6>Learn X in Y minutes, where X=Tcl</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Tcl (Tool Command Language)";
+        };
+        readonly teal: {
+            readonly desc: "A typed dialect of Lua.";
+            readonly link: "<1> <2>Teal GitHub repo</2> </1> <3> <4>Teal docs</4> </3> <5> <6>Teal tutorial</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Teal";
+        };
+        readonly tsx: {
+            readonly desc: "TypeScript in JSX. TSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler. By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>Typescript documentation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "TSX";
+        };
+        readonly twig: {
+            readonly desc: "A JavaScript implementation of the <1>Twig</1> PHP templating language by <2>Twig.js</2> .";
+            readonly link: "<1> <2>Twig official website</2> </1> <3> <4>Twig Documentation</4> </3> <5> <6>Twig.js Repo</6> </5> <7> <8>Twig.js Documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Twig";
+        };
+        readonly typescript: {
+            readonly desc: "A Typed Superset of JavaScript.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>TypeScript documentation</4> </3> <5> <6>Learn X in Y minutes, where X=TypeScript</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "TypeScript";
+        };
+        readonly vue: {
+            readonly link: "<1> <2>Vue.js v3 official website</2> </1> <3> <4>Vue3 documentation</4> </3> <5> <6>Vue3 single file components</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Vue3 Single File Components";
+        };
+        readonly vue2: {
+            readonly desc: "Loaded using vue3-sfc-loader.";
+            readonly link: "<1><2>Vue.js official website</2></1> <3> <4>Vue2 documentation</4> </3> <5> <6>Vue2 single file components</6> </5> <7> <8>vue3-sfc-loader GitHub repo</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Vue2 Single File Components";
+        };
+        readonly wat: {
+            readonly desc1: "Low-level textual representation of the WebAssembly (wasm) binary format.";
+            readonly desc2: "It is converted to wasm using wabt.js.";
+            readonly link: "<1><2>WebAssembly.org</2></1> <3> <4>WebAssembly Text Specs</4> </3> <5> <6>WebAssembly on MDN</6> </5> <7> <8>Understanding WebAssembly text format</8> </7> <9> <10>wabt.js documentation</10> </9> <11> <12>Learn X in Y minutes, where X=WebAssembly</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "WebAssembly Text Format";
+        };
+    };
+    export default languageInfo;
+}
+declare module "livecodes/i18n/locales/hi/translation" {
+    const translation: {
+        readonly about: {
+            readonly documentations: {
+                readonly aboutUs: "About us";
+                readonly contact: "Contact";
+                readonly heading: "Documentations";
+                readonly home: "Home";
+                readonly license: "License";
+            };
+            readonly heading: "About LiveCodes";
+            readonly livecodes: {
+                readonly para1: "<1><2>LiveCodes</2></1> is an <3>open-source</3>, <4>feature-rich</4>, <5>client-side</5> code playground. Currently, <6>80+ languages/<7></7>frameworks</6> are supported. It can be used as a standalone app or can be <8>embedded</8> in any web page. There are many ways to <9>prefill playgrounds</9> with code.";
+                readonly para2: "A wide range of <1>configuration options</1> makes it very flexible. A powerful <2>SDK</2> (for <3>JS/TS</3>, <4>React</4>, <5>Vue</5> and <6>Svelte</6>) facilitates <7>embedding</7> and <8>communicating</8> with playgrounds. <9>Comprehensive documentations</9> are available with code samples, live demos and screenshots.";
+            };
+            readonly version: {
+                readonly app: "App version: {{APP_VERSION}}";
+                readonly appPermanentUrl: "App Permanent URL";
+                readonly commit: "Git commit: {{COMMIT_SHA}}";
+                readonly heading: "Version";
+                readonly sdk: "SDK version: {{SDK_VERSION}}";
+                readonly sdkPermanentUrl: "SDK Permanent URL";
+            };
+        };
+        readonly app: {
+            readonly copy: {
+                readonly hint: "Copy (Ctrl/Cmd + A, Ctrl/Cmd + C)";
+            };
+            readonly copyAsUrl: {
+                readonly hint: "Copy code as data URL";
+            };
+            readonly customSettings: {
+                readonly hint: "Custom Settings";
+            };
+            readonly editorMode: {
+                readonly hint: "Editor Mode";
+            };
+            readonly editorSettings: {
+                readonly hint: "Editor Settings";
+            };
+            readonly externalResources: {
+                readonly hint: "External Resources";
+            };
+            readonly focus: {
+                readonly hint: "Toggle Focus mode";
+            };
+            readonly format: {
+                readonly hint: "Format (Alt + Shift + F)";
+            };
+            readonly fullscreen: {
+                readonly hint: "Full Screen";
+            };
+            readonly logo: {
+                readonly title: "LiveCodes: Code playground that runs in the browser!";
+            };
+            readonly projectInfo: {
+                readonly hint: "Project Info";
+            };
+            readonly redo: {
+                readonly hint: "Redo (Ctrl/Cmd + Shift + Z)";
+            };
+            readonly result: {
+                readonly hint: "Toggle Result";
+            };
+            readonly run: {
+                readonly hint: "Run (Shift + Enter)";
+            };
+            readonly share: {
+                readonly hint: "Share";
+            };
+            readonly undo: {
+                readonly hint: "Undo (Ctrl/Cmd + Z)";
+            };
+            readonly untitledProject: "Untitled Project";
+        };
+        readonly assets: {
+            readonly add: {
+                readonly dataURL: {
+                    readonly desc: "Add asset as a base64-encoded <1>data url</1>.";
+                    readonly heading: "Data URL";
+                    readonly label: "Add file";
+                };
+                readonly githubPages: {
+                    readonly desc: "Deploy asset to GitHub Pages. The file is pushed to <1>gh-pages</1> branch of the repo <2>livecodes-assets</2> on your GitHub account. If the repo does not already exist, a public repo will be created.";
+                    readonly heading: "GitHub Pages";
+                    readonly label: "Upload file";
+                };
+                readonly heading: "Add Asset";
+            };
+            readonly delete: {
+                readonly all: "Delete {{assets}} assets?";
+                readonly one: "Delete asset: {{asset}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly generic: {
+                readonly clickToCopyURL: "Click to copy URL";
+            };
+            readonly heading: "Assets";
+            readonly link: {
+                readonly date: "Date: {{modified}}";
+                readonly type: "Type: {{type}}";
+                readonly url: "URL: {{url}}";
+            };
+            readonly loadFile: {
+                readonly error: {
+                    readonly failedToUpload: "Error: Failed to upload file";
+                    readonly unauthenticated: "Error: Unauthenticated user";
+                };
+                readonly upload: "Upload file";
+                readonly uploading: "Uploading...";
+            };
+            readonly noMatch: "No assets match these filters.";
+            readonly noSavedAssets: "You have no saved assets.";
+            readonly processAsset: {
+                readonly addFile: "Added file: ";
+                readonly deployNotice: "The asset should be available on this URL soon (~1 min).";
+                readonly success: "File added to assets!";
+                readonly urlLabel: "URL: ";
+            };
+            readonly resetFilters: "Reset";
+            readonly search: "Search";
+            readonly sort: {
+                readonly date: "Date";
+                readonly fileName: "File Name";
+                readonly heading: "Sort By:";
+            };
+            readonly type: {
+                readonly archive: "Archive";
+                readonly audio: "Audio";
+                readonly csv: "CSV";
+                readonly font: "Font";
+                readonly html: "HTML";
+                readonly icon: "Icon";
+                readonly image: "Image";
+                readonly json: "JSON";
+                readonly other: "Other";
+                readonly script: "Script";
+                readonly stylesheet: "Stylesheet";
+                readonly text: "Text";
+                readonly video: "Video";
+                readonly xml: "XML";
+            };
+            readonly types: {
+                readonly all: "All types";
+            };
+            readonly url: {
+                readonly fail: "Failed to copy URL.";
+                readonly success: "URL is copied to clipboard.";
+            };
+        };
+        readonly backup: {
+            readonly backup: {
+                readonly assets: "Assets";
+                readonly button: "Backup";
+                readonly desc: "Backup LiveCodes data, so that it can be later restored on this or other devices. <1></1> Please visit the <2>documentations</2> for details.";
+                readonly heading: "Backup";
+                readonly projects: "Projects";
+                readonly settings: "User Settings";
+                readonly snippets: "Code Snippets";
+                readonly templates: "User Templates";
+            };
+            readonly backupBtn: "Backup";
+            readonly error: {
+                readonly atLeastOneStore: "Please select at least one store to backup";
+                readonly incorrectFileType: "Error: Incorrect file type";
+            };
+            readonly fileInputLabel: "Restore from file";
+            readonly heading: "Backup / Restore";
+            readonly inProgress: "In progress...";
+            readonly restore: {
+                readonly desc: "Restore previously backed-up LiveCodes data. <1></1> If you choose to replace current content, you may want to back it up first. <2></2> Please visit the <3>documentations</3> for details.";
+                readonly fromFile: "Restore from file";
+                readonly heading: "Restore";
+                readonly mode: {
+                    readonly merge: "Merge with current content";
+                    readonly replace: "Replace current content";
+                };
+                readonly success: "Restored Successfully!";
+            };
+        };
+        readonly broadcast: {
+            readonly broadcastBtn: {
+                readonly start: "Broadcast";
+                readonly stop: "Stop broadcast";
+            };
+            readonly broadcasting: "Broadcasting...";
+            readonly channelURL: "Channel URL";
+            readonly connecting: "Connecting...";
+            readonly desc: "Broadcast the result page to other browsers/devices in real time. Please visit the <1>documentations</1> for details.";
+            readonly error: {
+                readonly generic: "Broadcast failed!";
+                readonly serverURLRequired: "Server URL is required!";
+            };
+            readonly heading: "Broadcast";
+            readonly includeSourceCode: "Include source code";
+            readonly serverURL: {
+                readonly heading: "Server URL";
+            };
+        };
+        readonly core: {
+            readonly broadcast: {
+                readonly heading: "Broadcast";
+                readonly successSetToken: "Broadcast user token set successfully";
+            };
+            readonly changeLanguage: {
+                readonly hint: "Change Language";
+                readonly message: "Loading {{lang}}. This may take a while!";
+            };
+            readonly copy: {
+                readonly copied: "Code copied to clipboard";
+                readonly copiedAsDataURL: "Code copied as data URL";
+                readonly hint: "Copied!";
+                readonly title: "Copy";
+            };
+            readonly error: {
+                readonly couldNotLoadTemplate: "Could not load template: {{template}}";
+                readonly failedToCopyCode: "Failed to copy code";
+                readonly failedToLoadTemplate: "Failed loading template";
+                readonly failedToLoadTemplates: "Failed loading starter templates";
+                readonly failedToParseSettings: "Failed parsing settings as JSON";
+                readonly invalidCommand: "Invalid command!";
+                readonly invalidImport: "Invalid import URL";
+                readonly invalidPanelId: "Invalid panel id";
+                readonly invalidToken: "Invalid token!";
+                readonly login: "Login error!";
+                readonly logout: "Logout error!";
+                readonly noResultContainer: "Result container not found";
+                readonly unavailable: "Command unavailable";
+                readonly unavailableForEmbeds: "Command unavailable for embeds";
+            };
+            readonly export: {
+                readonly gist: "Creating a public GitHub gist...";
+            };
+            readonly fork: {
+                readonly success: "Forked as a new project";
+            };
+            readonly fullScreen: {
+                readonly enter: "Full Screen";
+                readonly exit: "Exit Full Screen";
+            };
+            readonly import: {
+                readonly loading: "Loading Project...";
+            };
+            readonly layout: {
+                readonly horizontal: "Horizontal layout";
+                readonly responsive: "Responsive layout";
+                readonly vertical: "Vertical layout";
+            };
+            readonly loadDefaults: {
+                readonly template: "Loading default template";
+            };
+            readonly login: {
+                readonly success: "Logged in successfully";
+                readonly successWithName: "Logged in as: {{name}}";
+            };
+            readonly logout: {
+                readonly success: "Logged out successfully";
+            };
+            readonly result: {
+                readonly hint: "Show result in new window";
+            };
+            readonly save: {
+                readonly success: "Project locally saved to device!";
+                readonly successWithName: "Project \"{{name}}\" saved to device.";
+            };
+            readonly template: {
+                readonly blank: "Blank Project";
+                readonly delete: "Delete template \"{{item}}\"?";
+                readonly javascript: "JavaScript Starter";
+                readonly react: "React Starter";
+                readonly saved: "Saved as a new template";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 Starter";
+            };
+            readonly unload: {
+                readonly notSaved: "Changes you made may not be saved.";
+            };
+            readonly zoom: {
+                readonly hint: "Zoom";
+            };
+        };
+        readonly customSettings: {
+            readonly JSON: "Custom Settings JSON";
+            readonly heading: "Custom Settings";
+            readonly load: "Load";
+        };
+        readonly deploy: {
+            readonly create: {
+                readonly desc: "A new <1>public</1> repo will be created. The result page will be pushed to <2>gh-pages</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name <1></1>";
+            };
+            readonly error: {
+                readonly generic: "Deployment failed!";
+                readonly repoNameExists: "Repo name already exists";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "A new commit will be added to <1>gh-pages</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly generic: {
+                readonly commitMessage: "Commit Message";
+                readonly commitSourceCodePublic: "Commit source code (public)";
+                readonly deployBtn: "Deploy";
+                readonly deploying: "Deploying...";
+            };
+            readonly heading: "Deploy to GitHub Pages";
+            readonly searchRepo: "Search your public repos...";
+        };
+        readonly editorSettings: {
+            readonly appLanguage: {
+                readonly heading: "App UI Language";
+                readonly note: "Will reload the app to apply the changes after switching the language.";
+            };
+            readonly closeBrackets: "Auto-close brackets and quotes";
+            readonly codeJarDesc: "* The marked features are not available in CodeJar.";
+            readonly default: "Default";
+            readonly desc: "Please check the <1>documentations</1> for details.";
+            readonly editor: {
+                readonly codejar: "CodeJar";
+                readonly codemirror: "CodeMirror";
+                readonly heading: "Editor";
+                readonly monaco: "Monaco";
+            };
+            readonly editorMode: {
+                readonly emacs: "Emacs";
+                readonly heading: "Editor Mode *";
+                readonly vim: "Vim";
+            };
+            readonly editorTheme: "Editor Theme";
+            readonly emmet: "Enable Emmet *";
+            readonly enableAI: {
+                readonly heading: "Enable AI Code Assistant";
+                readonly note: "Powered by <1><2></2></1>";
+            };
+            readonly fontFamily: "Font Family";
+            readonly fontSize: "Font Size";
+            readonly format: "Format";
+            readonly heading: "Editor Settings";
+            readonly lineNumbers: "Show line numbers";
+            readonly notAvailableInCodeJar: "Not available in CodeJar";
+            readonly preview: "Preview";
+            readonly semicolons: "Format: Use Semicolons";
+            readonly singleQuote: "Format: Use Single Quotes";
+            readonly tabSize: "Tab Size";
+            readonly theme: "Dark Mode";
+            readonly trailingComma: "Format: Use Trailing Commas";
+            readonly useTabs: {
+                readonly heading: "Indentation";
+                readonly spaces: "Spaces";
+                readonly tabs: "Tabs";
+            };
+            readonly wordWrap: "Word-wrap";
+        };
+        readonly embed: {
+            readonly activeEditor: {
+                readonly heading: "Active Editor";
+                readonly markup: "{{markup}}";
+                readonly script: "{{script}}";
+                readonly style: "{{style}}";
+            };
+            readonly activeTool: {
+                readonly compiled: "Compiled";
+                readonly console: "Console";
+                readonly heading: "Active Tool";
+                readonly tests: "Tests";
+            };
+            readonly code: {
+                readonly copy: "Copy Code";
+                readonly heading: "Code";
+            };
+            readonly desc: "Please check the <1>documentations</1> for advanced configurations.";
+            readonly embedType: {
+                readonly cdn: "Script (CDN)";
+                readonly heading: "Embed Type";
+                readonly html: "HTML";
+                readonly iframe: "Iframe";
+                readonly npm: "JS (npm)";
+                readonly react: "React";
+                readonly svelte: "Svelte";
+                readonly vue: "Vue";
+            };
+            readonly heading: "Embed Project";
+            readonly lite: "Lite Mode";
+            readonly loading: {
+                readonly click: "On-click";
+                readonly eager: "Eager";
+                readonly heading: "Loading";
+                readonly lazy: "Lazy";
+            };
+            readonly mode: {
+                readonly codeblock: "Code Block";
+                readonly editor: "Editor";
+                readonly full: "Full";
+                readonly heading: "Display Mode";
+                readonly result: "Result";
+            };
+            readonly permanentUrl: "Permanent URL";
+            readonly preview: "Preview";
+            readonly previewLoading: "Loading Preview...";
+            readonly readonly: "Read only";
+            readonly theme: {
+                readonly dark: "Dark";
+                readonly heading: "Theme";
+                readonly light: "Light";
+            };
+            readonly tools: {
+                readonly closed: "Closed";
+                readonly full: "Full";
+                readonly heading: "Tools";
+                readonly none: "None";
+                readonly open: "Open";
+            };
+            readonly view: {
+                readonly editor: "Editor";
+                readonly heading: "Default View";
+                readonly result: "Result";
+                readonly split: "Split";
+            };
+        };
+        readonly generic: {
+            readonly about: {
+                readonly blog: "Blog";
+                readonly configuration: "Configuration";
+                readonly features: "Features";
+                readonly gettingStarted: "Getting Started";
+                readonly github: "GitHub";
+                readonly sdk: "SDK";
+                readonly sponsor: "Sponsor LiveCodes";
+                readonly twitter: "𝕏 / Twitter";
+            };
+            readonly clickForInfo: "Click for info...";
+            readonly close: "Close";
+            readonly error: {
+                readonly authentication: "Authentication error!";
+                readonly exceededSize: "Error: Exceeded size {{size}} MB";
+                readonly failedToReadFile: "Error: Failed to read file";
+            };
+            readonly loading: "Loading...";
+            readonly more: "More...";
+            readonly optional: "Optional";
+            readonly required: "Required";
+        };
+        readonly import: {
+            readonly bulk: {
+                readonly desc: "Bulk import multiple projects to your saved projects. Projects can be exported from the <1>Saved Projects</1> screen.";
+                readonly fromFile: "Bulk import from local file";
+                readonly fromURL: "Bulk import from URL";
+                readonly heading: "Bulk Import";
+                readonly started: "Bulk import started...";
+            };
+            readonly code: {
+                readonly desc: "Supported Sources: <1> <2>GitHub gist</2> <3>GitHub file</3> <4>Directory in a GitHub repo</4> <5>Gitlab snippet</5> <6>Gitlab file</6> <7>Directory in a Gitlab repo</7> <8>JS Bin</8> <9>Raw code</9> <10>Code in web page DOM</10> <11>Code in zip file</11> <12>Official playgrounds<13></13>(TypeScript, Vue and Svelte)</12> </1> Please visit the <14>documentations</14> for details.";
+                readonly fromFile: "Import local files";
+                readonly fromURL: "Import from URL";
+                readonly heading: "Import Code";
+            };
+            readonly error: {
+                readonly failedToLoadURL: "Error: failed to load URL";
+                readonly invalidConfigFile: "Invalid configuration file";
+                readonly invalidFile: "Error: Invalid file";
+            };
+            readonly generic: {
+                readonly file: "Local file";
+                readonly url: "URL";
+            };
+            readonly heading: "Import";
+            readonly json: {
+                readonly desc: "Import a single project JSON to editor. A project can be exported from app&nbsp;menu&nbsp;→ Export&nbsp;→ Export&nbsp;Project&nbsp;(JSON).";
+                readonly fromFile: "Import project from local file";
+                readonly fromURL: "Import project from URL";
+                readonly heading: "Import Project JSON";
+            };
+            readonly success: "Import Successful!";
+        };
+        readonly login: {
+            readonly accessAllowed: "Allow access to:";
+            readonly desc: "<1>By logging in, you agree that <2>cookies</2> may be stored on your device.</1> <3> <4>Why are these permissions required?</4> </3> <5> <6>How to change/revoke permissions?</6> </5>";
+            readonly gist: "Gists";
+            readonly heading: "Login with GitHub";
+            readonly loginAs: "Logged in as {{name}}";
+            readonly loginBtn: "Login";
+            readonly logout: "Log out";
+            readonly privateRepo: "Private Repos";
+            readonly publicRepo: "Repos";
+        };
+        readonly menu: {
+            readonly about: "About";
+            readonly assets: "Assets …";
+            readonly autoSave: "Auto Save";
+            readonly autoUpdate: "Auto Update";
+            readonly backup: "Backup / Restore …";
+            readonly broadcast: "Broadcast …";
+            readonly customSettings: "Custom Settings …";
+            readonly delay: {
+                readonly heading: "Delay: <1>1.5</1>s";
+                readonly hint: "Delay before auto-update";
+            };
+            readonly deploy: "Deploy …";
+            readonly editorSettings: "Editor Settings …";
+            readonly embed: "Embed …";
+            readonly export: {
+                readonly codepen: "Edit in CodePen";
+                readonly gist: "Export to GitHub Gist";
+                readonly heading: "Export";
+                readonly jsfiddle: "Edit in JSFiddle";
+                readonly json: "Export Project (JSON)";
+                readonly result: "Export Result (HTML)";
+                readonly src: "Export Source (ZIP)";
+            };
+            readonly formatOnsave: "Format On-save";
+            readonly import: "Import …";
+            readonly layout: "Vertical Layout";
+            readonly login: "Login …";
+            readonly logout: "Log out";
+            readonly new: "New …";
+            readonly open: "Open …";
+            readonly project: "Project Info …";
+            readonly recoverUnsaved: "Recover Unsaved";
+            readonly resources: "External Resources …";
+            readonly save: "Save";
+            readonly saveAs: {
+                readonly fork: "Fork (New Project)";
+                readonly heading: "Save as";
+                readonly template: "Template";
+            };
+            readonly share: "Share …";
+            readonly showSpacing: {
+                readonly heading: "Show Spacing";
+                readonly hint: "Press Alt/Option and move your cursor over result page";
+            };
+            readonly snippets: "Code Snippets …";
+            readonly sync: "Sync (beta) … <1> ⏳</1>";
+            readonly theme: "Dark Theme";
+            readonly welcome: {
+                readonly heading: "Welcome …";
+                readonly hint: "Show Welcome screen on startup";
+            };
+        };
+        readonly open: {
+            readonly defaultTemplate: "Default template ";
+            readonly delete: {
+                readonly all: "Delete {{projects}} projects?";
+                readonly deleting: "Deleting projects...";
+                readonly one: "Delete project: {{project}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly exportAll: "Export All";
+            readonly filter: {
+                readonly language: "filter by language";
+                readonly tag: "filter by tag";
+            };
+            readonly heading: "Saved Projects";
+            readonly import: "Import";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noData: {
+                readonly desc: "You can save a project from (settings&nbsp;menu&nbsp;&gt;&nbsp;Save) or by the keyboard shortcut (Ctrl/Cmd&nbsp;+&nbsp;S).";
+                readonly heading: "You have no saved projects.";
+            };
+            readonly noMatch: "No projects match these filters.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly filterByTags: "Filter by tags";
+                readonly search: "Search";
+            };
+            readonly removeDefault: "(unset)";
+            readonly reset: "Reset";
+            readonly setAsDefault: "Set as default";
+            readonly sort: {
+                readonly heading: "Sort By:";
+                readonly lastModified: "Last Modified";
+                readonly title: "Title";
+            };
+        };
+        readonly project: {
+            readonly desc: "Description";
+            readonly head: "Add to &lt;head&gt;";
+            readonly heading: "Project Info";
+            readonly htmlAttr: "Attributes for &lt;html&gt;";
+            readonly tags: "Tags";
+            readonly title: "Project Title";
+        };
+        readonly recoverPrompt: {
+            readonly desc: "Your last project has unsaved changes!";
+            readonly heading: "Recover unsaved project?";
+            readonly meta: "Title: <1></1> <2></2> Last modified: <3></3>";
+            readonly notShowAgain: "Do not show this again.";
+            readonly prompt: {
+                readonly discard: "Discard unsaved project";
+                readonly heading: "<1></1>Do you want to recover it now?";
+                readonly recover: "Recover project to editor";
+                readonly save: "Save to device and continue";
+            };
+        };
+        readonly resources: {
+            readonly browseOnJsDelivr: "Browse package files on jsDelivr";
+            readonly cssPresets: {
+                readonly heading: "CSS Presets";
+                readonly none: "None";
+                readonly normalizeCss: "Normalize.css";
+                readonly resetCss: "Reset CSS";
+            };
+            readonly error: {
+                readonly failedToLoadResults: "Failed to load results!";
+                readonly noResultsFound: "No results found for: ";
+            };
+            readonly fonts: {
+                readonly add: "Add";
+                readonly heading: "Fonts <1>(powered by Google Fonts)</1>";
+                readonly select: "Select font ...";
+            };
+            readonly heading: "External Resources";
+            readonly scripts: "External Scripts";
+            readonly search: {
+                readonly heading: "Search Packages <1>(powered by jsDelivr)</1>";
+                readonly placeholder: "e.g. jquery, lodash@4, bootstrap@5.2.3, ...";
+            };
+            readonly stylesheets: "External Stylesheets";
+            readonly urlDesc: "Add stylesheet/script URLs. Each URL should be in a separate line.";
+        };
+        readonly savePrompt: {
+            readonly heading: "Unsaved changes";
+            readonly prompt: {
+                readonly cancel: "Cancel";
+                readonly discard: "Do not save";
+                readonly heading: "The changes you made may not be saved. <1></1> Do you want to save now?";
+                readonly save: "Save";
+            };
+        };
+        readonly share: {
+            readonly characters: "{{urlLength}} characters";
+            readonly copy: {
+                readonly clickToCopy: "Click to copy";
+                readonly copied: "URL copied to clipboard";
+            };
+            readonly encodedURL: "Get encoded URL";
+            readonly error: {
+                readonly failedToCopy: "Copy to clipboard failed!";
+                readonly failedToGenerateURL: "Failed to generate short URL!";
+            };
+            readonly expireInOneYear: "Expires in 1 year";
+            readonly generateURL: "Generating URL …";
+            readonly heading: "Share";
+            readonly permanentURL: "Permanent URL";
+            readonly qrcode: {
+                readonly clickToDownload: "Click to download";
+                readonly generating: "Generating...";
+            };
+            readonly services: {
+                readonly copyUrl: "Copy URL";
+                readonly devTo: "Dev.to";
+                readonly email: "Email";
+                readonly facebook: "Facebook";
+                readonly hackerNews: "Hacker News";
+                readonly linkedIn: "LinkedIn";
+                readonly pinterest: "Pinterest";
+                readonly pocket: "Pocket";
+                readonly qrCode: "QR code";
+                readonly reddit: "Reddit";
+                readonly share: "Share via …";
+                readonly telegram: "Telegram";
+                readonly tumblr: "Tumblr";
+                readonly twitter: "𝕏 / Twitter";
+                readonly whatsApp: "WhatsApp";
+            };
+            readonly shortURL: "Get short URL";
+        };
+        readonly snippets: {
+            readonly action: {
+                readonly copy: "Copy";
+                readonly delete: "Delete";
+                readonly edit: "Edit";
+            };
+            readonly add: {
+                readonly code: "Code";
+                readonly desc: "Description";
+                readonly heading: "Add Snippet";
+                readonly language: "Language";
+                readonly save: "Save";
+                readonly snippets: "Snippets";
+                readonly title: "Title";
+            };
+            readonly copy: {
+                readonly clickToCopySnippet: "Click to copy snippet";
+                readonly copied: "Snippet is copied to clipboard.";
+            };
+            readonly delete: {
+                readonly all: "Delete {{snippets}} snippets?";
+                readonly one: "Delete snippet: {{snippet}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly error: {
+                readonly failedToCopy: "Failed to copy URL.";
+                readonly noTitle: "Please add snippet title.";
+            };
+            readonly filter: {
+                readonly language: "filter by language";
+            };
+            readonly heading: "Code Snippets";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noMatch: "No snippets match these filters.";
+            readonly noSavedSnippets: "You have no saved snippets.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly search: "Search";
+            };
+            readonly reset: "Reset";
+            readonly save: {
+                readonly success: "Snippet locally saved to device!";
+            };
+            readonly sort: {
+                readonly date: "Date";
+                readonly heading: "Sort By:";
+                readonly title: "Title";
+            };
+            readonly text: "Plain Text";
+        };
+        readonly splash: {
+            readonly loading: "Loading LiveCodes…";
+        };
+        readonly sync: {
+            readonly autoSync: "Auto sync";
+            readonly create: {
+                readonly desc: "A new <1>private</1> repo will be created. Your LiveCodes local data will be synchronized with <2>main</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly error: {
+                readonly generic: "Sync failed!";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "Your LiveCodes local data will be synchronized with <1>main</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly heading: "Sync to GitHub Repo";
+            readonly searchRepos: "Search your repos...";
+            readonly success: "Sync complete!";
+            readonly syncBtn: "Sync";
+            readonly syncInProgress: "Sync in progress...";
+            readonly syncStarted: "Sync started...";
+        };
+        readonly templates: {
+            readonly heading: "New Project";
+            readonly noUserTemplates: {
+                readonly desc: "You can save a project as a template from <1></1>(App&nbsp;menu&nbsp;&gt;&nbsp;Save&nbsp;as&nbsp;&gt; Template).";
+                readonly heading: "You have no saved templates.";
+            };
+            readonly starter: {
+                readonly angular: "Angular Starter";
+                readonly assemblyscript: "AssemblyScript Starter";
+                readonly astro: "Astro Starter";
+                readonly backbone: "Backbone Starter";
+                readonly blank: "Blank Project";
+                readonly blockly: "Blockly Starter";
+                readonly bootstrap: "Bootstrap Starter";
+                readonly civet: "Civet Starter";
+                readonly clio: "Clio Starter";
+                readonly clojurescript: "ClojureScript Starter";
+                readonly coffeescript: "CoffeeScript Starter";
+                readonly commonlisp: "Common Lisp Starter";
+                readonly cpp: "C++ Starter";
+                readonly diagrams: "Diagrams Starter";
+                readonly fennel: "Fennel Starter";
+                readonly gleam: "Gleam Starter";
+                readonly go: "Go Starter";
+                readonly heading: "Starter Templates";
+                readonly imba: "Imba Starter";
+                readonly javascript: "JavaScript Starter";
+                readonly jest: "Jest Starter";
+                readonly 'jest-react': "Jest/React Starter";
+                readonly jquery: "jQuery Starter";
+                readonly julia: "Julia Starter";
+                readonly knockout: "Knockout Starter";
+                readonly lit: "Lit Starter";
+                readonly livescript: "LiveScript Starter";
+                readonly loading: "Loading starter templates...";
+                readonly lua: "Lua Starter";
+                readonly 'lua-wasm': "Lua (Wasm) Starter";
+                readonly malina: "Malina.js Starter";
+                readonly markdown: "Markdown Starter";
+                readonly mdx: "MDX Starter";
+                readonly ocaml: "Ocaml Starter";
+                readonly perl: "Perl Starter";
+                readonly php: "PHP Starter";
+                readonly 'php-wasm': "PHP (Wasm) Starter";
+                readonly postgresql: "PostgreSQL Starter";
+                readonly preact: "Preact Starter";
+                readonly prolog: "Prolog Starter";
+                readonly python: "Python Starter";
+                readonly r: "R Starter";
+                readonly react: "React Starter";
+                readonly 'react-native': "React Native Starter";
+                readonly reason: "Reason Starter";
+                readonly rescript: "ReScript Starter";
+                readonly riot: "Riot.js Starter";
+                readonly ruby: "Ruby Starter";
+                readonly 'ruby-wasm': "Ruby (Wasm) Starter";
+                readonly scheme: "Scheme Starter";
+                readonly solid: "Solid Starter";
+                readonly sql: "SQL Starter";
+                readonly stencil: "Stencil Starter";
+                readonly svelte: "Svelte Starter";
+                readonly tailwindcss: "Tailwind CSS Starter";
+                readonly tcl: "Tcl Starter";
+                readonly teal: "Teal Starter";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 SFC Starter";
+                readonly vue2: "Vue 2 Starter";
+                readonly wat: "WebAssembly Text Starter";
+            };
+            readonly user: {
+                readonly heading: "My Templates";
+                readonly loading: "Loading user templates...";
+            };
+        };
+        readonly testEditor: {
+            readonly heading: "Edit Tests";
+            readonly load: "Load";
+            readonly tests: "Tests";
+        };
+        readonly toolspane: {
+            readonly close: "Close";
+            readonly compiled: {
+                readonly title: "Compiled";
+            };
+            readonly console: {
+                readonly clear: "Clear console";
+                readonly title: "Console";
+            };
+            readonly test: {
+                readonly edit: "Edit";
+                readonly error: "<1><2>Test error!</2></1>";
+                readonly loading: "<1>Loading tests...</1>";
+                readonly noTest: "<1>This project has no tests!</1>";
+                readonly reset: "Reset";
+                readonly run: {
+                    readonly desc: "Ctrl/Cmd + Alt + T";
+                    readonly heading: "Run";
+                };
+                readonly summary: {
+                    readonly desc: "Tests: {{failed}}\n       {{passed}}\n       {{skipped}}\n       {{total}}<1></1>\nTime: {{duration}}s";
+                    readonly failed: "{{failedNum}} failed";
+                    readonly passed: "{{passedNum}} passed";
+                    readonly skipped: "{{skippedNum}} skipped";
+                    readonly total: "{{totalNum}} total";
+                };
+                readonly title: "Tests";
+                readonly watch: {
+                    readonly desc: "Run tests when code changes";
+                    readonly heading: "Watch";
+                };
+            };
+        };
+        readonly welcome: {
+            readonly about: {
+                readonly documentation: "Documentations";
+                readonly heading: "About LiveCodes";
+            };
+            readonly heading: "Welcome";
+            readonly recent: {
+                readonly heading: "Recent";
+            };
+            readonly recover: {
+                readonly cancel: "Cancel";
+                readonly heading: "Recover";
+                readonly lastModified: "Last modified: <1></1>";
+                readonly recover: "Recover";
+                readonly save: "Save";
+                readonly unsavedChanges: "Your last project had unsaved changes:";
+            };
+            readonly showOnStartup: "Show on startup";
+            readonly start: {
+                readonly heading: "Start";
+                readonly import: "Import...";
+                readonly loadDefaultTemplate: "Load default template";
+                readonly new: "New...";
+                readonly noDefaultTemplate: "No default template";
+                readonly open: "Open...";
+            };
+            readonly templates: {
+                readonly heading: "Starter Templates";
+            };
+        };
+    };
+    export default translation;
+}
+declare module "livecodes/i18n/locales/it/language-info" {
+    const languageInfo: {
+        readonly artTemplate: {
+            readonly desc: "High performance JavaScript templating engine.";
+            readonly link: "<1> <2>art-template official website</2> </1> <3> <4>art-template documentation</4> </3>";
+            readonly name: "art-template";
+        };
+        readonly asciidoc: {
+            readonly desc: "AsciiDoc compiled to HTML using Asciidoctor.";
+            readonly link: "<1> <2>AsciiDoc official website</2> </1> <3> <4>Asciidoctor official website</4> </3> <5> <6>Asciidoctor documentation</6> </5> <7> <8>Learn X in Y minutes, where X=asciidoc</8> </7>";
+            readonly name: "AsciiDoc";
+        };
+        readonly assemblyscript: {
+            readonly desc: "A TypeScript-like language for WebAssembly.";
+            readonly link: "<1> <2>AssemblyScript official website</2> </1> <3> <4>AssemblyScript documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "AssemblyScript";
+        };
+        readonly astro: {
+            readonly desc: "Build faster websites with less client-side Javascript. (Still in Beta)";
+            readonly link: "<1> <2>Astro official website</2> </1> <3> <4>Astro documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Astro";
+        };
+        readonly babel: {
+            readonly desc: "The JavaScript compiler";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Babel documentation</4> </3>";
+            readonly name: "Babel";
+        };
+        readonly bbcode: {
+            readonly desc: "BBCode (\"Bulletin Board Code\") is a lightweight markup language used to format messages in many Internet forum software.";
+            readonly link: "<1><2>bbcode.org</2></1> <3> <4>BBCode guide</4> </3> <5> <6>BBCode on Wikipedia</6> </5>";
+            readonly name: "BBCode";
+        };
+        readonly blockly: {
+            readonly desc: "A JavaScript library for building visual programming editors.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>Guides</4> </3> <5> <6>Reference</6> </5> <7> <8>Samples</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Blockly";
+        };
+        readonly civet: {
+            readonly desc: "Civet is a programming language that compiles to TypeScript or JavaScript, so you can use existing tooling but enable concise and powerful syntax.";
+            readonly link: "<1> <2>Civet official website</2> </1> <3> <4>Civet cheatsheet</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Civet";
+        };
+        readonly clio: {
+            readonly desc: "Clio is a fast, distributed, functional programming language that compiles to JavaScript.";
+            readonly link: "<1> <2>Clio official website</2> </1> <3> <4>Clio documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Clio";
+        };
+        readonly clojurescript: {
+            readonly desc: "ClojureScript is a compiler for <1>Clojure</1> that targets JavaScript. <2></2>In LiveCodes, it runs in the browser using <3>Cherry</3>.";
+            readonly link: "<1> <2>ClojureScript official website</2> </1> <3> <4>Clojure official website</4> </3> <5> <6>Cherry repo</6> </5> <7> <8>Learn X in Y minutes, where X=clojure</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "ClojureScript (CLJS)";
+        };
+        readonly coffeescript: {
+            readonly desc: "Unfancy JavaScript.";
+            readonly link: "<1> <2>CoffeeScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=coffeescript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "CoffeeScript";
+        };
+        readonly commonlisp: {
+            readonly desc: "A Common Lisp implementation on Javascript using JSCL (a Lisp-to-Javascript compiler bootstrapped from Common Lisp).";
+            readonly link: "<1> <2>Common-Lisp.net</2> </1> <3> <4>JSCL Project</4> </3> <5> <6>Common Lisp Resources</6> </5> <7> <8>Learn X in Y minutes, where X=Common Lisp</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Common Lisp";
+        };
+        readonly cpp: {
+            readonly desc1: "C++ support using JSCPP (a simple C++ interpreter written in JavaScript).";
+            readonly desc2: "It is not a complete implementation of C++. Please refer to <1>JSCPP documentation</1> for details.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>JSCPP</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C++";
+        };
+        readonly cppWasm: {
+            readonly desc: "Clang C/C++ compiler running on WebAssembly, using <1>wasm-clang</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>Clang official website</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C/C++ (Wasm)";
+        };
+        readonly diagrams: {
+            readonly desc1: "(Experimental)";
+            readonly desc2: "Diagrams-as-code. Supports:";
+            readonly desc3: "<1> <2>Cytoscape</2> </1> <3> <4>ELK</4> (using <5>elkjs</5>) </3> <6> <7>Gnuplot</7> (using <8>gnuplot-JS</8>) </6> <9> <10>Graphviz</10> (using <11>@hpcc-js/wasm</11>) </9> <12> <13>Mermaid</13> </12> <14> <15>Nomnoml</15> </14> <16> <17>Pintora</17> </16> <18> <19>Plotly</19> </18> <20> <21>Svgbob</21> </20> <22> <23>Vega</23> </22> <24> <25>VegaLite</25> </24> <26> <27>WaveDrom</27> </26>";
+            readonly link: "<1> <2>Load starter template</2> </1> <3> <4>LiveCodes Documentation</4> </3>";
+            readonly name: "Diagrams";
+        };
+        readonly dot: {
+            readonly desc: "The fastest + concise javascript template engine for Node.js and browsers.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "doT.js";
+        };
+        readonly ejs: {
+            readonly desc: "Embedded JavaScript templating.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "EJS";
+        };
+        readonly eta: {
+            readonly desc: "Embedded JS template engine for Node, Deno, and the browser. Lighweight, fast, and pluggable. Written in TypeScript.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Eta";
+        };
+        readonly fennel: {
+            readonly desc: "Fennel is a programming language that brings together the speed, simplicity, and reach of Lua with the flexibility of a lisp syntax and macro system.";
+            readonly link: "<1> <2>Fennel official website</2> </1> <3> <4>Getting Started with Fennel</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Fennel";
+        };
+        readonly flow: {
+            readonly desc: "Flow is a static type checker for JavaScript.";
+            readonly link: "<1> <2>Flow official website</2> </1> <3> <4>Flow documentation</4> </3>";
+            readonly name: "Flow";
+        };
+        readonly gleam: {
+            readonly desc1: "Gleam is a friendly language for building type-safe systems that scale!";
+            readonly desc2: "Gleam is a statically-typed functional programming language, which compiles to Erlang or JavaScript.";
+            readonly link: "<1><2>Gleam website</2></1> <3> <4>Gleam documentation</4> </3> <5> <6>Gleam language tour</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Gleam";
+        };
+        readonly go: {
+            readonly desc1: "Go (Golang) is an open source programming language that makes it easy to build simple, reliable, and efficient software.";
+            readonly desc2: "Here, it is compiled to JavaScript using GopherJS.";
+            readonly link: "<1><2>Go website</2></1> <3><4>Go documentation</4></3> <5> <6>GopherJS repo</6> </5> <7> <8>Learn X in Y minutes, where X=Go</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Go";
+        };
+        readonly haml: {
+            readonly desc: "Haml compiler for client side javascript view templates using clientside-haml-js.";
+            readonly link: "<1><2>Haml official website</2></1> <3> <4>Haml documentation</4> </3> <5> <6>clientside-haml-js GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=haml</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Haml";
+        };
+        readonly handlebars: {
+            readonly desc: "Minimal templating on steroids.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Handlebars";
+        };
+        readonly imba: {
+            readonly desc: "The friendly full-stack language.";
+            readonly link: "<1><2>Official website</2></1>";
+            readonly name: "Imba";
+        };
+        readonly jsx: {
+            readonly desc: "JSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler.  By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "JSX";
+        };
+        readonly julia: {
+            readonly desc1: "(Julia language support in LiveCodes is still experimental)";
+            readonly desc2: "Julia compiler and Julia Base running on WASM, using <1>julia-wasm</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Julia official website</2> </1> <3> <4>Julia documentation</4> </3> <5> <6>Learn X in Y minutes, where X=Julia</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Julia";
+        };
+        readonly less: {
+            readonly desc: "It's CSS, with just a little more.";
+            readonly link: "<1><2>Less official website</2></1> <3> <4>Learn X in Y minutes, where X=less</4> </3>";
+            readonly name: "Less";
+        };
+        readonly liquid: {
+            readonly desc: "A simple, expressive and safe template engine.";
+            readonly link: "<1> <2>LiquidJS official website</2> </1> <3> <4>LiquidJS documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "LiquidJS";
+        };
+        readonly livescript: {
+            readonly desc: "A language which compiles to JavaScript.";
+            readonly link: "<1> <2>LiveScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=LiveScript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "LiveScript";
+        };
+        readonly lua: {
+            readonly desc: "Lua running in the browser using fengari-web.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Fengari official website</6> </5> <7> <8>fengari-web GitHub repo</8> </7> <9> <10>Learn X in Y minutes, where X=Lua</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "Lua";
+        };
+        readonly luaWasm: {
+            readonly desc: "Lua running in the browser using Wasmoon, a real lua 5.4 VM with JS bindings made with WebAssembly.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Wasmoon GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=Lua</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Lua (Wasm)";
+        };
+        readonly malina: {
+            readonly desc: "Frontend compiler, inspired by Svelte.";
+            readonly link: "<1> <2>Malina.js repo</2> </1> <3> <4>Malina.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Malina.js";
+        };
+        readonly markdown: {
+            readonly desc: "Markdown compiled to HTML using Marked.";
+            readonly link: "<1> <2>Markdown official website</2> </1> <3> <4>Marked documentation</4> </3> <5> <6>Learn X in Y minutes, where X=markdown</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Markdown";
+        };
+        readonly mdx: {
+            readonly desc: "Markdown for the component era. <1></1>MDX lets you seamlessly write JSX in your Markdown documents.";
+            readonly link: "<1><2>MDX documentation</2></1> <3><4>Load starter template</4></3>";
+            readonly name: "MDX";
+        };
+        readonly mjml: {
+            readonly desc: "MJML is a markup language designed to reduce the pain of coding a responsive email.";
+            readonly link: "<1><2>MJML official website</2></1> <3> <4>MJML documentation</4> </3> <5> <6>MJML official templates</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "MJML";
+        };
+        readonly mustache: {
+            readonly desc: "Logic-less templates.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>mustache(5) manual</4> </3> <5> <6>JavaScript implementation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "Mustache";
+        };
+        readonly nunjucks: {
+            readonly desc: "A rich and powerful templating language for JavaScript. Nunjucks is essentially a port of <1>jinja2</1>.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Nunjucks";
+        };
+        readonly ocaml: {
+            readonly desc1: "OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles.";
+            readonly desc2: "ReScript compiler is used here to compile OCaml to JavaScript.";
+            readonly link: "<1><2>OCaml website</2></1> <3> <4>OCaml documentation</4> </3> <5> <6>ReScript website</6> </5> <7> <8>Learn X in Y minutes, where X=OCaml</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "OCaml";
+        };
+        readonly perl: {
+            readonly desc: "Perl running in the browser using Perlito.";
+            readonly link: "<1> <2>Perl official website</2> </1> <3> <4>Perl documentation</4> </3> <5> <6>Perlito5 Readme</6> </5> <7> <8>Learn X in Y minutes, where X=perl</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Perl";
+        };
+        readonly php: {
+            readonly desc: "PHP running in the browser using Uniter.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>Uniter GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11><12>Load starter template</12></11>";
+            readonly name: "PHP";
+        };
+        readonly phpWasm: {
+            readonly desc: "PHP in Browser, powered by WebAssembly, using php-wasm.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>php-wasm GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "PHP (Wasm)";
+        };
+        readonly postgresql: {
+            readonly desc: "PostgreSQL packaged as WASM using PGlite";
+            readonly link: "<1> <2>PostgreSQL official website</2> </1> <3> <4>PostgreSQL documentation</4> </3> <5> <6>PGlite GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "PostgreSQL";
+        };
+        readonly prolog: {
+            readonly desc: "An open source Prolog interpreter in JavaScript.";
+            readonly link: "<1> <2>Tau Prolog official website</2> </1> <3> <4>Tau Prolog documentation</4> </3> <5> <6>SWI-Prolog</6> </5> <7> <8>Learn X in Y minutes, where X=Prolog</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Tau Prolog";
+        };
+        readonly pug: {
+            readonly desc: "Robust, elegant, feature rich template engine.";
+            readonly link: "<1> <2>Pug documentation</2> </1> <3> <4>Learn X in Y minutes, where X=Pug</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Pug";
+        };
+        readonly python: {
+            readonly desc: "Python running in the browser using Brython.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5> <6>Brython documentation</6> </5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python";
+        };
+        readonly pythonWasm: {
+            readonly desc1: "Python with the scientific stack, compiled to WebAssembly using Pyodide.";
+            readonly desc2: "Pyodide allows using Python scientific stack including NumPy, Pandas, Matplotlib, SciPy, scikit-learn and many more. In addition it’s possible to install pure Python wheels from PyPi.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5><6>Pyodide documentation</6></5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python (Wasm)";
+        };
+        readonly r: {
+            readonly desc: "R running in the browser using WebR.";
+            readonly link: "<1> <2>R project official website</2> </1> <3> <4>The R Manuals</4> </3> <5> <6>R for Data Science (2e)</6> </5> <7> <8>WebR documentation</8> </7> <9> <10>Learn X in Y minutes, where X=R</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "R";
+        };
+        readonly reactNative: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "React Native for Web";
+        };
+        readonly reactNativeTsx: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>TypeScript website</10> </9> <11> <12>TypeScript documentation</12> </11> <13> <14>LiveCodes Documentations</14> </13> <15> <16>Load starter template (JSX)</16> </15>";
+            readonly name: "React Native for Web (with TypeScript)";
+        };
+        readonly reason: {
+            readonly desc1: "Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.";
+            readonly desc2: "ReScript compiler is used here to compile Reason to JavaScript.";
+            readonly link: "<1><2>Reason website</2></1> <3> <4>Reason documentation</4> </3> <5> <6>ReasonReact</6> </5> <7> <8>ReScript website</8> </7> <9> <10>Learn X in Y minutes, where X=reason</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Reason";
+        };
+        readonly rescript: {
+            readonly desc: "ReScript is a robustly typed language that compiles to efficient and human-readable JavaScript.";
+            readonly link: "<1> <2>ReScript website</2> </1> <3> <4>ReScript / React</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "ReScript";
+        };
+        readonly richtext: {
+            readonly desc1: "Using Quill:";
+            readonly desc2: "Your powerful rich text editor.";
+            readonly link: "<1> <2>Quill official website</2> </1>";
+            readonly name: "Rich Text Editor";
+        };
+        readonly riot: {
+            readonly desc: "Simple and elegant component-based UI library.";
+            readonly link: "<1> <2>Riot.js official website</2> </1> <3> <4>Riot.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Riot.js";
+        };
+        readonly ruby: {
+            readonly desc: "Ruby running in the browser using Opal.";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5><6>Opal official website</6></5> <7> <8>Opal standard library CDN</8> </7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby";
+        };
+        readonly rubyWasm: {
+            readonly desc: "Ruby running in the browser using ruby-wasm (a collection of WebAssembly ports of the CRuby).";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5> <6>ruby.wasm website</6> </5> <7><8>CRuby</8></7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby (WASM)";
+        };
+        readonly sass: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>Sass (the indented) syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "Sass";
+        };
+        readonly scheme: {
+            readonly desc: "Scheme running in the browser using biwascheme.";
+            readonly link: "<1> <2>The Scheme Programming Language</2> </1> <3> <4>BiwaScheme official website</4> </3> <5> <6>BiwaScheme reference</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Scheme";
+        };
+        readonly scss: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>SCSS syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "SCSS";
+        };
+        readonly solid: {
+            readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+            readonly link: "<1><2>Official website</2></1> <3><4>Documentation</4></3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template (TSX)</8> </7>";
+            readonly name: "Solid";
+            readonly tsx: {
+                readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+                readonly link: "<1><2>Official website</2></1> <3> <4>Solid documentation</4> </3> <5> <6>TypeScript website</6> </5> <7> <8>TypeScript documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+                readonly name: "Solid (with TypeScript)";
+            };
+        };
+        readonly sql: {
+            readonly desc: "SQLite compiled to JavaScript using SQL.js";
+            readonly link: "<1> <2>SQLite official website</2> </1> <3> <4>SQLite syntax documentation</4> </3> <5> <6>SQL.js official website</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "SQLite";
+        };
+        readonly stencil: {
+            readonly desc: "A Compiler for Web Components and High Performance Web Apps.";
+            readonly link: "<1> <2>Stencil official website</2> </1> <3> <4>Stencil documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Stencil";
+        };
+        readonly styleProcessors: {
+            readonly link: "<1> <2>Tailwind CSS</2> </1> <3> <4>Windi CSS</4> </3> <5> <6>UnoCSS</6> </5> <7> <8>Lightning CSS</8> </7> <9> <10>PostCSS</10> Plugins: <11> <12> <13>Autoprefixer</13> </12> <14> <15>postcss-preset-env</15> </14> <16> <17>postcss-import-url</17> </16> <18> <19>postcss-modules</19> </18> </11> </9>";
+            readonly name: "CSS Frameworks and Processors";
+        };
+        readonly stylis: {
+            readonly desc: "Light-weight css preprocessor.";
+            readonly link: "<1> <2>Stylis official website</2> </1>";
+            readonly name: "Stylis";
+        };
+        readonly stylus: {
+            readonly desc: "Expressive, Dynamic, Robust CSS.";
+            readonly link: "<1> <2>Stylus official website</2> </1> <3> <4>Learn X in Y minutes, where X=stylus</4> </3>";
+            readonly name: "Stylus";
+        };
+        readonly sucrase: {
+            readonly desc: "Super-fast alternative to Babel for when you can target modern JS runtimes.";
+            readonly link: "<1> <2>Sucrase official website</2> </1> <3> <4>Sucrase GitHub Repo</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Sucrase";
+        };
+        readonly svelte: {
+            readonly desc: "Cybernetically enhanced web apps.";
+            readonly link: "<1> <2>Svelte official website</2> </1> <3> <4>Svelte documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Svelte";
+        };
+        readonly tcl: {
+            readonly desc: "Tcl running in the browser, using <1>wacl</1>.";
+            readonly link: "<1> <2>Tcl official website</2> </1> <3> <4>wacl repo</4> </3> <5> <6>Learn X in Y minutes, where X=Tcl</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Tcl (Tool Command Language)";
+        };
+        readonly teal: {
+            readonly desc: "A typed dialect of Lua.";
+            readonly link: "<1> <2>Teal GitHub repo</2> </1> <3> <4>Teal docs</4> </3> <5> <6>Teal tutorial</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Teal";
+        };
+        readonly tsx: {
+            readonly desc: "TypeScript in JSX. TSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler. By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>Typescript documentation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "TSX";
+        };
+        readonly twig: {
+            readonly desc: "A JavaScript implementation of the <1>Twig</1> PHP templating language by <2>Twig.js</2> .";
+            readonly link: "<1> <2>Twig official website</2> </1> <3> <4>Twig Documentation</4> </3> <5> <6>Twig.js Repo</6> </5> <7> <8>Twig.js Documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Twig";
+        };
+        readonly typescript: {
+            readonly desc: "A Typed Superset of JavaScript.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>TypeScript documentation</4> </3> <5> <6>Learn X in Y minutes, where X=TypeScript</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "TypeScript";
+        };
+        readonly vue: {
+            readonly link: "<1> <2>Vue.js v3 official website</2> </1> <3> <4>Vue3 documentation</4> </3> <5> <6>Vue3 single file components</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Vue3 Single File Components";
+        };
+        readonly vue2: {
+            readonly desc: "Loaded using vue3-sfc-loader.";
+            readonly link: "<1><2>Vue.js official website</2></1> <3> <4>Vue2 documentation</4> </3> <5> <6>Vue2 single file components</6> </5> <7> <8>vue3-sfc-loader GitHub repo</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Vue2 Single File Components";
+        };
+        readonly wat: {
+            readonly desc1: "Low-level textual representation of the WebAssembly (wasm) binary format.";
+            readonly desc2: "It is converted to wasm using wabt.js.";
+            readonly link: "<1><2>WebAssembly.org</2></1> <3> <4>WebAssembly Text Specs</4> </3> <5> <6>WebAssembly on MDN</6> </5> <7> <8>Understanding WebAssembly text format</8> </7> <9> <10>wabt.js documentation</10> </9> <11> <12>Learn X in Y minutes, where X=WebAssembly</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "WebAssembly Text Format";
+        };
+    };
+    export default languageInfo;
+}
+declare module "livecodes/i18n/locales/it/translation" {
+    const translation: {
+        readonly about: {
+            readonly documentations: {
+                readonly aboutUs: "About us";
+                readonly contact: "Contact";
+                readonly heading: "Documentations";
+                readonly home: "Home";
+                readonly license: "License";
+            };
+            readonly heading: "About LiveCodes";
+            readonly livecodes: {
+                readonly para1: "<1><2>LiveCodes</2></1> is an <3>open-source</3>, <4>feature-rich</4>, <5>client-side</5> code playground. Currently, <6>80+ languages/<7></7>frameworks</6> are supported. It can be used as a standalone app or can be <8>embedded</8> in any web page. There are many ways to <9>prefill playgrounds</9> with code.";
+                readonly para2: "A wide range of <1>configuration options</1> makes it very flexible. A powerful <2>SDK</2> (for <3>JS/TS</3>, <4>React</4>, <5>Vue</5> and <6>Svelte</6>) facilitates <7>embedding</7> and <8>communicating</8> with playgrounds. <9>Comprehensive documentations</9> are available with code samples, live demos and screenshots.";
+            };
+            readonly version: {
+                readonly app: "App version: {{APP_VERSION}}";
+                readonly appPermanentUrl: "App Permanent URL";
+                readonly commit: "Git commit: {{COMMIT_SHA}}";
+                readonly heading: "Version";
+                readonly sdk: "SDK version: {{SDK_VERSION}}";
+                readonly sdkPermanentUrl: "SDK Permanent URL";
+            };
+        };
+        readonly app: {
+            readonly copy: {
+                readonly hint: "Copy (Ctrl/Cmd + A, Ctrl/Cmd + C)";
+            };
+            readonly copyAsUrl: {
+                readonly hint: "Copy code as data URL";
+            };
+            readonly customSettings: {
+                readonly hint: "Custom Settings";
+            };
+            readonly editorMode: {
+                readonly hint: "Editor Mode";
+            };
+            readonly editorSettings: {
+                readonly hint: "Editor Settings";
+            };
+            readonly externalResources: {
+                readonly hint: "External Resources";
+            };
+            readonly focus: {
+                readonly hint: "Toggle Focus mode";
+            };
+            readonly format: {
+                readonly hint: "Format (Alt + Shift + F)";
+            };
+            readonly fullscreen: {
+                readonly hint: "Full Screen";
+            };
+            readonly logo: {
+                readonly title: "LiveCodes: Code playground that runs in the browser!";
+            };
+            readonly projectInfo: {
+                readonly hint: "Project Info";
+            };
+            readonly redo: {
+                readonly hint: "Redo (Ctrl/Cmd + Shift + Z)";
+            };
+            readonly result: {
+                readonly hint: "Toggle Result";
+            };
+            readonly run: {
+                readonly hint: "Run (Shift + Enter)";
+            };
+            readonly share: {
+                readonly hint: "Share";
+            };
+            readonly undo: {
+                readonly hint: "Undo (Ctrl/Cmd + Z)";
+            };
+            readonly untitledProject: "Untitled Project";
+        };
+        readonly assets: {
+            readonly add: {
+                readonly dataURL: {
+                    readonly desc: "Add asset as a base64-encoded <1>data url</1>.";
+                    readonly heading: "Data URL";
+                    readonly label: "Add file";
+                };
+                readonly githubPages: {
+                    readonly desc: "Deploy asset to GitHub Pages. The file is pushed to <1>gh-pages</1> branch of the repo <2>livecodes-assets</2> on your GitHub account. If the repo does not already exist, a public repo will be created.";
+                    readonly heading: "GitHub Pages";
+                    readonly label: "Upload file";
+                };
+                readonly heading: "Add Asset";
+            };
+            readonly delete: {
+                readonly all: "Delete {{assets}} assets?";
+                readonly one: "Delete asset: {{asset}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly generic: {
+                readonly clickToCopyURL: "Click to copy URL";
+            };
+            readonly heading: "Assets";
+            readonly link: {
+                readonly date: "Date: {{modified}}";
+                readonly type: "Type: {{type}}";
+                readonly url: "URL: {{url}}";
+            };
+            readonly loadFile: {
+                readonly error: {
+                    readonly failedToUpload: "Error: Failed to upload file";
+                    readonly unauthenticated: "Error: Unauthenticated user";
+                };
+                readonly upload: "Upload file";
+                readonly uploading: "Uploading...";
+            };
+            readonly noMatch: "No assets match these filters.";
+            readonly noSavedAssets: "You have no saved assets.";
+            readonly processAsset: {
+                readonly addFile: "Added file: ";
+                readonly deployNotice: "The asset should be available on this URL soon (~1 min).";
+                readonly success: "File added to assets!";
+                readonly urlLabel: "URL: ";
+            };
+            readonly resetFilters: "Reset";
+            readonly search: "Search";
+            readonly sort: {
+                readonly date: "Date";
+                readonly fileName: "File Name";
+                readonly heading: "Sort By:";
+            };
+            readonly type: {
+                readonly archive: "Archive";
+                readonly audio: "Audio";
+                readonly csv: "CSV";
+                readonly font: "Font";
+                readonly html: "HTML";
+                readonly icon: "Icon";
+                readonly image: "Image";
+                readonly json: "JSON";
+                readonly other: "Other";
+                readonly script: "Script";
+                readonly stylesheet: "Stylesheet";
+                readonly text: "Text";
+                readonly video: "Video";
+                readonly xml: "XML";
+            };
+            readonly types: {
+                readonly all: "All types";
+            };
+            readonly url: {
+                readonly fail: "Failed to copy URL.";
+                readonly success: "URL is copied to clipboard.";
+            };
+        };
+        readonly backup: {
+            readonly backup: {
+                readonly assets: "Assets";
+                readonly button: "Backup";
+                readonly desc: "Backup LiveCodes data, so that it can be later restored on this or other devices. <1></1> Please visit the <2>documentations</2> for details.";
+                readonly heading: "Backup";
+                readonly projects: "Projects";
+                readonly settings: "User Settings";
+                readonly snippets: "Code Snippets";
+                readonly templates: "User Templates";
+            };
+            readonly backupBtn: "Backup";
+            readonly error: {
+                readonly atLeastOneStore: "Please select at least one store to backup";
+                readonly incorrectFileType: "Error: Incorrect file type";
+            };
+            readonly fileInputLabel: "Restore from file";
+            readonly heading: "Backup / Restore";
+            readonly inProgress: "In progress...";
+            readonly restore: {
+                readonly desc: "Restore previously backed-up LiveCodes data. <1></1> If you choose to replace current content, you may want to back it up first. <2></2> Please visit the <3>documentations</3> for details.";
+                readonly fromFile: "Restore from file";
+                readonly heading: "Restore";
+                readonly mode: {
+                    readonly merge: "Merge with current content";
+                    readonly replace: "Replace current content";
+                };
+                readonly success: "Restored Successfully!";
+            };
+        };
+        readonly broadcast: {
+            readonly broadcastBtn: {
+                readonly start: "Broadcast";
+                readonly stop: "Stop broadcast";
+            };
+            readonly broadcasting: "Broadcasting...";
+            readonly channelURL: "Channel URL";
+            readonly connecting: "Connecting...";
+            readonly desc: "Broadcast the result page to other browsers/devices in real time. Please visit the <1>documentations</1> for details.";
+            readonly error: {
+                readonly generic: "Broadcast failed!";
+                readonly serverURLRequired: "Server URL is required!";
+            };
+            readonly heading: "Broadcast";
+            readonly includeSourceCode: "Include source code";
+            readonly serverURL: {
+                readonly heading: "Server URL";
+            };
+        };
+        readonly core: {
+            readonly broadcast: {
+                readonly heading: "Broadcast";
+                readonly successSetToken: "Broadcast user token set successfully";
+            };
+            readonly changeLanguage: {
+                readonly hint: "Change Language";
+                readonly message: "Loading {{lang}}. This may take a while!";
+            };
+            readonly copy: {
+                readonly copied: "Code copied to clipboard";
+                readonly copiedAsDataURL: "Code copied as data URL";
+                readonly hint: "Copied!";
+                readonly title: "Copy";
+            };
+            readonly error: {
+                readonly couldNotLoadTemplate: "Could not load template: {{template}}";
+                readonly failedToCopyCode: "Failed to copy code";
+                readonly failedToLoadTemplate: "Failed loading template";
+                readonly failedToLoadTemplates: "Failed loading starter templates";
+                readonly failedToParseSettings: "Failed parsing settings as JSON";
+                readonly invalidCommand: "Invalid command!";
+                readonly invalidImport: "Invalid import URL";
+                readonly invalidPanelId: "Invalid panel id";
+                readonly invalidToken: "Invalid token!";
+                readonly login: "Login error!";
+                readonly logout: "Logout error!";
+                readonly noResultContainer: "Result container not found";
+                readonly unavailable: "Command unavailable";
+                readonly unavailableForEmbeds: "Command unavailable for embeds";
+            };
+            readonly export: {
+                readonly gist: "Creating a public GitHub gist...";
+            };
+            readonly fork: {
+                readonly success: "Forked as a new project";
+            };
+            readonly fullScreen: {
+                readonly enter: "Full Screen";
+                readonly exit: "Exit Full Screen";
+            };
+            readonly import: {
+                readonly loading: "Loading Project...";
+            };
+            readonly layout: {
+                readonly horizontal: "Horizontal layout";
+                readonly responsive: "Responsive layout";
+                readonly vertical: "Vertical layout";
+            };
+            readonly loadDefaults: {
+                readonly template: "Loading default template";
+            };
+            readonly login: {
+                readonly success: "Logged in successfully";
+                readonly successWithName: "Logged in as: {{name}}";
+            };
+            readonly logout: {
+                readonly success: "Logged out successfully";
+            };
+            readonly result: {
+                readonly hint: "Show result in new window";
+            };
+            readonly save: {
+                readonly success: "Project locally saved to device!";
+                readonly successWithName: "Project \"{{name}}\" saved to device.";
+            };
+            readonly template: {
+                readonly blank: "Blank Project";
+                readonly delete: "Delete template \"{{item}}\"?";
+                readonly javascript: "JavaScript Starter";
+                readonly react: "React Starter";
+                readonly saved: "Saved as a new template";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 Starter";
+            };
+            readonly unload: {
+                readonly notSaved: "Changes you made may not be saved.";
+            };
+            readonly zoom: {
+                readonly hint: "Zoom";
+            };
+        };
+        readonly customSettings: {
+            readonly JSON: "Custom Settings JSON";
+            readonly heading: "Custom Settings";
+            readonly load: "Load";
+        };
+        readonly deploy: {
+            readonly create: {
+                readonly desc: "A new <1>public</1> repo will be created. The result page will be pushed to <2>gh-pages</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name <1></1>";
+            };
+            readonly error: {
+                readonly generic: "Deployment failed!";
+                readonly repoNameExists: "Repo name already exists";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "A new commit will be added to <1>gh-pages</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly generic: {
+                readonly commitMessage: "Commit Message";
+                readonly commitSourceCodePublic: "Commit source code (public)";
+                readonly deployBtn: "Deploy";
+                readonly deploying: "Deploying...";
+            };
+            readonly heading: "Deploy to GitHub Pages";
+            readonly searchRepo: "Search your public repos...";
+        };
+        readonly editorSettings: {
+            readonly appLanguage: {
+                readonly heading: "App UI Language";
+                readonly note: "Will reload the app to apply the changes after switching the language.";
+            };
+            readonly closeBrackets: "Auto-close brackets and quotes";
+            readonly codeJarDesc: "* The marked features are not available in CodeJar.";
+            readonly default: "Default";
+            readonly desc: "Please check the <1>documentations</1> for details.";
+            readonly editor: {
+                readonly codejar: "CodeJar";
+                readonly codemirror: "CodeMirror";
+                readonly heading: "Editor";
+                readonly monaco: "Monaco";
+            };
+            readonly editorMode: {
+                readonly emacs: "Emacs";
+                readonly heading: "Editor Mode *";
+                readonly vim: "Vim";
+            };
+            readonly editorTheme: "Editor Theme";
+            readonly emmet: "Enable Emmet *";
+            readonly enableAI: {
+                readonly heading: "Enable AI Code Assistant";
+                readonly note: "Powered by <1><2></2></1>";
+            };
+            readonly fontFamily: "Font Family";
+            readonly fontSize: "Font Size";
+            readonly format: "Format";
+            readonly heading: "Editor Settings";
+            readonly lineNumbers: "Show line numbers";
+            readonly notAvailableInCodeJar: "Not available in CodeJar";
+            readonly preview: "Preview";
+            readonly semicolons: "Format: Use Semicolons";
+            readonly singleQuote: "Format: Use Single Quotes";
+            readonly tabSize: "Tab Size";
+            readonly theme: "Dark Mode";
+            readonly trailingComma: "Format: Use Trailing Commas";
+            readonly useTabs: {
+                readonly heading: "Indentation";
+                readonly spaces: "Spaces";
+                readonly tabs: "Tabs";
+            };
+            readonly wordWrap: "Word-wrap";
+        };
+        readonly embed: {
+            readonly activeEditor: {
+                readonly heading: "Active Editor";
+                readonly markup: "{{markup}}";
+                readonly script: "{{script}}";
+                readonly style: "{{style}}";
+            };
+            readonly activeTool: {
+                readonly compiled: "Compiled";
+                readonly console: "Console";
+                readonly heading: "Active Tool";
+                readonly tests: "Tests";
+            };
+            readonly code: {
+                readonly copy: "Copy Code";
+                readonly heading: "Code";
+            };
+            readonly desc: "Please check the <1>documentations</1> for advanced configurations.";
+            readonly embedType: {
+                readonly cdn: "Script (CDN)";
+                readonly heading: "Embed Type";
+                readonly html: "HTML";
+                readonly iframe: "Iframe";
+                readonly npm: "JS (npm)";
+                readonly react: "React";
+                readonly svelte: "Svelte";
+                readonly vue: "Vue";
+            };
+            readonly heading: "Embed Project";
+            readonly lite: "Lite Mode";
+            readonly loading: {
+                readonly click: "On-click";
+                readonly eager: "Eager";
+                readonly heading: "Loading";
+                readonly lazy: "Lazy";
+            };
+            readonly mode: {
+                readonly codeblock: "Code Block";
+                readonly editor: "Editor";
+                readonly full: "Full";
+                readonly heading: "Display Mode";
+                readonly result: "Result";
+            };
+            readonly permanentUrl: "Permanent URL";
+            readonly preview: "Preview";
+            readonly previewLoading: "Loading Preview...";
+            readonly readonly: "Read only";
+            readonly theme: {
+                readonly dark: "Dark";
+                readonly heading: "Theme";
+                readonly light: "Light";
+            };
+            readonly tools: {
+                readonly closed: "Closed";
+                readonly full: "Full";
+                readonly heading: "Tools";
+                readonly none: "None";
+                readonly open: "Open";
+            };
+            readonly view: {
+                readonly editor: "Editor";
+                readonly heading: "Default View";
+                readonly result: "Result";
+                readonly split: "Split";
+            };
+        };
+        readonly generic: {
+            readonly about: {
+                readonly blog: "Blog";
+                readonly configuration: "Configuration";
+                readonly features: "Features";
+                readonly gettingStarted: "Getting Started";
+                readonly github: "GitHub";
+                readonly sdk: "SDK";
+                readonly sponsor: "Sponsor LiveCodes";
+                readonly twitter: "𝕏 / Twitter";
+            };
+            readonly clickForInfo: "Click for info...";
+            readonly close: "Close";
+            readonly error: {
+                readonly authentication: "Authentication error!";
+                readonly exceededSize: "Error: Exceeded size {{size}} MB";
+                readonly failedToReadFile: "Error: Failed to read file";
+            };
+            readonly loading: "Loading...";
+            readonly more: "More...";
+            readonly optional: "Optional";
+            readonly required: "Required";
+        };
+        readonly import: {
+            readonly bulk: {
+                readonly desc: "Bulk import multiple projects to your saved projects. Projects can be exported from the <1>Saved Projects</1> screen.";
+                readonly fromFile: "Bulk import from local file";
+                readonly fromURL: "Bulk import from URL";
+                readonly heading: "Bulk Import";
+                readonly started: "Bulk import started...";
+            };
+            readonly code: {
+                readonly desc: "Supported Sources: <1> <2>GitHub gist</2> <3>GitHub file</3> <4>Directory in a GitHub repo</4> <5>Gitlab snippet</5> <6>Gitlab file</6> <7>Directory in a Gitlab repo</7> <8>JS Bin</8> <9>Raw code</9> <10>Code in web page DOM</10> <11>Code in zip file</11> <12>Official playgrounds<13></13>(TypeScript, Vue and Svelte)</12> </1> Please visit the <14>documentations</14> for details.";
+                readonly fromFile: "Import local files";
+                readonly fromURL: "Import from URL";
+                readonly heading: "Import Code";
+            };
+            readonly error: {
+                readonly failedToLoadURL: "Error: failed to load URL";
+                readonly invalidConfigFile: "Invalid configuration file";
+                readonly invalidFile: "Error: Invalid file";
+            };
+            readonly generic: {
+                readonly file: "Local file";
+                readonly url: "URL";
+            };
+            readonly heading: "Import";
+            readonly json: {
+                readonly desc: "Import a single project JSON to editor. A project can be exported from app&nbsp;menu&nbsp;→ Export&nbsp;→ Export&nbsp;Project&nbsp;(JSON).";
+                readonly fromFile: "Import project from local file";
+                readonly fromURL: "Import project from URL";
+                readonly heading: "Import Project JSON";
+            };
+            readonly success: "Import Successful!";
+        };
+        readonly login: {
+            readonly accessAllowed: "Allow access to:";
+            readonly desc: "<1>By logging in, you agree that <2>cookies</2> may be stored on your device.</1> <3> <4>Why are these permissions required?</4> </3> <5> <6>How to change/revoke permissions?</6> </5>";
+            readonly gist: "Gists";
+            readonly heading: "Login with GitHub";
+            readonly loginAs: "Logged in as {{name}}";
+            readonly loginBtn: "Login";
+            readonly logout: "Log out";
+            readonly privateRepo: "Private Repos";
+            readonly publicRepo: "Repos";
+        };
+        readonly menu: {
+            readonly about: "About";
+            readonly assets: "Assets …";
+            readonly autoSave: "Auto Save";
+            readonly autoUpdate: "Auto Update";
+            readonly backup: "Backup / Restore …";
+            readonly broadcast: "Broadcast …";
+            readonly customSettings: "Custom Settings …";
+            readonly delay: {
+                readonly heading: "Delay: <1>1.5</1>s";
+                readonly hint: "Delay before auto-update";
+            };
+            readonly deploy: "Deploy …";
+            readonly editorSettings: "Editor Settings …";
+            readonly embed: "Embed …";
+            readonly export: {
+                readonly codepen: "Edit in CodePen";
+                readonly gist: "Export to GitHub Gist";
+                readonly heading: "Export";
+                readonly jsfiddle: "Edit in JSFiddle";
+                readonly json: "Export Project (JSON)";
+                readonly result: "Export Result (HTML)";
+                readonly src: "Export Source (ZIP)";
+            };
+            readonly formatOnsave: "Format On-save";
+            readonly import: "Import …";
+            readonly layout: "Vertical Layout";
+            readonly login: "Login …";
+            readonly logout: "Log out";
+            readonly new: "New …";
+            readonly open: "Open …";
+            readonly project: "Project Info …";
+            readonly recoverUnsaved: "Recover Unsaved";
+            readonly resources: "External Resources …";
+            readonly save: "Save";
+            readonly saveAs: {
+                readonly fork: "Fork (New Project)";
+                readonly heading: "Save as";
+                readonly template: "Template";
+            };
+            readonly share: "Share …";
+            readonly showSpacing: {
+                readonly heading: "Show Spacing";
+                readonly hint: "Press Alt/Option and move your cursor over result page";
+            };
+            readonly snippets: "Code Snippets …";
+            readonly sync: "Sync (beta) … <1> ⏳</1>";
+            readonly theme: "Dark Theme";
+            readonly welcome: {
+                readonly heading: "Welcome …";
+                readonly hint: "Show Welcome screen on startup";
+            };
+        };
+        readonly open: {
+            readonly defaultTemplate: "Default template ";
+            readonly delete: {
+                readonly all: "Delete {{projects}} projects?";
+                readonly deleting: "Deleting projects...";
+                readonly one: "Delete project: {{project}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly exportAll: "Export All";
+            readonly filter: {
+                readonly language: "filter by language";
+                readonly tag: "filter by tag";
+            };
+            readonly heading: "Saved Projects";
+            readonly import: "Import";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noData: {
+                readonly desc: "You can save a project from (settings&nbsp;menu&nbsp;&gt;&nbsp;Save) or by the keyboard shortcut (Ctrl/Cmd&nbsp;+&nbsp;S).";
+                readonly heading: "You have no saved projects.";
+            };
+            readonly noMatch: "No projects match these filters.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly filterByTags: "Filter by tags";
+                readonly search: "Search";
+            };
+            readonly removeDefault: "(unset)";
+            readonly reset: "Reset";
+            readonly setAsDefault: "Set as default";
+            readonly sort: {
+                readonly heading: "Sort By:";
+                readonly lastModified: "Last Modified";
+                readonly title: "Title";
+            };
+        };
+        readonly project: {
+            readonly desc: "Description";
+            readonly head: "Add to &lt;head&gt;";
+            readonly heading: "Project Info";
+            readonly htmlAttr: "Attributes for &lt;html&gt;";
+            readonly tags: "Tags";
+            readonly title: "Project Title";
+        };
+        readonly recoverPrompt: {
+            readonly desc: "Your last project has unsaved changes!";
+            readonly heading: "Recover unsaved project?";
+            readonly meta: "Title: <1></1> <2></2> Last modified: <3></3>";
+            readonly notShowAgain: "Do not show this again.";
+            readonly prompt: {
+                readonly discard: "Discard unsaved project";
+                readonly heading: "<1></1>Do you want to recover it now?";
+                readonly recover: "Recover project to editor";
+                readonly save: "Save to device and continue";
+            };
+        };
+        readonly resources: {
+            readonly browseOnJsDelivr: "Browse package files on jsDelivr";
+            readonly cssPresets: {
+                readonly heading: "CSS Presets";
+                readonly none: "None";
+                readonly normalizeCss: "Normalize.css";
+                readonly resetCss: "Reset CSS";
+            };
+            readonly error: {
+                readonly failedToLoadResults: "Failed to load results!";
+                readonly noResultsFound: "No results found for: ";
+            };
+            readonly fonts: {
+                readonly add: "Add";
+                readonly heading: "Fonts <1>(powered by Google Fonts)</1>";
+                readonly select: "Select font ...";
+            };
+            readonly heading: "External Resources";
+            readonly scripts: "External Scripts";
+            readonly search: {
+                readonly heading: "Search Packages <1>(powered by jsDelivr)</1>";
+                readonly placeholder: "e.g. jquery, lodash@4, bootstrap@5.2.3, ...";
+            };
+            readonly stylesheets: "External Stylesheets";
+            readonly urlDesc: "Add stylesheet/script URLs. Each URL should be in a separate line.";
+        };
+        readonly savePrompt: {
+            readonly heading: "Unsaved changes";
+            readonly prompt: {
+                readonly cancel: "Cancel";
+                readonly discard: "Do not save";
+                readonly heading: "The changes you made may not be saved. <1></1> Do you want to save now?";
+                readonly save: "Save";
+            };
+        };
+        readonly share: {
+            readonly characters: "{{urlLength}} characters";
+            readonly copy: {
+                readonly clickToCopy: "Click to copy";
+                readonly copied: "URL copied to clipboard";
+            };
+            readonly encodedURL: "Get encoded URL";
+            readonly error: {
+                readonly failedToCopy: "Copy to clipboard failed!";
+                readonly failedToGenerateURL: "Failed to generate short URL!";
+            };
+            readonly expireInOneYear: "Expires in 1 year";
+            readonly generateURL: "Generating URL …";
+            readonly heading: "Share";
+            readonly permanentURL: "Permanent URL";
+            readonly qrcode: {
+                readonly clickToDownload: "Click to download";
+                readonly generating: "Generating...";
+            };
+            readonly services: {
+                readonly copyUrl: "Copy URL";
+                readonly devTo: "Dev.to";
+                readonly email: "Email";
+                readonly facebook: "Facebook";
+                readonly hackerNews: "Hacker News";
+                readonly linkedIn: "LinkedIn";
+                readonly pinterest: "Pinterest";
+                readonly pocket: "Pocket";
+                readonly qrCode: "QR code";
+                readonly reddit: "Reddit";
+                readonly share: "Share via …";
+                readonly telegram: "Telegram";
+                readonly tumblr: "Tumblr";
+                readonly twitter: "𝕏 / Twitter";
+                readonly whatsApp: "WhatsApp";
+            };
+            readonly shortURL: "Get short URL";
+        };
+        readonly snippets: {
+            readonly action: {
+                readonly copy: "Copy";
+                readonly delete: "Delete";
+                readonly edit: "Edit";
+            };
+            readonly add: {
+                readonly code: "Code";
+                readonly desc: "Description";
+                readonly heading: "Add Snippet";
+                readonly language: "Language";
+                readonly save: "Save";
+                readonly snippets: "Snippets";
+                readonly title: "Title";
+            };
+            readonly copy: {
+                readonly clickToCopySnippet: "Click to copy snippet";
+                readonly copied: "Snippet is copied to clipboard.";
+            };
+            readonly delete: {
+                readonly all: "Delete {{snippets}} snippets?";
+                readonly one: "Delete snippet: {{snippet}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly error: {
+                readonly failedToCopy: "Failed to copy URL.";
+                readonly noTitle: "Please add snippet title.";
+            };
+            readonly filter: {
+                readonly language: "filter by language";
+            };
+            readonly heading: "Code Snippets";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noMatch: "No snippets match these filters.";
+            readonly noSavedSnippets: "You have no saved snippets.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly search: "Search";
+            };
+            readonly reset: "Reset";
+            readonly save: {
+                readonly success: "Snippet locally saved to device!";
+            };
+            readonly sort: {
+                readonly date: "Date";
+                readonly heading: "Sort By:";
+                readonly title: "Title";
+            };
+            readonly text: "Plain Text";
+        };
+        readonly splash: {
+            readonly loading: "Loading LiveCodes…";
+        };
+        readonly sync: {
+            readonly autoSync: "Auto sync";
+            readonly create: {
+                readonly desc: "A new <1>private</1> repo will be created. Your LiveCodes local data will be synchronized with <2>main</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly error: {
+                readonly generic: "Sync failed!";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "Your LiveCodes local data will be synchronized with <1>main</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly heading: "Sync to GitHub Repo";
+            readonly searchRepos: "Search your repos...";
+            readonly success: "Sync complete!";
+            readonly syncBtn: "Sync";
+            readonly syncInProgress: "Sync in progress...";
+            readonly syncStarted: "Sync started...";
+        };
+        readonly templates: {
+            readonly heading: "New Project";
+            readonly noUserTemplates: {
+                readonly desc: "You can save a project as a template from <1></1>(App&nbsp;menu&nbsp;&gt;&nbsp;Save&nbsp;as&nbsp;&gt; Template).";
+                readonly heading: "You have no saved templates.";
+            };
+            readonly starter: {
+                readonly angular: "Angular Starter";
+                readonly assemblyscript: "AssemblyScript Starter";
+                readonly astro: "Astro Starter";
+                readonly backbone: "Backbone Starter";
+                readonly blank: "Blank Project";
+                readonly blockly: "Blockly Starter";
+                readonly bootstrap: "Bootstrap Starter";
+                readonly civet: "Civet Starter";
+                readonly clio: "Clio Starter";
+                readonly clojurescript: "ClojureScript Starter";
+                readonly coffeescript: "CoffeeScript Starter";
+                readonly commonlisp: "Common Lisp Starter";
+                readonly cpp: "C++ Starter";
+                readonly diagrams: "Diagrams Starter";
+                readonly fennel: "Fennel Starter";
+                readonly gleam: "Gleam Starter";
+                readonly go: "Go Starter";
+                readonly heading: "Starter Templates";
+                readonly imba: "Imba Starter";
+                readonly javascript: "JavaScript Starter";
+                readonly jest: "Jest Starter";
+                readonly 'jest-react': "Jest/React Starter";
+                readonly jquery: "jQuery Starter";
+                readonly julia: "Julia Starter";
+                readonly knockout: "Knockout Starter";
+                readonly lit: "Lit Starter";
+                readonly livescript: "LiveScript Starter";
+                readonly loading: "Loading starter templates...";
+                readonly lua: "Lua Starter";
+                readonly 'lua-wasm': "Lua (Wasm) Starter";
+                readonly malina: "Malina.js Starter";
+                readonly markdown: "Markdown Starter";
+                readonly mdx: "MDX Starter";
+                readonly ocaml: "Ocaml Starter";
+                readonly perl: "Perl Starter";
+                readonly php: "PHP Starter";
+                readonly 'php-wasm': "PHP (Wasm) Starter";
+                readonly postgresql: "PostgreSQL Starter";
+                readonly preact: "Preact Starter";
+                readonly prolog: "Prolog Starter";
+                readonly python: "Python Starter";
+                readonly r: "R Starter";
+                readonly react: "React Starter";
+                readonly 'react-native': "React Native Starter";
+                readonly reason: "Reason Starter";
+                readonly rescript: "ReScript Starter";
+                readonly riot: "Riot.js Starter";
+                readonly ruby: "Ruby Starter";
+                readonly 'ruby-wasm': "Ruby (Wasm) Starter";
+                readonly scheme: "Scheme Starter";
+                readonly solid: "Solid Starter";
+                readonly sql: "SQL Starter";
+                readonly stencil: "Stencil Starter";
+                readonly svelte: "Svelte Starter";
+                readonly tailwindcss: "Tailwind CSS Starter";
+                readonly tcl: "Tcl Starter";
+                readonly teal: "Teal Starter";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 SFC Starter";
+                readonly vue2: "Vue 2 Starter";
+                readonly wat: "WebAssembly Text Starter";
+            };
+            readonly user: {
+                readonly heading: "My Templates";
+                readonly loading: "Loading user templates...";
+            };
+        };
+        readonly testEditor: {
+            readonly heading: "Edit Tests";
+            readonly load: "Load";
+            readonly tests: "Tests";
+        };
+        readonly toolspane: {
+            readonly close: "Close";
+            readonly compiled: {
+                readonly title: "Compiled";
+            };
+            readonly console: {
+                readonly clear: "Clear console";
+                readonly title: "Console";
+            };
+            readonly test: {
+                readonly edit: "Edit";
+                readonly error: "<1><2>Test error!</2></1>";
+                readonly loading: "<1>Loading tests...</1>";
+                readonly noTest: "<1>This project has no tests!</1>";
+                readonly reset: "Reset";
+                readonly run: {
+                    readonly desc: "Ctrl/Cmd + Alt + T";
+                    readonly heading: "Run";
+                };
+                readonly summary: {
+                    readonly desc: "Tests: {{failed}}\n       {{passed}}\n       {{skipped}}\n       {{total}}<1></1>\nTime: {{duration}}s";
+                    readonly failed: "{{failedNum}} failed";
+                    readonly passed: "{{passedNum}} passed";
+                    readonly skipped: "{{skippedNum}} skipped";
+                    readonly total: "{{totalNum}} total";
+                };
+                readonly title: "Tests";
+                readonly watch: {
+                    readonly desc: "Run tests when code changes";
+                    readonly heading: "Watch";
+                };
+            };
+        };
+        readonly welcome: {
+            readonly about: {
+                readonly documentation: "Documentations";
+                readonly heading: "About LiveCodes";
+            };
+            readonly heading: "Welcome";
+            readonly recent: {
+                readonly heading: "Recent";
+            };
+            readonly recover: {
+                readonly cancel: "Cancel";
+                readonly heading: "Recover";
+                readonly lastModified: "Last modified: <1></1>";
+                readonly recover: "Recover";
+                readonly save: "Save";
+                readonly unsavedChanges: "Your last project had unsaved changes:";
+            };
+            readonly showOnStartup: "Show on startup";
+            readonly start: {
+                readonly heading: "Start";
+                readonly import: "Import...";
+                readonly loadDefaultTemplate: "Load default template";
+                readonly new: "New...";
+                readonly noDefaultTemplate: "No default template";
+                readonly open: "Open...";
+            };
+            readonly templates: {
+                readonly heading: "Starter Templates";
+            };
+        };
+    };
+    export default translation;
+}
+declare module "livecodes/i18n/locales/ja/language-info" {
+    const languageInfo: {
+        readonly artTemplate: {
+            readonly desc: "High performance JavaScript templating engine.";
+            readonly link: "<1> <2>art-template official website</2> </1> <3> <4>art-template documentation</4> </3>";
+            readonly name: "art-template";
+        };
+        readonly asciidoc: {
+            readonly desc: "AsciiDoc compiled to HTML using Asciidoctor.";
+            readonly link: "<1> <2>AsciiDoc official website</2> </1> <3> <4>Asciidoctor official website</4> </3> <5> <6>Asciidoctor documentation</6> </5> <7> <8>Learn X in Y minutes, where X=asciidoc</8> </7>";
+            readonly name: "AsciiDoc";
+        };
+        readonly assemblyscript: {
+            readonly desc: "A TypeScript-like language for WebAssembly.";
+            readonly link: "<1> <2>AssemblyScript official website</2> </1> <3> <4>AssemblyScript documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "AssemblyScript";
+        };
+        readonly astro: {
+            readonly desc: "Build faster websites with less client-side Javascript. (Still in Beta)";
+            readonly link: "<1> <2>Astro official website</2> </1> <3> <4>Astro documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Astro";
+        };
+        readonly babel: {
+            readonly desc: "The JavaScript compiler";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Babel documentation</4> </3>";
+            readonly name: "Babel";
+        };
+        readonly bbcode: {
+            readonly desc: "BBCode (\"Bulletin Board Code\") is a lightweight markup language used to format messages in many Internet forum software.";
+            readonly link: "<1><2>bbcode.org</2></1> <3> <4>BBCode guide</4> </3> <5> <6>BBCode on Wikipedia</6> </5>";
+            readonly name: "BBCode";
+        };
+        readonly blockly: {
+            readonly desc: "A JavaScript library for building visual programming editors.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>Guides</4> </3> <5> <6>Reference</6> </5> <7> <8>Samples</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Blockly";
+        };
+        readonly civet: {
+            readonly desc: "Civet is a programming language that compiles to TypeScript or JavaScript, so you can use existing tooling but enable concise and powerful syntax.";
+            readonly link: "<1> <2>Civet official website</2> </1> <3> <4>Civet cheatsheet</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Civet";
+        };
+        readonly clio: {
+            readonly desc: "Clio is a fast, distributed, functional programming language that compiles to JavaScript.";
+            readonly link: "<1> <2>Clio official website</2> </1> <3> <4>Clio documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Clio";
+        };
+        readonly clojurescript: {
+            readonly desc: "ClojureScript is a compiler for <1>Clojure</1> that targets JavaScript. <2></2>In LiveCodes, it runs in the browser using <3>Cherry</3>.";
+            readonly link: "<1> <2>ClojureScript official website</2> </1> <3> <4>Clojure official website</4> </3> <5> <6>Cherry repo</6> </5> <7> <8>Learn X in Y minutes, where X=clojure</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "ClojureScript (CLJS)";
+        };
+        readonly coffeescript: {
+            readonly desc: "Unfancy JavaScript.";
+            readonly link: "<1> <2>CoffeeScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=coffeescript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "CoffeeScript";
+        };
+        readonly commonlisp: {
+            readonly desc: "A Common Lisp implementation on Javascript using JSCL (a Lisp-to-Javascript compiler bootstrapped from Common Lisp).";
+            readonly link: "<1> <2>Common-Lisp.net</2> </1> <3> <4>JSCL Project</4> </3> <5> <6>Common Lisp Resources</6> </5> <7> <8>Learn X in Y minutes, where X=Common Lisp</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Common Lisp";
+        };
+        readonly cpp: {
+            readonly desc1: "C++ support using JSCPP (a simple C++ interpreter written in JavaScript).";
+            readonly desc2: "It is not a complete implementation of C++. Please refer to <1>JSCPP documentation</1> for details.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>JSCPP</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C++";
+        };
+        readonly cppWasm: {
+            readonly desc: "Clang C/C++ compiler running on WebAssembly, using <1>wasm-clang</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>Clang official website</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C/C++ (Wasm)";
+        };
+        readonly diagrams: {
+            readonly desc1: "(Experimental)";
+            readonly desc2: "Diagrams-as-code. Supports:";
+            readonly desc3: "<1> <2>Cytoscape</2> </1> <3> <4>ELK</4> (using <5>elkjs</5>) </3> <6> <7>Gnuplot</7> (using <8>gnuplot-JS</8>) </6> <9> <10>Graphviz</10> (using <11>@hpcc-js/wasm</11>) </9> <12> <13>Mermaid</13> </12> <14> <15>Nomnoml</15> </14> <16> <17>Pintora</17> </16> <18> <19>Plotly</19> </18> <20> <21>Svgbob</21> </20> <22> <23>Vega</23> </22> <24> <25>VegaLite</25> </24> <26> <27>WaveDrom</27> </26>";
+            readonly link: "<1> <2>Load starter template</2> </1> <3> <4>LiveCodes Documentation</4> </3>";
+            readonly name: "Diagrams";
+        };
+        readonly dot: {
+            readonly desc: "The fastest + concise javascript template engine for Node.js and browsers.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "doT.js";
+        };
+        readonly ejs: {
+            readonly desc: "Embedded JavaScript templating.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "EJS";
+        };
+        readonly eta: {
+            readonly desc: "Embedded JS template engine for Node, Deno, and the browser. Lighweight, fast, and pluggable. Written in TypeScript.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Eta";
+        };
+        readonly fennel: {
+            readonly desc: "Fennel is a programming language that brings together the speed, simplicity, and reach of Lua with the flexibility of a lisp syntax and macro system.";
+            readonly link: "<1> <2>Fennel official website</2> </1> <3> <4>Getting Started with Fennel</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Fennel";
+        };
+        readonly flow: {
+            readonly desc: "Flow is a static type checker for JavaScript.";
+            readonly link: "<1> <2>Flow official website</2> </1> <3> <4>Flow documentation</4> </3>";
+            readonly name: "Flow";
+        };
+        readonly gleam: {
+            readonly desc1: "Gleam is a friendly language for building type-safe systems that scale!";
+            readonly desc2: "Gleam is a statically-typed functional programming language, which compiles to Erlang or JavaScript.";
+            readonly link: "<1><2>Gleam website</2></1> <3> <4>Gleam documentation</4> </3> <5> <6>Gleam language tour</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Gleam";
+        };
+        readonly go: {
+            readonly desc1: "Go (Golang) is an open source programming language that makes it easy to build simple, reliable, and efficient software.";
+            readonly desc2: "Here, it is compiled to JavaScript using GopherJS.";
+            readonly link: "<1><2>Go website</2></1> <3><4>Go documentation</4></3> <5> <6>GopherJS repo</6> </5> <7> <8>Learn X in Y minutes, where X=Go</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Go";
+        };
+        readonly haml: {
+            readonly desc: "Haml compiler for client side javascript view templates using clientside-haml-js.";
+            readonly link: "<1><2>Haml official website</2></1> <3> <4>Haml documentation</4> </3> <5> <6>clientside-haml-js GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=haml</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Haml";
+        };
+        readonly handlebars: {
+            readonly desc: "Minimal templating on steroids.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Handlebars";
+        };
+        readonly imba: {
+            readonly desc: "The friendly full-stack language.";
+            readonly link: "<1><2>Official website</2></1>";
+            readonly name: "Imba";
+        };
+        readonly jsx: {
+            readonly desc: "JSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler.  By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "JSX";
+        };
+        readonly julia: {
+            readonly desc1: "(Julia language support in LiveCodes is still experimental)";
+            readonly desc2: "Julia compiler and Julia Base running on WASM, using <1>julia-wasm</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Julia official website</2> </1> <3> <4>Julia documentation</4> </3> <5> <6>Learn X in Y minutes, where X=Julia</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Julia";
+        };
+        readonly less: {
+            readonly desc: "It's CSS, with just a little more.";
+            readonly link: "<1><2>Less official website</2></1> <3> <4>Learn X in Y minutes, where X=less</4> </3>";
+            readonly name: "Less";
+        };
+        readonly liquid: {
+            readonly desc: "A simple, expressive and safe template engine.";
+            readonly link: "<1> <2>LiquidJS official website</2> </1> <3> <4>LiquidJS documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "LiquidJS";
+        };
+        readonly livescript: {
+            readonly desc: "A language which compiles to JavaScript.";
+            readonly link: "<1> <2>LiveScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=LiveScript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "LiveScript";
+        };
+        readonly lua: {
+            readonly desc: "Lua running in the browser using fengari-web.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Fengari official website</6> </5> <7> <8>fengari-web GitHub repo</8> </7> <9> <10>Learn X in Y minutes, where X=Lua</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "Lua";
+        };
+        readonly luaWasm: {
+            readonly desc: "Lua running in the browser using Wasmoon, a real lua 5.4 VM with JS bindings made with WebAssembly.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Wasmoon GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=Lua</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Lua (Wasm)";
+        };
+        readonly malina: {
+            readonly desc: "Frontend compiler, inspired by Svelte.";
+            readonly link: "<1> <2>Malina.js repo</2> </1> <3> <4>Malina.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Malina.js";
+        };
+        readonly markdown: {
+            readonly desc: "Markdown compiled to HTML using Marked.";
+            readonly link: "<1> <2>Markdown official website</2> </1> <3> <4>Marked documentation</4> </3> <5> <6>Learn X in Y minutes, where X=markdown</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Markdown";
+        };
+        readonly mdx: {
+            readonly desc: "Markdown for the component era. <1></1>MDX lets you seamlessly write JSX in your Markdown documents.";
+            readonly link: "<1><2>MDX documentation</2></1> <3><4>Load starter template</4></3>";
+            readonly name: "MDX";
+        };
+        readonly mjml: {
+            readonly desc: "MJML is a markup language designed to reduce the pain of coding a responsive email.";
+            readonly link: "<1><2>MJML official website</2></1> <3> <4>MJML documentation</4> </3> <5> <6>MJML official templates</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "MJML";
+        };
+        readonly mustache: {
+            readonly desc: "Logic-less templates.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>mustache(5) manual</4> </3> <5> <6>JavaScript implementation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "Mustache";
+        };
+        readonly nunjucks: {
+            readonly desc: "A rich and powerful templating language for JavaScript. Nunjucks is essentially a port of <1>jinja2</1>.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Nunjucks";
+        };
+        readonly ocaml: {
+            readonly desc1: "OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles.";
+            readonly desc2: "ReScript compiler is used here to compile OCaml to JavaScript.";
+            readonly link: "<1><2>OCaml website</2></1> <3> <4>OCaml documentation</4> </3> <5> <6>ReScript website</6> </5> <7> <8>Learn X in Y minutes, where X=OCaml</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "OCaml";
+        };
+        readonly perl: {
+            readonly desc: "Perl running in the browser using Perlito.";
+            readonly link: "<1> <2>Perl official website</2> </1> <3> <4>Perl documentation</4> </3> <5> <6>Perlito5 Readme</6> </5> <7> <8>Learn X in Y minutes, where X=perl</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Perl";
+        };
+        readonly php: {
+            readonly desc: "PHP running in the browser using Uniter.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>Uniter GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11><12>Load starter template</12></11>";
+            readonly name: "PHP";
+        };
+        readonly phpWasm: {
+            readonly desc: "PHP in Browser, powered by WebAssembly, using php-wasm.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>php-wasm GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "PHP (Wasm)";
+        };
+        readonly postgresql: {
+            readonly desc: "PostgreSQL packaged as WASM using PGlite";
+            readonly link: "<1> <2>PostgreSQL official website</2> </1> <3> <4>PostgreSQL documentation</4> </3> <5> <6>PGlite GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "PostgreSQL";
+        };
+        readonly prolog: {
+            readonly desc: "An open source Prolog interpreter in JavaScript.";
+            readonly link: "<1> <2>Tau Prolog official website</2> </1> <3> <4>Tau Prolog documentation</4> </3> <5> <6>SWI-Prolog</6> </5> <7> <8>Learn X in Y minutes, where X=Prolog</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Tau Prolog";
+        };
+        readonly pug: {
+            readonly desc: "Robust, elegant, feature rich template engine.";
+            readonly link: "<1> <2>Pug documentation</2> </1> <3> <4>Learn X in Y minutes, where X=Pug</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Pug";
+        };
+        readonly python: {
+            readonly desc: "Python running in the browser using Brython.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5> <6>Brython documentation</6> </5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python";
+        };
+        readonly pythonWasm: {
+            readonly desc1: "Python with the scientific stack, compiled to WebAssembly using Pyodide.";
+            readonly desc2: "Pyodide allows using Python scientific stack including NumPy, Pandas, Matplotlib, SciPy, scikit-learn and many more. In addition it’s possible to install pure Python wheels from PyPi.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5><6>Pyodide documentation</6></5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python (Wasm)";
+        };
+        readonly r: {
+            readonly desc: "R running in the browser using WebR.";
+            readonly link: "<1> <2>R project official website</2> </1> <3> <4>The R Manuals</4> </3> <5> <6>R for Data Science (2e)</6> </5> <7> <8>WebR documentation</8> </7> <9> <10>Learn X in Y minutes, where X=R</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "R";
+        };
+        readonly reactNative: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "React Native for Web";
+        };
+        readonly reactNativeTsx: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>TypeScript website</10> </9> <11> <12>TypeScript documentation</12> </11> <13> <14>LiveCodes Documentations</14> </13> <15> <16>Load starter template (JSX)</16> </15>";
+            readonly name: "React Native for Web (with TypeScript)";
+        };
+        readonly reason: {
+            readonly desc1: "Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.";
+            readonly desc2: "ReScript compiler is used here to compile Reason to JavaScript.";
+            readonly link: "<1><2>Reason website</2></1> <3> <4>Reason documentation</4> </3> <5> <6>ReasonReact</6> </5> <7> <8>ReScript website</8> </7> <9> <10>Learn X in Y minutes, where X=reason</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Reason";
+        };
+        readonly rescript: {
+            readonly desc: "ReScript is a robustly typed language that compiles to efficient and human-readable JavaScript.";
+            readonly link: "<1> <2>ReScript website</2> </1> <3> <4>ReScript / React</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "ReScript";
+        };
+        readonly richtext: {
+            readonly desc1: "Using Quill:";
+            readonly desc2: "Your powerful rich text editor.";
+            readonly link: "<1> <2>Quill official website</2> </1>";
+            readonly name: "Rich Text Editor";
+        };
+        readonly riot: {
+            readonly desc: "Simple and elegant component-based UI library.";
+            readonly link: "<1> <2>Riot.js official website</2> </1> <3> <4>Riot.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Riot.js";
+        };
+        readonly ruby: {
+            readonly desc: "Ruby running in the browser using Opal.";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5><6>Opal official website</6></5> <7> <8>Opal standard library CDN</8> </7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby";
+        };
+        readonly rubyWasm: {
+            readonly desc: "Ruby running in the browser using ruby-wasm (a collection of WebAssembly ports of the CRuby).";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5> <6>ruby.wasm website</6> </5> <7><8>CRuby</8></7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby (WASM)";
+        };
+        readonly sass: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>Sass (the indented) syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "Sass";
+        };
+        readonly scheme: {
+            readonly desc: "Scheme running in the browser using biwascheme.";
+            readonly link: "<1> <2>The Scheme Programming Language</2> </1> <3> <4>BiwaScheme official website</4> </3> <5> <6>BiwaScheme reference</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Scheme";
+        };
+        readonly scss: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>SCSS syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "SCSS";
+        };
+        readonly solid: {
+            readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+            readonly link: "<1><2>Official website</2></1> <3><4>Documentation</4></3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template (TSX)</8> </7>";
+            readonly name: "Solid";
+            readonly tsx: {
+                readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+                readonly link: "<1><2>Official website</2></1> <3> <4>Solid documentation</4> </3> <5> <6>TypeScript website</6> </5> <7> <8>TypeScript documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+                readonly name: "Solid (with TypeScript)";
+            };
+        };
+        readonly sql: {
+            readonly desc: "SQLite compiled to JavaScript using SQL.js";
+            readonly link: "<1> <2>SQLite official website</2> </1> <3> <4>SQLite syntax documentation</4> </3> <5> <6>SQL.js official website</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "SQLite";
+        };
+        readonly stencil: {
+            readonly desc: "A Compiler for Web Components and High Performance Web Apps.";
+            readonly link: "<1> <2>Stencil official website</2> </1> <3> <4>Stencil documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Stencil";
+        };
+        readonly styleProcessors: {
+            readonly link: "<1> <2>Tailwind CSS</2> </1> <3> <4>Windi CSS</4> </3> <5> <6>UnoCSS</6> </5> <7> <8>Lightning CSS</8> </7> <9> <10>PostCSS</10> Plugins: <11> <12> <13>Autoprefixer</13> </12> <14> <15>postcss-preset-env</15> </14> <16> <17>postcss-import-url</17> </16> <18> <19>postcss-modules</19> </18> </11> </9>";
+            readonly name: "CSS Frameworks and Processors";
+        };
+        readonly stylis: {
+            readonly desc: "Light-weight css preprocessor.";
+            readonly link: "<1> <2>Stylis official website</2> </1>";
+            readonly name: "Stylis";
+        };
+        readonly stylus: {
+            readonly desc: "Expressive, Dynamic, Robust CSS.";
+            readonly link: "<1> <2>Stylus official website</2> </1> <3> <4>Learn X in Y minutes, where X=stylus</4> </3>";
+            readonly name: "Stylus";
+        };
+        readonly sucrase: {
+            readonly desc: "Super-fast alternative to Babel for when you can target modern JS runtimes.";
+            readonly link: "<1> <2>Sucrase official website</2> </1> <3> <4>Sucrase GitHub Repo</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Sucrase";
+        };
+        readonly svelte: {
+            readonly desc: "Cybernetically enhanced web apps.";
+            readonly link: "<1> <2>Svelte official website</2> </1> <3> <4>Svelte documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Svelte";
+        };
+        readonly tcl: {
+            readonly desc: "Tcl running in the browser, using <1>wacl</1>.";
+            readonly link: "<1> <2>Tcl official website</2> </1> <3> <4>wacl repo</4> </3> <5> <6>Learn X in Y minutes, where X=Tcl</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Tcl (Tool Command Language)";
+        };
+        readonly teal: {
+            readonly desc: "A typed dialect of Lua.";
+            readonly link: "<1> <2>Teal GitHub repo</2> </1> <3> <4>Teal docs</4> </3> <5> <6>Teal tutorial</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Teal";
+        };
+        readonly tsx: {
+            readonly desc: "TypeScript in JSX. TSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler. By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>Typescript documentation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "TSX";
+        };
+        readonly twig: {
+            readonly desc: "A JavaScript implementation of the <1>Twig</1> PHP templating language by <2>Twig.js</2> .";
+            readonly link: "<1> <2>Twig official website</2> </1> <3> <4>Twig Documentation</4> </3> <5> <6>Twig.js Repo</6> </5> <7> <8>Twig.js Documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Twig";
+        };
+        readonly typescript: {
+            readonly desc: "A Typed Superset of JavaScript.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>TypeScript documentation</4> </3> <5> <6>Learn X in Y minutes, where X=TypeScript</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "TypeScript";
+        };
+        readonly vue: {
+            readonly link: "<1> <2>Vue.js v3 official website</2> </1> <3> <4>Vue3 documentation</4> </3> <5> <6>Vue3 single file components</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Vue3 Single File Components";
+        };
+        readonly vue2: {
+            readonly desc: "Loaded using vue3-sfc-loader.";
+            readonly link: "<1><2>Vue.js official website</2></1> <3> <4>Vue2 documentation</4> </3> <5> <6>Vue2 single file components</6> </5> <7> <8>vue3-sfc-loader GitHub repo</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Vue2 Single File Components";
+        };
+        readonly wat: {
+            readonly desc1: "Low-level textual representation of the WebAssembly (wasm) binary format.";
+            readonly desc2: "It is converted to wasm using wabt.js.";
+            readonly link: "<1><2>WebAssembly.org</2></1> <3> <4>WebAssembly Text Specs</4> </3> <5> <6>WebAssembly on MDN</6> </5> <7> <8>Understanding WebAssembly text format</8> </7> <9> <10>wabt.js documentation</10> </9> <11> <12>Learn X in Y minutes, where X=WebAssembly</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "WebAssembly Text Format";
+        };
+    };
+    export default languageInfo;
+}
+declare module "livecodes/i18n/locales/ja/translation" {
+    const translation: {
+        readonly about: {
+            readonly documentations: {
+                readonly aboutUs: "About us";
+                readonly contact: "Contact";
+                readonly heading: "Documentations";
+                readonly home: "Home";
+                readonly license: "License";
+            };
+            readonly heading: "About LiveCodes";
+            readonly livecodes: {
+                readonly para1: "<1><2>LiveCodes</2></1> is an <3>open-source</3>, <4>feature-rich</4>, <5>client-side</5> code playground. Currently, <6>80+ languages/<7></7>frameworks</6> are supported. It can be used as a standalone app or can be <8>embedded</8> in any web page. There are many ways to <9>prefill playgrounds</9> with code.";
+                readonly para2: "A wide range of <1>configuration options</1> makes it very flexible. A powerful <2>SDK</2> (for <3>JS/TS</3>, <4>React</4>, <5>Vue</5> and <6>Svelte</6>) facilitates <7>embedding</7> and <8>communicating</8> with playgrounds. <9>Comprehensive documentations</9> are available with code samples, live demos and screenshots.";
+            };
+            readonly version: {
+                readonly app: "App version: {{APP_VERSION}}";
+                readonly appPermanentUrl: "App Permanent URL";
+                readonly commit: "Git commit: {{COMMIT_SHA}}";
+                readonly heading: "Version";
+                readonly sdk: "SDK version: {{SDK_VERSION}}";
+                readonly sdkPermanentUrl: "SDK Permanent URL";
+            };
+        };
+        readonly app: {
+            readonly copy: {
+                readonly hint: "Copy (Ctrl/Cmd + A, Ctrl/Cmd + C)";
+            };
+            readonly copyAsUrl: {
+                readonly hint: "Copy code as data URL";
+            };
+            readonly customSettings: {
+                readonly hint: "Custom Settings";
+            };
+            readonly editorMode: {
+                readonly hint: "Editor Mode";
+            };
+            readonly editorSettings: {
+                readonly hint: "Editor Settings";
+            };
+            readonly externalResources: {
+                readonly hint: "External Resources";
+            };
+            readonly focus: {
+                readonly hint: "Toggle Focus mode";
+            };
+            readonly format: {
+                readonly hint: "Format (Alt + Shift + F)";
+            };
+            readonly fullscreen: {
+                readonly hint: "Full Screen";
+            };
+            readonly logo: {
+                readonly title: "LiveCodes: Code playground that runs in the browser!";
+            };
+            readonly projectInfo: {
+                readonly hint: "Project Info";
+            };
+            readonly redo: {
+                readonly hint: "Redo (Ctrl/Cmd + Shift + Z)";
+            };
+            readonly result: {
+                readonly hint: "Toggle Result";
+            };
+            readonly run: {
+                readonly hint: "Run (Shift + Enter)";
+            };
+            readonly share: {
+                readonly hint: "Share";
+            };
+            readonly undo: {
+                readonly hint: "Undo (Ctrl/Cmd + Z)";
+            };
+            readonly untitledProject: "Untitled Project";
+        };
+        readonly assets: {
+            readonly add: {
+                readonly dataURL: {
+                    readonly desc: "Add asset as a base64-encoded <1>data url</1>.";
+                    readonly heading: "Data URL";
+                    readonly label: "Add file";
+                };
+                readonly githubPages: {
+                    readonly desc: "Deploy asset to GitHub Pages. The file is pushed to <1>gh-pages</1> branch of the repo <2>livecodes-assets</2> on your GitHub account. If the repo does not already exist, a public repo will be created.";
+                    readonly heading: "GitHub Pages";
+                    readonly label: "Upload file";
+                };
+                readonly heading: "Add Asset";
+            };
+            readonly delete: {
+                readonly all: "Delete {{assets}} assets?";
+                readonly one: "Delete asset: {{asset}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly generic: {
+                readonly clickToCopyURL: "Click to copy URL";
+            };
+            readonly heading: "Assets";
+            readonly link: {
+                readonly date: "Date: {{modified}}";
+                readonly type: "Type: {{type}}";
+                readonly url: "URL: {{url}}";
+            };
+            readonly loadFile: {
+                readonly error: {
+                    readonly failedToUpload: "Error: Failed to upload file";
+                    readonly unauthenticated: "Error: Unauthenticated user";
+                };
+                readonly upload: "Upload file";
+                readonly uploading: "Uploading...";
+            };
+            readonly noMatch: "No assets match these filters.";
+            readonly noSavedAssets: "You have no saved assets.";
+            readonly processAsset: {
+                readonly addFile: "Added file: ";
+                readonly deployNotice: "The asset should be available on this URL soon (~1 min).";
+                readonly success: "File added to assets!";
+                readonly urlLabel: "URL: ";
+            };
+            readonly resetFilters: "Reset";
+            readonly search: "Search";
+            readonly sort: {
+                readonly date: "Date";
+                readonly fileName: "File Name";
+                readonly heading: "Sort By:";
+            };
+            readonly type: {
+                readonly archive: "Archive";
+                readonly audio: "Audio";
+                readonly csv: "CSV";
+                readonly font: "Font";
+                readonly html: "HTML";
+                readonly icon: "Icon";
+                readonly image: "Image";
+                readonly json: "JSON";
+                readonly other: "Other";
+                readonly script: "Script";
+                readonly stylesheet: "Stylesheet";
+                readonly text: "Text";
+                readonly video: "Video";
+                readonly xml: "XML";
+            };
+            readonly types: {
+                readonly all: "All types";
+            };
+            readonly url: {
+                readonly fail: "Failed to copy URL.";
+                readonly success: "URL is copied to clipboard.";
+            };
+        };
+        readonly backup: {
+            readonly backup: {
+                readonly assets: "Assets";
+                readonly button: "Backup";
+                readonly desc: "Backup LiveCodes data, so that it can be later restored on this or other devices. <1></1> Please visit the <2>documentations</2> for details.";
+                readonly heading: "Backup";
+                readonly projects: "Projects";
+                readonly settings: "User Settings";
+                readonly snippets: "Code Snippets";
+                readonly templates: "User Templates";
+            };
+            readonly backupBtn: "Backup";
+            readonly error: {
+                readonly atLeastOneStore: "Please select at least one store to backup";
+                readonly incorrectFileType: "Error: Incorrect file type";
+            };
+            readonly fileInputLabel: "Restore from file";
+            readonly heading: "Backup / Restore";
+            readonly inProgress: "In progress...";
+            readonly restore: {
+                readonly desc: "Restore previously backed-up LiveCodes data. <1></1> If you choose to replace current content, you may want to back it up first. <2></2> Please visit the <3>documentations</3> for details.";
+                readonly fromFile: "Restore from file";
+                readonly heading: "Restore";
+                readonly mode: {
+                    readonly merge: "Merge with current content";
+                    readonly replace: "Replace current content";
+                };
+                readonly success: "Restored Successfully!";
+            };
+        };
+        readonly broadcast: {
+            readonly broadcastBtn: {
+                readonly start: "Broadcast";
+                readonly stop: "Stop broadcast";
+            };
+            readonly broadcasting: "Broadcasting...";
+            readonly channelURL: "Channel URL";
+            readonly connecting: "Connecting...";
+            readonly desc: "Broadcast the result page to other browsers/devices in real time. Please visit the <1>documentations</1> for details.";
+            readonly error: {
+                readonly generic: "Broadcast failed!";
+                readonly serverURLRequired: "Server URL is required!";
+            };
+            readonly heading: "Broadcast";
+            readonly includeSourceCode: "Include source code";
+            readonly serverURL: {
+                readonly heading: "Server URL";
+            };
+        };
+        readonly core: {
+            readonly broadcast: {
+                readonly heading: "Broadcast";
+                readonly successSetToken: "Broadcast user token set successfully";
+            };
+            readonly changeLanguage: {
+                readonly hint: "Change Language";
+                readonly message: "Loading {{lang}}. This may take a while!";
+            };
+            readonly copy: {
+                readonly copied: "Code copied to clipboard";
+                readonly copiedAsDataURL: "Code copied as data URL";
+                readonly hint: "Copied!";
+                readonly title: "Copy";
+            };
+            readonly error: {
+                readonly couldNotLoadTemplate: "Could not load template: {{template}}";
+                readonly failedToCopyCode: "Failed to copy code";
+                readonly failedToLoadTemplate: "Failed loading template";
+                readonly failedToLoadTemplates: "Failed loading starter templates";
+                readonly failedToParseSettings: "Failed parsing settings as JSON";
+                readonly invalidCommand: "Invalid command!";
+                readonly invalidImport: "Invalid import URL";
+                readonly invalidPanelId: "Invalid panel id";
+                readonly invalidToken: "Invalid token!";
+                readonly login: "Login error!";
+                readonly logout: "Logout error!";
+                readonly noResultContainer: "Result container not found";
+                readonly unavailable: "Command unavailable";
+                readonly unavailableForEmbeds: "Command unavailable for embeds";
+            };
+            readonly export: {
+                readonly gist: "Creating a public GitHub gist...";
+            };
+            readonly fork: {
+                readonly success: "Forked as a new project";
+            };
+            readonly fullScreen: {
+                readonly enter: "Full Screen";
+                readonly exit: "Exit Full Screen";
+            };
+            readonly import: {
+                readonly loading: "Loading Project...";
+            };
+            readonly layout: {
+                readonly horizontal: "Horizontal layout";
+                readonly responsive: "Responsive layout";
+                readonly vertical: "Vertical layout";
+            };
+            readonly loadDefaults: {
+                readonly template: "Loading default template";
+            };
+            readonly login: {
+                readonly success: "Logged in successfully";
+                readonly successWithName: "Logged in as: {{name}}";
+            };
+            readonly logout: {
+                readonly success: "Logged out successfully";
+            };
+            readonly result: {
+                readonly hint: "Show result in new window";
+            };
+            readonly save: {
+                readonly success: "Project locally saved to device!";
+                readonly successWithName: "Project \"{{name}}\" saved to device.";
+            };
+            readonly template: {
+                readonly blank: "Blank Project";
+                readonly delete: "Delete template \"{{item}}\"?";
+                readonly javascript: "JavaScript Starter";
+                readonly react: "React Starter";
+                readonly saved: "Saved as a new template";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 Starter";
+            };
+            readonly unload: {
+                readonly notSaved: "Changes you made may not be saved.";
+            };
+            readonly zoom: {
+                readonly hint: "Zoom";
+            };
+        };
+        readonly customSettings: {
+            readonly JSON: "Custom Settings JSON";
+            readonly heading: "Custom Settings";
+            readonly load: "Load";
+        };
+        readonly deploy: {
+            readonly create: {
+                readonly desc: "A new <1>public</1> repo will be created. The result page will be pushed to <2>gh-pages</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name <1></1>";
+            };
+            readonly error: {
+                readonly generic: "Deployment failed!";
+                readonly repoNameExists: "Repo name already exists";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "A new commit will be added to <1>gh-pages</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly generic: {
+                readonly commitMessage: "Commit Message";
+                readonly commitSourceCodePublic: "Commit source code (public)";
+                readonly deployBtn: "Deploy";
+                readonly deploying: "Deploying...";
+            };
+            readonly heading: "Deploy to GitHub Pages";
+            readonly searchRepo: "Search your public repos...";
+        };
+        readonly editorSettings: {
+            readonly appLanguage: {
+                readonly heading: "App UI Language";
+                readonly note: "Will reload the app to apply the changes after switching the language.";
+            };
+            readonly closeBrackets: "Auto-close brackets and quotes";
+            readonly codeJarDesc: "* The marked features are not available in CodeJar.";
+            readonly default: "Default";
+            readonly desc: "Please check the <1>documentations</1> for details.";
+            readonly editor: {
+                readonly codejar: "CodeJar";
+                readonly codemirror: "CodeMirror";
+                readonly heading: "Editor";
+                readonly monaco: "Monaco";
+            };
+            readonly editorMode: {
+                readonly emacs: "Emacs";
+                readonly heading: "Editor Mode *";
+                readonly vim: "Vim";
+            };
+            readonly editorTheme: "Editor Theme";
+            readonly emmet: "Enable Emmet *";
+            readonly enableAI: {
+                readonly heading: "Enable AI Code Assistant";
+                readonly note: "Powered by <1><2></2></1>";
+            };
+            readonly fontFamily: "Font Family";
+            readonly fontSize: "Font Size";
+            readonly format: "Format";
+            readonly heading: "Editor Settings";
+            readonly lineNumbers: "Show line numbers";
+            readonly notAvailableInCodeJar: "Not available in CodeJar";
+            readonly preview: "Preview";
+            readonly semicolons: "Format: Use Semicolons";
+            readonly singleQuote: "Format: Use Single Quotes";
+            readonly tabSize: "Tab Size";
+            readonly theme: "Dark Mode";
+            readonly trailingComma: "Format: Use Trailing Commas";
+            readonly useTabs: {
+                readonly heading: "Indentation";
+                readonly spaces: "Spaces";
+                readonly tabs: "Tabs";
+            };
+            readonly wordWrap: "Word-wrap";
+        };
+        readonly embed: {
+            readonly activeEditor: {
+                readonly heading: "Active Editor";
+                readonly markup: "{{markup}}";
+                readonly script: "{{script}}";
+                readonly style: "{{style}}";
+            };
+            readonly activeTool: {
+                readonly compiled: "Compiled";
+                readonly console: "Console";
+                readonly heading: "Active Tool";
+                readonly tests: "Tests";
+            };
+            readonly code: {
+                readonly copy: "Copy Code";
+                readonly heading: "Code";
+            };
+            readonly desc: "Please check the <1>documentations</1> for advanced configurations.";
+            readonly embedType: {
+                readonly cdn: "Script (CDN)";
+                readonly heading: "Embed Type";
+                readonly html: "HTML";
+                readonly iframe: "Iframe";
+                readonly npm: "JS (npm)";
+                readonly react: "React";
+                readonly svelte: "Svelte";
+                readonly vue: "Vue";
+            };
+            readonly heading: "Embed Project";
+            readonly lite: "Lite Mode";
+            readonly loading: {
+                readonly click: "On-click";
+                readonly eager: "Eager";
+                readonly heading: "Loading";
+                readonly lazy: "Lazy";
+            };
+            readonly mode: {
+                readonly codeblock: "Code Block";
+                readonly editor: "Editor";
+                readonly full: "Full";
+                readonly heading: "Display Mode";
+                readonly result: "Result";
+            };
+            readonly permanentUrl: "Permanent URL";
+            readonly preview: "Preview";
+            readonly previewLoading: "Loading Preview...";
+            readonly readonly: "Read only";
+            readonly theme: {
+                readonly dark: "Dark";
+                readonly heading: "Theme";
+                readonly light: "Light";
+            };
+            readonly tools: {
+                readonly closed: "Closed";
+                readonly full: "Full";
+                readonly heading: "Tools";
+                readonly none: "None";
+                readonly open: "Open";
+            };
+            readonly view: {
+                readonly editor: "Editor";
+                readonly heading: "Default View";
+                readonly result: "Result";
+                readonly split: "Split";
+            };
+        };
+        readonly generic: {
+            readonly about: {
+                readonly blog: "Blog";
+                readonly configuration: "Configuration";
+                readonly features: "Features";
+                readonly gettingStarted: "Getting Started";
+                readonly github: "GitHub";
+                readonly sdk: "SDK";
+                readonly sponsor: "Sponsor LiveCodes";
+                readonly twitter: "𝕏 / Twitter";
+            };
+            readonly clickForInfo: "Click for info...";
+            readonly close: "Close";
+            readonly error: {
+                readonly authentication: "Authentication error!";
+                readonly exceededSize: "Error: Exceeded size {{size}} MB";
+                readonly failedToReadFile: "Error: Failed to read file";
+            };
+            readonly loading: "Loading...";
+            readonly more: "More...";
+            readonly optional: "Optional";
+            readonly required: "Required";
+        };
+        readonly import: {
+            readonly bulk: {
+                readonly desc: "Bulk import multiple projects to your saved projects. Projects can be exported from the <1>Saved Projects</1> screen.";
+                readonly fromFile: "Bulk import from local file";
+                readonly fromURL: "Bulk import from URL";
+                readonly heading: "Bulk Import";
+                readonly started: "Bulk import started...";
+            };
+            readonly code: {
+                readonly desc: "Supported Sources: <1> <2>GitHub gist</2> <3>GitHub file</3> <4>Directory in a GitHub repo</4> <5>Gitlab snippet</5> <6>Gitlab file</6> <7>Directory in a Gitlab repo</7> <8>JS Bin</8> <9>Raw code</9> <10>Code in web page DOM</10> <11>Code in zip file</11> <12>Official playgrounds<13></13>(TypeScript, Vue and Svelte)</12> </1> Please visit the <14>documentations</14> for details.";
+                readonly fromFile: "Import local files";
+                readonly fromURL: "Import from URL";
+                readonly heading: "Import Code";
+            };
+            readonly error: {
+                readonly failedToLoadURL: "Error: failed to load URL";
+                readonly invalidConfigFile: "Invalid configuration file";
+                readonly invalidFile: "Error: Invalid file";
+            };
+            readonly generic: {
+                readonly file: "Local file";
+                readonly url: "URL";
+            };
+            readonly heading: "Import";
+            readonly json: {
+                readonly desc: "Import a single project JSON to editor. A project can be exported from app&nbsp;menu&nbsp;→ Export&nbsp;→ Export&nbsp;Project&nbsp;(JSON).";
+                readonly fromFile: "Import project from local file";
+                readonly fromURL: "Import project from URL";
+                readonly heading: "Import Project JSON";
+            };
+            readonly success: "Import Successful!";
+        };
+        readonly login: {
+            readonly accessAllowed: "Allow access to:";
+            readonly desc: "<1>By logging in, you agree that <2>cookies</2> may be stored on your device.</1> <3> <4>Why are these permissions required?</4> </3> <5> <6>How to change/revoke permissions?</6> </5>";
+            readonly gist: "Gists";
+            readonly heading: "Login with GitHub";
+            readonly loginAs: "Logged in as {{name}}";
+            readonly loginBtn: "Login";
+            readonly logout: "Log out";
+            readonly privateRepo: "Private Repos";
+            readonly publicRepo: "Repos";
+        };
+        readonly menu: {
+            readonly about: "About";
+            readonly assets: "Assets …";
+            readonly autoSave: "Auto Save";
+            readonly autoUpdate: "Auto Update";
+            readonly backup: "Backup / Restore …";
+            readonly broadcast: "Broadcast …";
+            readonly customSettings: "Custom Settings …";
+            readonly delay: {
+                readonly heading: "Delay: <1>1.5</1>s";
+                readonly hint: "Delay before auto-update";
+            };
+            readonly deploy: "Deploy …";
+            readonly editorSettings: "Editor Settings …";
+            readonly embed: "Embed …";
+            readonly export: {
+                readonly codepen: "Edit in CodePen";
+                readonly gist: "Export to GitHub Gist";
+                readonly heading: "Export";
+                readonly jsfiddle: "Edit in JSFiddle";
+                readonly json: "Export Project (JSON)";
+                readonly result: "Export Result (HTML)";
+                readonly src: "Export Source (ZIP)";
+            };
+            readonly formatOnsave: "Format On-save";
+            readonly import: "Import …";
+            readonly layout: "Vertical Layout";
+            readonly login: "Login …";
+            readonly logout: "Log out";
+            readonly new: "New …";
+            readonly open: "Open …";
+            readonly project: "Project Info …";
+            readonly recoverUnsaved: "Recover Unsaved";
+            readonly resources: "External Resources …";
+            readonly save: "Save";
+            readonly saveAs: {
+                readonly fork: "Fork (New Project)";
+                readonly heading: "Save as";
+                readonly template: "Template";
+            };
+            readonly share: "Share …";
+            readonly showSpacing: {
+                readonly heading: "Show Spacing";
+                readonly hint: "Press Alt/Option and move your cursor over result page";
+            };
+            readonly snippets: "Code Snippets …";
+            readonly sync: "Sync (beta) … <1> ⏳</1>";
+            readonly theme: "Dark Theme";
+            readonly welcome: {
+                readonly heading: "Welcome …";
+                readonly hint: "Show Welcome screen on startup";
+            };
+        };
+        readonly open: {
+            readonly defaultTemplate: "Default template ";
+            readonly delete: {
+                readonly all: "Delete {{projects}} projects?";
+                readonly deleting: "Deleting projects...";
+                readonly one: "Delete project: {{project}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly exportAll: "Export All";
+            readonly filter: {
+                readonly language: "filter by language";
+                readonly tag: "filter by tag";
+            };
+            readonly heading: "Saved Projects";
+            readonly import: "Import";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noData: {
+                readonly desc: "You can save a project from (settings&nbsp;menu&nbsp;&gt;&nbsp;Save) or by the keyboard shortcut (Ctrl/Cmd&nbsp;+&nbsp;S).";
+                readonly heading: "You have no saved projects.";
+            };
+            readonly noMatch: "No projects match these filters.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly filterByTags: "Filter by tags";
+                readonly search: "Search";
+            };
+            readonly removeDefault: "(unset)";
+            readonly reset: "Reset";
+            readonly setAsDefault: "Set as default";
+            readonly sort: {
+                readonly heading: "Sort By:";
+                readonly lastModified: "Last Modified";
+                readonly title: "Title";
+            };
+        };
+        readonly project: {
+            readonly desc: "Description";
+            readonly head: "Add to &lt;head&gt;";
+            readonly heading: "Project Info";
+            readonly htmlAttr: "Attributes for &lt;html&gt;";
+            readonly tags: "Tags";
+            readonly title: "Project Title";
+        };
+        readonly recoverPrompt: {
+            readonly desc: "Your last project has unsaved changes!";
+            readonly heading: "Recover unsaved project?";
+            readonly meta: "Title: <1></1> <2></2> Last modified: <3></3>";
+            readonly notShowAgain: "Do not show this again.";
+            readonly prompt: {
+                readonly discard: "Discard unsaved project";
+                readonly heading: "<1></1>Do you want to recover it now?";
+                readonly recover: "Recover project to editor";
+                readonly save: "Save to device and continue";
+            };
+        };
+        readonly resources: {
+            readonly browseOnJsDelivr: "Browse package files on jsDelivr";
+            readonly cssPresets: {
+                readonly heading: "CSS Presets";
+                readonly none: "None";
+                readonly normalizeCss: "Normalize.css";
+                readonly resetCss: "Reset CSS";
+            };
+            readonly error: {
+                readonly failedToLoadResults: "Failed to load results!";
+                readonly noResultsFound: "No results found for: ";
+            };
+            readonly fonts: {
+                readonly add: "Add";
+                readonly heading: "Fonts <1>(powered by Google Fonts)</1>";
+                readonly select: "Select font ...";
+            };
+            readonly heading: "External Resources";
+            readonly scripts: "External Scripts";
+            readonly search: {
+                readonly heading: "Search Packages <1>(powered by jsDelivr)</1>";
+                readonly placeholder: "e.g. jquery, lodash@4, bootstrap@5.2.3, ...";
+            };
+            readonly stylesheets: "External Stylesheets";
+            readonly urlDesc: "Add stylesheet/script URLs. Each URL should be in a separate line.";
+        };
+        readonly savePrompt: {
+            readonly heading: "Unsaved changes";
+            readonly prompt: {
+                readonly cancel: "Cancel";
+                readonly discard: "Do not save";
+                readonly heading: "The changes you made may not be saved. <1></1> Do you want to save now?";
+                readonly save: "Save";
+            };
+        };
+        readonly share: {
+            readonly characters: "{{urlLength}} characters";
+            readonly copy: {
+                readonly clickToCopy: "Click to copy";
+                readonly copied: "URL copied to clipboard";
+            };
+            readonly encodedURL: "Get encoded URL";
+            readonly error: {
+                readonly failedToCopy: "Copy to clipboard failed!";
+                readonly failedToGenerateURL: "Failed to generate short URL!";
+            };
+            readonly expireInOneYear: "Expires in 1 year";
+            readonly generateURL: "Generating URL …";
+            readonly heading: "Share";
+            readonly permanentURL: "Permanent URL";
+            readonly qrcode: {
+                readonly clickToDownload: "Click to download";
+                readonly generating: "Generating...";
+            };
+            readonly services: {
+                readonly copyUrl: "Copy URL";
+                readonly devTo: "Dev.to";
+                readonly email: "Email";
+                readonly facebook: "Facebook";
+                readonly hackerNews: "Hacker News";
+                readonly linkedIn: "LinkedIn";
+                readonly pinterest: "Pinterest";
+                readonly pocket: "Pocket";
+                readonly qrCode: "QR code";
+                readonly reddit: "Reddit";
+                readonly share: "Share via …";
+                readonly telegram: "Telegram";
+                readonly tumblr: "Tumblr";
+                readonly twitter: "𝕏 / Twitter";
+                readonly whatsApp: "WhatsApp";
+            };
+            readonly shortURL: "Get short URL";
+        };
+        readonly snippets: {
+            readonly action: {
+                readonly copy: "Copy";
+                readonly delete: "Delete";
+                readonly edit: "Edit";
+            };
+            readonly add: {
+                readonly code: "Code";
+                readonly desc: "Description";
+                readonly heading: "Add Snippet";
+                readonly language: "Language";
+                readonly save: "Save";
+                readonly snippets: "Snippets";
+                readonly title: "Title";
+            };
+            readonly copy: {
+                readonly clickToCopySnippet: "Click to copy snippet";
+                readonly copied: "Snippet is copied to clipboard.";
+            };
+            readonly delete: {
+                readonly all: "Delete {{snippets}} snippets?";
+                readonly one: "Delete snippet: {{snippet}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly error: {
+                readonly failedToCopy: "Failed to copy URL.";
+                readonly noTitle: "Please add snippet title.";
+            };
+            readonly filter: {
+                readonly language: "filter by language";
+            };
+            readonly heading: "Code Snippets";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noMatch: "No snippets match these filters.";
+            readonly noSavedSnippets: "You have no saved snippets.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly search: "Search";
+            };
+            readonly reset: "Reset";
+            readonly save: {
+                readonly success: "Snippet locally saved to device!";
+            };
+            readonly sort: {
+                readonly date: "Date";
+                readonly heading: "Sort By:";
+                readonly title: "Title";
+            };
+            readonly text: "Plain Text";
+        };
+        readonly splash: {
+            readonly loading: "Loading LiveCodes…";
+        };
+        readonly sync: {
+            readonly autoSync: "Auto sync";
+            readonly create: {
+                readonly desc: "A new <1>private</1> repo will be created. Your LiveCodes local data will be synchronized with <2>main</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly error: {
+                readonly generic: "Sync failed!";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "Your LiveCodes local data will be synchronized with <1>main</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly heading: "Sync to GitHub Repo";
+            readonly searchRepos: "Search your repos...";
+            readonly success: "Sync complete!";
+            readonly syncBtn: "Sync";
+            readonly syncInProgress: "Sync in progress...";
+            readonly syncStarted: "Sync started...";
+        };
+        readonly templates: {
+            readonly heading: "New Project";
+            readonly noUserTemplates: {
+                readonly desc: "You can save a project as a template from <1></1>(App&nbsp;menu&nbsp;&gt;&nbsp;Save&nbsp;as&nbsp;&gt; Template).";
+                readonly heading: "You have no saved templates.";
+            };
+            readonly starter: {
+                readonly angular: "Angular Starter";
+                readonly assemblyscript: "AssemblyScript Starter";
+                readonly astro: "Astro Starter";
+                readonly backbone: "Backbone Starter";
+                readonly blank: "Blank Project";
+                readonly blockly: "Blockly Starter";
+                readonly bootstrap: "Bootstrap Starter";
+                readonly civet: "Civet Starter";
+                readonly clio: "Clio Starter";
+                readonly clojurescript: "ClojureScript Starter";
+                readonly coffeescript: "CoffeeScript Starter";
+                readonly commonlisp: "Common Lisp Starter";
+                readonly cpp: "C++ Starter";
+                readonly diagrams: "Diagrams Starter";
+                readonly fennel: "Fennel Starter";
+                readonly gleam: "Gleam Starter";
+                readonly go: "Go Starter";
+                readonly heading: "Starter Templates";
+                readonly imba: "Imba Starter";
+                readonly javascript: "JavaScript Starter";
+                readonly jest: "Jest Starter";
+                readonly 'jest-react': "Jest/React Starter";
+                readonly jquery: "jQuery Starter";
+                readonly julia: "Julia Starter";
+                readonly knockout: "Knockout Starter";
+                readonly lit: "Lit Starter";
+                readonly livescript: "LiveScript Starter";
+                readonly loading: "Loading starter templates...";
+                readonly lua: "Lua Starter";
+                readonly 'lua-wasm': "Lua (Wasm) Starter";
+                readonly malina: "Malina.js Starter";
+                readonly markdown: "Markdown Starter";
+                readonly mdx: "MDX Starter";
+                readonly ocaml: "Ocaml Starter";
+                readonly perl: "Perl Starter";
+                readonly php: "PHP Starter";
+                readonly 'php-wasm': "PHP (Wasm) Starter";
+                readonly postgresql: "PostgreSQL Starter";
+                readonly preact: "Preact Starter";
+                readonly prolog: "Prolog Starter";
+                readonly python: "Python Starter";
+                readonly r: "R Starter";
+                readonly react: "React Starter";
+                readonly 'react-native': "React Native Starter";
+                readonly reason: "Reason Starter";
+                readonly rescript: "ReScript Starter";
+                readonly riot: "Riot.js Starter";
+                readonly ruby: "Ruby Starter";
+                readonly 'ruby-wasm': "Ruby (Wasm) Starter";
+                readonly scheme: "Scheme Starter";
+                readonly solid: "Solid Starter";
+                readonly sql: "SQL Starter";
+                readonly stencil: "Stencil Starter";
+                readonly svelte: "Svelte Starter";
+                readonly tailwindcss: "Tailwind CSS Starter";
+                readonly tcl: "Tcl Starter";
+                readonly teal: "Teal Starter";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 SFC Starter";
+                readonly vue2: "Vue 2 Starter";
+                readonly wat: "WebAssembly Text Starter";
+            };
+            readonly user: {
+                readonly heading: "My Templates";
+                readonly loading: "Loading user templates...";
+            };
+        };
+        readonly testEditor: {
+            readonly heading: "Edit Tests";
+            readonly load: "Load";
+            readonly tests: "Tests";
+        };
+        readonly toolspane: {
+            readonly close: "Close";
+            readonly compiled: {
+                readonly title: "Compiled";
+            };
+            readonly console: {
+                readonly clear: "Clear console";
+                readonly title: "Console";
+            };
+            readonly test: {
+                readonly edit: "Edit";
+                readonly error: "<1><2>Test error!</2></1>";
+                readonly loading: "<1>Loading tests...</1>";
+                readonly noTest: "<1>This project has no tests!</1>";
+                readonly reset: "Reset";
+                readonly run: {
+                    readonly desc: "Ctrl/Cmd + Alt + T";
+                    readonly heading: "Run";
+                };
+                readonly summary: {
+                    readonly desc: "Tests: {{failed}}\n       {{passed}}\n       {{skipped}}\n       {{total}}<1></1>\nTime: {{duration}}s";
+                    readonly failed: "{{failedNum}} failed";
+                    readonly passed: "{{passedNum}} passed";
+                    readonly skipped: "{{skippedNum}} skipped";
+                    readonly total: "{{totalNum}} total";
+                };
+                readonly title: "Tests";
+                readonly watch: {
+                    readonly desc: "Run tests when code changes";
+                    readonly heading: "Watch";
+                };
+            };
+        };
+        readonly welcome: {
+            readonly about: {
+                readonly documentation: "Documentations";
+                readonly heading: "About LiveCodes";
+            };
+            readonly heading: "Welcome";
+            readonly recent: {
+                readonly heading: "Recent";
+            };
+            readonly recover: {
+                readonly cancel: "Cancel";
+                readonly heading: "Recover";
+                readonly lastModified: "Last modified: <1></1>";
+                readonly recover: "Recover";
+                readonly save: "Save";
+                readonly unsavedChanges: "Your last project had unsaved changes:";
+            };
+            readonly showOnStartup: "Show on startup";
+            readonly start: {
+                readonly heading: "Start";
+                readonly import: "Import...";
+                readonly loadDefaultTemplate: "Load default template";
+                readonly new: "New...";
+                readonly noDefaultTemplate: "No default template";
+                readonly open: "Open...";
+            };
+            readonly templates: {
+                readonly heading: "Starter Templates";
+            };
+        };
+    };
+    export default translation;
+}
+declare module "livecodes/i18n/locales/pt/language-info" {
+    const languageInfo: {
+        readonly artTemplate: {
+            readonly desc: "High performance JavaScript templating engine.";
+            readonly link: "<1> <2>art-template official website</2> </1> <3> <4>art-template documentation</4> </3>";
+            readonly name: "art-template";
+        };
+        readonly asciidoc: {
+            readonly desc: "AsciiDoc compiled to HTML using Asciidoctor.";
+            readonly link: "<1> <2>AsciiDoc official website</2> </1> <3> <4>Asciidoctor official website</4> </3> <5> <6>Asciidoctor documentation</6> </5> <7> <8>Learn X in Y minutes, where X=asciidoc</8> </7>";
+            readonly name: "AsciiDoc";
+        };
+        readonly assemblyscript: {
+            readonly desc: "A TypeScript-like language for WebAssembly.";
+            readonly link: "<1> <2>AssemblyScript official website</2> </1> <3> <4>AssemblyScript documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "AssemblyScript";
+        };
+        readonly astro: {
+            readonly desc: "Build faster websites with less client-side Javascript. (Still in Beta)";
+            readonly link: "<1> <2>Astro official website</2> </1> <3> <4>Astro documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Astro";
+        };
+        readonly babel: {
+            readonly desc: "The JavaScript compiler";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Babel documentation</4> </3>";
+            readonly name: "Babel";
+        };
+        readonly bbcode: {
+            readonly desc: "BBCode (\"Bulletin Board Code\") is a lightweight markup language used to format messages in many Internet forum software.";
+            readonly link: "<1><2>bbcode.org</2></1> <3> <4>BBCode guide</4> </3> <5> <6>BBCode on Wikipedia</6> </5>";
+            readonly name: "BBCode";
+        };
+        readonly blockly: {
+            readonly desc: "A JavaScript library for building visual programming editors.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>Guides</4> </3> <5> <6>Reference</6> </5> <7> <8>Samples</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Blockly";
+        };
+        readonly civet: {
+            readonly desc: "Civet is a programming language that compiles to TypeScript or JavaScript, so you can use existing tooling but enable concise and powerful syntax.";
+            readonly link: "<1> <2>Civet official website</2> </1> <3> <4>Civet cheatsheet</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Civet";
+        };
+        readonly clio: {
+            readonly desc: "Clio is a fast, distributed, functional programming language that compiles to JavaScript.";
+            readonly link: "<1> <2>Clio official website</2> </1> <3> <4>Clio documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Clio";
+        };
+        readonly clojurescript: {
+            readonly desc: "ClojureScript is a compiler for <1>Clojure</1> that targets JavaScript. <2></2>In LiveCodes, it runs in the browser using <3>Cherry</3>.";
+            readonly link: "<1> <2>ClojureScript official website</2> </1> <3> <4>Clojure official website</4> </3> <5> <6>Cherry repo</6> </5> <7> <8>Learn X in Y minutes, where X=clojure</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "ClojureScript (CLJS)";
+        };
+        readonly coffeescript: {
+            readonly desc: "Unfancy JavaScript.";
+            readonly link: "<1> <2>CoffeeScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=coffeescript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "CoffeeScript";
+        };
+        readonly commonlisp: {
+            readonly desc: "A Common Lisp implementation on Javascript using JSCL (a Lisp-to-Javascript compiler bootstrapped from Common Lisp).";
+            readonly link: "<1> <2>Common-Lisp.net</2> </1> <3> <4>JSCL Project</4> </3> <5> <6>Common Lisp Resources</6> </5> <7> <8>Learn X in Y minutes, where X=Common Lisp</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Common Lisp";
+        };
+        readonly cpp: {
+            readonly desc1: "C++ support using JSCPP (a simple C++ interpreter written in JavaScript).";
+            readonly desc2: "It is not a complete implementation of C++. Please refer to <1>JSCPP documentation</1> for details.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>JSCPP</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C++";
+        };
+        readonly cppWasm: {
+            readonly desc: "Clang C/C++ compiler running on WebAssembly, using <1>wasm-clang</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>Clang official website</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C/C++ (Wasm)";
+        };
+        readonly diagrams: {
+            readonly desc1: "(Experimental)";
+            readonly desc2: "Diagrams-as-code. Supports:";
+            readonly desc3: "<1> <2>Cytoscape</2> </1> <3> <4>ELK</4> (using <5>elkjs</5>) </3> <6> <7>Gnuplot</7> (using <8>gnuplot-JS</8>) </6> <9> <10>Graphviz</10> (using <11>@hpcc-js/wasm</11>) </9> <12> <13>Mermaid</13> </12> <14> <15>Nomnoml</15> </14> <16> <17>Pintora</17> </16> <18> <19>Plotly</19> </18> <20> <21>Svgbob</21> </20> <22> <23>Vega</23> </22> <24> <25>VegaLite</25> </24> <26> <27>WaveDrom</27> </26>";
+            readonly link: "<1> <2>Load starter template</2> </1> <3> <4>LiveCodes Documentation</4> </3>";
+            readonly name: "Diagrams";
+        };
+        readonly dot: {
+            readonly desc: "The fastest + concise javascript template engine for Node.js and browsers.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "doT.js";
+        };
+        readonly ejs: {
+            readonly desc: "Embedded JavaScript templating.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "EJS";
+        };
+        readonly eta: {
+            readonly desc: "Embedded JS template engine for Node, Deno, and the browser. Lighweight, fast, and pluggable. Written in TypeScript.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Eta";
+        };
+        readonly fennel: {
+            readonly desc: "Fennel is a programming language that brings together the speed, simplicity, and reach of Lua with the flexibility of a lisp syntax and macro system.";
+            readonly link: "<1> <2>Fennel official website</2> </1> <3> <4>Getting Started with Fennel</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Fennel";
+        };
+        readonly flow: {
+            readonly desc: "Flow is a static type checker for JavaScript.";
+            readonly link: "<1> <2>Flow official website</2> </1> <3> <4>Flow documentation</4> </3>";
+            readonly name: "Flow";
+        };
+        readonly gleam: {
+            readonly desc1: "Gleam is a friendly language for building type-safe systems that scale!";
+            readonly desc2: "Gleam is a statically-typed functional programming language, which compiles to Erlang or JavaScript.";
+            readonly link: "<1><2>Gleam website</2></1> <3> <4>Gleam documentation</4> </3> <5> <6>Gleam language tour</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Gleam";
+        };
+        readonly go: {
+            readonly desc1: "Go (Golang) is an open source programming language that makes it easy to build simple, reliable, and efficient software.";
+            readonly desc2: "Here, it is compiled to JavaScript using GopherJS.";
+            readonly link: "<1><2>Go website</2></1> <3><4>Go documentation</4></3> <5> <6>GopherJS repo</6> </5> <7> <8>Learn X in Y minutes, where X=Go</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Go";
+        };
+        readonly haml: {
+            readonly desc: "Haml compiler for client side javascript view templates using clientside-haml-js.";
+            readonly link: "<1><2>Haml official website</2></1> <3> <4>Haml documentation</4> </3> <5> <6>clientside-haml-js GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=haml</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Haml";
+        };
+        readonly handlebars: {
+            readonly desc: "Minimal templating on steroids.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Handlebars";
+        };
+        readonly imba: {
+            readonly desc: "The friendly full-stack language.";
+            readonly link: "<1><2>Official website</2></1>";
+            readonly name: "Imba";
+        };
+        readonly jsx: {
+            readonly desc: "JSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler.  By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "JSX";
+        };
+        readonly julia: {
+            readonly desc1: "(Julia language support in LiveCodes is still experimental)";
+            readonly desc2: "Julia compiler and Julia Base running on WASM, using <1>julia-wasm</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Julia official website</2> </1> <3> <4>Julia documentation</4> </3> <5> <6>Learn X in Y minutes, where X=Julia</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Julia";
+        };
+        readonly less: {
+            readonly desc: "It's CSS, with just a little more.";
+            readonly link: "<1><2>Less official website</2></1> <3> <4>Learn X in Y minutes, where X=less</4> </3>";
+            readonly name: "Less";
+        };
+        readonly liquid: {
+            readonly desc: "A simple, expressive and safe template engine.";
+            readonly link: "<1> <2>LiquidJS official website</2> </1> <3> <4>LiquidJS documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "LiquidJS";
+        };
+        readonly livescript: {
+            readonly desc: "A language which compiles to JavaScript.";
+            readonly link: "<1> <2>LiveScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=LiveScript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "LiveScript";
+        };
+        readonly lua: {
+            readonly desc: "Lua running in the browser using fengari-web.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Fengari official website</6> </5> <7> <8>fengari-web GitHub repo</8> </7> <9> <10>Learn X in Y minutes, where X=Lua</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "Lua";
+        };
+        readonly luaWasm: {
+            readonly desc: "Lua running in the browser using Wasmoon, a real lua 5.4 VM with JS bindings made with WebAssembly.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Wasmoon GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=Lua</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Lua (Wasm)";
+        };
+        readonly malina: {
+            readonly desc: "Frontend compiler, inspired by Svelte.";
+            readonly link: "<1> <2>Malina.js repo</2> </1> <3> <4>Malina.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Malina.js";
+        };
+        readonly markdown: {
+            readonly desc: "Markdown compiled to HTML using Marked.";
+            readonly link: "<1> <2>Markdown official website</2> </1> <3> <4>Marked documentation</4> </3> <5> <6>Learn X in Y minutes, where X=markdown</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Markdown";
+        };
+        readonly mdx: {
+            readonly desc: "Markdown for the component era. <1></1>MDX lets you seamlessly write JSX in your Markdown documents.";
+            readonly link: "<1><2>MDX documentation</2></1> <3><4>Load starter template</4></3>";
+            readonly name: "MDX";
+        };
+        readonly mjml: {
+            readonly desc: "MJML is a markup language designed to reduce the pain of coding a responsive email.";
+            readonly link: "<1><2>MJML official website</2></1> <3> <4>MJML documentation</4> </3> <5> <6>MJML official templates</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "MJML";
+        };
+        readonly mustache: {
+            readonly desc: "Logic-less templates.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>mustache(5) manual</4> </3> <5> <6>JavaScript implementation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "Mustache";
+        };
+        readonly nunjucks: {
+            readonly desc: "A rich and powerful templating language for JavaScript. Nunjucks is essentially a port of <1>jinja2</1>.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Nunjucks";
+        };
+        readonly ocaml: {
+            readonly desc1: "OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles.";
+            readonly desc2: "ReScript compiler is used here to compile OCaml to JavaScript.";
+            readonly link: "<1><2>OCaml website</2></1> <3> <4>OCaml documentation</4> </3> <5> <6>ReScript website</6> </5> <7> <8>Learn X in Y minutes, where X=OCaml</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "OCaml";
+        };
+        readonly perl: {
+            readonly desc: "Perl running in the browser using Perlito.";
+            readonly link: "<1> <2>Perl official website</2> </1> <3> <4>Perl documentation</4> </3> <5> <6>Perlito5 Readme</6> </5> <7> <8>Learn X in Y minutes, where X=perl</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Perl";
+        };
+        readonly php: {
+            readonly desc: "PHP running in the browser using Uniter.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>Uniter GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11><12>Load starter template</12></11>";
+            readonly name: "PHP";
+        };
+        readonly phpWasm: {
+            readonly desc: "PHP in Browser, powered by WebAssembly, using php-wasm.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>php-wasm GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "PHP (Wasm)";
+        };
+        readonly postgresql: {
+            readonly desc: "PostgreSQL packaged as WASM using PGlite";
+            readonly link: "<1> <2>PostgreSQL official website</2> </1> <3> <4>PostgreSQL documentation</4> </3> <5> <6>PGlite GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "PostgreSQL";
+        };
+        readonly prolog: {
+            readonly desc: "An open source Prolog interpreter in JavaScript.";
+            readonly link: "<1> <2>Tau Prolog official website</2> </1> <3> <4>Tau Prolog documentation</4> </3> <5> <6>SWI-Prolog</6> </5> <7> <8>Learn X in Y minutes, where X=Prolog</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Tau Prolog";
+        };
+        readonly pug: {
+            readonly desc: "Robust, elegant, feature rich template engine.";
+            readonly link: "<1> <2>Pug documentation</2> </1> <3> <4>Learn X in Y minutes, where X=Pug</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Pug";
+        };
+        readonly python: {
+            readonly desc: "Python running in the browser using Brython.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5> <6>Brython documentation</6> </5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python";
+        };
+        readonly pythonWasm: {
+            readonly desc1: "Python with the scientific stack, compiled to WebAssembly using Pyodide.";
+            readonly desc2: "Pyodide allows using Python scientific stack including NumPy, Pandas, Matplotlib, SciPy, scikit-learn and many more. In addition it’s possible to install pure Python wheels from PyPi.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5><6>Pyodide documentation</6></5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python (Wasm)";
+        };
+        readonly r: {
+            readonly desc: "R running in the browser using WebR.";
+            readonly link: "<1> <2>R project official website</2> </1> <3> <4>The R Manuals</4> </3> <5> <6>R for Data Science (2e)</6> </5> <7> <8>WebR documentation</8> </7> <9> <10>Learn X in Y minutes, where X=R</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "R";
+        };
+        readonly reactNative: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "React Native for Web";
+        };
+        readonly reactNativeTsx: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>TypeScript website</10> </9> <11> <12>TypeScript documentation</12> </11> <13> <14>LiveCodes Documentations</14> </13> <15> <16>Load starter template (JSX)</16> </15>";
+            readonly name: "React Native for Web (with TypeScript)";
+        };
+        readonly reason: {
+            readonly desc1: "Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.";
+            readonly desc2: "ReScript compiler is used here to compile Reason to JavaScript.";
+            readonly link: "<1><2>Reason website</2></1> <3> <4>Reason documentation</4> </3> <5> <6>ReasonReact</6> </5> <7> <8>ReScript website</8> </7> <9> <10>Learn X in Y minutes, where X=reason</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Reason";
+        };
+        readonly rescript: {
+            readonly desc: "ReScript is a robustly typed language that compiles to efficient and human-readable JavaScript.";
+            readonly link: "<1> <2>ReScript website</2> </1> <3> <4>ReScript / React</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "ReScript";
+        };
+        readonly richtext: {
+            readonly desc1: "Using Quill:";
+            readonly desc2: "Your powerful rich text editor.";
+            readonly link: "<1> <2>Quill official website</2> </1>";
+            readonly name: "Rich Text Editor";
+        };
+        readonly riot: {
+            readonly desc: "Simple and elegant component-based UI library.";
+            readonly link: "<1> <2>Riot.js official website</2> </1> <3> <4>Riot.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Riot.js";
+        };
+        readonly ruby: {
+            readonly desc: "Ruby running in the browser using Opal.";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5><6>Opal official website</6></5> <7> <8>Opal standard library CDN</8> </7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby";
+        };
+        readonly rubyWasm: {
+            readonly desc: "Ruby running in the browser using ruby-wasm (a collection of WebAssembly ports of the CRuby).";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5> <6>ruby.wasm website</6> </5> <7><8>CRuby</8></7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby (WASM)";
+        };
+        readonly sass: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>Sass (the indented) syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "Sass";
+        };
+        readonly scheme: {
+            readonly desc: "Scheme running in the browser using biwascheme.";
+            readonly link: "<1> <2>The Scheme Programming Language</2> </1> <3> <4>BiwaScheme official website</4> </3> <5> <6>BiwaScheme reference</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Scheme";
+        };
+        readonly scss: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>SCSS syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "SCSS";
+        };
+        readonly solid: {
+            readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+            readonly link: "<1><2>Official website</2></1> <3><4>Documentation</4></3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template (TSX)</8> </7>";
+            readonly name: "Solid";
+            readonly tsx: {
+                readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+                readonly link: "<1><2>Official website</2></1> <3> <4>Solid documentation</4> </3> <5> <6>TypeScript website</6> </5> <7> <8>TypeScript documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+                readonly name: "Solid (with TypeScript)";
+            };
+        };
+        readonly sql: {
+            readonly desc: "SQLite compiled to JavaScript using SQL.js";
+            readonly link: "<1> <2>SQLite official website</2> </1> <3> <4>SQLite syntax documentation</4> </3> <5> <6>SQL.js official website</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "SQLite";
+        };
+        readonly stencil: {
+            readonly desc: "A Compiler for Web Components and High Performance Web Apps.";
+            readonly link: "<1> <2>Stencil official website</2> </1> <3> <4>Stencil documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Stencil";
+        };
+        readonly styleProcessors: {
+            readonly link: "<1> <2>Tailwind CSS</2> </1> <3> <4>Windi CSS</4> </3> <5> <6>UnoCSS</6> </5> <7> <8>Lightning CSS</8> </7> <9> <10>PostCSS</10> Plugins: <11> <12> <13>Autoprefixer</13> </12> <14> <15>postcss-preset-env</15> </14> <16> <17>postcss-import-url</17> </16> <18> <19>postcss-modules</19> </18> </11> </9>";
+            readonly name: "CSS Frameworks and Processors";
+        };
+        readonly stylis: {
+            readonly desc: "Light-weight css preprocessor.";
+            readonly link: "<1> <2>Stylis official website</2> </1>";
+            readonly name: "Stylis";
+        };
+        readonly stylus: {
+            readonly desc: "Expressive, Dynamic, Robust CSS.";
+            readonly link: "<1> <2>Stylus official website</2> </1> <3> <4>Learn X in Y minutes, where X=stylus</4> </3>";
+            readonly name: "Stylus";
+        };
+        readonly sucrase: {
+            readonly desc: "Super-fast alternative to Babel for when you can target modern JS runtimes.";
+            readonly link: "<1> <2>Sucrase official website</2> </1> <3> <4>Sucrase GitHub Repo</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Sucrase";
+        };
+        readonly svelte: {
+            readonly desc: "Cybernetically enhanced web apps.";
+            readonly link: "<1> <2>Svelte official website</2> </1> <3> <4>Svelte documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Svelte";
+        };
+        readonly tcl: {
+            readonly desc: "Tcl running in the browser, using <1>wacl</1>.";
+            readonly link: "<1> <2>Tcl official website</2> </1> <3> <4>wacl repo</4> </3> <5> <6>Learn X in Y minutes, where X=Tcl</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Tcl (Tool Command Language)";
+        };
+        readonly teal: {
+            readonly desc: "A typed dialect of Lua.";
+            readonly link: "<1> <2>Teal GitHub repo</2> </1> <3> <4>Teal docs</4> </3> <5> <6>Teal tutorial</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Teal";
+        };
+        readonly tsx: {
+            readonly desc: "TypeScript in JSX. TSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler. By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>Typescript documentation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "TSX";
+        };
+        readonly twig: {
+            readonly desc: "A JavaScript implementation of the <1>Twig</1> PHP templating language by <2>Twig.js</2> .";
+            readonly link: "<1> <2>Twig official website</2> </1> <3> <4>Twig Documentation</4> </3> <5> <6>Twig.js Repo</6> </5> <7> <8>Twig.js Documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Twig";
+        };
+        readonly typescript: {
+            readonly desc: "A Typed Superset of JavaScript.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>TypeScript documentation</4> </3> <5> <6>Learn X in Y minutes, where X=TypeScript</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "TypeScript";
+        };
+        readonly vue: {
+            readonly link: "<1> <2>Vue.js v3 official website</2> </1> <3> <4>Vue3 documentation</4> </3> <5> <6>Vue3 single file components</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Vue3 Single File Components";
+        };
+        readonly vue2: {
+            readonly desc: "Loaded using vue3-sfc-loader.";
+            readonly link: "<1><2>Vue.js official website</2></1> <3> <4>Vue2 documentation</4> </3> <5> <6>Vue2 single file components</6> </5> <7> <8>vue3-sfc-loader GitHub repo</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Vue2 Single File Components";
+        };
+        readonly wat: {
+            readonly desc1: "Low-level textual representation of the WebAssembly (wasm) binary format.";
+            readonly desc2: "It is converted to wasm using wabt.js.";
+            readonly link: "<1><2>WebAssembly.org</2></1> <3> <4>WebAssembly Text Specs</4> </3> <5> <6>WebAssembly on MDN</6> </5> <7> <8>Understanding WebAssembly text format</8> </7> <9> <10>wabt.js documentation</10> </9> <11> <12>Learn X in Y minutes, where X=WebAssembly</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "WebAssembly Text Format";
+        };
+    };
+    export default languageInfo;
+}
+declare module "livecodes/i18n/locales/pt/translation" {
+    const translation: {
+        readonly about: {
+            readonly documentations: {
+                readonly aboutUs: "About us";
+                readonly contact: "Contact";
+                readonly heading: "Documentations";
+                readonly home: "Home";
+                readonly license: "License";
+            };
+            readonly heading: "About LiveCodes";
+            readonly livecodes: {
+                readonly para1: "<1><2>LiveCodes</2></1> is an <3>open-source</3>, <4>feature-rich</4>, <5>client-side</5> code playground. Currently, <6>80+ languages/<7></7>frameworks</6> are supported. It can be used as a standalone app or can be <8>embedded</8> in any web page. There are many ways to <9>prefill playgrounds</9> with code.";
+                readonly para2: "A wide range of <1>configuration options</1> makes it very flexible. A powerful <2>SDK</2> (for <3>JS/TS</3>, <4>React</4>, <5>Vue</5> and <6>Svelte</6>) facilitates <7>embedding</7> and <8>communicating</8> with playgrounds. <9>Comprehensive documentations</9> are available with code samples, live demos and screenshots.";
+            };
+            readonly version: {
+                readonly app: "App version: {{APP_VERSION}}";
+                readonly appPermanentUrl: "App Permanent URL";
+                readonly commit: "Git commit: {{COMMIT_SHA}}";
+                readonly heading: "Version";
+                readonly sdk: "SDK version: {{SDK_VERSION}}";
+                readonly sdkPermanentUrl: "SDK Permanent URL";
+            };
+        };
+        readonly app: {
+            readonly copy: {
+                readonly hint: "Copy (Ctrl/Cmd + A, Ctrl/Cmd + C)";
+            };
+            readonly copyAsUrl: {
+                readonly hint: "Copy code as data URL";
+            };
+            readonly customSettings: {
+                readonly hint: "Custom Settings";
+            };
+            readonly editorMode: {
+                readonly hint: "Editor Mode";
+            };
+            readonly editorSettings: {
+                readonly hint: "Editor Settings";
+            };
+            readonly externalResources: {
+                readonly hint: "External Resources";
+            };
+            readonly focus: {
+                readonly hint: "Toggle Focus mode";
+            };
+            readonly format: {
+                readonly hint: "Format (Alt + Shift + F)";
+            };
+            readonly fullscreen: {
+                readonly hint: "Full Screen";
+            };
+            readonly logo: {
+                readonly title: "LiveCodes: Code playground that runs in the browser!";
+            };
+            readonly projectInfo: {
+                readonly hint: "Project Info";
+            };
+            readonly redo: {
+                readonly hint: "Redo (Ctrl/Cmd + Shift + Z)";
+            };
+            readonly result: {
+                readonly hint: "Toggle Result";
+            };
+            readonly run: {
+                readonly hint: "Run (Shift + Enter)";
+            };
+            readonly share: {
+                readonly hint: "Share";
+            };
+            readonly undo: {
+                readonly hint: "Undo (Ctrl/Cmd + Z)";
+            };
+            readonly untitledProject: "Untitled Project";
+        };
+        readonly assets: {
+            readonly add: {
+                readonly dataURL: {
+                    readonly desc: "Add asset as a base64-encoded <1>data url</1>.";
+                    readonly heading: "Data URL";
+                    readonly label: "Add file";
+                };
+                readonly githubPages: {
+                    readonly desc: "Deploy asset to GitHub Pages. The file is pushed to <1>gh-pages</1> branch of the repo <2>livecodes-assets</2> on your GitHub account. If the repo does not already exist, a public repo will be created.";
+                    readonly heading: "GitHub Pages";
+                    readonly label: "Upload file";
+                };
+                readonly heading: "Add Asset";
+            };
+            readonly delete: {
+                readonly all: "Delete {{assets}} assets?";
+                readonly one: "Delete asset: {{asset}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly generic: {
+                readonly clickToCopyURL: "Click to copy URL";
+            };
+            readonly heading: "Assets";
+            readonly link: {
+                readonly date: "Date: {{modified}}";
+                readonly type: "Type: {{type}}";
+                readonly url: "URL: {{url}}";
+            };
+            readonly loadFile: {
+                readonly error: {
+                    readonly failedToUpload: "Error: Failed to upload file";
+                    readonly unauthenticated: "Error: Unauthenticated user";
+                };
+                readonly upload: "Upload file";
+                readonly uploading: "Uploading...";
+            };
+            readonly noMatch: "No assets match these filters.";
+            readonly noSavedAssets: "You have no saved assets.";
+            readonly processAsset: {
+                readonly addFile: "Added file: ";
+                readonly deployNotice: "The asset should be available on this URL soon (~1 min).";
+                readonly success: "File added to assets!";
+                readonly urlLabel: "URL: ";
+            };
+            readonly resetFilters: "Reset";
+            readonly search: "Search";
+            readonly sort: {
+                readonly date: "Date";
+                readonly fileName: "File Name";
+                readonly heading: "Sort By:";
+            };
+            readonly type: {
+                readonly archive: "Archive";
+                readonly audio: "Audio";
+                readonly csv: "CSV";
+                readonly font: "Font";
+                readonly html: "HTML";
+                readonly icon: "Icon";
+                readonly image: "Image";
+                readonly json: "JSON";
+                readonly other: "Other";
+                readonly script: "Script";
+                readonly stylesheet: "Stylesheet";
+                readonly text: "Text";
+                readonly video: "Video";
+                readonly xml: "XML";
+            };
+            readonly types: {
+                readonly all: "All types";
+            };
+            readonly url: {
+                readonly fail: "Failed to copy URL.";
+                readonly success: "URL is copied to clipboard.";
+            };
+        };
+        readonly backup: {
+            readonly backup: {
+                readonly assets: "Assets";
+                readonly button: "Backup";
+                readonly desc: "Backup LiveCodes data, so that it can be later restored on this or other devices. <1></1> Please visit the <2>documentations</2> for details.";
+                readonly heading: "Backup";
+                readonly projects: "Projects";
+                readonly settings: "User Settings";
+                readonly snippets: "Code Snippets";
+                readonly templates: "User Templates";
+            };
+            readonly backupBtn: "Backup";
+            readonly error: {
+                readonly atLeastOneStore: "Please select at least one store to backup";
+                readonly incorrectFileType: "Error: Incorrect file type";
+            };
+            readonly fileInputLabel: "Restore from file";
+            readonly heading: "Backup / Restore";
+            readonly inProgress: "In progress...";
+            readonly restore: {
+                readonly desc: "Restore previously backed-up LiveCodes data. <1></1> If you choose to replace current content, you may want to back it up first. <2></2> Please visit the <3>documentations</3> for details.";
+                readonly fromFile: "Restore from file";
+                readonly heading: "Restore";
+                readonly mode: {
+                    readonly merge: "Merge with current content";
+                    readonly replace: "Replace current content";
+                };
+                readonly success: "Restored Successfully!";
+            };
+        };
+        readonly broadcast: {
+            readonly broadcastBtn: {
+                readonly start: "Broadcast";
+                readonly stop: "Stop broadcast";
+            };
+            readonly broadcasting: "Broadcasting...";
+            readonly channelURL: "Channel URL";
+            readonly connecting: "Connecting...";
+            readonly desc: "Broadcast the result page to other browsers/devices in real time. Please visit the <1>documentations</1> for details.";
+            readonly error: {
+                readonly generic: "Broadcast failed!";
+                readonly serverURLRequired: "Server URL is required!";
+            };
+            readonly heading: "Broadcast";
+            readonly includeSourceCode: "Include source code";
+            readonly serverURL: {
+                readonly heading: "Server URL";
+            };
+        };
+        readonly core: {
+            readonly broadcast: {
+                readonly heading: "Broadcast";
+                readonly successSetToken: "Broadcast user token set successfully";
+            };
+            readonly changeLanguage: {
+                readonly hint: "Change Language";
+                readonly message: "Loading {{lang}}. This may take a while!";
+            };
+            readonly copy: {
+                readonly copied: "Code copied to clipboard";
+                readonly copiedAsDataURL: "Code copied as data URL";
+                readonly hint: "Copied!";
+                readonly title: "Copy";
+            };
+            readonly error: {
+                readonly couldNotLoadTemplate: "Could not load template: {{template}}";
+                readonly failedToCopyCode: "Failed to copy code";
+                readonly failedToLoadTemplate: "Failed loading template";
+                readonly failedToLoadTemplates: "Failed loading starter templates";
+                readonly failedToParseSettings: "Failed parsing settings as JSON";
+                readonly invalidCommand: "Invalid command!";
+                readonly invalidImport: "Invalid import URL";
+                readonly invalidPanelId: "Invalid panel id";
+                readonly invalidToken: "Invalid token!";
+                readonly login: "Login error!";
+                readonly logout: "Logout error!";
+                readonly noResultContainer: "Result container not found";
+                readonly unavailable: "Command unavailable";
+                readonly unavailableForEmbeds: "Command unavailable for embeds";
+            };
+            readonly export: {
+                readonly gist: "Creating a public GitHub gist...";
+            };
+            readonly fork: {
+                readonly success: "Forked as a new project";
+            };
+            readonly fullScreen: {
+                readonly enter: "Full Screen";
+                readonly exit: "Exit Full Screen";
+            };
+            readonly import: {
+                readonly loading: "Loading Project...";
+            };
+            readonly layout: {
+                readonly horizontal: "Horizontal layout";
+                readonly responsive: "Responsive layout";
+                readonly vertical: "Vertical layout";
+            };
+            readonly loadDefaults: {
+                readonly template: "Loading default template";
+            };
+            readonly login: {
+                readonly success: "Logged in successfully";
+                readonly successWithName: "Logged in as: {{name}}";
+            };
+            readonly logout: {
+                readonly success: "Logged out successfully";
+            };
+            readonly result: {
+                readonly hint: "Show result in new window";
+            };
+            readonly save: {
+                readonly success: "Project locally saved to device!";
+                readonly successWithName: "Project \"{{name}}\" saved to device.";
+            };
+            readonly template: {
+                readonly blank: "Blank Project";
+                readonly delete: "Delete template \"{{item}}\"?";
+                readonly javascript: "JavaScript Starter";
+                readonly react: "React Starter";
+                readonly saved: "Saved as a new template";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 Starter";
+            };
+            readonly unload: {
+                readonly notSaved: "Changes you made may not be saved.";
+            };
+            readonly zoom: {
+                readonly hint: "Zoom";
+            };
+        };
+        readonly customSettings: {
+            readonly JSON: "Custom Settings JSON";
+            readonly heading: "Custom Settings";
+            readonly load: "Load";
+        };
+        readonly deploy: {
+            readonly create: {
+                readonly desc: "A new <1>public</1> repo will be created. The result page will be pushed to <2>gh-pages</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name <1></1>";
+            };
+            readonly error: {
+                readonly generic: "Deployment failed!";
+                readonly repoNameExists: "Repo name already exists";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "A new commit will be added to <1>gh-pages</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly generic: {
+                readonly commitMessage: "Commit Message";
+                readonly commitSourceCodePublic: "Commit source code (public)";
+                readonly deployBtn: "Deploy";
+                readonly deploying: "Deploying...";
+            };
+            readonly heading: "Deploy to GitHub Pages";
+            readonly searchRepo: "Search your public repos...";
+        };
+        readonly editorSettings: {
+            readonly appLanguage: {
+                readonly heading: "App UI Language";
+                readonly note: "Will reload the app to apply the changes after switching the language.";
+            };
+            readonly closeBrackets: "Auto-close brackets and quotes";
+            readonly codeJarDesc: "* The marked features are not available in CodeJar.";
+            readonly default: "Default";
+            readonly desc: "Please check the <1>documentations</1> for details.";
+            readonly editor: {
+                readonly codejar: "CodeJar";
+                readonly codemirror: "CodeMirror";
+                readonly heading: "Editor";
+                readonly monaco: "Monaco";
+            };
+            readonly editorMode: {
+                readonly emacs: "Emacs";
+                readonly heading: "Editor Mode *";
+                readonly vim: "Vim";
+            };
+            readonly editorTheme: "Editor Theme";
+            readonly emmet: "Enable Emmet *";
+            readonly enableAI: {
+                readonly heading: "Enable AI Code Assistant";
+                readonly note: "Powered by <1><2></2></1>";
+            };
+            readonly fontFamily: "Font Family";
+            readonly fontSize: "Font Size";
+            readonly format: "Format";
+            readonly heading: "Editor Settings";
+            readonly lineNumbers: "Show line numbers";
+            readonly notAvailableInCodeJar: "Not available in CodeJar";
+            readonly preview: "Preview";
+            readonly semicolons: "Format: Use Semicolons";
+            readonly singleQuote: "Format: Use Single Quotes";
+            readonly tabSize: "Tab Size";
+            readonly theme: "Dark Mode";
+            readonly trailingComma: "Format: Use Trailing Commas";
+            readonly useTabs: {
+                readonly heading: "Indentation";
+                readonly spaces: "Spaces";
+                readonly tabs: "Tabs";
+            };
+            readonly wordWrap: "Word-wrap";
+        };
+        readonly embed: {
+            readonly activeEditor: {
+                readonly heading: "Active Editor";
+                readonly markup: "{{markup}}";
+                readonly script: "{{script}}";
+                readonly style: "{{style}}";
+            };
+            readonly activeTool: {
+                readonly compiled: "Compiled";
+                readonly console: "Console";
+                readonly heading: "Active Tool";
+                readonly tests: "Tests";
+            };
+            readonly code: {
+                readonly copy: "Copy Code";
+                readonly heading: "Code";
+            };
+            readonly desc: "Please check the <1>documentations</1> for advanced configurations.";
+            readonly embedType: {
+                readonly cdn: "Script (CDN)";
+                readonly heading: "Embed Type";
+                readonly html: "HTML";
+                readonly iframe: "Iframe";
+                readonly npm: "JS (npm)";
+                readonly react: "React";
+                readonly svelte: "Svelte";
+                readonly vue: "Vue";
+            };
+            readonly heading: "Embed Project";
+            readonly lite: "Lite Mode";
+            readonly loading: {
+                readonly click: "On-click";
+                readonly eager: "Eager";
+                readonly heading: "Loading";
+                readonly lazy: "Lazy";
+            };
+            readonly mode: {
+                readonly codeblock: "Code Block";
+                readonly editor: "Editor";
+                readonly full: "Full";
+                readonly heading: "Display Mode";
+                readonly result: "Result";
+            };
+            readonly permanentUrl: "Permanent URL";
+            readonly preview: "Preview";
+            readonly previewLoading: "Loading Preview...";
+            readonly readonly: "Read only";
+            readonly theme: {
+                readonly dark: "Dark";
+                readonly heading: "Theme";
+                readonly light: "Light";
+            };
+            readonly tools: {
+                readonly closed: "Closed";
+                readonly full: "Full";
+                readonly heading: "Tools";
+                readonly none: "None";
+                readonly open: "Open";
+            };
+            readonly view: {
+                readonly editor: "Editor";
+                readonly heading: "Default View";
+                readonly result: "Result";
+                readonly split: "Split";
+            };
+        };
+        readonly generic: {
+            readonly about: {
+                readonly blog: "Blog";
+                readonly configuration: "Configuration";
+                readonly features: "Features";
+                readonly gettingStarted: "Getting Started";
+                readonly github: "GitHub";
+                readonly sdk: "SDK";
+                readonly sponsor: "Sponsor LiveCodes";
+                readonly twitter: "𝕏 / Twitter";
+            };
+            readonly clickForInfo: "Click for info...";
+            readonly close: "Close";
+            readonly error: {
+                readonly authentication: "Authentication error!";
+                readonly exceededSize: "Error: Exceeded size {{size}} MB";
+                readonly failedToReadFile: "Error: Failed to read file";
+            };
+            readonly loading: "Loading...";
+            readonly more: "More...";
+            readonly optional: "Optional";
+            readonly required: "Required";
+        };
+        readonly import: {
+            readonly bulk: {
+                readonly desc: "Bulk import multiple projects to your saved projects. Projects can be exported from the <1>Saved Projects</1> screen.";
+                readonly fromFile: "Bulk import from local file";
+                readonly fromURL: "Bulk import from URL";
+                readonly heading: "Bulk Import";
+                readonly started: "Bulk import started...";
+            };
+            readonly code: {
+                readonly desc: "Supported Sources: <1> <2>GitHub gist</2> <3>GitHub file</3> <4>Directory in a GitHub repo</4> <5>Gitlab snippet</5> <6>Gitlab file</6> <7>Directory in a Gitlab repo</7> <8>JS Bin</8> <9>Raw code</9> <10>Code in web page DOM</10> <11>Code in zip file</11> <12>Official playgrounds<13></13>(TypeScript, Vue and Svelte)</12> </1> Please visit the <14>documentations</14> for details.";
+                readonly fromFile: "Import local files";
+                readonly fromURL: "Import from URL";
+                readonly heading: "Import Code";
+            };
+            readonly error: {
+                readonly failedToLoadURL: "Error: failed to load URL";
+                readonly invalidConfigFile: "Invalid configuration file";
+                readonly invalidFile: "Error: Invalid file";
+            };
+            readonly generic: {
+                readonly file: "Local file";
+                readonly url: "URL";
+            };
+            readonly heading: "Import";
+            readonly json: {
+                readonly desc: "Import a single project JSON to editor. A project can be exported from app&nbsp;menu&nbsp;→ Export&nbsp;→ Export&nbsp;Project&nbsp;(JSON).";
+                readonly fromFile: "Import project from local file";
+                readonly fromURL: "Import project from URL";
+                readonly heading: "Import Project JSON";
+            };
+            readonly success: "Import Successful!";
+        };
+        readonly login: {
+            readonly accessAllowed: "Allow access to:";
+            readonly desc: "<1>By logging in, you agree that <2>cookies</2> may be stored on your device.</1> <3> <4>Why are these permissions required?</4> </3> <5> <6>How to change/revoke permissions?</6> </5>";
+            readonly gist: "Gists";
+            readonly heading: "Login with GitHub";
+            readonly loginAs: "Logged in as {{name}}";
+            readonly loginBtn: "Login";
+            readonly logout: "Log out";
+            readonly privateRepo: "Private Repos";
+            readonly publicRepo: "Repos";
+        };
+        readonly menu: {
+            readonly about: "About";
+            readonly assets: "Assets …";
+            readonly autoSave: "Auto Save";
+            readonly autoUpdate: "Auto Update";
+            readonly backup: "Backup / Restore …";
+            readonly broadcast: "Broadcast …";
+            readonly customSettings: "Custom Settings …";
+            readonly delay: {
+                readonly heading: "Delay: <1>1.5</1>s";
+                readonly hint: "Delay before auto-update";
+            };
+            readonly deploy: "Deploy …";
+            readonly editorSettings: "Editor Settings …";
+            readonly embed: "Embed …";
+            readonly export: {
+                readonly codepen: "Edit in CodePen";
+                readonly gist: "Export to GitHub Gist";
+                readonly heading: "Export";
+                readonly jsfiddle: "Edit in JSFiddle";
+                readonly json: "Export Project (JSON)";
+                readonly result: "Export Result (HTML)";
+                readonly src: "Export Source (ZIP)";
+            };
+            readonly formatOnsave: "Format On-save";
+            readonly import: "Import …";
+            readonly layout: "Vertical Layout";
+            readonly login: "Login …";
+            readonly logout: "Log out";
+            readonly new: "New …";
+            readonly open: "Open …";
+            readonly project: "Project Info …";
+            readonly recoverUnsaved: "Recover Unsaved";
+            readonly resources: "External Resources …";
+            readonly save: "Save";
+            readonly saveAs: {
+                readonly fork: "Fork (New Project)";
+                readonly heading: "Save as";
+                readonly template: "Template";
+            };
+            readonly share: "Share …";
+            readonly showSpacing: {
+                readonly heading: "Show Spacing";
+                readonly hint: "Press Alt/Option and move your cursor over result page";
+            };
+            readonly snippets: "Code Snippets …";
+            readonly sync: "Sync (beta) … <1> ⏳</1>";
+            readonly theme: "Dark Theme";
+            readonly welcome: {
+                readonly heading: "Welcome …";
+                readonly hint: "Show Welcome screen on startup";
+            };
+        };
+        readonly open: {
+            readonly defaultTemplate: "Default template ";
+            readonly delete: {
+                readonly all: "Delete {{projects}} projects?";
+                readonly deleting: "Deleting projects...";
+                readonly one: "Delete project: {{project}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly exportAll: "Export All";
+            readonly filter: {
+                readonly language: "filter by language";
+                readonly tag: "filter by tag";
+            };
+            readonly heading: "Saved Projects";
+            readonly import: "Import";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noData: {
+                readonly desc: "You can save a project from (settings&nbsp;menu&nbsp;&gt;&nbsp;Save) or by the keyboard shortcut (Ctrl/Cmd&nbsp;+&nbsp;S).";
+                readonly heading: "You have no saved projects.";
+            };
+            readonly noMatch: "No projects match these filters.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly filterByTags: "Filter by tags";
+                readonly search: "Search";
+            };
+            readonly removeDefault: "(unset)";
+            readonly reset: "Reset";
+            readonly setAsDefault: "Set as default";
+            readonly sort: {
+                readonly heading: "Sort By:";
+                readonly lastModified: "Last Modified";
+                readonly title: "Title";
+            };
+        };
+        readonly project: {
+            readonly desc: "Description";
+            readonly head: "Add to &lt;head&gt;";
+            readonly heading: "Project Info";
+            readonly htmlAttr: "Attributes for &lt;html&gt;";
+            readonly tags: "Tags";
+            readonly title: "Project Title";
+        };
+        readonly recoverPrompt: {
+            readonly desc: "Your last project has unsaved changes!";
+            readonly heading: "Recover unsaved project?";
+            readonly meta: "Title: <1></1> <2></2> Last modified: <3></3>";
+            readonly notShowAgain: "Do not show this again.";
+            readonly prompt: {
+                readonly discard: "Discard unsaved project";
+                readonly heading: "<1></1>Do you want to recover it now?";
+                readonly recover: "Recover project to editor";
+                readonly save: "Save to device and continue";
+            };
+        };
+        readonly resources: {
+            readonly browseOnJsDelivr: "Browse package files on jsDelivr";
+            readonly cssPresets: {
+                readonly heading: "CSS Presets";
+                readonly none: "None";
+                readonly normalizeCss: "Normalize.css";
+                readonly resetCss: "Reset CSS";
+            };
+            readonly error: {
+                readonly failedToLoadResults: "Failed to load results!";
+                readonly noResultsFound: "No results found for: ";
+            };
+            readonly fonts: {
+                readonly add: "Add";
+                readonly heading: "Fonts <1>(powered by Google Fonts)</1>";
+                readonly select: "Select font ...";
+            };
+            readonly heading: "External Resources";
+            readonly scripts: "External Scripts";
+            readonly search: {
+                readonly heading: "Search Packages <1>(powered by jsDelivr)</1>";
+                readonly placeholder: "e.g. jquery, lodash@4, bootstrap@5.2.3, ...";
+            };
+            readonly stylesheets: "External Stylesheets";
+            readonly urlDesc: "Add stylesheet/script URLs. Each URL should be in a separate line.";
+        };
+        readonly savePrompt: {
+            readonly heading: "Unsaved changes";
+            readonly prompt: {
+                readonly cancel: "Cancel";
+                readonly discard: "Do not save";
+                readonly heading: "The changes you made may not be saved. <1></1> Do you want to save now?";
+                readonly save: "Save";
+            };
+        };
+        readonly share: {
+            readonly characters: "{{urlLength}} characters";
+            readonly copy: {
+                readonly clickToCopy: "Click to copy";
+                readonly copied: "URL copied to clipboard";
+            };
+            readonly encodedURL: "Get encoded URL";
+            readonly error: {
+                readonly failedToCopy: "Copy to clipboard failed!";
+                readonly failedToGenerateURL: "Failed to generate short URL!";
+            };
+            readonly expireInOneYear: "Expires in 1 year";
+            readonly generateURL: "Generating URL …";
+            readonly heading: "Share";
+            readonly permanentURL: "Permanent URL";
+            readonly qrcode: {
+                readonly clickToDownload: "Click to download";
+                readonly generating: "Generating...";
+            };
+            readonly services: {
+                readonly copyUrl: "Copy URL";
+                readonly devTo: "Dev.to";
+                readonly email: "Email";
+                readonly facebook: "Facebook";
+                readonly hackerNews: "Hacker News";
+                readonly linkedIn: "LinkedIn";
+                readonly pinterest: "Pinterest";
+                readonly pocket: "Pocket";
+                readonly qrCode: "QR code";
+                readonly reddit: "Reddit";
+                readonly share: "Share via …";
+                readonly telegram: "Telegram";
+                readonly tumblr: "Tumblr";
+                readonly twitter: "𝕏 / Twitter";
+                readonly whatsApp: "WhatsApp";
+            };
+            readonly shortURL: "Get short URL";
+        };
+        readonly snippets: {
+            readonly action: {
+                readonly copy: "Copy";
+                readonly delete: "Delete";
+                readonly edit: "Edit";
+            };
+            readonly add: {
+                readonly code: "Code";
+                readonly desc: "Description";
+                readonly heading: "Add Snippet";
+                readonly language: "Language";
+                readonly save: "Save";
+                readonly snippets: "Snippets";
+                readonly title: "Title";
+            };
+            readonly copy: {
+                readonly clickToCopySnippet: "Click to copy snippet";
+                readonly copied: "Snippet is copied to clipboard.";
+            };
+            readonly delete: {
+                readonly all: "Delete {{snippets}} snippets?";
+                readonly one: "Delete snippet: {{snippet}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly error: {
+                readonly failedToCopy: "Failed to copy URL.";
+                readonly noTitle: "Please add snippet title.";
+            };
+            readonly filter: {
+                readonly language: "filter by language";
+            };
+            readonly heading: "Code Snippets";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noMatch: "No snippets match these filters.";
+            readonly noSavedSnippets: "You have no saved snippets.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly search: "Search";
+            };
+            readonly reset: "Reset";
+            readonly save: {
+                readonly success: "Snippet locally saved to device!";
+            };
+            readonly sort: {
+                readonly date: "Date";
+                readonly heading: "Sort By:";
+                readonly title: "Title";
+            };
+            readonly text: "Plain Text";
+        };
+        readonly splash: {
+            readonly loading: "Loading LiveCodes…";
+        };
+        readonly sync: {
+            readonly autoSync: "Auto sync";
+            readonly create: {
+                readonly desc: "A new <1>private</1> repo will be created. Your LiveCodes local data will be synchronized with <2>main</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly error: {
+                readonly generic: "Sync failed!";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "Your LiveCodes local data will be synchronized with <1>main</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly heading: "Sync to GitHub Repo";
+            readonly searchRepos: "Search your repos...";
+            readonly success: "Sync complete!";
+            readonly syncBtn: "Sync";
+            readonly syncInProgress: "Sync in progress...";
+            readonly syncStarted: "Sync started...";
+        };
+        readonly templates: {
+            readonly heading: "New Project";
+            readonly noUserTemplates: {
+                readonly desc: "You can save a project as a template from <1></1>(App&nbsp;menu&nbsp;&gt;&nbsp;Save&nbsp;as&nbsp;&gt; Template).";
+                readonly heading: "You have no saved templates.";
+            };
+            readonly starter: {
+                readonly angular: "Angular Starter";
+                readonly assemblyscript: "AssemblyScript Starter";
+                readonly astro: "Astro Starter";
+                readonly backbone: "Backbone Starter";
+                readonly blank: "Blank Project";
+                readonly blockly: "Blockly Starter";
+                readonly bootstrap: "Bootstrap Starter";
+                readonly civet: "Civet Starter";
+                readonly clio: "Clio Starter";
+                readonly clojurescript: "ClojureScript Starter";
+                readonly coffeescript: "CoffeeScript Starter";
+                readonly commonlisp: "Common Lisp Starter";
+                readonly cpp: "C++ Starter";
+                readonly diagrams: "Diagrams Starter";
+                readonly fennel: "Fennel Starter";
+                readonly gleam: "Gleam Starter";
+                readonly go: "Go Starter";
+                readonly heading: "Starter Templates";
+                readonly imba: "Imba Starter";
+                readonly javascript: "JavaScript Starter";
+                readonly jest: "Jest Starter";
+                readonly 'jest-react': "Jest/React Starter";
+                readonly jquery: "jQuery Starter";
+                readonly julia: "Julia Starter";
+                readonly knockout: "Knockout Starter";
+                readonly lit: "Lit Starter";
+                readonly livescript: "LiveScript Starter";
+                readonly loading: "Loading starter templates...";
+                readonly lua: "Lua Starter";
+                readonly 'lua-wasm': "Lua (Wasm) Starter";
+                readonly malina: "Malina.js Starter";
+                readonly markdown: "Markdown Starter";
+                readonly mdx: "MDX Starter";
+                readonly ocaml: "Ocaml Starter";
+                readonly perl: "Perl Starter";
+                readonly php: "PHP Starter";
+                readonly 'php-wasm': "PHP (Wasm) Starter";
+                readonly postgresql: "PostgreSQL Starter";
+                readonly preact: "Preact Starter";
+                readonly prolog: "Prolog Starter";
+                readonly python: "Python Starter";
+                readonly r: "R Starter";
+                readonly react: "React Starter";
+                readonly 'react-native': "React Native Starter";
+                readonly reason: "Reason Starter";
+                readonly rescript: "ReScript Starter";
+                readonly riot: "Riot.js Starter";
+                readonly ruby: "Ruby Starter";
+                readonly 'ruby-wasm': "Ruby (Wasm) Starter";
+                readonly scheme: "Scheme Starter";
+                readonly solid: "Solid Starter";
+                readonly sql: "SQL Starter";
+                readonly stencil: "Stencil Starter";
+                readonly svelte: "Svelte Starter";
+                readonly tailwindcss: "Tailwind CSS Starter";
+                readonly tcl: "Tcl Starter";
+                readonly teal: "Teal Starter";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 SFC Starter";
+                readonly vue2: "Vue 2 Starter";
+                readonly wat: "WebAssembly Text Starter";
+            };
+            readonly user: {
+                readonly heading: "My Templates";
+                readonly loading: "Loading user templates...";
+            };
+        };
+        readonly testEditor: {
+            readonly heading: "Edit Tests";
+            readonly load: "Load";
+            readonly tests: "Tests";
+        };
+        readonly toolspane: {
+            readonly close: "Close";
+            readonly compiled: {
+                readonly title: "Compiled";
+            };
+            readonly console: {
+                readonly clear: "Clear console";
+                readonly title: "Console";
+            };
+            readonly test: {
+                readonly edit: "Edit";
+                readonly error: "<1><2>Test error!</2></1>";
+                readonly loading: "<1>Loading tests...</1>";
+                readonly noTest: "<1>This project has no tests!</1>";
+                readonly reset: "Reset";
+                readonly run: {
+                    readonly desc: "Ctrl/Cmd + Alt + T";
+                    readonly heading: "Run";
+                };
+                readonly summary: {
+                    readonly desc: "Tests: {{failed}}\n       {{passed}}\n       {{skipped}}\n       {{total}}<1></1>\nTime: {{duration}}s";
+                    readonly failed: "{{failedNum}} failed";
+                    readonly passed: "{{passedNum}} passed";
+                    readonly skipped: "{{skippedNum}} skipped";
+                    readonly total: "{{totalNum}} total";
+                };
+                readonly title: "Tests";
+                readonly watch: {
+                    readonly desc: "Run tests when code changes";
+                    readonly heading: "Watch";
+                };
+            };
+        };
+        readonly welcome: {
+            readonly about: {
+                readonly documentation: "Documentations";
+                readonly heading: "About LiveCodes";
+            };
+            readonly heading: "Welcome";
+            readonly recent: {
+                readonly heading: "Recent";
+            };
+            readonly recover: {
+                readonly cancel: "Cancel";
+                readonly heading: "Recover";
+                readonly lastModified: "Last modified: <1></1>";
+                readonly recover: "Recover";
+                readonly save: "Save";
+                readonly unsavedChanges: "Your last project had unsaved changes:";
+            };
+            readonly showOnStartup: "Show on startup";
+            readonly start: {
+                readonly heading: "Start";
+                readonly import: "Import...";
+                readonly loadDefaultTemplate: "Load default template";
+                readonly new: "New...";
+                readonly noDefaultTemplate: "No default template";
+                readonly open: "Open...";
+            };
+            readonly templates: {
+                readonly heading: "Starter Templates";
+            };
+        };
+    };
+    export default translation;
+}
+declare module "livecodes/i18n/locales/ru/language-info" {
+    const languageInfo: {
+        readonly artTemplate: {
+            readonly desc: "High performance JavaScript templating engine.";
+            readonly link: "<1> <2>art-template official website</2> </1> <3> <4>art-template documentation</4> </3>";
+            readonly name: "art-template";
+        };
+        readonly asciidoc: {
+            readonly desc: "AsciiDoc compiled to HTML using Asciidoctor.";
+            readonly link: "<1> <2>AsciiDoc official website</2> </1> <3> <4>Asciidoctor official website</4> </3> <5> <6>Asciidoctor documentation</6> </5> <7> <8>Learn X in Y minutes, where X=asciidoc</8> </7>";
+            readonly name: "AsciiDoc";
+        };
+        readonly assemblyscript: {
+            readonly desc: "A TypeScript-like language for WebAssembly.";
+            readonly link: "<1> <2>AssemblyScript official website</2> </1> <3> <4>AssemblyScript documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "AssemblyScript";
+        };
+        readonly astro: {
+            readonly desc: "Build faster websites with less client-side Javascript. (Still in Beta)";
+            readonly link: "<1> <2>Astro official website</2> </1> <3> <4>Astro documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Astro";
+        };
+        readonly babel: {
+            readonly desc: "The JavaScript compiler";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Babel documentation</4> </3>";
+            readonly name: "Babel";
+        };
+        readonly bbcode: {
+            readonly desc: "BBCode (\"Bulletin Board Code\") is a lightweight markup language used to format messages in many Internet forum software.";
+            readonly link: "<1><2>bbcode.org</2></1> <3> <4>BBCode guide</4> </3> <5> <6>BBCode on Wikipedia</6> </5>";
+            readonly name: "BBCode";
+        };
+        readonly blockly: {
+            readonly desc: "A JavaScript library for building visual programming editors.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>Guides</4> </3> <5> <6>Reference</6> </5> <7> <8>Samples</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Blockly";
+        };
+        readonly civet: {
+            readonly desc: "Civet is a programming language that compiles to TypeScript or JavaScript, so you can use existing tooling but enable concise and powerful syntax.";
+            readonly link: "<1> <2>Civet official website</2> </1> <3> <4>Civet cheatsheet</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Civet";
+        };
+        readonly clio: {
+            readonly desc: "Clio is a fast, distributed, functional programming language that compiles to JavaScript.";
+            readonly link: "<1> <2>Clio official website</2> </1> <3> <4>Clio documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Clio";
+        };
+        readonly clojurescript: {
+            readonly desc: "ClojureScript is a compiler for <1>Clojure</1> that targets JavaScript. <2></2>In LiveCodes, it runs in the browser using <3>Cherry</3>.";
+            readonly link: "<1> <2>ClojureScript official website</2> </1> <3> <4>Clojure official website</4> </3> <5> <6>Cherry repo</6> </5> <7> <8>Learn X in Y minutes, where X=clojure</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "ClojureScript (CLJS)";
+        };
+        readonly coffeescript: {
+            readonly desc: "Unfancy JavaScript.";
+            readonly link: "<1> <2>CoffeeScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=coffeescript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "CoffeeScript";
+        };
+        readonly commonlisp: {
+            readonly desc: "A Common Lisp implementation on Javascript using JSCL (a Lisp-to-Javascript compiler bootstrapped from Common Lisp).";
+            readonly link: "<1> <2>Common-Lisp.net</2> </1> <3> <4>JSCL Project</4> </3> <5> <6>Common Lisp Resources</6> </5> <7> <8>Learn X in Y minutes, where X=Common Lisp</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Common Lisp";
+        };
+        readonly cpp: {
+            readonly desc1: "C++ support using JSCPP (a simple C++ interpreter written in JavaScript).";
+            readonly desc2: "It is not a complete implementation of C++. Please refer to <1>JSCPP documentation</1> for details.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>JSCPP</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C++";
+        };
+        readonly cppWasm: {
+            readonly desc: "Clang C/C++ compiler running on WebAssembly, using <1>wasm-clang</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>Clang official website</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C/C++ (Wasm)";
+        };
+        readonly diagrams: {
+            readonly desc1: "(Experimental)";
+            readonly desc2: "Diagrams-as-code. Supports:";
+            readonly desc3: "<1> <2>Cytoscape</2> </1> <3> <4>ELK</4> (using <5>elkjs</5>) </3> <6> <7>Gnuplot</7> (using <8>gnuplot-JS</8>) </6> <9> <10>Graphviz</10> (using <11>@hpcc-js/wasm</11>) </9> <12> <13>Mermaid</13> </12> <14> <15>Nomnoml</15> </14> <16> <17>Pintora</17> </16> <18> <19>Plotly</19> </18> <20> <21>Svgbob</21> </20> <22> <23>Vega</23> </22> <24> <25>VegaLite</25> </24> <26> <27>WaveDrom</27> </26>";
+            readonly link: "<1> <2>Load starter template</2> </1> <3> <4>LiveCodes Documentation</4> </3>";
+            readonly name: "Diagrams";
+        };
+        readonly dot: {
+            readonly desc: "The fastest + concise javascript template engine for Node.js and browsers.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "doT.js";
+        };
+        readonly ejs: {
+            readonly desc: "Embedded JavaScript templating.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "EJS";
+        };
+        readonly eta: {
+            readonly desc: "Embedded JS template engine for Node, Deno, and the browser. Lighweight, fast, and pluggable. Written in TypeScript.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Eta";
+        };
+        readonly fennel: {
+            readonly desc: "Fennel is a programming language that brings together the speed, simplicity, and reach of Lua with the flexibility of a lisp syntax and macro system.";
+            readonly link: "<1> <2>Fennel official website</2> </1> <3> <4>Getting Started with Fennel</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Fennel";
+        };
+        readonly flow: {
+            readonly desc: "Flow is a static type checker for JavaScript.";
+            readonly link: "<1> <2>Flow official website</2> </1> <3> <4>Flow documentation</4> </3>";
+            readonly name: "Flow";
+        };
+        readonly gleam: {
+            readonly desc1: "Gleam is a friendly language for building type-safe systems that scale!";
+            readonly desc2: "Gleam is a statically-typed functional programming language, which compiles to Erlang or JavaScript.";
+            readonly link: "<1><2>Gleam website</2></1> <3> <4>Gleam documentation</4> </3> <5> <6>Gleam language tour</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Gleam";
+        };
+        readonly go: {
+            readonly desc1: "Go (Golang) is an open source programming language that makes it easy to build simple, reliable, and efficient software.";
+            readonly desc2: "Here, it is compiled to JavaScript using GopherJS.";
+            readonly link: "<1><2>Go website</2></1> <3><4>Go documentation</4></3> <5> <6>GopherJS repo</6> </5> <7> <8>Learn X in Y minutes, where X=Go</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Go";
+        };
+        readonly haml: {
+            readonly desc: "Haml compiler for client side javascript view templates using clientside-haml-js.";
+            readonly link: "<1><2>Haml official website</2></1> <3> <4>Haml documentation</4> </3> <5> <6>clientside-haml-js GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=haml</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Haml";
+        };
+        readonly handlebars: {
+            readonly desc: "Minimal templating on steroids.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Handlebars";
+        };
+        readonly imba: {
+            readonly desc: "The friendly full-stack language.";
+            readonly link: "<1><2>Official website</2></1>";
+            readonly name: "Imba";
+        };
+        readonly jsx: {
+            readonly desc: "JSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler.  By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "JSX";
+        };
+        readonly julia: {
+            readonly desc1: "(Julia language support in LiveCodes is still experimental)";
+            readonly desc2: "Julia compiler and Julia Base running on WASM, using <1>julia-wasm</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Julia official website</2> </1> <3> <4>Julia documentation</4> </3> <5> <6>Learn X in Y minutes, where X=Julia</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Julia";
+        };
+        readonly less: {
+            readonly desc: "It's CSS, with just a little more.";
+            readonly link: "<1><2>Less official website</2></1> <3> <4>Learn X in Y minutes, where X=less</4> </3>";
+            readonly name: "Less";
+        };
+        readonly liquid: {
+            readonly desc: "A simple, expressive and safe template engine.";
+            readonly link: "<1> <2>LiquidJS official website</2> </1> <3> <4>LiquidJS documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "LiquidJS";
+        };
+        readonly livescript: {
+            readonly desc: "A language which compiles to JavaScript.";
+            readonly link: "<1> <2>LiveScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=LiveScript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "LiveScript";
+        };
+        readonly lua: {
+            readonly desc: "Lua running in the browser using fengari-web.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Fengari official website</6> </5> <7> <8>fengari-web GitHub repo</8> </7> <9> <10>Learn X in Y minutes, where X=Lua</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "Lua";
+        };
+        readonly luaWasm: {
+            readonly desc: "Lua running in the browser using Wasmoon, a real lua 5.4 VM with JS bindings made with WebAssembly.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Wasmoon GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=Lua</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Lua (Wasm)";
+        };
+        readonly malina: {
+            readonly desc: "Frontend compiler, inspired by Svelte.";
+            readonly link: "<1> <2>Malina.js repo</2> </1> <3> <4>Malina.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Malina.js";
+        };
+        readonly markdown: {
+            readonly desc: "Markdown compiled to HTML using Marked.";
+            readonly link: "<1> <2>Markdown official website</2> </1> <3> <4>Marked documentation</4> </3> <5> <6>Learn X in Y minutes, where X=markdown</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Markdown";
+        };
+        readonly mdx: {
+            readonly desc: "Markdown for the component era. <1></1>MDX lets you seamlessly write JSX in your Markdown documents.";
+            readonly link: "<1><2>MDX documentation</2></1> <3><4>Load starter template</4></3>";
+            readonly name: "MDX";
+        };
+        readonly mjml: {
+            readonly desc: "MJML is a markup language designed to reduce the pain of coding a responsive email.";
+            readonly link: "<1><2>MJML official website</2></1> <3> <4>MJML documentation</4> </3> <5> <6>MJML official templates</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "MJML";
+        };
+        readonly mustache: {
+            readonly desc: "Logic-less templates.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>mustache(5) manual</4> </3> <5> <6>JavaScript implementation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "Mustache";
+        };
+        readonly nunjucks: {
+            readonly desc: "A rich and powerful templating language for JavaScript. Nunjucks is essentially a port of <1>jinja2</1>.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Nunjucks";
+        };
+        readonly ocaml: {
+            readonly desc1: "OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles.";
+            readonly desc2: "ReScript compiler is used here to compile OCaml to JavaScript.";
+            readonly link: "<1><2>OCaml website</2></1> <3> <4>OCaml documentation</4> </3> <5> <6>ReScript website</6> </5> <7> <8>Learn X in Y minutes, where X=OCaml</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "OCaml";
+        };
+        readonly perl: {
+            readonly desc: "Perl running in the browser using Perlito.";
+            readonly link: "<1> <2>Perl official website</2> </1> <3> <4>Perl documentation</4> </3> <5> <6>Perlito5 Readme</6> </5> <7> <8>Learn X in Y minutes, where X=perl</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Perl";
+        };
+        readonly php: {
+            readonly desc: "PHP running in the browser using Uniter.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>Uniter GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11><12>Load starter template</12></11>";
+            readonly name: "PHP";
+        };
+        readonly phpWasm: {
+            readonly desc: "PHP in Browser, powered by WebAssembly, using php-wasm.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>php-wasm GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "PHP (Wasm)";
+        };
+        readonly postgresql: {
+            readonly desc: "PostgreSQL packaged as WASM using PGlite";
+            readonly link: "<1> <2>PostgreSQL official website</2> </1> <3> <4>PostgreSQL documentation</4> </3> <5> <6>PGlite GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "PostgreSQL";
+        };
+        readonly prolog: {
+            readonly desc: "An open source Prolog interpreter in JavaScript.";
+            readonly link: "<1> <2>Tau Prolog official website</2> </1> <3> <4>Tau Prolog documentation</4> </3> <5> <6>SWI-Prolog</6> </5> <7> <8>Learn X in Y minutes, where X=Prolog</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Tau Prolog";
+        };
+        readonly pug: {
+            readonly desc: "Robust, elegant, feature rich template engine.";
+            readonly link: "<1> <2>Pug documentation</2> </1> <3> <4>Learn X in Y minutes, where X=Pug</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Pug";
+        };
+        readonly python: {
+            readonly desc: "Python running in the browser using Brython.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5> <6>Brython documentation</6> </5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python";
+        };
+        readonly pythonWasm: {
+            readonly desc1: "Python with the scientific stack, compiled to WebAssembly using Pyodide.";
+            readonly desc2: "Pyodide allows using Python scientific stack including NumPy, Pandas, Matplotlib, SciPy, scikit-learn and many more. In addition it’s possible to install pure Python wheels from PyPi.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5><6>Pyodide documentation</6></5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python (Wasm)";
+        };
+        readonly r: {
+            readonly desc: "R running in the browser using WebR.";
+            readonly link: "<1> <2>R project official website</2> </1> <3> <4>The R Manuals</4> </3> <5> <6>R for Data Science (2e)</6> </5> <7> <8>WebR documentation</8> </7> <9> <10>Learn X in Y minutes, where X=R</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "R";
+        };
+        readonly reactNative: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "React Native for Web";
+        };
+        readonly reactNativeTsx: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>TypeScript website</10> </9> <11> <12>TypeScript documentation</12> </11> <13> <14>LiveCodes Documentations</14> </13> <15> <16>Load starter template (JSX)</16> </15>";
+            readonly name: "React Native for Web (with TypeScript)";
+        };
+        readonly reason: {
+            readonly desc1: "Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.";
+            readonly desc2: "ReScript compiler is used here to compile Reason to JavaScript.";
+            readonly link: "<1><2>Reason website</2></1> <3> <4>Reason documentation</4> </3> <5> <6>ReasonReact</6> </5> <7> <8>ReScript website</8> </7> <9> <10>Learn X in Y minutes, where X=reason</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Reason";
+        };
+        readonly rescript: {
+            readonly desc: "ReScript is a robustly typed language that compiles to efficient and human-readable JavaScript.";
+            readonly link: "<1> <2>ReScript website</2> </1> <3> <4>ReScript / React</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "ReScript";
+        };
+        readonly richtext: {
+            readonly desc1: "Using Quill:";
+            readonly desc2: "Your powerful rich text editor.";
+            readonly link: "<1> <2>Quill official website</2> </1>";
+            readonly name: "Rich Text Editor";
+        };
+        readonly riot: {
+            readonly desc: "Simple and elegant component-based UI library.";
+            readonly link: "<1> <2>Riot.js official website</2> </1> <3> <4>Riot.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Riot.js";
+        };
+        readonly ruby: {
+            readonly desc: "Ruby running in the browser using Opal.";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5><6>Opal official website</6></5> <7> <8>Opal standard library CDN</8> </7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby";
+        };
+        readonly rubyWasm: {
+            readonly desc: "Ruby running in the browser using ruby-wasm (a collection of WebAssembly ports of the CRuby).";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5> <6>ruby.wasm website</6> </5> <7><8>CRuby</8></7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby (WASM)";
+        };
+        readonly sass: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>Sass (the indented) syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "Sass";
+        };
+        readonly scheme: {
+            readonly desc: "Scheme running in the browser using biwascheme.";
+            readonly link: "<1> <2>The Scheme Programming Language</2> </1> <3> <4>BiwaScheme official website</4> </3> <5> <6>BiwaScheme reference</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Scheme";
+        };
+        readonly scss: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>SCSS syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "SCSS";
+        };
+        readonly solid: {
+            readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+            readonly link: "<1><2>Official website</2></1> <3><4>Documentation</4></3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template (TSX)</8> </7>";
+            readonly name: "Solid";
+            readonly tsx: {
+                readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+                readonly link: "<1><2>Official website</2></1> <3> <4>Solid documentation</4> </3> <5> <6>TypeScript website</6> </5> <7> <8>TypeScript documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+                readonly name: "Solid (with TypeScript)";
+            };
+        };
+        readonly sql: {
+            readonly desc: "SQLite compiled to JavaScript using SQL.js";
+            readonly link: "<1> <2>SQLite official website</2> </1> <3> <4>SQLite syntax documentation</4> </3> <5> <6>SQL.js official website</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "SQLite";
+        };
+        readonly stencil: {
+            readonly desc: "A Compiler for Web Components and High Performance Web Apps.";
+            readonly link: "<1> <2>Stencil official website</2> </1> <3> <4>Stencil documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Stencil";
+        };
+        readonly styleProcessors: {
+            readonly link: "<1> <2>Tailwind CSS</2> </1> <3> <4>Windi CSS</4> </3> <5> <6>UnoCSS</6> </5> <7> <8>Lightning CSS</8> </7> <9> <10>PostCSS</10> Plugins: <11> <12> <13>Autoprefixer</13> </12> <14> <15>postcss-preset-env</15> </14> <16> <17>postcss-import-url</17> </16> <18> <19>postcss-modules</19> </18> </11> </9>";
+            readonly name: "CSS Frameworks and Processors";
+        };
+        readonly stylis: {
+            readonly desc: "Light-weight css preprocessor.";
+            readonly link: "<1> <2>Stylis official website</2> </1>";
+            readonly name: "Stylis";
+        };
+        readonly stylus: {
+            readonly desc: "Expressive, Dynamic, Robust CSS.";
+            readonly link: "<1> <2>Stylus official website</2> </1> <3> <4>Learn X in Y minutes, where X=stylus</4> </3>";
+            readonly name: "Stylus";
+        };
+        readonly sucrase: {
+            readonly desc: "Super-fast alternative to Babel for when you can target modern JS runtimes.";
+            readonly link: "<1> <2>Sucrase official website</2> </1> <3> <4>Sucrase GitHub Repo</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Sucrase";
+        };
+        readonly svelte: {
+            readonly desc: "Cybernetically enhanced web apps.";
+            readonly link: "<1> <2>Svelte official website</2> </1> <3> <4>Svelte documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Svelte";
+        };
+        readonly tcl: {
+            readonly desc: "Tcl running in the browser, using <1>wacl</1>.";
+            readonly link: "<1> <2>Tcl official website</2> </1> <3> <4>wacl repo</4> </3> <5> <6>Learn X in Y minutes, where X=Tcl</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Tcl (Tool Command Language)";
+        };
+        readonly teal: {
+            readonly desc: "A typed dialect of Lua.";
+            readonly link: "<1> <2>Teal GitHub repo</2> </1> <3> <4>Teal docs</4> </3> <5> <6>Teal tutorial</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Teal";
+        };
+        readonly tsx: {
+            readonly desc: "TypeScript in JSX. TSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler. By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>Typescript documentation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "TSX";
+        };
+        readonly twig: {
+            readonly desc: "A JavaScript implementation of the <1>Twig</1> PHP templating language by <2>Twig.js</2> .";
+            readonly link: "<1> <2>Twig official website</2> </1> <3> <4>Twig Documentation</4> </3> <5> <6>Twig.js Repo</6> </5> <7> <8>Twig.js Documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Twig";
+        };
+        readonly typescript: {
+            readonly desc: "A Typed Superset of JavaScript.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>TypeScript documentation</4> </3> <5> <6>Learn X in Y minutes, where X=TypeScript</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "TypeScript";
+        };
+        readonly vue: {
+            readonly link: "<1> <2>Vue.js v3 official website</2> </1> <3> <4>Vue3 documentation</4> </3> <5> <6>Vue3 single file components</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Vue3 Single File Components";
+        };
+        readonly vue2: {
+            readonly desc: "Loaded using vue3-sfc-loader.";
+            readonly link: "<1><2>Vue.js official website</2></1> <3> <4>Vue2 documentation</4> </3> <5> <6>Vue2 single file components</6> </5> <7> <8>vue3-sfc-loader GitHub repo</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Vue2 Single File Components";
+        };
+        readonly wat: {
+            readonly desc1: "Low-level textual representation of the WebAssembly (wasm) binary format.";
+            readonly desc2: "It is converted to wasm using wabt.js.";
+            readonly link: "<1><2>WebAssembly.org</2></1> <3> <4>WebAssembly Text Specs</4> </3> <5> <6>WebAssembly on MDN</6> </5> <7> <8>Understanding WebAssembly text format</8> </7> <9> <10>wabt.js documentation</10> </9> <11> <12>Learn X in Y minutes, where X=WebAssembly</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "WebAssembly Text Format";
+        };
+    };
+    export default languageInfo;
+}
+declare module "livecodes/i18n/locales/ru/translation" {
+    const translation: {
+        readonly about: {
+            readonly documentations: {
+                readonly aboutUs: "About us";
+                readonly contact: "Contact";
+                readonly heading: "Documentations";
+                readonly home: "Home";
+                readonly license: "License";
+            };
+            readonly heading: "About LiveCodes";
+            readonly livecodes: {
+                readonly para1: "<1><2>LiveCodes</2></1> is an <3>open-source</3>, <4>feature-rich</4>, <5>client-side</5> code playground. Currently, <6>80+ languages/<7></7>frameworks</6> are supported. It can be used as a standalone app or can be <8>embedded</8> in any web page. There are many ways to <9>prefill playgrounds</9> with code.";
+                readonly para2: "A wide range of <1>configuration options</1> makes it very flexible. A powerful <2>SDK</2> (for <3>JS/TS</3>, <4>React</4>, <5>Vue</5> and <6>Svelte</6>) facilitates <7>embedding</7> and <8>communicating</8> with playgrounds. <9>Comprehensive documentations</9> are available with code samples, live demos and screenshots.";
+            };
+            readonly version: {
+                readonly app: "App version: {{APP_VERSION}}";
+                readonly appPermanentUrl: "App Permanent URL";
+                readonly commit: "Git commit: {{COMMIT_SHA}}";
+                readonly heading: "Version";
+                readonly sdk: "SDK version: {{SDK_VERSION}}";
+                readonly sdkPermanentUrl: "SDK Permanent URL";
+            };
+        };
+        readonly app: {
+            readonly copy: {
+                readonly hint: "Copy (Ctrl/Cmd + A, Ctrl/Cmd + C)";
+            };
+            readonly copyAsUrl: {
+                readonly hint: "Copy code as data URL";
+            };
+            readonly customSettings: {
+                readonly hint: "Custom Settings";
+            };
+            readonly editorMode: {
+                readonly hint: "Editor Mode";
+            };
+            readonly editorSettings: {
+                readonly hint: "Editor Settings";
+            };
+            readonly externalResources: {
+                readonly hint: "External Resources";
+            };
+            readonly focus: {
+                readonly hint: "Toggle Focus mode";
+            };
+            readonly format: {
+                readonly hint: "Format (Alt + Shift + F)";
+            };
+            readonly fullscreen: {
+                readonly hint: "Full Screen";
+            };
+            readonly logo: {
+                readonly title: "LiveCodes: Code playground that runs in the browser!";
+            };
+            readonly projectInfo: {
+                readonly hint: "Project Info";
+            };
+            readonly redo: {
+                readonly hint: "Redo (Ctrl/Cmd + Shift + Z)";
+            };
+            readonly result: {
+                readonly hint: "Toggle Result";
+            };
+            readonly run: {
+                readonly hint: "Run (Shift + Enter)";
+            };
+            readonly share: {
+                readonly hint: "Share";
+            };
+            readonly undo: {
+                readonly hint: "Undo (Ctrl/Cmd + Z)";
+            };
+            readonly untitledProject: "Untitled Project";
+        };
+        readonly assets: {
+            readonly add: {
+                readonly dataURL: {
+                    readonly desc: "Add asset as a base64-encoded <1>data url</1>.";
+                    readonly heading: "Data URL";
+                    readonly label: "Add file";
+                };
+                readonly githubPages: {
+                    readonly desc: "Deploy asset to GitHub Pages. The file is pushed to <1>gh-pages</1> branch of the repo <2>livecodes-assets</2> on your GitHub account. If the repo does not already exist, a public repo will be created.";
+                    readonly heading: "GitHub Pages";
+                    readonly label: "Upload file";
+                };
+                readonly heading: "Add Asset";
+            };
+            readonly delete: {
+                readonly all: "Delete {{assets}} assets?";
+                readonly one: "Delete asset: {{asset}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly generic: {
+                readonly clickToCopyURL: "Click to copy URL";
+            };
+            readonly heading: "Assets";
+            readonly link: {
+                readonly date: "Date: {{modified}}";
+                readonly type: "Type: {{type}}";
+                readonly url: "URL: {{url}}";
+            };
+            readonly loadFile: {
+                readonly error: {
+                    readonly failedToUpload: "Error: Failed to upload file";
+                    readonly unauthenticated: "Error: Unauthenticated user";
+                };
+                readonly upload: "Upload file";
+                readonly uploading: "Uploading...";
+            };
+            readonly noMatch: "No assets match these filters.";
+            readonly noSavedAssets: "You have no saved assets.";
+            readonly processAsset: {
+                readonly addFile: "Added file: ";
+                readonly deployNotice: "The asset should be available on this URL soon (~1 min).";
+                readonly success: "File added to assets!";
+                readonly urlLabel: "URL: ";
+            };
+            readonly resetFilters: "Reset";
+            readonly search: "Search";
+            readonly sort: {
+                readonly date: "Date";
+                readonly fileName: "File Name";
+                readonly heading: "Sort By:";
+            };
+            readonly type: {
+                readonly archive: "Archive";
+                readonly audio: "Audio";
+                readonly csv: "CSV";
+                readonly font: "Font";
+                readonly html: "HTML";
+                readonly icon: "Icon";
+                readonly image: "Image";
+                readonly json: "JSON";
+                readonly other: "Other";
+                readonly script: "Script";
+                readonly stylesheet: "Stylesheet";
+                readonly text: "Text";
+                readonly video: "Video";
+                readonly xml: "XML";
+            };
+            readonly types: {
+                readonly all: "All types";
+            };
+            readonly url: {
+                readonly fail: "Failed to copy URL.";
+                readonly success: "URL is copied to clipboard.";
+            };
+        };
+        readonly backup: {
+            readonly backup: {
+                readonly assets: "Assets";
+                readonly button: "Backup";
+                readonly desc: "Backup LiveCodes data, so that it can be later restored on this or other devices. <1></1> Please visit the <2>documentations</2> for details.";
+                readonly heading: "Backup";
+                readonly projects: "Projects";
+                readonly settings: "User Settings";
+                readonly snippets: "Code Snippets";
+                readonly templates: "User Templates";
+            };
+            readonly backupBtn: "Backup";
+            readonly error: {
+                readonly atLeastOneStore: "Please select at least one store to backup";
+                readonly incorrectFileType: "Error: Incorrect file type";
+            };
+            readonly fileInputLabel: "Restore from file";
+            readonly heading: "Backup / Restore";
+            readonly inProgress: "In progress...";
+            readonly restore: {
+                readonly desc: "Restore previously backed-up LiveCodes data. <1></1> If you choose to replace current content, you may want to back it up first. <2></2> Please visit the <3>documentations</3> for details.";
+                readonly fromFile: "Restore from file";
+                readonly heading: "Restore";
+                readonly mode: {
+                    readonly merge: "Merge with current content";
+                    readonly replace: "Replace current content";
+                };
+                readonly success: "Restored Successfully!";
+            };
+        };
+        readonly broadcast: {
+            readonly broadcastBtn: {
+                readonly start: "Broadcast";
+                readonly stop: "Stop broadcast";
+            };
+            readonly broadcasting: "Broadcasting...";
+            readonly channelURL: "Channel URL";
+            readonly connecting: "Connecting...";
+            readonly desc: "Broadcast the result page to other browsers/devices in real time. Please visit the <1>documentations</1> for details.";
+            readonly error: {
+                readonly generic: "Broadcast failed!";
+                readonly serverURLRequired: "Server URL is required!";
+            };
+            readonly heading: "Broadcast";
+            readonly includeSourceCode: "Include source code";
+            readonly serverURL: {
+                readonly heading: "Server URL";
+            };
+        };
+        readonly core: {
+            readonly broadcast: {
+                readonly heading: "Broadcast";
+                readonly successSetToken: "Broadcast user token set successfully";
+            };
+            readonly changeLanguage: {
+                readonly hint: "Change Language";
+                readonly message: "Loading {{lang}}. This may take a while!";
+            };
+            readonly copy: {
+                readonly copied: "Code copied to clipboard";
+                readonly copiedAsDataURL: "Code copied as data URL";
+                readonly hint: "Copied!";
+                readonly title: "Copy";
+            };
+            readonly error: {
+                readonly couldNotLoadTemplate: "Could not load template: {{template}}";
+                readonly failedToCopyCode: "Failed to copy code";
+                readonly failedToLoadTemplate: "Failed loading template";
+                readonly failedToLoadTemplates: "Failed loading starter templates";
+                readonly failedToParseSettings: "Failed parsing settings as JSON";
+                readonly invalidCommand: "Invalid command!";
+                readonly invalidImport: "Invalid import URL";
+                readonly invalidPanelId: "Invalid panel id";
+                readonly invalidToken: "Invalid token!";
+                readonly login: "Login error!";
+                readonly logout: "Logout error!";
+                readonly noResultContainer: "Result container not found";
+                readonly unavailable: "Command unavailable";
+                readonly unavailableForEmbeds: "Command unavailable for embeds";
+            };
+            readonly export: {
+                readonly gist: "Creating a public GitHub gist...";
+            };
+            readonly fork: {
+                readonly success: "Forked as a new project";
+            };
+            readonly fullScreen: {
+                readonly enter: "Full Screen";
+                readonly exit: "Exit Full Screen";
+            };
+            readonly import: {
+                readonly loading: "Loading Project...";
+            };
+            readonly layout: {
+                readonly horizontal: "Horizontal layout";
+                readonly responsive: "Responsive layout";
+                readonly vertical: "Vertical layout";
+            };
+            readonly loadDefaults: {
+                readonly template: "Loading default template";
+            };
+            readonly login: {
+                readonly success: "Logged in successfully";
+                readonly successWithName: "Logged in as: {{name}}";
+            };
+            readonly logout: {
+                readonly success: "Logged out successfully";
+            };
+            readonly result: {
+                readonly hint: "Show result in new window";
+            };
+            readonly save: {
+                readonly success: "Project locally saved to device!";
+                readonly successWithName: "Project \"{{name}}\" saved to device.";
+            };
+            readonly template: {
+                readonly blank: "Blank Project";
+                readonly delete: "Delete template \"{{item}}\"?";
+                readonly javascript: "JavaScript Starter";
+                readonly react: "React Starter";
+                readonly saved: "Saved as a new template";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 Starter";
+            };
+            readonly unload: {
+                readonly notSaved: "Changes you made may not be saved.";
+            };
+            readonly zoom: {
+                readonly hint: "Zoom";
+            };
+        };
+        readonly customSettings: {
+            readonly JSON: "Custom Settings JSON";
+            readonly heading: "Custom Settings";
+            readonly load: "Load";
+        };
+        readonly deploy: {
+            readonly create: {
+                readonly desc: "A new <1>public</1> repo will be created. The result page will be pushed to <2>gh-pages</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name <1></1>";
+            };
+            readonly error: {
+                readonly generic: "Deployment failed!";
+                readonly repoNameExists: "Repo name already exists";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "A new commit will be added to <1>gh-pages</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly generic: {
+                readonly commitMessage: "Commit Message";
+                readonly commitSourceCodePublic: "Commit source code (public)";
+                readonly deployBtn: "Deploy";
+                readonly deploying: "Deploying...";
+            };
+            readonly heading: "Deploy to GitHub Pages";
+            readonly searchRepo: "Search your public repos...";
+        };
+        readonly editorSettings: {
+            readonly appLanguage: {
+                readonly heading: "App UI Language";
+                readonly note: "Will reload the app to apply the changes after switching the language.";
+            };
+            readonly closeBrackets: "Auto-close brackets and quotes";
+            readonly codeJarDesc: "* The marked features are not available in CodeJar.";
+            readonly default: "Default";
+            readonly desc: "Please check the <1>documentations</1> for details.";
+            readonly editor: {
+                readonly codejar: "CodeJar";
+                readonly codemirror: "CodeMirror";
+                readonly heading: "Editor";
+                readonly monaco: "Monaco";
+            };
+            readonly editorMode: {
+                readonly emacs: "Emacs";
+                readonly heading: "Editor Mode *";
+                readonly vim: "Vim";
+            };
+            readonly editorTheme: "Editor Theme";
+            readonly emmet: "Enable Emmet *";
+            readonly enableAI: {
+                readonly heading: "Enable AI Code Assistant";
+                readonly note: "Powered by <1><2></2></1>";
+            };
+            readonly fontFamily: "Font Family";
+            readonly fontSize: "Font Size";
+            readonly format: "Format";
+            readonly heading: "Editor Settings";
+            readonly lineNumbers: "Show line numbers";
+            readonly notAvailableInCodeJar: "Not available in CodeJar";
+            readonly preview: "Preview";
+            readonly semicolons: "Format: Use Semicolons";
+            readonly singleQuote: "Format: Use Single Quotes";
+            readonly tabSize: "Tab Size";
+            readonly theme: "Dark Mode";
+            readonly trailingComma: "Format: Use Trailing Commas";
+            readonly useTabs: {
+                readonly heading: "Indentation";
+                readonly spaces: "Spaces";
+                readonly tabs: "Tabs";
+            };
+            readonly wordWrap: "Word-wrap";
+        };
+        readonly embed: {
+            readonly activeEditor: {
+                readonly heading: "Active Editor";
+                readonly markup: "{{markup}}";
+                readonly script: "{{script}}";
+                readonly style: "{{style}}";
+            };
+            readonly activeTool: {
+                readonly compiled: "Compiled";
+                readonly console: "Console";
+                readonly heading: "Active Tool";
+                readonly tests: "Tests";
+            };
+            readonly code: {
+                readonly copy: "Copy Code";
+                readonly heading: "Code";
+            };
+            readonly desc: "Please check the <1>documentations</1> for advanced configurations.";
+            readonly embedType: {
+                readonly cdn: "Script (CDN)";
+                readonly heading: "Embed Type";
+                readonly html: "HTML";
+                readonly iframe: "Iframe";
+                readonly npm: "JS (npm)";
+                readonly react: "React";
+                readonly svelte: "Svelte";
+                readonly vue: "Vue";
+            };
+            readonly heading: "Embed Project";
+            readonly lite: "Lite Mode";
+            readonly loading: {
+                readonly click: "On-click";
+                readonly eager: "Eager";
+                readonly heading: "Loading";
+                readonly lazy: "Lazy";
+            };
+            readonly mode: {
+                readonly codeblock: "Code Block";
+                readonly editor: "Editor";
+                readonly full: "Full";
+                readonly heading: "Display Mode";
+                readonly result: "Result";
+            };
+            readonly permanentUrl: "Permanent URL";
+            readonly preview: "Preview";
+            readonly previewLoading: "Loading Preview...";
+            readonly readonly: "Read only";
+            readonly theme: {
+                readonly dark: "Dark";
+                readonly heading: "Theme";
+                readonly light: "Light";
+            };
+            readonly tools: {
+                readonly closed: "Closed";
+                readonly full: "Full";
+                readonly heading: "Tools";
+                readonly none: "None";
+                readonly open: "Open";
+            };
+            readonly view: {
+                readonly editor: "Editor";
+                readonly heading: "Default View";
+                readonly result: "Result";
+                readonly split: "Split";
+            };
+        };
+        readonly generic: {
+            readonly about: {
+                readonly blog: "Blog";
+                readonly configuration: "Configuration";
+                readonly features: "Features";
+                readonly gettingStarted: "Getting Started";
+                readonly github: "GitHub";
+                readonly sdk: "SDK";
+                readonly sponsor: "Sponsor LiveCodes";
+                readonly twitter: "𝕏 / Twitter";
+            };
+            readonly clickForInfo: "Click for info...";
+            readonly close: "Close";
+            readonly error: {
+                readonly authentication: "Authentication error!";
+                readonly exceededSize: "Error: Exceeded size {{size}} MB";
+                readonly failedToReadFile: "Error: Failed to read file";
+            };
+            readonly loading: "Loading...";
+            readonly more: "More...";
+            readonly optional: "Optional";
+            readonly required: "Required";
+        };
+        readonly import: {
+            readonly bulk: {
+                readonly desc: "Bulk import multiple projects to your saved projects. Projects can be exported from the <1>Saved Projects</1> screen.";
+                readonly fromFile: "Bulk import from local file";
+                readonly fromURL: "Bulk import from URL";
+                readonly heading: "Bulk Import";
+                readonly started: "Bulk import started...";
+            };
+            readonly code: {
+                readonly desc: "Supported Sources: <1> <2>GitHub gist</2> <3>GitHub file</3> <4>Directory in a GitHub repo</4> <5>Gitlab snippet</5> <6>Gitlab file</6> <7>Directory in a Gitlab repo</7> <8>JS Bin</8> <9>Raw code</9> <10>Code in web page DOM</10> <11>Code in zip file</11> <12>Official playgrounds<13></13>(TypeScript, Vue and Svelte)</12> </1> Please visit the <14>documentations</14> for details.";
+                readonly fromFile: "Import local files";
+                readonly fromURL: "Import from URL";
+                readonly heading: "Import Code";
+            };
+            readonly error: {
+                readonly failedToLoadURL: "Error: failed to load URL";
+                readonly invalidConfigFile: "Invalid configuration file";
+                readonly invalidFile: "Error: Invalid file";
+            };
+            readonly generic: {
+                readonly file: "Local file";
+                readonly url: "URL";
+            };
+            readonly heading: "Import";
+            readonly json: {
+                readonly desc: "Import a single project JSON to editor. A project can be exported from app&nbsp;menu&nbsp;→ Export&nbsp;→ Export&nbsp;Project&nbsp;(JSON).";
+                readonly fromFile: "Import project from local file";
+                readonly fromURL: "Import project from URL";
+                readonly heading: "Import Project JSON";
+            };
+            readonly success: "Import Successful!";
+        };
+        readonly login: {
+            readonly accessAllowed: "Allow access to:";
+            readonly desc: "<1>By logging in, you agree that <2>cookies</2> may be stored on your device.</1> <3> <4>Why are these permissions required?</4> </3> <5> <6>How to change/revoke permissions?</6> </5>";
+            readonly gist: "Gists";
+            readonly heading: "Login with GitHub";
+            readonly loginAs: "Logged in as {{name}}";
+            readonly loginBtn: "Login";
+            readonly logout: "Log out";
+            readonly privateRepo: "Private Repos";
+            readonly publicRepo: "Repos";
+        };
+        readonly menu: {
+            readonly about: "About";
+            readonly assets: "Assets …";
+            readonly autoSave: "Auto Save";
+            readonly autoUpdate: "Auto Update";
+            readonly backup: "Backup / Restore …";
+            readonly broadcast: "Broadcast …";
+            readonly customSettings: "Custom Settings …";
+            readonly delay: {
+                readonly heading: "Delay: <1>1.5</1>s";
+                readonly hint: "Delay before auto-update";
+            };
+            readonly deploy: "Deploy …";
+            readonly editorSettings: "Editor Settings …";
+            readonly embed: "Embed …";
+            readonly export: {
+                readonly codepen: "Edit in CodePen";
+                readonly gist: "Export to GitHub Gist";
+                readonly heading: "Export";
+                readonly jsfiddle: "Edit in JSFiddle";
+                readonly json: "Export Project (JSON)";
+                readonly result: "Export Result (HTML)";
+                readonly src: "Export Source (ZIP)";
+            };
+            readonly formatOnsave: "Format On-save";
+            readonly import: "Import …";
+            readonly layout: "Vertical Layout";
+            readonly login: "Login …";
+            readonly logout: "Log out";
+            readonly new: "New …";
+            readonly open: "Open …";
+            readonly project: "Project Info …";
+            readonly recoverUnsaved: "Recover Unsaved";
+            readonly resources: "External Resources …";
+            readonly save: "Save";
+            readonly saveAs: {
+                readonly fork: "Fork (New Project)";
+                readonly heading: "Save as";
+                readonly template: "Template";
+            };
+            readonly share: "Share …";
+            readonly showSpacing: {
+                readonly heading: "Show Spacing";
+                readonly hint: "Press Alt/Option and move your cursor over result page";
+            };
+            readonly snippets: "Code Snippets …";
+            readonly sync: "Sync (beta) … <1> ⏳</1>";
+            readonly theme: "Dark Theme";
+            readonly welcome: {
+                readonly heading: "Welcome …";
+                readonly hint: "Show Welcome screen on startup";
+            };
+        };
+        readonly open: {
+            readonly defaultTemplate: "Default template ";
+            readonly delete: {
+                readonly all: "Delete {{projects}} projects?";
+                readonly deleting: "Deleting projects...";
+                readonly one: "Delete project: {{project}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly exportAll: "Export All";
+            readonly filter: {
+                readonly language: "filter by language";
+                readonly tag: "filter by tag";
+            };
+            readonly heading: "Saved Projects";
+            readonly import: "Import";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noData: {
+                readonly desc: "You can save a project from (settings&nbsp;menu&nbsp;&gt;&nbsp;Save) or by the keyboard shortcut (Ctrl/Cmd&nbsp;+&nbsp;S).";
+                readonly heading: "You have no saved projects.";
+            };
+            readonly noMatch: "No projects match these filters.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly filterByTags: "Filter by tags";
+                readonly search: "Search";
+            };
+            readonly removeDefault: "(unset)";
+            readonly reset: "Reset";
+            readonly setAsDefault: "Set as default";
+            readonly sort: {
+                readonly heading: "Sort By:";
+                readonly lastModified: "Last Modified";
+                readonly title: "Title";
+            };
+        };
+        readonly project: {
+            readonly desc: "Description";
+            readonly head: "Add to &lt;head&gt;";
+            readonly heading: "Project Info";
+            readonly htmlAttr: "Attributes for &lt;html&gt;";
+            readonly tags: "Tags";
+            readonly title: "Project Title";
+        };
+        readonly recoverPrompt: {
+            readonly desc: "Your last project has unsaved changes!";
+            readonly heading: "Recover unsaved project?";
+            readonly meta: "Title: <1></1> <2></2> Last modified: <3></3>";
+            readonly notShowAgain: "Do not show this again.";
+            readonly prompt: {
+                readonly discard: "Discard unsaved project";
+                readonly heading: "<1></1>Do you want to recover it now?";
+                readonly recover: "Recover project to editor";
+                readonly save: "Save to device and continue";
+            };
+        };
+        readonly resources: {
+            readonly browseOnJsDelivr: "Browse package files on jsDelivr";
+            readonly cssPresets: {
+                readonly heading: "CSS Presets";
+                readonly none: "None";
+                readonly normalizeCss: "Normalize.css";
+                readonly resetCss: "Reset CSS";
+            };
+            readonly error: {
+                readonly failedToLoadResults: "Failed to load results!";
+                readonly noResultsFound: "No results found for: ";
+            };
+            readonly fonts: {
+                readonly add: "Add";
+                readonly heading: "Fonts <1>(powered by Google Fonts)</1>";
+                readonly select: "Select font ...";
+            };
+            readonly heading: "External Resources";
+            readonly scripts: "External Scripts";
+            readonly search: {
+                readonly heading: "Search Packages <1>(powered by jsDelivr)</1>";
+                readonly placeholder: "e.g. jquery, lodash@4, bootstrap@5.2.3, ...";
+            };
+            readonly stylesheets: "External Stylesheets";
+            readonly urlDesc: "Add stylesheet/script URLs. Each URL should be in a separate line.";
+        };
+        readonly savePrompt: {
+            readonly heading: "Unsaved changes";
+            readonly prompt: {
+                readonly cancel: "Cancel";
+                readonly discard: "Do not save";
+                readonly heading: "The changes you made may not be saved. <1></1> Do you want to save now?";
+                readonly save: "Save";
+            };
+        };
+        readonly share: {
+            readonly characters: "{{urlLength}} characters";
+            readonly copy: {
+                readonly clickToCopy: "Click to copy";
+                readonly copied: "URL copied to clipboard";
+            };
+            readonly encodedURL: "Get encoded URL";
+            readonly error: {
+                readonly failedToCopy: "Copy to clipboard failed!";
+                readonly failedToGenerateURL: "Failed to generate short URL!";
+            };
+            readonly expireInOneYear: "Expires in 1 year";
+            readonly generateURL: "Generating URL …";
+            readonly heading: "Share";
+            readonly permanentURL: "Permanent URL";
+            readonly qrcode: {
+                readonly clickToDownload: "Click to download";
+                readonly generating: "Generating...";
+            };
+            readonly services: {
+                readonly copyUrl: "Copy URL";
+                readonly devTo: "Dev.to";
+                readonly email: "Email";
+                readonly facebook: "Facebook";
+                readonly hackerNews: "Hacker News";
+                readonly linkedIn: "LinkedIn";
+                readonly pinterest: "Pinterest";
+                readonly pocket: "Pocket";
+                readonly qrCode: "QR code";
+                readonly reddit: "Reddit";
+                readonly share: "Share via …";
+                readonly telegram: "Telegram";
+                readonly tumblr: "Tumblr";
+                readonly twitter: "𝕏 / Twitter";
+                readonly whatsApp: "WhatsApp";
+            };
+            readonly shortURL: "Get short URL";
+        };
+        readonly snippets: {
+            readonly action: {
+                readonly copy: "Copy";
+                readonly delete: "Delete";
+                readonly edit: "Edit";
+            };
+            readonly add: {
+                readonly code: "Code";
+                readonly desc: "Description";
+                readonly heading: "Add Snippet";
+                readonly language: "Language";
+                readonly save: "Save";
+                readonly snippets: "Snippets";
+                readonly title: "Title";
+            };
+            readonly copy: {
+                readonly clickToCopySnippet: "Click to copy snippet";
+                readonly copied: "Snippet is copied to clipboard.";
+            };
+            readonly delete: {
+                readonly all: "Delete {{snippets}} snippets?";
+                readonly one: "Delete snippet: {{snippet}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly error: {
+                readonly failedToCopy: "Failed to copy URL.";
+                readonly noTitle: "Please add snippet title.";
+            };
+            readonly filter: {
+                readonly language: "filter by language";
+            };
+            readonly heading: "Code Snippets";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noMatch: "No snippets match these filters.";
+            readonly noSavedSnippets: "You have no saved snippets.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly search: "Search";
+            };
+            readonly reset: "Reset";
+            readonly save: {
+                readonly success: "Snippet locally saved to device!";
+            };
+            readonly sort: {
+                readonly date: "Date";
+                readonly heading: "Sort By:";
+                readonly title: "Title";
+            };
+            readonly text: "Plain Text";
+        };
+        readonly splash: {
+            readonly loading: "Loading LiveCodes…";
+        };
+        readonly sync: {
+            readonly autoSync: "Auto sync";
+            readonly create: {
+                readonly desc: "A new <1>private</1> repo will be created. Your LiveCodes local data will be synchronized with <2>main</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly error: {
+                readonly generic: "Sync failed!";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "Your LiveCodes local data will be synchronized with <1>main</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly heading: "Sync to GitHub Repo";
+            readonly searchRepos: "Search your repos...";
+            readonly success: "Sync complete!";
+            readonly syncBtn: "Sync";
+            readonly syncInProgress: "Sync in progress...";
+            readonly syncStarted: "Sync started...";
+        };
+        readonly templates: {
+            readonly heading: "New Project";
+            readonly noUserTemplates: {
+                readonly desc: "You can save a project as a template from <1></1>(App&nbsp;menu&nbsp;&gt;&nbsp;Save&nbsp;as&nbsp;&gt; Template).";
+                readonly heading: "You have no saved templates.";
+            };
+            readonly starter: {
+                readonly angular: "Angular Starter";
+                readonly assemblyscript: "AssemblyScript Starter";
+                readonly astro: "Astro Starter";
+                readonly backbone: "Backbone Starter";
+                readonly blank: "Blank Project";
+                readonly blockly: "Blockly Starter";
+                readonly bootstrap: "Bootstrap Starter";
+                readonly civet: "Civet Starter";
+                readonly clio: "Clio Starter";
+                readonly clojurescript: "ClojureScript Starter";
+                readonly coffeescript: "CoffeeScript Starter";
+                readonly commonlisp: "Common Lisp Starter";
+                readonly cpp: "C++ Starter";
+                readonly diagrams: "Diagrams Starter";
+                readonly fennel: "Fennel Starter";
+                readonly gleam: "Gleam Starter";
+                readonly go: "Go Starter";
+                readonly heading: "Starter Templates";
+                readonly imba: "Imba Starter";
+                readonly javascript: "JavaScript Starter";
+                readonly jest: "Jest Starter";
+                readonly 'jest-react': "Jest/React Starter";
+                readonly jquery: "jQuery Starter";
+                readonly julia: "Julia Starter";
+                readonly knockout: "Knockout Starter";
+                readonly lit: "Lit Starter";
+                readonly livescript: "LiveScript Starter";
+                readonly loading: "Loading starter templates...";
+                readonly lua: "Lua Starter";
+                readonly 'lua-wasm': "Lua (Wasm) Starter";
+                readonly malina: "Malina.js Starter";
+                readonly markdown: "Markdown Starter";
+                readonly mdx: "MDX Starter";
+                readonly ocaml: "Ocaml Starter";
+                readonly perl: "Perl Starter";
+                readonly php: "PHP Starter";
+                readonly 'php-wasm': "PHP (Wasm) Starter";
+                readonly postgresql: "PostgreSQL Starter";
+                readonly preact: "Preact Starter";
+                readonly prolog: "Prolog Starter";
+                readonly python: "Python Starter";
+                readonly r: "R Starter";
+                readonly react: "React Starter";
+                readonly 'react-native': "React Native Starter";
+                readonly reason: "Reason Starter";
+                readonly rescript: "ReScript Starter";
+                readonly riot: "Riot.js Starter";
+                readonly ruby: "Ruby Starter";
+                readonly 'ruby-wasm': "Ruby (Wasm) Starter";
+                readonly scheme: "Scheme Starter";
+                readonly solid: "Solid Starter";
+                readonly sql: "SQL Starter";
+                readonly stencil: "Stencil Starter";
+                readonly svelte: "Svelte Starter";
+                readonly tailwindcss: "Tailwind CSS Starter";
+                readonly tcl: "Tcl Starter";
+                readonly teal: "Teal Starter";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 SFC Starter";
+                readonly vue2: "Vue 2 Starter";
+                readonly wat: "WebAssembly Text Starter";
+            };
+            readonly user: {
+                readonly heading: "My Templates";
+                readonly loading: "Loading user templates...";
+            };
+        };
+        readonly testEditor: {
+            readonly heading: "Edit Tests";
+            readonly load: "Load";
+            readonly tests: "Tests";
+        };
+        readonly toolspane: {
+            readonly close: "Close";
+            readonly compiled: {
+                readonly title: "Compiled";
+            };
+            readonly console: {
+                readonly clear: "Clear console";
+                readonly title: "Console";
+            };
+            readonly test: {
+                readonly edit: "Edit";
+                readonly error: "<1><2>Test error!</2></1>";
+                readonly loading: "<1>Loading tests...</1>";
+                readonly noTest: "<1>This project has no tests!</1>";
+                readonly reset: "Reset";
+                readonly run: {
+                    readonly desc: "Ctrl/Cmd + Alt + T";
+                    readonly heading: "Run";
+                };
+                readonly summary: {
+                    readonly desc: "Tests: {{failed}}\n       {{passed}}\n       {{skipped}}\n       {{total}}<1></1>\nTime: {{duration}}s";
+                    readonly failed: "{{failedNum}} failed";
+                    readonly passed: "{{passedNum}} passed";
+                    readonly skipped: "{{skippedNum}} skipped";
+                    readonly total: "{{totalNum}} total";
+                };
+                readonly title: "Tests";
+                readonly watch: {
+                    readonly desc: "Run tests when code changes";
+                    readonly heading: "Watch";
+                };
+            };
+        };
+        readonly welcome: {
+            readonly about: {
+                readonly documentation: "Documentations";
+                readonly heading: "About LiveCodes";
+            };
+            readonly heading: "Welcome";
+            readonly recent: {
+                readonly heading: "Recent";
+            };
+            readonly recover: {
+                readonly cancel: "Cancel";
+                readonly heading: "Recover";
+                readonly lastModified: "Last modified: <1></1>";
+                readonly recover: "Recover";
+                readonly save: "Save";
+                readonly unsavedChanges: "Your last project had unsaved changes:";
+            };
+            readonly showOnStartup: "Show on startup";
+            readonly start: {
+                readonly heading: "Start";
+                readonly import: "Import...";
+                readonly loadDefaultTemplate: "Load default template";
+                readonly new: "New...";
+                readonly noDefaultTemplate: "No default template";
+                readonly open: "Open...";
+            };
+            readonly templates: {
+                readonly heading: "Starter Templates";
+            };
+        };
+    };
+    export default translation;
+}
+declare module "livecodes/i18n/locales/ur/language-info" {
+    const languageInfo: {
+        readonly artTemplate: {
+            readonly desc: "High performance JavaScript templating engine.";
+            readonly link: "<1> <2>art-template official website</2> </1> <3> <4>art-template documentation</4> </3>";
+            readonly name: "art-template";
+        };
+        readonly asciidoc: {
+            readonly desc: "AsciiDoc compiled to HTML using Asciidoctor.";
+            readonly link: "<1> <2>AsciiDoc official website</2> </1> <3> <4>Asciidoctor official website</4> </3> <5> <6>Asciidoctor documentation</6> </5> <7> <8>Learn X in Y minutes, where X=asciidoc</8> </7>";
+            readonly name: "AsciiDoc";
+        };
+        readonly assemblyscript: {
+            readonly desc: "A TypeScript-like language for WebAssembly.";
+            readonly link: "<1> <2>AssemblyScript official website</2> </1> <3> <4>AssemblyScript documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "AssemblyScript";
+        };
+        readonly astro: {
+            readonly desc: "Build faster websites with less client-side Javascript. (Still in Beta)";
+            readonly link: "<1> <2>Astro official website</2> </1> <3> <4>Astro documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Astro";
+        };
+        readonly babel: {
+            readonly desc: "The JavaScript compiler";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Babel documentation</4> </3>";
+            readonly name: "Babel";
+        };
+        readonly bbcode: {
+            readonly desc: "BBCode (\"Bulletin Board Code\") is a lightweight markup language used to format messages in many Internet forum software.";
+            readonly link: "<1><2>bbcode.org</2></1> <3> <4>BBCode guide</4> </3> <5> <6>BBCode on Wikipedia</6> </5>";
+            readonly name: "BBCode";
+        };
+        readonly blockly: {
+            readonly desc: "A JavaScript library for building visual programming editors.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>Guides</4> </3> <5> <6>Reference</6> </5> <7> <8>Samples</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Blockly";
+        };
+        readonly civet: {
+            readonly desc: "Civet is a programming language that compiles to TypeScript or JavaScript, so you can use existing tooling but enable concise and powerful syntax.";
+            readonly link: "<1> <2>Civet official website</2> </1> <3> <4>Civet cheatsheet</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Civet";
+        };
+        readonly clio: {
+            readonly desc: "Clio is a fast, distributed, functional programming language that compiles to JavaScript.";
+            readonly link: "<1> <2>Clio official website</2> </1> <3> <4>Clio documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Clio";
+        };
+        readonly clojurescript: {
+            readonly desc: "ClojureScript is a compiler for <1>Clojure</1> that targets JavaScript. <2></2>In LiveCodes, it runs in the browser using <3>Cherry</3>.";
+            readonly link: "<1> <2>ClojureScript official website</2> </1> <3> <4>Clojure official website</4> </3> <5> <6>Cherry repo</6> </5> <7> <8>Learn X in Y minutes, where X=clojure</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "ClojureScript (CLJS)";
+        };
+        readonly coffeescript: {
+            readonly desc: "Unfancy JavaScript.";
+            readonly link: "<1> <2>CoffeeScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=coffeescript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "CoffeeScript";
+        };
+        readonly commonlisp: {
+            readonly desc: "A Common Lisp implementation on Javascript using JSCL (a Lisp-to-Javascript compiler bootstrapped from Common Lisp).";
+            readonly link: "<1> <2>Common-Lisp.net</2> </1> <3> <4>JSCL Project</4> </3> <5> <6>Common Lisp Resources</6> </5> <7> <8>Learn X in Y minutes, where X=Common Lisp</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Common Lisp";
+        };
+        readonly cpp: {
+            readonly desc1: "C++ support using JSCPP (a simple C++ interpreter written in JavaScript).";
+            readonly desc2: "It is not a complete implementation of C++. Please refer to <1>JSCPP documentation</1> for details.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>JSCPP</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C++";
+        };
+        readonly cppWasm: {
+            readonly desc: "Clang C/C++ compiler running on WebAssembly, using <1>wasm-clang</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Standard C++ Foundation</2> </1> <3> <4>Clang official website</4> </3> <5> <6>Learn X in Y minutes, where X=C++</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "C/C++ (Wasm)";
+        };
+        readonly diagrams: {
+            readonly desc1: "(Experimental)";
+            readonly desc2: "Diagrams-as-code. Supports:";
+            readonly desc3: "<1> <2>Cytoscape</2> </1> <3> <4>ELK</4> (using <5>elkjs</5>) </3> <6> <7>Gnuplot</7> (using <8>gnuplot-JS</8>) </6> <9> <10>Graphviz</10> (using <11>@hpcc-js/wasm</11>) </9> <12> <13>Mermaid</13> </12> <14> <15>Nomnoml</15> </14> <16> <17>Pintora</17> </16> <18> <19>Plotly</19> </18> <20> <21>Svgbob</21> </20> <22> <23>Vega</23> </22> <24> <25>VegaLite</25> </24> <26> <27>WaveDrom</27> </26>";
+            readonly link: "<1> <2>Load starter template</2> </1> <3> <4>LiveCodes Documentation</4> </3>";
+            readonly name: "Diagrams";
+        };
+        readonly dot: {
+            readonly desc: "The fastest + concise javascript template engine for Node.js and browsers.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "doT.js";
+        };
+        readonly ejs: {
+            readonly desc: "Embedded JavaScript templating.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "EJS";
+        };
+        readonly eta: {
+            readonly desc: "Embedded JS template engine for Node, Deno, and the browser. Lighweight, fast, and pluggable. Written in TypeScript.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>Documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Eta";
+        };
+        readonly fennel: {
+            readonly desc: "Fennel is a programming language that brings together the speed, simplicity, and reach of Lua with the flexibility of a lisp syntax and macro system.";
+            readonly link: "<1> <2>Fennel official website</2> </1> <3> <4>Getting Started with Fennel</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Fennel";
+        };
+        readonly flow: {
+            readonly desc: "Flow is a static type checker for JavaScript.";
+            readonly link: "<1> <2>Flow official website</2> </1> <3> <4>Flow documentation</4> </3>";
+            readonly name: "Flow";
+        };
+        readonly gleam: {
+            readonly desc1: "Gleam is a friendly language for building type-safe systems that scale!";
+            readonly desc2: "Gleam is a statically-typed functional programming language, which compiles to Erlang or JavaScript.";
+            readonly link: "<1><2>Gleam website</2></1> <3> <4>Gleam documentation</4> </3> <5> <6>Gleam language tour</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Gleam";
+        };
+        readonly go: {
+            readonly desc1: "Go (Golang) is an open source programming language that makes it easy to build simple, reliable, and efficient software.";
+            readonly desc2: "Here, it is compiled to JavaScript using GopherJS.";
+            readonly link: "<1><2>Go website</2></1> <3><4>Go documentation</4></3> <5> <6>GopherJS repo</6> </5> <7> <8>Learn X in Y minutes, where X=Go</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Go";
+        };
+        readonly haml: {
+            readonly desc: "Haml compiler for client side javascript view templates using clientside-haml-js.";
+            readonly link: "<1><2>Haml official website</2></1> <3> <4>Haml documentation</4> </3> <5> <6>clientside-haml-js GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=haml</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Haml";
+        };
+        readonly handlebars: {
+            readonly desc: "Minimal templating on steroids.";
+            readonly link: "<1><2>Official website</2></1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Handlebars";
+        };
+        readonly imba: {
+            readonly desc: "The friendly full-stack language.";
+            readonly link: "<1><2>Official website</2></1>";
+            readonly name: "Imba";
+        };
+        readonly jsx: {
+            readonly desc: "JSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler.  By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "JSX";
+        };
+        readonly julia: {
+            readonly desc1: "(Julia language support in LiveCodes is still experimental)";
+            readonly desc2: "Julia compiler and Julia Base running on WASM, using <1>julia-wasm</1> adapted by <2>polylang.io</2>.";
+            readonly link: "<1> <2>Julia official website</2> </1> <3> <4>Julia documentation</4> </3> <5> <6>Learn X in Y minutes, where X=Julia</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Julia";
+        };
+        readonly less: {
+            readonly desc: "It's CSS, with just a little more.";
+            readonly link: "<1><2>Less official website</2></1> <3> <4>Learn X in Y minutes, where X=less</4> </3>";
+            readonly name: "Less";
+        };
+        readonly liquid: {
+            readonly desc: "A simple, expressive and safe template engine.";
+            readonly link: "<1> <2>LiquidJS official website</2> </1> <3> <4>LiquidJS documentation</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "LiquidJS";
+        };
+        readonly livescript: {
+            readonly desc: "A language which compiles to JavaScript.";
+            readonly link: "<1> <2>LiveScript official website</2> </1> <3> <4>Learn X in Y minutes, where X=LiveScript</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "LiveScript";
+        };
+        readonly lua: {
+            readonly desc: "Lua running in the browser using fengari-web.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Fengari official website</6> </5> <7> <8>fengari-web GitHub repo</8> </7> <9> <10>Learn X in Y minutes, where X=Lua</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "Lua";
+        };
+        readonly luaWasm: {
+            readonly desc: "Lua running in the browser using Wasmoon, a real lua 5.4 VM with JS bindings made with WebAssembly.";
+            readonly link: "<1><2>Lua official website</2></1> <3> <4>Lua documentation</4> </3> <5> <6>Wasmoon GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=Lua</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Lua (Wasm)";
+        };
+        readonly malina: {
+            readonly desc: "Frontend compiler, inspired by Svelte.";
+            readonly link: "<1> <2>Malina.js repo</2> </1> <3> <4>Malina.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Malina.js";
+        };
+        readonly markdown: {
+            readonly desc: "Markdown compiled to HTML using Marked.";
+            readonly link: "<1> <2>Markdown official website</2> </1> <3> <4>Marked documentation</4> </3> <5> <6>Learn X in Y minutes, where X=markdown</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Markdown";
+        };
+        readonly mdx: {
+            readonly desc: "Markdown for the component era. <1></1>MDX lets you seamlessly write JSX in your Markdown documents.";
+            readonly link: "<1><2>MDX documentation</2></1> <3><4>Load starter template</4></3>";
+            readonly name: "MDX";
+        };
+        readonly mjml: {
+            readonly desc: "MJML is a markup language designed to reduce the pain of coding a responsive email.";
+            readonly link: "<1><2>MJML official website</2></1> <3> <4>MJML documentation</4> </3> <5> <6>MJML official templates</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "MJML";
+        };
+        readonly mustache: {
+            readonly desc: "Logic-less templates.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>mustache(5) manual</4> </3> <5> <6>JavaScript implementation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "Mustache";
+        };
+        readonly nunjucks: {
+            readonly desc: "A rich and powerful templating language for JavaScript. Nunjucks is essentially a port of <1>jinja2</1>.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>LiveCodes Documentations</4> </3>";
+            readonly name: "Nunjucks";
+        };
+        readonly ocaml: {
+            readonly desc1: "OCaml is an industrial-strength programming language supporting functional, imperative and object-oriented styles.";
+            readonly desc2: "ReScript compiler is used here to compile OCaml to JavaScript.";
+            readonly link: "<1><2>OCaml website</2></1> <3> <4>OCaml documentation</4> </3> <5> <6>ReScript website</6> </5> <7> <8>Learn X in Y minutes, where X=OCaml</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "OCaml";
+        };
+        readonly perl: {
+            readonly desc: "Perl running in the browser using Perlito.";
+            readonly link: "<1> <2>Perl official website</2> </1> <3> <4>Perl documentation</4> </3> <5> <6>Perlito5 Readme</6> </5> <7> <8>Learn X in Y minutes, where X=perl</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Perl";
+        };
+        readonly php: {
+            readonly desc: "PHP running in the browser using Uniter.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>Uniter GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11><12>Load starter template</12></11>";
+            readonly name: "PHP";
+        };
+        readonly phpWasm: {
+            readonly desc: "PHP in Browser, powered by WebAssembly, using php-wasm.";
+            readonly link: "<1><2>PHP official website</2></1> <3> <4>PHP documentation</4> </3> <5> <6>php-wasm GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=PHP</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "PHP (Wasm)";
+        };
+        readonly postgresql: {
+            readonly desc: "PostgreSQL packaged as WASM using PGlite";
+            readonly link: "<1> <2>PostgreSQL official website</2> </1> <3> <4>PostgreSQL documentation</4> </3> <5> <6>PGlite GitHub repo</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "PostgreSQL";
+        };
+        readonly prolog: {
+            readonly desc: "An open source Prolog interpreter in JavaScript.";
+            readonly link: "<1> <2>Tau Prolog official website</2> </1> <3> <4>Tau Prolog documentation</4> </3> <5> <6>SWI-Prolog</6> </5> <7> <8>Learn X in Y minutes, where X=Prolog</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Tau Prolog";
+        };
+        readonly pug: {
+            readonly desc: "Robust, elegant, feature rich template engine.";
+            readonly link: "<1> <2>Pug documentation</2> </1> <3> <4>Learn X in Y minutes, where X=Pug</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Pug";
+        };
+        readonly python: {
+            readonly desc: "Python running in the browser using Brython.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5> <6>Brython documentation</6> </5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python";
+        };
+        readonly pythonWasm: {
+            readonly desc1: "Python with the scientific stack, compiled to WebAssembly using Pyodide.";
+            readonly desc2: "Pyodide allows using Python scientific stack including NumPy, Pandas, Matplotlib, SciPy, scikit-learn and many more. In addition it’s possible to install pure Python wheels from PyPi.";
+            readonly link: "<1> <2>Python official website</2> </1> <3> <4>Python documentation</4> </3> <5><6>Pyodide documentation</6></5> <7> <8>Learn X in Y minutes, where X=Python</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Python (Wasm)";
+        };
+        readonly r: {
+            readonly desc: "R running in the browser using WebR.";
+            readonly link: "<1> <2>R project official website</2> </1> <3> <4>The R Manuals</4> </3> <5> <6>R for Data Science (2e)</6> </5> <7> <8>WebR documentation</8> </7> <9> <10>Learn X in Y minutes, where X=R</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "R";
+        };
+        readonly reactNative: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "React Native for Web";
+        };
+        readonly reactNativeTsx: {
+            readonly desc: "React Native for Web is an accessible implementation of React Native's Components and APIs that is interoperable with React DOM.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>React Native website</4> </3> <5> <6>React Native for Web website</6> </5> <7> <8>React Native documentation</8> </7> <9> <10>TypeScript website</10> </9> <11> <12>TypeScript documentation</12> </11> <13> <14>LiveCodes Documentations</14> </13> <15> <16>Load starter template (JSX)</16> </15>";
+            readonly name: "React Native for Web (with TypeScript)";
+        };
+        readonly reason: {
+            readonly desc1: "Reason lets you write simple, fast and quality type safe code while leveraging both the JavaScript & OCaml ecosystems.";
+            readonly desc2: "ReScript compiler is used here to compile Reason to JavaScript.";
+            readonly link: "<1><2>Reason website</2></1> <3> <4>Reason documentation</4> </3> <5> <6>ReasonReact</6> </5> <7> <8>ReScript website</8> </7> <9> <10>Learn X in Y minutes, where X=reason</10> </9> <11> <12>Load starter template</12> </11>";
+            readonly name: "Reason";
+        };
+        readonly rescript: {
+            readonly desc: "ReScript is a robustly typed language that compiles to efficient and human-readable JavaScript.";
+            readonly link: "<1> <2>ReScript website</2> </1> <3> <4>ReScript / React</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "ReScript";
+        };
+        readonly richtext: {
+            readonly desc1: "Using Quill:";
+            readonly desc2: "Your powerful rich text editor.";
+            readonly link: "<1> <2>Quill official website</2> </1>";
+            readonly name: "Rich Text Editor";
+        };
+        readonly riot: {
+            readonly desc: "Simple and elegant component-based UI library.";
+            readonly link: "<1> <2>Riot.js official website</2> </1> <3> <4>Riot.js documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Riot.js";
+        };
+        readonly ruby: {
+            readonly desc: "Ruby running in the browser using Opal.";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5><6>Opal official website</6></5> <7> <8>Opal standard library CDN</8> </7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby";
+        };
+        readonly rubyWasm: {
+            readonly desc: "Ruby running in the browser using ruby-wasm (a collection of WebAssembly ports of the CRuby).";
+            readonly link: "<1> <2>Ruby official website</2> </1> <3> <4>Ruby documentation</4> </3> <5> <6>ruby.wasm website</6> </5> <7><8>CRuby</8></7> <9> <10>Learn X in Y minutes, where X=ruby</10> </9> <11> <12>LiveCodes Documentations</12> </11> <13> <14>Load starter template</14> </13>";
+            readonly name: "Ruby (WASM)";
+        };
+        readonly sass: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>Sass (the indented) syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "Sass";
+        };
+        readonly scheme: {
+            readonly desc: "Scheme running in the browser using biwascheme.";
+            readonly link: "<1> <2>The Scheme Programming Language</2> </1> <3> <4>BiwaScheme official website</4> </3> <5> <6>BiwaScheme reference</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Scheme";
+        };
+        readonly scss: {
+            readonly desc: "Syntactically Awesome Style Sheets.";
+            readonly link: "<1> <2>Sass official website</2> </1> <3> <4>Sass documentation</4> </3> <5> <6>SCSS syntax</6> </5> <7> <8>Learn X in Y minutes, where X=sass</8> </7>";
+            readonly name: "SCSS";
+        };
+        readonly solid: {
+            readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+            readonly link: "<1><2>Official website</2></1> <3><4>Documentation</4></3> <5> <6>LiveCodes Documentations</6> </5> <7> <8>Load starter template (TSX)</8> </7>";
+            readonly name: "Solid";
+            readonly tsx: {
+                readonly desc: "A declarative, efficient and flexible JavaScript library for building user interfaces.";
+                readonly link: "<1><2>Official website</2></1> <3> <4>Solid documentation</4> </3> <5> <6>TypeScript website</6> </5> <7> <8>TypeScript documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9> <11> <12>Load starter template</12> </11>";
+                readonly name: "Solid (with TypeScript)";
+            };
+        };
+        readonly sql: {
+            readonly desc: "SQLite compiled to JavaScript using SQL.js";
+            readonly link: "<1> <2>SQLite official website</2> </1> <3> <4>SQLite syntax documentation</4> </3> <5> <6>SQL.js official website</6> </5> <7> <8>Learn X in Y minutes, where X=SQL</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "SQLite";
+        };
+        readonly stencil: {
+            readonly desc: "A Compiler for Web Components and High Performance Web Apps.";
+            readonly link: "<1> <2>Stencil official website</2> </1> <3> <4>Stencil documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Stencil";
+        };
+        readonly styleProcessors: {
+            readonly link: "<1> <2>Tailwind CSS</2> </1> <3> <4>Windi CSS</4> </3> <5> <6>UnoCSS</6> </5> <7> <8>Lightning CSS</8> </7> <9> <10>PostCSS</10> Plugins: <11> <12> <13>Autoprefixer</13> </12> <14> <15>postcss-preset-env</15> </14> <16> <17>postcss-import-url</17> </16> <18> <19>postcss-modules</19> </18> </11> </9>";
+            readonly name: "CSS Frameworks and Processors";
+        };
+        readonly stylis: {
+            readonly desc: "Light-weight css preprocessor.";
+            readonly link: "<1> <2>Stylis official website</2> </1>";
+            readonly name: "Stylis";
+        };
+        readonly stylus: {
+            readonly desc: "Expressive, Dynamic, Robust CSS.";
+            readonly link: "<1> <2>Stylus official website</2> </1> <3> <4>Learn X in Y minutes, where X=stylus</4> </3>";
+            readonly name: "Stylus";
+        };
+        readonly sucrase: {
+            readonly desc: "Super-fast alternative to Babel for when you can target modern JS runtimes.";
+            readonly link: "<1> <2>Sucrase official website</2> </1> <3> <4>Sucrase GitHub Repo</4> </3> <5> <6>LiveCodes Documentations</6> </5>";
+            readonly name: "Sucrase";
+        };
+        readonly svelte: {
+            readonly desc: "Cybernetically enhanced web apps.";
+            readonly link: "<1> <2>Svelte official website</2> </1> <3> <4>Svelte documentation</4> </3> <5> <6>Load starter template</6> </5>";
+            readonly name: "Svelte";
+        };
+        readonly tcl: {
+            readonly desc: "Tcl running in the browser, using <1>wacl</1>.";
+            readonly link: "<1> <2>Tcl official website</2> </1> <3> <4>wacl repo</4> </3> <5> <6>Learn X in Y minutes, where X=Tcl</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "Tcl (Tool Command Language)";
+        };
+        readonly teal: {
+            readonly desc: "A typed dialect of Lua.";
+            readonly link: "<1> <2>Teal GitHub repo</2> </1> <3> <4>Teal docs</4> </3> <5> <6>Teal tutorial</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9> <10>Load starter template</10> </9>";
+            readonly name: "Teal";
+        };
+        readonly tsx: {
+            readonly desc: "TypeScript in JSX. TSX is compiled to JavaScript in LiveCodes using the TypeScript Compiler. By default it uses React as the JSX runtime.";
+            readonly link: "<1> <2>React official website</2> </1> <3> <4>JSX in React documentation</4> </3> <5> <6>Typescript documentation</6> </5> <7> <8>LiveCodes Documentations</8> </7>";
+            readonly name: "TSX";
+        };
+        readonly twig: {
+            readonly desc: "A JavaScript implementation of the <1>Twig</1> PHP templating language by <2>Twig.js</2> .";
+            readonly link: "<1> <2>Twig official website</2> </1> <3> <4>Twig Documentation</4> </3> <5> <6>Twig.js Repo</6> </5> <7> <8>Twig.js Documentation</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Twig";
+        };
+        readonly typescript: {
+            readonly desc: "A Typed Superset of JavaScript.";
+            readonly link: "<1> <2>Official website</2> </1> <3> <4>TypeScript documentation</4> </3> <5> <6>Learn X in Y minutes, where X=TypeScript</6> </5> <7> <8>Load starter template</8> </7>";
+            readonly name: "TypeScript";
+        };
+        readonly vue: {
+            readonly link: "<1> <2>Vue.js v3 official website</2> </1> <3> <4>Vue3 documentation</4> </3> <5> <6>Vue3 single file components</6> </5> <7> <8>LiveCodes Documentations</8> </7> <9><10>Load starter template</10></9>";
+            readonly name: "Vue3 Single File Components";
+        };
+        readonly vue2: {
+            readonly desc: "Loaded using vue3-sfc-loader.";
+            readonly link: "<1><2>Vue.js official website</2></1> <3> <4>Vue2 documentation</4> </3> <5> <6>Vue2 single file components</6> </5> <7> <8>vue3-sfc-loader GitHub repo</8> </7> <9> <10>LiveCodes Documentations</10> </9>";
+            readonly name: "Vue2 Single File Components";
+        };
+        readonly wat: {
+            readonly desc1: "Low-level textual representation of the WebAssembly (wasm) binary format.";
+            readonly desc2: "It is converted to wasm using wabt.js.";
+            readonly link: "<1><2>WebAssembly.org</2></1> <3> <4>WebAssembly Text Specs</4> </3> <5> <6>WebAssembly on MDN</6> </5> <7> <8>Understanding WebAssembly text format</8> </7> <9> <10>wabt.js documentation</10> </9> <11> <12>Learn X in Y minutes, where X=WebAssembly</12> </11> <13><14>Load starter template</14></13>";
+            readonly name: "WebAssembly Text Format";
+        };
+    };
+    export default languageInfo;
+}
+declare module "livecodes/i18n/locales/ur/translation" {
+    const translation: {
+        readonly about: {
+            readonly documentations: {
+                readonly aboutUs: "About us";
+                readonly contact: "Contact";
+                readonly heading: "Documentations";
+                readonly home: "Home";
+                readonly license: "License";
+            };
+            readonly heading: "About LiveCodes";
+            readonly livecodes: {
+                readonly para1: "<1><2>LiveCodes</2></1> is an <3>open-source</3>, <4>feature-rich</4>, <5>client-side</5> code playground. Currently, <6>80+ languages/<7></7>frameworks</6> are supported. It can be used as a standalone app or can be <8>embedded</8> in any web page. There are many ways to <9>prefill playgrounds</9> with code.";
+                readonly para2: "A wide range of <1>configuration options</1> makes it very flexible. A powerful <2>SDK</2> (for <3>JS/TS</3>, <4>React</4>, <5>Vue</5> and <6>Svelte</6>) facilitates <7>embedding</7> and <8>communicating</8> with playgrounds. <9>Comprehensive documentations</9> are available with code samples, live demos and screenshots.";
+            };
+            readonly version: {
+                readonly app: "App version: {{APP_VERSION}}";
+                readonly appPermanentUrl: "App Permanent URL";
+                readonly commit: "Git commit: {{COMMIT_SHA}}";
+                readonly heading: "Version";
+                readonly sdk: "SDK version: {{SDK_VERSION}}";
+                readonly sdkPermanentUrl: "SDK Permanent URL";
+            };
+        };
+        readonly app: {
+            readonly copy: {
+                readonly hint: "Copy (Ctrl/Cmd + A, Ctrl/Cmd + C)";
+            };
+            readonly copyAsUrl: {
+                readonly hint: "Copy code as data URL";
+            };
+            readonly customSettings: {
+                readonly hint: "Custom Settings";
+            };
+            readonly editorMode: {
+                readonly hint: "Editor Mode";
+            };
+            readonly editorSettings: {
+                readonly hint: "Editor Settings";
+            };
+            readonly externalResources: {
+                readonly hint: "External Resources";
+            };
+            readonly focus: {
+                readonly hint: "Toggle Focus mode";
+            };
+            readonly format: {
+                readonly hint: "Format (Alt + Shift + F)";
+            };
+            readonly fullscreen: {
+                readonly hint: "Full Screen";
+            };
+            readonly logo: {
+                readonly title: "LiveCodes: Code playground that runs in the browser!";
+            };
+            readonly projectInfo: {
+                readonly hint: "Project Info";
+            };
+            readonly redo: {
+                readonly hint: "Redo (Ctrl/Cmd + Shift + Z)";
+            };
+            readonly result: {
+                readonly hint: "Toggle Result";
+            };
+            readonly run: {
+                readonly hint: "Run (Shift + Enter)";
+            };
+            readonly share: {
+                readonly hint: "Share";
+            };
+            readonly undo: {
+                readonly hint: "Undo (Ctrl/Cmd + Z)";
+            };
+            readonly untitledProject: "Untitled Project";
+        };
+        readonly assets: {
+            readonly add: {
+                readonly dataURL: {
+                    readonly desc: "Add asset as a base64-encoded <1>data url</1>.";
+                    readonly heading: "Data URL";
+                    readonly label: "Add file";
+                };
+                readonly githubPages: {
+                    readonly desc: "Deploy asset to GitHub Pages. The file is pushed to <1>gh-pages</1> branch of the repo <2>livecodes-assets</2> on your GitHub account. If the repo does not already exist, a public repo will be created.";
+                    readonly heading: "GitHub Pages";
+                    readonly label: "Upload file";
+                };
+                readonly heading: "Add Asset";
+            };
+            readonly delete: {
+                readonly all: "Delete {{assets}} assets?";
+                readonly one: "Delete asset: {{asset}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly generic: {
+                readonly clickToCopyURL: "Click to copy URL";
+            };
+            readonly heading: "Assets";
+            readonly link: {
+                readonly date: "Date: {{modified}}";
+                readonly type: "Type: {{type}}";
+                readonly url: "URL: {{url}}";
+            };
+            readonly loadFile: {
+                readonly error: {
+                    readonly failedToUpload: "Error: Failed to upload file";
+                    readonly unauthenticated: "Error: Unauthenticated user";
+                };
+                readonly upload: "Upload file";
+                readonly uploading: "Uploading...";
+            };
+            readonly noMatch: "No assets match these filters.";
+            readonly noSavedAssets: "You have no saved assets.";
+            readonly processAsset: {
+                readonly addFile: "Added file: ";
+                readonly deployNotice: "The asset should be available on this URL soon (~1 min).";
+                readonly success: "File added to assets!";
+                readonly urlLabel: "URL: ";
+            };
+            readonly resetFilters: "Reset";
+            readonly search: "Search";
+            readonly sort: {
+                readonly date: "Date";
+                readonly fileName: "File Name";
+                readonly heading: "Sort By:";
+            };
+            readonly type: {
+                readonly archive: "Archive";
+                readonly audio: "Audio";
+                readonly csv: "CSV";
+                readonly font: "Font";
+                readonly html: "HTML";
+                readonly icon: "Icon";
+                readonly image: "Image";
+                readonly json: "JSON";
+                readonly other: "Other";
+                readonly script: "Script";
+                readonly stylesheet: "Stylesheet";
+                readonly text: "Text";
+                readonly video: "Video";
+                readonly xml: "XML";
+            };
+            readonly types: {
+                readonly all: "All types";
+            };
+            readonly url: {
+                readonly fail: "Failed to copy URL.";
+                readonly success: "URL is copied to clipboard.";
+            };
+        };
+        readonly backup: {
+            readonly backup: {
+                readonly assets: "Assets";
+                readonly button: "Backup";
+                readonly desc: "Backup LiveCodes data, so that it can be later restored on this or other devices. <1></1> Please visit the <2>documentations</2> for details.";
+                readonly heading: "Backup";
+                readonly projects: "Projects";
+                readonly settings: "User Settings";
+                readonly snippets: "Code Snippets";
+                readonly templates: "User Templates";
+            };
+            readonly backupBtn: "Backup";
+            readonly error: {
+                readonly atLeastOneStore: "Please select at least one store to backup";
+                readonly incorrectFileType: "Error: Incorrect file type";
+            };
+            readonly fileInputLabel: "Restore from file";
+            readonly heading: "Backup / Restore";
+            readonly inProgress: "In progress...";
+            readonly restore: {
+                readonly desc: "Restore previously backed-up LiveCodes data. <1></1> If you choose to replace current content, you may want to back it up first. <2></2> Please visit the <3>documentations</3> for details.";
+                readonly fromFile: "Restore from file";
+                readonly heading: "Restore";
+                readonly mode: {
+                    readonly merge: "Merge with current content";
+                    readonly replace: "Replace current content";
+                };
+                readonly success: "Restored Successfully!";
+            };
+        };
+        readonly broadcast: {
+            readonly broadcastBtn: {
+                readonly start: "Broadcast";
+                readonly stop: "Stop broadcast";
+            };
+            readonly broadcasting: "Broadcasting...";
+            readonly channelURL: "Channel URL";
+            readonly connecting: "Connecting...";
+            readonly desc: "Broadcast the result page to other browsers/devices in real time. Please visit the <1>documentations</1> for details.";
+            readonly error: {
+                readonly generic: "Broadcast failed!";
+                readonly serverURLRequired: "Server URL is required!";
+            };
+            readonly heading: "Broadcast";
+            readonly includeSourceCode: "Include source code";
+            readonly serverURL: {
+                readonly heading: "Server URL";
+            };
+        };
+        readonly core: {
+            readonly broadcast: {
+                readonly heading: "Broadcast";
+                readonly successSetToken: "Broadcast user token set successfully";
+            };
+            readonly changeLanguage: {
+                readonly hint: "Change Language";
+                readonly message: "Loading {{lang}}. This may take a while!";
+            };
+            readonly copy: {
+                readonly copied: "Code copied to clipboard";
+                readonly copiedAsDataURL: "Code copied as data URL";
+                readonly hint: "Copied!";
+                readonly title: "Copy";
+            };
+            readonly error: {
+                readonly couldNotLoadTemplate: "Could not load template: {{template}}";
+                readonly failedToCopyCode: "Failed to copy code";
+                readonly failedToLoadTemplate: "Failed loading template";
+                readonly failedToLoadTemplates: "Failed loading starter templates";
+                readonly failedToParseSettings: "Failed parsing settings as JSON";
+                readonly invalidCommand: "Invalid command!";
+                readonly invalidImport: "Invalid import URL";
+                readonly invalidPanelId: "Invalid panel id";
+                readonly invalidToken: "Invalid token!";
+                readonly login: "Login error!";
+                readonly logout: "Logout error!";
+                readonly noResultContainer: "Result container not found";
+                readonly unavailable: "Command unavailable";
+                readonly unavailableForEmbeds: "Command unavailable for embeds";
+            };
+            readonly export: {
+                readonly gist: "Creating a public GitHub gist...";
+            };
+            readonly fork: {
+                readonly success: "Forked as a new project";
+            };
+            readonly fullScreen: {
+                readonly enter: "Full Screen";
+                readonly exit: "Exit Full Screen";
+            };
+            readonly import: {
+                readonly loading: "Loading Project...";
+            };
+            readonly layout: {
+                readonly horizontal: "Horizontal layout";
+                readonly responsive: "Responsive layout";
+                readonly vertical: "Vertical layout";
+            };
+            readonly loadDefaults: {
+                readonly template: "Loading default template";
+            };
+            readonly login: {
+                readonly success: "Logged in successfully";
+                readonly successWithName: "Logged in as: {{name}}";
+            };
+            readonly logout: {
+                readonly success: "Logged out successfully";
+            };
+            readonly result: {
+                readonly hint: "Show result in new window";
+            };
+            readonly save: {
+                readonly success: "Project locally saved to device!";
+                readonly successWithName: "Project \"{{name}}\" saved to device.";
+            };
+            readonly template: {
+                readonly blank: "Blank Project";
+                readonly delete: "Delete template \"{{item}}\"?";
+                readonly javascript: "JavaScript Starter";
+                readonly react: "React Starter";
+                readonly saved: "Saved as a new template";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 Starter";
+            };
+            readonly unload: {
+                readonly notSaved: "Changes you made may not be saved.";
+            };
+            readonly zoom: {
+                readonly hint: "Zoom";
+            };
+        };
+        readonly customSettings: {
+            readonly JSON: "Custom Settings JSON";
+            readonly heading: "Custom Settings";
+            readonly load: "Load";
+        };
+        readonly deploy: {
+            readonly create: {
+                readonly desc: "A new <1>public</1> repo will be created. The result page will be pushed to <2>gh-pages</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name <1></1>";
+            };
+            readonly error: {
+                readonly generic: "Deployment failed!";
+                readonly repoNameExists: "Repo name already exists";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "A new commit will be added to <1>gh-pages</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly generic: {
+                readonly commitMessage: "Commit Message";
+                readonly commitSourceCodePublic: "Commit source code (public)";
+                readonly deployBtn: "Deploy";
+                readonly deploying: "Deploying...";
+            };
+            readonly heading: "Deploy to GitHub Pages";
+            readonly searchRepo: "Search your public repos...";
+        };
+        readonly editorSettings: {
+            readonly appLanguage: {
+                readonly heading: "App UI Language";
+                readonly note: "Will reload the app to apply the changes after switching the language.";
+            };
+            readonly closeBrackets: "Auto-close brackets and quotes";
+            readonly codeJarDesc: "* The marked features are not available in CodeJar.";
+            readonly default: "Default";
+            readonly desc: "Please check the <1>documentations</1> for details.";
+            readonly editor: {
+                readonly codejar: "CodeJar";
+                readonly codemirror: "CodeMirror";
+                readonly heading: "Editor";
+                readonly monaco: "Monaco";
+            };
+            readonly editorMode: {
+                readonly emacs: "Emacs";
+                readonly heading: "Editor Mode *";
+                readonly vim: "Vim";
+            };
+            readonly editorTheme: "Editor Theme";
+            readonly emmet: "Enable Emmet *";
+            readonly enableAI: {
+                readonly heading: "Enable AI Code Assistant";
+                readonly note: "Powered by <1><2></2></1>";
+            };
+            readonly fontFamily: "Font Family";
+            readonly fontSize: "Font Size";
+            readonly format: "Format";
+            readonly heading: "Editor Settings";
+            readonly lineNumbers: "Show line numbers";
+            readonly notAvailableInCodeJar: "Not available in CodeJar";
+            readonly preview: "Preview";
+            readonly semicolons: "Format: Use Semicolons";
+            readonly singleQuote: "Format: Use Single Quotes";
+            readonly tabSize: "Tab Size";
+            readonly theme: "Dark Mode";
+            readonly trailingComma: "Format: Use Trailing Commas";
+            readonly useTabs: {
+                readonly heading: "Indentation";
+                readonly spaces: "Spaces";
+                readonly tabs: "Tabs";
+            };
+            readonly wordWrap: "Word-wrap";
+        };
+        readonly embed: {
+            readonly activeEditor: {
+                readonly heading: "Active Editor";
+                readonly markup: "{{markup}}";
+                readonly script: "{{script}}";
+                readonly style: "{{style}}";
+            };
+            readonly activeTool: {
+                readonly compiled: "Compiled";
+                readonly console: "Console";
+                readonly heading: "Active Tool";
+                readonly tests: "Tests";
+            };
+            readonly code: {
+                readonly copy: "Copy Code";
+                readonly heading: "Code";
+            };
+            readonly desc: "Please check the <1>documentations</1> for advanced configurations.";
+            readonly embedType: {
+                readonly cdn: "Script (CDN)";
+                readonly heading: "Embed Type";
+                readonly html: "HTML";
+                readonly iframe: "Iframe";
+                readonly npm: "JS (npm)";
+                readonly react: "React";
+                readonly svelte: "Svelte";
+                readonly vue: "Vue";
+            };
+            readonly heading: "Embed Project";
+            readonly lite: "Lite Mode";
+            readonly loading: {
+                readonly click: "On-click";
+                readonly eager: "Eager";
+                readonly heading: "Loading";
+                readonly lazy: "Lazy";
+            };
+            readonly mode: {
+                readonly codeblock: "Code Block";
+                readonly editor: "Editor";
+                readonly full: "Full";
+                readonly heading: "Display Mode";
+                readonly result: "Result";
+            };
+            readonly permanentUrl: "Permanent URL";
+            readonly preview: "Preview";
+            readonly previewLoading: "Loading Preview...";
+            readonly readonly: "Read only";
+            readonly theme: {
+                readonly dark: "Dark";
+                readonly heading: "Theme";
+                readonly light: "Light";
+            };
+            readonly tools: {
+                readonly closed: "Closed";
+                readonly full: "Full";
+                readonly heading: "Tools";
+                readonly none: "None";
+                readonly open: "Open";
+            };
+            readonly view: {
+                readonly editor: "Editor";
+                readonly heading: "Default View";
+                readonly result: "Result";
+                readonly split: "Split";
+            };
+        };
+        readonly generic: {
+            readonly about: {
+                readonly blog: "Blog";
+                readonly configuration: "Configuration";
+                readonly features: "Features";
+                readonly gettingStarted: "Getting Started";
+                readonly github: "GitHub";
+                readonly sdk: "SDK";
+                readonly sponsor: "Sponsor LiveCodes";
+                readonly twitter: "𝕏 / Twitter";
+            };
+            readonly clickForInfo: "Click for info...";
+            readonly close: "Close";
+            readonly error: {
+                readonly authentication: "Authentication error!";
+                readonly exceededSize: "Error: Exceeded size {{size}} MB";
+                readonly failedToReadFile: "Error: Failed to read file";
+            };
+            readonly loading: "Loading...";
+            readonly more: "More...";
+            readonly optional: "Optional";
+            readonly required: "Required";
+        };
+        readonly import: {
+            readonly bulk: {
+                readonly desc: "Bulk import multiple projects to your saved projects. Projects can be exported from the <1>Saved Projects</1> screen.";
+                readonly fromFile: "Bulk import from local file";
+                readonly fromURL: "Bulk import from URL";
+                readonly heading: "Bulk Import";
+                readonly started: "Bulk import started...";
+            };
+            readonly code: {
+                readonly desc: "Supported Sources: <1> <2>GitHub gist</2> <3>GitHub file</3> <4>Directory in a GitHub repo</4> <5>Gitlab snippet</5> <6>Gitlab file</6> <7>Directory in a Gitlab repo</7> <8>JS Bin</8> <9>Raw code</9> <10>Code in web page DOM</10> <11>Code in zip file</11> <12>Official playgrounds<13></13>(TypeScript, Vue and Svelte)</12> </1> Please visit the <14>documentations</14> for details.";
+                readonly fromFile: "Import local files";
+                readonly fromURL: "Import from URL";
+                readonly heading: "Import Code";
+            };
+            readonly error: {
+                readonly failedToLoadURL: "Error: failed to load URL";
+                readonly invalidConfigFile: "Invalid configuration file";
+                readonly invalidFile: "Error: Invalid file";
+            };
+            readonly generic: {
+                readonly file: "Local file";
+                readonly url: "URL";
+            };
+            readonly heading: "Import";
+            readonly json: {
+                readonly desc: "Import a single project JSON to editor. A project can be exported from app&nbsp;menu&nbsp;→ Export&nbsp;→ Export&nbsp;Project&nbsp;(JSON).";
+                readonly fromFile: "Import project from local file";
+                readonly fromURL: "Import project from URL";
+                readonly heading: "Import Project JSON";
+            };
+            readonly success: "Import Successful!";
+        };
+        readonly login: {
+            readonly accessAllowed: "Allow access to:";
+            readonly desc: "<1>By logging in, you agree that <2>cookies</2> may be stored on your device.</1> <3> <4>Why are these permissions required?</4> </3> <5> <6>How to change/revoke permissions?</6> </5>";
+            readonly gist: "Gists";
+            readonly heading: "Login with GitHub";
+            readonly loginAs: "Logged in as {{name}}";
+            readonly loginBtn: "Login";
+            readonly logout: "Log out";
+            readonly privateRepo: "Private Repos";
+            readonly publicRepo: "Repos";
+        };
+        readonly menu: {
+            readonly about: "About";
+            readonly assets: "Assets …";
+            readonly autoSave: "Auto Save";
+            readonly autoUpdate: "Auto Update";
+            readonly backup: "Backup / Restore …";
+            readonly broadcast: "Broadcast …";
+            readonly customSettings: "Custom Settings …";
+            readonly delay: {
+                readonly heading: "Delay: <1>1.5</1>s";
+                readonly hint: "Delay before auto-update";
+            };
+            readonly deploy: "Deploy …";
+            readonly editorSettings: "Editor Settings …";
+            readonly embed: "Embed …";
+            readonly export: {
+                readonly codepen: "Edit in CodePen";
+                readonly gist: "Export to GitHub Gist";
+                readonly heading: "Export";
+                readonly jsfiddle: "Edit in JSFiddle";
+                readonly json: "Export Project (JSON)";
+                readonly result: "Export Result (HTML)";
+                readonly src: "Export Source (ZIP)";
+            };
+            readonly formatOnsave: "Format On-save";
+            readonly import: "Import …";
+            readonly layout: "Vertical Layout";
+            readonly login: "Login …";
+            readonly logout: "Log out";
+            readonly new: "New …";
+            readonly open: "Open …";
+            readonly project: "Project Info …";
+            readonly recoverUnsaved: "Recover Unsaved";
+            readonly resources: "External Resources …";
+            readonly save: "Save";
+            readonly saveAs: {
+                readonly fork: "Fork (New Project)";
+                readonly heading: "Save as";
+                readonly template: "Template";
+            };
+            readonly share: "Share …";
+            readonly showSpacing: {
+                readonly heading: "Show Spacing";
+                readonly hint: "Press Alt/Option and move your cursor over result page";
+            };
+            readonly snippets: "Code Snippets …";
+            readonly sync: "Sync (beta) … <1> ⏳</1>";
+            readonly theme: "Dark Theme";
+            readonly welcome: {
+                readonly heading: "Welcome …";
+                readonly hint: "Show Welcome screen on startup";
+            };
+        };
+        readonly open: {
+            readonly defaultTemplate: "Default template ";
+            readonly delete: {
+                readonly all: "Delete {{projects}} projects?";
+                readonly deleting: "Deleting projects...";
+                readonly one: "Delete project: {{project}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly exportAll: "Export All";
+            readonly filter: {
+                readonly language: "filter by language";
+                readonly tag: "filter by tag";
+            };
+            readonly heading: "Saved Projects";
+            readonly import: "Import";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noData: {
+                readonly desc: "You can save a project from (settings&nbsp;menu&nbsp;&gt;&nbsp;Save) or by the keyboard shortcut (Ctrl/Cmd&nbsp;+&nbsp;S).";
+                readonly heading: "You have no saved projects.";
+            };
+            readonly noMatch: "No projects match these filters.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly filterByTags: "Filter by tags";
+                readonly search: "Search";
+            };
+            readonly removeDefault: "(unset)";
+            readonly reset: "Reset";
+            readonly setAsDefault: "Set as default";
+            readonly sort: {
+                readonly heading: "Sort By:";
+                readonly lastModified: "Last Modified";
+                readonly title: "Title";
+            };
+        };
+        readonly project: {
+            readonly desc: "Description";
+            readonly head: "Add to &lt;head&gt;";
+            readonly heading: "Project Info";
+            readonly htmlAttr: "Attributes for &lt;html&gt;";
+            readonly tags: "Tags";
+            readonly title: "Project Title";
+        };
+        readonly recoverPrompt: {
+            readonly desc: "Your last project has unsaved changes!";
+            readonly heading: "Recover unsaved project?";
+            readonly meta: "Title: <1></1> <2></2> Last modified: <3></3>";
+            readonly notShowAgain: "Do not show this again.";
+            readonly prompt: {
+                readonly discard: "Discard unsaved project";
+                readonly heading: "<1></1>Do you want to recover it now?";
+                readonly recover: "Recover project to editor";
+                readonly save: "Save to device and continue";
+            };
+        };
+        readonly resources: {
+            readonly browseOnJsDelivr: "Browse package files on jsDelivr";
+            readonly cssPresets: {
+                readonly heading: "CSS Presets";
+                readonly none: "None";
+                readonly normalizeCss: "Normalize.css";
+                readonly resetCss: "Reset CSS";
+            };
+            readonly error: {
+                readonly failedToLoadResults: "Failed to load results!";
+                readonly noResultsFound: "No results found for: ";
+            };
+            readonly fonts: {
+                readonly add: "Add";
+                readonly heading: "Fonts <1>(powered by Google Fonts)</1>";
+                readonly select: "Select font ...";
+            };
+            readonly heading: "External Resources";
+            readonly scripts: "External Scripts";
+            readonly search: {
+                readonly heading: "Search Packages <1>(powered by jsDelivr)</1>";
+                readonly placeholder: "e.g. jquery, lodash@4, bootstrap@5.2.3, ...";
+            };
+            readonly stylesheets: "External Stylesheets";
+            readonly urlDesc: "Add stylesheet/script URLs. Each URL should be in a separate line.";
+        };
+        readonly savePrompt: {
+            readonly heading: "Unsaved changes";
+            readonly prompt: {
+                readonly cancel: "Cancel";
+                readonly discard: "Do not save";
+                readonly heading: "The changes you made may not be saved. <1></1> Do you want to save now?";
+                readonly save: "Save";
+            };
+        };
+        readonly share: {
+            readonly characters: "{{urlLength}} characters";
+            readonly copy: {
+                readonly clickToCopy: "Click to copy";
+                readonly copied: "URL copied to clipboard";
+            };
+            readonly encodedURL: "Get encoded URL";
+            readonly error: {
+                readonly failedToCopy: "Copy to clipboard failed!";
+                readonly failedToGenerateURL: "Failed to generate short URL!";
+            };
+            readonly expireInOneYear: "Expires in 1 year";
+            readonly generateURL: "Generating URL …";
+            readonly heading: "Share";
+            readonly permanentURL: "Permanent URL";
+            readonly qrcode: {
+                readonly clickToDownload: "Click to download";
+                readonly generating: "Generating...";
+            };
+            readonly services: {
+                readonly copyUrl: "Copy URL";
+                readonly devTo: "Dev.to";
+                readonly email: "Email";
+                readonly facebook: "Facebook";
+                readonly hackerNews: "Hacker News";
+                readonly linkedIn: "LinkedIn";
+                readonly pinterest: "Pinterest";
+                readonly pocket: "Pocket";
+                readonly qrCode: "QR code";
+                readonly reddit: "Reddit";
+                readonly share: "Share via …";
+                readonly telegram: "Telegram";
+                readonly tumblr: "Tumblr";
+                readonly twitter: "𝕏 / Twitter";
+                readonly whatsApp: "WhatsApp";
+            };
+            readonly shortURL: "Get short URL";
+        };
+        readonly snippets: {
+            readonly action: {
+                readonly copy: "Copy";
+                readonly delete: "Delete";
+                readonly edit: "Edit";
+            };
+            readonly add: {
+                readonly code: "Code";
+                readonly desc: "Description";
+                readonly heading: "Add Snippet";
+                readonly language: "Language";
+                readonly save: "Save";
+                readonly snippets: "Snippets";
+                readonly title: "Title";
+            };
+            readonly copy: {
+                readonly clickToCopySnippet: "Click to copy snippet";
+                readonly copied: "Snippet is copied to clipboard.";
+            };
+            readonly delete: {
+                readonly all: "Delete {{snippets}} snippets?";
+                readonly one: "Delete snippet: {{snippet}}?";
+            };
+            readonly deleteAll: "Delete All";
+            readonly error: {
+                readonly failedToCopy: "Failed to copy URL.";
+                readonly noTitle: "Please add snippet title.";
+            };
+            readonly filter: {
+                readonly language: "filter by language";
+            };
+            readonly heading: "Code Snippets";
+            readonly lastModified: "Last modified: {{modified}}";
+            readonly noMatch: "No snippets match these filters.";
+            readonly noSavedSnippets: "You have no saved snippets.";
+            readonly placeholder: {
+                readonly allLanguages: "All languages";
+                readonly search: "Search";
+            };
+            readonly reset: "Reset";
+            readonly save: {
+                readonly success: "Snippet locally saved to device!";
+            };
+            readonly sort: {
+                readonly date: "Date";
+                readonly heading: "Sort By:";
+                readonly title: "Title";
+            };
+            readonly text: "Plain Text";
+        };
+        readonly splash: {
+            readonly loading: "Loading LiveCodes…";
+        };
+        readonly sync: {
+            readonly autoSync: "Auto sync";
+            readonly create: {
+                readonly desc: "A new <1>private</1> repo will be created. Your LiveCodes local data will be synchronized with <2>main</2> branch.";
+                readonly heading: "Create New Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly error: {
+                readonly generic: "Sync failed!";
+                readonly repoNameRequired: "Repo name is required";
+            };
+            readonly existing: {
+                readonly desc: "Your LiveCodes local data will be synchronized with <1>main</1> branch.";
+                readonly heading: "Existing Repo";
+                readonly repoName: "Repo Name";
+            };
+            readonly heading: "Sync to GitHub Repo";
+            readonly searchRepos: "Search your repos...";
+            readonly success: "Sync complete!";
+            readonly syncBtn: "Sync";
+            readonly syncInProgress: "Sync in progress...";
+            readonly syncStarted: "Sync started...";
+        };
+        readonly templates: {
+            readonly heading: "New Project";
+            readonly noUserTemplates: {
+                readonly desc: "You can save a project as a template from <1></1>(App&nbsp;menu&nbsp;&gt;&nbsp;Save&nbsp;as&nbsp;&gt; Template).";
+                readonly heading: "You have no saved templates.";
+            };
+            readonly starter: {
+                readonly angular: "Angular Starter";
+                readonly assemblyscript: "AssemblyScript Starter";
+                readonly astro: "Astro Starter";
+                readonly backbone: "Backbone Starter";
+                readonly blank: "Blank Project";
+                readonly blockly: "Blockly Starter";
+                readonly bootstrap: "Bootstrap Starter";
+                readonly civet: "Civet Starter";
+                readonly clio: "Clio Starter";
+                readonly clojurescript: "ClojureScript Starter";
+                readonly coffeescript: "CoffeeScript Starter";
+                readonly commonlisp: "Common Lisp Starter";
+                readonly cpp: "C++ Starter";
+                readonly diagrams: "Diagrams Starter";
+                readonly fennel: "Fennel Starter";
+                readonly gleam: "Gleam Starter";
+                readonly go: "Go Starter";
+                readonly heading: "Starter Templates";
+                readonly imba: "Imba Starter";
+                readonly javascript: "JavaScript Starter";
+                readonly jest: "Jest Starter";
+                readonly 'jest-react': "Jest/React Starter";
+                readonly jquery: "jQuery Starter";
+                readonly julia: "Julia Starter";
+                readonly knockout: "Knockout Starter";
+                readonly lit: "Lit Starter";
+                readonly livescript: "LiveScript Starter";
+                readonly loading: "Loading starter templates...";
+                readonly lua: "Lua Starter";
+                readonly 'lua-wasm': "Lua (Wasm) Starter";
+                readonly malina: "Malina.js Starter";
+                readonly markdown: "Markdown Starter";
+                readonly mdx: "MDX Starter";
+                readonly ocaml: "Ocaml Starter";
+                readonly perl: "Perl Starter";
+                readonly php: "PHP Starter";
+                readonly 'php-wasm': "PHP (Wasm) Starter";
+                readonly postgresql: "PostgreSQL Starter";
+                readonly preact: "Preact Starter";
+                readonly prolog: "Prolog Starter";
+                readonly python: "Python Starter";
+                readonly r: "R Starter";
+                readonly react: "React Starter";
+                readonly 'react-native': "React Native Starter";
+                readonly reason: "Reason Starter";
+                readonly rescript: "ReScript Starter";
+                readonly riot: "Riot.js Starter";
+                readonly ruby: "Ruby Starter";
+                readonly 'ruby-wasm': "Ruby (Wasm) Starter";
+                readonly scheme: "Scheme Starter";
+                readonly solid: "Solid Starter";
+                readonly sql: "SQL Starter";
+                readonly stencil: "Stencil Starter";
+                readonly svelte: "Svelte Starter";
+                readonly tailwindcss: "Tailwind CSS Starter";
+                readonly tcl: "Tcl Starter";
+                readonly teal: "Teal Starter";
+                readonly typescript: "TypeScript Starter";
+                readonly vue: "Vue 3 SFC Starter";
+                readonly vue2: "Vue 2 Starter";
+                readonly wat: "WebAssembly Text Starter";
+            };
+            readonly user: {
+                readonly heading: "My Templates";
+                readonly loading: "Loading user templates...";
+            };
+        };
+        readonly testEditor: {
+            readonly heading: "Edit Tests";
+            readonly load: "Load";
+            readonly tests: "Tests";
+        };
+        readonly toolspane: {
+            readonly close: "Close";
+            readonly compiled: {
+                readonly title: "Compiled";
+            };
+            readonly console: {
+                readonly clear: "Clear console";
+                readonly title: "Console";
+            };
+            readonly test: {
+                readonly edit: "Edit";
+                readonly error: "<1><2>Test error!</2></1>";
+                readonly loading: "<1>Loading tests...</1>";
+                readonly noTest: "<1>This project has no tests!</1>";
+                readonly reset: "Reset";
+                readonly run: {
+                    readonly desc: "Ctrl/Cmd + Alt + T";
+                    readonly heading: "Run";
+                };
+                readonly summary: {
+                    readonly desc: "Tests: {{failed}}\n       {{passed}}\n       {{skipped}}\n       {{total}}<1></1>\nTime: {{duration}}s";
+                    readonly failed: "{{failedNum}} failed";
+                    readonly passed: "{{passedNum}} passed";
+                    readonly skipped: "{{skippedNum}} skipped";
+                    readonly total: "{{totalNum}} total";
+                };
+                readonly title: "Tests";
+                readonly watch: {
+                    readonly desc: "Run tests when code changes";
+                    readonly heading: "Watch";
+                };
+            };
+        };
+        readonly welcome: {
+            readonly about: {
+                readonly documentation: "Documentations";
+                readonly heading: "About LiveCodes";
+            };
+            readonly heading: "Welcome";
+            readonly recent: {
+                readonly heading: "Recent";
+            };
+            readonly recover: {
+                readonly cancel: "Cancel";
+                readonly heading: "Recover";
+                readonly lastModified: "Last modified: <1></1>";
+                readonly recover: "Recover";
+                readonly save: "Save";
+                readonly unsavedChanges: "Your last project had unsaved changes:";
+            };
+            readonly showOnStartup: "Show on startup";
+            readonly start: {
+                readonly heading: "Start";
+                readonly import: "Import...";
+                readonly loadDefaultTemplate: "Load default template";
+                readonly new: "New...";
+                readonly noDefaultTemplate: "No default template";
+                readonly open: "Open...";
+            };
+            readonly templates: {
+                readonly heading: "Starter Templates";
+            };
+        };
+    };
     export default translation;
 }
 declare module "livecodes/i18n/locales/zh-CN/language-info" {
