@@ -1,0 +1,2310 @@
+{
+  "about.documentations.aboutUs": {
+    "notes": "",
+    "translation": "Über uns"
+  },
+  "about.documentations.contact": {
+    "notes": "",
+    "translation": "Kontakt"
+  },
+  "about.documentations.heading": {
+    "notes": "",
+    "translation": "Dokumentationen"
+  },
+  "about.documentations.home": {
+    "notes": "",
+    "translation": "Startseite"
+  },
+  "about.documentations.license": {
+    "notes": "",
+    "translation": "Lizenz"
+  },
+  "about.heading": {
+    "notes": "",
+    "translation": "Über LiveCodes"
+  },
+  "about.livecodes.para1": {
+    "notes": "### <tag-1> ###\n<strong  />\n\n### <tag-2> ###\n<em  />\n\n### <tag-3> ###\n<a href=\"{{REPO_URL}}\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}features/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<a href=\"{{DOCS_BASE_URL}}why#client-side\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<wbr  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}features/embeds\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<a href=\"{{DOCS_BASE_URL}}features/code-prefill\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1><tag-2>LiveCodes</tag-2></tag-1> ist ein <tag-3>Open-Source</tag-3>, <tag-4>funktionsreiches</tag-4>, <tag-5>clientseitiger</tag-5> Code-Spielplatz. Derzeit werden <tag-6>über 80 Sprachen/<tag-7></tag-7>Frameworks</tag-6> unterstützt. Es kann als eigenständige App verwendet oder in jede Webseite <tag-8>eingebettet</tag-8> werden. Es gibt viele Möglichkeiten, Spielplätze mit Code <tag-9>vorzufüllen</tag-9>."
+  },
+  "about.livecodes.para2": {
+    "notes": "### <tag-1> ###\n<a href=\"{{DOCS_BASE_URL}}configuration/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<a href=\"{{DOCS_BASE_URL}}sdk/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<a href=\"{{DOCS_BASE_URL}}sdk/js-ts\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}sdk/react\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<a href=\"{{DOCS_BASE_URL}}sdk/vue\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}sdk/svelte\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<a href=\"{{DOCS_BASE_URL}}sdk/js-ts#embed-options\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}sdk/js-ts#sdk-methods\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<a href=\"{{DOCS_BASE_URL}}\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Eine breite Palette von <tag-1>Konfigurationsoptionen</tag-1> macht es sehr flexibel. Ein leistungsstarkes <tag-2>SDK</tag-2> (für <tag-3>JS/TS</tag-3>, <tag-4>React</tag-4>, <tag-5>Vue</tag-5> und <tag-6>Svelte</tag-6>) erleichtert das <tag-7>Einbetten</tag-7> und die <tag-8>Kommunikation</tag-8> mit Spielplätzen. <tag-9>Umfassende Dokumentationen</tag-9> sind mit Codebeispielen, Live-Demos und Screenshots verfügbar."
+  },
+  "about.version.app": {
+    "notes": "",
+    "translation": "App-Version: {{APP_VERSION}}"
+  },
+  "about.version.appPermanentUrl": {
+    "notes": "",
+    "translation": "Permanente App-URL"
+  },
+  "about.version.commit": {
+    "notes": "",
+    "translation": "Git-Commit: {{COMMIT_SHA}}"
+  },
+  "about.version.heading": {
+    "notes": "",
+    "translation": "Version"
+  },
+  "about.version.sdk": {
+    "notes": "",
+    "translation": "SDK-Version: {{SDK_VERSION}}"
+  },
+  "about.version.sdkPermanentUrl": {
+    "notes": "",
+    "translation": "Permanente SDK-URL"
+  },
+  "app.copy.hint": {
+    "notes": "",
+    "translation": "Kopieren (Strg/Cmd + A, Strg/Cmd + C)"
+  },
+  "app.copyAsUrl.hint": {
+    "notes": "",
+    "translation": "Code als Daten-URL kopieren"
+  },
+  "app.customSettings.hint": {
+    "notes": "",
+    "translation": "Benutzerdefinierte Einstellungen"
+  },
+  "app.editorMode.hint": {
+    "notes": "",
+    "translation": "Editor-Modus"
+  },
+  "app.editorSettings.hint": {
+    "notes": "",
+    "translation": "Editor-Einstellungen"
+  },
+  "app.externalResources.hint": {
+    "notes": "",
+    "translation": "Externe Ressourcen"
+  },
+  "app.focus.hint": {
+    "notes": "",
+    "translation": "Fokusmodus umschalten"
+  },
+  "app.format.hint": {
+    "notes": "",
+    "translation": "Formatieren (Alt + Umschalt + F)"
+  },
+  "app.fullscreen.hint": {
+    "notes": "",
+    "translation": "Vollbild"
+  },
+  "app.logo.title": {
+    "notes": "",
+    "translation": "LiveCodes: Code-Spielplatz, der im Browser läuft!"
+  },
+  "app.projectInfo.hint": {
+    "notes": "",
+    "translation": "Projektinformationen"
+  },
+  "app.redo.hint": {
+    "notes": "",
+    "translation": "Wiederholen (Strg/Cmd + Umschalt + Z)"
+  },
+  "app.result.hint": {
+    "notes": "",
+    "translation": "Ergebnis umschalten"
+  },
+  "app.run.hint": {
+    "notes": "",
+    "translation": "Ausführen (Umschalt + Enter)"
+  },
+  "app.share.hint": {
+    "notes": "",
+    "translation": "Teilen"
+  },
+  "app.undo.hint": {
+    "notes": "",
+    "translation": "Rückgängig machen (Strg/Cmd + Z)"
+  },
+  "app.untitledProject": {
+    "notes": "",
+    "translation": "Unbenanntes Projekt"
+  },
+  "assets.add.dataURL.desc": {
+    "notes": "### <tag-1> ###\n<a href=\"https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URIs\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Asset als Base64-kodierte <tag-1>Daten-URL</tag-1> hinzufügen."
+  },
+  "assets.add.dataURL.heading": {
+    "notes": "",
+    "translation": "Daten-URL"
+  },
+  "assets.add.dataURL.label": {
+    "notes": "",
+    "translation": "Datei hinzufügen"
+  },
+  "assets.add.githubPages.desc": {
+    "notes": "### <tag-1> ###\n<span class=\"code\" />\n\n### <tag-2> ###\n<span class=\"code\" />\n\n",
+    "translation": "Asset auf GitHub Pages bereitstellen. Die Datei wird in den <tag-1>gh-pages</tag-1>-Branch des Repos <tag-2>livecodes-assets</tag-2> in Ihrem GitHub-Konto gepusht. Wenn das Repo noch nicht existiert, wird ein öffentliches Repo erstellt."
+  },
+  "assets.add.githubPages.heading": {
+    "notes": "",
+    "translation": "GitHub Pages"
+  },
+  "assets.add.githubPages.label": {
+    "notes": "",
+    "translation": "Datei hochladen"
+  },
+  "assets.add.heading": {
+    "notes": "",
+    "translation": "Asset hinzufügen"
+  },
+  "assets.delete.all": {
+    "notes": "",
+    "translation": "{{assets}} Assets löschen?"
+  },
+  "assets.delete.one": {
+    "notes": "",
+    "translation": "Asset löschen: {{asset}}?"
+  },
+  "assets.deleteAll": {
+    "notes": "",
+    "translation": "Alle löschen"
+  },
+  "assets.generic.clickToCopyURL": {
+    "notes": "",
+    "translation": "Klicken, um URL zu kopieren"
+  },
+  "assets.heading": {
+    "notes": "",
+    "translation": "Assets"
+  },
+  "assets.link.date": {
+    "notes": "",
+    "translation": "Datum: {{modified}}"
+  },
+  "assets.link.type": {
+    "notes": "",
+    "translation": "Typ: {{type}}"
+  },
+  "assets.link.url": {
+    "notes": "",
+    "translation": "URL: {{url}}"
+  },
+  "assets.loadFile.error.failedToUpload": {
+    "notes": "",
+    "translation": "Fehler: Datei konnte nicht hochgeladen werden"
+  },
+  "assets.loadFile.error.unauthenticated": {
+    "notes": "",
+    "translation": "Fehler: Nicht authentifizierter Benutzer"
+  },
+  "assets.loadFile.upload": {
+    "notes": "",
+    "translation": "Datei hochladen"
+  },
+  "assets.loadFile.uploading": {
+    "notes": "",
+    "translation": "Wird hochgeladen..."
+  },
+  "assets.noMatch": {
+    "notes": "",
+    "translation": "Keine Assets entsprechen diesen Filtern."
+  },
+  "assets.noSavedAssets": {
+    "notes": "",
+    "translation": "Sie haben keine gespeicherten Assets."
+  },
+  "assets.processAsset.addFile": {
+    "notes": "",
+    "translation": "Datei hinzugefügt: "
+  },
+  "assets.processAsset.deployNotice": {
+    "notes": "",
+    "translation": "Das Asset sollte bald unter dieser URL verfügbar sein (~1 Min)."
+  },
+  "assets.processAsset.success": {
+    "notes": "",
+    "translation": "Datei zu Assets hinzugefügt!"
+  },
+  "assets.processAsset.urlLabel": {
+    "notes": "",
+    "translation": "URL: "
+  },
+  "assets.resetFilters": {
+    "notes": "",
+    "translation": "Zurücksetzen"
+  },
+  "assets.search": {
+    "notes": "",
+    "translation": "Suchen"
+  },
+  "assets.sort.date": {
+    "notes": "",
+    "translation": "Datum"
+  },
+  "assets.sort.fileName": {
+    "notes": "",
+    "translation": "Dateiname"
+  },
+  "assets.sort.heading": {
+    "notes": "",
+    "translation": "Sortieren nach:"
+  },
+  "assets.type.archive": {
+    "notes": "",
+    "translation": "Archiv"
+  },
+  "assets.type.audio": {
+    "notes": "",
+    "translation": "Audio"
+  },
+  "assets.type.csv": {
+    "notes": "",
+    "translation": "CSV"
+  },
+  "assets.type.font": {
+    "notes": "",
+    "translation": "Schriftart"
+  },
+  "assets.type.html": {
+    "notes": "",
+    "translation": "HTML"
+  },
+  "assets.type.icon": {
+    "notes": "",
+    "translation": "Symbol"
+  },
+  "assets.type.image": {
+    "notes": "",
+    "translation": "Bild"
+  },
+  "assets.type.json": {
+    "notes": "",
+    "translation": "JSON"
+  },
+  "assets.type.other": {
+    "notes": "",
+    "translation": "Andere"
+  },
+  "assets.type.script": {
+    "notes": "",
+    "translation": "Skript"
+  },
+  "assets.type.stylesheet": {
+    "notes": "",
+    "translation": "Stylesheet"
+  },
+  "assets.type.text": {
+    "notes": "",
+    "translation": "Text"
+  },
+  "assets.type.video": {
+    "notes": "",
+    "translation": "Video"
+  },
+  "assets.type.xml": {
+    "notes": "",
+    "translation": "XML"
+  },
+  "assets.types.all": {
+    "notes": "",
+    "translation": "Alle Typen"
+  },
+  "assets.url.fail": {
+    "notes": "",
+    "translation": "URL konnte nicht kopiert werden."
+  },
+  "assets.url.success": {
+    "notes": "",
+    "translation": "URL wurde in die Zwischenablage kopiert."
+  },
+  "backup.backup.assets": {
+    "notes": "",
+    "translation": "Assets"
+  },
+  "backup.backup.button": {
+    "notes": "",
+    "translation": "Sichern"
+  },
+  "backup.backup.desc": {
+    "notes": "### <tag-1> ###\n<br  />\n\n### <tag-2> ###\n<a href=\"{{DOCS_BASE_URL}}features/backup-restore\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Sichern Sie LiveCodes-Daten, damit sie später auf diesem oder anderen Geräten wiederhergestellt werden können. <tag-1></tag-1> Bitte besuchen Sie die <tag-2>Dokumentation</tag-2> für Details."
+  },
+  "backup.backup.heading": {
+    "notes": "",
+    "translation": "Sicherung"
+  },
+  "backup.backup.projects": {
+    "notes": "",
+    "translation": "Projekte"
+  },
+  "backup.backup.settings": {
+    "notes": "",
+    "translation": "Benutzereinstellungen"
+  },
+  "backup.backup.snippets": {
+    "notes": "",
+    "translation": "Code-Snippets"
+  },
+  "backup.backup.templates": {
+    "notes": "",
+    "translation": "Benutzervorlagen"
+  },
+  "backup.backupBtn": {
+    "notes": "",
+    "translation": "Sichern"
+  },
+  "backup.error.atLeastOneStore": {
+    "notes": "",
+    "translation": "Bitte wählen Sie mindestens einen Speicher zum Sichern aus"
+  },
+  "backup.error.incorrectFileType": {
+    "notes": "",
+    "translation": "Fehler: Falscher Dateityp"
+  },
+  "backup.fileInputLabel": {
+    "notes": "",
+    "translation": "Aus Datei wiederherstellen"
+  },
+  "backup.heading": {
+    "notes": "",
+    "translation": "Sichern / Wiederherstellen"
+  },
+  "backup.inProgress": {
+    "notes": "",
+    "translation": "In Bearbeitung..."
+  },
+  "backup.restore.desc": {
+    "notes": "### <tag-1> ###\n<br  />\n\n### <tag-2> ###\n<br  />\n\n### <tag-3> ###\n<a href=\"{{DOCS_BASE_URL}}features/backup-restore\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Stellen Sie zuvor gesicherte LiveCodes-Daten wieder her. <tag-1></tag-1> Wenn Sie sich dafür entscheiden, den aktuellen Inhalt zu ersetzen, sollten Sie diesen möglicherweise zuerst sichern. <tag-2></tag-2> Bitte besuchen Sie die <tag-3>Dokumentation</tag-3> für Details."
+  },
+  "backup.restore.fromFile": {
+    "notes": "",
+    "translation": "Aus Datei wiederherstellen"
+  },
+  "backup.restore.heading": {
+    "notes": "",
+    "translation": "Wiederherstellen"
+  },
+  "backup.restore.mode.merge": {
+    "notes": "",
+    "translation": "Mit aktuellem Inhalt zusammenführen"
+  },
+  "backup.restore.mode.replace": {
+    "notes": "",
+    "translation": "Aktuellen Inhalt ersetzen"
+  },
+  "backup.restore.success": {
+    "notes": "",
+    "translation": "Erfolgreich wiederhergestellt!"
+  },
+  "broadcast.broadcastBtn.start": {
+    "notes": "",
+    "translation": "Übertragen"
+  },
+  "broadcast.broadcastBtn.stop": {
+    "notes": "",
+    "translation": "Übertragung beenden"
+  },
+  "broadcast.broadcasting": {
+    "notes": "",
+    "translation": "Übertragung läuft..."
+  },
+  "broadcast.channelURL": {
+    "notes": "",
+    "translation": "Kanal-URL"
+  },
+  "broadcast.connecting": {
+    "notes": "",
+    "translation": "Verbindung wird hergestellt..."
+  },
+  "broadcast.desc": {
+    "notes": "### <tag-1> ###\n<a href=\"{{DOCS_BASE_URL}}features/broadcast\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Übertragen Sie die Ergebnisseite in Echtzeit an andere Browser/Geräte. Bitte besuchen Sie die <tag-1>Dokumentation</tag-1> für Details."
+  },
+  "broadcast.error.generic": {
+    "notes": "",
+    "translation": "Übertragung fehlgeschlagen!"
+  },
+  "broadcast.error.serverURLRequired": {
+    "notes": "",
+    "translation": "Server-URL ist erforderlich!"
+  },
+  "broadcast.heading": {
+    "notes": "",
+    "translation": "Übertragung"
+  },
+  "broadcast.includeSourceCode": {
+    "notes": "",
+    "translation": "Quellcode einbeziehen"
+  },
+  "broadcast.serverURL.heading": {
+    "notes": "",
+    "translation": "Server-URL"
+  },
+  "core.broadcast.heading": {
+    "notes": "",
+    "translation": "Übertragung"
+  },
+  "core.broadcast.successSetToken": {
+    "notes": "",
+    "translation": "Übertragungsbenutzertoken erfolgreich gesetzt"
+  },
+  "core.changeLanguage.hint": {
+    "notes": "",
+    "translation": "Sprache ändern"
+  },
+  "core.changeLanguage.message": {
+    "notes": "",
+    "translation": "Lade {{lang}}. Dies kann eine Weile dauern!"
+  },
+  "core.copy.copied": {
+    "notes": "",
+    "translation": "Code in die Zwischenablage kopiert"
+  },
+  "core.copy.copiedAsDataURL": {
+    "notes": "",
+    "translation": "Code als Daten-URL kopiert"
+  },
+  "core.copy.hint": {
+    "notes": "",
+    "translation": "Kopiert!"
+  },
+  "core.copy.title": {
+    "notes": "",
+    "translation": "Kopieren"
+  },
+  "core.error.couldNotLoadTemplate": {
+    "notes": "",
+    "translation": "Konnte Vorlage nicht laden: {{template}}"
+  },
+  "core.error.failedToCopyCode": {
+    "notes": "",
+    "translation": "Code konnte nicht kopiert werden"
+  },
+  "core.error.failedToLoadTemplate": {
+    "notes": "",
+    "translation": "Fehler beim Laden der Vorlage"
+  },
+  "core.error.failedToLoadTemplates": {
+    "notes": "",
+    "translation": "Fehler beim Laden der Startvorlagen"
+  },
+  "core.error.failedToParseSettings": {
+    "notes": "",
+    "translation": "Fehler beim Parsen der Einstellungen als JSON"
+  },
+  "core.error.invalidCommand": {
+    "notes": "",
+    "translation": "Ungültiger Befehl!"
+  },
+  "core.error.invalidImport": {
+    "notes": "",
+    "translation": "Ungültige Import-URL"
+  },
+  "core.error.invalidPanelId": {
+    "notes": "",
+    "translation": "Ungültige Panel-ID"
+  },
+  "core.error.invalidToken": {
+    "notes": "",
+    "translation": "Ungültiges Token!"
+  },
+  "core.error.login": {
+    "notes": "",
+    "translation": "Anmeldefehler!"
+  },
+  "core.error.logout": {
+    "notes": "",
+    "translation": "Abmeldefehler!"
+  },
+  "core.error.noResultContainer": {
+    "notes": "",
+    "translation": "Ergebniscontainer nicht gefunden"
+  },
+  "core.error.unavailable": {
+    "notes": "",
+    "translation": "Befehl nicht verfügbar"
+  },
+  "core.error.unavailableForEmbeds": {
+    "notes": "",
+    "translation": "Befehl für Einbettungen nicht verfügbar"
+  },
+  "core.export.gist": {
+    "notes": "",
+    "translation": "Erstelle einen öffentlichen GitHub Gist..."
+  },
+  "core.fork.success": {
+    "notes": "",
+    "translation": "Als neues Projekt abgezweigt"
+  },
+  "core.fullScreen.enter": {
+    "notes": "",
+    "translation": "Vollbild"
+  },
+  "core.fullScreen.exit": {
+    "notes": "",
+    "translation": "Vollbild beenden"
+  },
+  "core.import.loading": {
+    "notes": "",
+    "translation": "Projekt wird geladen..."
+  },
+  "core.layout.horizontal": {
+    "notes": "",
+    "translation": "Horizontales Layout"
+  },
+  "core.layout.responsive": {
+    "notes": "",
+    "translation": "Responsives Layout"
+  },
+  "core.layout.vertical": {
+    "notes": "",
+    "translation": "Vertikales Layout"
+  },
+  "core.loadDefaults.template": {
+    "notes": "",
+    "translation": "Lade Standardvorlage"
+  },
+  "core.login.success": {
+    "notes": "",
+    "translation": "Erfolgreich angemeldet"
+  },
+  "core.login.successWithName": {
+    "notes": "",
+    "translation": "Angemeldet als: {{name}}"
+  },
+  "core.logout.success": {
+    "notes": "",
+    "translation": "Erfolgreich abgemeldet"
+  },
+  "core.result.hint": {
+    "notes": "",
+    "translation": "Ergebnis in neuem Fenster anzeigen"
+  },
+  "core.save.success": {
+    "notes": "",
+    "translation": "Projekt lokal auf dem Gerät gespeichert!"
+  },
+  "core.save.successWithName": {
+    "notes": "",
+    "translation": "Projekt \"{{name}}\" auf dem Gerät gespeichert."
+  },
+  "core.template.blank": {
+    "notes": "",
+    "translation": "Leeres Projekt"
+  },
+  "core.template.delete": {
+    "notes": "",
+    "translation": "Vorlage \"{{item}}\" löschen?"
+  },
+  "core.template.javascript": {
+    "notes": "",
+    "translation": "JavaScript-Starter"
+  },
+  "core.template.react": {
+    "notes": "",
+    "translation": "React-Starter"
+  },
+  "core.template.saved": {
+    "notes": "",
+    "translation": "Als neue Vorlage gespeichert"
+  },
+  "core.template.typescript": {
+    "notes": "",
+    "translation": "TypeScript-Starter"
+  },
+  "core.template.vue": {
+    "notes": "",
+    "translation": "Vue 3-Starter"
+  },
+  "core.unload.notSaved": {
+    "notes": "",
+    "translation": "Änderungen, die Sie vorgenommen haben, werden möglicherweise nicht gespeichert."
+  },
+  "core.zoom.hint": {
+    "notes": "",
+    "translation": "Zoom"
+  },
+  "customSettings.JSON": {
+    "notes": "",
+    "translation": "Benutzerdefinierte Einstellungen JSON"
+  },
+  "customSettings.heading": {
+    "notes": "",
+    "translation": "Benutzerdefinierte Einstellungen"
+  },
+  "customSettings.load": {
+    "notes": "",
+    "translation": "Laden"
+  },
+  "deploy.create.desc": {
+    "notes": "### <tag-1> ###\n<strong  />\n\n### <tag-2> ###\n<span class=\"code\" />\n\n",
+    "translation": "Ein neues <tag-1>öffentliches</tag-1> Repository wird erstellt. Die Ergebnisseite wird in den <tag-2>gh-pages</tag-2> Branch gepusht."
+  },
+  "deploy.create.heading": {
+    "notes": "",
+    "translation": "Neues Repository erstellen"
+  },
+  "deploy.create.repoName": {
+    "notes": "### <tag-1> ###\n<span id=\"new-repo-name-error\" class=\"error\" />\n\n",
+    "translation": "Repository-Name <tag-1></tag-1>"
+  },
+  "deploy.error.generic": {
+    "notes": "",
+    "translation": "Bereitstellung fehlgeschlagen!"
+  },
+  "deploy.error.repoNameExists": {
+    "notes": "",
+    "translation": "Repository-Name existiert bereits"
+  },
+  "deploy.error.repoNameRequired": {
+    "notes": "",
+    "translation": "Repository-Name ist erforderlich"
+  },
+  "deploy.existing.desc": {
+    "notes": "### <tag-1> ###\n<span class=\"code\" />\n\n",
+    "translation": "Ein neuer Commit wird zum <tag-1>gh-pages</tag-1> Branch hinzugefügt."
+  },
+  "deploy.existing.heading": {
+    "notes": "",
+    "translation": "Bestehendes Repository"
+  },
+  "deploy.existing.repoName": {
+    "notes": "",
+    "translation": "Repository-Name"
+  },
+  "deploy.generic.commitMessage": {
+    "notes": "",
+    "translation": "Commit-Nachricht"
+  },
+  "deploy.generic.commitSourceCodePublic": {
+    "notes": "",
+    "translation": "Quellcode committen (öffentlich)"
+  },
+  "deploy.generic.deployBtn": {
+    "notes": "",
+    "translation": "Bereitstellen"
+  },
+  "deploy.generic.deploying": {
+    "notes": "",
+    "translation": "Wird bereitgestellt..."
+  },
+  "deploy.heading": {
+    "notes": "",
+    "translation": "Auf GitHub Pages bereitstellen"
+  },
+  "deploy.searchRepo": {
+    "notes": "",
+    "translation": "Durchsuchen Sie Ihre öffentlichen Repositories..."
+  },
+  "editorSettings.appLanguage.heading": {
+    "notes": "",
+    "translation": "App-Benutzeroberflächen-Sprache"
+  },
+  "editorSettings.appLanguage.note": {
+    "notes": "",
+    "translation": "Die App wird neu geladen, um die Änderungen nach dem Sprachwechsel anzuwenden."
+  },
+  "editorSettings.closeBrackets": {
+    "notes": "",
+    "translation": "Klammern und Anführungszeichen automatisch schließen"
+  },
+  "editorSettings.codeJarDesc": {
+    "notes": "",
+    "translation": "* Die markierten Funktionen sind in CodeJar nicht verfügbar."
+  },
+  "editorSettings.default": {
+    "notes": "",
+    "translation": "Standard"
+  },
+  "editorSettings.desc": {
+    "notes": "### <tag-1> ###\n<a href=\"{{DOCS_BASE_URL}}features/editor-settings\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Bitte lesen Sie die <tag-1>Dokumentation</tag-1> für Details."
+  },
+  "editorSettings.editor.codejar": {
+    "notes": "",
+    "translation": "CodeJar"
+  },
+  "editorSettings.editor.codemirror": {
+    "notes": "",
+    "translation": "CodeMirror"
+  },
+  "editorSettings.editor.heading": {
+    "notes": "",
+    "translation": "Editor"
+  },
+  "editorSettings.editor.monaco": {
+    "notes": "",
+    "translation": "Monaco"
+  },
+  "editorSettings.editorMode.emacs": {
+    "notes": "",
+    "translation": "Emacs"
+  },
+  "editorSettings.editorMode.heading": {
+    "notes": "",
+    "translation": "Editor-Modus *"
+  },
+  "editorSettings.editorMode.vim": {
+    "notes": "",
+    "translation": "Vim"
+  },
+  "editorSettings.editorTheme": {
+    "notes": "",
+    "translation": "Editor-Theme"
+  },
+  "editorSettings.emmet": {
+    "notes": "",
+    "translation": "Emmet aktivieren *"
+  },
+  "editorSettings.enableAI.heading": {
+    "notes": "",
+    "translation": "KI-Code-Assistent aktivieren"
+  },
+  "editorSettings.enableAI.note": {
+    "notes": "### <tag-1> ###\n<a href=\"https://codeium.com\" rel=\"noopener noreferrer\" target=\"_blank\" />\n\n### <tag-2> ###\n<img src=\"{{DOCS_BASE_URL}}img/credits/codeium.svg\" style=\"height: 1.2em; vertical-align: bottom;\" alt=\"Codeium\" />\n\n",
+    "translation": "Unterstützt von <tag-1><tag-2></tag-2></tag-1>"
+  },
+  "editorSettings.fontFamily": {
+    "notes": "",
+    "translation": "Schriftart"
+  },
+  "editorSettings.fontSize": {
+    "notes": "",
+    "translation": "Schriftgröße"
+  },
+  "editorSettings.format": {
+    "notes": "",
+    "translation": "Format"
+  },
+  "editorSettings.heading": {
+    "notes": "",
+    "translation": "Editor-Einstellungen"
+  },
+  "editorSettings.lineNumbers": {
+    "notes": "",
+    "translation": "Zeilennummern anzeigen"
+  },
+  "editorSettings.notAvailableInCodeJar": {
+    "notes": "",
+    "translation": "Nicht verfügbar in CodeJar"
+  },
+  "editorSettings.preview": {
+    "notes": "",
+    "translation": "Vorschau"
+  },
+  "editorSettings.semicolons": {
+    "notes": "",
+    "translation": "Format: Semikolons verwenden"
+  },
+  "editorSettings.singleQuote": {
+    "notes": "",
+    "translation": "Format: Einfache Anführungszeichen verwenden"
+  },
+  "editorSettings.tabSize": {
+    "notes": "",
+    "translation": "Tabulator-Größe"
+  },
+  "editorSettings.theme": {
+    "notes": "",
+    "translation": "Dunkler Modus"
+  },
+  "editorSettings.trailingComma": {
+    "notes": "",
+    "translation": "Format: Nachgestellte Kommas verwenden"
+  },
+  "editorSettings.useTabs.heading": {
+    "notes": "",
+    "translation": "Einrückung"
+  },
+  "editorSettings.useTabs.spaces": {
+    "notes": "",
+    "translation": "Leerzeichen"
+  },
+  "editorSettings.useTabs.tabs": {
+    "notes": "",
+    "translation": "Tabulatoren"
+  },
+  "editorSettings.wordWrap": {
+    "notes": "",
+    "translation": "Zeilenumbruch"
+  },
+  "embed.activeEditor.heading": {
+    "notes": "",
+    "translation": "Aktiver Editor"
+  },
+  "embed.activeEditor.markup": {
+    "notes": "",
+    "translation": "{{markup}}"
+  },
+  "embed.activeEditor.script": {
+    "notes": "",
+    "translation": "{{script}}"
+  },
+  "embed.activeEditor.style": {
+    "notes": "",
+    "translation": "{{style}}"
+  },
+  "embed.activeTool.compiled": {
+    "notes": "",
+    "translation": "Kompiliert"
+  },
+  "embed.activeTool.console": {
+    "notes": "",
+    "translation": "Konsole"
+  },
+  "embed.activeTool.heading": {
+    "notes": "",
+    "translation": "Aktives Werkzeug"
+  },
+  "embed.activeTool.tests": {
+    "notes": "",
+    "translation": "Tests"
+  },
+  "embed.code.copy": {
+    "notes": "",
+    "translation": "Code kopieren"
+  },
+  "embed.code.heading": {
+    "notes": "",
+    "translation": "Code"
+  },
+  "embed.desc": {
+    "notes": "### <tag-1> ###\n<a href=\"{{DOCS_BASE_URL}}configuration/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Bitte lesen Sie die <tag-1>Dokumentation</tag-1> für erweiterte Konfigurationen."
+  },
+  "embed.embedType.cdn": {
+    "notes": "",
+    "translation": "Skript (CDN)"
+  },
+  "embed.embedType.heading": {
+    "notes": "",
+    "translation": "Einbettungstyp"
+  },
+  "embed.embedType.html": {
+    "notes": "",
+    "translation": "HTML"
+  },
+  "embed.embedType.iframe": {
+    "notes": "",
+    "translation": "Iframe"
+  },
+  "embed.embedType.npm": {
+    "notes": "",
+    "translation": "JS (npm)"
+  },
+  "embed.embedType.react": {
+    "notes": "",
+    "translation": "React"
+  },
+  "embed.embedType.svelte": {
+    "notes": "",
+    "translation": "Svelte"
+  },
+  "embed.embedType.vue": {
+    "notes": "",
+    "translation": "Vue"
+  },
+  "embed.heading": {
+    "notes": "",
+    "translation": "Projekt einbetten"
+  },
+  "embed.lite": {
+    "notes": "",
+    "translation": "Lite-Modus"
+  },
+  "embed.loading.click": {
+    "notes": "",
+    "translation": "Beim Klicken"
+  },
+  "embed.loading.eager": {
+    "notes": "",
+    "translation": "Sofort"
+  },
+  "embed.loading.heading": {
+    "notes": "",
+    "translation": "Laden"
+  },
+  "embed.loading.lazy": {
+    "notes": "",
+    "translation": "Verzögert"
+  },
+  "embed.mode.codeblock": {
+    "notes": "",
+    "translation": "Code-Block"
+  },
+  "embed.mode.editor": {
+    "notes": "",
+    "translation": "Editor"
+  },
+  "embed.mode.full": {
+    "notes": "",
+    "translation": "Vollständig"
+  },
+  "embed.mode.heading": {
+    "notes": "",
+    "translation": "Anzeigemodus"
+  },
+  "embed.mode.result": {
+    "notes": "",
+    "translation": "Ergebnis"
+  },
+  "embed.permanentUrl": {
+    "notes": "",
+    "translation": "Permanente URL"
+  },
+  "embed.preview": {
+    "notes": "",
+    "translation": "Vorschau"
+  },
+  "embed.previewLoading": {
+    "notes": "",
+    "translation": "Vorschau wird geladen..."
+  },
+  "embed.readonly": {
+    "notes": "",
+    "translation": "Schreibgeschützt"
+  },
+  "embed.theme.dark": {
+    "notes": "",
+    "translation": "Dunkel"
+  },
+  "embed.theme.heading": {
+    "notes": "",
+    "translation": "Theme"
+  },
+  "embed.theme.light": {
+    "notes": "",
+    "translation": "Hell"
+  },
+  "embed.tools.closed": {
+    "notes": "",
+    "translation": "Geschlossen"
+  },
+  "embed.tools.full": {
+    "notes": "",
+    "translation": "Vollständig"
+  },
+  "embed.tools.heading": {
+    "notes": "",
+    "translation": "Werkzeuge"
+  },
+  "embed.tools.none": {
+    "notes": "",
+    "translation": "Keine"
+  },
+  "embed.tools.open": {
+    "notes": "",
+    "translation": "Offen"
+  },
+  "embed.view.editor": {
+    "notes": "",
+    "translation": "Editor"
+  },
+  "embed.view.heading": {
+    "notes": "",
+    "translation": "Standardansicht"
+  },
+  "embed.view.result": {
+    "notes": "",
+    "translation": "Ergebnis"
+  },
+  "embed.view.split": {
+    "notes": "",
+    "translation": "Geteilt"
+  },
+  "generic.about.blog": {
+    "notes": "",
+    "translation": "Blog"
+  },
+  "generic.about.configuration": {
+    "notes": "",
+    "translation": "Konfiguration"
+  },
+  "generic.about.features": {
+    "notes": "",
+    "translation": "Funktionen"
+  },
+  "generic.about.gettingStarted": {
+    "notes": "",
+    "translation": "Erste Schritte"
+  },
+  "generic.about.github": {
+    "notes": "",
+    "translation": "GitHub"
+  },
+  "generic.about.sdk": {
+    "notes": "",
+    "translation": "SDK"
+  },
+  "generic.about.sponsor": {
+    "notes": "",
+    "translation": "LiveCodes sponsern"
+  },
+  "generic.about.twitter": {
+    "notes": "",
+    "translation": "𝕏 / Twitter"
+  },
+  "generic.clickForInfo": {
+    "notes": "",
+    "translation": "Klicken für Informationen..."
+  },
+  "generic.close": {
+    "notes": "",
+    "translation": "Schließen"
+  },
+  "generic.error.authentication": {
+    "notes": "",
+    "translation": "Authentifizierungsfehler!"
+  },
+  "generic.error.exceededSize": {
+    "notes": "",
+    "translation": "Fehler: Größe von {{size}} MB überschritten"
+  },
+  "generic.error.failedToReadFile": {
+    "notes": "",
+    "translation": "Fehler: Datei konnte nicht gelesen werden"
+  },
+  "generic.loading": {
+    "notes": "",
+    "translation": "Wird geladen..."
+  },
+  "generic.more": {
+    "notes": "",
+    "translation": "Mehr..."
+  },
+  "generic.optional": {
+    "notes": "",
+    "translation": "Optional"
+  },
+  "generic.required": {
+    "notes": "",
+    "translation": "Erforderlich"
+  },
+  "import.bulk.desc": {
+    "notes": "### <tag-1> ###\n<a href=\"#\" id=\"link-to-saved-projects\" />\n\n",
+    "translation": "Massen-Import mehrerer Projekte in Ihre gespeicherten Projekte. Projekte können aus dem Bildschirm <tag-1>Gespeicherte Projekte</tag-1> exportiert werden."
+  },
+  "import.bulk.fromFile": {
+    "notes": "",
+    "translation": "Massen-Import aus lokaler Datei"
+  },
+  "import.bulk.fromURL": {
+    "notes": "",
+    "translation": "Massen-Import von URL"
+  },
+  "import.bulk.heading": {
+    "notes": "",
+    "translation": "Massen-Import"
+  },
+  "import.bulk.started": {
+    "notes": "",
+    "translation": "Massen-Import gestartet..."
+  },
+  "import.code.desc": {
+    "notes": "### <tag-1> ###\n<ul  />\n\n### <tag-2> ###\n<li  />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<li  />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<li  />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<li  />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<li  />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<li  />\n\n### <tag-13> ###\n<br  />\n\n### <tag-14> ###\n<a href=\"{{DOCS_BASE_URL}}features/import\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Unterstützte Quellen: <tag-1> <tag-2>GitHub Gist</tag-2> <tag-3>GitHub-Datei</tag-3> <tag-4>Verzeichnis in einem GitHub-Repository</tag-4> <tag-5>Gitlab-Snippet</tag-5> <tag-6>Gitlab-Datei</tag-6> <tag-7>Verzeichnis in einem Gitlab-Repository</tag-7> <tag-8>JS Bin</tag-8> <tag-9>Rohcode</tag-9> <tag-10>Code im Webseiten-DOM</tag-10> <tag-11>Code in ZIP-Datei</tag-11> <tag-12>Offizielle Playgrounds<tag-13></tag-13>(TypeScript, Vue und Svelte)</tag-12> </tag-1> Bitte besuchen Sie die <tag-14>Dokumentation</tag-14> für Details."
+  },
+  "import.code.fromFile": {
+    "notes": "",
+    "translation": "Lokale Dateien importieren"
+  },
+  "import.code.fromURL": {
+    "notes": "",
+    "translation": "Von URL importieren"
+  },
+  "import.code.heading": {
+    "notes": "",
+    "translation": "Code importieren"
+  },
+  "import.error.failedToLoadURL": {
+    "notes": "",
+    "translation": "Fehler: URL konnte nicht geladen werden"
+  },
+  "import.error.invalidConfigFile": {
+    "notes": "",
+    "translation": "Ungültige Konfigurationsdatei"
+  },
+  "import.error.invalidFile": {
+    "notes": "",
+    "translation": "Fehler: Ungültige Datei"
+  },
+  "import.generic.file": {
+    "notes": "",
+    "translation": "Lokale Datei"
+  },
+  "import.generic.url": {
+    "notes": "",
+    "translation": "URL"
+  },
+  "import.heading": {
+    "notes": "",
+    "translation": "Importieren"
+  },
+  "import.json.desc": {
+    "notes": "",
+    "translation": "Importieren Sie eine einzelne Projekt-JSON in den Editor. Ein Projekt kann aus dem App-Menü → Exportieren → Projekt exportieren (JSON) exportiert werden."
+  },
+  "import.json.fromFile": {
+    "notes": "",
+    "translation": "Projekt aus lokaler Datei importieren"
+  },
+  "import.json.fromURL": {
+    "notes": "",
+    "translation": "Projekt von URL importieren"
+  },
+  "import.json.heading": {
+    "notes": "",
+    "translation": "Projekt-JSON importieren"
+  },
+  "import.success": {
+    "notes": "",
+    "translation": "Import erfolgreich!"
+  },
+  "login.accessAllowed": {
+    "notes": "",
+    "translation": "Zugriff erlauben auf:"
+  },
+  "login.desc": {
+    "notes": "### <tag-1> ###\n<p  />\n\n### <tag-2> ###\n<strong  />\n\n### <tag-3> ###\n<p  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}features/github-integration#features-that-require-github-account\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<p  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}features/github-integration#setting-permissions\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1>Durch die Anmeldung stimmen Sie zu, dass <tag-2>Cookies</tag-2> auf Ihrem Gerät gespeichert werden dürfen.</tag-1> <tag-3> <tag-4>Warum werden diese Berechtigungen benötigt?</tag-4> </tag-3> <tag-5> <tag-6>Wie ändere/widerrufe ich Berechtigungen?</tag-6> </tag-5>"
+  },
+  "login.gist": {
+    "notes": "",
+    "translation": "Gists"
+  },
+  "login.heading": {
+    "notes": "",
+    "translation": "Mit GitHub anmelden"
+  },
+  "login.loginAs": {
+    "notes": "",
+    "translation": "Angemeldet als {{name}}"
+  },
+  "login.loginBtn": {
+    "notes": "",
+    "translation": "Anmelden"
+  },
+  "login.logout": {
+    "notes": "",
+    "translation": "Abmelden"
+  },
+  "login.privateRepo": {
+    "notes": "",
+    "translation": "Private Repos"
+  },
+  "login.publicRepo": {
+    "notes": "",
+    "translation": "Repos"
+  },
+  "menu.about": {
+    "notes": "",
+    "translation": "Über"
+  },
+  "menu.assets": {
+    "notes": "",
+    "translation": "Assets …"
+  },
+  "menu.autoSave": {
+    "notes": "",
+    "translation": "Automatisches Speichern"
+  },
+  "menu.autoUpdate": {
+    "notes": "",
+    "translation": "Automatisches Aktualisieren"
+  },
+  "menu.backup": {
+    "notes": "",
+    "translation": "Sichern / Wiederherstellen …"
+  },
+  "menu.broadcast": {
+    "notes": "",
+    "translation": "Übertragen …"
+  },
+  "menu.customSettings": {
+    "notes": "",
+    "translation": "Benutzerdefinierte Einstellungen …"
+  },
+  "menu.delay.heading": {
+    "notes": "### <tag-1> ###\n<span id=\"delay-value\" />\n\n",
+    "translation": "Verzögerung: <tag-1>1,5</tag-1>s"
+  },
+  "menu.delay.hint": {
+    "notes": "",
+    "translation": "Verzögerung vor automatischer Aktualisierung"
+  },
+  "menu.deploy": {
+    "notes": "",
+    "translation": "Bereitstellen …"
+  },
+  "menu.editorSettings": {
+    "notes": "",
+    "translation": "Editor-Einstellungen …"
+  },
+  "menu.embed": {
+    "notes": "",
+    "translation": "Einbetten …"
+  },
+  "menu.export.codepen": {
+    "notes": "",
+    "translation": "In CodePen bearbeiten"
+  },
+  "menu.export.gist": {
+    "notes": "",
+    "translation": "Als GitHub Gist exportieren"
+  },
+  "menu.export.heading": {
+    "notes": "",
+    "translation": "Exportieren"
+  },
+  "menu.export.jsfiddle": {
+    "notes": "",
+    "translation": "In JSFiddle bearbeiten"
+  },
+  "menu.export.json": {
+    "notes": "",
+    "translation": "Projekt exportieren (JSON)"
+  },
+  "menu.export.result": {
+    "notes": "",
+    "translation": "Ergebnis exportieren (HTML)"
+  },
+  "menu.export.src": {
+    "notes": "",
+    "translation": "Quellcode exportieren (ZIP)"
+  },
+  "menu.formatOnsave": {
+    "notes": "",
+    "translation": "Beim Speichern formatieren"
+  },
+  "menu.import": {
+    "notes": "",
+    "translation": "Importieren …"
+  },
+  "menu.layout": {
+    "notes": "",
+    "translation": "Vertikales Layout"
+  },
+  "menu.login": {
+    "notes": "",
+    "translation": "Anmelden …"
+  },
+  "menu.logout": {
+    "notes": "",
+    "translation": "Abmelden"
+  },
+  "menu.new": {
+    "notes": "",
+    "translation": "Neu …"
+  },
+  "menu.open": {
+    "notes": "",
+    "translation": "Öffnen …"
+  },
+  "menu.project": {
+    "notes": "",
+    "translation": "Projektinfo …"
+  },
+  "menu.recoverUnsaved": {
+    "notes": "",
+    "translation": "Ungespeichertes wiederherstellen"
+  },
+  "menu.resources": {
+    "notes": "",
+    "translation": "Externe Ressourcen …"
+  },
+  "menu.save": {
+    "notes": "",
+    "translation": "Speichern"
+  },
+  "menu.saveAs.fork": {
+    "notes": "",
+    "translation": "Abzweigen (Neues Projekt)"
+  },
+  "menu.saveAs.heading": {
+    "notes": "",
+    "translation": "Speichern unter"
+  },
+  "menu.saveAs.template": {
+    "notes": "",
+    "translation": "Vorlage"
+  },
+  "menu.share": {
+    "notes": "",
+    "translation": "Teilen …"
+  },
+  "menu.showSpacing.heading": {
+    "notes": "",
+    "translation": "Abstände anzeigen"
+  },
+  "menu.showSpacing.hint": {
+    "notes": "",
+    "translation": "Drücken Sie Alt/Option und bewegen Sie den Cursor über die Ergebnisseite"
+  },
+  "menu.snippets": {
+    "notes": "",
+    "translation": "Code-Snippets …"
+  },
+  "menu.sync": {
+    "notes": "### <tag-1> ###\n<span id=\"sync-indicator\" class=\"smaller hidden\" />\n\n",
+    "translation": "Synchronisieren (Beta) … <tag-1> ⏳</tag-1>"
+  },
+  "menu.theme": {
+    "notes": "",
+    "translation": "Dunkles Theme"
+  },
+  "menu.welcome.heading": {
+    "notes": "",
+    "translation": "Willkommen …"
+  },
+  "menu.welcome.hint": {
+    "notes": "",
+    "translation": "Willkommensbildschirm beim Start anzeigen"
+  },
+  "open.defaultTemplate": {
+    "notes": "",
+    "translation": "Standardvorlage "
+  },
+  "open.delete.all": {
+    "notes": "",
+    "translation": "{{projects}} Projekte löschen?"
+  },
+  "open.delete.deleting": {
+    "notes": "",
+    "translation": "Projekte werden gelöscht..."
+  },
+  "open.delete.one": {
+    "notes": "",
+    "translation": "Projekt löschen: {{project}}?"
+  },
+  "open.deleteAll": {
+    "notes": "",
+    "translation": "Alle löschen"
+  },
+  "open.exportAll": {
+    "notes": "",
+    "translation": "Alle exportieren"
+  },
+  "open.filter.language": {
+    "notes": "",
+    "translation": "nach Sprache filtern"
+  },
+  "open.filter.tag": {
+    "notes": "",
+    "translation": "nach Tag filtern"
+  },
+  "open.heading": {
+    "notes": "",
+    "translation": "Gespeicherte Projekte"
+  },
+  "open.import": {
+    "notes": "",
+    "translation": "Importieren"
+  },
+  "open.lastModified": {
+    "notes": "",
+    "translation": "Zuletzt geändert: {{modified}}"
+  },
+  "open.noData.desc": {
+    "notes": "",
+    "translation": "Sie können ein Projekt über (Einstellungsmenü&nbsp;&gt;&nbsp;Speichern) oder mit der Tastenkombination (Strg/Cmd&nbsp;+&nbsp;S) speichern."
+  },
+  "open.noData.heading": {
+    "notes": "",
+    "translation": "Sie haben keine gespeicherten Projekte."
+  },
+  "open.noMatch": {
+    "notes": "",
+    "translation": "Keine Projekte entsprechen diesen Filtern."
+  },
+  "open.placeholder.allLanguages": {
+    "notes": "",
+    "translation": "Alle Sprachen"
+  },
+  "open.placeholder.filterByTags": {
+    "notes": "",
+    "translation": "Nach Tags filtern"
+  },
+  "open.placeholder.search": {
+    "notes": "",
+    "translation": "Suchen"
+  },
+  "open.removeDefault": {
+    "notes": "",
+    "translation": "(zurücksetzen)"
+  },
+  "open.reset": {
+    "notes": "",
+    "translation": "Zurücksetzen"
+  },
+  "open.setAsDefault": {
+    "notes": "",
+    "translation": "Als Standard festlegen"
+  },
+  "open.sort.heading": {
+    "notes": "",
+    "translation": "Sortieren nach:"
+  },
+  "open.sort.lastModified": {
+    "notes": "",
+    "translation": "Zuletzt geändert"
+  },
+  "open.sort.title": {
+    "notes": "",
+    "translation": "Titel"
+  },
+  "project.desc": {
+    "notes": "",
+    "translation": "Beschreibung"
+  },
+  "project.head": {
+    "notes": "",
+    "translation": "Zu &lt;head&gt; hinzufügen"
+  },
+  "project.heading": {
+    "notes": "",
+    "translation": "Projektinfo"
+  },
+  "project.htmlAttr": {
+    "notes": "",
+    "translation": "Attribute für &lt;html&gt;"
+  },
+  "project.tags": {
+    "notes": "",
+    "translation": "Tags"
+  },
+  "project.title": {
+    "notes": "",
+    "translation": "Projekttitel"
+  },
+  "recoverPrompt.desc": {
+    "notes": "",
+    "translation": "Ihr letztes Projekt hat ungespeicherte Änderungen!"
+  },
+  "recoverPrompt.heading": {
+    "notes": "",
+    "translation": "Ungespeichertes Projekt wiederherstellen?"
+  },
+  "recoverPrompt.meta": {
+    "notes": "### <tag-1> ###\n<strong id=\"unsaved-project-name\" />\n\n### <tag-2> ###\n<br  />\n\n### <tag-3> ###\n<span id=\"unsaved-project-last-modified\" />\n\n",
+    "translation": "Titel: <tag-1></tag-1> <tag-2></tag-2> Zuletzt geändert: <tag-3></tag-3>"
+  },
+  "recoverPrompt.notShowAgain": {
+    "notes": "",
+    "translation": "Dies nicht mehr anzeigen."
+  },
+  "recoverPrompt.prompt.discard": {
+    "notes": "",
+    "translation": "Ungespeichertes Projekt verwerfen"
+  },
+  "recoverPrompt.prompt.heading": {
+    "notes": "### <tag-1> ###\n<br  />\n\n",
+    "translation": "<tag-1></tag-1>Möchten Sie es jetzt wiederherstellen?"
+  },
+  "recoverPrompt.prompt.recover": {
+    "notes": "",
+    "translation": "Projekt im Editor wiederherstellen"
+  },
+  "recoverPrompt.prompt.save": {
+    "notes": "",
+    "translation": "Auf Gerät speichern und fortfahren"
+  },
+  "resources.browseOnJsDelivr": {
+    "notes": "",
+    "translation": "Paketdateien auf jsDelivr durchsuchen"
+  },
+  "resources.cssPresets.heading": {
+    "notes": "",
+    "translation": "CSS-Voreinstellungen"
+  },
+  "resources.cssPresets.none": {
+    "notes": "",
+    "translation": "Keine"
+  },
+  "resources.cssPresets.normalizeCss": {
+    "notes": "",
+    "translation": "Normalize.css"
+  },
+  "resources.cssPresets.resetCss": {
+    "notes": "",
+    "translation": "Reset CSS"
+  },
+  "resources.error.failedToLoadResults": {
+    "notes": "",
+    "translation": "Ergebnisse konnten nicht geladen werden!"
+  },
+  "resources.error.noResultsFound": {
+    "notes": "",
+    "translation": "Keine Ergebnisse gefunden für: "
+  },
+  "resources.fonts.add": {
+    "notes": "",
+    "translation": "Hinzufügen"
+  },
+  "resources.fonts.heading": {
+    "notes": "### <tag-1> ###\n<span class=\"nowrap label-description\" />\n\n",
+    "translation": "Schriftarten <tag-1>(bereitgestellt von Google Fonts)</tag-1>"
+  },
+  "resources.fonts.select": {
+    "notes": "",
+    "translation": "Schriftart auswählen ..."
+  },
+  "resources.heading": {
+    "notes": "",
+    "translation": "Externe Ressourcen"
+  },
+  "resources.scripts": {
+    "notes": "",
+    "translation": "Externe Skripte"
+  },
+  "resources.search.heading": {
+    "notes": "### <tag-1> ###\n<span class=\"nowrap label-description\" />\n\n",
+    "translation": "Pakete suchen <tag-1>(bereitgestellt von jsDelivr)</tag-1>"
+  },
+  "resources.search.placeholder": {
+    "notes": "",
+    "translation": "z.B. jquery, lodash@4, bootstrap@5.2.3, ..."
+  },
+  "resources.stylesheets": {
+    "notes": "",
+    "translation": "Externe Stylesheets"
+  },
+  "resources.urlDesc": {
+    "notes": "",
+    "translation": "Fügen Sie Stylesheet/Skript-URLs hinzu. Jede URL sollte in einer separaten Zeile stehen."
+  },
+  "savePrompt.heading": {
+    "notes": "",
+    "translation": "Ungespeicherte Änderungen"
+  },
+  "savePrompt.prompt.cancel": {
+    "notes": "",
+    "translation": "Abbrechen"
+  },
+  "savePrompt.prompt.discard": {
+    "notes": "",
+    "translation": "Nicht speichern"
+  },
+  "savePrompt.prompt.heading": {
+    "notes": "### <tag-1> ###\n<br  />\n\n",
+    "translation": "Die von Ihnen vorgenommenen Änderungen werden möglicherweise nicht gespeichert. <tag-1></tag-1> Möchten Sie jetzt speichern?"
+  },
+  "savePrompt.prompt.save": {
+    "notes": "",
+    "translation": "Speichern"
+  },
+  "share.characters": {
+    "notes": "",
+    "translation": "{{urlLength}} Zeichen"
+  },
+  "share.copy.clickToCopy": {
+    "notes": "",
+    "translation": "Zum Kopieren klicken"
+  },
+  "share.copy.copied": {
+    "notes": "",
+    "translation": "URL in die Zwischenablage kopiert"
+  },
+  "share.encodedURL": {
+    "notes": "",
+    "translation": "Kodierte URL erhalten"
+  },
+  "share.error.failedToCopy": {
+    "notes": "",
+    "translation": "Kopieren in die Zwischenablage fehlgeschlagen!"
+  },
+  "share.error.failedToGenerateURL": {
+    "notes": "",
+    "translation": "Kurz-URL konnte nicht generiert werden!"
+  },
+  "share.expireInOneYear": {
+    "notes": "",
+    "translation": "Läuft in 1 Jahr ab"
+  },
+  "share.generateURL": {
+    "notes": "",
+    "translation": "URL wird generiert …"
+  },
+  "share.heading": {
+    "notes": "",
+    "translation": "Teilen"
+  },
+  "share.permanentURL": {
+    "notes": "",
+    "translation": "Permanente URL"
+  },
+  "share.qrcode.clickToDownload": {
+    "notes": "",
+    "translation": "Zum Herunterladen klicken"
+  },
+  "share.qrcode.generating": {
+    "notes": "",
+    "translation": "Wird generiert..."
+  },
+  "share.services.copyUrl": {
+    "notes": "",
+    "translation": "URL kopieren"
+  },
+  "share.services.devTo": {
+    "notes": "",
+    "translation": "Dev.to"
+  },
+  "share.services.email": {
+    "notes": "",
+    "translation": "E-Mail"
+  },
+  "share.services.facebook": {
+    "notes": "",
+    "translation": "Facebook"
+  },
+  "share.services.hackerNews": {
+    "notes": "",
+    "translation": "Hacker News"
+  },
+  "share.services.linkedIn": {
+    "notes": "",
+    "translation": "LinkedIn"
+  },
+  "share.services.pinterest": {
+    "notes": "",
+    "translation": "Pinterest"
+  },
+  "share.services.pocket": {
+    "notes": "",
+    "translation": "Pocket"
+  },
+  "share.services.qrCode": {
+    "notes": "",
+    "translation": "QR-Code"
+  },
+  "share.services.reddit": {
+    "notes": "",
+    "translation": "Reddit"
+  },
+  "share.services.share": {
+    "notes": "",
+    "translation": "Teilen über …"
+  },
+  "share.services.telegram": {
+    "notes": "",
+    "translation": "Telegram"
+  },
+  "share.services.tumblr": {
+    "notes": "",
+    "translation": "Tumblr"
+  },
+  "share.services.twitter": {
+    "notes": "",
+    "translation": "𝕏 / Twitter"
+  },
+  "share.services.whatsApp": {
+    "notes": "",
+    "translation": "WhatsApp"
+  },
+  "share.shortURL": {
+    "notes": "",
+    "translation": "Kurz-URL erhalten"
+  },
+  "snippets.action.copy": {
+    "notes": "",
+    "translation": "Kopieren"
+  },
+  "snippets.action.delete": {
+    "notes": "",
+    "translation": "Löschen"
+  },
+  "snippets.action.edit": {
+    "notes": "",
+    "translation": "Bearbeiten"
+  },
+  "snippets.add.code": {
+    "notes": "",
+    "translation": "Code"
+  },
+  "snippets.add.desc": {
+    "notes": "",
+    "translation": "Beschreibung"
+  },
+  "snippets.add.heading": {
+    "notes": "",
+    "translation": "Snippet hinzufügen"
+  },
+  "snippets.add.language": {
+    "notes": "",
+    "translation": "Sprache"
+  },
+  "snippets.add.save": {
+    "notes": "",
+    "translation": "Speichern"
+  },
+  "snippets.add.snippets": {
+    "notes": "",
+    "translation": "Snippets"
+  },
+  "snippets.add.title": {
+    "notes": "",
+    "translation": "Titel"
+  },
+  "snippets.copy.clickToCopySnippet": {
+    "notes": "",
+    "translation": "Zum Kopieren des Snippets klicken"
+  },
+  "snippets.copy.copied": {
+    "notes": "",
+    "translation": "Snippet wurde in die Zwischenablage kopiert."
+  },
+  "snippets.delete.all": {
+    "notes": "",
+    "translation": "{{snippets}} Snippets löschen?"
+  },
+  "snippets.delete.one": {
+    "notes": "",
+    "translation": "Snippet löschen: {{snippet}}?"
+  },
+  "snippets.deleteAll": {
+    "notes": "",
+    "translation": "Alle löschen"
+  },
+  "snippets.error.failedToCopy": {
+    "notes": "",
+    "translation": "URL konnte nicht kopiert werden."
+  },
+  "snippets.error.noTitle": {
+    "notes": "",
+    "translation": "Bitte fügen Sie einen Snippet-Titel hinzu."
+  },
+  "snippets.filter.language": {
+    "notes": "",
+    "translation": "nach Sprache filtern"
+  },
+  "snippets.heading": {
+    "notes": "",
+    "translation": "Code-Snippets"
+  },
+  "snippets.lastModified": {
+    "notes": "",
+    "translation": "Zuletzt geändert: {{modified}}"
+  },
+  "snippets.noMatch": {
+    "notes": "",
+    "translation": "Keine Snippets entsprechen diesen Filtern."
+  },
+  "snippets.noSavedSnippets": {
+    "notes": "",
+    "translation": "Sie haben keine gespeicherten Snippets."
+  },
+  "snippets.placeholder.allLanguages": {
+    "notes": "",
+    "translation": "Alle Sprachen"
+  },
+  "snippets.placeholder.search": {
+    "notes": "",
+    "translation": "Suchen"
+  },
+  "snippets.reset": {
+    "notes": "",
+    "translation": "Zurücksetzen"
+  },
+  "snippets.save.success": {
+    "notes": "",
+    "translation": "Snippet lokal auf dem Gerät gespeichert!"
+  },
+  "snippets.sort.date": {
+    "notes": "",
+    "translation": "Datum"
+  },
+  "snippets.sort.heading": {
+    "notes": "",
+    "translation": "Sortieren nach:"
+  },
+  "snippets.sort.title": {
+    "notes": "",
+    "translation": "Titel"
+  },
+  "snippets.text": {
+    "notes": "",
+    "translation": "Klartext"
+  },
+  "splash.loading": {
+    "notes": "",
+    "translation": "LiveCodes wird geladen…"
+  },
+  "sync.autoSync": {
+    "notes": "",
+    "translation": "Automatische Synchronisierung"
+  },
+  "sync.create.desc": {
+    "notes": "### <tag-1> ###\n<strong  />\n\n### <tag-2> ###\n<span class=\"code\" />\n\n",
+    "translation": "Ein neues <tag-1>privates</tag-1> Repository wird erstellt. Ihre lokalen LiveCodes-Daten werden mit dem <tag-2>main</tag-2>-Branch synchronisiert."
+  },
+  "sync.create.heading": {
+    "notes": "",
+    "translation": "Neues Repository erstellen"
+  },
+  "sync.create.repoName": {
+    "notes": "",
+    "translation": "Repository-Name"
+  },
+  "sync.error.generic": {
+    "notes": "",
+    "translation": "Synchronisierung fehlgeschlagen!"
+  },
+  "sync.error.repoNameRequired": {
+    "notes": "",
+    "translation": "Repository-Name ist erforderlich"
+  },
+  "sync.existing.desc": {
+    "notes": "### <tag-1> ###\n<span class=\"code\" />\n\n",
+    "translation": "Ihre lokalen LiveCodes-Daten werden mit dem <tag-1>main</tag-1>-Branch synchronisiert."
+  },
+  "sync.existing.heading": {
+    "notes": "",
+    "translation": "Bestehendes Repository"
+  },
+  "sync.existing.repoName": {
+    "notes": "",
+    "translation": "Repository-Name"
+  },
+  "sync.heading": {
+    "notes": "",
+    "translation": "Mit GitHub-Repository synchronisieren"
+  },
+  "sync.searchRepos": {
+    "notes": "",
+    "translation": "Ihre Repositories durchsuchen..."
+  },
+  "sync.success": {
+    "notes": "",
+    "translation": "Synchronisierung abgeschlossen!"
+  },
+  "sync.syncBtn": {
+    "notes": "",
+    "translation": "Synchronisieren"
+  },
+  "sync.syncInProgress": {
+    "notes": "",
+    "translation": "Synchronisierung läuft..."
+  },
+  "sync.syncStarted": {
+    "notes": "",
+    "translation": "Synchronisierung gestartet..."
+  },
+  "templates.heading": {
+    "notes": "",
+    "translation": "Neues Projekt"
+  },
+  "templates.noUserTemplates.desc": {
+    "notes": "### <tag-1> ###\n<wbr  />\n\n",
+    "translation": "Sie können ein Projekt als Vorlage speichern unter <tag-1></tag-1>(App-Menü&nbsp;&gt;&nbsp;Speichern&nbsp;unter&nbsp;&gt; Vorlage)."
+  },
+  "templates.noUserTemplates.heading": {
+    "notes": "",
+    "translation": "Sie haben keine gespeicherten Vorlagen."
+  },
+  "templates.starter.angular": {
+    "notes": "",
+    "translation": "Angular-Starter"
+  },
+  "templates.starter.assemblyscript": {
+    "notes": "",
+    "translation": "AssemblyScript-Starter"
+  },
+  "templates.starter.astro": {
+    "notes": "",
+    "translation": "Astro-Starter"
+  },
+  "templates.starter.backbone": {
+    "notes": "",
+    "translation": "Backbone-Starter"
+  },
+  "templates.starter.blank": {
+    "notes": "",
+    "translation": "Leeres Projekt"
+  },
+  "templates.starter.blockly": {
+    "notes": "",
+    "translation": "Blockly-Starter"
+  },
+  "templates.starter.bootstrap": {
+    "notes": "",
+    "translation": "Bootstrap-Starter"
+  },
+  "templates.starter.civet": {
+    "notes": "",
+    "translation": "Civet-Starter"
+  },
+  "templates.starter.clio": {
+    "notes": "",
+    "translation": "Clio-Starter"
+  },
+  "templates.starter.clojurescript": {
+    "notes": "",
+    "translation": "ClojureScript-Starter"
+  },
+  "templates.starter.coffeescript": {
+    "notes": "",
+    "translation": "CoffeeScript-Starter"
+  },
+  "templates.starter.commonlisp": {
+    "notes": "",
+    "translation": "Common Lisp-Starter"
+  },
+  "templates.starter.cpp": {
+    "notes": "",
+    "translation": "C++-Starter"
+  },
+  "templates.starter.diagrams": {
+    "notes": "",
+    "translation": "Diagramm-Starter"
+  },
+  "templates.starter.fennel": {
+    "notes": "",
+    "translation": "Fennel-Starter"
+  },
+  "templates.starter.gleam": {
+    "notes": "",
+    "translation": "Gleam-Starter"
+  },
+  "templates.starter.go": {
+    "notes": "",
+    "translation": "Go-Starter"
+  },
+  "templates.starter.heading": {
+    "notes": "",
+    "translation": "Starter-Vorlagen"
+  },
+  "templates.starter.imba": {
+    "notes": "",
+    "translation": "Imba-Starter"
+  },
+  "templates.starter.javascript": {
+    "notes": "",
+    "translation": "JavaScript-Starter"
+  },
+  "templates.starter.jest": {
+    "notes": "",
+    "translation": "Jest-Starter"
+  },
+  "templates.starter.jest-react": {
+    "notes": "",
+    "translation": "Jest/React-Starter"
+  },
+  "templates.starter.jquery": {
+    "notes": "",
+    "translation": "jQuery-Starter"
+  },
+  "templates.starter.julia": {
+    "notes": "",
+    "translation": "Julia-Starter"
+  },
+  "templates.starter.knockout": {
+    "notes": "",
+    "translation": "Knockout-Starter"
+  },
+  "templates.starter.lit": {
+    "notes": "",
+    "translation": "Lit-Starter"
+  },
+  "templates.starter.livescript": {
+    "notes": "",
+    "translation": "LiveScript-Starter"
+  },
+  "templates.starter.loading": {
+    "notes": "",
+    "translation": "Lade Starter-Vorlagen..."
+  },
+  "templates.starter.lua": {
+    "notes": "",
+    "translation": "Lua-Starter"
+  },
+  "templates.starter.lua-wasm": {
+    "notes": "",
+    "translation": "Lua (Wasm)-Starter"
+  },
+  "templates.starter.malina": {
+    "notes": "",
+    "translation": "Malina.js-Starter"
+  },
+  "templates.starter.markdown": {
+    "notes": "",
+    "translation": "Markdown-Starter"
+  },
+  "templates.starter.mdx": {
+    "notes": "",
+    "translation": "MDX-Starter"
+  },
+  "templates.starter.ocaml": {
+    "notes": "",
+    "translation": "OCaml-Starter"
+  },
+  "templates.starter.perl": {
+    "notes": "",
+    "translation": "Perl-Starter"
+  },
+  "templates.starter.php": {
+    "notes": "",
+    "translation": "PHP-Starter"
+  },
+  "templates.starter.php-wasm": {
+    "notes": "",
+    "translation": "PHP (Wasm)-Starter"
+  },
+  "templates.starter.postgresql": {
+    "notes": "",
+    "translation": "PostgreSQL-Starter"
+  },
+  "templates.starter.preact": {
+    "notes": "",
+    "translation": "Preact-Starter"
+  },
+  "templates.starter.prolog": {
+    "notes": "",
+    "translation": "Prolog-Starter"
+  },
+  "templates.starter.python": {
+    "notes": "",
+    "translation": "Python-Starter"
+  },
+  "templates.starter.r": {
+    "notes": "",
+    "translation": "R-Starter"
+  },
+  "templates.starter.react": {
+    "notes": "",
+    "translation": "React-Starter"
+  },
+  "templates.starter.react-native": {
+    "notes": "",
+    "translation": "React Native-Starter"
+  },
+  "templates.starter.reason": {
+    "notes": "",
+    "translation": "Reason-Starter"
+  },
+  "templates.starter.rescript": {
+    "notes": "",
+    "translation": "ReScript-Starter"
+  },
+  "templates.starter.riot": {
+    "notes": "",
+    "translation": "Riot.js-Starter"
+  },
+  "templates.starter.ruby": {
+    "notes": "",
+    "translation": "Ruby-Starter"
+  },
+  "templates.starter.ruby-wasm": {
+    "notes": "",
+    "translation": "Ruby (Wasm)-Starter"
+  },
+  "templates.starter.scheme": {
+    "notes": "",
+    "translation": "Scheme-Starter"
+  },
+  "templates.starter.solid": {
+    "notes": "",
+    "translation": "Solid-Starter"
+  },
+  "templates.starter.sql": {
+    "notes": "",
+    "translation": "SQL-Starter"
+  },
+  "templates.starter.stencil": {
+    "notes": "",
+    "translation": "Stencil-Starter"
+  },
+  "templates.starter.svelte": {
+    "notes": "",
+    "translation": "Svelte-Starter"
+  },
+  "templates.starter.tailwindcss": {
+    "notes": "",
+    "translation": "Tailwind CSS-Starter"
+  },
+  "templates.starter.tcl": {
+    "notes": "",
+    "translation": "Tcl-Starter"
+  },
+  "templates.starter.teal": {
+    "notes": "",
+    "translation": "Teal-Starter"
+  },
+  "templates.starter.typescript": {
+    "notes": "",
+    "translation": "TypeScript-Starter"
+  },
+  "templates.starter.vue": {
+    "notes": "",
+    "translation": "Vue 3 SFC-Starter"
+  },
+  "templates.starter.vue2": {
+    "notes": "",
+    "translation": "Vue 2-Starter"
+  },
+  "templates.starter.wat": {
+    "notes": "",
+    "translation": "WebAssembly Text-Starter"
+  },
+  "templates.user.heading": {
+    "notes": "",
+    "translation": "Meine Vorlagen"
+  },
+  "templates.user.loading": {
+    "notes": "",
+    "translation": "Lade Benutzervorlagen..."
+  },
+  "testEditor.heading": {
+    "notes": "",
+    "translation": "Tests bearbeiten"
+  },
+  "testEditor.load": {
+    "notes": "",
+    "translation": "Laden"
+  },
+  "testEditor.tests": {
+    "notes": "",
+    "translation": "Tests"
+  },
+  "toolspane.close": {
+    "notes": "",
+    "translation": "Schließen"
+  },
+  "toolspane.compiled.title": {
+    "notes": "",
+    "translation": "Kompiliert"
+  },
+  "toolspane.console.clear": {
+    "notes": "",
+    "translation": "Konsole leeren"
+  },
+  "toolspane.console.title": {
+    "notes": "",
+    "translation": "Konsole"
+  },
+  "toolspane.test.edit": {
+    "notes": "",
+    "translation": "Bearbeiten"
+  },
+  "toolspane.test.error": {
+    "notes": "### <tag-1> ###\n<div class=\"no-tests\" />\n\n### <tag-2> ###\n<span class=\"fail\" />\n\n",
+    "translation": "<tag-1><tag-2>Testfehler!</tag-2></tag-1>"
+  },
+  "toolspane.test.loading": {
+    "notes": "### <tag-1> ###\n<div class=\"test-summary\" />\n\n",
+    "translation": "<tag-1>Lade Tests...</tag-1>"
+  },
+  "toolspane.test.noTest": {
+    "notes": "### <tag-1> ###\n<div class=\"no-tests\" />\n\n",
+    "translation": "<tag-1>Dieses Projekt hat keine Tests!</tag-1>"
+  },
+  "toolspane.test.reset": {
+    "notes": "",
+    "translation": "Zurücksetzen"
+  },
+  "toolspane.test.run.desc": {
+    "notes": "",
+    "translation": "Strg/Cmd + Alt + T"
+  },
+  "toolspane.test.run.heading": {
+    "notes": "",
+    "translation": "Ausführen"
+  },
+  "toolspane.test.summary.desc": {
+    "notes": "### <tag-1> ###\n<br  />\n\n",
+    "translation": "Tests: {{failed}}\n       {{passed}}\n       {{skipped}}\n       {{total}}<tag-1></tag-1>\nZeit: {{duration}}s"
+  },
+  "toolspane.test.summary.failed": {
+    "notes": "",
+    "translation": "{{failedNum}} fehlgeschlagen"
+  },
+  "toolspane.test.summary.passed": {
+    "notes": "",
+    "translation": "{{passedNum}} bestanden"
+  },
+  "toolspane.test.summary.skipped": {
+    "notes": "",
+    "translation": "{{skippedNum}} übersprungen"
+  },
+  "toolspane.test.summary.total": {
+    "notes": "",
+    "translation": "{{totalNum}} insgesamt"
+  },
+  "toolspane.test.title": {
+    "notes": "",
+    "translation": "Tests"
+  },
+  "toolspane.test.watch.desc": {
+    "notes": "",
+    "translation": "Tests ausführen, wenn sich der Code ändert"
+  },
+  "toolspane.test.watch.heading": {
+    "notes": "",
+    "translation": "Beobachten"
+  },
+  "welcome.about.documentation": {
+    "notes": "",
+    "translation": "Dokumentation"
+  },
+  "welcome.about.heading": {
+    "notes": "",
+    "translation": "Über LiveCodes"
+  },
+  "welcome.heading": {
+    "notes": "",
+    "translation": "Willkommen"
+  },
+  "welcome.recent.heading": {
+    "notes": "",
+    "translation": "Zuletzt verwendet"
+  },
+  "welcome.recover.cancel": {
+    "notes": "",
+    "translation": "Abbrechen"
+  },
+  "welcome.recover.heading": {
+    "notes": "",
+    "translation": "Wiederherstellen"
+  },
+  "welcome.recover.lastModified": {
+    "notes": "### <tag-1> ###\n<span id=\"unsaved-project-last-modified\" />\n\n",
+    "translation": "Zuletzt geändert: <tag-1></tag-1>"
+  },
+  "welcome.recover.recover": {
+    "notes": "",
+    "translation": "Wiederherstellen"
+  },
+  "welcome.recover.save": {
+    "notes": "",
+    "translation": "Speichern"
+  },
+  "welcome.recover.unsavedChanges": {
+    "notes": "",
+    "translation": "Ihr letztes Projekt hatte ungespeicherte Änderungen:"
+  },
+  "welcome.showOnStartup": {
+    "notes": "",
+    "translation": "Beim Start anzeigen"
+  },
+  "welcome.start.heading": {
+    "notes": "",
+    "translation": "Start"
+  },
+  "welcome.start.import": {
+    "notes": "",
+    "translation": "Importieren..."
+  },
+  "welcome.start.loadDefaultTemplate": {
+    "notes": "",
+    "translation": "Standardvorlage laden"
+  },
+  "welcome.start.new": {
+    "notes": "",
+    "translation": "Neu..."
+  },
+  "welcome.start.noDefaultTemplate": {
+    "notes": "",
+    "translation": "Keine Standardvorlage"
+  },
+  "welcome.start.open": {
+    "notes": "",
+    "translation": "Öffnen..."
+  },
+  "welcome.templates.heading": {
+    "notes": "",
+    "translation": "Starter-Vorlagen"
+  }
+}

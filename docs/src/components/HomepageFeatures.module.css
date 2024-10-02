@@ -52,11 +52,20 @@
   width: 100px;
 }
 
-.rowLight {
-  background-color: rgb(250, 250, 250);
+html[data-theme='dark'] .rowLight {
+  background-color: hsl(227, 27%, 27%);
+  /* hsl(0, 0%, 98%); */
 }
 
-.rowDark {
+html[data-theme='light'].rowLight {
+  background-color: hsl(0, 0%, 98%);
+}
+
+html[data-theme='dark'] .rowDark {
+  background-color: hsl(228, 26%, 18%);
+}
+
+html[data-theme='light'] .rowDark {
   background-color: var(--ifm-color-secondary-lighter);
 }
 

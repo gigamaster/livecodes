@@ -70,8 +70,10 @@
   padding-top: 0.625rem;
   text-align: center;
   width: calc(100% - 2em);
+}
 
-  @media (min-width: 640px) {
+@media (min-width: 640px) {
+  .form-container button[type='submit'] {
     width: auto;
   }
 }

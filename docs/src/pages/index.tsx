@@ -22,18 +22,15 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className={styles.tryButton + ' button button--secondary button--lg'}
-            href="pathname:///../"
+            href="#features-editor"
           >
             Start Coding ⚡
           </Link>
         </div>
         <div className={styles.description}>
-          An open-source <strong>client-side</strong> playground for React, Vue, Svelte, Solid,
-          Typescript, Python, Go, Ruby, PHP and{' '}
-          <Link to="./languages">
-            <strong>80+ languages/frameworks</strong>
-          </Link>
-          .
+          <p>Free open source standalone app, embedded playgrounds and AI code assistant.</p>
+          <p>Powerful Editor with support for 90+ languages/frameworks<br />
+            React, Vue, Svelte, Solid, Typescript, Python, Go, Ruby, PHP</p>
         </div>
         <div className={styles.eaHomepage}>
           <div

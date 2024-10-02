@@ -26,7 +26,7 @@ const FeatureList1: FeatureItem[] = [
       <>
         Supports{' '}
         <Link to="./languages">
-          <strong>80+ languages/frameworks</strong>
+          <strong>90+ languages/frameworks</strong>
         </Link>
         . TypeScript Support, npm Modules, Console, Compiled code viewer, Tests, Starter Templates,
         Save, Import, Export, Share, Deploy, Assets, Snippets, Backup/Restore, Sync, Broadcast and a
@@ -256,7 +256,7 @@ createPlayground('#container', {
 export default function HomepageFeatures(): JSX.Element {
   return (
     <>
-      <section className={styles.features}>
+      <section id="features-editor" className={styles.features}>
         <div className="container">
           <div className="row">
             <Sliders></Sliders>
@@ -291,21 +291,14 @@ export default function HomepageFeatures(): JSX.Element {
             </div>
           </div>
           <div className={'row ' + styles.center}>
-            <p>Want a similar playground for your website?</p>
+            <p>Embed a playground like this into your website!</p>
           </div>
           <div style={{ maxWidth: '35em', margin: 'auto' }}>
             <CodeBlock language="js">{codeSample}</CodeBlock>
           </div>
           <div className={`row ${styles.center} ${styles.buttons}`}>
-            <Link
-              className=" button button--info button--outline button--lg"
-              to="./getting-started"
-            >
-              Get Started ✈️
-            </Link>
-            <Link className="button button--primary button--outline button--lg" to="./overview">
-              Documentations 📖
-            </Link>
+
+
           </div>
         </div>
       </section>
@@ -327,7 +320,7 @@ export default function HomepageFeatures(): JSX.Element {
                   <li>No account required *</li>
                   <li>No limits for usage (unlimited private projects)</li>
                   <li>
-                    <Link to="./languages/">80+ languages/frameworks/processors</Link>
+                    <Link to="./languages/">90+ languages/frameworks/processors</Link>
                   </li>
                   <li>
                     Large set of <Link to="./features/">features</Link> and integrations
@@ -475,6 +468,12 @@ export default function HomepageFeatures(): JSX.Element {
         <div className={'container padding-vert--lg ' + styles.center}>
           <div className={['row', styles.carousel, styles.center].join(' ')}>
             <div className={styles.buttons}>
+            <Link
+              className=" button button--info button--outline button--lg"
+              to="./getting-started"
+            >
+              Get Started ✈️
+            </Link>
               <Link className="button button--primary button--outline button--lg" to="./overview">
                 Documentations 📖
               </Link>

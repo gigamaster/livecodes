@@ -1,6 +1,6 @@
 .sliders {
   font: 1.2em sans-serif;
-  margin: 1em auto;
+  margin: 2em auto 3em;
   max-width: 40em;
   position: relative;
   text-align: center;
@@ -8,19 +8,21 @@
 }
 
 .sliders > span {
-  bottom: 0.2em;
+  bottom: 0.5em;
   display: inline-block;
   position: relative;
 }
 
 .sliders .buttons > * {
-  margin: 1em;
+  margin: 1.5em;
   width: 13em;
 }
 
 .slider {
+  background: #3f51b5;
+  border-radius: 5px;
   display: inline-block;
-  height: 1.4em;
+  height: 2em;
   overflow-y: hidden;
   position: relative;
   text-align: center;
@@ -28,11 +30,11 @@
 }
 
 .slider > div {
-  background-color: white;
-  margin: 0.2em;
+  color: white;
+  margin: 0.5em 0;
   overflow: hidden;
   position: absolute;
-  top: -1.4em;
+  top: -2em;
   transition: ease 0.5s;
   white-space: nowrap;
   width: calc(100% - 0.4em);
@@ -43,5 +45,5 @@
 }
 
 .slider .hidden {
-  top: 1.4em;
+  top: 2em;
 }

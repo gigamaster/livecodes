@@ -1,0 +1,950 @@
+{
+  "artTemplate.desc": {
+    "notes": "",
+    "translation": "Высокопроизводительный движок шаблонов JavaScript."
+  },
+  "artTemplate.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://aui.github.io/art-template/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://aui.github.io/art-template/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт art-template</tag-2> </tag-1> <tag-3> <tag-4>Документация art-template</tag-4> </tag-3>"
+  },
+  "artTemplate.name": {
+    "notes": "",
+    "translation": "art-template"
+  },
+  "asciidoc.desc": {
+    "notes": "",
+    "translation": "AsciiDoc, скомпилированный в HTML с использованием Asciidoctor."
+  },
+  "asciidoc.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://asciidoc.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://asciidoctor.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://asciidoctor.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/asciidoc/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт AsciiDoc</tag-2> </tag-1> <tag-3> <tag-4>Официальный сайт Asciidoctor</tag-4> </tag-3> <tag-5> <tag-6>Документация Asciidoctor</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=asciidoc</tag-8> </tag-7>"
+  },
+  "asciidoc.name": {
+    "notes": "",
+    "translation": "AsciiDoc"
+  },
+  "assemblyscript.desc": {
+    "notes": "",
+    "translation": "Язык, подобный TypeScript, для WebAssembly."
+  },
+  "assemblyscript.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.assemblyscript.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.assemblyscript.org/introduction.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=assemblyscript\" target=\"_parent\" data-template=\"assemblyscript\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт AssemblyScript</tag-2> </tag-1> <tag-3> <tag-4>Документация AssemblyScript</tag-4> </tag-3> <tag-5> <tag-6>Загрузить стартовый шаблон</tag-6> </tag-5>"
+  },
+  "assemblyscript.name": {
+    "notes": "",
+    "translation": "AssemblyScript"
+  },
+  "astro.desc": {
+    "notes": "",
+    "translation": "Создавайте более быстрые веб-сайты с меньшим количеством клиентского JavaScript. (Все еще в бета-версии)"
+  },
+  "astro.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://astro.build/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://docs.astro.build/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=astro\" target=\"_parent\" data-template=\"astro\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Astro</tag-2> </tag-1> <tag-3> <tag-4>Документация Astro</tag-4> </tag-3> <tag-5> <tag-6>Загрузить стартовый шаблон</tag-6> </tag-5>"
+  },
+  "astro.name": {
+    "notes": "",
+    "translation": "Astro"
+  },
+  "babel.desc": {
+    "notes": "",
+    "translation": "Компилятор JavaScript"
+  },
+  "babel.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://babeljs.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://babeljs.io/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт</tag-2></tag-1> <tag-3> <tag-4>Документация Babel</tag-4> </tag-3>"
+  },
+  "babel.name": {
+    "notes": "",
+    "translation": "Babel"
+  },
+  "bbcode.desc": {
+    "notes": "",
+    "translation": "BBCode (\"Bulletin Board Code\") - это легковесный язык разметки, используемый для форматирования сообщений во многих программах для интернет-форумов."
+  },
+  "bbcode.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.bbcode.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.phpbb.com/community/help/bbcode\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://en.wikipedia.org/wiki/BBCode\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1><tag-2>bbcode.org</tag-2></tag-1> <tag-3> <tag-4>Руководство по BBCode</tag-4> </tag-3> <tag-5> <tag-6>BBCode в Википедии</tag-6> </tag-5>"
+  },
+  "bbcode.name": {
+    "notes": "",
+    "translation": "BBCode"
+  },
+  "blockly.desc": {
+    "notes": "",
+    "translation": "Библиотека JavaScript для создания визуальных редакторов программирования."
+  },
+  "blockly.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://developers.google.com/blockly\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://developers.google.com/blockly/guides/overview\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://developers.google.com/blockly/reference/overview\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://google.github.io/blockly-samples/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=blockly\" target=\"_parent\" data-template=\"blockly\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт</tag-2> </tag-1> <tag-3> <tag-4>Руководства</tag-4> </tag-3> <tag-5> <tag-6>Справочник</tag-6> </tag-5> <tag-7> <tag-8>Примеры</tag-8> </tag-7> <tag-9> <tag-10>Загрузить стартовый шаблон</tag-10> </tag-9>"
+  },
+  "blockly.name": {
+    "notes": "",
+    "translation": "Blockly"
+  },
+  "civet.desc": {
+    "notes": "",
+    "translation": "Civet - это язык программирования, который компилируется в TypeScript или JavaScript, позволяя использовать существующие инструменты, но с более лаконичным и мощным синтаксисом."
+  },
+  "civet.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://civet.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://civet.dev/cheatsheet/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=civet\" target=\"_parent\" data-template=\"civet\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Civet</tag-2> </tag-1> <tag-3> <tag-4>Шпаргалка по Civet</tag-4> </tag-3> <tag-5> <tag-6>Загрузить стартовый шаблон</tag-6> </tag-5>"
+  },
+  "civet.name": {
+    "notes": "",
+    "translation": "Civet"
+  },
+  "clio.desc": {
+    "notes": "",
+    "translation": "Clio - это быстрый, распределенный, функциональный язык программирования, который компилируется в JavaScript."
+  },
+  "clio.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://clio-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://docs.clio-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=clio\" target=\"_parent\" data-template=\"clio\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Clio</tag-2> </tag-1> <tag-3> <tag-4>Документация Clio</tag-4> </tag-3> <tag-5> <tag-6>Загрузить стартовый шаблон</tag-6> </tag-5>"
+  },
+  "clio.name": {
+    "notes": "",
+    "translation": "Clio"
+  },
+  "clojurescript.desc": {
+    "notes": "### <tag-1> ###\n<a href=\"https://clojure.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<br  />\n\n### <tag-3> ###\n<a href=\"https://github.com/squint-cljs/cherry\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "ClojureScript - это компилятор для <tag-1>Clojure</tag-1>, который нацелен на JavaScript. <tag-2></tag-2>В LiveCodes он работает в браузере с использованием <tag-3>Cherry</tag-3>."
+  },
+  "clojurescript.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://clojurescript.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://clojure.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/squint-cljs/cherry\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/clojure/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/clojurescript\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=clojurescript\" target=\"_parent\" data-template=\"clojurescript\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт ClojureScript</tag-2> </tag-1> <tag-3> <tag-4>Официальный сайт Clojure</tag-4> </tag-3> <tag-5> <tag-6>Репозиторий Cherry</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=clojure</tag-8> </tag-7> <tag-9> <tag-10>Документация LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Загрузить стартовый шаблон</tag-12> </tag-11>"
+  },
+  "clojurescript.name": {
+    "notes": "",
+    "translation": "ClojureScript (CLJS)"
+  },
+  "coffeescript.desc": {
+    "notes": "",
+    "translation": "Непретенциозный JavaScript."
+  },
+  "coffeescript.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://coffeescript.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/coffeescript/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=coffeescript\" target=\"_parent\" data-template=\"coffeescript\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт CoffeeScript</tag-2> </tag-1> <tag-3> <tag-4>Изучите X за Y минут, где X=coffeescript</tag-4> </tag-3> <tag-5> <tag-6>Загрузить стартовый шаблон</tag-6> </tag-5>"
+  },
+  "coffeescript.name": {
+    "notes": "",
+    "translation": "CoffeeScript"
+  },
+  "commonlisp.desc": {
+    "notes": "",
+    "translation": "Реализация Common Lisp на JavaScript с использованием JSCL (компилятор Lisp-в-Javascript, загруженный из Common Lisp)."
+  },
+  "commonlisp.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://common-lisp.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/jscl-project/jscl\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://common-lisp.net/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/common-lisp/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=commonlisp\" target=\"_parent\" data-template=\"commonlisp\" />\n\n",
+    "translation": "<tag-1> <tag-2>Common-Lisp.net</tag-2> </tag-1> <tag-3> <tag-4>Проект JSCL</tag-4> </tag-3> <tag-5> <tag-6>Ресурсы Common Lisp</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=Common Lisp</tag-8> </tag-7> <tag-9> <tag-10>Загрузить стартовый шаблон</tag-10> </tag-9>"
+  },
+  "commonlisp.name": {
+    "notes": "",
+    "translation": "Common Lisp"
+  },
+  "cpp.desc1": {
+    "notes": "",
+    "translation": "Поддержка C++ с использованием JSCPP (простой интерпретатор C++, написанный на JavaScript)."
+  },
+  "cpp.desc2": {
+    "notes": "### <tag-1> ###\n<a href=\"https://github.com/felixhao28/JSCPP\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Это не полная реализация C++. Пожалуйста, обратитесь к <tag-1>документации JSCPP</tag-1> для подробностей."
+  },
+  "cpp.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://isocpp.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/felixhao28/JSCPP\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/c++/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=cpp\" target=\"_parent\" data-template=\"cpp\" />\n\n",
+    "translation": "<tag-1> <tag-2>Фонд стандартного C++</tag-2> </tag-1> <tag-3> <tag-4>JSCPP</tag-4> </tag-3> <tag-5> <tag-6>Изучите X за Y минут, где X=C++</tag-6> </tag-5> <tag-7> <tag-8>Загрузить стартовый шаблон</tag-8> </tag-7>"
+  },
+  "cpp.name": {
+    "notes": "",
+    "translation": "C++"
+  },
+  "cppWasm.desc": {
+    "notes": "### <tag-1> ###\n<a href=\"https://github.com/binji/wasm-clang\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<a href=\"https://github.com/chris-koch-penn/polylang.io\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Компилятор Clang C/C++, работающий на WebAssembly, использующий <tag-1>wasm-clang</tag-1>, адаптированный <tag-2>polylang.io</tag-2>."
+  },
+  "cppWasm.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://isoclang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://clang.llvm.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/c++/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=cpp-wasm\" target=\"_parent\" data-template=\"cpp-wasm\" />\n\n",
+    "translation": "<tag-1> <tag-2>Фонд стандартного C++</tag-2> </tag-1> <tag-3> <tag-4>Официальный сайт Clang</tag-4> </tag-3> <tag-5> <tag-6>Изучите X за Y минут, где X=C++</tag-6> </tag-5> <tag-7> <tag-8>Загрузить стартовый шаблон</tag-8> </tag-7>"
+  },
+  "cppWasm.name": {
+    "notes": "",
+    "translation": "C/C++ (Wasm)"
+  },
+  "diagrams.desc1": {
+    "notes": "",
+    "translation": "(Экспериментально)"
+  },
+  "diagrams.desc2": {
+    "notes": "",
+    "translation": "Диаграммы как код. Поддерживает:"
+  },
+  "diagrams.desc3": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://js.cytoscape.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.eclipse.org/elk/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<a href=\"https://github.com/kieler/elkjs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-6> ###\n<li  />\n\n### <tag-7> ###\n<a href=\"http://www.gnuplot.info/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-8> ###\n<a href=\"https://github.com/chhu/gnuplot-JS\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://graphviz.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<a href=\"https://github.com/hpcc-systems/hpcc-js-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-12> ###\n<li  />\n\n### <tag-13> ###\n<a href=\"https://mermaid-js.github.io/mermaid/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-14> ###\n<li  />\n\n### <tag-15> ###\n<a href=\"https://nomnoml.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-16> ###\n<li  />\n\n### <tag-17> ###\n<a href=\"https://pintorajs.vercel.app/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-18> ###\n<li  />\n\n### <tag-19> ###\n<a href=\"https://plotly.com/graphing-libraries/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-20> ###\n<li  />\n\n### <tag-21> ###\n<a href=\"https://github.com/ivanceras/svgbob\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-22> ###\n<li  />\n\n### <tag-23> ###\n<a href=\"https://vega.github.io/vega/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-24> ###\n<li  />\n\n### <tag-25> ###\n<a href=\"https://vega.github.io/vega-lite/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-26> ###\n<li  />\n\n### <tag-27> ###\n<a href=\"https://wavedrom.com/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Cytoscape</tag-2> </tag-1> <tag-3> <tag-4>ELK</tag-4> (использует <tag-5>elkjs</tag-5>) </tag-3> <tag-6> <tag-7>Gnuplot</tag-7> (использует <tag-8>gnuplot-JS</tag-8>) </tag-6> <tag-9> <tag-10>Graphviz</tag-10> (использует <tag-11>@hpcc-js/wasm</tag-11>) </tag-9> <tag-12> <tag-13>Mermaid</tag-13> </tag-12> <tag-14> <tag-15>Nomnoml</tag-15> </tag-14> <tag-16> <tag-17>Pintora</tag-17> </tag-16> <tag-18> <tag-19>Plotly</tag-19> </tag-18> <tag-20> <tag-21>Svgbob</tag-21> </tag-20> <tag-22> <tag-23>Vega</tag-23> </tag-22> <tag-24> <tag-25>VegaLite</tag-25> </tag-24> <tag-26> <tag-27>WaveDrom</tag-27> </tag-26>"
+  },
+  "diagrams.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"?template=diagrams\" target=\"_parent\" data-template=\"diagrams\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/diagrams\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Загрузить стартовый шаблон</tag-2> </tag-1> <tag-3> <tag-4>Документация LiveCodes</tag-4> </tag-3>"
+  },
+  "diagrams.name": {
+    "notes": "",
+    "translation": "Диаграммы"
+  },
+  "dot.desc": {
+    "notes": "",
+    "translation": "Самый быстрый + лаконичный движок шаблонов javascript для Node.js и браузеров."
+  },
+  "dot.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://olado.github.io/doT/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/dot\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт</tag-2> </tag-1> <tag-3> <tag-4>Документация LiveCodes</tag-4> </tag-3>"
+  },
+  "dot.name": {
+    "notes": "",
+    "translation": "doT.js"
+  },
+  "ejs.desc": {
+    "notes": "",
+    "translation": "Встроенные шаблоны JavaScript."
+  },
+  "ejs.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://ejs.co/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/ejs\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт</tag-2></tag-1> <tag-3> <tag-4>Документация LiveCodes</tag-4> </tag-3>"
+  },
+  "ejs.name": {
+    "notes": "",
+    "translation": "EJS"
+  },
+  "eta.desc": {
+    "notes": "",
+    "translation": "Встроенный движок шаблонов JS для Node, Deno и браузера. Легкий, быстрый и расширяемый. Написан на TypeScript."
+  },
+  "eta.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://eta.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://eta.js.org/docs/learn\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/eta\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт</tag-2></tag-1> <tag-3> <tag-4>Документация</tag-4> </tag-3> <tag-5> <tag-6>Документация LiveCodes</tag-6> </tag-5>"
+  },
+  "eta.name": {
+    "notes": "",
+    "translation": "Eta"
+  },
+  "fennel.desc": {
+    "notes": "",
+    "translation": "Fennel - это язык программирования, который объединяет скорость, простоту и охват Lua с гибкостью синтаксиса и системы макросов Lisp."
+  },
+  "fennel.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://fennel-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://fennel-lang.org/tutorial\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/fennel\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=fennel\" target=\"_parent\" data-template=\"fennel\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Fennel</tag-2> </tag-1> <tag-3> <tag-4>Начало работы с Fennel</tag-4> </tag-3> <tag-5> <tag-6>Документация LiveCodes</tag-6> </tag-5> <tag-7> <tag-8>Загрузить стартовый шаблон</tag-8> </tag-7>"
+  },
+  "fennel.name": {
+    "notes": "",
+    "translation": "Fennel"
+  },
+  "flow.desc": {
+    "notes": "",
+    "translation": "Flow - это статический анализатор типов для JavaScript."
+  },
+  "flow.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://flow.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://flow.org/en/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Flow</tag-2> </tag-1> <tag-3> <tag-4>Документация Flow</tag-4> </tag-3>"
+  },
+  "flow.name": {
+    "notes": "",
+    "translation": "Flow"
+  },
+  "gleam.desc1": {
+    "notes": "",
+    "translation": "Gleam - это дружелюбный язык для создания типобезопасных систем, которые масштабируются!"
+  },
+  "gleam.desc2": {
+    "notes": "",
+    "translation": "Gleam - это статически типизированный функциональный язык программирования, который компилируется в Erlang или JavaScript."
+  },
+  "gleam.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://gleam.run/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://gleam.run/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://tour.gleam.run/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=gleam\" target=\"_parent\" data-template=\"gleam\" />\n\n",
+    "translation": "<tag-1><tag-2>Сайт Gleam</tag-2></tag-1> <tag-3> <tag-4>Документация Gleam</tag-4> </tag-3> <tag-5> <tag-6>Тур по языку Gleam</tag-6> </tag-5> <tag-7> <tag-8>Загрузить стартовый шаблон</tag-8> </tag-7>"
+  },
+  "gleam.name": {
+    "notes": "",
+    "translation": "Gleam"
+  },
+  "go.desc1": {
+    "notes": "",
+    "translation": "Go (Golang) - это язык программирования с открытым исходным кодом, который упрощает создание простого, надежного и эффективного программного обеспечения."
+  },
+  "go.desc2": {
+    "notes": "",
+    "translation": "Здесь он компилируется в JavaScript с помощью GopherJS."
+  },
+  "go.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://golang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://golang.org/doc/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/gopherjs/gopherjs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/go/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=go\" target=\"_parent\" data-template=\"go\" />\n\n",
+    "translation": "<tag-1><tag-2>Сайт Go</tag-2></tag-1> <tag-3><tag-4>Документация Go</tag-4></tag-3> <tag-5> <tag-6>Репозиторий GopherJS</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=Go</tag-8> </tag-7> <tag-9><tag-10>Загрузить стартовый шаблон</tag-10></tag-9>"
+  },
+  "go.name": {
+    "notes": "",
+    "translation": "Go"
+  },
+  "haml.desc": {
+    "notes": "",
+    "translation": "Компилятор Haml для клиентских шаблонов JavaScript с использованием clientside-haml-js."
+  },
+  "haml.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://haml.info/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://haml.info/docs.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/uglyog/clientside-haml-js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/haml/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/haml\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт Haml</tag-2></tag-1> <tag-3> <tag-4>Документация Haml</tag-4> </tag-3> <tag-5> <tag-6>GitHub-репозиторий clientside-haml-js</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=haml</tag-8> </tag-7> <tag-9> <tag-10>Документация LiveCodes</tag-10> </tag-9>"
+  },
+  "haml.name": {
+    "notes": "",
+    "translation": "Haml"
+  },
+  "handlebars.desc": {
+    "notes": "",
+    "translation": "Минимальный шаблонизатор на стероидах."
+  },
+  "handlebars.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://handlebarsjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/handlebars\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт</tag-2></tag-1> <tag-3> <tag-4>Документация LiveCodes</tag-4> </tag-3>"
+  },
+  "handlebars.name": {
+    "notes": "",
+    "translation": "Handlebars"
+  },
+  "imba.desc": {
+    "notes": "",
+    "translation": "Дружелюбный фулстек-язык."
+  },
+  "imba.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://imba.io/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт</tag-2></tag-1>"
+  },
+  "imba.name": {
+    "notes": "",
+    "translation": "Imba"
+  },
+  "jsx.desc": {
+    "notes": "",
+    "translation": "JSX компилируется в JavaScript в LiveCodes с использованием компилятора TypeScript. По умолчанию он использует React в качестве среды выполнения JSX."
+  },
+  "jsx.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://react.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://react.dev/learn/writing-markup-with-jsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/jsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=react\" target=\"_parent\" data-template=\"react\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт React</tag-2> </tag-1> <tag-3> <tag-4>Документация JSX в React</tag-4> </tag-3> <tag-5> <tag-6>Документация LiveCodes</tag-6> </tag-5> <tag-7> <tag-8>Загрузить стартовый шаблон</tag-8> </tag-7>"
+  },
+  "jsx.name": {
+    "notes": "",
+    "translation": "JSX"
+  },
+  "julia.desc1": {
+    "notes": "",
+    "translation": "(Поддержка языка Julia в LiveCodes все еще экспериментальна)"
+  },
+  "julia.desc2": {
+    "notes": "### <tag-1> ###\n<a href=\"https://github.com/Keno/julia-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<a href=\"https://github.com/chris-koch-penn/polylang.io\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Компилятор Julia и Julia Base, работающие на WASM, с использованием <tag-1>julia-wasm</tag-1>, адаптированного <tag-2>polylang.io</tag-2>."
+  },
+  "julia.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://julialang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://docs.julialang.org/en/v1/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/julia/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=julia\" target=\"_parent\" data-template=\"julia\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Julia</tag-2> </tag-1> <tag-3> <tag-4>Документация Julia</tag-4> </tag-3> <tag-5> <tag-6>Изучите X за Y минут, где X=Julia</tag-6> </tag-5> <tag-7> <tag-8>Загрузить стартовый шаблон</tag-8> </tag-7>"
+  },
+  "julia.name": {
+    "notes": "",
+    "translation": "Julia"
+  },
+  "less.desc": {
+    "notes": "",
+    "translation": "Это CSS, только чуть больше."
+  },
+  "less.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://lesscss.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/less/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт Less</tag-2></tag-1> <tag-3> <tag-4>Изучите X за Y минут, где X=less</tag-4> </tag-3>"
+  },
+  "less.name": {
+    "notes": "",
+    "translation": "Less"
+  },
+  "liquid.desc": {
+    "notes": "",
+    "translation": "Простой, выразительный и безопасный шаблонизатор."
+  },
+  "liquid.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://liquidjs.com\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://liquidjs.com/tutorials/intro-to-liquid.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/liquid\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт LiquidJS</tag-2> </tag-1> <tag-3> <tag-4>Документация LiquidJS</tag-4> </tag-3> <tag-5> <tag-6>Документация LiveCodes</tag-6> </tag-5>"
+  },
+  "liquid.name": {
+    "notes": "",
+    "translation": "LiquidJS"
+  },
+  "livescript.desc": {
+    "notes": "",
+    "translation": "Язык, который компилируется в JavaScript."
+  },
+  "livescript.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://livescript.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/livescript/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=livescript\" target=\"_parent\" data-template=\"livescript\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт LiveScript</tag-2> </tag-1> <tag-3> <tag-4>Изучите X за Y минут, где X=LiveScript</tag-4> </tag-3> <tag-5> <tag-6>Загрузить стартовый шаблон</tag-6> </tag-5>"
+  },
+  "livescript.name": {
+    "notes": "",
+    "translation": "LiveScript"
+  },
+  "lua.desc": {
+    "notes": "",
+    "translation": "Lua, работающий в браузере с использованием fengari-web."
+  },
+  "lua.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.lua.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.lua.org/manual/5.4/manual.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://fengari.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/fengari-lua/fengari-web\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/lua/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/lua\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=lua\" target=\"_parent\" data-template=\"lua\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт Lua</tag-2></tag-1> <tag-3> <tag-4>Документация Lua</tag-4> </tag-3> <tag-5> <tag-6>Официальный сайт Fengari</tag-6> </tag-5> <tag-7> <tag-8>GitHub-репозиторий fengari-web</tag-8> </tag-7> <tag-9> <tag-10>Изучите X за Y минут, где X=Lua</tag-10> </tag-9> <tag-11> <tag-12>Документация LiveCodes</tag-12> </tag-11> <tag-13><tag-14>Загрузить стартовый шаблон</tag-14></tag-13>"
+  },
+  "lua.name": {
+    "notes": "",
+    "translation": "Lua"
+  },
+  "luaWasm.desc": {
+    "notes": "",
+    "translation": "Lua, работающий в браузере с использованием Wasmoon, настоящей виртуальной машины Lua 5.4 с привязками к JS, созданной с помощью WebAssembly."
+  },
+  "luaWasm.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.lua.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.lua.org/manual/5.4/manual.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/ceifa/wasmoon\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/lua/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/lua-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=lua-wasm\" target=\"_parent\" data-template=\"lua-wasm\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт Lua</tag-2></tag-1> <tag-3> <tag-4>Документация Lua</tag-4> </tag-3> <tag-5> <tag-6>GitHub-репозиторий Wasmoon</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=Lua</tag-8> </tag-7> <tag-9> <tag-10>Документация LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Загрузить стартовый шаблон</tag-12> </tag-11>"
+  },
+  "luaWasm.name": {
+    "notes": "",
+    "translation": "Lua (Wasm)"
+  },
+  "malina.desc": {
+    "notes": "",
+    "translation": "Фронтенд-компилятор, вдохновленный Svelte."
+  },
+  "malina.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://github.com/malinajs/malinajs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://malinajs.github.io/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=malina\" target=\"_parent\" data-template=\"malina\" />\n\n",
+    "translation": "<tag-1> <tag-2>Репозиторий Malina.js</tag-2> </tag-1> <tag-3> <tag-4>Документация Malina.js</tag-4> </tag-3> <tag-5> <tag-6>Загрузить стартовый шаблон</tag-6> </tag-5>"
+  },
+  "malina.name": {
+    "notes": "",
+    "translation": "Malina.js"
+  },
+  "markdown.desc": {
+    "notes": "",
+    "translation": "Markdown, скомпилированный в HTML с использованием Marked."
+  },
+  "markdown.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://daringfireball.net/projects/markdown/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://marked.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/markdown/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=markdown\" target=\"_parent\" data-template=\"markdown\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Markdown</tag-2> </tag-1> <tag-3> <tag-4>Документация Marked</tag-4> </tag-3> <tag-5> <tag-6>Изучите X за Y минут, где X=markdown</tag-6> </tag-5> <tag-7> <tag-8>Загрузить стартовый шаблон</tag-8> </tag-7>"
+  },
+  "markdown.name": {
+    "notes": "",
+    "translation": "Markdown"
+  },
+  "mdx.desc": {
+    "notes": "### <tag-1> ###\n<br  />\n\n",
+    "translation": "Markdown для эры компонентов. <tag-1></tag-1>MDX позволяет вам легко писать JSX в ваших Markdown-документах."
+  },
+  "mdx.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mdxjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"?template=mdx\" target=\"_parent\" data-template=\"mdx\" />\n\n",
+    "translation": "<tag-1><tag-2>Документация MDX</tag-2></tag-1> <tag-3><tag-4>Загрузить стартовый шаблон</tag-4></tag-3>"
+  },
+  "mdx.name": {
+    "notes": "",
+    "translation": "MDX"
+  },
+  "mjml.desc": {
+    "notes": "",
+    "translation": "MJML - это язык разметки, разработанный для уменьшения сложности кодирования адаптивных электронных писем."
+  },
+  "mjml.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mjml.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://documentation.mjml.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://mjml.io/templates\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/mjml\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт MJML</tag-2></tag-1> <tag-3> <tag-4>Документация MJML</tag-4> </tag-3> <tag-5> <tag-6>Официальные шаблоны MJML</tag-6> </tag-5> <tag-7> <tag-8>Документация LiveCodes</tag-8> </tag-7>"
+  },
+  "mjml.name": {
+    "notes": "",
+    "translation": "MJML"
+  },
+  "mustache.desc": {
+    "notes": "",
+    "translation": "Шаблоны без логики."
+  },
+  "mustache.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mustache.github.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://mustache.github.io/mustache.5.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/janl/mustache.js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/mustache\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт</tag-2> </tag-1> <tag-3> <tag-4>Руководство mustache(5)</tag-4> </tag-3> <tag-5> <tag-6>JavaScript-реализация</tag-6> </tag-5> <tag-7> <tag-8>Документация LiveCodes</tag-8> </tag-7>"
+  },
+  "mustache.name": {
+    "notes": "",
+    "translation": "Mustache"
+  },
+  "nunjucks.desc": {
+    "notes": "### <tag-1> ###\n<a href=\"http://jinja.pocoo.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Богатый и мощный язык шаблонов для JavaScript. Nunjucks по сути является портом <tag-1>jinja2</tag-1>."
+  },
+  "nunjucks.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mozilla.github.io/nunjucks/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/nunjucks\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт</tag-2> </tag-1> <tag-3> <tag-4>Документация LiveCodes</tag-4> </tag-3>"
+  },
+  "nunjucks.name": {
+    "notes": "",
+    "translation": "Nunjucks"
+  },
+  "ocaml.desc1": {
+    "notes": "",
+    "translation": "OCaml - это язык программирования промышленного уровня, поддерживающий функциональный, императивный и объектно-ориентированный стили."
+  },
+  "ocaml.desc2": {
+    "notes": "",
+    "translation": "Здесь используется компилятор ReScript для компиляции OCaml в JavaScript."
+  },
+  "ocaml.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://ocaml.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://ocaml.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://rescript-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/ocaml/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=ocaml\" target=\"_parent\" data-template=\"ocaml\" />\n\n",
+    "translation": "<tag-1><tag-2>Сайт OCaml</tag-2></tag-1> <tag-3> <tag-4>Документация OCaml</tag-4> </tag-3> <tag-5> <tag-6>Сайт ReScript</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=OCaml</tag-8> </tag-7> <tag-9> <tag-10>Загрузить стартовый шаблон</tag-10> </tag-9>"
+  },
+  "ocaml.name": {
+    "notes": "",
+    "translation": "OCaml"
+  },
+  "perl.desc": {
+    "notes": "",
+    "translation": "Perl, работающий в браузере с использованием Perlito."
+  },
+  "perl.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.perl.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://perldoc.perl.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/fglock/Perlito/blob/master/README-perlito5.md\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/perl/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=perl\" target=\"_parent\" data-template=\"perl\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Perl</tag-2> </tag-1> <tag-3> <tag-4>Документация Perl</tag-4> </tag-3> <tag-5> <tag-6>Readme Perlito5</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=perl</tag-8> </tag-7> <tag-9> <tag-10>Загрузить стартовый шаблон</tag-10> </tag-9>"
+  },
+  "perl.name": {
+    "notes": "",
+    "translation": "Perl"
+  },
+  "php.desc": {
+    "notes": "",
+    "translation": "PHP, работающий в браузере с использованием Uniter."
+  },
+  "php.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.php.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.php.net/manual/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/asmblah/uniter\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/php/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/php\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=php\" target=\"_parent\" data-template=\"php\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт PHP</tag-2></tag-1> <tag-3> <tag-4>Документация PHP</tag-4> </tag-3> <tag-5> <tag-6>GitHub-репозиторий Uniter</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=PHP</tag-8> </tag-7> <tag-9> <tag-10>Документация LiveCodes</tag-10> </tag-9> <tag-11><tag-12>Загрузить стартовый шаблон</tag-12></tag-11>"
+  },
+  "php.name": {
+    "notes": "",
+    "translation": "PHP"
+  },
+  "phpWasm.desc": {
+    "notes": "",
+    "translation": "PHP в браузере, работающий на WebAssembly, с использованием php-wasm."
+  },
+  "phpWasm.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.php.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.php.net/manual/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/seanmorris/php-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/php/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/php-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=php-wasm\" target=\"_parent\" data-template=\"php-wasm\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт PHP</tag-2></tag-1> <tag-3> <tag-4>Документация PHP</tag-4> </tag-3> <tag-5> <tag-6>GitHub-репозиторий php-wasm</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=PHP</tag-8> </tag-7> <tag-9> <tag-10>Документация LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Загрузить стартовый шаблон</tag-12> </tag-11>"
+  },
+  "phpWasm.name": {
+    "notes": "",
+    "translation": "PHP (Wasm)"
+  },
+  "postgresql.desc": {
+    "notes": "",
+    "translation": "PostgreSQL, упакованный в WASM с использованием PGlite"
+  },
+  "postgresql.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.postgresql.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.postgresql.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/electric-sql/pglite\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sql/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=postgresql\" target=\"_parent\" data-template=\"postgresql\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт PostgreSQL</tag-2> </tag-1> <tag-3> <tag-4>Документация PostgreSQL</tag-4> </tag-3> <tag-5> <tag-6>GitHub-репозиторий PGlite</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=SQL</tag-8> </tag-7> <tag-9> <tag-10>Загрузить стартовый шаблон</tag-10> </tag-9>"
+  },
+  "postgresql.name": {
+    "notes": "",
+    "translation": "PostgreSQL"
+  },
+  "prolog.desc": {
+    "notes": "",
+    "translation": "Интерпретатор Prolog с открытым исходным кодом на JavaScript."
+  },
+  "prolog.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"http://tau-prolog.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"http://tau-prolog.org/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.swi-prolog.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/prolog/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=prolog\" target=\"_parent\" data-template=\"prolog\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Tau Prolog</tag-2> </tag-1> <tag-3> <tag-4>Документация Tau Prolog</tag-4> </tag-3> <tag-5> <tag-6>SWI-Prolog</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=Prolog</tag-8> </tag-7> <tag-9> <tag-10>Загрузить стартовый шаблон</tag-10> </tag-9>"
+  },
+  "prolog.name": {
+    "notes": "",
+    "translation": "Tau Prolog"
+  },
+  "pug.desc": {
+    "notes": "",
+    "translation": "Надежный, элегантный, богатый функциями шаблонизатор."
+  },
+  "pug.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://pugjs.org/api/getting-started.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/pug/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/pug\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Документация Pug</tag-2> </tag-1> <tag-3> <tag-4>Изучите X за Y минут, где X=Pug</tag-4> </tag-3> <tag-5> <tag-6>Документация LiveCodes</tag-6> </tag-5>"
+  },
+  "pug.name": {
+    "notes": "",
+    "translation": "Pug"
+  },
+  "python.desc": {
+    "notes": "",
+    "translation": "Python, работающий в браузере с использованием Brython."
+  },
+  "python.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.python.org/doc/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://brython.info/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/python/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/python\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=python\" target=\"_parent\" data-template=\"python\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Python</tag-2> </tag-1> <tag-3> <tag-4>Документация Python</tag-4> </tag-3> <tag-5> <tag-6>Документация Brython</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=Python</tag-8> </tag-7> <tag-9> <tag-10>Документация LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Загрузить стартовый шаблон</tag-12> </tag-11>"
+  },
+  "python.name": {
+    "notes": "",
+    "translation": "Python"
+  },
+  "pythonWasm.desc1": {
+    "notes": "",
+    "translation": "Python с научным стеком, скомпилированный в WebAssembly с использованием Pyodide."
+  },
+  "pythonWasm.desc2": {
+    "notes": "",
+    "translation": "Pyodide позволяет использовать научный стек Python, включая NumPy, Pandas, Matplotlib, SciPy, scikit-learn и многие другие. Кроме того, можно устанавливать чистые Python-пакеты из PyPi."
+  },
+  "pythonWasm.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.python.org/doc/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://pyodide.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/python/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/python-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=python-wasm\" target=\"_parent\" data-template=\"python-wasm\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Python</tag-2> </tag-1> <tag-3> <tag-4>Документация Python</tag-4> </tag-3> <tag-5><tag-6>Документация Pyodide</tag-6></tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=Python</tag-8> </tag-7> <tag-9> <tag-10>Документация LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Загрузить стартовый шаблон</tag-12> </tag-11>"
+  },
+  "pythonWasm.name": {
+    "notes": "",
+    "translation": "Python (Wasm)"
+  },
+  "r.desc": {
+    "notes": "",
+    "translation": "R, работающий в браузере с использованием WebR."
+  },
+  "r.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.r-project.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://cran.r-project.org/manuals.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://r4ds.hadley.nz/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://docs.r-wasm.org/webr/latest/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/r/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/r\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=r\" target=\"_parent\" data-template=\"r\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт проекта R</tag-2> </tag-1> <tag-3> <tag-4>Руководства по R</tag-4> </tag-3> <tag-5> <tag-6>R для науки о данных (2-е издание)</tag-6> </tag-5> <tag-7> <tag-8>Документация WebR</tag-8> </tag-7> <tag-9> <tag-10>Изучите X за Y минут, где X=R</tag-10> </tag-9> <tag-11> <tag-12>Документация LiveCodes</tag-12> </tag-11> <tag-13> <tag-14>Загрузить стартовый шаблон</tag-14> </tag-13>"
+  },
+  "r.name": {
+    "notes": "",
+    "translation": "R"
+  },
+  "reactNative.desc": {
+    "notes": "",
+    "translation": "React Native for Web - это доступная реализация компонентов и API React Native, которая совместима с React DOM."
+  },
+  "reactNative.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://reactjs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://reactnative.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://necolas.github.io/react-native-web/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://reactnative.dev/docs/getting-started\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/react-native\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=react-native\" target=\"_parent\" data-template=\"react-native\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт React</tag-2> </tag-1> <tag-3> <tag-4>Сайт React Native</tag-4> </tag-3> <tag-5> <tag-6>Сайт React Native for Web</tag-6> </tag-5> <tag-7> <tag-8>Документация React Native</tag-8> </tag-7> <tag-9> <tag-10>Документация LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Загрузить стартовый шаблон</tag-12> </tag-11>"
+  },
+  "reactNative.name": {
+    "notes": "",
+    "translation": "React Native for Web"
+  },
+  "reactNativeTsx.desc": {
+    "notes": "",
+    "translation": "React Native for Web - это доступная реализация компонентов и API React Native, которая совместима с React DOM."
+  },
+  "reactNativeTsx.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://reactjs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://reactnative.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://necolas.github.io/react-native-web/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://reactnative.dev/docs/getting-started\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://www.typescriptlang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"{{DOCS_BASE_URL}}languages/react-native-tsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-15> ###\n<li  />\n\n### <tag-16> ###\n<a href=\"?template=react-native\" target=\"_parent\" data-template=\"react-native\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт React</tag-2> </tag-1> <tag-3> <tag-4>Сайт React Native</tag-4> </tag-3> <tag-5> <tag-6>Сайт React Native for Web</tag-6> </tag-5> <tag-7> <tag-8>Документация React Native</tag-8> </tag-7> <tag-9> <tag-10>Сайт TypeScript</tag-10> </tag-9> <tag-11> <tag-12>Документация TypeScript</tag-12> </tag-11> <tag-13> <tag-14>Документация LiveCodes</tag-14> </tag-13> <tag-15> <tag-16>Загрузить стартовый шаблон (JSX)</tag-16> </tag-15>"
+  },
+  "reactNativeTsx.name": {
+    "notes": "",
+    "translation": "React Native for Web (с TypeScript)"
+  },
+  "reason.desc1": {
+    "notes": "",
+    "translation": "Reason позволяет писать простой, быстрый и качественный типобезопасный код, используя экосистемы как JavaScript, так и OCaml."
+  },
+  "reason.desc2": {
+    "notes": "",
+    "translation": "Здесь используется компилятор ReScript для компиляции Reason в JavaScript."
+  },
+  "reason.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://reasonml.github.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://reasonml.github.io/docs/en/what-and-why\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://reasonml.github.io/reason-react/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://rescript-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/reason/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=reason\" target=\"_parent\" data-template=\"reason\" />\n\n",
+    "translation": "<tag-1><tag-2>Сайт Reason</tag-2></tag-1> <tag-3> <tag-4>Документация Reason</tag-4> </tag-3> <tag-5> <tag-6>ReasonReact</tag-6> </tag-5> <tag-7> <tag-8>Сайт ReScript</tag-8> </tag-7> <tag-9> <tag-10>Изучите X за Y минут, где X=reason</tag-10> </tag-9> <tag-11> <tag-12>Загрузить стартовый шаблон</tag-12> </tag-11>"
+  },
+  "reason.name": {
+    "notes": "",
+    "translation": "Reason"
+  },
+  "rescript.desc": {
+    "notes": "",
+    "translation": "ReScript - это строго типизированный язык, который компилируется в эффективный и читаемый JavaScript."
+  },
+  "rescript.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://rescript-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://rescript-lang.org/docs/react/latest/introduction\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=rescript\" target=\"_parent\" data-template=\"rescript\" />\n\n",
+    "translation": "<tag-1> <tag-2>Сайт ReScript</tag-2> </tag-1> <tag-3> <tag-4>ReScript / React</tag-4> </tag-3> <tag-5> <tag-6>Загрузить стартовый шаблон</tag-6> </tag-5>"
+  },
+  "rescript.name": {
+    "notes": "",
+    "translation": "ReScript"
+  },
+  "richtext.desc1": {
+    "notes": "",
+    "translation": "Использует Quill:"
+  },
+  "richtext.desc2": {
+    "notes": "",
+    "translation": "Ваш мощный редактор форматированного текста."
+  },
+  "richtext.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://quilljs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Quill</tag-2> </tag-1>"
+  },
+  "richtext.name": {
+    "notes": "",
+    "translation": "Редактор форматированного текста"
+  },
+  "riot.desc": {
+    "notes": "",
+    "translation": "Простая и элегантная компонентная UI-библиотека."
+  },
+  "riot.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://riot.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://riot.js.org/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=riot\" target=\"_parent\" data-template=\"riot\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Riot.js</tag-2> </tag-1> <tag-3> <tag-4>Документация Riot.js</tag-4> </tag-3> <tag-5> <tag-6>Загрузить стартовый шаблон</tag-6> </tag-5>"
+  },
+  "riot.name": {
+    "notes": "",
+    "translation": "Riot.js"
+  },
+  "ruby.desc": {
+    "notes": "",
+    "translation": "Ruby, работающий в браузере с использованием Opal."
+  },
+  "ruby.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.ruby-lang.org/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.ruby-lang.org/en/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://opalrb.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://cdn.opalrb.com/opal/1.0.0/index.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/ruby/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/ruby\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=ruby\" target=\"_parent\" data-template=\"ruby\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Ruby</tag-2> </tag-1> <tag-3> <tag-4>Документация Ruby</tag-4> </tag-3> <tag-5><tag-6>Официальный сайт Opal</tag-6></tag-5> <tag-7> <tag-8>CDN стандартной библиотеки Opal</tag-8> </tag-7> <tag-9> <tag-10>Изучите X за Y минут, где X=ruby</tag-10> </tag-9> <tag-11> <tag-12>Документация LiveCodes</tag-12> </tag-11> <tag-13> <tag-14>Загрузить стартовый шаблон</tag-14> </tag-13>"
+  },
+  "ruby.name": {
+    "notes": "",
+    "translation": "Ruby"
+  },
+  "rubyWasm.desc": {
+    "notes": "",
+    "translation": "Ruby, работающий в браузере с использованием ruby-wasm (набора WebAssembly-портов CRuby)."
+  },
+  "rubyWasm.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.ruby-lang.org/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.ruby-lang.org/en/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://ruby.github.io/ruby.wasm/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/ruby/ruby\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/ruby/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/ruby-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=ruby-wasm\" target=\"_parent\" data-template=\"ruby-wasm\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Ruby</tag-2> </tag-1> <tag-3> <tag-4>Документация Ruby</tag-4> </tag-3> <tag-5> <tag-6>Сайт ruby.wasm</tag-6> </tag-5> <tag-7><tag-8>CRuby</tag-8></tag-7> <tag-9> <tag-10>Изучите X за Y минут, где X=ruby</tag-10> </tag-9> <tag-11> <tag-12>Документация LiveCodes</tag-12> </tag-11> <tag-13> <tag-14>Загрузить стартовый шаблон</tag-14> </tag-13>"
+  },
+  "rubyWasm.name": {
+    "notes": "",
+    "translation": "Ruby (WASM)"
+  },
+  "sass.desc": {
+    "notes": "",
+    "translation": "Синтаксически удивительные таблицы стилей."
+  },
+  "sass.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://sass-lang.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://sass-lang.com/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://sass-lang.com/documentation/syntax#the-indented-syntax\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sass/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Sass</tag-2> </tag-1> <tag-3> <tag-4>Документация Sass</tag-4> </tag-3> <tag-5> <tag-6>Синтаксис Sass (с отступами)</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=sass</tag-8> </tag-7>"
+  },
+  "sass.name": {
+    "notes": "",
+    "translation": "Sass"
+  },
+  "scheme.desc": {
+    "notes": "",
+    "translation": "Scheme, работающий в браузере с использованием biwascheme."
+  },
+  "scheme.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.scheme.com/tspl4/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.biwascheme.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.biwascheme.org/doc/reference.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=scheme\" target=\"_parent\" data-template=\"scheme\" />\n\n",
+    "translation": "<tag-1> <tag-2>Язык программирования Scheme</tag-2> </tag-1> <tag-3> <tag-4>Официальный сайт BiwaScheme</tag-4> </tag-3> <tag-5> <tag-6>Справочник BiwaScheme</tag-6> </tag-5> <tag-7> <tag-8>Загрузить стартовый шаблон</tag-8> </tag-7>"
+  },
+  "scheme.name": {
+    "notes": "",
+    "translation": "Scheme"
+  },
+  "scss.desc": {
+    "notes": "",
+    "translation": "Синтаксически удивительные таблицы стилей."
+  },
+  "scss.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://sass-lang.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://sass-lang.com/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://sass-lang.com/documentation/syntax#scss\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sass/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Sass</tag-2> </tag-1> <tag-3> <tag-4>Документация Sass</tag-4> </tag-3> <tag-5> <tag-6>Синтаксис SCSS</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=sass</tag-8> </tag-7>"
+  },
+  "scss.name": {
+    "notes": "",
+    "translation": "SCSS"
+  },
+  "solid.desc": {
+    "notes": "",
+    "translation": "Декларативная, эффективная и гибкая JavaScript-библиотека для создания пользовательских интерфейсов."
+  },
+  "solid.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.solidjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.solidjs.com/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/solid\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=solid\" target=\"_parent\" data-template=\"solid\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт</tag-2></tag-1> <tag-3><tag-4>Документация</tag-4></tag-3> <tag-5> <tag-6>Документация LiveCodes</tag-6> </tag-5> <tag-7> <tag-8>Загрузить стартовый шаблон (TSX)</tag-8> </tag-7>"
+  },
+  "solid.name": {
+    "notes": "",
+    "translation": "Solid"
+  },
+  "solid.tsx.desc": {
+    "notes": "",
+    "translation": "Декларативная, эффективная и гибкая JavaScript-библиотека для создания пользовательских интерфейсов."
+  },
+  "solid.tsx.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.solidjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.solidjs.com/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.typescriptlang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/solid.tsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=solid\" target=\"_parent\" data-template=\"solid\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт</tag-2></tag-1> <tag-3> <tag-4>Документация Solid</tag-4> </tag-3> <tag-5> <tag-6>Сайт TypeScript</tag-6> </tag-5> <tag-7> <tag-8>Документация TypeScript</tag-8> </tag-7> <tag-9> <tag-10>Документация LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Загрузить стартовый шаблон</tag-12> </tag-11>"
+  },
+  "solid.tsx.name": {
+    "notes": "",
+    "translation": "Solid (с TypeScript)"
+  },
+  "sql.desc": {
+    "notes": "",
+    "translation": "SQLite, скомпилированный в JavaScript с использованием SQL.js"
+  },
+  "sql.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.sqlite.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.sqlite.org/lang.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://sql.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sql/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=sql\" target=\"_parent\" data-template=\"sql\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт SQLite</tag-2> </tag-1> <tag-3> <tag-4>Документация по синтаксису SQLite</tag-4> </tag-3> <tag-5> <tag-6>Официальный сайт SQL.js</tag-6> </tag-5> <tag-7> <tag-8>Изучите X за Y минут, где X=SQL</tag-8> </tag-7> <tag-9><tag-10>Загрузить стартовый шаблон</tag-10></tag-9>"
+  },
+  "sql.name": {
+    "notes": "",
+    "translation": "SQLite"
+  },
+  "stencil.desc": {
+    "notes": "",
+    "translation": "Компилятор для веб-компонентов и высокопроизводительных веб-приложений."
+  },
+  "stencil.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://stenciljs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://stenciljs.com/docs/introduction\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=stencil\" target=\"_parent\" data-template=\"stencil\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Stencil</tag-2> </tag-1> <tag-3> <tag-4>Документация Stencil</tag-4> </tag-3> <tag-5> <tag-6>Загрузить стартовый шаблон</tag-6> </tag-5>"
+  },
+  "stencil.name": {
+    "notes": "",
+    "translation": "Stencil"
+  },
+  "styleProcessors.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://tailwindcss.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://windicss.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://uno.antfu.me/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://lightningcss.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://postcss.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<ul  />\n\n### <tag-12> ###\n<li  />\n\n### <tag-13> ###\n<a href=\"https://github.com/postcss/autoprefixer\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-14> ###\n<li  />\n\n### <tag-15> ###\n<a href=\"https://preset-env.cssdb.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-16> ###\n<li  />\n\n### <tag-17> ###\n<a href=\"https://github.com/unlight/postcss-import-url\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-18> ###\n<li  />\n\n### <tag-19> ###\n<a href=\"https://github.com/madyankin/postcss-modules\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Tailwind CSS</tag-2> </tag-1> <tag-3> <tag-4>Windi CSS</tag-4> </tag-3> <tag-5> <tag-6>UnoCSS</tag-6> </tag-5> <tag-7> <tag-8>Lightning CSS</tag-8> </tag-7> <tag-9> <tag-10>PostCSS</tag-10> Плагины: <tag-11> <tag-12> <tag-13>Autoprefixer</tag-13> </tag-12> <tag-14> <tag-15>postcss-preset-env</tag-15> </tag-14> <tag-16> <tag-17>postcss-import-url</tag-17> </tag-16> <tag-18> <tag-19>postcss-modules</tag-19> </tag-18> </tag-11> </tag-9>"
+  },
+  "styleProcessors.name": {
+    "notes": "",
+    "translation": "CSS-фреймворки и процессоры"
+  },
+  "stylis.desc": {
+    "notes": "",
+    "translation": "Легковесный CSS-препроцессор."
+  },
+  "stylis.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://stylis.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Stylis</tag-2> </tag-1>"
+  },
+  "stylis.name": {
+    "notes": "",
+    "translation": "Stylis"
+  },
+  "stylus.desc": {
+    "notes": "",
+    "translation": "Выразительный, динамичный, надежный CSS."
+  },
+  "stylus.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://stylus-lang.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/stylus/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Stylus</tag-2> </tag-1> <tag-3> <tag-4>Изучите X за Y минут, где X=stylus</tag-4> </tag-3>"
+  },
+  "stylus.name": {
+    "notes": "",
+    "translation": "Stylus"
+  },
+  "sucrase.desc": {
+    "notes": "",
+    "translation": "Сверхбыстрая альтернатива Babel для случаев, когда вы можете использовать современные среды выполнения JS."
+  },
+  "sucrase.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://sucrase.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/alangpierce/sucrase\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/sucrase\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Sucrase</tag-2> </tag-1> <tag-3> <tag-4>GitHub-репозиторий Sucrase</tag-4> </tag-3> <tag-5> <tag-6>Документация LiveCodes</tag-6> </tag-5>"
+  },
+  "sucrase.name": {
+    "notes": "",
+    "translation": "Sucrase"
+  },
+  "svelte.desc": {
+    "notes": "",
+    "translation": "Кибернетически улучшенные веб-приложения."
+  },
+  "svelte.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://svelte.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://svelte.dev/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=svelte\" target=\"_parent\" data-template=\"svelte\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Svelte</tag-2> </tag-1> <tag-3> <tag-4>Документация Svelte</tag-4> </tag-3> <tag-5> <tag-6>Загрузить стартовый шаблон</tag-6> </tag-5>"
+  },
+  "svelte.name": {
+    "notes": "",
+    "translation": "Svelte"
+  },
+  "tcl.desc": {
+    "notes": "### <tag-1> ###\n<a href=\"https://github.com/ecky-l/wacl/\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "Tcl, работающий в браузере, с использованием <tag-1>wacl</tag-1>."
+  },
+  "tcl.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.tcl.tk/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/ecky-l/wacl/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/tcl/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=tcl\" target=\"_parent\" data-template=\"tcl\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Tcl</tag-2> </tag-1> <tag-3> <tag-4>Репозиторий wacl</tag-4> </tag-3> <tag-5> <tag-6>Изучите X за Y минут, где X=Tcl</tag-6> </tag-5> <tag-7> <tag-8>Загрузить стартовый шаблон</tag-8> </tag-7>"
+  },
+  "tcl.name": {
+    "notes": "",
+    "translation": "Tcl (Tool Command Language)"
+  },
+  "teal.desc": {
+    "notes": "",
+    "translation": "Типизированный диалект Lua."
+  },
+  "teal.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://github.com/teal-language/tl\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/teal-language/tl/tree/master/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/teal-language/tl/blob/master/docs/tutorial.md\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/teal\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=teal\" target=\"_parent\" data-template=\"teal\" />\n\n",
+    "translation": "<tag-1> <tag-2>GitHub-репозиторий Teal</tag-2> </tag-1> <tag-3> <tag-4>Документация Teal</tag-4> </tag-3> <tag-5> <tag-6>Учебник по Teal</tag-6> </tag-5> <tag-7> <tag-8>Документация LiveCodes</tag-8> </tag-7> <tag-9> <tag-10>Загрузить стартовый шаблон</tag-10> </tag-9>"
+  },
+  "teal.name": {
+    "notes": "",
+    "translation": "Teal"
+  },
+  "tsx.desc": {
+    "notes": "",
+    "translation": "TypeScript в JSX. TSX компилируется в JavaScript в LiveCodes с использованием компилятора TypeScript. По умолчанию он использует React в качестве среды выполнения JSX."
+  },
+  "tsx.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://react.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://react.dev/learn/writing-markup-with-jsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/tsx\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт React</tag-2> </tag-1> <tag-3> <tag-4>Документация по JSX в React</tag-4> </tag-3> <tag-5> <tag-6>Документация Typescript</tag-6> </tag-5> <tag-7> <tag-8>Документация LiveCodes</tag-8> </tag-7>"
+  },
+  "tsx.name": {
+    "notes": "",
+    "translation": "TSX"
+  },
+  "twig.desc": {
+    "notes": "### <tag-1> ###\n<a href=\"https://twig.symfony.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<a href=\"https://github.com/twigjs/twig.js\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "JavaScript-реализация <tag-1>Twig</tag-1> — языка шаблонов PHP с помощью <tag-2>Twig.js</tag-2>."
+  },
+  "twig.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://twig.symfony.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://twig.symfony.com/doc/3.x/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/twigjs/twig.js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/twigjs/twig.js/wiki\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/twig\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Twig</tag-2> </tag-1> <tag-3> <tag-4>Документация Twig</tag-4> </tag-3> <tag-5> <tag-6>Репозиторий Twig.js</tag-6> </tag-5> <tag-7> <tag-8>Документация Twig.js</tag-8> </tag-7> <tag-9> <tag-10>Документация LiveCodes</tag-10> </tag-9>"
+  },
+  "twig.name": {
+    "notes": "",
+    "translation": "Twig"
+  },
+  "typescript.desc": {
+    "notes": "",
+    "translation": "Типизированное надмножество JavaScript."
+  },
+  "typescript.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.typescriptlang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/typescript/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=typescript\" target=\"_parent\" data-template=\"typescript\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт</tag-2> </tag-1> <tag-3> <tag-4>Документация TypeScript</tag-4> </tag-3> <tag-5> <tag-6>Изучите X за Y минут, где X=TypeScript</tag-6> </tag-5> <tag-7> <tag-8>Загрузить стартовый шаблон</tag-8> </tag-7>"
+  },
+  "typescript.name": {
+    "notes": "",
+    "translation": "TypeScript"
+  },
+  "vue.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://vuejs.org/guide/introduction.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://vuejs.org/api/sfc-spec.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/vue\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=vue\" target=\"_parent\" data-template=\"vue\" />\n\n",
+    "translation": "<tag-1> <tag-2>Официальный сайт Vue.js v3</tag-2> </tag-1> <tag-3> <tag-4>Документация Vue3</tag-4> </tag-3> <tag-5> <tag-6>Однофайловые компоненты Vue3</tag-6> </tag-5> <tag-7> <tag-8>Документация LiveCodes</tag-8> </tag-7> <tag-9><tag-10>Загрузить стартовый шаблон</tag-10></tag-9>"
+  },
+  "vue.name": {
+    "notes": "",
+    "translation": "Однофайловые компоненты Vue3"
+  },
+  "vue2.desc": {
+    "notes": "",
+    "translation": "Загружается с использованием vue3-sfc-loader."
+  },
+  "vue2.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://v2.vuejs.org/v2/guide/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://v2.vuejs.org/v2/guide/single-file-components.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/FranckFreiburger/vue3-sfc-loader\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/vue2\" target=\"_blank\" rel=\"noopener\" />\n\n",
+    "translation": "<tag-1><tag-2>Официальный сайт Vue.js</tag-2></tag-1> <tag-3> <tag-4>Документация Vue2</tag-4> </tag-3> <tag-5> <tag-6>Однофайловые компоненты Vue2</tag-6> </tag-5> <tag-7> <tag-8>GitHub-репозиторий vue3-sfc-loader</tag-8> </tag-7> <tag-9> <tag-10>Документация LiveCodes</tag-10> </tag-9>"
+  },
+  "vue2.name": {
+    "notes": "",
+    "translation": "Однофайловые компоненты Vue2"
+  },
+  "wat.desc1": {
+    "notes": "",
+    "translation": "Низкоуровневое текстовое представление двоичного формата WebAssembly (wasm)."
+  },
+  "wat.desc2": {
+    "notes": "",
+    "translation": "Он конвертируется в wasm с использованием wabt.js."
+  },
+  "wat.link": {
+    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://webassembly.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://webassembly.github.io/spec/core/text/index.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://developer.mozilla.org/en-US/docs/WebAssembly\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://github.com/AssemblyScript/wabt.js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"https://learnxinyminutes.com/docs/wasm/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=wat\" target=\"_parent\" data-template=\"wat\" />\n\n",
+    "translation": "<tag-1><tag-2>WebAssembly.org</tag-2></tag-1> <tag-3> <tag-4>Спецификация текстового формата WebAssembly</tag-4> </tag-3> <tag-5> <tag-6>WebAssembly на MDN</tag-6> </tag-5> <tag-7> <tag-8>Понимание текстового формата WebAssembly</tag-8> </tag-7> <tag-9> <tag-10>Документация wabt.js</tag-10> </tag-9> <tag-11> <tag-12>Изучите X за Y минут, где X=WebAssembly</tag-12> </tag-11> <tag-13><tag-14>Загрузить стартовый шаблон</tag-14></tag-13>"
+  },
+  "wat.name": {
+    "notes": "",
+    "translation": "Текстовый формат WebAssembly"
+  }
+}
