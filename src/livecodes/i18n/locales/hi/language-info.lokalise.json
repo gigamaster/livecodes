@@ -1,950 +1,239 @@
 {
-  "artTemplate.desc": {
-    "notes": "",
-    "translation": "उच्च प्रदर्शन वाला JavaScript टेम्प्लेटिंग इंजन।"
-  },
-  "artTemplate.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://aui.github.io/art-template/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://aui.github.io/art-template/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>art-template आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>art-template दस्तावेज़ीकरण</tag-4> </tag-3>"
-  },
-  "artTemplate.name": {
-    "notes": "",
-    "translation": "art-template"
-  },
-  "asciidoc.desc": {
-    "notes": "",
-    "translation": "Asciidoctor का उपयोग करके HTML में संकलित AsciiDoc।"
-  },
-  "asciidoc.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://asciidoc.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://asciidoctor.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://asciidoctor.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/asciidoc/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>AsciiDoc आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Asciidoctor आधिकारिक वेबसाइट</tag-4> </tag-3> <tag-5> <tag-6>Asciidoctor दस्तावेज़ीकरण</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=asciidoc</tag-8> </tag-7>"
-  },
-  "asciidoc.name": {
-    "notes": "",
-    "translation": "AsciiDoc"
-  },
-  "assemblyscript.desc": {
-    "notes": "",
-    "translation": "WebAssembly के लिए TypeScript जैसी भाषा।"
-  },
-  "assemblyscript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.assemblyscript.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.assemblyscript.org/introduction.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=assemblyscript\" target=\"_parent\" data-template=\"assemblyscript\" />\n\n",
-    "translation": "<tag-1> <tag-2>AssemblyScript आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>AssemblyScript दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें</tag-6> </tag-5>"
-  },
-  "assemblyscript.name": {
-    "notes": "",
-    "translation": "AssemblyScript"
-  },
-  "astro.desc": {
-    "notes": "",
-    "translation": "कम क्लाइंट-साइड जावास्क्रिप्ट के साथ तेज़ वेबसाइटें बनाएं। (अभी भी बीटा में)"
-  },
-  "astro.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://astro.build/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://docs.astro.build/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=astro\" target=\"_parent\" data-template=\"astro\" />\n\n",
-    "translation": "<tag-1> <tag-2>Astro आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Astro दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें</tag-6> </tag-5>"
-  },
-  "astro.name": {
-    "notes": "",
-    "translation": "Astro"
-  },
-  "babel.desc": {
-    "notes": "",
-    "translation": "जावास्क्रिप्ट कंपाइलर"
-  },
-  "babel.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://babeljs.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://babeljs.io/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>Babel दस्तावेज़ीकरण</tag-4> </tag-3>"
-  },
-  "babel.name": {
-    "notes": "",
-    "translation": "Babel"
-  },
-  "bbcode.desc": {
-    "notes": "",
-    "translation": "BBCode (\"बुलेटिन बोर्ड कोड\") एक हल्का मार्कअप भाषा है जिसका उपयोग कई इंटरनेट फोरम सॉफ्टवेयर में संदेशों को फॉर्मेट करने के लिए किया जाता है।"
-  },
-  "bbcode.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.bbcode.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.phpbb.com/community/help/bbcode\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://en.wikipedia.org/wiki/BBCode\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>bbcode.org</tag-2></tag-1> <tag-3> <tag-4>BBCode गाइड</tag-4> </tag-3> <tag-5> <tag-6>विकिपीडिया पर BBCode</tag-6> </tag-5>"
-  },
-  "bbcode.name": {
-    "notes": "",
-    "translation": "BBCode"
-  },
-  "blockly.desc": {
-    "notes": "",
-    "translation": "दृश्य प्रोग्रामिंग संपादकों के निर्माण के लिए एक जावास्क्रिप्ट लाइब्रेरी।"
-  },
-  "blockly.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://developers.google.com/blockly\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://developers.google.com/blockly/guides/overview\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://developers.google.com/blockly/reference/overview\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://google.github.io/blockly-samples/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=blockly\" target=\"_parent\" data-template=\"blockly\" />\n\n",
-    "translation": "<tag-1> <tag-2>आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>गाइड</tag-4> </tag-3> <tag-5> <tag-6>संदर्भ</tag-6> </tag-5> <tag-7> <tag-8>नमूने</tag-8> </tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें</tag-10> </tag-9>"
-  },
-  "blockly.name": {
-    "notes": "",
-    "translation": "Blockly"
-  },
-  "civet.desc": {
-    "notes": "",
-    "translation": "Civet एक प्रोग्रामिंग भाषा है जो TypeScript या JavaScript में कंपाइल होती है, इसलिए आप मौजूदा टूलिंग का उपयोग कर सकते हैं लेकिन संक्षिप्त और शक्तिशाली सिंटैक्स को सक्षम कर सकते हैं।"
-  },
-  "civet.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://civet.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://civet.dev/cheatsheet/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=civet\" target=\"_parent\" data-template=\"civet\" />\n\n",
-    "translation": "<tag-1> <tag-2>Civet आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Civet चीटशीट</tag-4> </tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें</tag-6> </tag-5>"
-  },
-  "civet.name": {
-    "notes": "",
-    "translation": "Civet"
-  },
-  "clio.desc": {
-    "notes": "",
-    "translation": "Clio एक तेज़, वितरित, कार्यात्मक प्रोग्रामिंग भाषा है जो JavaScript में कंपाइल होती है।"
-  },
-  "clio.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://clio-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://docs.clio-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=clio\" target=\"_parent\" data-template=\"clio\" />\n\n",
-    "translation": "<tag-1> <tag-2>Clio आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Clio दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें</tag-6> </tag-5>"
-  },
-  "clio.name": {
-    "notes": "",
-    "translation": "Clio"
-  },
-  "clojurescript.desc": {
-    "notes": "### <tag-1> ###\n<a href=\"https://clojure.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<br  />\n\n### <tag-3> ###\n<a href=\"https://github.com/squint-cljs/cherry\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "ClojureScript <tag-1>Clojure</tag-1> के लिए एक कंपाइलर है जो JavaScript को लक्षित करता है। <tag-2></tag-2>LiveCodes में, यह ब्राउज़र में <tag-3>Cherry</tag-3> का उपयोग करके चलता है।"
-  },
-  "clojurescript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://clojurescript.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://clojure.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/squint-cljs/cherry\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/clojure/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/clojurescript\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=clojurescript\" target=\"_parent\" data-template=\"clojurescript\" />\n\n",
-    "translation": "<tag-1> <tag-2>ClojureScript आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Clojure आधिकारिक वेबसाइट</tag-4> </tag-3> <tag-5> <tag-6>Cherry रेपो</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=clojure</tag-8> </tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण</tag-10> </tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें</tag-12> </tag-11>"
-  },
-  "clojurescript.name": {
-    "notes": "",
-    "translation": "ClojureScript (CLJS)"
-  },
-  "coffeescript.desc": {
-    "notes": "",
-    "translation": "सरल जावास्क्रिप्ट।"
-  },
-  "coffeescript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://coffeescript.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/coffeescript/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=coffeescript\" target=\"_parent\" data-template=\"coffeescript\" />\n\n",
-    "translation": "<tag-1> <tag-2>CoffeeScript आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>X को Y मिनटों में सीखें, जहां X=coffeescript</tag-4> </tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें</tag-6> </tag-5>"
-  },
-  "coffeescript.name": {
-    "notes": "",
-    "translation": "CoffeeScript"
-  },
-  "commonlisp.desc": {
-    "notes": "",
-    "translation": "JSCL (Common Lisp से बूटस्ट्रैप किया गया एक Lisp-to-Javascript कंपाइलर) का उपयोग करके Javascript पर एक Common Lisp कार्यान्वयन।"
-  },
-  "commonlisp.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://common-lisp.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/jscl-project/jscl\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://common-lisp.net/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/common-lisp/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=commonlisp\" target=\"_parent\" data-template=\"commonlisp\" />\n\n",
-    "translation": "<tag-1> <tag-2>Common-Lisp.net</tag-2> </tag-1> <tag-3> <tag-4>JSCL प्रोजेक्ट</tag-4> </tag-3> <tag-5> <tag-6>Common Lisp संसाधन</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Common Lisp</tag-8> </tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें</tag-10> </tag-9>"
-  },
-  "commonlisp.name": {
-    "notes": "",
-    "translation": "Common Lisp"
-  },
-  "cpp.desc1": {
-    "notes": "",
-    "translation": "JSCPP (JavaScript में लिखा गया एक सरल C++ इंटरप्रेटर) का उपयोग करके C++ समर्थन।"
-  },
-  "cpp.desc2": {
-    "notes": "### <tag-1> ###\n<a href=\"https://github.com/felixhao28/JSCPP\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "यह C++ का पूर्ण कार्यान्वयन नहीं है। कृपया विवरण के लिए <tag-1>JSCPP दस्तावेज़ीकरण</tag-1> देखें।"
-  },
-  "cpp.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://isocpp.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/felixhao28/JSCPP\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/c++/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=cpp\" target=\"_parent\" data-template=\"cpp\" />\n\n",
-    "translation": "<tag-1> <tag-2>मानक C++ फाउंडेशन</tag-2> </tag-1> <tag-3> <tag-4>JSCPP</tag-4> </tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=C++</tag-6> </tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें</tag-8> </tag-7>"
-  },
-  "cpp.name": {
-    "notes": "",
-    "translation": "C++"
-  },
-  "cppWasm.desc": {
-    "notes": "### <tag-1> ###\n<a href=\"https://github.com/binji/wasm-clang\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<a href=\"https://github.com/chris-koch-penn/polylang.io\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-2>polylang.io</tag-2> द्वारा अनुकूलित <tag-1>wasm-clang</tag-1> का उपयोग करके WebAssembly पर चलने वाला Clang C/C++ कंपाइलर।"
-  },
-  "cppWasm.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://isoclang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://clang.llvm.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/c++/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=cpp-wasm\" target=\"_parent\" data-template=\"cpp-wasm\" />\n\n",
-    "translation": "<tag-1> <tag-2>मानक C++ फाउंडेशन</tag-2> </tag-1> <tag-3> <tag-4>Clang आधिकारिक वेबसाइट</tag-4> </tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=C++</tag-6> </tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें</tag-8> </tag-7>"
-  },
-  "cppWasm.name": {
-    "notes": "",
-    "translation": "C/C++ (Wasm)"
-  },
-  "diagrams.desc1": {
-    "notes": "",
-    "translation": "(प्रायोगिक)"
-  },
-  "diagrams.desc2": {
-    "notes": "",
-    "translation": "कोड के रूप में आरेख। समर्थन करता है:"
-  },
-  "diagrams.desc3": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://js.cytoscape.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.eclipse.org/elk/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<a href=\"https://github.com/kieler/elkjs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-6> ###\n<li  />\n\n### <tag-7> ###\n<a href=\"http://www.gnuplot.info/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-8> ###\n<a href=\"https://github.com/chhu/gnuplot-JS\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://graphviz.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<a href=\"https://github.com/hpcc-systems/hpcc-js-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-12> ###\n<li  />\n\n### <tag-13> ###\n<a href=\"https://mermaid-js.github.io/mermaid/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-14> ###\n<li  />\n\n### <tag-15> ###\n<a href=\"https://nomnoml.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-16> ###\n<li  />\n\n### <tag-17> ###\n<a href=\"https://pintorajs.vercel.app/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-18> ###\n<li  />\n\n### <tag-19> ###\n<a href=\"https://plotly.com/graphing-libraries/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-20> ###\n<li  />\n\n### <tag-21> ###\n<a href=\"https://github.com/ivanceras/svgbob\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-22> ###\n<li  />\n\n### <tag-23> ###\n<a href=\"https://vega.github.io/vega/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-24> ###\n<li  />\n\n### <tag-25> ###\n<a href=\"https://vega.github.io/vega-lite/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-26> ###\n<li  />\n\n### <tag-27> ###\n<a href=\"https://wavedrom.com/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Cytoscape</tag-2> </tag-1> <tag-3> <tag-4>ELK</tag-4> (<tag-5>elkjs</tag-5> का उपयोग करके) </tag-3> <tag-6> <tag-7>Gnuplot</tag-7> (<tag-8>gnuplot-JS</tag-8> का उपयोग करके) </tag-6> <tag-9> <tag-10>Graphviz</tag-10> (<tag-11>@hpcc-js/wasm</tag-11> का उपयोग करके) </tag-9> <tag-12> <tag-13>Mermaid</tag-13> </tag-12> <tag-14> <tag-15>Nomnoml</tag-15> </tag-14> <tag-16> <tag-17>Pintora</tag-17> </tag-16> <tag-18> <tag-19>Plotly</tag-19> </tag-18> <tag-20> <tag-21>Svgbob</tag-21> </tag-20> <tag-22> <tag-23>Vega</tag-23> </tag-22> <tag-24> <tag-25>VegaLite</tag-25> </tag-24> <tag-26> <tag-27>WaveDrom</tag-27> </tag-26>"
-  },
-  "diagrams.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"?template=diagrams\" target=\"_parent\" data-template=\"diagrams\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/diagrams\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>स्टार्टर टेम्पलेट लोड करें</tag-2> </tag-1> <tag-3> <tag-4>LiveCodes दस्तावेज़ीकरण</tag-4> </tag-3>"
-  },
-  "diagrams.name": {
-    "notes": "",
-    "translation": "आरेख"
-  },
-  "dot.desc": {
-    "notes": "",
-    "translation": "Node.js और ब्राउज़रों के लिए सबसे तेज़ + संक्षिप्त जावास्क्रिप्ट टेम्पलेट इंजन।"
-  },
-  "dot.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://olado.github.io/doT/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/dot\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>LiveCodes दस्तावेज़ीकरण</tag-4> </tag-3>"
-  },
-  "dot.name": {
-    "notes": "",
-    "translation": "doT.js"
-  },
-  "ejs.desc": {
-    "notes": "",
-    "translation": "एम्बेडेड जावास्क्रिप्ट टेम्प्लेटिंग।"
-  },
-  "ejs.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://ejs.co/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/ejs\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>LiveCodes दस्तावेज़ीकरण</tag-4> </tag-3>"
-  },
-  "ejs.name": {
-    "notes": "",
-    "translation": "EJS"
-  },
-  "eta.desc": {
-    "notes": "",
-    "translation": "Node, Deno, और ब्राउज़र के लिए एम्बेडेड JS टेम्पलेट इंजन। हल्का, तेज़, और प्लगेबल। TypeScript में लिखा गया।"
-  },
-  "eta.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://eta.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://eta.js.org/docs/learn\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/eta\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण</tag-6> </tag-5>"
-  },
-  "eta.name": {
-    "notes": "",
-    "translation": "Eta"
-  },
-  "fennel.desc": {
-    "notes": "",
-    "translation": "Fennel एक प्रोग्रामिंग भाषा है जो Lua की गति, सरलता, और पहुंच को लिस्प सिंटैक्स और मैक्रो सिस्टम की लचीलेपन के साथ जोड़ती है।"
-  },
-  "fennel.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://fennel-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://fennel-lang.org/tutorial\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/fennel\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=fennel\" target=\"_parent\" data-template=\"fennel\" />\n\n",
-    "translation": "<tag-1> <tag-2>Fennel आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Fennel के साथ शुरुआत करना</tag-4> </tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण</tag-6> </tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें</tag-8> </tag-7>"
-  },
-  "fennel.name": {
-    "notes": "",
-    "translation": "Fennel"
-  },
-  "flow.desc": {
-    "notes": "",
-    "translation": "Flow जावास्क्रिप्ट के लिए एक स्थैतिक टाइप चेकर है।"
-  },
-  "flow.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://flow.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://flow.org/en/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Flow आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Flow दस्तावेज़ीकरण</tag-4> </tag-3>"
-  },
-  "flow.name": {
-    "notes": "",
-    "translation": "Flow"
-  },
-  "gleam.desc1": {
-    "notes": "",
-    "translation": "Gleam एक मित्रवत भाषा है जो स्केलेबल टाइप-सेफ सिस्टम बनाने के लिए है!"
-  },
-  "gleam.desc2": {
-    "notes": "",
-    "translation": "Gleam एक स्थैतिक रूप से टाइप की गई कार्यात्मक प्रोग्रामिंग भाषा है, जो Erlang या JavaScript में कंपाइल होती है।"
-  },
-  "gleam.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://gleam.run/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://gleam.run/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://tour.gleam.run/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=gleam\" target=\"_parent\" data-template=\"gleam\" />\n\n",
-    "translation": "<tag-1><tag-2>Gleam वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>Gleam दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>Gleam भाषा टूर</tag-6> </tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें</tag-8> </tag-7>"
-  },
-  "gleam.name": {
-    "notes": "",
-    "translation": "Gleam"
-  },
-  "go.desc1": {
-    "notes": "",
-    "translation": "Go (Golang) एक ओपन सोर्स प्रोग्रामिंग भाषा है जो सरल, विश्वसनीय और कुशल सॉफ्टवेयर बनाना आसान बनाती है।"
-  },
-  "go.desc2": {
-    "notes": "",
-    "translation": "यहाँ, यह GopherJS का उपयोग करके JavaScript में कंपाइल किया जाता है।"
-  },
-  "go.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://golang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://golang.org/doc/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/gopherjs/gopherjs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/go/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=go\" target=\"_parent\" data-template=\"go\" />\n\n",
-    "translation": "<tag-1><tag-2>Go वेबसाइट</tag-2></tag-1> <tag-3><tag-4>Go दस्तावेज़ीकरण</tag-4></tag-3> <tag-5> <tag-6>GopherJS रेपो</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Go</tag-8> </tag-7> <tag-9><tag-10>स्टार्टर टेम्पलेट लोड करें</tag-10></tag-9>"
-  },
-  "go.name": {
-    "notes": "",
-    "translation": "Go"
-  },
-  "haml.desc": {
-    "notes": "",
-    "translation": "क्लाइंटसाइड-haml-js का उपयोग करके क्लाइंट साइड जावास्क्रिप्ट व्यू टेम्प्लेट्स के लिए Haml कंपाइलर।"
-  },
-  "haml.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://haml.info/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://haml.info/docs.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/uglyog/clientside-haml-js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/haml/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/haml\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Haml आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>Haml दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>clientside-haml-js GitHub रेपो</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=haml</tag-8> </tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण</tag-10> </tag-9>"
-  },
-  "haml.name": {
-    "notes": "",
-    "translation": "Haml"
-  },
-  "handlebars.desc": {
-    "notes": "",
-    "translation": "स्टेरॉयड्स पर न्यूनतम टेम्प्लेटिंग।"
-  },
-  "handlebars.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://handlebarsjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/handlebars\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>LiveCodes दस्तावेज़ीकरण</tag-4> </tag-3>"
-  },
-  "handlebars.name": {
-    "notes": "",
-    "translation": "Handlebars"
-  },
-  "imba.desc": {
-    "notes": "",
-    "translation": "मित्रवत फुल-स्टैक भाषा।"
-  },
-  "imba.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://imba.io/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>आधिकारिक वेबसाइट</tag-2></tag-1>"
-  },
-  "imba.name": {
-    "notes": "",
-    "translation": "Imba"
-  },
-  "jsx.desc": {
-    "notes": "",
-    "translation": "LiveCodes में JSX को TypeScript कंपाइलर का उपयोग करके JavaScript में कंपाइल किया जाता है। डिफ़ॉल्ट रूप से यह JSX रनटाइम के रूप में React का उपयोग करता है।"
-  },
-  "jsx.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://react.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://react.dev/learn/writing-markup-with-jsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/jsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=react\" target=\"_parent\" data-template=\"react\" />\n\n",
-    "translation": "<tag-1> <tag-2>React आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>React दस्तावेज़ीकरण में JSX</tag-4> </tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण</tag-6> </tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें</tag-8> </tag-7>"
-  },
-  "jsx.name": {
-    "notes": "",
-    "translation": "JSX"
-  },
-  "julia.desc1": {
-    "notes": "",
-    "translation": "(LiveCodes में Julia भाषा समर्थन अभी भी प्रयोगात्मक है)"
-  },
-  "julia.desc2": {
-    "notes": "### <tag-1> ###\n<a href=\"https://github.com/Keno/julia-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<a href=\"https://github.com/chris-koch-penn/polylang.io\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-2>polylang.io</tag-2> द्वारा अनुकूलित <tag-1>julia-wasm</tag-1> का उपयोग करके WASM पर चलने वाला Julia कंपाइलर और Julia Base।"
-  },
-  "julia.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://julialang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://docs.julialang.org/en/v1/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/julia/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=julia\" target=\"_parent\" data-template=\"julia\" />\n\n",
-    "translation": "<tag-1> <tag-2>Julia आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Julia दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=Julia</tag-6> </tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें</tag-8> </tag-7>"
-  },
-  "julia.name": {
-    "notes": "",
-    "translation": "Julia"
-  },
-  "less.desc": {
-    "notes": "",
-    "translation": "यह CSS है, बस थोड़ा और के साथ।"
-  },
-  "less.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://lesscss.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/less/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Less आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>X को Y मिनटों में सीखें, जहां X=less</tag-4> </tag-3>"
-  },
-  "less.name": {
-    "notes": "",
-    "translation": "Less"
-  },
-  "liquid.desc": {
-    "notes": "",
-    "translation": "एक सरल, अभिव्यंजक और सुरक्षित टेम्पलेट इंजन।"
-  },
-  "liquid.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://liquidjs.com\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://liquidjs.com/tutorials/intro-to-liquid.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/liquid\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>LiquidJS आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>LiquidJS दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण</tag-6> </tag-5>"
-  },
-  "liquid.name": {
-    "notes": "",
-    "translation": "LiquidJS"
-  },
-  "livescript.desc": {
-    "notes": "",
-    "translation": "एक भाषा जो JavaScript में कंपाइल होती है।"
-  },
-  "livescript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://livescript.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/livescript/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=livescript\" target=\"_parent\" data-template=\"livescript\" />\n\n",
-    "translation": "<tag-1> <tag-2>LiveScript आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>X को Y मिनटों में सीखें, जहां X=LiveScript</tag-4> </tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें</tag-6> </tag-5>"
-  },
-  "livescript.name": {
-    "notes": "",
-    "translation": "LiveScript"
-  },
-  "lua.desc": {
-    "notes": "",
-    "translation": "fengari-web का उपयोग करके ब्राउज़र में चलने वाला Lua।"
-  },
-  "lua.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.lua.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.lua.org/manual/5.4/manual.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://fengari.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/fengari-lua/fengari-web\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/lua/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/lua\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=lua\" target=\"_parent\" data-template=\"lua\" />\n\n",
-    "translation": "<tag-1><tag-2>Lua आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>Lua दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>Fengari आधिकारिक वेबसाइट</tag-6> </tag-5> <tag-7> <tag-8>fengari-web GitHub रेपो</tag-8> </tag-7> <tag-9> <tag-10>X को Y मिनटों में सीखें, जहां X=Lua</tag-10> </tag-9> <tag-11> <tag-12>LiveCodes दस्तावेज़ीकरण</tag-12> </tag-11> <tag-13><tag-14>स्टार्टर टेम्पलेट लोड करें</tag-14></tag-13>"
-  },
-  "lua.name": {
-    "notes": "",
-    "translation": "Lua"
-  },
-  "luaWasm.desc": {
-    "notes": "",
-    "translation": "Wasmoon का उपयोग करके ब्राउज़र में चलने वाला Lua, जो WebAssembly के साथ बनाया गया JS बाइंडिंग्स के साथ एक वास्तविक lua 5.4 VM है।"
-  },
-  "luaWasm.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.lua.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.lua.org/manual/5.4/manual.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/ceifa/wasmoon\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/lua/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/lua-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=lua-wasm\" target=\"_parent\" data-template=\"lua-wasm\" />\n\n",
-    "translation": "<tag-1><tag-2>Lua आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>Lua दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>Wasmoon GitHub रेपो</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Lua</tag-8> </tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण</tag-10> </tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें</tag-12> </tag-11>"
-  },
-  "luaWasm.name": {
-    "notes": "",
-    "translation": "Lua (Wasm)"
-  },
-  "malina.desc": {
-    "notes": "",
-    "translation": "Svelte से प्रेरित फ्रंटएंड कंपाइलर।"
-  },
-  "malina.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://github.com/malinajs/malinajs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://malinajs.github.io/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=malina\" target=\"_parent\" data-template=\"malina\" />\n\n",
-    "translation": "<tag-1> <tag-2>Malina.js रेपो</tag-2> </tag-1> <tag-3> <tag-4>Malina.js दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें</tag-6> </tag-5>"
-  },
-  "malina.name": {
-    "notes": "",
-    "translation": "Malina.js"
-  },
-  "markdown.desc": {
-    "notes": "",
-    "translation": "Marked का उपयोग करके HTML में संकलित Markdown।"
-  },
-  "markdown.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://daringfireball.net/projects/markdown/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://marked.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/markdown/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=markdown\" target=\"_parent\" data-template=\"markdown\" />\n\n",
-    "translation": "<tag-1> <tag-2>Markdown आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Marked दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=markdown</tag-6> </tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें</tag-8> </tag-7>"
-  },
-  "markdown.name": {
-    "notes": "",
-    "translation": "Markdown"
-  },
-  "mdx.desc": {
-    "notes": "### <tag-1> ###\n<br  />\n\n",
-    "translation": "कंपोनेंट युग के लिए Markdown। <tag-1></tag-1>MDX आपको अपने Markdown दस्तावेज़ों में सहजता से JSX लिखने की अनुमति देता है।"
-  },
-  "mdx.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mdxjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"?template=mdx\" target=\"_parent\" data-template=\"mdx\" />\n\n",
-    "translation": "<tag-1><tag-2>MDX दस्तावेज़ीकरण</tag-2></tag-1> <tag-3><tag-4>स्टार्टर टेम्पलेट लोड करें</tag-4></tag-3>"
-  },
-  "mdx.name": {
-    "notes": "",
-    "translation": "MDX"
-  },
-  "mjml.desc": {
-    "notes": "",
-    "translation": "MJML एक मार्कअप भाषा है जिसे प्रतिक्रियाशील ईमेल को कोड करने की पीड़ा को कम करने के लिए डिज़ाइन किया गया है।"
-  },
-  "mjml.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mjml.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://documentation.mjml.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://mjml.io/templates\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/mjml\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>MJML आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>MJML दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>MJML आधिकारिक टेम्पलेट्स</tag-6> </tag-5> <tag-7> <tag-8>LiveCodes दस्तावेज़ीकरण</tag-8> </tag-7>"
-  },
-  "mjml.name": {
-    "notes": "",
-    "translation": "MJML"
-  },
-  "mustache.desc": {
-    "notes": "",
-    "translation": "तर्करहित टेम्पलेट्स।"
-  },
-  "mustache.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mustache.github.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://mustache.github.io/mustache.5.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/janl/mustache.js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/mustache\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>mustache(5) मैनुअल</tag-4> </tag-3> <tag-5> <tag-6>JavaScript कार्यान्वयन</tag-6> </tag-5> <tag-7> <tag-8>LiveCodes दस्तावेज़ीकरण</tag-8> </tag-7>"
-  },
-  "mustache.name": {
-    "notes": "",
-    "translation": "Mustache"
-  },
-  "nunjucks.desc": {
-    "notes": "### <tag-1> ###\n<a href=\"http://jinja.pocoo.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "JavaScript के लिए एक समृद्ध और शक्तिशाली टेम्प्लेटिंग भाषा। Nunjucks अनिवार्य रूप से <tag-1>jinja2</tag-1> का एक पोर्ट है।"
-  },
-  "nunjucks.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mozilla.github.io/nunjucks/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/nunjucks\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>LiveCodes दस्तावेज़ीकरण</tag-4> </tag-3>"
-  },
-  "nunjucks.name": {
-    "notes": "",
-    "translation": "Nunjucks"
-  },
-  "ocaml.desc1": {
-    "notes": "",
-    "translation": "OCaml एक औद्योगिक-स्तरीय प्रोग्रामिंग भाषा है जो कार्यात्मक, आदेशात्मक और ऑब्जेक्ट-उन्मुख शैलियों का समर्थन करती है।"
-  },
-  "ocaml.desc2": {
-    "notes": "",
-    "translation": "यहाँ OCaml को JavaScript में कंपाइल करने के लिए ReScript कंपाइलर का उपयोग किया जाता है।"
-  },
-  "ocaml.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://ocaml.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://ocaml.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://rescript-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/ocaml/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=ocaml\" target=\"_parent\" data-template=\"ocaml\" />\n\n",
-    "translation": "<tag-1><tag-2>OCaml वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>OCaml दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>ReScript वेबसाइट</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=OCaml</tag-8> </tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें</tag-10> </tag-9>"
-  },
-  "ocaml.name": {
-    "notes": "",
-    "translation": "OCaml"
-  },
-  "perl.desc": {
-    "notes": "",
-    "translation": "Perlito का उपयोग करके ब्राउज़र में चलने वाला Perl।"
-  },
-  "perl.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.perl.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://perldoc.perl.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/fglock/Perlito/blob/master/README-perlito5.md\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/perl/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=perl\" target=\"_parent\" data-template=\"perl\" />\n\n",
-    "translation": "<tag-1> <tag-2>Perl आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Perl दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>Perlito5 रीडमी</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=perl</tag-8> </tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें</tag-10> </tag-9>"
-  },
-  "perl.name": {
-    "notes": "",
-    "translation": "Perl"
-  },
-  "php.desc": {
-    "notes": "",
-    "translation": "Uniter का उपयोग करके ब्राउज़र में चलने वाला PHP।"
-  },
-  "php.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.php.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.php.net/manual/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/asmblah/uniter\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/php/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/php\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=php\" target=\"_parent\" data-template=\"php\" />\n\n",
-    "translation": "<tag-1><tag-2>PHP आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>PHP दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>Uniter GitHub रेपो</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=PHP</tag-8> </tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण</tag-10> </tag-9> <tag-11><tag-12>स्टार्टर टेम्पलेट लोड करें</tag-12></tag-11>"
-  },
-  "php.name": {
-    "notes": "",
-    "translation": "PHP"
-  },
-  "phpWasm.desc": {
-    "notes": "",
-    "translation": "php-wasm का उपयोग करके WebAssembly द्वारा संचालित ब्राउज़र में PHP।"
-  },
-  "phpWasm.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.php.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.php.net/manual/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/seanmorris/php-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/php/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/php-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=php-wasm\" target=\"_parent\" data-template=\"php-wasm\" />\n\n",
-    "translation": "<tag-1><tag-2>PHP आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>PHP दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>php-wasm GitHub रेपो</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=PHP</tag-8> </tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण</tag-10> </tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें</tag-12> </tag-11>"
-  },
-  "phpWasm.name": {
-    "notes": "",
-    "translation": "PHP (Wasm)"
-  },
-  "postgresql.desc": {
-    "notes": "",
-    "translation": "PGlite का उपयोग करके WASM के रूप में पैकेज किया गया PostgreSQL"
-  },
-  "postgresql.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.postgresql.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.postgresql.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/electric-sql/pglite\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sql/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=postgresql\" target=\"_parent\" data-template=\"postgresql\" />\n\n",
-    "translation": "<tag-1> <tag-2>PostgreSQL आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>PostgreSQL दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>PGlite GitHub रेपो</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=SQL</tag-8> </tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें</tag-10> </tag-9>"
-  },
-  "postgresql.name": {
-    "notes": "",
-    "translation": "PostgreSQL"
-  },
-  "prolog.desc": {
-    "notes": "",
-    "translation": "JavaScript में एक ओपन सोर्स Prolog इंटरप्रेटर।"
-  },
-  "prolog.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"http://tau-prolog.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"http://tau-prolog.org/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.swi-prolog.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/prolog/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=prolog\" target=\"_parent\" data-template=\"prolog\" />\n\n",
-    "translation": "<tag-1> <tag-2>Tau Prolog आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Tau Prolog दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>SWI-Prolog</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Prolog</tag-8> </tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें</tag-10> </tag-9>"
-  },
-  "prolog.name": {
-    "notes": "",
-    "translation": "Tau Prolog"
-  },
-  "pug.desc": {
-    "notes": "",
-    "translation": "मजबूत, सुंदर, सुविधा संपन्न टेम्पलेट इंजन।"
-  },
-  "pug.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://pugjs.org/api/getting-started.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/pug/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/pug\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Pug दस्तावेज़ीकरण</tag-2> </tag-1> <tag-3> <tag-4>X को Y मिनटों में सीखें, जहां X=Pug</tag-4> </tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण</tag-6> </tag-5>"
-  },
-  "pug.name": {
-    "notes": "",
-    "translation": "Pug"
-  },
-  "python.desc": {
-    "notes": "",
-    "translation": "Brython का उपयोग करके ब्राउज़र में चलने वाला Python।"
-  },
-  "python.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.python.org/doc/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://brython.info/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/python/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/python\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=python\" target=\"_parent\" data-template=\"python\" />\n\n",
-    "translation": "<tag-1> <tag-2>Python आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Python दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>Brython दस्तावेज़ीकरण</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Python</tag-8> </tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण</tag-10> </tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें</tag-12> </tag-11>"
-  },
-  "python.name": {
-    "notes": "",
-    "translation": "Python"
-  },
-  "pythonWasm.desc1": {
-    "notes": "",
-    "translation": "Pyodide का उपयोग करके WebAssembly में कंपाइल किए गए वैज्ञानिक स्टैक के साथ Python।"
-  },
-  "pythonWasm.desc2": {
-    "notes": "",
-    "translation": "Pyodide NumPy, Pandas, Matplotlib, SciPy, scikit-learn और बहुत कुछ सहित Python वैज्ञानिक स्टैक का उपयोग करने की अनुमति देता है। इसके अतिरिक्त PyPi से शुद्ध Python व्हील्स को इंस्टॉल करना संभव है।"
-  },
-  "pythonWasm.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.python.org/doc/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://pyodide.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/python/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/python-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=python-wasm\" target=\"_parent\" data-template=\"python-wasm\" />\n\n",
-    "translation": "<tag-1> <tag-2>Python आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Python दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5><tag-6>Pyodide दस्तावेज़ीकरण</tag-6></tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Python</tag-8> </tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण</tag-10> </tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें</tag-12> </tag-11>"
-  },
-  "pythonWasm.name": {
-    "notes": "",
-    "translation": "Python (Wasm)"
-  },
-  "r.desc": {
-    "notes": "",
-    "translation": "WebR का उपयोग करके ब्राउज़र में चलने वाला R।"
-  },
-  "r.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.r-project.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://cran.r-project.org/manuals.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://r4ds.hadley.nz/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://docs.r-wasm.org/webr/latest/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/r/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/r\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=r\" target=\"_parent\" data-template=\"r\" />\n\n",
-    "translation": "<tag-1> <tag-2>R प्रोजेक्ट की आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>R मैनुअल्स</tag-4> </tag-3> <tag-5> <tag-6>डेटा विज्ञान के लिए R (2e)</tag-6> </tag-5> <tag-7> <tag-8>WebR दस्तावेज़ीकरण</tag-8> </tag-7> <tag-9> <tag-10>X को Y मिनट में सीखें, जहाँ X=R</tag-10> </tag-9> <tag-11> <tag-12>LiveCodes दस्तावेज़ीकरण</tag-12> </tag-11> <tag-13> <tag-14>स्टार्टर टेम्पलेट लोड करें</tag-14> </tag-13>"
-  },
-  "r.name": {
-    "notes": "",
-    "translation": "R"
-  },
-  "reactNative.desc": {
-    "notes": "",
-    "translation": "React Native for Web, React Native के कंपोनेंट्स और API का एक सुलभ कार्यान्वयन है जो React DOM के साथ अंतरसंचालनीय है।"
-  },
-  "reactNative.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://reactjs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://reactnative.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://necolas.github.io/react-native-web/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://reactnative.dev/docs/getting-started\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/react-native\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=react-native\" target=\"_parent\" data-template=\"react-native\" />\n\n",
-    "translation": "<tag-1> <tag-2>React की आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>React Native वेबसाइट</tag-4> </tag-3> <tag-5> <tag-6>React Native for Web वेबसाइट</tag-6> </tag-5> <tag-7> <tag-8>React Native दस्तावेज़ीकरण</tag-8> </tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण</tag-10> </tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें</tag-12> </tag-11>"
-  },
-  "reactNative.name": {
-    "notes": "",
-    "translation": "React Native for Web"
-  },
-  "reactNativeTsx.desc": {
-    "notes": "",
-    "translation": "React Native for Web, React Native के कंपोनेंट्स और API का एक सुलभ कार्यान्वयन है जो React DOM के साथ अंतरसंचालनीय है।"
-  },
-  "reactNativeTsx.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://reactjs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://reactnative.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://necolas.github.io/react-native-web/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://reactnative.dev/docs/getting-started\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://www.typescriptlang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"{{DOCS_BASE_URL}}languages/react-native-tsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-15> ###\n<li  />\n\n### <tag-16> ###\n<a href=\"?template=react-native\" target=\"_parent\" data-template=\"react-native\" />\n\n",
-    "translation": "<tag-1> <tag-2>React की आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>React Native वेबसाइट</tag-4> </tag-3> <tag-5> <tag-6>React Native for Web वेबसाइट</tag-6> </tag-5> <tag-7> <tag-8>React Native दस्तावेज़ीकरण</tag-8> </tag-7> <tag-9> <tag-10>TypeScript वेबसाइट</tag-10> </tag-9> <tag-11> <tag-12>TypeScript दस्तावेज़ीकरण</tag-12> </tag-11> <tag-13> <tag-14>LiveCodes दस्तावेज़ीकरण</tag-14> </tag-13> <tag-15> <tag-16>स्टार्टर टेम्पलेट लोड करें (JSX)</tag-16> </tag-15>"
-  },
-  "reactNativeTsx.name": {
-    "notes": "",
-    "translation": "React Native for Web (TypeScript के साथ)"
-  },
-  "reason.desc1": {
-    "notes": "",
-    "translation": "Reason आपको JavaScript और OCaml दोनों पारिस्थितिकी तंत्रों का लाभ उठाते हुए सरल, तेज़ और गुणवत्तापूर्ण प्रकार-सुरक्षित कोड लिखने देता है।"
-  },
-  "reason.desc2": {
-    "notes": "",
-    "translation": "यहाँ Reason को JavaScript में कंपाइल करने के लिए ReScript कंपाइलर का उपयोग किया जाता है।"
-  },
-  "reason.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://reasonml.github.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://reasonml.github.io/docs/en/what-and-why\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://reasonml.github.io/reason-react/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://rescript-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/reason/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=reason\" target=\"_parent\" data-template=\"reason\" />\n\n",
-    "translation": "<tag-1><tag-2>Reason वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>Reason दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>ReasonReact</tag-6> </tag-5> <tag-7> <tag-8>ReScript वेबसाइट</tag-8> </tag-7> <tag-9> <tag-10>X को Y मिनट में सीखें, जहाँ X=reason</tag-10> </tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें</tag-12> </tag-11>"
-  },
-  "reason.name": {
-    "notes": "",
-    "translation": "Reason"
-  },
-  "rescript.desc": {
-    "notes": "",
-    "translation": "ReScript एक मजबूती से टाइप की गई भाषा है जो कुशल और मानव-पठनीय JavaScript में कंपाइल होती है।"
-  },
-  "rescript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://rescript-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://rescript-lang.org/docs/react/latest/introduction\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=rescript\" target=\"_parent\" data-template=\"rescript\" />\n\n",
-    "translation": "<tag-1> <tag-2>ReScript वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>ReScript / React</tag-4> </tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें</tag-6> </tag-5>"
-  },
-  "rescript.name": {
-    "notes": "",
-    "translation": "ReScript"
-  },
-  "richtext.desc1": {
-    "notes": "",
-    "translation": "Quill का उपयोग करके:"
-  },
-  "richtext.desc2": {
-    "notes": "",
-    "translation": "आपका शक्तिशाली रिच टेक्स्ट एडिटर।"
-  },
-  "richtext.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://quilljs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Quill की आधिकारिक वेबसाइट</tag-2> </tag-1>"
-  },
-  "richtext.name": {
-    "notes": "",
-    "translation": "रिच टेक्स्ट एडिटर"
-  },
-  "riot.desc": {
-    "notes": "",
-    "translation": "सरल और सुंदर कंपोनेंट-आधारित UI लाइब्रेरी।"
-  },
-  "riot.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://riot.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://riot.js.org/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=riot\" target=\"_parent\" data-template=\"riot\" />\n\n",
-    "translation": "<tag-1> <tag-2>Riot.js की आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Riot.js दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें</tag-6> </tag-5>"
-  },
-  "riot.name": {
-    "notes": "",
-    "translation": "Riot.js"
-  },
-  "ruby.desc": {
-    "notes": "",
-    "translation": "Opal का उपयोग करके ब्राउज़र में चलने वाला Ruby।"
-  },
-  "ruby.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.ruby-lang.org/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.ruby-lang.org/en/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://opalrb.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://cdn.opalrb.com/opal/1.0.0/index.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/ruby/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/ruby\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=ruby\" target=\"_parent\" data-template=\"ruby\" />\n\n",
-    "translation": "<tag-1> <tag-2>Ruby की आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Ruby दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5><tag-6>Opal की आधिकारिक वेबसाइट</tag-6></tag-5> <tag-7> <tag-8>Opal मानक पुस्तकालय CDN</tag-8> </tag-7> <tag-9> <tag-10>X को Y मिनट में सीखें, जहां X=ruby</tag-10> </tag-9> <tag-11> <tag-12>LiveCodes दस्तावेज़ीकरण</tag-12> </tag-11> <tag-13> <tag-14>स्टार्टर टेम्पलेट लोड करें</tag-14> </tag-13>"
-  },
-  "ruby.name": {
-    "notes": "",
-    "translation": "Ruby"
-  },
-  "rubyWasm.desc": {
-    "notes": "",
-    "translation": "ruby-wasm (CRuby के WebAssembly पोर्ट्स का एक संग्रह) का उपयोग करके ब्राउज़र में चलने वाला Ruby।"
-  },
-  "rubyWasm.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.ruby-lang.org/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.ruby-lang.org/en/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://ruby.github.io/ruby.wasm/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/ruby/ruby\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/ruby/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/ruby-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=ruby-wasm\" target=\"_parent\" data-template=\"ruby-wasm\" />\n\n",
-    "translation": "<tag-1> <tag-2>Ruby की आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Ruby दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>ruby.wasm वेबसाइट</tag-6> </tag-5> <tag-7><tag-8>CRuby</tag-8></tag-7> <tag-9> <tag-10>X को Y मिनट में सीखें, जहां X=ruby</tag-10> </tag-9> <tag-11> <tag-12>LiveCodes दस्तावेज़ीकरण</tag-12> </tag-11> <tag-13> <tag-14>स्टार्टर टेम्पलेट लोड करें</tag-14> </tag-13>"
-  },
-  "rubyWasm.name": {
-    "notes": "",
-    "translation": "Ruby (WASM)"
-  },
-  "sass.desc": {
-    "notes": "",
-    "translation": "वाक्यरचनात्मक रूप से अद्भुत स्टाइल शीट्स।"
-  },
-  "sass.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://sass-lang.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://sass-lang.com/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://sass-lang.com/documentation/syntax#the-indented-syntax\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sass/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Sass की आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Sass दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>Sass (इंडेंटेड) वाक्यरचना</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनट में सीखें, जहां X=sass</tag-8> </tag-7>"
-  },
-  "sass.name": {
-    "notes": "",
-    "translation": "Sass"
-  },
-  "scheme.desc": {
-    "notes": "",
-    "translation": "biwascheme का उपयोग करके ब्राउज़र में चलने वाला Scheme।"
-  },
-  "scheme.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.scheme.com/tspl4/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.biwascheme.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.biwascheme.org/doc/reference.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=scheme\" target=\"_parent\" data-template=\"scheme\" />\n\n",
-    "translation": "<tag-1> <tag-2>Scheme प्रोग्रामिंग भाषा</tag-2> </tag-1> <tag-3> <tag-4>BiwaScheme की आधिकारिक वेबसाइट</tag-4> </tag-3> <tag-5> <tag-6>BiwaScheme संदर्भ</tag-6> </tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें</tag-8> </tag-7>"
-  },
-  "scheme.name": {
-    "notes": "",
-    "translation": "Scheme"
-  },
-  "scss.desc": {
-    "notes": "",
-    "translation": "वाक्यरचनात्मक रूप से अद्भुत स्टाइल शीट्स।"
-  },
-  "scss.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://sass-lang.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://sass-lang.com/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://sass-lang.com/documentation/syntax#scss\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sass/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Sass की आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Sass दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>SCSS वाक्यरचना</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनट में सीखें, जहां X=sass</tag-8> </tag-7>"
-  },
-  "scss.name": {
-    "notes": "",
-    "translation": "SCSS"
-  },
-  "solid.desc": {
-    "notes": "",
-    "translation": "उपयोगकर्ता इंटरफेस बनाने के लिए एक घोषणात्मक, कुशल और लचीली JavaScript लाइब्रेरी।"
-  },
-  "solid.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.solidjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.solidjs.com/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/solid\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=solid\" target=\"_parent\" data-template=\"solid\" />\n\n",
-    "translation": "<tag-1><tag-2>आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3><tag-4>दस्तावेज़ीकरण</tag-4></tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण</tag-6> </tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें (TSX)</tag-8> </tag-7>"
-  },
-  "solid.name": {
-    "notes": "",
-    "translation": "Solid"
-  },
-  "solid.tsx.desc": {
-    "notes": "",
-    "translation": "उपयोगकर्ता इंटरफेस बनाने के लिए एक घोषणात्मक, कुशल और लचीली JavaScript लाइब्रेरी।"
-  },
-  "solid.tsx.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.solidjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.solidjs.com/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.typescriptlang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/solid.tsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=solid\" target=\"_parent\" data-template=\"solid\" />\n\n",
-    "translation": "<tag-1><tag-2>आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>Solid दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>TypeScript वेबसाइट</tag-6> </tag-5> <tag-7> <tag-8>TypeScript दस्तावेज़ीकरण</tag-8> </tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण</tag-10> </tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें</tag-12> </tag-11>"
-  },
-  "solid.tsx.name": {
-    "notes": "",
-    "translation": "Solid (TypeScript के साथ)"
-  },
-  "sql.desc": {
-    "notes": "",
-    "translation": "SQL.js का उपयोग करके JavaScript में संकलित SQLite"
-  },
-  "sql.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.sqlite.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.sqlite.org/lang.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://sql.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sql/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=sql\" target=\"_parent\" data-template=\"sql\" />\n\n",
-    "translation": "<tag-1> <tag-2>SQLite आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>SQLite सिंटैक्स दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>SQL.js आधिकारिक वेबसाइट</tag-6> </tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=SQL</tag-8> </tag-7> <tag-9><tag-10>स्टार्टर टेम्पलेट लोड करें</tag-10></tag-9>"
-  },
-  "sql.name": {
-    "notes": "",
-    "translation": "SQLite"
-  },
-  "stencil.desc": {
-    "notes": "",
-    "translation": "वेब कंपोनेंट्स और उच्च प्रदर्शन वाले वेब ऐप्स के लिए एक कंपाइलर।"
-  },
-  "stencil.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://stenciljs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://stenciljs.com/docs/introduction\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=stencil\" target=\"_parent\" data-template=\"stencil\" />\n\n",
-    "translation": "<tag-1> <tag-2>Stencil आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Stencil दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें</tag-6> </tag-5>"
-  },
-  "stencil.name": {
-    "notes": "",
-    "translation": "Stencil"
-  },
-  "styleProcessors.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://tailwindcss.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://windicss.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://uno.antfu.me/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://lightningcss.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://postcss.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<ul  />\n\n### <tag-12> ###\n<li  />\n\n### <tag-13> ###\n<a href=\"https://github.com/postcss/autoprefixer\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-14> ###\n<li  />\n\n### <tag-15> ###\n<a href=\"https://preset-env.cssdb.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-16> ###\n<li  />\n\n### <tag-17> ###\n<a href=\"https://github.com/unlight/postcss-import-url\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-18> ###\n<li  />\n\n### <tag-19> ###\n<a href=\"https://github.com/madyankin/postcss-modules\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Tailwind CSS</tag-2> </tag-1> <tag-3> <tag-4>Windi CSS</tag-4> </tag-3> <tag-5> <tag-6>UnoCSS</tag-6> </tag-5> <tag-7> <tag-8>Lightning CSS</tag-8> </tag-7> <tag-9> <tag-10>PostCSS</tag-10> प्लगइन्स: <tag-11> <tag-12> <tag-13>Autoprefixer</tag-13> </tag-12> <tag-14> <tag-15>postcss-preset-env</tag-15> </tag-14> <tag-16> <tag-17>postcss-import-url</tag-17> </tag-16> <tag-18> <tag-19>postcss-modules</tag-19> </tag-18> </tag-11> </tag-9>"
-  },
-  "styleProcessors.name": {
-    "notes": "",
-    "translation": "CSS फ्रेमवर्क और प्रोसेसर"
-  },
-  "stylis.desc": {
-    "notes": "",
-    "translation": "हल्का css प्रीप्रोसेसर।"
-  },
-  "stylis.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://stylis.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Stylis आधिकारिक वेबसाइट</tag-2> </tag-1>"
-  },
-  "stylis.name": {
-    "notes": "",
-    "translation": "Stylis"
-  },
-  "stylus.desc": {
-    "notes": "",
-    "translation": "अभिव्यंजक, गतिशील, मजबूत CSS।"
-  },
-  "stylus.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://stylus-lang.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/stylus/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Stylus आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>X को Y मिनटों में सीखें, जहां X=stylus</tag-4> </tag-3>"
-  },
-  "stylus.name": {
-    "notes": "",
-    "translation": "Stylus"
-  },
-  "sucrase.desc": {
-    "notes": "",
-    "translation": "आधुनिक JS रनटाइम को लक्षित कर सकने के लिए Babel का सुपर-फास्ट विकल्प।"
-  },
-  "sucrase.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://sucrase.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/alangpierce/sucrase\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/sucrase\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Sucrase आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Sucrase GitHub रेपो</tag-4> </tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण</tag-6> </tag-5>"
-  },
-  "sucrase.name": {
-    "notes": "",
-    "translation": "Sucrase"
-  },
-  "svelte.desc": {
-    "notes": "",
-    "translation": "साइबरनेटिक रूप से उन्नत वेब ऐप्स।"
-  },
-  "svelte.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://svelte.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://svelte.dev/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=svelte\" target=\"_parent\" data-template=\"svelte\" />\n\n",
-    "translation": "<tag-1> <tag-2>Svelte आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Svelte दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें</tag-6> </tag-5>"
-  },
-  "svelte.name": {
-    "notes": "",
-    "translation": "Svelte"
-  },
-  "tcl.desc": {
-    "notes": "### <tag-1> ###\n<a href=\"https://github.com/ecky-l/wacl/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1>wacl</tag-1> का उपयोग करके ब्राउज़र में चलने वाला Tcl।"
-  },
-  "tcl.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.tcl.tk/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/ecky-l/wacl/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/tcl/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=tcl\" target=\"_parent\" data-template=\"tcl\" />\n\n",
-    "translation": "<tag-1> <tag-2>Tcl आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>wacl रेपो</tag-4> </tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=Tcl</tag-6> </tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें</tag-8> </tag-7>"
-  },
-  "tcl.name": {
-    "notes": "",
-    "translation": "Tcl (टूल कमांड लैंग्वेज)"
-  },
-  "teal.desc": {
-    "notes": "",
-    "translation": "Lua की एक टाइप की गई बोली।"
-  },
-  "teal.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://github.com/teal-language/tl\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/teal-language/tl/tree/master/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/teal-language/tl/blob/master/docs/tutorial.md\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/teal\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=teal\" target=\"_parent\" data-template=\"teal\" />\n\n",
-    "translation": "<tag-1> <tag-2>Teal GitHub रेपो</tag-2> </tag-1> <tag-3> <tag-4>Teal दस्तावेज़</tag-4> </tag-3> <tag-5> <tag-6>Teal ट्यूटोरियल</tag-6> </tag-5> <tag-7> <tag-8>LiveCodes दस्तावेज़ीकरण</tag-8> </tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें</tag-10> </tag-9>"
-  },
-  "teal.name": {
-    "notes": "",
-    "translation": "Teal"
-  },
-  "tsx.desc": {
-    "notes": "",
-    "translation": "JSX में TypeScript। TSX को LiveCodes में TypeScript कंपाइलर का उपयोग करके JavaScript में कंपाइल किया जाता है। डिफ़ॉल्ट रूप से यह JSX रनटाइम के रूप में React का उपयोग करता है।"
-  },
-  "tsx.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://react.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://react.dev/learn/writing-markup-with-jsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/tsx\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>React आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>React दस्तावेज़ीकरण में JSX</tag-4> </tag-3> <tag-5> <tag-6>Typescript दस्तावेज़ीकरण</tag-6> </tag-5> <tag-7> <tag-8>LiveCodes दस्तावेज़ीकरण</tag-8> </tag-7>"
-  },
-  "tsx.name": {
-    "notes": "",
-    "translation": "TSX"
-  },
-  "twig.desc": {
-    "notes": "### <tag-1> ###\n<a href=\"https://twig.symfony.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<a href=\"https://github.com/twigjs/twig.js\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-2>Twig.js</tag-2> द्वारा PHP टेम्प्लेटिंग भाषा <tag-1>Twig</tag-1> का एक JavaScript कार्यान्वयन।"
-  },
-  "twig.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://twig.symfony.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://twig.symfony.com/doc/3.x/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/twigjs/twig.js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/twigjs/twig.js/wiki\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/twig\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Twig आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Twig दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>Twig.js रेपो</tag-6> </tag-5> <tag-7> <tag-8>Twig.js दस्तावेज़ीकरण</tag-8> </tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण</tag-10> </tag-9>"
-  },
-  "twig.name": {
-    "notes": "",
-    "translation": "Twig"
-  },
-  "typescript.desc": {
-    "notes": "",
-    "translation": "JavaScript का एक टाइप किया गया सुपरसेट।"
-  },
-  "typescript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.typescriptlang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/typescript/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=typescript\" target=\"_parent\" data-template=\"typescript\" />\n\n",
-    "translation": "<tag-1> <tag-2>आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>TypeScript दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=TypeScript</tag-6> </tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें</tag-8> </tag-7>"
-  },
-  "typescript.name": {
-    "notes": "",
-    "translation": "TypeScript"
-  },
-  "vue.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://vuejs.org/guide/introduction.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://vuejs.org/api/sfc-spec.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/vue\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=vue\" target=\"_parent\" data-template=\"vue\" />\n\n",
-    "translation": "<tag-1> <tag-2>Vue.js v3 आधिकारिक वेबसाइट</tag-2> </tag-1> <tag-3> <tag-4>Vue3 दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>Vue3 सिंगल फाइल कंपोनेंट्स</tag-6> </tag-5> <tag-7> <tag-8>LiveCodes दस्तावेज़ीकरण</tag-8> </tag-7> <tag-9><tag-10>स्टार्टर टेम्पलेट लोड करें</tag-10></tag-9>"
-  },
-  "vue.name": {
-    "notes": "",
-    "translation": "Vue3 सिंगल फाइल कंपोनेंट्स"
-  },
-  "vue2.desc": {
-    "notes": "",
-    "translation": "vue3-sfc-loader का उपयोग करके लोड किया गया।"
-  },
-  "vue2.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://v2.vuejs.org/v2/guide/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://v2.vuejs.org/v2/guide/single-file-components.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/FranckFreiburger/vue3-sfc-loader\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/vue2\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Vue.js आधिकारिक वेबसाइट</tag-2></tag-1> <tag-3> <tag-4>Vue2 दस्तावेज़ीकरण</tag-4> </tag-3> <tag-5> <tag-6>Vue2 सिंगल फाइल कंपोनेंट्स</tag-6> </tag-5> <tag-7> <tag-8>vue3-sfc-loader GitHub रेपो</tag-8> </tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण</tag-10> </tag-9>"
-  },
-  "vue2.name": {
-    "notes": "",
-    "translation": "Vue2 सिंगल फाइल कंपोनेंट्स"
-  },
-  "wat.desc1": {
-    "notes": "",
-    "translation": "WebAssembly (wasm) बाइनरी फॉर्मेट का निम्न-स्तरीय पाठ्य प्रतिनिधित्व।"
-  },
-  "wat.desc2": {
-    "notes": "",
-    "translation": "इसे wabt.js का उपयोग करके wasm में परिवर्तित किया जाता है।"
-  },
-  "wat.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://webassembly.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://webassembly.github.io/spec/core/text/index.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://developer.mozilla.org/en-US/docs/WebAssembly\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://github.com/AssemblyScript/wabt.js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"https://learnxinyminutes.com/docs/wasm/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=wat\" target=\"_parent\" data-template=\"wat\" />\n\n",
-    "translation": "<tag-1><tag-2>WebAssembly.org</tag-2></tag-1> <tag-3> <tag-4>WebAssembly टेक्स्ट स्पेक्स</tag-4> </tag-3> <tag-5> <tag-6>MDN पर WebAssembly</tag-6> </tag-5> <tag-7> <tag-8>WebAssembly टेक्स्ट फॉर्मेट को समझना</tag-8> </tag-7> <tag-9> <tag-10>wabt.js दस्तावेज़ीकरण</tag-10> </tag-9> <tag-11> <tag-12>X को Y मिनटों में सीखें, जहां X=WebAssembly</tag-12> </tag-11> <tag-13><tag-14>स्टार्टर टेम्पलेट लोड करें</tag-14></tag-13>"
-  },
-  "wat.name": {
-    "notes": "",
-    "translation": "WebAssembly टेक्स्ट फॉर्मेट"
-  }
+    "artTemplate.desc": "उच्च प्रदर्शन वाला JavaScript टेम्प्लेटिंग इंजन।",
+    "artTemplate.link": "<tag-1> <tag-2>art-template आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>art-template दस्तावेज़ीकरण<\/tag-4> <\/tag-3>",
+    "artTemplate.name": "art-template",
+    "asciidoc.desc": "Asciidoctor का उपयोग करके HTML में संकलित AsciiDoc।",
+    "asciidoc.link": "<tag-1> <tag-2>AsciiDoc आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Asciidoctor आधिकारिक वेबसाइट<\/tag-4> <\/tag-3> <tag-5> <tag-6>Asciidoctor दस्तावेज़ीकरण<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=asciidoc<\/tag-8> <\/tag-7>",
+    "asciidoc.name": "AsciiDoc",
+    "assemblyscript.desc": "WebAssembly के लिए TypeScript जैसी भाषा।",
+    "assemblyscript.link": "<tag-1> <tag-2>AssemblyScript आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>AssemblyScript दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें<\/tag-6> <\/tag-5>",
+    "assemblyscript.name": "AssemblyScript",
+    "astro.desc": "कम क्लाइंट-साइड जावास्क्रिप्ट के साथ तेज़ वेबसाइटें बनाएं। (अभी भी बीटा में)",
+    "astro.link": "<tag-1> <tag-2>Astro आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Astro दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें<\/tag-6> <\/tag-5>",
+    "astro.name": "Astro",
+    "babel.desc": "जावास्क्रिप्ट कंपाइलर",
+    "babel.link": "<tag-1><tag-2>आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>Babel दस्तावेज़ीकरण<\/tag-4> <\/tag-3>",
+    "babel.name": "Babel",
+    "bbcode.desc": "BBCode (\"बुलेटिन बोर्ड कोड\") एक हल्का मार्कअप भाषा है जिसका उपयोग कई इंटरनेट फोरम सॉफ्टवेयर में संदेशों को फॉर्मेट करने के लिए किया जाता है।",
+    "bbcode.link": "<tag-1><tag-2>bbcode.org<\/tag-2><\/tag-1> <tag-3> <tag-4>BBCode गाइड<\/tag-4> <\/tag-3> <tag-5> <tag-6>विकिपीडिया पर BBCode<\/tag-6> <\/tag-5>",
+    "bbcode.name": "BBCode",
+    "blockly.desc": "दृश्य प्रोग्रामिंग संपादकों के निर्माण के लिए एक जावास्क्रिप्ट लाइब्रेरी।",
+    "blockly.link": "<tag-1> <tag-2>आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>गाइड<\/tag-4> <\/tag-3> <tag-5> <tag-6>संदर्भ<\/tag-6> <\/tag-5> <tag-7> <tag-8>नमूने<\/tag-8> <\/tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें<\/tag-10> <\/tag-9>",
+    "blockly.name": "Blockly",
+    "civet.desc": "Civet एक प्रोग्रामिंग भाषा है जो TypeScript या JavaScript में कंपाइल होती है, इसलिए आप मौजूदा टूलिंग का उपयोग कर सकते हैं लेकिन संक्षिप्त और शक्तिशाली सिंटैक्स को सक्षम कर सकते हैं।",
+    "civet.link": "<tag-1> <tag-2>Civet आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Civet चीटशीट<\/tag-4> <\/tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें<\/tag-6> <\/tag-5>",
+    "civet.name": "Civet",
+    "clio.desc": "Clio एक तेज़, वितरित, कार्यात्मक प्रोग्रामिंग भाषा है जो JavaScript में कंपाइल होती है।",
+    "clio.link": "<tag-1> <tag-2>Clio आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Clio दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें<\/tag-6> <\/tag-5>",
+    "clio.name": "Clio",
+    "clojurescript.desc": "ClojureScript <tag-1>Clojure<\/tag-1> के लिए एक कंपाइलर है जो JavaScript को लक्षित करता है। <tag-2><\/tag-2>LiveCodes में, यह ब्राउज़र में <tag-3>Cherry<\/tag-3> का उपयोग करके चलता है।",
+    "clojurescript.link": "<tag-1> <tag-2>ClojureScript आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Clojure आधिकारिक वेबसाइट<\/tag-4> <\/tag-3> <tag-5> <tag-6>Cherry रेपो<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=clojure<\/tag-8> <\/tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण<\/tag-10> <\/tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें<\/tag-12> <\/tag-11>",
+    "clojurescript.name": "ClojureScript (CLJS)",
+    "coffeescript.desc": "सरल जावास्क्रिप्ट।",
+    "coffeescript.link": "<tag-1> <tag-2>CoffeeScript आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>X को Y मिनटों में सीखें, जहां X=coffeescript<\/tag-4> <\/tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें<\/tag-6> <\/tag-5>",
+    "coffeescript.name": "CoffeeScript",
+    "commonlisp.desc": "JSCL (Common Lisp से बूटस्ट्रैप किया गया एक Lisp-to-Javascript कंपाइलर) का उपयोग करके Javascript पर एक Common Lisp कार्यान्वयन।",
+    "commonlisp.link": "<tag-1> <tag-2>Common-Lisp.net<\/tag-2> <\/tag-1> <tag-3> <tag-4>JSCL प्रोजेक्ट<\/tag-4> <\/tag-3> <tag-5> <tag-6>Common Lisp संसाधन<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Common Lisp<\/tag-8> <\/tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें<\/tag-10> <\/tag-9>",
+    "commonlisp.name": "Common Lisp",
+    "cpp.desc1": "JSCPP (JavaScript में लिखा गया एक सरल C++ इंटरप्रेटर) का उपयोग करके C++ समर्थन।",
+    "cpp.desc2": "यह C++ का पूर्ण कार्यान्वयन नहीं है। कृपया विवरण के लिए <tag-1>JSCPP दस्तावेज़ीकरण<\/tag-1> देखें।",
+    "cpp.link": "<tag-1> <tag-2>मानक C++ फाउंडेशन<\/tag-2> <\/tag-1> <tag-3> <tag-4>JSCPP<\/tag-4> <\/tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=C++<\/tag-6> <\/tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें<\/tag-8> <\/tag-7>",
+    "cpp.name": "C++",
+    "cppWasm.desc": "<tag-2>polylang.io<\/tag-2> द्वारा अनुकूलित <tag-1>wasm-clang<\/tag-1> का उपयोग करके WebAssembly पर चलने वाला Clang C\/C++ कंपाइलर।",
+    "cppWasm.link": "<tag-1> <tag-2>मानक C++ फाउंडेशन<\/tag-2> <\/tag-1> <tag-3> <tag-4>Clang आधिकारिक वेबसाइट<\/tag-4> <\/tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=C++<\/tag-6> <\/tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें<\/tag-8> <\/tag-7>",
+    "cppWasm.name": "C\/C++ (Wasm)",
+    "diagrams.desc1": "(प्रायोगिक)",
+    "diagrams.desc2": "कोड के रूप में आरेख। समर्थन करता है:",
+    "diagrams.desc3": "<tag-1> <tag-2>Cytoscape<\/tag-2> <\/tag-1> <tag-3> <tag-4>ELK<\/tag-4> (<tag-5>elkjs<\/tag-5> का उपयोग करके) <\/tag-3> <tag-6> <tag-7>Gnuplot<\/tag-7> (<tag-8>gnuplot-JS<\/tag-8> का उपयोग करके) <\/tag-6> <tag-9> <tag-10>Graphviz<\/tag-10> (<tag-11>@hpcc-js\/wasm<\/tag-11> का उपयोग करके) <\/tag-9> <tag-12> <tag-13>Mermaid<\/tag-13> <\/tag-12> <tag-14> <tag-15>Nomnoml<\/tag-15> <\/tag-14> <tag-16> <tag-17>Pintora<\/tag-17> <\/tag-16> <tag-18> <tag-19>Plotly<\/tag-19> <\/tag-18> <tag-20> <tag-21>Svgbob<\/tag-21> <\/tag-20> <tag-22> <tag-23>Vega<\/tag-23> <\/tag-22> <tag-24> <tag-25>VegaLite<\/tag-25> <\/tag-24> <tag-26> <tag-27>WaveDrom<\/tag-27> <\/tag-26>",
+    "diagrams.link": "<tag-1> <tag-2>स्टार्टर टेम्पलेट लोड करें<\/tag-2> <\/tag-1> <tag-3> <tag-4>LiveCodes दस्तावेज़ीकरण<\/tag-4> <\/tag-3>",
+    "diagrams.name": "आरेख",
+    "dot.desc": "Node.js और ब्राउज़रों के लिए सबसे तेज़ + संक्षिप्त जावास्क्रिप्ट टेम्पलेट इंजन।",
+    "dot.link": "<tag-1> <tag-2>आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>LiveCodes दस्तावेज़ीकरण<\/tag-4> <\/tag-3>",
+    "dot.name": "doT.js",
+    "ejs.desc": "एम्बेडेड जावास्क्रिप्ट टेम्प्लेटिंग।",
+    "ejs.link": "<tag-1><tag-2>आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>LiveCodes दस्तावेज़ीकरण<\/tag-4> <\/tag-3>",
+    "ejs.name": "EJS",
+    "eta.desc": "Node, Deno, और ब्राउज़र के लिए एम्बेडेड JS टेम्पलेट इंजन। हल्का, तेज़, और प्लगेबल। TypeScript में लिखा गया।",
+    "eta.link": "<tag-1><tag-2>आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण<\/tag-6> <\/tag-5>",
+    "eta.name": "Eta",
+    "fennel.desc": "Fennel एक प्रोग्रामिंग भाषा है जो Lua की गति, सरलता, और पहुंच को लिस्प सिंटैक्स और मैक्रो सिस्टम की लचीलेपन के साथ जोड़ती है।",
+    "fennel.link": "<tag-1> <tag-2>Fennel आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Fennel के साथ शुरुआत करना<\/tag-4> <\/tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण<\/tag-6> <\/tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें<\/tag-8> <\/tag-7>",
+    "fennel.name": "Fennel",
+    "flow.desc": "Flow जावास्क्रिप्ट के लिए एक स्थैतिक टाइप चेकर है।",
+    "flow.link": "<tag-1> <tag-2>Flow आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Flow दस्तावेज़ीकरण<\/tag-4> <\/tag-3>",
+    "flow.name": "Flow",
+    "gleam.desc1": "Gleam एक मित्रवत भाषा है जो स्केलेबल टाइप-सेफ सिस्टम बनाने के लिए है!",
+    "gleam.desc2": "Gleam एक स्थैतिक रूप से टाइप की गई कार्यात्मक प्रोग्रामिंग भाषा है, जो Erlang या JavaScript में कंपाइल होती है।",
+    "gleam.link": "<tag-1><tag-2>Gleam वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>Gleam दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>Gleam भाषा टूर<\/tag-6> <\/tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें<\/tag-8> <\/tag-7>",
+    "gleam.name": "Gleam",
+    "go.desc1": "Go (Golang) एक ओपन सोर्स प्रोग्रामिंग भाषा है जो सरल, विश्वसनीय और कुशल सॉफ्टवेयर बनाना आसान बनाती है।",
+    "go.desc2": "यहाँ, यह GopherJS का उपयोग करके JavaScript में कंपाइल किया जाता है।",
+    "go.link": "<tag-1><tag-2>Go वेबसाइट<\/tag-2><\/tag-1> <tag-3><tag-4>Go दस्तावेज़ीकरण<\/tag-4><\/tag-3> <tag-5> <tag-6>GopherJS रेपो<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Go<\/tag-8> <\/tag-7> <tag-9><tag-10>स्टार्टर टेम्पलेट लोड करें<\/tag-10><\/tag-9>",
+    "go.name": "Go",
+    "haml.desc": "क्लाइंटसाइड-haml-js का उपयोग करके क्लाइंट साइड जावास्क्रिप्ट व्यू टेम्प्लेट्स के लिए Haml कंपाइलर।",
+    "haml.link": "<tag-1><tag-2>Haml आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>Haml दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>clientside-haml-js GitHub रेपो<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=haml<\/tag-8> <\/tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण<\/tag-10> <\/tag-9>",
+    "haml.name": "Haml",
+    "handlebars.desc": "स्टेरॉयड्स पर न्यूनतम टेम्प्लेटिंग।",
+    "handlebars.link": "<tag-1><tag-2>आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>LiveCodes दस्तावेज़ीकरण<\/tag-4> <\/tag-3>",
+    "handlebars.name": "Handlebars",
+    "imba.desc": "मित्रवत फुल-स्टैक भाषा।",
+    "imba.link": "<tag-1><tag-2>आधिकारिक वेबसाइट<\/tag-2><\/tag-1>",
+    "imba.name": "Imba",
+    "jsx.desc": "LiveCodes में JSX को TypeScript कंपाइलर का उपयोग करके JavaScript में कंपाइल किया जाता है। डिफ़ॉल्ट रूप से यह JSX रनटाइम के रूप में React का उपयोग करता है।",
+    "jsx.link": "<tag-1> <tag-2>React आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>React दस्तावेज़ीकरण में JSX<\/tag-4> <\/tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण<\/tag-6> <\/tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें<\/tag-8> <\/tag-7>",
+    "jsx.name": "JSX",
+    "julia.desc1": "(LiveCodes में Julia भाषा समर्थन अभी भी प्रयोगात्मक है)",
+    "julia.desc2": "<tag-2>polylang.io<\/tag-2> द्वारा अनुकूलित <tag-1>julia-wasm<\/tag-1> का उपयोग करके WASM पर चलने वाला Julia कंपाइलर और Julia Base।",
+    "julia.link": "<tag-1> <tag-2>Julia आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Julia दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=Julia<\/tag-6> <\/tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें<\/tag-8> <\/tag-7>",
+    "julia.name": "Julia",
+    "less.desc": "यह CSS है, बस थोड़ा और के साथ।",
+    "less.link": "<tag-1><tag-2>Less आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>X को Y मिनटों में सीखें, जहां X=less<\/tag-4> <\/tag-3>",
+    "less.name": "Less",
+    "liquid.desc": "एक सरल, अभिव्यंजक और सुरक्षित टेम्पलेट इंजन।",
+    "liquid.link": "<tag-1> <tag-2>LiquidJS आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>LiquidJS दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण<\/tag-6> <\/tag-5>",
+    "liquid.name": "LiquidJS",
+    "livescript.desc": "एक भाषा जो JavaScript में कंपाइल होती है।",
+    "livescript.link": "<tag-1> <tag-2>LiveScript आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>X को Y मिनटों में सीखें, जहां X=LiveScript<\/tag-4> <\/tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें<\/tag-6> <\/tag-5>",
+    "livescript.name": "LiveScript",
+    "lua.desc": "fengari-web का उपयोग करके ब्राउज़र में चलने वाला Lua।",
+    "lua.link": "<tag-1><tag-2>Lua आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>Lua दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>Fengari आधिकारिक वेबसाइट<\/tag-6> <\/tag-5> <tag-7> <tag-8>fengari-web GitHub रेपो<\/tag-8> <\/tag-7> <tag-9> <tag-10>X को Y मिनटों में सीखें, जहां X=Lua<\/tag-10> <\/tag-9> <tag-11> <tag-12>LiveCodes दस्तावेज़ीकरण<\/tag-12> <\/tag-11> <tag-13><tag-14>स्टार्टर टेम्पलेट लोड करें<\/tag-14><\/tag-13>",
+    "lua.name": "Lua",
+    "luaWasm.desc": "Wasmoon का उपयोग करके ब्राउज़र में चलने वाला Lua, जो WebAssembly के साथ बनाया गया JS बाइंडिंग्स के साथ एक वास्तविक lua 5.4 VM है।",
+    "luaWasm.link": "<tag-1><tag-2>Lua आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>Lua दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>Wasmoon GitHub रेपो<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Lua<\/tag-8> <\/tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण<\/tag-10> <\/tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें<\/tag-12> <\/tag-11>",
+    "luaWasm.name": "Lua (Wasm)",
+    "malina.desc": "Svelte से प्रेरित फ्रंटएंड कंपाइलर।",
+    "malina.link": "<tag-1> <tag-2>Malina.js रेपो<\/tag-2> <\/tag-1> <tag-3> <tag-4>Malina.js दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें<\/tag-6> <\/tag-5>",
+    "malina.name": "Malina.js",
+    "markdown.desc": "Marked का उपयोग करके HTML में संकलित Markdown।",
+    "markdown.link": "<tag-1> <tag-2>Markdown आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Marked दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=markdown<\/tag-6> <\/tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें<\/tag-8> <\/tag-7>",
+    "markdown.name": "Markdown",
+    "mdx.desc": "कंपोनेंट युग के लिए Markdown। <tag-1><\/tag-1>MDX आपको अपने Markdown दस्तावेज़ों में सहजता से JSX लिखने की अनुमति देता है।",
+    "mdx.link": "<tag-1><tag-2>MDX दस्तावेज़ीकरण<\/tag-2><\/tag-1> <tag-3><tag-4>स्टार्टर टेम्पलेट लोड करें<\/tag-4><\/tag-3>",
+    "mdx.name": "MDX",
+    "mjml.desc": "MJML एक मार्कअप भाषा है जिसे प्रतिक्रियाशील ईमेल को कोड करने की पीड़ा को कम करने के लिए डिज़ाइन किया गया है।",
+    "mjml.link": "<tag-1><tag-2>MJML आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>MJML दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>MJML आधिकारिक टेम्पलेट्स<\/tag-6> <\/tag-5> <tag-7> <tag-8>LiveCodes दस्तावेज़ीकरण<\/tag-8> <\/tag-7>",
+    "mjml.name": "MJML",
+    "mustache.desc": "तर्करहित टेम्पलेट्स।",
+    "mustache.link": "<tag-1> <tag-2>आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>mustache(5) मैनुअल<\/tag-4> <\/tag-3> <tag-5> <tag-6>JavaScript कार्यान्वयन<\/tag-6> <\/tag-5> <tag-7> <tag-8>LiveCodes दस्तावेज़ीकरण<\/tag-8> <\/tag-7>",
+    "mustache.name": "Mustache",
+    "nunjucks.desc": "JavaScript के लिए एक समृद्ध और शक्तिशाली टेम्प्लेटिंग भाषा। Nunjucks अनिवार्य रूप से <tag-1>jinja2<\/tag-1> का एक पोर्ट है।",
+    "nunjucks.link": "<tag-1> <tag-2>आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>LiveCodes दस्तावेज़ीकरण<\/tag-4> <\/tag-3>",
+    "nunjucks.name": "Nunjucks",
+    "ocaml.desc1": "OCaml एक औद्योगिक-स्तरीय प्रोग्रामिंग भाषा है जो कार्यात्मक, आदेशात्मक और ऑब्जेक्ट-उन्मुख शैलियों का समर्थन करती है।",
+    "ocaml.desc2": "यहाँ OCaml को JavaScript में कंपाइल करने के लिए ReScript कंपाइलर का उपयोग किया जाता है।",
+    "ocaml.link": "<tag-1><tag-2>OCaml वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>OCaml दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>ReScript वेबसाइट<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=OCaml<\/tag-8> <\/tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें<\/tag-10> <\/tag-9>",
+    "ocaml.name": "OCaml",
+    "perl.desc": "Perlito का उपयोग करके ब्राउज़र में चलने वाला Perl।",
+    "perl.link": "<tag-1> <tag-2>Perl आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Perl दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>Perlito5 रीडमी<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=perl<\/tag-8> <\/tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें<\/tag-10> <\/tag-9>",
+    "perl.name": "Perl",
+    "php.desc": "Uniter का उपयोग करके ब्राउज़र में चलने वाला PHP।",
+    "php.link": "<tag-1><tag-2>PHP आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>PHP दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>Uniter GitHub रेपो<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=PHP<\/tag-8> <\/tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण<\/tag-10> <\/tag-9> <tag-11><tag-12>स्टार्टर टेम्पलेट लोड करें<\/tag-12><\/tag-11>",
+    "php.name": "PHP",
+    "phpWasm.desc": "php-wasm का उपयोग करके WebAssembly द्वारा संचालित ब्राउज़र में PHP।",
+    "phpWasm.link": "<tag-1><tag-2>PHP आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>PHP दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>php-wasm GitHub रेपो<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=PHP<\/tag-8> <\/tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण<\/tag-10> <\/tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें<\/tag-12> <\/tag-11>",
+    "phpWasm.name": "PHP (Wasm)",
+    "postgresql.desc": "PGlite का उपयोग करके WASM के रूप में पैकेज किया गया PostgreSQL",
+    "postgresql.link": "<tag-1> <tag-2>PostgreSQL आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>PostgreSQL दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>PGlite GitHub रेपो<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=SQL<\/tag-8> <\/tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें<\/tag-10> <\/tag-9>",
+    "postgresql.name": "PostgreSQL",
+    "prolog.desc": "JavaScript में एक ओपन सोर्स Prolog इंटरप्रेटर।",
+    "prolog.link": "<tag-1> <tag-2>Tau Prolog आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Tau Prolog दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>SWI-Prolog<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Prolog<\/tag-8> <\/tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें<\/tag-10> <\/tag-9>",
+    "prolog.name": "Tau Prolog",
+    "pug.desc": "मजबूत, सुंदर, सुविधा संपन्न टेम्पलेट इंजन।",
+    "pug.link": "<tag-1> <tag-2>Pug दस्तावेज़ीकरण<\/tag-2> <\/tag-1> <tag-3> <tag-4>X को Y मिनटों में सीखें, जहां X=Pug<\/tag-4> <\/tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण<\/tag-6> <\/tag-5>",
+    "pug.name": "Pug",
+    "python.desc": "Brython का उपयोग करके ब्राउज़र में चलने वाला Python।",
+    "python.link": "<tag-1> <tag-2>Python आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Python दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>Brython दस्तावेज़ीकरण<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Python<\/tag-8> <\/tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण<\/tag-10> <\/tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें<\/tag-12> <\/tag-11>",
+    "python.name": "Python",
+    "pythonWasm.desc1": "Pyodide का उपयोग करके WebAssembly में कंपाइल किए गए वैज्ञानिक स्टैक के साथ Python।",
+    "pythonWasm.desc2": "Pyodide NumPy, Pandas, Matplotlib, SciPy, scikit-learn और बहुत कुछ सहित Python वैज्ञानिक स्टैक का उपयोग करने की अनुमति देता है। इसके अतिरिक्त PyPi से शुद्ध Python व्हील्स को इंस्टॉल करना संभव है।",
+    "pythonWasm.link": "<tag-1> <tag-2>Python आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Python दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5><tag-6>Pyodide दस्तावेज़ीकरण<\/tag-6><\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=Python<\/tag-8> <\/tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण<\/tag-10> <\/tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें<\/tag-12> <\/tag-11>",
+    "pythonWasm.name": "Python (Wasm)",
+    "r.desc": "WebR का उपयोग करके ब्राउज़र में चलने वाला R।",
+    "r.link": "<tag-1> <tag-2>R प्रोजेक्ट की आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>R मैनुअल्स<\/tag-4> <\/tag-3> <tag-5> <tag-6>डेटा विज्ञान के लिए R (2e)<\/tag-6> <\/tag-5> <tag-7> <tag-8>WebR दस्तावेज़ीकरण<\/tag-8> <\/tag-7> <tag-9> <tag-10>X को Y मिनट में सीखें, जहाँ X=R<\/tag-10> <\/tag-9> <tag-11> <tag-12>LiveCodes दस्तावेज़ीकरण<\/tag-12> <\/tag-11> <tag-13> <tag-14>स्टार्टर टेम्पलेट लोड करें<\/tag-14> <\/tag-13>",
+    "r.name": "R",
+    "reactNative.desc": "React Native for Web, React Native के कंपोनेंट्स और API का एक सुलभ कार्यान्वयन है जो React DOM के साथ अंतरसंचालनीय है।",
+    "reactNative.link": "<tag-1> <tag-2>React की आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>React Native वेबसाइट<\/tag-4> <\/tag-3> <tag-5> <tag-6>React Native for Web वेबसाइट<\/tag-6> <\/tag-5> <tag-7> <tag-8>React Native दस्तावेज़ीकरण<\/tag-8> <\/tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण<\/tag-10> <\/tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें<\/tag-12> <\/tag-11>",
+    "reactNative.name": "React Native for Web",
+    "reactNativeTsx.desc": "React Native for Web, React Native के कंपोनेंट्स और API का एक सुलभ कार्यान्वयन है जो React DOM के साथ अंतरसंचालनीय है।",
+    "reactNativeTsx.link": "<tag-1> <tag-2>React की आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>React Native वेबसाइट<\/tag-4> <\/tag-3> <tag-5> <tag-6>React Native for Web वेबसाइट<\/tag-6> <\/tag-5> <tag-7> <tag-8>React Native दस्तावेज़ीकरण<\/tag-8> <\/tag-7> <tag-9> <tag-10>TypeScript वेबसाइट<\/tag-10> <\/tag-9> <tag-11> <tag-12>TypeScript दस्तावेज़ीकरण<\/tag-12> <\/tag-11> <tag-13> <tag-14>LiveCodes दस्तावेज़ीकरण<\/tag-14> <\/tag-13> <tag-15> <tag-16>स्टार्टर टेम्पलेट लोड करें (JSX)<\/tag-16> <\/tag-15>",
+    "reactNativeTsx.name": "React Native for Web (TypeScript के साथ)",
+    "reason.desc1": "Reason आपको JavaScript और OCaml दोनों पारिस्थितिकी तंत्रों का लाभ उठाते हुए सरल, तेज़ और गुणवत्तापूर्ण प्रकार-सुरक्षित कोड लिखने देता है।",
+    "reason.desc2": "यहाँ Reason को JavaScript में कंपाइल करने के लिए ReScript कंपाइलर का उपयोग किया जाता है।",
+    "reason.link": "<tag-1><tag-2>Reason वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>Reason दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>ReasonReact<\/tag-6> <\/tag-5> <tag-7> <tag-8>ReScript वेबसाइट<\/tag-8> <\/tag-7> <tag-9> <tag-10>X को Y मिनट में सीखें, जहाँ X=reason<\/tag-10> <\/tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें<\/tag-12> <\/tag-11>",
+    "reason.name": "Reason",
+    "rescript.desc": "ReScript एक मजबूती से टाइप की गई भाषा है जो कुशल और मानव-पठनीय JavaScript में कंपाइल होती है।",
+    "rescript.link": "<tag-1> <tag-2>ReScript वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>ReScript \/ React<\/tag-4> <\/tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें<\/tag-6> <\/tag-5>",
+    "rescript.name": "ReScript",
+    "richtext.desc1": "Quill का उपयोग करके:",
+    "richtext.desc2": "आपका शक्तिशाली रिच टेक्स्ट एडिटर।",
+    "richtext.link": "<tag-1> <tag-2>Quill की आधिकारिक वेबसाइट<\/tag-2> <\/tag-1>",
+    "richtext.name": "रिच टेक्स्ट एडिटर",
+    "riot.desc": "सरल और सुंदर कंपोनेंट-आधारित UI लाइब्रेरी।",
+    "riot.link": "<tag-1> <tag-2>Riot.js की आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Riot.js दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें<\/tag-6> <\/tag-5>",
+    "riot.name": "Riot.js",
+    "ruby.desc": "Opal का उपयोग करके ब्राउज़र में चलने वाला Ruby।",
+    "ruby.link": "<tag-1> <tag-2>Ruby की आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Ruby दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5><tag-6>Opal की आधिकारिक वेबसाइट<\/tag-6><\/tag-5> <tag-7> <tag-8>Opal मानक पुस्तकालय CDN<\/tag-8> <\/tag-7> <tag-9> <tag-10>X को Y मिनट में सीखें, जहां X=ruby<\/tag-10> <\/tag-9> <tag-11> <tag-12>LiveCodes दस्तावेज़ीकरण<\/tag-12> <\/tag-11> <tag-13> <tag-14>स्टार्टर टेम्पलेट लोड करें<\/tag-14> <\/tag-13>",
+    "ruby.name": "Ruby",
+    "rubyWasm.desc": "ruby-wasm (CRuby के WebAssembly पोर्ट्स का एक संग्रह) का उपयोग करके ब्राउज़र में चलने वाला Ruby।",
+    "rubyWasm.link": "<tag-1> <tag-2>Ruby की आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Ruby दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>ruby.wasm वेबसाइट<\/tag-6> <\/tag-5> <tag-7><tag-8>CRuby<\/tag-8><\/tag-7> <tag-9> <tag-10>X को Y मिनट में सीखें, जहां X=ruby<\/tag-10> <\/tag-9> <tag-11> <tag-12>LiveCodes दस्तावेज़ीकरण<\/tag-12> <\/tag-11> <tag-13> <tag-14>स्टार्टर टेम्पलेट लोड करें<\/tag-14> <\/tag-13>",
+    "rubyWasm.name": "Ruby (WASM)",
+    "sass.desc": "वाक्यरचनात्मक रूप से अद्भुत स्टाइल शीट्स।",
+    "sass.link": "<tag-1> <tag-2>Sass की आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Sass दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>Sass (इंडेंटेड) वाक्यरचना<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनट में सीखें, जहां X=sass<\/tag-8> <\/tag-7>",
+    "sass.name": "Sass",
+    "scheme.desc": "biwascheme का उपयोग करके ब्राउज़र में चलने वाला Scheme।",
+    "scheme.link": "<tag-1> <tag-2>Scheme प्रोग्रामिंग भाषा<\/tag-2> <\/tag-1> <tag-3> <tag-4>BiwaScheme की आधिकारिक वेबसाइट<\/tag-4> <\/tag-3> <tag-5> <tag-6>BiwaScheme संदर्भ<\/tag-6> <\/tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें<\/tag-8> <\/tag-7>",
+    "scheme.name": "Scheme",
+    "scss.desc": "वाक्यरचनात्मक रूप से अद्भुत स्टाइल शीट्स।",
+    "scss.link": "<tag-1> <tag-2>Sass की आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Sass दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>SCSS वाक्यरचना<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनट में सीखें, जहां X=sass<\/tag-8> <\/tag-7>",
+    "scss.name": "SCSS",
+    "solid.desc": "उपयोगकर्ता इंटरफेस बनाने के लिए एक घोषणात्मक, कुशल और लचीली JavaScript लाइब्रेरी।",
+    "solid.link": "<tag-1><tag-2>आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3><tag-4>दस्तावेज़ीकरण<\/tag-4><\/tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण<\/tag-6> <\/tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें (TSX)<\/tag-8> <\/tag-7>",
+    "solid.name": "Solid",
+    "solid.tsx.desc": "उपयोगकर्ता इंटरफेस बनाने के लिए एक घोषणात्मक, कुशल और लचीली JavaScript लाइब्रेरी।",
+    "solid.tsx.link": "<tag-1><tag-2>आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>Solid दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>TypeScript वेबसाइट<\/tag-6> <\/tag-5> <tag-7> <tag-8>TypeScript दस्तावेज़ीकरण<\/tag-8> <\/tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण<\/tag-10> <\/tag-9> <tag-11> <tag-12>स्टार्टर टेम्पलेट लोड करें<\/tag-12> <\/tag-11>",
+    "solid.tsx.name": "Solid (TypeScript के साथ)",
+    "sql.desc": "SQL.js का उपयोग करके JavaScript में संकलित SQLite",
+    "sql.link": "<tag-1> <tag-2>SQLite आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>SQLite सिंटैक्स दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>SQL.js आधिकारिक वेबसाइट<\/tag-6> <\/tag-5> <tag-7> <tag-8>X को Y मिनटों में सीखें, जहां X=SQL<\/tag-8> <\/tag-7> <tag-9><tag-10>स्टार्टर टेम्पलेट लोड करें<\/tag-10><\/tag-9>",
+    "sql.name": "SQLite",
+    "stencil.desc": "वेब कंपोनेंट्स और उच्च प्रदर्शन वाले वेब ऐप्स के लिए एक कंपाइलर।",
+    "stencil.link": "<tag-1> <tag-2>Stencil आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Stencil दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें<\/tag-6> <\/tag-5>",
+    "stencil.name": "Stencil",
+    "styleProcessors.link": "<tag-1> <tag-2>Tailwind CSS<\/tag-2> <\/tag-1> <tag-3> <tag-4>Windi CSS<\/tag-4> <\/tag-3> <tag-5> <tag-6>UnoCSS<\/tag-6> <\/tag-5> <tag-7> <tag-8>Lightning CSS<\/tag-8> <\/tag-7> <tag-9> <tag-10>PostCSS<\/tag-10> प्लगइन्स: <tag-11> <tag-12> <tag-13>Autoprefixer<\/tag-13> <\/tag-12> <tag-14> <tag-15>postcss-preset-env<\/tag-15> <\/tag-14> <tag-16> <tag-17>postcss-import-url<\/tag-17> <\/tag-16> <tag-18> <tag-19>postcss-modules<\/tag-19> <\/tag-18> <\/tag-11> <\/tag-9>",
+    "styleProcessors.name": "CSS फ्रेमवर्क और प्रोसेसर",
+    "stylis.desc": "हल्का css प्रीप्रोसेसर।",
+    "stylis.link": "<tag-1> <tag-2>Stylis आधिकारिक वेबसाइट<\/tag-2> <\/tag-1>",
+    "stylis.name": "Stylis",
+    "stylus.desc": "अभिव्यंजक, गतिशील, मजबूत CSS।",
+    "stylus.link": "<tag-1> <tag-2>Stylus आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>X को Y मिनटों में सीखें, जहां X=stylus<\/tag-4> <\/tag-3>",
+    "stylus.name": "Stylus",
+    "sucrase.desc": "आधुनिक JS रनटाइम को लक्षित कर सकने के लिए Babel का सुपर-फास्ट विकल्प।",
+    "sucrase.link": "<tag-1> <tag-2>Sucrase आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Sucrase GitHub रेपो<\/tag-4> <\/tag-3> <tag-5> <tag-6>LiveCodes दस्तावेज़ीकरण<\/tag-6> <\/tag-5>",
+    "sucrase.name": "Sucrase",
+    "svelte.desc": "साइबरनेटिक रूप से उन्नत वेब ऐप्स।",
+    "svelte.link": "<tag-1> <tag-2>Svelte आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Svelte दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>स्टार्टर टेम्पलेट लोड करें<\/tag-6> <\/tag-5>",
+    "svelte.name": "Svelte",
+    "tcl.desc": "<tag-1>wacl<\/tag-1> का उपयोग करके ब्राउज़र में चलने वाला Tcl।",
+    "tcl.link": "<tag-1> <tag-2>Tcl आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>wacl रेपो<\/tag-4> <\/tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=Tcl<\/tag-6> <\/tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें<\/tag-8> <\/tag-7>",
+    "tcl.name": "Tcl (टूल कमांड लैंग्वेज)",
+    "teal.desc": "Lua की एक टाइप की गई बोली।",
+    "teal.link": "<tag-1> <tag-2>Teal GitHub रेपो<\/tag-2> <\/tag-1> <tag-3> <tag-4>Teal दस्तावेज़<\/tag-4> <\/tag-3> <tag-5> <tag-6>Teal ट्यूटोरियल<\/tag-6> <\/tag-5> <tag-7> <tag-8>LiveCodes दस्तावेज़ीकरण<\/tag-8> <\/tag-7> <tag-9> <tag-10>स्टार्टर टेम्पलेट लोड करें<\/tag-10> <\/tag-9>",
+    "teal.name": "Teal",
+    "tsx.desc": "JSX में TypeScript। TSX को LiveCodes में TypeScript कंपाइलर का उपयोग करके JavaScript में कंपाइल किया जाता है। डिफ़ॉल्ट रूप से यह JSX रनटाइम के रूप में React का उपयोग करता है।",
+    "tsx.link": "<tag-1> <tag-2>React आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>React दस्तावेज़ीकरण में JSX<\/tag-4> <\/tag-3> <tag-5> <tag-6>Typescript दस्तावेज़ीकरण<\/tag-6> <\/tag-5> <tag-7> <tag-8>LiveCodes दस्तावेज़ीकरण<\/tag-8> <\/tag-7>",
+    "tsx.name": "TSX",
+    "twig.desc": "<tag-2>Twig.js<\/tag-2> द्वारा PHP टेम्प्लेटिंग भाषा <tag-1>Twig<\/tag-1> का एक JavaScript कार्यान्वयन।",
+    "twig.link": "<tag-1> <tag-2>Twig आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Twig दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>Twig.js रेपो<\/tag-6> <\/tag-5> <tag-7> <tag-8>Twig.js दस्तावेज़ीकरण<\/tag-8> <\/tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण<\/tag-10> <\/tag-9>",
+    "twig.name": "Twig",
+    "typescript.desc": "JavaScript का एक टाइप किया गया सुपरसेट।",
+    "typescript.link": "<tag-1> <tag-2>आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>TypeScript दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>X को Y मिनटों में सीखें, जहां X=TypeScript<\/tag-6> <\/tag-5> <tag-7> <tag-8>स्टार्टर टेम्पलेट लोड करें<\/tag-8> <\/tag-7>",
+    "typescript.name": "TypeScript",
+    "vue.link": "<tag-1> <tag-2>Vue.js v3 आधिकारिक वेबसाइट<\/tag-2> <\/tag-1> <tag-3> <tag-4>Vue3 दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>Vue3 सिंगल फाइल कंपोनेंट्स<\/tag-6> <\/tag-5> <tag-7> <tag-8>LiveCodes दस्तावेज़ीकरण<\/tag-8> <\/tag-7> <tag-9><tag-10>स्टार्टर टेम्पलेट लोड करें<\/tag-10><\/tag-9>",
+    "vue.name": "Vue3 सिंगल फाइल कंपोनेंट्स",
+    "vue2.desc": "vue3-sfc-loader का उपयोग करके लोड किया गया।",
+    "vue2.link": "<tag-1><tag-2>Vue.js आधिकारिक वेबसाइट<\/tag-2><\/tag-1> <tag-3> <tag-4>Vue2 दस्तावेज़ीकरण<\/tag-4> <\/tag-3> <tag-5> <tag-6>Vue2 सिंगल फाइल कंपोनेंट्स<\/tag-6> <\/tag-5> <tag-7> <tag-8>vue3-sfc-loader GitHub रेपो<\/tag-8> <\/tag-7> <tag-9> <tag-10>LiveCodes दस्तावेज़ीकरण<\/tag-10> <\/tag-9>",
+    "vue2.name": "Vue2 सिंगल फाइल कंपोनेंट्स",
+    "wat.desc1": "WebAssembly (wasm) बाइनरी फॉर्मेट का निम्न-स्तरीय पाठ्य प्रतिनिधित्व।",
+    "wat.desc2": "इसे wabt.js का उपयोग करके wasm में परिवर्तित किया जाता है।",
+    "wat.link": "<tag-1><tag-2>WebAssembly.org<\/tag-2><\/tag-1> <tag-3> <tag-4>WebAssembly टेक्स्ट स्पेक्स<\/tag-4> <\/tag-3> <tag-5> <tag-6>MDN पर WebAssembly<\/tag-6> <\/tag-5> <tag-7> <tag-8>WebAssembly टेक्स्ट फॉर्मेट को समझना<\/tag-8> <\/tag-7> <tag-9> <tag-10>wabt.js दस्तावेज़ीकरण<\/tag-10> <\/tag-9> <tag-11> <tag-12>X को Y मिनटों में सीखें, जहां X=WebAssembly<\/tag-12> <\/tag-11> <tag-13><tag-14>स्टार्टर टेम्पलेट लोड करें<\/tag-14><\/tag-13>",
+    "wat.name": "WebAssembly टेक्स्ट फॉर्मेट"
 }

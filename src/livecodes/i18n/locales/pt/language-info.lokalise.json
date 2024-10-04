@@ -1,950 +1,239 @@
 {
-  "artTemplate.desc": {
-    "notes": "",
-    "translation": "Mecanismo de modelagem JavaScript de alto desempenho."
-  },
-  "artTemplate.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://aui.github.io/art-template/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://aui.github.io/art-template/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do art-template</tag-2> </tag-1> <tag-3> <tag-4>Documentação do art-template</tag-4> </tag-3>"
-  },
-  "artTemplate.name": {
-    "notes": "",
-    "translation": "art-template"
-  },
-  "asciidoc.desc": {
-    "notes": "",
-    "translation": "AsciiDoc compilado para HTML usando Asciidoctor."
-  },
-  "asciidoc.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://asciidoc.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://asciidoctor.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://asciidoctor.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/asciidoc/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do AsciiDoc</tag-2> </tag-1> <tag-3> <tag-4>Site oficial do Asciidoctor</tag-4> </tag-3> <tag-5> <tag-6>Documentação do Asciidoctor</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=asciidoc</tag-8> </tag-7>"
-  },
-  "asciidoc.name": {
-    "notes": "",
-    "translation": "AsciiDoc"
-  },
-  "assemblyscript.desc": {
-    "notes": "",
-    "translation": "Uma linguagem semelhante ao TypeScript para WebAssembly."
-  },
-  "assemblyscript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.assemblyscript.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.assemblyscript.org/introduction.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=assemblyscript\" target=\"_parent\" data-template=\"assemblyscript\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do AssemblyScript</tag-2> </tag-1> <tag-3> <tag-4>Documentação do AssemblyScript</tag-4> </tag-3> <tag-5> <tag-6>Carregar modelo inicial</tag-6> </tag-5>"
-  },
-  "assemblyscript.name": {
-    "notes": "",
-    "translation": "AssemblyScript"
-  },
-  "astro.desc": {
-    "notes": "",
-    "translation": "Construa sites mais rápidos com menos Javascript do lado do cliente. (Ainda em Beta)"
-  },
-  "astro.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://astro.build/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://docs.astro.build/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=astro\" target=\"_parent\" data-template=\"astro\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Astro</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Astro</tag-4> </tag-3> <tag-5> <tag-6>Carregar modelo inicial</tag-6> </tag-5>"
-  },
-  "astro.name": {
-    "notes": "",
-    "translation": "Astro"
-  },
-  "babel.desc": {
-    "notes": "",
-    "translation": "O compilador JavaScript"
-  },
-  "babel.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://babeljs.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://babeljs.io/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial</tag-2></tag-1> <tag-3> <tag-4>Documentação do Babel</tag-4> </tag-3>"
-  },
-  "babel.name": {
-    "notes": "",
-    "translation": "Babel"
-  },
-  "bbcode.desc": {
-    "notes": "",
-    "translation": "BBCode (\"Bulletin Board Code\") é uma linguagem de marcação leve usada para formatar mensagens em muitos softwares de fóruns da Internet."
-  },
-  "bbcode.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.bbcode.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.phpbb.com/community/help/bbcode\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://en.wikipedia.org/wiki/BBCode\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>bbcode.org</tag-2></tag-1> <tag-3> <tag-4>Guia do BBCode</tag-4> </tag-3> <tag-5> <tag-6>BBCode na Wikipedia</tag-6> </tag-5>"
-  },
-  "bbcode.name": {
-    "notes": "",
-    "translation": "BBCode"
-  },
-  "blockly.desc": {
-    "notes": "",
-    "translation": "Uma biblioteca JavaScript para construir editores de programação visual."
-  },
-  "blockly.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://developers.google.com/blockly\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://developers.google.com/blockly/guides/overview\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://developers.google.com/blockly/reference/overview\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://google.github.io/blockly-samples/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=blockly\" target=\"_parent\" data-template=\"blockly\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial</tag-2> </tag-1> <tag-3> <tag-4>Guias</tag-4> </tag-3> <tag-5> <tag-6>Referência</tag-6> </tag-5> <tag-7> <tag-8>Exemplos</tag-8> </tag-7> <tag-9> <tag-10>Carregar modelo inicial</tag-10> </tag-9>"
-  },
-  "blockly.name": {
-    "notes": "",
-    "translation": "Blockly"
-  },
-  "civet.desc": {
-    "notes": "",
-    "translation": "Civet é uma linguagem de programação que compila para TypeScript ou JavaScript, permitindo que você use ferramentas existentes, mas habilite uma sintaxe concisa e poderosa."
-  },
-  "civet.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://civet.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://civet.dev/cheatsheet/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=civet\" target=\"_parent\" data-template=\"civet\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Civet</tag-2> </tag-1> <tag-3> <tag-4>Folha de dicas do Civet</tag-4> </tag-3> <tag-5> <tag-6>Carregar modelo inicial</tag-6> </tag-5>"
-  },
-  "civet.name": {
-    "notes": "",
-    "translation": "Civet"
-  },
-  "clio.desc": {
-    "notes": "",
-    "translation": "Clio é uma linguagem de programação funcional rápida e distribuída que compila para JavaScript."
-  },
-  "clio.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://clio-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://docs.clio-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=clio\" target=\"_parent\" data-template=\"clio\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Clio</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Clio</tag-4> </tag-3> <tag-5> <tag-6>Carregar modelo inicial</tag-6> </tag-5>"
-  },
-  "clio.name": {
-    "notes": "",
-    "translation": "Clio"
-  },
-  "clojurescript.desc": {
-    "notes": "### <tag-1> ###\n<a href=\"https://clojure.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<br  />\n\n### <tag-3> ###\n<a href=\"https://github.com/squint-cljs/cherry\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "ClojureScript é um compilador para <tag-1>Clojure</tag-1> que tem como alvo JavaScript. <tag-2></tag-2>No LiveCodes, ele é executado no navegador usando <tag-3>Cherry</tag-3>."
-  },
-  "clojurescript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://clojurescript.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://clojure.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/squint-cljs/cherry\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/clojure/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/clojurescript\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=clojurescript\" target=\"_parent\" data-template=\"clojurescript\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do ClojureScript</tag-2> </tag-1> <tag-3> <tag-4>Site oficial do Clojure</tag-4> </tag-3> <tag-5> <tag-6>Repositório do Cherry</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=clojure</tag-8> </tag-7> <tag-9> <tag-10>Documentação do LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Carregar modelo inicial</tag-12> </tag-11>"
-  },
-  "clojurescript.name": {
-    "notes": "",
-    "translation": "ClojureScript (CLJS)"
-  },
-  "coffeescript.desc": {
-    "notes": "",
-    "translation": "JavaScript sem frescura."
-  },
-  "coffeescript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://coffeescript.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/coffeescript/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=coffeescript\" target=\"_parent\" data-template=\"coffeescript\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do CoffeeScript</tag-2> </tag-1> <tag-3> <tag-4>Aprenda X em Y minutos, onde X=coffeescript</tag-4> </tag-3> <tag-5> <tag-6>Carregar modelo inicial</tag-6> </tag-5>"
-  },
-  "coffeescript.name": {
-    "notes": "",
-    "translation": "CoffeeScript"
-  },
-  "commonlisp.desc": {
-    "notes": "",
-    "translation": "Uma implementação de Common Lisp em Javascript usando JSCL (um compilador Lisp-para-Javascript inicializado a partir do Common Lisp)."
-  },
-  "commonlisp.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://common-lisp.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/jscl-project/jscl\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://common-lisp.net/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/common-lisp/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=commonlisp\" target=\"_parent\" data-template=\"commonlisp\" />\n\n",
-    "translation": "<tag-1> <tag-2>Common-Lisp.net</tag-2> </tag-1> <tag-3> <tag-4>Projeto JSCL</tag-4> </tag-3> <tag-5> <tag-6>Recursos do Common Lisp</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Common Lisp</tag-8> </tag-7> <tag-9> <tag-10>Carregar modelo inicial</tag-10> </tag-9>"
-  },
-  "commonlisp.name": {
-    "notes": "",
-    "translation": "Common Lisp"
-  },
-  "cpp.desc1": {
-    "notes": "",
-    "translation": "Suporte a C++ usando JSCPP (um interpretador C++ simples escrito em JavaScript)."
-  },
-  "cpp.desc2": {
-    "notes": "### <tag-1> ###\n<a href=\"https://github.com/felixhao28/JSCPP\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "Não é uma implementação completa de C++. Por favor, consulte a <tag-1>documentação do JSCPP</tag-1> para detalhes."
-  },
-  "cpp.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://isocpp.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/felixhao28/JSCPP\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/c++/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=cpp\" target=\"_parent\" data-template=\"cpp\" />\n\n",
-    "translation": "<tag-1> <tag-2>Fundação C++ Padrão</tag-2> </tag-1> <tag-3> <tag-4>JSCPP</tag-4> </tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=C++</tag-6> </tag-5> <tag-7> <tag-8>Carregar modelo inicial</tag-8> </tag-7>"
-  },
-  "cpp.name": {
-    "notes": "",
-    "translation": "C++"
-  },
-  "cppWasm.desc": {
-    "notes": "### <tag-1> ###\n<a href=\"https://github.com/binji/wasm-clang\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<a href=\"https://github.com/chris-koch-penn/polylang.io\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "Compilador Clang C/C++ rodando em WebAssembly, usando <tag-1>wasm-clang</tag-1> adaptado por <tag-2>polylang.io</tag-2>."
-  },
-  "cppWasm.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://isoclang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://clang.llvm.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/c++/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=cpp-wasm\" target=\"_parent\" data-template=\"cpp-wasm\" />\n\n",
-    "translation": "<tag-1> <tag-2>Fundação C++ Padrão</tag-2> </tag-1> <tag-3> <tag-4>Site oficial do Clang</tag-4> </tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=C++</tag-6> </tag-5> <tag-7> <tag-8>Carregar modelo inicial</tag-8> </tag-7>"
-  },
-  "cppWasm.name": {
-    "notes": "",
-    "translation": "C/C++ (Wasm)"
-  },
-  "diagrams.desc1": {
-    "notes": "",
-    "translation": "(Experimental)"
-  },
-  "diagrams.desc2": {
-    "notes": "",
-    "translation": "Diagramas como código. Suporta:"
-  },
-  "diagrams.desc3": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://js.cytoscape.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.eclipse.org/elk/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<a href=\"https://github.com/kieler/elkjs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-6> ###\n<li  />\n\n### <tag-7> ###\n<a href=\"http://www.gnuplot.info/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-8> ###\n<a href=\"https://github.com/chhu/gnuplot-JS\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://graphviz.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<a href=\"https://github.com/hpcc-systems/hpcc-js-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-12> ###\n<li  />\n\n### <tag-13> ###\n<a href=\"https://mermaid-js.github.io/mermaid/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-14> ###\n<li  />\n\n### <tag-15> ###\n<a href=\"https://nomnoml.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-16> ###\n<li  />\n\n### <tag-17> ###\n<a href=\"https://pintorajs.vercel.app/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-18> ###\n<li  />\n\n### <tag-19> ###\n<a href=\"https://plotly.com/graphing-libraries/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-20> ###\n<li  />\n\n### <tag-21> ###\n<a href=\"https://github.com/ivanceras/svgbob\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-22> ###\n<li  />\n\n### <tag-23> ###\n<a href=\"https://vega.github.io/vega/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-24> ###\n<li  />\n\n### <tag-25> ###\n<a href=\"https://vega.github.io/vega-lite/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-26> ###\n<li  />\n\n### <tag-27> ###\n<a href=\"https://wavedrom.com/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Cytoscape</tag-2> </tag-1> <tag-3> <tag-4>ELK</tag-4> (usando <tag-5>elkjs</tag-5>) </tag-3> <tag-6> <tag-7>Gnuplot</tag-7> (usando <tag-8>gnuplot-JS</tag-8>) </tag-6> <tag-9> <tag-10>Graphviz</tag-10> (usando <tag-11>@hpcc-js/wasm</tag-11>) </tag-9> <tag-12> <tag-13>Mermaid</tag-13> </tag-12> <tag-14> <tag-15>Nomnoml</tag-15> </tag-14> <tag-16> <tag-17>Pintora</tag-17> </tag-16> <tag-18> <tag-19>Plotly</tag-19> </tag-18> <tag-20> <tag-21>Svgbob</tag-21> </tag-20> <tag-22> <tag-23>Vega</tag-23> </tag-22> <tag-24> <tag-25>VegaLite</tag-25> </tag-24> <tag-26> <tag-27>WaveDrom</tag-27> </tag-26>"
-  },
-  "diagrams.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"?template=diagrams\" target=\"_parent\" data-template=\"diagrams\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/diagrams\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Carregar modelo inicial</tag-2> </tag-1> <tag-3> <tag-4>Documentação do LiveCodes</tag-4> </tag-3>"
-  },
-  "diagrams.name": {
-    "notes": "",
-    "translation": "Diagramas"
-  },
-  "dot.desc": {
-    "notes": "",
-    "translation": "O mecanismo de modelo javascript mais rápido + conciso para Node.js e navegadores."
-  },
-  "dot.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://olado.github.io/doT/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/dot\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial</tag-2> </tag-1> <tag-3> <tag-4>Documentação do LiveCodes</tag-4> </tag-3>"
-  },
-  "dot.name": {
-    "notes": "",
-    "translation": "doT.js"
-  },
-  "ejs.desc": {
-    "notes": "",
-    "translation": "Modelagem JavaScript incorporada."
-  },
-  "ejs.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://ejs.co/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/ejs\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial</tag-2></tag-1> <tag-3> <tag-4>Documentação do LiveCodes</tag-4> </tag-3>"
-  },
-  "ejs.name": {
-    "notes": "",
-    "translation": "EJS"
-  },
-  "eta.desc": {
-    "notes": "",
-    "translation": "Motor de modelo JS incorporado para Node, Deno e o navegador. Leve, rápido e plugável. Escrito em TypeScript."
-  },
-  "eta.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://eta.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://eta.js.org/docs/learn\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/eta\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial</tag-2></tag-1> <tag-3> <tag-4>Documentação</tag-4> </tag-3> <tag-5> <tag-6>Documentação do LiveCodes</tag-6> </tag-5>"
-  },
-  "eta.name": {
-    "notes": "",
-    "translation": "Eta"
-  },
-  "fennel.desc": {
-    "notes": "",
-    "translation": "Fennel é uma linguagem de programação que une a velocidade, simplicidade e alcance do Lua com a flexibilidade de uma sintaxe lisp e sistema de macros."
-  },
-  "fennel.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://fennel-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://fennel-lang.org/tutorial\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/fennel\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=fennel\" target=\"_parent\" data-template=\"fennel\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Fennel</tag-2> </tag-1> <tag-3> <tag-4>Começando com Fennel</tag-4> </tag-3> <tag-5> <tag-6>Documentação do LiveCodes</tag-6> </tag-5> <tag-7> <tag-8>Carregar modelo inicial</tag-8> </tag-7>"
-  },
-  "fennel.name": {
-    "notes": "",
-    "translation": "Fennel"
-  },
-  "flow.desc": {
-    "notes": "",
-    "translation": "Flow é um verificador de tipo estático para JavaScript."
-  },
-  "flow.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://flow.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://flow.org/en/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Flow</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Flow</tag-4> </tag-3>"
-  },
-  "flow.name": {
-    "notes": "",
-    "translation": "Flow"
-  },
-  "gleam.desc1": {
-    "notes": "",
-    "translation": "Gleam é uma linguagem amigável para construir sistemas seguros de tipos que escalam!"
-  },
-  "gleam.desc2": {
-    "notes": "",
-    "translation": "Gleam é uma linguagem de programação funcional com tipagem estática, que compila para Erlang ou JavaScript."
-  },
-  "gleam.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://gleam.run/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://gleam.run/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://tour.gleam.run/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=gleam\" target=\"_parent\" data-template=\"gleam\" />\n\n",
-    "translation": "<tag-1><tag-2>Site do Gleam</tag-2></tag-1> <tag-3> <tag-4>Documentação do Gleam</tag-4> </tag-3> <tag-5> <tag-6>Tour pela linguagem Gleam</tag-6> </tag-5> <tag-7> <tag-8>Carregar modelo inicial</tag-8> </tag-7>"
-  },
-  "gleam.name": {
-    "notes": "",
-    "translation": "Gleam"
-  },
-  "go.desc1": {
-    "notes": "",
-    "translation": "Go (Golang) é uma linguagem de programação de código aberto que torna fácil construir software simples, confiável e eficiente."
-  },
-  "go.desc2": {
-    "notes": "",
-    "translation": "Aqui, é compilado para JavaScript usando GopherJS."
-  },
-  "go.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://golang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://golang.org/doc/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/gopherjs/gopherjs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/go/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=go\" target=\"_parent\" data-template=\"go\" />\n\n",
-    "translation": "<tag-1><tag-2>Site do Go</tag-2></tag-1> <tag-3><tag-4>Documentação do Go</tag-4></tag-3> <tag-5> <tag-6>Repositório do GopherJS</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Go</tag-8> </tag-7> <tag-9><tag-10>Carregar modelo inicial</tag-10></tag-9>"
-  },
-  "go.name": {
-    "notes": "",
-    "translation": "Go"
-  },
-  "haml.desc": {
-    "notes": "",
-    "translation": "Compilador Haml para modelos de visualização JavaScript do lado do cliente usando clientside-haml-js."
-  },
-  "haml.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://haml.info/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://haml.info/docs.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/uglyog/clientside-haml-js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/haml/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/haml\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial do Haml</tag-2></tag-1> <tag-3> <tag-4>Documentação do Haml</tag-4> </tag-3> <tag-5> <tag-6>Repositório GitHub do clientside-haml-js</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=haml</tag-8> </tag-7> <tag-9> <tag-10>Documentação do LiveCodes</tag-10> </tag-9>"
-  },
-  "haml.name": {
-    "notes": "",
-    "translation": "Haml"
-  },
-  "handlebars.desc": {
-    "notes": "",
-    "translation": "Modelagem mínima com esteroides."
-  },
-  "handlebars.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://handlebarsjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/handlebars\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial</tag-2></tag-1> <tag-3> <tag-4>Documentação do LiveCodes</tag-4> </tag-3>"
-  },
-  "handlebars.name": {
-    "notes": "",
-    "translation": "Handlebars"
-  },
-  "imba.desc": {
-    "notes": "",
-    "translation": "A linguagem amigável full-stack."
-  },
-  "imba.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://imba.io/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial</tag-2></tag-1>"
-  },
-  "imba.name": {
-    "notes": "",
-    "translation": "Imba"
-  },
-  "jsx.desc": {
-    "notes": "",
-    "translation": "JSX é compilado para JavaScript no LiveCodes usando o Compilador TypeScript. Por padrão, ele usa React como o runtime JSX."
-  },
-  "jsx.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://react.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://react.dev/learn/writing-markup-with-jsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/jsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=react\" target=\"_parent\" data-template=\"react\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do React</tag-2> </tag-1> <tag-3> <tag-4>Documentação JSX no React</tag-4> </tag-3> <tag-5> <tag-6>Documentação do LiveCodes</tag-6> </tag-5> <tag-7> <tag-8>Carregar modelo inicial</tag-8> </tag-7>"
-  },
-  "jsx.name": {
-    "notes": "",
-    "translation": "JSX"
-  },
-  "julia.desc1": {
-    "notes": "",
-    "translation": "(O suporte à linguagem Julia no LiveCodes ainda é experimental)"
-  },
-  "julia.desc2": {
-    "notes": "### <tag-1> ###\n<a href=\"https://github.com/Keno/julia-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<a href=\"https://github.com/chris-koch-penn/polylang.io\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "Compilador Julia e Julia Base rodando em WASM, usando <tag-1>julia-wasm</tag-1> adaptado por <tag-2>polylang.io</tag-2>."
-  },
-  "julia.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://julialang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://docs.julialang.org/en/v1/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/julia/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=julia\" target=\"_parent\" data-template=\"julia\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Julia</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Julia</tag-4> </tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=Julia</tag-6> </tag-5> <tag-7> <tag-8>Carregar modelo inicial</tag-8> </tag-7>"
-  },
-  "julia.name": {
-    "notes": "",
-    "translation": "Julia"
-  },
-  "less.desc": {
-    "notes": "",
-    "translation": "É CSS, com um pouco mais."
-  },
-  "less.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://lesscss.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/less/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial do Less</tag-2></tag-1> <tag-3> <tag-4>Aprenda X em Y minutos, onde X=less</tag-4> </tag-3>"
-  },
-  "less.name": {
-    "notes": "",
-    "translation": "Less"
-  },
-  "liquid.desc": {
-    "notes": "",
-    "translation": "Um mecanismo de modelo simples, expressivo e seguro."
-  },
-  "liquid.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://liquidjs.com\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://liquidjs.com/tutorials/intro-to-liquid.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/liquid\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do LiquidJS</tag-2> </tag-1> <tag-3> <tag-4>Documentação do LiquidJS</tag-4> </tag-3> <tag-5> <tag-6>Documentação do LiveCodes</tag-6> </tag-5>"
-  },
-  "liquid.name": {
-    "notes": "",
-    "translation": "LiquidJS"
-  },
-  "livescript.desc": {
-    "notes": "",
-    "translation": "Uma linguagem que compila para JavaScript."
-  },
-  "livescript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://livescript.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/livescript/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=livescript\" target=\"_parent\" data-template=\"livescript\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do LiveScript</tag-2> </tag-1> <tag-3> <tag-4>Aprenda X em Y minutos, onde X=LiveScript</tag-4> </tag-3> <tag-5> <tag-6>Carregar modelo inicial</tag-6> </tag-5>"
-  },
-  "livescript.name": {
-    "notes": "",
-    "translation": "LiveScript"
-  },
-  "lua.desc": {
-    "notes": "",
-    "translation": "Lua rodando no navegador usando fengari-web."
-  },
-  "lua.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.lua.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.lua.org/manual/5.4/manual.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://fengari.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/fengari-lua/fengari-web\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/lua/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/lua\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=lua\" target=\"_parent\" data-template=\"lua\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial do Lua</tag-2></tag-1> <tag-3> <tag-4>Documentação do Lua</tag-4> </tag-3> <tag-5> <tag-6>Site oficial do Fengari</tag-6> </tag-5> <tag-7> <tag-8>Repositório GitHub do fengari-web</tag-8> </tag-7> <tag-9> <tag-10>Aprenda X em Y minutos, onde X=Lua</tag-10> </tag-9> <tag-11> <tag-12>Documentação do LiveCodes</tag-12> </tag-11> <tag-13><tag-14>Carregar modelo inicial</tag-14></tag-13>"
-  },
-  "lua.name": {
-    "notes": "",
-    "translation": "Lua"
-  },
-  "luaWasm.desc": {
-    "notes": "",
-    "translation": "Lua rodando no navegador usando Wasmoon, uma VM lua 5.4 real com ligações JS feitas com WebAssembly."
-  },
-  "luaWasm.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.lua.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.lua.org/manual/5.4/manual.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/ceifa/wasmoon\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/lua/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/lua-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=lua-wasm\" target=\"_parent\" data-template=\"lua-wasm\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial do Lua</tag-2></tag-1> <tag-3> <tag-4>Documentação do Lua</tag-4> </tag-3> <tag-5> <tag-6>Repositório GitHub do Wasmoon</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Lua</tag-8> </tag-7> <tag-9> <tag-10>Documentação do LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Carregar modelo inicial</tag-12> </tag-11>"
-  },
-  "luaWasm.name": {
-    "notes": "",
-    "translation": "Lua (Wasm)"
-  },
-  "malina.desc": {
-    "notes": "",
-    "translation": "Compilador frontend, inspirado no Svelte."
-  },
-  "malina.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://github.com/malinajs/malinajs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://malinajs.github.io/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=malina\" target=\"_parent\" data-template=\"malina\" />\n\n",
-    "translation": "<tag-1> <tag-2>Repositório do Malina.js</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Malina.js</tag-4> </tag-3> <tag-5> <tag-6>Carregar modelo inicial</tag-6> </tag-5>"
-  },
-  "malina.name": {
-    "notes": "",
-    "translation": "Malina.js"
-  },
-  "markdown.desc": {
-    "notes": "",
-    "translation": "Markdown compilado para HTML usando Marked."
-  },
-  "markdown.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://daringfireball.net/projects/markdown/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://marked.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/markdown/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=markdown\" target=\"_parent\" data-template=\"markdown\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Markdown</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Marked</tag-4> </tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=markdown</tag-6> </tag-5> <tag-7> <tag-8>Carregar modelo inicial</tag-8> </tag-7>"
-  },
-  "markdown.name": {
-    "notes": "",
-    "translation": "Markdown"
-  },
-  "mdx.desc": {
-    "notes": "### <tag-1> ###\n<br  />\n\n",
-    "translation": "Markdown para a era dos componentes. <tag-1></tag-1>MDX permite que você escreva JSX perfeitamente em seus documentos Markdown."
-  },
-  "mdx.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mdxjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"?template=mdx\" target=\"_parent\" data-template=\"mdx\" />\n\n",
-    "translation": "<tag-1><tag-2>Documentação do MDX</tag-2></tag-1> <tag-3><tag-4>Carregar modelo inicial</tag-4></tag-3>"
-  },
-  "mdx.name": {
-    "notes": "",
-    "translation": "MDX"
-  },
-  "mjml.desc": {
-    "notes": "",
-    "translation": "MJML é uma linguagem de marcação projetada para reduzir o trabalho de codificar um e-mail responsivo."
-  },
-  "mjml.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mjml.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://documentation.mjml.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://mjml.io/templates\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/mjml\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial do MJML</tag-2></tag-1> <tag-3> <tag-4>Documentação do MJML</tag-4> </tag-3> <tag-5> <tag-6>Modelos oficiais do MJML</tag-6> </tag-5> <tag-7> <tag-8>Documentação do LiveCodes</tag-8> </tag-7>"
-  },
-  "mjml.name": {
-    "notes": "",
-    "translation": "MJML"
-  },
-  "mustache.desc": {
-    "notes": "",
-    "translation": "Modelos sem lógica."
-  },
-  "mustache.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mustache.github.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://mustache.github.io/mustache.5.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/janl/mustache.js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/mustache\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial</tag-2> </tag-1> <tag-3> <tag-4>Manual mustache(5)</tag-4> </tag-3> <tag-5> <tag-6>Implementação JavaScript</tag-6> </tag-5> <tag-7> <tag-8>Documentação do LiveCodes</tag-8> </tag-7>"
-  },
-  "mustache.name": {
-    "notes": "",
-    "translation": "Mustache"
-  },
-  "nunjucks.desc": {
-    "notes": "### <tag-1> ###\n<a href=\"http://jinja.pocoo.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "Uma linguagem de modelagem rica e poderosa para JavaScript. Nunjucks é essencialmente uma adaptação do <tag-1>jinja2</tag-1>."
-  },
-  "nunjucks.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://mozilla.github.io/nunjucks/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"{{DOCS_BASE_URL}}languages/nunjucks\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial</tag-2> </tag-1> <tag-3> <tag-4>Documentação do LiveCodes</tag-4> </tag-3>"
-  },
-  "nunjucks.name": {
-    "notes": "",
-    "translation": "Nunjucks"
-  },
-  "ocaml.desc1": {
-    "notes": "",
-    "translation": "OCaml é uma linguagem de programação de nível industrial que suporta estilos funcionais, imperativos e orientados a objetos."
-  },
-  "ocaml.desc2": {
-    "notes": "",
-    "translation": "O compilador ReScript é usado aqui para compilar OCaml para JavaScript."
-  },
-  "ocaml.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://ocaml.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://ocaml.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://rescript-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/ocaml/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=ocaml\" target=\"_parent\" data-template=\"ocaml\" />\n\n",
-    "translation": "<tag-1><tag-2>Site do OCaml</tag-2></tag-1> <tag-3> <tag-4>Documentação do OCaml</tag-4> </tag-3> <tag-5> <tag-6>Site do ReScript</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=OCaml</tag-8> </tag-7> <tag-9> <tag-10>Carregar modelo inicial</tag-10> </tag-9>"
-  },
-  "ocaml.name": {
-    "notes": "",
-    "translation": "OCaml"
-  },
-  "perl.desc": {
-    "notes": "",
-    "translation": "Perl rodando no navegador usando Perlito."
-  },
-  "perl.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.perl.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://perldoc.perl.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/fglock/Perlito/blob/master/README-perlito5.md\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/perl/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=perl\" target=\"_parent\" data-template=\"perl\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Perl</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Perl</tag-4> </tag-3> <tag-5> <tag-6>Readme do Perlito5</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=perl</tag-8> </tag-7> <tag-9> <tag-10>Carregar modelo inicial</tag-10> </tag-9>"
-  },
-  "perl.name": {
-    "notes": "",
-    "translation": "Perl"
-  },
-  "php.desc": {
-    "notes": "",
-    "translation": "PHP rodando no navegador usando Uniter."
-  },
-  "php.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.php.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.php.net/manual/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/asmblah/uniter\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/php/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/php\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=php\" target=\"_parent\" data-template=\"php\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial do PHP</tag-2></tag-1> <tag-3> <tag-4>Documentação do PHP</tag-4> </tag-3> <tag-5> <tag-6>Repositório GitHub do Uniter</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=PHP</tag-8> </tag-7> <tag-9> <tag-10>Documentação do LiveCodes</tag-10> </tag-9> <tag-11><tag-12>Carregar modelo inicial</tag-12></tag-11>"
-  },
-  "php.name": {
-    "notes": "",
-    "translation": "PHP"
-  },
-  "phpWasm.desc": {
-    "notes": "",
-    "translation": "PHP no navegador, alimentado por WebAssembly, usando php-wasm."
-  },
-  "phpWasm.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.php.net/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.php.net/manual/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/seanmorris/php-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/php/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/php-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=php-wasm\" target=\"_parent\" data-template=\"php-wasm\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial do PHP</tag-2></tag-1> <tag-3> <tag-4>Documentação do PHP</tag-4> </tag-3> <tag-5> <tag-6>Repositório GitHub do php-wasm</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=PHP</tag-8> </tag-7> <tag-9> <tag-10>Documentação do LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Carregar modelo inicial</tag-12> </tag-11>"
-  },
-  "phpWasm.name": {
-    "notes": "",
-    "translation": "PHP (Wasm)"
-  },
-  "postgresql.desc": {
-    "notes": "",
-    "translation": "PostgreSQL empacotado como WASM usando PGlite"
-  },
-  "postgresql.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.postgresql.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.postgresql.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/electric-sql/pglite\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sql/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=postgresql\" target=\"_parent\" data-template=\"postgresql\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do PostgreSQL</tag-2> </tag-1> <tag-3> <tag-4>Documentação do PostgreSQL</tag-4> </tag-3> <tag-5> <tag-6>Repositório GitHub do PGlite</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=SQL</tag-8> </tag-7> <tag-9> <tag-10>Carregar modelo inicial</tag-10> </tag-9>"
-  },
-  "postgresql.name": {
-    "notes": "",
-    "translation": "PostgreSQL"
-  },
-  "prolog.desc": {
-    "notes": "",
-    "translation": "Um interpretador Prolog de código aberto em JavaScript."
-  },
-  "prolog.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"http://tau-prolog.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"http://tau-prolog.org/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.swi-prolog.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/prolog/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=prolog\" target=\"_parent\" data-template=\"prolog\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Tau Prolog</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Tau Prolog</tag-4> </tag-3> <tag-5> <tag-6>SWI-Prolog</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Prolog</tag-8> </tag-7> <tag-9> <tag-10>Carregar modelo inicial</tag-10> </tag-9>"
-  },
-  "prolog.name": {
-    "notes": "",
-    "translation": "Tau Prolog"
-  },
-  "pug.desc": {
-    "notes": "",
-    "translation": "Motor de modelo robusto, elegante e rico em recursos."
-  },
-  "pug.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://pugjs.org/api/getting-started.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/pug/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/pug\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Documentação do Pug</tag-2> </tag-1> <tag-3> <tag-4>Aprenda X em Y minutos, onde X=Pug</tag-4> </tag-3> <tag-5> <tag-6>Documentação do LiveCodes</tag-6> </tag-5>"
-  },
-  "pug.name": {
-    "notes": "",
-    "translation": "Pug"
-  },
-  "python.desc": {
-    "notes": "",
-    "translation": "Python rodando no navegador usando Brython."
-  },
-  "python.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.python.org/doc/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://brython.info/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/python/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/python\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=python\" target=\"_parent\" data-template=\"python\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Python</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Python</tag-4> </tag-3> <tag-5> <tag-6>Documentação do Brython</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Python</tag-8> </tag-7> <tag-9> <tag-10>Documentação do LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Carregar modelo inicial</tag-12> </tag-11>"
-  },
-  "python.name": {
-    "notes": "",
-    "translation": "Python"
-  },
-  "pythonWasm.desc1": {
-    "notes": "",
-    "translation": "Python com o stack científico, compilado para WebAssembly usando Pyodide."
-  },
-  "pythonWasm.desc2": {
-    "notes": "",
-    "translation": "Pyodide permite usar o stack científico do Python, incluindo NumPy, Pandas, Matplotlib, SciPy, scikit-learn e muitos outros. Além disso, é possível instalar pacotes Python puros do PyPi."
-  },
-  "pythonWasm.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.python.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.python.org/doc/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://pyodide.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/python/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/python-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=python-wasm\" target=\"_parent\" data-template=\"python-wasm\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Python</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Python</tag-4> </tag-3> <tag-5><tag-6>Documentação do Pyodide</tag-6></tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Python</tag-8> </tag-7> <tag-9> <tag-10>Documentação do LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Carregar modelo inicial</tag-12> </tag-11>"
-  },
-  "pythonWasm.name": {
-    "notes": "",
-    "translation": "Python (Wasm)"
-  },
-  "r.desc": {
-    "notes": "",
-    "translation": "R rodando no navegador usando WebR."
-  },
-  "r.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.r-project.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://cran.r-project.org/manuals.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://r4ds.hadley.nz/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://docs.r-wasm.org/webr/latest/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/r/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/r\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=r\" target=\"_parent\" data-template=\"r\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do projeto R</tag-2> </tag-1> <tag-3> <tag-4>Manuais do R</tag-4> </tag-3> <tag-5> <tag-6>R para Ciência de Dados (2ª ed.)</tag-6> </tag-5> <tag-7> <tag-8>Documentação do WebR</tag-8> </tag-7> <tag-9> <tag-10>Aprenda X em Y minutos, onde X=R</tag-10> </tag-9> <tag-11> <tag-12>Documentação do LiveCodes</tag-12> </tag-11> <tag-13> <tag-14>Carregar modelo inicial</tag-14> </tag-13>"
-  },
-  "r.name": {
-    "notes": "",
-    "translation": "R"
-  },
-  "reactNative.desc": {
-    "notes": "",
-    "translation": "React Native for Web é uma implementação acessível dos Componentes e APIs do React Native que é interoperável com React DOM."
-  },
-  "reactNative.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://reactjs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://reactnative.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://necolas.github.io/react-native-web/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://reactnative.dev/docs/getting-started\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/react-native\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=react-native\" target=\"_parent\" data-template=\"react-native\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do React</tag-2> </tag-1> <tag-3> <tag-4>Site do React Native</tag-4> </tag-3> <tag-5> <tag-6>Site do React Native for Web</tag-6> </tag-5> <tag-7> <tag-8>Documentação do React Native</tag-8> </tag-7> <tag-9> <tag-10>Documentação do LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Carregar modelo inicial</tag-12> </tag-11>"
-  },
-  "reactNative.name": {
-    "notes": "",
-    "translation": "React Native para Web"
-  },
-  "reactNativeTsx.desc": {
-    "notes": "",
-    "translation": "React Native for Web é uma implementação acessível dos Componentes e APIs do React Native que é interoperável com React DOM."
-  },
-  "reactNativeTsx.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://reactjs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://reactnative.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://necolas.github.io/react-native-web/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://reactnative.dev/docs/getting-started\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://www.typescriptlang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"{{DOCS_BASE_URL}}languages/react-native-tsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-15> ###\n<li  />\n\n### <tag-16> ###\n<a href=\"?template=react-native\" target=\"_parent\" data-template=\"react-native\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do React</tag-2> </tag-1> <tag-3> <tag-4>Site do React Native</tag-4> </tag-3> <tag-5> <tag-6>Site do React Native for Web</tag-6> </tag-5> <tag-7> <tag-8>Documentação do React Native</tag-8> </tag-7> <tag-9> <tag-10>Site do TypeScript</tag-10> </tag-9> <tag-11> <tag-12>Documentação do TypeScript</tag-12> </tag-11> <tag-13> <tag-14>Documentação do LiveCodes</tag-14> </tag-13> <tag-15> <tag-16>Carregar modelo inicial (JSX)</tag-16> </tag-15>"
-  },
-  "reactNativeTsx.name": {
-    "notes": "",
-    "translation": "React Native para Web (com TypeScript)"
-  },
-  "reason.desc1": {
-    "notes": "",
-    "translation": "Reason permite que você escreva código tipado simples, rápido e de qualidade, aproveitando os ecossistemas JavaScript e OCaml."
-  },
-  "reason.desc2": {
-    "notes": "",
-    "translation": "O compilador ReScript é usado aqui para compilar Reason para JavaScript."
-  },
-  "reason.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://reasonml.github.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://reasonml.github.io/docs/en/what-and-why\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://reasonml.github.io/reason-react/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://rescript-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/reason/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=reason\" target=\"_parent\" data-template=\"reason\" />\n\n",
-    "translation": "<tag-1><tag-2>Site do Reason</tag-2></tag-1> <tag-3> <tag-4>Documentação do Reason</tag-4> </tag-3> <tag-5> <tag-6>ReasonReact</tag-6> </tag-5> <tag-7> <tag-8>Site do ReScript</tag-8> </tag-7> <tag-9> <tag-10>Aprenda X em Y minutos, onde X=reason</tag-10> </tag-9> <tag-11> <tag-12>Carregar modelo inicial</tag-12> </tag-11>"
-  },
-  "reason.name": {
-    "notes": "",
-    "translation": "Reason"
-  },
-  "rescript.desc": {
-    "notes": "",
-    "translation": "ReScript é uma linguagem robustamente tipada que compila para JavaScript eficiente e legível por humanos."
-  },
-  "rescript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://rescript-lang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://rescript-lang.org/docs/react/latest/introduction\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=rescript\" target=\"_parent\" data-template=\"rescript\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site do ReScript</tag-2> </tag-1> <tag-3> <tag-4>ReScript / React</tag-4> </tag-3> <tag-5> <tag-6>Carregar modelo inicial</tag-6> </tag-5>"
-  },
-  "rescript.name": {
-    "notes": "",
-    "translation": "ReScript"
-  },
-  "richtext.desc1": {
-    "notes": "",
-    "translation": "Usando Quill:"
-  },
-  "richtext.desc2": {
-    "notes": "",
-    "translation": "Seu poderoso editor de texto rico."
-  },
-  "richtext.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://quilljs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Quill</tag-2> </tag-1>"
-  },
-  "richtext.name": {
-    "notes": "",
-    "translation": "Editor de Texto Rico"
-  },
-  "riot.desc": {
-    "notes": "",
-    "translation": "Biblioteca de UI simples e elegante baseada em componentes."
-  },
-  "riot.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://riot.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://riot.js.org/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=riot\" target=\"_parent\" data-template=\"riot\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Riot.js</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Riot.js</tag-4> </tag-3> <tag-5> <tag-6>Carregar modelo inicial</tag-6> </tag-5>"
-  },
-  "riot.name": {
-    "notes": "",
-    "translation": "Riot.js"
-  },
-  "ruby.desc": {
-    "notes": "",
-    "translation": "Ruby rodando no navegador usando Opal."
-  },
-  "ruby.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.ruby-lang.org/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.ruby-lang.org/en/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://opalrb.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://cdn.opalrb.com/opal/1.0.0/index.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/ruby/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/ruby\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=ruby\" target=\"_parent\" data-template=\"ruby\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Ruby</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Ruby</tag-4> </tag-3> <tag-5><tag-6>Site oficial do Opal</tag-6></tag-5> <tag-7> <tag-8>CDN da biblioteca padrão do Opal</tag-8> </tag-7> <tag-9> <tag-10>Aprenda X em Y minutos, onde X=ruby</tag-10> </tag-9> <tag-11> <tag-12>Documentação do LiveCodes</tag-12> </tag-11> <tag-13> <tag-14>Carregar modelo inicial</tag-14> </tag-13>"
-  },
-  "ruby.name": {
-    "notes": "",
-    "translation": "Ruby"
-  },
-  "rubyWasm.desc": {
-    "notes": "",
-    "translation": "Ruby rodando no navegador usando ruby-wasm (uma coleção de portas WebAssembly do CRuby)."
-  },
-  "rubyWasm.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.ruby-lang.org/en/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.ruby-lang.org/en/documentation/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://ruby.github.io/ruby.wasm/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/ruby/ruby\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://learnxinyminutes.com/docs/ruby/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"{{DOCS_BASE_URL}}languages/ruby-wasm\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=ruby-wasm\" target=\"_parent\" data-template=\"ruby-wasm\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Ruby</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Ruby</tag-4> </tag-3> <tag-5> <tag-6>Site do ruby.wasm</tag-6> </tag-5> <tag-7><tag-8>CRuby</tag-8></tag-7> <tag-9> <tag-10>Aprenda X em Y minutos, onde X=ruby</tag-10> </tag-9> <tag-11> <tag-12>Documentação do LiveCodes</tag-12> </tag-11> <tag-13> <tag-14>Carregar modelo inicial</tag-14> </tag-13>"
-  },
-  "rubyWasm.name": {
-    "notes": "",
-    "translation": "Ruby (WASM)"
-  },
-  "sass.desc": {
-    "notes": "",
-    "translation": "Folhas de Estilo Sintaticamente Incríveis."
-  },
-  "sass.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://sass-lang.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://sass-lang.com/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://sass-lang.com/documentation/syntax#the-indented-syntax\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sass/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Sass</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Sass</tag-4> </tag-3> <tag-5> <tag-6>Sintaxe indentada do Sass</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=sass</tag-8> </tag-7>"
-  },
-  "sass.name": {
-    "notes": "",
-    "translation": "Sass"
-  },
-  "scheme.desc": {
-    "notes": "",
-    "translation": "Scheme rodando no navegador usando biwascheme."
-  },
-  "scheme.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.scheme.com/tspl4/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.biwascheme.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.biwascheme.org/doc/reference.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=scheme\" target=\"_parent\" data-template=\"scheme\" />\n\n",
-    "translation": "<tag-1> <tag-2>A Linguagem de Programação Scheme</tag-2> </tag-1> <tag-3> <tag-4>Site oficial do BiwaScheme</tag-4> </tag-3> <tag-5> <tag-6>Referência do BiwaScheme</tag-6> </tag-5> <tag-7> <tag-8>Carregar modelo inicial</tag-8> </tag-7>"
-  },
-  "scheme.name": {
-    "notes": "",
-    "translation": "Scheme"
-  },
-  "scss.desc": {
-    "notes": "",
-    "translation": "Folhas de Estilo Sintaticamente Incríveis."
-  },
-  "scss.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://sass-lang.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://sass-lang.com/documentation\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://sass-lang.com/documentation/syntax#scss\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sass/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Sass</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Sass</tag-4> </tag-3> <tag-5> <tag-6>Sintaxe SCSS</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=sass</tag-8> </tag-7>"
-  },
-  "scss.name": {
-    "notes": "",
-    "translation": "SCSS"
-  },
-  "solid.desc": {
-    "notes": "",
-    "translation": "Uma biblioteca JavaScript declarativa, eficiente e flexível para construir interfaces de usuário."
-  },
-  "solid.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.solidjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.solidjs.com/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/solid\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=solid\" target=\"_parent\" data-template=\"solid\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial</tag-2></tag-1> <tag-3><tag-4>Documentação</tag-4></tag-3> <tag-5> <tag-6>Documentação do LiveCodes</tag-6> </tag-5> <tag-7> <tag-8>Carregar modelo inicial (TSX)</tag-8> </tag-7>"
-  },
-  "solid.name": {
-    "notes": "",
-    "translation": "Solid"
-  },
-  "solid.tsx.desc": {
-    "notes": "",
-    "translation": "Uma biblioteca JavaScript declarativa, eficiente e flexível para construir interfaces de usuário."
-  },
-  "solid.tsx.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.solidjs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.solidjs.com/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.typescriptlang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/solid.tsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"?template=solid\" target=\"_parent\" data-template=\"solid\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial</tag-2></tag-1> <tag-3> <tag-4>Documentação do Solid</tag-4> </tag-3> <tag-5> <tag-6>Site do TypeScript</tag-6> </tag-5> <tag-7> <tag-8>Documentação do TypeScript</tag-8> </tag-7> <tag-9> <tag-10>Documentação do LiveCodes</tag-10> </tag-9> <tag-11> <tag-12>Carregar modelo inicial</tag-12> </tag-11>"
-  },
-  "solid.tsx.name": {
-    "notes": "",
-    "translation": "Solid (com TypeScript)"
-  },
-  "sql.desc": {
-    "notes": "",
-    "translation": "SQLite compilado para JavaScript usando SQL.js"
-  },
-  "sql.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.sqlite.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.sqlite.org/lang.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://sql.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://learnxinyminutes.com/docs/sql/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=sql\" target=\"_parent\" data-template=\"sql\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do SQLite</tag-2> </tag-1> <tag-3> <tag-4>Documentação de sintaxe do SQLite</tag-4> </tag-3> <tag-5> <tag-6>Site oficial do SQL.js</tag-6> </tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=SQL</tag-8> </tag-7> <tag-9><tag-10>Carregar modelo inicial</tag-10></tag-9>"
-  },
-  "sql.name": {
-    "notes": "",
-    "translation": "SQLite"
-  },
-  "stencil.desc": {
-    "notes": "",
-    "translation": "Um Compilador para Web Components e Aplicações Web de Alto Desempenho."
-  },
-  "stencil.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://stenciljs.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://stenciljs.com/docs/introduction\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=stencil\" target=\"_parent\" data-template=\"stencil\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Stencil</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Stencil</tag-4> </tag-3> <tag-5> <tag-6>Carregar modelo inicial</tag-6> </tag-5>"
-  },
-  "stencil.name": {
-    "notes": "",
-    "translation": "Stencil"
-  },
-  "styleProcessors.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://tailwindcss.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://windicss.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://uno.antfu.me/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://lightningcss.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://postcss.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<ul  />\n\n### <tag-12> ###\n<li  />\n\n### <tag-13> ###\n<a href=\"https://github.com/postcss/autoprefixer\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-14> ###\n<li  />\n\n### <tag-15> ###\n<a href=\"https://preset-env.cssdb.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-16> ###\n<li  />\n\n### <tag-17> ###\n<a href=\"https://github.com/unlight/postcss-import-url\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-18> ###\n<li  />\n\n### <tag-19> ###\n<a href=\"https://github.com/madyankin/postcss-modules\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Tailwind CSS</tag-2> </tag-1> <tag-3> <tag-4>Windi CSS</tag-4> </tag-3> <tag-5> <tag-6>UnoCSS</tag-6> </tag-5> <tag-7> <tag-8>Lightning CSS</tag-8> </tag-7> <tag-9> <tag-10>PostCSS</tag-10> Plugins: <tag-11> <tag-12> <tag-13>Autoprefixer</tag-13> </tag-12> <tag-14> <tag-15>postcss-preset-env</tag-15> </tag-14> <tag-16> <tag-17>postcss-import-url</tag-17> </tag-16> <tag-18> <tag-19>postcss-modules</tag-19> </tag-18> </tag-11> </tag-9>"
-  },
-  "styleProcessors.name": {
-    "notes": "",
-    "translation": "Frameworks e Processadores CSS"
-  },
-  "stylis.desc": {
-    "notes": "",
-    "translation": "Pré-processador CSS leve."
-  },
-  "stylis.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://stylis.js.org/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Stylis</tag-2> </tag-1>"
-  },
-  "stylis.name": {
-    "notes": "",
-    "translation": "Stylis"
-  },
-  "stylus.desc": {
-    "notes": "",
-    "translation": "CSS Expressivo, Dinâmico e Robusto."
-  },
-  "stylus.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://stylus-lang.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://learnxinyminutes.com/docs/stylus/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Stylus</tag-2> </tag-1> <tag-3> <tag-4>Aprenda X em Y minutos, onde X=stylus</tag-4> </tag-3>"
-  },
-  "stylus.name": {
-    "notes": "",
-    "translation": "Stylus"
-  },
-  "sucrase.desc": {
-    "notes": "",
-    "translation": "Alternativa super rápida ao Babel para quando você pode direcionar para ambientes JS modernos."
-  },
-  "sucrase.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://sucrase.io/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/alangpierce/sucrase\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"{{DOCS_BASE_URL}}languages/sucrase\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Sucrase</tag-2> </tag-1> <tag-3> <tag-4>Repositório GitHub do Sucrase</tag-4> </tag-3> <tag-5> <tag-6>Documentação do LiveCodes</tag-6> </tag-5>"
-  },
-  "sucrase.name": {
-    "notes": "",
-    "translation": "Sucrase"
-  },
-  "svelte.desc": {
-    "notes": "",
-    "translation": "Aplicativos web ciberneticamente aprimorados."
-  },
-  "svelte.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://svelte.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://svelte.dev/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"?template=svelte\" target=\"_parent\" data-template=\"svelte\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Svelte</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Svelte</tag-4> </tag-3> <tag-5> <tag-6>Carregar modelo inicial</tag-6> </tag-5>"
-  },
-  "svelte.name": {
-    "notes": "",
-    "translation": "Svelte"
-  },
-  "tcl.desc": {
-    "notes": "### <tag-1> ###\n<a href=\"https://github.com/ecky-l/wacl/\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "Tcl rodando no navegador, usando <tag-1>wacl</tag-1>."
-  },
-  "tcl.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.tcl.tk/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/ecky-l/wacl/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/tcl/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=tcl\" target=\"_parent\" data-template=\"tcl\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Tcl</tag-2> </tag-1> <tag-3> <tag-4>Repositório do wacl</tag-4> </tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=Tcl</tag-6> </tag-5> <tag-7> <tag-8>Carregar modelo inicial</tag-8> </tag-7>"
-  },
-  "tcl.name": {
-    "notes": "",
-    "translation": "Tcl (Tool Command Language)"
-  },
-  "teal.desc": {
-    "notes": "",
-    "translation": "Um dialeto tipado de Lua."
-  },
-  "teal.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://github.com/teal-language/tl\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://github.com/teal-language/tl/tree/master/docs\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/teal-language/tl/blob/master/docs/tutorial.md\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/teal\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=teal\" target=\"_parent\" data-template=\"teal\" />\n\n",
-    "translation": "<tag-1> <tag-2>Repositório GitHub do Teal</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Teal</tag-4> </tag-3> <tag-5> <tag-6>Tutorial do Teal</tag-6> </tag-5> <tag-7> <tag-8>Documentação do LiveCodes</tag-8> </tag-7> <tag-9> <tag-10>Carregar modelo inicial</tag-10> </tag-9>"
-  },
-  "teal.name": {
-    "notes": "",
-    "translation": "Teal"
-  },
-  "tsx.desc": {
-    "notes": "",
-    "translation": "TypeScript em JSX. TSX é compilado para JavaScript no LiveCodes usando o Compilador TypeScript. Por padrão, ele usa React como o runtime JSX."
-  },
-  "tsx.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://react.dev/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://react.dev/learn/writing-markup-with-jsx\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/tsx\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do React</tag-2> </tag-1> <tag-3> <tag-4>Documentação JSX no React</tag-4> </tag-3> <tag-5> <tag-6>Documentação do Typescript</tag-6> </tag-5> <tag-7> <tag-8>Documentação do LiveCodes</tag-8> </tag-7>"
-  },
-  "tsx.name": {
-    "notes": "",
-    "translation": "TSX"
-  },
-  "twig.desc": {
-    "notes": "### <tag-1> ###\n<a href=\"https://twig.symfony.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-2> ###\n<a href=\"https://github.com/twigjs/twig.js\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "Uma implementação JavaScript da linguagem de template PHP <tag-1>Twig</tag-1> por <tag-2>Twig.js</tag-2>."
-  },
-  "twig.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://twig.symfony.com/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://twig.symfony.com/doc/3.x/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://github.com/twigjs/twig.js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/twigjs/twig.js/wiki\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/twig\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Twig</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Twig</tag-4> </tag-3> <tag-5> <tag-6>Repositório do Twig.js</tag-6> </tag-5> <tag-7> <tag-8>Documentação do Twig.js</tag-8> </tag-7> <tag-9> <tag-10>Documentação do LiveCodes</tag-10> </tag-9>"
-  },
-  "twig.name": {
-    "notes": "",
-    "translation": "Twig"
-  },
-  "typescript.desc": {
-    "notes": "",
-    "translation": "Um Superconjunto Tipado de JavaScript."
-  },
-  "typescript.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://www.typescriptlang.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://www.typescriptlang.org/docs/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://learnxinyminutes.com/docs/typescript/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"?template=typescript\" target=\"_parent\" data-template=\"typescript\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial</tag-2> </tag-1> <tag-3> <tag-4>Documentação do TypeScript</tag-4> </tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=TypeScript</tag-6> </tag-5> <tag-7> <tag-8>Carregar modelo inicial</tag-8> </tag-7>"
-  },
-  "typescript.name": {
-    "notes": "",
-    "translation": "TypeScript"
-  },
-  "vue.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://vuejs.org/guide/introduction.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://vuejs.org/api/sfc-spec.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"{{DOCS_BASE_URL}}languages/vue\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"?template=vue\" target=\"_parent\" data-template=\"vue\" />\n\n",
-    "translation": "<tag-1> <tag-2>Site oficial do Vue.js v3</tag-2> </tag-1> <tag-3> <tag-4>Documentação do Vue3</tag-4> </tag-3> <tag-5> <tag-6>Componentes de arquivo único do Vue3</tag-6> </tag-5> <tag-7> <tag-8>Documentação do LiveCodes</tag-8> </tag-7> <tag-9><tag-10>Carregar modelo inicial</tag-10></tag-9>"
-  },
-  "vue.name": {
-    "notes": "",
-    "translation": "Componentes de Arquivo Único Vue3"
-  },
-  "vue2.desc": {
-    "notes": "",
-    "translation": "Carregado usando vue3-sfc-loader."
-  },
-  "vue2.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://vuejs.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://v2.vuejs.org/v2/guide/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://v2.vuejs.org/v2/guide/single-file-components.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://github.com/FranckFreiburger/vue3-sfc-loader\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"{{DOCS_BASE_URL}}languages/vue2\" target=\"_blank\" rel=\"noopener\" />\n\n",
-    "translation": "<tag-1><tag-2>Site oficial do Vue.js</tag-2></tag-1> <tag-3> <tag-4>Documentação do Vue2</tag-4> </tag-3> <tag-5> <tag-6>Componentes de arquivo único do Vue2</tag-6> </tag-5> <tag-7> <tag-8>Repositório GitHub do vue3-sfc-loader</tag-8> </tag-7> <tag-9> <tag-10>Documentação do LiveCodes</tag-10> </tag-9>"
-  },
-  "vue2.name": {
-    "notes": "",
-    "translation": "Componentes de Arquivo Único Vue2"
-  },
-  "wat.desc1": {
-    "notes": "",
-    "translation": "Representação textual de baixo nível do formato binário WebAssembly (wasm)."
-  },
-  "wat.desc2": {
-    "notes": "",
-    "translation": "É convertido para wasm usando wabt.js."
-  },
-  "wat.link": {
-    "notes": "### <tag-1> ###\n<li  />\n\n### <tag-2> ###\n<a href=\"https://webassembly.org/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-3> ###\n<li  />\n\n### <tag-4> ###\n<a href=\"https://webassembly.github.io/spec/core/text/index.html\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-5> ###\n<li  />\n\n### <tag-6> ###\n<a href=\"https://developer.mozilla.org/en-US/docs/WebAssembly\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-7> ###\n<li  />\n\n### <tag-8> ###\n<a href=\"https://developer.mozilla.org/en-US/docs/WebAssembly/Understanding_the_text_format\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-9> ###\n<li  />\n\n### <tag-10> ###\n<a href=\"https://github.com/AssemblyScript/wabt.js\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-11> ###\n<li  />\n\n### <tag-12> ###\n<a href=\"https://learnxinyminutes.com/docs/wasm/\" target=\"_blank\" rel=\"noopener\" />\n\n### <tag-13> ###\n<li  />\n\n### <tag-14> ###\n<a href=\"?template=wat\" target=\"_parent\" data-template=\"wat\" />\n\n",
-    "translation": "<tag-1><tag-2>WebAssembly.org</tag-2></tag-1> <tag-3> <tag-4>Especificações de Texto WebAssembly</tag-4> </tag-3> <tag-5> <tag-6>WebAssembly no MDN</tag-6> </tag-5> <tag-7> <tag-8>Entendendo o formato de texto WebAssembly</tag-8> </tag-7> <tag-9> <tag-10>Documentação do wabt.js</tag-10> </tag-9> <tag-11> <tag-12>Aprenda X em Y minutos, onde X=WebAssembly</tag-12> </tag-11> <tag-13><tag-14>Carregar modelo inicial</tag-14></tag-13>"
-  },
-  "wat.name": {
-    "notes": "",
-    "translation": "Formato de Texto WebAssembly"
-  }
+    "artTemplate.desc": "Mecanismo de modelagem JavaScript de alto desempenho.",
+    "artTemplate.link": "<tag-1> <tag-2>Site oficial do art-template<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do art-template<\/tag-4> <\/tag-3>",
+    "artTemplate.name": "art-template",
+    "asciidoc.desc": "AsciiDoc compilado para HTML usando Asciidoctor.",
+    "asciidoc.link": "<tag-1> <tag-2>Site oficial do AsciiDoc<\/tag-2> <\/tag-1> <tag-3> <tag-4>Site oficial do Asciidoctor<\/tag-4> <\/tag-3> <tag-5> <tag-6>Documentação do Asciidoctor<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=asciidoc<\/tag-8> <\/tag-7>",
+    "asciidoc.name": "AsciiDoc",
+    "assemblyscript.desc": "Uma linguagem semelhante ao TypeScript para WebAssembly.",
+    "assemblyscript.link": "<tag-1> <tag-2>Site oficial do AssemblyScript<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do AssemblyScript<\/tag-4> <\/tag-3> <tag-5> <tag-6>Carregar modelo inicial<\/tag-6> <\/tag-5>",
+    "assemblyscript.name": "AssemblyScript",
+    "astro.desc": "Construa sites mais rápidos com menos Javascript do lado do cliente. (Ainda em Beta)",
+    "astro.link": "<tag-1> <tag-2>Site oficial do Astro<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Astro<\/tag-4> <\/tag-3> <tag-5> <tag-6>Carregar modelo inicial<\/tag-6> <\/tag-5>",
+    "astro.name": "Astro",
+    "babel.desc": "O compilador JavaScript",
+    "babel.link": "<tag-1><tag-2>Site oficial<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do Babel<\/tag-4> <\/tag-3>",
+    "babel.name": "Babel",
+    "bbcode.desc": "BBCode (\"Bulletin Board Code\") é uma linguagem de marcação leve usada para formatar mensagens em muitos softwares de fóruns da Internet.",
+    "bbcode.link": "<tag-1><tag-2>bbcode.org<\/tag-2><\/tag-1> <tag-3> <tag-4>Guia do BBCode<\/tag-4> <\/tag-3> <tag-5> <tag-6>BBCode na Wikipedia<\/tag-6> <\/tag-5>",
+    "bbcode.name": "BBCode",
+    "blockly.desc": "Uma biblioteca JavaScript para construir editores de programação visual.",
+    "blockly.link": "<tag-1> <tag-2>Site oficial<\/tag-2> <\/tag-1> <tag-3> <tag-4>Guias<\/tag-4> <\/tag-3> <tag-5> <tag-6>Referência<\/tag-6> <\/tag-5> <tag-7> <tag-8>Exemplos<\/tag-8> <\/tag-7> <tag-9> <tag-10>Carregar modelo inicial<\/tag-10> <\/tag-9>",
+    "blockly.name": "Blockly",
+    "civet.desc": "Civet é uma linguagem de programação que compila para TypeScript ou JavaScript, permitindo que você use ferramentas existentes, mas habilite uma sintaxe concisa e poderosa.",
+    "civet.link": "<tag-1> <tag-2>Site oficial do Civet<\/tag-2> <\/tag-1> <tag-3> <tag-4>Folha de dicas do Civet<\/tag-4> <\/tag-3> <tag-5> <tag-6>Carregar modelo inicial<\/tag-6> <\/tag-5>",
+    "civet.name": "Civet",
+    "clio.desc": "Clio é uma linguagem de programação funcional rápida e distribuída que compila para JavaScript.",
+    "clio.link": "<tag-1> <tag-2>Site oficial do Clio<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Clio<\/tag-4> <\/tag-3> <tag-5> <tag-6>Carregar modelo inicial<\/tag-6> <\/tag-5>",
+    "clio.name": "Clio",
+    "clojurescript.desc": "ClojureScript é um compilador para <tag-1>Clojure<\/tag-1> que tem como alvo JavaScript. <tag-2><\/tag-2>No LiveCodes, ele é executado no navegador usando <tag-3>Cherry<\/tag-3>.",
+    "clojurescript.link": "<tag-1> <tag-2>Site oficial do ClojureScript<\/tag-2> <\/tag-1> <tag-3> <tag-4>Site oficial do Clojure<\/tag-4> <\/tag-3> <tag-5> <tag-6>Repositório do Cherry<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=clojure<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do LiveCodes<\/tag-10> <\/tag-9> <tag-11> <tag-12>Carregar modelo inicial<\/tag-12> <\/tag-11>",
+    "clojurescript.name": "ClojureScript (CLJS)",
+    "coffeescript.desc": "JavaScript sem frescura.",
+    "coffeescript.link": "<tag-1> <tag-2>Site oficial do CoffeeScript<\/tag-2> <\/tag-1> <tag-3> <tag-4>Aprenda X em Y minutos, onde X=coffeescript<\/tag-4> <\/tag-3> <tag-5> <tag-6>Carregar modelo inicial<\/tag-6> <\/tag-5>",
+    "coffeescript.name": "CoffeeScript",
+    "commonlisp.desc": "Uma implementação de Common Lisp em Javascript usando JSCL (um compilador Lisp-para-Javascript inicializado a partir do Common Lisp).",
+    "commonlisp.link": "<tag-1> <tag-2>Common-Lisp.net<\/tag-2> <\/tag-1> <tag-3> <tag-4>Projeto JSCL<\/tag-4> <\/tag-3> <tag-5> <tag-6>Recursos do Common Lisp<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Common Lisp<\/tag-8> <\/tag-7> <tag-9> <tag-10>Carregar modelo inicial<\/tag-10> <\/tag-9>",
+    "commonlisp.name": "Common Lisp",
+    "cpp.desc1": "Suporte a C++ usando JSCPP (um interpretador C++ simples escrito em JavaScript).",
+    "cpp.desc2": "Não é uma implementação completa de C++. Por favor, consulte a <tag-1>documentação do JSCPP<\/tag-1> para detalhes.",
+    "cpp.link": "<tag-1> <tag-2>Fundação C++ Padrão<\/tag-2> <\/tag-1> <tag-3> <tag-4>JSCPP<\/tag-4> <\/tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=C++<\/tag-6> <\/tag-5> <tag-7> <tag-8>Carregar modelo inicial<\/tag-8> <\/tag-7>",
+    "cpp.name": "C++",
+    "cppWasm.desc": "Compilador Clang C\/C++ rodando em WebAssembly, usando <tag-1>wasm-clang<\/tag-1> adaptado por <tag-2>polylang.io<\/tag-2>.",
+    "cppWasm.link": "<tag-1> <tag-2>Fundação C++ Padrão<\/tag-2> <\/tag-1> <tag-3> <tag-4>Site oficial do Clang<\/tag-4> <\/tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=C++<\/tag-6> <\/tag-5> <tag-7> <tag-8>Carregar modelo inicial<\/tag-8> <\/tag-7>",
+    "cppWasm.name": "C\/C++ (Wasm)",
+    "diagrams.desc1": "(Experimental)",
+    "diagrams.desc2": "Diagramas como código. Suporta:",
+    "diagrams.desc3": "<tag-1> <tag-2>Cytoscape<\/tag-2> <\/tag-1> <tag-3> <tag-4>ELK<\/tag-4> (usando <tag-5>elkjs<\/tag-5>) <\/tag-3> <tag-6> <tag-7>Gnuplot<\/tag-7> (usando <tag-8>gnuplot-JS<\/tag-8>) <\/tag-6> <tag-9> <tag-10>Graphviz<\/tag-10> (usando <tag-11>@hpcc-js\/wasm<\/tag-11>) <\/tag-9> <tag-12> <tag-13>Mermaid<\/tag-13> <\/tag-12> <tag-14> <tag-15>Nomnoml<\/tag-15> <\/tag-14> <tag-16> <tag-17>Pintora<\/tag-17> <\/tag-16> <tag-18> <tag-19>Plotly<\/tag-19> <\/tag-18> <tag-20> <tag-21>Svgbob<\/tag-21> <\/tag-20> <tag-22> <tag-23>Vega<\/tag-23> <\/tag-22> <tag-24> <tag-25>VegaLite<\/tag-25> <\/tag-24> <tag-26> <tag-27>WaveDrom<\/tag-27> <\/tag-26>",
+    "diagrams.link": "<tag-1> <tag-2>Carregar modelo inicial<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do LiveCodes<\/tag-4> <\/tag-3>",
+    "diagrams.name": "Diagramas",
+    "dot.desc": "O mecanismo de modelo javascript mais rápido + conciso para Node.js e navegadores.",
+    "dot.link": "<tag-1> <tag-2>Site oficial<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do LiveCodes<\/tag-4> <\/tag-3>",
+    "dot.name": "doT.js",
+    "ejs.desc": "Modelagem JavaScript incorporada.",
+    "ejs.link": "<tag-1><tag-2>Site oficial<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do LiveCodes<\/tag-4> <\/tag-3>",
+    "ejs.name": "EJS",
+    "eta.desc": "Motor de modelo JS incorporado para Node, Deno e o navegador. Leve, rápido e plugável. Escrito em TypeScript.",
+    "eta.link": "<tag-1><tag-2>Site oficial<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação<\/tag-4> <\/tag-3> <tag-5> <tag-6>Documentação do LiveCodes<\/tag-6> <\/tag-5>",
+    "eta.name": "Eta",
+    "fennel.desc": "Fennel é uma linguagem de programação que une a velocidade, simplicidade e alcance do Lua com a flexibilidade de uma sintaxe lisp e sistema de macros.",
+    "fennel.link": "<tag-1> <tag-2>Site oficial do Fennel<\/tag-2> <\/tag-1> <tag-3> <tag-4>Começando com Fennel<\/tag-4> <\/tag-3> <tag-5> <tag-6>Documentação do LiveCodes<\/tag-6> <\/tag-5> <tag-7> <tag-8>Carregar modelo inicial<\/tag-8> <\/tag-7>",
+    "fennel.name": "Fennel",
+    "flow.desc": "Flow é um verificador de tipo estático para JavaScript.",
+    "flow.link": "<tag-1> <tag-2>Site oficial do Flow<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Flow<\/tag-4> <\/tag-3>",
+    "flow.name": "Flow",
+    "gleam.desc1": "Gleam é uma linguagem amigável para construir sistemas seguros de tipos que escalam!",
+    "gleam.desc2": "Gleam é uma linguagem de programação funcional com tipagem estática, que compila para Erlang ou JavaScript.",
+    "gleam.link": "<tag-1><tag-2>Site do Gleam<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do Gleam<\/tag-4> <\/tag-3> <tag-5> <tag-6>Tour pela linguagem Gleam<\/tag-6> <\/tag-5> <tag-7> <tag-8>Carregar modelo inicial<\/tag-8> <\/tag-7>",
+    "gleam.name": "Gleam",
+    "go.desc1": "Go (Golang) é uma linguagem de programação de código aberto que torna fácil construir software simples, confiável e eficiente.",
+    "go.desc2": "Aqui, é compilado para JavaScript usando GopherJS.",
+    "go.link": "<tag-1><tag-2>Site do Go<\/tag-2><\/tag-1> <tag-3><tag-4>Documentação do Go<\/tag-4><\/tag-3> <tag-5> <tag-6>Repositório do GopherJS<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Go<\/tag-8> <\/tag-7> <tag-9><tag-10>Carregar modelo inicial<\/tag-10><\/tag-9>",
+    "go.name": "Go",
+    "haml.desc": "Compilador Haml para modelos de visualização JavaScript do lado do cliente usando clientside-haml-js.",
+    "haml.link": "<tag-1><tag-2>Site oficial do Haml<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do Haml<\/tag-4> <\/tag-3> <tag-5> <tag-6>Repositório GitHub do clientside-haml-js<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=haml<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do LiveCodes<\/tag-10> <\/tag-9>",
+    "haml.name": "Haml",
+    "handlebars.desc": "Modelagem mínima com esteroides.",
+    "handlebars.link": "<tag-1><tag-2>Site oficial<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do LiveCodes<\/tag-4> <\/tag-3>",
+    "handlebars.name": "Handlebars",
+    "imba.desc": "A linguagem amigável full-stack.",
+    "imba.link": "<tag-1><tag-2>Site oficial<\/tag-2><\/tag-1>",
+    "imba.name": "Imba",
+    "jsx.desc": "JSX é compilado para JavaScript no LiveCodes usando o Compilador TypeScript. Por padrão, ele usa React como o runtime JSX.",
+    "jsx.link": "<tag-1> <tag-2>Site oficial do React<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação JSX no React<\/tag-4> <\/tag-3> <tag-5> <tag-6>Documentação do LiveCodes<\/tag-6> <\/tag-5> <tag-7> <tag-8>Carregar modelo inicial<\/tag-8> <\/tag-7>",
+    "jsx.name": "JSX",
+    "julia.desc1": "(O suporte à linguagem Julia no LiveCodes ainda é experimental)",
+    "julia.desc2": "Compilador Julia e Julia Base rodando em WASM, usando <tag-1>julia-wasm<\/tag-1> adaptado por <tag-2>polylang.io<\/tag-2>.",
+    "julia.link": "<tag-1> <tag-2>Site oficial do Julia<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Julia<\/tag-4> <\/tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=Julia<\/tag-6> <\/tag-5> <tag-7> <tag-8>Carregar modelo inicial<\/tag-8> <\/tag-7>",
+    "julia.name": "Julia",
+    "less.desc": "É CSS, com um pouco mais.",
+    "less.link": "<tag-1><tag-2>Site oficial do Less<\/tag-2><\/tag-1> <tag-3> <tag-4>Aprenda X em Y minutos, onde X=less<\/tag-4> <\/tag-3>",
+    "less.name": "Less",
+    "liquid.desc": "Um mecanismo de modelo simples, expressivo e seguro.",
+    "liquid.link": "<tag-1> <tag-2>Site oficial do LiquidJS<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do LiquidJS<\/tag-4> <\/tag-3> <tag-5> <tag-6>Documentação do LiveCodes<\/tag-6> <\/tag-5>",
+    "liquid.name": "LiquidJS",
+    "livescript.desc": "Uma linguagem que compila para JavaScript.",
+    "livescript.link": "<tag-1> <tag-2>Site oficial do LiveScript<\/tag-2> <\/tag-1> <tag-3> <tag-4>Aprenda X em Y minutos, onde X=LiveScript<\/tag-4> <\/tag-3> <tag-5> <tag-6>Carregar modelo inicial<\/tag-6> <\/tag-5>",
+    "livescript.name": "LiveScript",
+    "lua.desc": "Lua rodando no navegador usando fengari-web.",
+    "lua.link": "<tag-1><tag-2>Site oficial do Lua<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do Lua<\/tag-4> <\/tag-3> <tag-5> <tag-6>Site oficial do Fengari<\/tag-6> <\/tag-5> <tag-7> <tag-8>Repositório GitHub do fengari-web<\/tag-8> <\/tag-7> <tag-9> <tag-10>Aprenda X em Y minutos, onde X=Lua<\/tag-10> <\/tag-9> <tag-11> <tag-12>Documentação do LiveCodes<\/tag-12> <\/tag-11> <tag-13><tag-14>Carregar modelo inicial<\/tag-14><\/tag-13>",
+    "lua.name": "Lua",
+    "luaWasm.desc": "Lua rodando no navegador usando Wasmoon, uma VM lua 5.4 real com ligações JS feitas com WebAssembly.",
+    "luaWasm.link": "<tag-1><tag-2>Site oficial do Lua<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do Lua<\/tag-4> <\/tag-3> <tag-5> <tag-6>Repositório GitHub do Wasmoon<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Lua<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do LiveCodes<\/tag-10> <\/tag-9> <tag-11> <tag-12>Carregar modelo inicial<\/tag-12> <\/tag-11>",
+    "luaWasm.name": "Lua (Wasm)",
+    "malina.desc": "Compilador frontend, inspirado no Svelte.",
+    "malina.link": "<tag-1> <tag-2>Repositório do Malina.js<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Malina.js<\/tag-4> <\/tag-3> <tag-5> <tag-6>Carregar modelo inicial<\/tag-6> <\/tag-5>",
+    "malina.name": "Malina.js",
+    "markdown.desc": "Markdown compilado para HTML usando Marked.",
+    "markdown.link": "<tag-1> <tag-2>Site oficial do Markdown<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Marked<\/tag-4> <\/tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=markdown<\/tag-6> <\/tag-5> <tag-7> <tag-8>Carregar modelo inicial<\/tag-8> <\/tag-7>",
+    "markdown.name": "Markdown",
+    "mdx.desc": "Markdown para a era dos componentes. <tag-1><\/tag-1>MDX permite que você escreva JSX perfeitamente em seus documentos Markdown.",
+    "mdx.link": "<tag-1><tag-2>Documentação do MDX<\/tag-2><\/tag-1> <tag-3><tag-4>Carregar modelo inicial<\/tag-4><\/tag-3>",
+    "mdx.name": "MDX",
+    "mjml.desc": "MJML é uma linguagem de marcação projetada para reduzir o trabalho de codificar um e-mail responsivo.",
+    "mjml.link": "<tag-1><tag-2>Site oficial do MJML<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do MJML<\/tag-4> <\/tag-3> <tag-5> <tag-6>Modelos oficiais do MJML<\/tag-6> <\/tag-5> <tag-7> <tag-8>Documentação do LiveCodes<\/tag-8> <\/tag-7>",
+    "mjml.name": "MJML",
+    "mustache.desc": "Modelos sem lógica.",
+    "mustache.link": "<tag-1> <tag-2>Site oficial<\/tag-2> <\/tag-1> <tag-3> <tag-4>Manual mustache(5)<\/tag-4> <\/tag-3> <tag-5> <tag-6>Implementação JavaScript<\/tag-6> <\/tag-5> <tag-7> <tag-8>Documentação do LiveCodes<\/tag-8> <\/tag-7>",
+    "mustache.name": "Mustache",
+    "nunjucks.desc": "Uma linguagem de modelagem rica e poderosa para JavaScript. Nunjucks é essencialmente uma adaptação do <tag-1>jinja2<\/tag-1>.",
+    "nunjucks.link": "<tag-1> <tag-2>Site oficial<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do LiveCodes<\/tag-4> <\/tag-3>",
+    "nunjucks.name": "Nunjucks",
+    "ocaml.desc1": "OCaml é uma linguagem de programação de nível industrial que suporta estilos funcionais, imperativos e orientados a objetos.",
+    "ocaml.desc2": "O compilador ReScript é usado aqui para compilar OCaml para JavaScript.",
+    "ocaml.link": "<tag-1><tag-2>Site do OCaml<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do OCaml<\/tag-4> <\/tag-3> <tag-5> <tag-6>Site do ReScript<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=OCaml<\/tag-8> <\/tag-7> <tag-9> <tag-10>Carregar modelo inicial<\/tag-10> <\/tag-9>",
+    "ocaml.name": "OCaml",
+    "perl.desc": "Perl rodando no navegador usando Perlito.",
+    "perl.link": "<tag-1> <tag-2>Site oficial do Perl<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Perl<\/tag-4> <\/tag-3> <tag-5> <tag-6>Readme do Perlito5<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=perl<\/tag-8> <\/tag-7> <tag-9> <tag-10>Carregar modelo inicial<\/tag-10> <\/tag-9>",
+    "perl.name": "Perl",
+    "php.desc": "PHP rodando no navegador usando Uniter.",
+    "php.link": "<tag-1><tag-2>Site oficial do PHP<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do PHP<\/tag-4> <\/tag-3> <tag-5> <tag-6>Repositório GitHub do Uniter<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=PHP<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do LiveCodes<\/tag-10> <\/tag-9> <tag-11><tag-12>Carregar modelo inicial<\/tag-12><\/tag-11>",
+    "php.name": "PHP",
+    "phpWasm.desc": "PHP no navegador, alimentado por WebAssembly, usando php-wasm.",
+    "phpWasm.link": "<tag-1><tag-2>Site oficial do PHP<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do PHP<\/tag-4> <\/tag-3> <tag-5> <tag-6>Repositório GitHub do php-wasm<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=PHP<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do LiveCodes<\/tag-10> <\/tag-9> <tag-11> <tag-12>Carregar modelo inicial<\/tag-12> <\/tag-11>",
+    "phpWasm.name": "PHP (Wasm)",
+    "postgresql.desc": "PostgreSQL empacotado como WASM usando PGlite",
+    "postgresql.link": "<tag-1> <tag-2>Site oficial do PostgreSQL<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do PostgreSQL<\/tag-4> <\/tag-3> <tag-5> <tag-6>Repositório GitHub do PGlite<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=SQL<\/tag-8> <\/tag-7> <tag-9> <tag-10>Carregar modelo inicial<\/tag-10> <\/tag-9>",
+    "postgresql.name": "PostgreSQL",
+    "prolog.desc": "Um interpretador Prolog de código aberto em JavaScript.",
+    "prolog.link": "<tag-1> <tag-2>Site oficial do Tau Prolog<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Tau Prolog<\/tag-4> <\/tag-3> <tag-5> <tag-6>SWI-Prolog<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Prolog<\/tag-8> <\/tag-7> <tag-9> <tag-10>Carregar modelo inicial<\/tag-10> <\/tag-9>",
+    "prolog.name": "Tau Prolog",
+    "pug.desc": "Motor de modelo robusto, elegante e rico em recursos.",
+    "pug.link": "<tag-1> <tag-2>Documentação do Pug<\/tag-2> <\/tag-1> <tag-3> <tag-4>Aprenda X em Y minutos, onde X=Pug<\/tag-4> <\/tag-3> <tag-5> <tag-6>Documentação do LiveCodes<\/tag-6> <\/tag-5>",
+    "pug.name": "Pug",
+    "python.desc": "Python rodando no navegador usando Brython.",
+    "python.link": "<tag-1> <tag-2>Site oficial do Python<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Python<\/tag-4> <\/tag-3> <tag-5> <tag-6>Documentação do Brython<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Python<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do LiveCodes<\/tag-10> <\/tag-9> <tag-11> <tag-12>Carregar modelo inicial<\/tag-12> <\/tag-11>",
+    "python.name": "Python",
+    "pythonWasm.desc1": "Python com o stack científico, compilado para WebAssembly usando Pyodide.",
+    "pythonWasm.desc2": "Pyodide permite usar o stack científico do Python, incluindo NumPy, Pandas, Matplotlib, SciPy, scikit-learn e muitos outros. Além disso, é possível instalar pacotes Python puros do PyPi.",
+    "pythonWasm.link": "<tag-1> <tag-2>Site oficial do Python<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Python<\/tag-4> <\/tag-3> <tag-5><tag-6>Documentação do Pyodide<\/tag-6><\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=Python<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do LiveCodes<\/tag-10> <\/tag-9> <tag-11> <tag-12>Carregar modelo inicial<\/tag-12> <\/tag-11>",
+    "pythonWasm.name": "Python (Wasm)",
+    "r.desc": "R rodando no navegador usando WebR.",
+    "r.link": "<tag-1> <tag-2>Site oficial do projeto R<\/tag-2> <\/tag-1> <tag-3> <tag-4>Manuais do R<\/tag-4> <\/tag-3> <tag-5> <tag-6>R para Ciência de Dados (2ª ed.)<\/tag-6> <\/tag-5> <tag-7> <tag-8>Documentação do WebR<\/tag-8> <\/tag-7> <tag-9> <tag-10>Aprenda X em Y minutos, onde X=R<\/tag-10> <\/tag-9> <tag-11> <tag-12>Documentação do LiveCodes<\/tag-12> <\/tag-11> <tag-13> <tag-14>Carregar modelo inicial<\/tag-14> <\/tag-13>",
+    "r.name": "R",
+    "reactNative.desc": "React Native for Web é uma implementação acessível dos Componentes e APIs do React Native que é interoperável com React DOM.",
+    "reactNative.link": "<tag-1> <tag-2>Site oficial do React<\/tag-2> <\/tag-1> <tag-3> <tag-4>Site do React Native<\/tag-4> <\/tag-3> <tag-5> <tag-6>Site do React Native for Web<\/tag-6> <\/tag-5> <tag-7> <tag-8>Documentação do React Native<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do LiveCodes<\/tag-10> <\/tag-9> <tag-11> <tag-12>Carregar modelo inicial<\/tag-12> <\/tag-11>",
+    "reactNative.name": "React Native para Web",
+    "reactNativeTsx.desc": "React Native for Web é uma implementação acessível dos Componentes e APIs do React Native que é interoperável com React DOM.",
+    "reactNativeTsx.link": "<tag-1> <tag-2>Site oficial do React<\/tag-2> <\/tag-1> <tag-3> <tag-4>Site do React Native<\/tag-4> <\/tag-3> <tag-5> <tag-6>Site do React Native for Web<\/tag-6> <\/tag-5> <tag-7> <tag-8>Documentação do React Native<\/tag-8> <\/tag-7> <tag-9> <tag-10>Site do TypeScript<\/tag-10> <\/tag-9> <tag-11> <tag-12>Documentação do TypeScript<\/tag-12> <\/tag-11> <tag-13> <tag-14>Documentação do LiveCodes<\/tag-14> <\/tag-13> <tag-15> <tag-16>Carregar modelo inicial (JSX)<\/tag-16> <\/tag-15>",
+    "reactNativeTsx.name": "React Native para Web (com TypeScript)",
+    "reason.desc1": "Reason permite que você escreva código tipado simples, rápido e de qualidade, aproveitando os ecossistemas JavaScript e OCaml.",
+    "reason.desc2": "O compilador ReScript é usado aqui para compilar Reason para JavaScript.",
+    "reason.link": "<tag-1><tag-2>Site do Reason<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do Reason<\/tag-4> <\/tag-3> <tag-5> <tag-6>ReasonReact<\/tag-6> <\/tag-5> <tag-7> <tag-8>Site do ReScript<\/tag-8> <\/tag-7> <tag-9> <tag-10>Aprenda X em Y minutos, onde X=reason<\/tag-10> <\/tag-9> <tag-11> <tag-12>Carregar modelo inicial<\/tag-12> <\/tag-11>",
+    "reason.name": "Reason",
+    "rescript.desc": "ReScript é uma linguagem robustamente tipada que compila para JavaScript eficiente e legível por humanos.",
+    "rescript.link": "<tag-1> <tag-2>Site do ReScript<\/tag-2> <\/tag-1> <tag-3> <tag-4>ReScript \/ React<\/tag-4> <\/tag-3> <tag-5> <tag-6>Carregar modelo inicial<\/tag-6> <\/tag-5>",
+    "rescript.name": "ReScript",
+    "richtext.desc1": "Usando Quill:",
+    "richtext.desc2": "Seu poderoso editor de texto rico.",
+    "richtext.link": "<tag-1> <tag-2>Site oficial do Quill<\/tag-2> <\/tag-1>",
+    "richtext.name": "Editor de Texto Rico",
+    "riot.desc": "Biblioteca de UI simples e elegante baseada em componentes.",
+    "riot.link": "<tag-1> <tag-2>Site oficial do Riot.js<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Riot.js<\/tag-4> <\/tag-3> <tag-5> <tag-6>Carregar modelo inicial<\/tag-6> <\/tag-5>",
+    "riot.name": "Riot.js",
+    "ruby.desc": "Ruby rodando no navegador usando Opal.",
+    "ruby.link": "<tag-1> <tag-2>Site oficial do Ruby<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Ruby<\/tag-4> <\/tag-3> <tag-5><tag-6>Site oficial do Opal<\/tag-6><\/tag-5> <tag-7> <tag-8>CDN da biblioteca padrão do Opal<\/tag-8> <\/tag-7> <tag-9> <tag-10>Aprenda X em Y minutos, onde X=ruby<\/tag-10> <\/tag-9> <tag-11> <tag-12>Documentação do LiveCodes<\/tag-12> <\/tag-11> <tag-13> <tag-14>Carregar modelo inicial<\/tag-14> <\/tag-13>",
+    "ruby.name": "Ruby",
+    "rubyWasm.desc": "Ruby rodando no navegador usando ruby-wasm (uma coleção de portas WebAssembly do CRuby).",
+    "rubyWasm.link": "<tag-1> <tag-2>Site oficial do Ruby<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Ruby<\/tag-4> <\/tag-3> <tag-5> <tag-6>Site do ruby.wasm<\/tag-6> <\/tag-5> <tag-7><tag-8>CRuby<\/tag-8><\/tag-7> <tag-9> <tag-10>Aprenda X em Y minutos, onde X=ruby<\/tag-10> <\/tag-9> <tag-11> <tag-12>Documentação do LiveCodes<\/tag-12> <\/tag-11> <tag-13> <tag-14>Carregar modelo inicial<\/tag-14> <\/tag-13>",
+    "rubyWasm.name": "Ruby (WASM)",
+    "sass.desc": "Folhas de Estilo Sintaticamente Incríveis.",
+    "sass.link": "<tag-1> <tag-2>Site oficial do Sass<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Sass<\/tag-4> <\/tag-3> <tag-5> <tag-6>Sintaxe indentada do Sass<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=sass<\/tag-8> <\/tag-7>",
+    "sass.name": "Sass",
+    "scheme.desc": "Scheme rodando no navegador usando biwascheme.",
+    "scheme.link": "<tag-1> <tag-2>A Linguagem de Programação Scheme<\/tag-2> <\/tag-1> <tag-3> <tag-4>Site oficial do BiwaScheme<\/tag-4> <\/tag-3> <tag-5> <tag-6>Referência do BiwaScheme<\/tag-6> <\/tag-5> <tag-7> <tag-8>Carregar modelo inicial<\/tag-8> <\/tag-7>",
+    "scheme.name": "Scheme",
+    "scss.desc": "Folhas de Estilo Sintaticamente Incríveis.",
+    "scss.link": "<tag-1> <tag-2>Site oficial do Sass<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Sass<\/tag-4> <\/tag-3> <tag-5> <tag-6>Sintaxe SCSS<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=sass<\/tag-8> <\/tag-7>",
+    "scss.name": "SCSS",
+    "solid.desc": "Uma biblioteca JavaScript declarativa, eficiente e flexível para construir interfaces de usuário.",
+    "solid.link": "<tag-1><tag-2>Site oficial<\/tag-2><\/tag-1> <tag-3><tag-4>Documentação<\/tag-4><\/tag-3> <tag-5> <tag-6>Documentação do LiveCodes<\/tag-6> <\/tag-5> <tag-7> <tag-8>Carregar modelo inicial (TSX)<\/tag-8> <\/tag-7>",
+    "solid.name": "Solid",
+    "solid.tsx.desc": "Uma biblioteca JavaScript declarativa, eficiente e flexível para construir interfaces de usuário.",
+    "solid.tsx.link": "<tag-1><tag-2>Site oficial<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do Solid<\/tag-4> <\/tag-3> <tag-5> <tag-6>Site do TypeScript<\/tag-6> <\/tag-5> <tag-7> <tag-8>Documentação do TypeScript<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do LiveCodes<\/tag-10> <\/tag-9> <tag-11> <tag-12>Carregar modelo inicial<\/tag-12> <\/tag-11>",
+    "solid.tsx.name": "Solid (com TypeScript)",
+    "sql.desc": "SQLite compilado para JavaScript usando SQL.js",
+    "sql.link": "<tag-1> <tag-2>Site oficial do SQLite<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação de sintaxe do SQLite<\/tag-4> <\/tag-3> <tag-5> <tag-6>Site oficial do SQL.js<\/tag-6> <\/tag-5> <tag-7> <tag-8>Aprenda X em Y minutos, onde X=SQL<\/tag-8> <\/tag-7> <tag-9><tag-10>Carregar modelo inicial<\/tag-10><\/tag-9>",
+    "sql.name": "SQLite",
+    "stencil.desc": "Um Compilador para Web Components e Aplicações Web de Alto Desempenho.",
+    "stencil.link": "<tag-1> <tag-2>Site oficial do Stencil<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Stencil<\/tag-4> <\/tag-3> <tag-5> <tag-6>Carregar modelo inicial<\/tag-6> <\/tag-5>",
+    "stencil.name": "Stencil",
+    "styleProcessors.link": "<tag-1> <tag-2>Tailwind CSS<\/tag-2> <\/tag-1> <tag-3> <tag-4>Windi CSS<\/tag-4> <\/tag-3> <tag-5> <tag-6>UnoCSS<\/tag-6> <\/tag-5> <tag-7> <tag-8>Lightning CSS<\/tag-8> <\/tag-7> <tag-9> <tag-10>PostCSS<\/tag-10> Plugins: <tag-11> <tag-12> <tag-13>Autoprefixer<\/tag-13> <\/tag-12> <tag-14> <tag-15>postcss-preset-env<\/tag-15> <\/tag-14> <tag-16> <tag-17>postcss-import-url<\/tag-17> <\/tag-16> <tag-18> <tag-19>postcss-modules<\/tag-19> <\/tag-18> <\/tag-11> <\/tag-9>",
+    "styleProcessors.name": "Frameworks e Processadores CSS",
+    "stylis.desc": "Pré-processador CSS leve.",
+    "stylis.link": "<tag-1> <tag-2>Site oficial do Stylis<\/tag-2> <\/tag-1>",
+    "stylis.name": "Stylis",
+    "stylus.desc": "CSS Expressivo, Dinâmico e Robusto.",
+    "stylus.link": "<tag-1> <tag-2>Site oficial do Stylus<\/tag-2> <\/tag-1> <tag-3> <tag-4>Aprenda X em Y minutos, onde X=stylus<\/tag-4> <\/tag-3>",
+    "stylus.name": "Stylus",
+    "sucrase.desc": "Alternativa super rápida ao Babel para quando você pode direcionar para ambientes JS modernos.",
+    "sucrase.link": "<tag-1> <tag-2>Site oficial do Sucrase<\/tag-2> <\/tag-1> <tag-3> <tag-4>Repositório GitHub do Sucrase<\/tag-4> <\/tag-3> <tag-5> <tag-6>Documentação do LiveCodes<\/tag-6> <\/tag-5>",
+    "sucrase.name": "Sucrase",
+    "svelte.desc": "Aplicativos web ciberneticamente aprimorados.",
+    "svelte.link": "<tag-1> <tag-2>Site oficial do Svelte<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Svelte<\/tag-4> <\/tag-3> <tag-5> <tag-6>Carregar modelo inicial<\/tag-6> <\/tag-5>",
+    "svelte.name": "Svelte",
+    "tcl.desc": "Tcl rodando no navegador, usando <tag-1>wacl<\/tag-1>.",
+    "tcl.link": "<tag-1> <tag-2>Site oficial do Tcl<\/tag-2> <\/tag-1> <tag-3> <tag-4>Repositório do wacl<\/tag-4> <\/tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=Tcl<\/tag-6> <\/tag-5> <tag-7> <tag-8>Carregar modelo inicial<\/tag-8> <\/tag-7>",
+    "tcl.name": "Tcl (Tool Command Language)",
+    "teal.desc": "Um dialeto tipado de Lua.",
+    "teal.link": "<tag-1> <tag-2>Repositório GitHub do Teal<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Teal<\/tag-4> <\/tag-3> <tag-5> <tag-6>Tutorial do Teal<\/tag-6> <\/tag-5> <tag-7> <tag-8>Documentação do LiveCodes<\/tag-8> <\/tag-7> <tag-9> <tag-10>Carregar modelo inicial<\/tag-10> <\/tag-9>",
+    "teal.name": "Teal",
+    "tsx.desc": "TypeScript em JSX. TSX é compilado para JavaScript no LiveCodes usando o Compilador TypeScript. Por padrão, ele usa React como o runtime JSX.",
+    "tsx.link": "<tag-1> <tag-2>Site oficial do React<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação JSX no React<\/tag-4> <\/tag-3> <tag-5> <tag-6>Documentação do Typescript<\/tag-6> <\/tag-5> <tag-7> <tag-8>Documentação do LiveCodes<\/tag-8> <\/tag-7>",
+    "tsx.name": "TSX",
+    "twig.desc": "Uma implementação JavaScript da linguagem de template PHP <tag-1>Twig<\/tag-1> por <tag-2>Twig.js<\/tag-2>.",
+    "twig.link": "<tag-1> <tag-2>Site oficial do Twig<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Twig<\/tag-4> <\/tag-3> <tag-5> <tag-6>Repositório do Twig.js<\/tag-6> <\/tag-5> <tag-7> <tag-8>Documentação do Twig.js<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do LiveCodes<\/tag-10> <\/tag-9>",
+    "twig.name": "Twig",
+    "typescript.desc": "Um Superconjunto Tipado de JavaScript.",
+    "typescript.link": "<tag-1> <tag-2>Site oficial<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do TypeScript<\/tag-4> <\/tag-3> <tag-5> <tag-6>Aprenda X em Y minutos, onde X=TypeScript<\/tag-6> <\/tag-5> <tag-7> <tag-8>Carregar modelo inicial<\/tag-8> <\/tag-7>",
+    "typescript.name": "TypeScript",
+    "vue.link": "<tag-1> <tag-2>Site oficial do Vue.js v3<\/tag-2> <\/tag-1> <tag-3> <tag-4>Documentação do Vue3<\/tag-4> <\/tag-3> <tag-5> <tag-6>Componentes de arquivo único do Vue3<\/tag-6> <\/tag-5> <tag-7> <tag-8>Documentação do LiveCodes<\/tag-8> <\/tag-7> <tag-9><tag-10>Carregar modelo inicial<\/tag-10><\/tag-9>",
+    "vue.name": "Componentes de Arquivo Único Vue3",
+    "vue2.desc": "Carregado usando vue3-sfc-loader.",
+    "vue2.link": "<tag-1><tag-2>Site oficial do Vue.js<\/tag-2><\/tag-1> <tag-3> <tag-4>Documentação do Vue2<\/tag-4> <\/tag-3> <tag-5> <tag-6>Componentes de arquivo único do Vue2<\/tag-6> <\/tag-5> <tag-7> <tag-8>Repositório GitHub do vue3-sfc-loader<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do LiveCodes<\/tag-10> <\/tag-9>",
+    "vue2.name": "Componentes de Arquivo Único Vue2",
+    "wat.desc1": "Representação textual de baixo nível do formato binário WebAssembly (wasm).",
+    "wat.desc2": "É convertido para wasm usando wabt.js.",
+    "wat.link": "<tag-1><tag-2>WebAssembly.org<\/tag-2><\/tag-1> <tag-3> <tag-4>Especificações de Texto WebAssembly<\/tag-4> <\/tag-3> <tag-5> <tag-6>WebAssembly no MDN<\/tag-6> <\/tag-5> <tag-7> <tag-8>Entendendo o formato de texto WebAssembly<\/tag-8> <\/tag-7> <tag-9> <tag-10>Documentação do wabt.js<\/tag-10> <\/tag-9> <tag-11> <tag-12>Aprenda X em Y minutos, onde X=WebAssembly<\/tag-12> <\/tag-11> <tag-13><tag-14>Carregar modelo inicial<\/tag-14><\/tag-13>",
+    "wat.name": "Formato de Texto WebAssembly"
 }
