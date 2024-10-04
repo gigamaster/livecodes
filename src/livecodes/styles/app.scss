@@ -22,8 +22,8 @@
   --lt: 50%; // Lightness
 
   --color: hsl(var(--hue), var(--st), var(--lt));
-  --color10: hsl(var(--hue), var(--st), calc(var(--lt) * 0.2)); // 10%
-  --color15: hsl(var(--hue), var(--st), calc(var(--lt) * 0.3)); // 15%
+  --color10: hsl(var(--hue), calc(var(--st) * 0.3), calc(var(--lt) * 0.2)); // s12% l10%
+  --color15: hsl(var(--hue), calc(var(--st) * 0.5), calc(var(--lt) * 0.3)); // s20% l15%
   --color20: hsl(var(--hue), var(--st), calc(var(--lt) * 0.4)); // 20%
   --color25: hsl(var(--hue), var(--st), calc(var(--lt) * 0.5)); // 25%
   --color30: hsl(var(--hue), var(--st), calc(var(--lt) * 0.6)); // 30%
@@ -73,14 +73,14 @@
 
   --dropdown-bg-color: var(--dropdown);
   --dropdown-bg-active: var(--darker-bg-active);
-  --dropdown-border: 1px solid var(--darker-bg-color);
+  --dropdown-border: 1px solid var(--dark-bg-color);
   --dropdown-border-radius: var(--rs);
   --dropdown-color: var(--link);
   --dropdown-active: var(--darker-active);
   --dropdown-font: var(--s14);
   --dropdown-height: 32px;
   --dropdown-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.275);
-  --dropdown-split-color: var(--darker-bg-color);
+  --dropdown-split-color: var(--dark-bg-color);
   --submenu-arrow-color: var(--darker-color);
 
   --editor-title-bg-color: var(--darker-bg-color);
@@ -144,9 +144,8 @@
 
   --project-title-bg-active: var(--darker-bg-active);
   --project-title-bg-color: var(--darker-bg-color);
-
-  --project-title-border: 1px solid var(--color40);
-  --project-title-border-active: var(--active-bg);
+  --project-title-border-active: var(--dark-bg-active);
+  --project-title-border-color: var(--dark-bg-color);
   --project-title-border-radius: var(--rs);
   --project-title-box-shadow: 0 0 4px 1px var(--0);
   --project-title-active: var(--darker-active);
@@ -290,6 +289,7 @@ html.dark {
   // --tags-border-color: var(--input-border-color) !important;
   --tags-hover-border-color: var(--input-border-active) !important;
   --tags-focus-border-color: var(--input-border-active) !important;
+  background: #1e1e1e;
 
   * {
     &:-webkit-autofill,
@@ -323,6 +323,8 @@ html {
 @import 'rtl';
 
 @import 'icons';
+
+@import 'icons-share';
 
 a,
 a:visited {
@@ -556,7 +558,7 @@ kbd {
   #project-title {
     align-items: center;
     background: var(--project-title-bg-color);
-    border: var(--project-title-border-color);
+    border: 1px solid var(--project-title-border-color);
     border-radius: var(--project-title-border-radius);
     color: var(--project-title-color);
     display: flex;
@@ -569,7 +571,9 @@ kbd {
     padding: 0 var(--s4);
     place-self: center;
     position: relative;
+    text-overflow: ellipsis;
     transition: all 0.5s ease-in-out;
+    white-space: nowrap;
     width: 100%;
 
     &:hover,
@@ -583,13 +587,13 @@ kbd {
     &.unsaved {
       &::after {
         content: ' *';
-        margin: 5px;
+        margin: 4px;
         white-space: pre;
       }
 
       &::before {
         content: '* ';
-        margin: 5px;
+        // margin: 5px;
         visibility: hidden;
         white-space: pre;
       }
@@ -723,6 +727,10 @@ a#result-button {
     flex-wrap: wrap;
     height: var(--toolbar-height);
     width: 100%;
+
+    .dropdown-menu.submenu {
+      left: 44%;
+    }
   }
 
   #toolbar > .toolbar-app,
@@ -739,8 +747,14 @@ a#result-button {
     place-items: center;
   }
 
-  #toolbar #project-title {
+  #toolbar #select-editor {
     max-width: unset;
+
+    li > span {
+      /* white-space: nowrap; */
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
   }
 
   #toolbar #login-link,
@@ -753,8 +767,12 @@ a#result-button {
 
     ul li.editor-title {
       top: 0;
-      width: 80px;
+      width: 74px;
     }
+  }
+
+  #toolbar #project-title {
+    height: var(--s24);
   }
 
   #modal {
@@ -1255,10 +1273,6 @@ li.editor-title {
   top: 3px;
   width: 100px;
 
-  &.half-width {
-    width: 48%;
-  }
-
   &:hover {
     background-color: var(--editor-title-bg-active);
     border-color: var(--editor-title-bg-active);
@@ -1485,6 +1499,28 @@ li.editor-title {
   #editor-container {
     height: calc(100% - var(--toolbar-height));
   }
+
+  @media only screen and (max-width: 480px) and (orientation: portrait) {
+    #toolbar {
+      --toolbar-height: 42px;
+      display: flex;
+      flex-direction: unset;
+      flex-wrap: nowrap;
+      height: var(--toolbar-height);
+      width: 100%;
+
+      #select-editor {
+        height: var(--toolbar-height);
+        margin: 0;
+
+        li.editor-title {
+          height: 32px;
+          top: 0;
+          width: 74px;
+        }
+      }
+    }
+  }
 }
 // TODO TEST SIMPLE-MODE
 .simple-mode {
@@ -1537,6 +1573,9 @@ li.editor-title {
 // TODO REMOVE TEST FOCUS : html & var --uifocus
 html,
 .focus-mode {
+  #app-menu-button-project,
+  #app-menu-button-settings,
+  #app-menu-button-help,
   .language-menu-button,
   #login-link,
   #logout-link,

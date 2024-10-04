@@ -503,7 +503,7 @@ export const getModalWelcomeRecover = /* @__PURE__ */ (
 ) => welcomeContainer.querySelector('#modal #welcome-recover') as HTMLElement;
 
 export const getModalWelcomeScreen = /* @__PURE__ */ (welcomeContainer: HTMLElement) =>
-  welcomeContainer.querySelector('#welcome-screen-container') as HTMLElement;
+  welcomeContainer.querySelector('#welcome-screen-container #welcome-start') as HTMLElement;
 
 export const getModalWelcomeRecent = /* @__PURE__ */ (welcomeContainer: HTMLElement) =>
   welcomeContainer.querySelector('#modal #welcome-recent') as HTMLElement;

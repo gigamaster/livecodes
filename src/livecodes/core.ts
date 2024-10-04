@@ -3258,7 +3258,7 @@ const handleWelcome = () => {
 
     const defaultTemplateId = getAppData()?.defaultTemplate;
     if (!defaultTemplateId) {
-      UI.getWelcomeLinkNoDefaultTemplate(welcomeContainer).style.display = 'unset';
+      UI.getWelcomeLinkNoDefaultTemplate(welcomeContainer).style.display = 'inline-block';
     } else {
       const loadTemplateLink = UI.getWelcomeLinkLoadDefault(welcomeContainer);
       eventsManager.addEventListener(
@@ -3272,7 +3272,7 @@ const handleWelcome = () => {
         },
         false,
       );
-      loadTemplateLink.style.display = 'unset';
+      loadTemplateLink.style.display = 'block';
     }
     UI.getWelcomeLinkDefaultTemplateLi(welcomeContainer).style.visibility = 'visible';
 

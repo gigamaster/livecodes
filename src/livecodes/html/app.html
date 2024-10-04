@@ -137,7 +137,8 @@
             <a
               href="javascript:void(0)"
               id="fullscreen-button"
-              class="button hint--bottom"
+              data-hint="Full Screen"
+              class="button hint--bottom-left"
               data-i18n="app.fullscreen.hint"
               data-i18n-prop="data-hint"
             >
@@ -310,7 +311,7 @@
           styles: `html,body{background:#151718;border:1px solid #252728;border-radius:8px;}.knobs{--toggleSize:32px;--toggleOffset:0;}.knobs>label{padding:4px!important;}#knobsToggle:checked+.knobs[data-position~=bottom]>label{left:.25em;top:.25em!important;}.knobs__groups{margin-top:1rem;!important;}.knobs__controls{width:50%;}.knobs__controls>input{margin:0 auto 0 -.5em;}.poweredBy{display:none}.toggleSection:not(:checked)~.fieldset__group .fieldset__group__wrap{height:var(--height);}`,
           border: '2px solid #252728;',
         },
-        // live: false, // should update immediately (default true)
+        live: false, // should update immediately (default true)
         knobsToggle: true,
         persist: 0, // persist changes using localstorage
         visible: 0, // 0 - starts as hidden, 1 - starts as visible, 2 - always visible
