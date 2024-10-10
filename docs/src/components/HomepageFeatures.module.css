@@ -84,3 +84,7 @@ html[data-theme='light'] .rowDark {
   margin-top: 2em;
   text-align: center;
 }
+
+.text--justify {
+  text-align: justify;
+}

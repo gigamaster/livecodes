@@ -68,7 +68,7 @@ Do you work on multiple devices? No Problem! You may [sync](./sync.md), [backup 
 
 ## Client-side!
 
-LiveCodes runs in the browser, where all the processing/transpilation occurs, with no server rounds required. So, after the initial load, it becomes pretty fast. It can be hosted on any static file server or CDN. No `npm install`s. Just the browser!
+LiveCodes runs in the browser, where all the processing/transpilation occurs, with no server rounds required. So, after the initial load, it becomes pretty fast. It can be hosted on any static file server or CDN. No `npm install` just the browser!
 
 ## Developer-friendly
 

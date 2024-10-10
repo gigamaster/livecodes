@@ -20,13 +20,63 @@ interface FeatureItem {
 
 const FeatureList1: FeatureItem[] = [
   {
+    title: 'Standalone App',
+    image: './img/star.svg',
+    description: (
+      <>
+        Use the <Link to="./getting-started#standalone-app">standalone web app</Link> for quick
+        prototyping, testing new ideas or learning a new framework/language.
+        Local storage is used to store user preferences and{' '}
+        <Link to="./features/user-settings">settings</Link>. Organize your{' '}
+        <Link to="./features/projects">projects</Link> and{' '}
+        <Link to="./features/assets">assets</Link>. <Link to="./features/share">Share</Link> code
+        with friends. <Link to="./features/deploy">Deploy</Link> projects to public URLs.
+      </>
+    ),
+  },
+  {
+    title: 'Embedded Playgrounds',
+    image: './img/add-frame.svg',
+    description: (
+      <>
+        LiveCodes can be <Link to="./features/embeds">embedded</Link> in your web pages. Code can be
+        easily <Link to="./features/code-prefill">prefilled</Link>. This is particularly useful for
+        educational websites and for library documentations. It is{' '}
+        <Link to="./features/security">secure</Link> and highly{' '}
+        <Link to="./configuration">configurable</Link>.{' '}
+        <Link to="./features/intellisense">Intellisense</Link> is available even for custom
+        libraries!
+      </>
+    ),
+  },
+  {
+    title: 'Developer-Friendly',
+    image: './img/code.svg',
+    description: (
+      <>
+        It is easy to <Link to="./getting-started">get started</Link>. LiveCodes is highly{' '}
+        <Link to="./configuration/configuration-object">configurable</Link> (even by URL{' '}
+        <Link to="./configuration/query-params">query params</Link>). The{' '}
+        <Link to="./sdk/">SDK</Link> facilitates <Link to="./features/embeds">embedding</Link>{' '}
+        playgrounds and allows easy <Link to="./sdk/js-ts#sdk-methods">communication</Link> with
+        them. The SDK is available for <Link to="./sdk/js-ts">vanilla JS/TS</Link>,{' '}
+        <Link to="./sdk/react">React</Link>, <Link to="./sdk/vue">Vue</Link> and{' '}
+        <Link to="./sdk/svelte">Svelte</Link>. There is also a{' '}
+        <Link to="./sdk/headless">headless mode</Link> for full control over the UI.
+      </>
+    ),
+  },
+];
+
+const FeatureList2: FeatureItem[] = [
+  {
     title: 'Feature-Rich',
     image: './img/light-bulb.svg',
     description: (
       <>
         Supports{' '}
         <Link to="./languages">
-          <strong>90+ languages/frameworks</strong>
+          <strong>90+ languages and frameworks</strong>
         </Link>
         . TypeScript Support, npm Modules, Console, Compiled code viewer, Tests, Starter Templates,
         Save, Import, Export, Share, Deploy, Assets, Snippets, Backup/Restore, Sync, Broadcast and a
@@ -66,7 +116,7 @@ const FeatureList1: FeatureItem[] = [
   },
 ];
 
-const FeatureList2: FeatureItem[] = [
+const FeatureList3: FeatureItem[] = [
   {
     title: 'Powerful Editor',
     image: './img/feather.svg',
@@ -112,54 +162,7 @@ const FeatureList2: FeatureItem[] = [
   },
 ];
 
-const FeatureList3: FeatureItem[] = [
-  {
-    title: 'Standalone App',
-    image: './img/star.svg',
-    description: (
-      <>
-        Use the <Link to="./getting-started#standalone-app">standalone app</Link> for quick
-        prototyping, testing new ideas or learning a new framework/language. The app remembers your{' '}
-        <Link to="./features/user-settings">settings</Link>. Organize your{' '}
-        <Link to="./features/projects">projects</Link> and{' '}
-        <Link to="./features/assets">assets</Link>. <Link to="./features/share">Share</Link> code
-        with friends. <Link to="./features/deploy">Deploy</Link> projects to public URLs.
-      </>
-    ),
-  },
-  {
-    title: 'Embedded Playgrounds',
-    image: './img/add-frame.svg',
-    description: (
-      <>
-        LiveCodes can be <Link to="./features/embeds">embedded</Link> in your web pages. Code can be
-        easily <Link to="./features/code-prefill">prefilled</Link>. This is particularly useful for
-        educational websites and for library documentations. It is{' '}
-        <Link to="./features/security">secure</Link> and highly{' '}
-        <Link to="./configuration">configurable</Link>.{' '}
-        <Link to="./features/intellisense">Intellisense</Link> is available even for custom
-        libraries!
-      </>
-    ),
-  },
-  {
-    title: 'Developer-Friendly',
-    image: './img/code.svg',
-    description: (
-      <>
-        It is easy to <Link to="./getting-started">get started</Link>. LiveCodes is highly{' '}
-        <Link to="./configuration/configuration-object">configurable</Link> (even by URL{' '}
-        <Link to="./configuration/query-params">query params</Link>). The{' '}
-        <Link to="./sdk/">SDK</Link> facilitates <Link to="./features/embeds">embedding</Link>{' '}
-        playgrounds and allows easy <Link to="./sdk/js-ts#sdk-methods">communication</Link> with
-        them. The SDK is available for <Link to="./sdk/js-ts">vanilla JS/TS</Link>,{' '}
-        <Link to="./sdk/react">React</Link>, <Link to="./sdk/vue">Vue</Link> and{' '}
-        <Link to="./sdk/svelte">Svelte</Link>. There is also a{' '}
-        <Link to="./sdk/headless">headless mode</Link> for full control over the UI.
-      </>
-    ),
-  },
-];
+
 
 const FeatureList4: FeatureItem[] = [
   {
@@ -218,7 +221,7 @@ function Feature({ title, image, description }: FeatureItem) {
           <img className={styles.featureSvg} alt={title} src={image} />
         </div>
       )}
-      <div className="text--center padding-horiz--md">
+      <div className="text--justify padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
@@ -349,8 +352,8 @@ export default function HomepageFeatures(): JSX.Element {
                   <ol className={styles.steps}>
                     <li>
                       Go to{' '}
-                      <a href="https://livecodes.io/" target="_blank">
-                        livecodes.io
+                      <a href="https://gigamaster.github.io/livecodes/" target="_blank">
+                      Livecodes
                       </a>
                     </li>
                   </ol>
