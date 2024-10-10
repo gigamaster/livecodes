@@ -25,6 +25,10 @@ const builtAtFormatted = format(builtAt, 'MMMM dd, yyyy -- H:mm:ss.SSS');
   <style>
     .container,
     .container button {
+      background: #fff;
+      border-radius: 0.5em;
+      color: #111;
+      padding: 1em;
       text-align: center;
       font: 1em sans-serif;
     }

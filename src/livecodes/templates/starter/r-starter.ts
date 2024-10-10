@@ -8,8 +8,9 @@ export const rStarter: Template = {
   markup: {
     language: 'html',
     content: `
+    <div class="container">
 <div id="output">Loading...</div>
-
+</div>
 <script>
   // livecodes.r.config = {
   //   container: '#output',
@@ -23,7 +24,19 @@ export const rStarter: Template = {
   },
   style: {
     language: 'css',
-    content: '',
+    content: `
+body {
+  background: #fff;
+  border-radius: 0.5em;
+  color: #111;
+  padding: 1em;
+  text-align: center;
+  font: 1em sans-serif;
+}
+.logo {
+  width: 150px;
+}
+`.trimStart(),
   },
   script: {
     language: 'r',

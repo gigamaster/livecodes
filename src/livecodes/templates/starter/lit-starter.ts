@@ -47,6 +47,12 @@ export class SignalExample extends SignalWatcher(LitElement) {
       display: flex;
       flex-direction: column;
       align-items: center;
+      background: #fff;
+      border-radius: 0.5em;
+      color: #111;
+      padding: 1em;
+      text-align: center;
+      font: 1em sans-serif;
     }
     :host, button {
       font: 1em sans-serif;

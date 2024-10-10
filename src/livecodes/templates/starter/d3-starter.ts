@@ -7,11 +7,24 @@ export const d3Starter: Template = {
   activeEditor: 'script',
   markup: {
     language: 'html',
-    content: '<div id="chart">Loading...</div>\n',
+    content: `
+    <div class="container">
+      <h3>D3.js</h3>
+      <div id="chart">Loading...</div>
+    </div>
+    `,
   },
   style: {
     language: 'css',
     content: `
+.container {
+  background: #fff;
+  border-radius: 0.5em;
+  color: #111;
+  padding: 1em;
+  text-align: center;
+  font: 1em sans-serif;
+}
 .bar {
   fill: steelblue;
 }

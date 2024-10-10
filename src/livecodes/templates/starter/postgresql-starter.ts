@@ -52,6 +52,7 @@ export const postgresqlStarter: Template = {
 }
 
 #output table {
+  background: #ddd;
   border: 1px solid #ddd;
   border-collapse: separate;
   border-radius: 5px;

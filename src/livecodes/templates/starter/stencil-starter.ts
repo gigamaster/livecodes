@@ -21,8 +21,15 @@ import { Component, Prop, h, State } from "@stencil/core";
 @Component({
   tag: "my-app",
   styles: \`
-    my-app,
+    my-app {
+     margin: 1em;
+    }
+    .container,
     button {
+      background: #fff;
+      border-radius: 0.5em;
+      color: #111;
+      padding: 1em;
       text-align: center;
       font: 1em sans-serif;
     }

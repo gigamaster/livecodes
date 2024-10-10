@@ -20,8 +20,12 @@ import { Greeting, Counter } from './script';
   style: {
     language: 'css',
     content: `
-body,
-body button {
+#__livecodes_mdx_root__,
+#__livecodes_mdx_root__ button {
+  background: #fff;
+  border-radius: 0.5em;
+  color: #111;
+  padding: 1em;
   text-align: center;
   font: 1em sans-serif;
 }
