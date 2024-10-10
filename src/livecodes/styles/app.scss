@@ -260,6 +260,7 @@
 
 html,
 body {
+  // background: #1d1b1b;
   box-sizing: border-box;
   display: flex;
   font-family: system-ui, sans-serif;
@@ -287,7 +288,7 @@ html.dark {
   --tags-hover-border-color: var(--input-border-active) !important;
   --tags-focus-border-color: var(--input-border-active) !important;
   background: #1e1e1e;
-  background: #fff;
+  //background: #fff;
 
   * {
     &:-webkit-autofill,
@@ -311,6 +312,12 @@ html {
 .tagify__dropdown__item {
   color: var(--link);
 }
+
+// TODO -----//----- ↓ REMOVE UI CSS VARS TEST ↓
+
+@import 'app-ui';
+
+// TODO -----//----- ↑ REMOVE UI CSS VARS TEST ↑
 
 @import 'rtl';
 
@@ -943,6 +950,18 @@ a#result-button {
 }
 
 #result {
+  background-color: #ccc;
+  background-image: linear-gradient(45deg,
+  white 25%,
+  transparent 25%,
+  transparent 75%,
+  white 75%,
+  white),
+    linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%, white);
+  background-position:
+    0 0,
+    10px 10px;
+  background-size: 20px 20px;
   resize: both;
 
   &.full {
@@ -971,6 +990,17 @@ a#result-button {
       width: 400%;
     }
   }
+}
+
+html.dark #result {
+  background-color: #222;
+  background-image: linear-gradient(45deg,
+  #444 25%,
+  transparent 25%,
+  transparent 75%,
+  #444 75%,
+  #444),
+    linear-gradient(45deg, #444 25%, transparent 25%, transparent 75%, #444 75%, #444);
 }
 
 #tools-pane-bar {
@@ -1539,6 +1569,8 @@ li.editor-title {
   }
 }
 
+// TODO REMOVE TEST FOCUS : html & var --uifocus
+html,
 .focus-mode {
   #app-menu-button-project,
   #app-menu-button-settings,
@@ -1550,7 +1582,7 @@ li.editor-title {
   #settings-button,
   .tools-pane-title:not(.console),
   .tool-buttons {
-    visibility: hidden;
+    visibility: var(--uifocus);
   }
 
   #toolbar {

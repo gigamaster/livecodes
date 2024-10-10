@@ -17,7 +17,7 @@ body,
   overflow: hidden;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body,
   #livecodes {
     background-color: #111;
@@ -25,7 +25,7 @@ body,
     height: 100%;
     overflow: hidden;
   }
-}
+} */
 
 #livecodes {
   opacity: 0;
