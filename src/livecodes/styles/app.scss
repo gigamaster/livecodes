@@ -17,6 +17,7 @@
   --s40: calc(var(--unit) * 2.5);
   --rs: var(--s4); // border radius
 
+  // Color
   --hue: 214; // Hue from 0 to 360. 0=red, 120=green, and 214=blue.
   --st: 40%; // Saturation
   --lt: 50%; // Lightness
@@ -48,13 +49,14 @@
   --link: var(--color90);
   --light: var(--color80);
 
-  --layout: var(--color10);
-  --dropdown: var(--color15);
-  --modal: var(--color15);
+  // main
   --console-bg: var(--color10); // console
-
   --disabled: 0.5; // opacity
+  --dropdown: var(--color15);
+  --layout: var(--color10);
+  --modal: var(--color15);
 
+  // elements
   --btn-bg-color: var(--layout); // transparent; or var(--darker-bg-color);
   --btn-bg-active: var(--darker-bg-active);
   --btn-border: 0;
@@ -70,6 +72,9 @@
   --btn-modal-active: var(--darker-active);
   --btn-modal-color: var(--darker-color);
   --btn-modal-font: var(--s14);
+
+  --custom-editor-background-color: rgb(30, 30, 30);
+  --custom-editor-loading-color: rgb(255, 255, 255);
 
   --dropdown-bg-color: var(--dropdown);
   --dropdown-bg-active: var(--darker-bg-active);
@@ -91,33 +96,30 @@
   --editor-title-color: var(--darker-color);
   --editor-title-active: var(--darker-active);
 
+  --editor-tools-mark-color: #8bc34a;
+
+  --gutter-split-bg-color: var(--layout);
+  --gutter-split-bg-handle: var(--color);
+
   --input-bg-color: var(--darker-bg-color);
   --input-bg-active: var(--darker-bg-active);
-
   --input-border-color: var(--dark-bg-color);
   --input-border-active: var(--dark-bg-active);
-
   --input-range-bg-color: var(--darker-bg-color);
-
   --input-slider-bg-color: var(--darker-bg-color);
   --input-slider-border-color: var(--dark-bg-color);
-
   --input-switch-active: var(--color90);
   --input-switch-color: var(--color30); // menu switch inner uncheck
   --input-indeterminate-color: var(--darker-bg-color);
-  --input-color: var(--darker-color); // inner uncheck
+  // inner uncheck
   --input-active: var(--darker-active);
-
+  --input-color: var(--darker-color);
+  // wrap background form input
   --input-container: var(--color20);
 
   --language-menu-bg-color: var(--dark-bg-color);
   --language-menu-bg-active: var(--dark-bg-active);
   --language-menu-color-active: var(--dark-active);
-
-  --toolbar-bg-color: var(--layout);
-  --toolbar-border: 1px solid var(--color30);
-  --toolbar-color: var(--link);
-  --toolbar-height: 42px; // used to calc menu, toolbar & editor-container height
 
   --menu-bg-color: var(--layout); // or transparent
   --menu-bg-active: var(--darker-bg-active);
@@ -142,6 +144,9 @@
 
   --overlay-bg-color: hsla(0, 0%, 0%, 0.65);
 
+  --placeholder-color: var(--dropdown-color) !important;
+  --placeholder-color-focus: var(--dropdown-active) !important;
+
   --project-title-bg-active: var(--darker-bg-active);
   --project-title-bg-color: var(--darker-bg-color);
   --project-title-border-active: var(--dark-bg-active);
@@ -150,18 +155,10 @@
   --project-title-box-shadow: 0 0 4px 1px var(--0);
   --project-title-active: var(--darker-active);
   --project-title-color: var(--darker-color);
-
-  --resources-search-bg: var(--modal); // TODO modal results
+  // modal ressources results
+  --resources-search-bg: var(--modal);
   --resources-search-border: 1px solid var(--darker-bg-color);
   --resources-search-color: var(--darker-color);
-
-  --gutter-split-bg-color: var(--layout);
-  --gutter-split-bg-handle: var(--color);
-
-  --custom-editor-background-color: rgb(30, 30, 30);
-  --custom-editor-loading-color: rgb(255, 255, 255);
-
-  --editor-tools-mark-color: #8bc34a;
 
   --scrollbar-color: var(--darker-bg-color);
   --scrollbar-active-color: var(--darker-bg-active);
@@ -176,19 +173,6 @@
   --size-label-border: var(--dropdown-border);
   --size-label-color: var(--darker-color);
 
-  --toolspane-bar-text-color: var(--color40);
-  --toolspane-buttons-text-color: var(--color40);
-  --toolspane-button-color: var(--color40);
-  --toolspane-accent-color: var(--active);
-  --toolspane-non-accent-color: var(--light);
-
-  --toolspane-bg-color: var(--darker-bg-color);
-  --toolspane-bg-active: var(--darker-bg-active);
-  --toolspane-border: 2px solid var(--darker-bg-color); // border-bottom
-  --toolspane-border-active: 2px var(--darker-bg-active);
-  --toolspane-active: var(--darker-active);
-  --toolspane-color: var(--darker-color);
-
   --tests-bg-color: var(--color10);
   --tests-color: var(--darker-color);
   --test-results-bg-color: rgba(0, 128, 0, 0.2);
@@ -198,8 +182,23 @@
   --test-fail-border: 1px solid rgb(255, 0, 0);
   --test-fail-color: rgb(255, 102, 102);
 
-  --placeholder-color: var(--dropdown-color) !important;
-  --placeholder-color-focus: var(--dropdown-active) !important;
+  --toolbar-bg-color: var(--layout);
+  --toolbar-border: 1px solid var(--color30);
+  --toolbar-color: var(--link);
+  --toolbar-height: 42px; // used to calc menu, toolbar & editor-container height
+
+  --toolspane-bar-text-color: var(--color40);
+  --toolspane-buttons-text-color: var(--color40);
+  --toolspane-button-color: var(--color40);
+  --toolspane-accent-color: var(--active); // or #03a9f4;
+  --toolspane-non-accent-color: var(--light);
+
+  --toolspane-bg-color: var(--darker-bg-color);
+  --toolspane-bg-active: var(--darker-bg-active);
+  --toolspane-border: 2px solid var(--darker-bg-color); // border-bottom
+  --toolspane-border-active: 2px var(--darker-bg-active);
+  --toolspane-active: var(--darker-active);
+  --toolspane-color: var(--darker-color);
 }
 
 @import 'light';
@@ -216,8 +215,7 @@
   padding: 0;
 }
 
-// Todo scrollbar
-// Modern browsers
+// Modern browsers scrollbar
 // @supports (scrollbar-width: auto) {
 @supports (-moz-appearance: none) {
   * {
@@ -225,7 +223,7 @@
     scrollbar-width: var(--scrollbar-width, thin);
   }
 }
-// Legacy browsers
+// Legacy browsers scrollbar
 @supports selector(::-webkit-scrollbar) {
   *::-webkit-scrollbar {
     height: var(--scrollbar-width-legacy, 8px);
@@ -262,7 +260,6 @@
 
 html,
 body {
-  // background: #1d1b1b;
   box-sizing: border-box;
   display: flex;
   font-family: system-ui, sans-serif;
@@ -290,6 +287,7 @@ html.dark {
   --tags-hover-border-color: var(--input-border-active) !important;
   --tags-focus-border-color: var(--input-border-active) !important;
   background: #1e1e1e;
+  background: #fff;
 
   * {
     &:-webkit-autofill,
@@ -313,12 +311,6 @@ html {
 .tagify__dropdown__item {
   color: var(--link);
 }
-
-// TODO -----//----- ↓ REMOVE UI CSS VARS TEST ↓
-
-@import 'app-ui';
-
-// TODO -----//----- ↑ REMOVE UI CSS VARS TEST ↑
 
 @import 'rtl';
 
@@ -402,7 +394,7 @@ kbd {
   border-radius: var(--rs);
   font-size: var(--s14);
   margin-bottom: var(--s16);
-  padding: var(--s16);
+  padding: var(--s8);
   width: 100%;
 
   &.center {
@@ -456,7 +448,7 @@ kbd {
 }
 
 .smaller {
-  font-size: smaller;
+  font-size: var(--s14);
 }
 
 #container {
@@ -550,6 +542,10 @@ kbd {
       color: var(--menu-active);
     }
 
+    i {
+      margin-top: 4px;
+    }
+
     .menu-text {
       margin: 0 var(--s4);
     }
@@ -593,7 +589,6 @@ kbd {
 
       &::before {
         content: '* ';
-        // margin: 5px;
         visibility: hidden;
         white-space: pre;
       }
@@ -750,10 +745,10 @@ a#result-button {
   #toolbar #select-editor {
     max-width: unset;
 
-    li > span {
-      /* white-space: nowrap; */
+    .editor-title > span {
       overflow: hidden;
       text-overflow: ellipsis;
+      /* white-space: nowrap; */
     }
   }
 
@@ -948,18 +943,6 @@ a#result-button {
 }
 
 #result {
-  background-color: #ccc;
-  background-image: linear-gradient(45deg,
-  white 25%,
-  transparent 25%,
-  transparent 75%,
-  white 75%,
-  white),
-    linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%, white);
-  background-position:
-    0 0,
-    10px 10px;
-  background-size: 20px 20px;
   resize: both;
 
   &.full {
@@ -988,17 +971,6 @@ a#result-button {
       width: 400%;
     }
   }
-}
-
-html.dark #result {
-  background-color: #222;
-  background-image: linear-gradient(45deg,
-  #444 25%,
-  transparent 25%,
-  transparent 75%,
-  #444 75%,
-  #444),
-    linear-gradient(45deg, #444 25%, transparent 25%, transparent 75%, #444 75%, #444);
 }
 
 #tools-pane-bar {
@@ -1082,7 +1054,7 @@ html.dark #result {
 }
 
 #console-input-indicator {
-  color: #03a9f4; // TODO var(--toolspane-accent-color);
+  color: var(--toolspane-accent-color);
   padding-top: 2px;
 }
 
@@ -1419,13 +1391,12 @@ li.editor-title {
 
   svg {
     height: var(--s16);
-    padding: 2px; // todo remove to increase icon size
+    padding: 2px; // TODO Remove to increase icon size
     width: var(--s16);
   }
 }
 
 /* modes */
-// TODO TEST EMBED
 .embed {
   #toolbar {
     height: var(--toolbar-height);
@@ -1520,7 +1491,7 @@ li.editor-title {
     }
   }
 }
-// TODO TEST SIMPLE-MODE
+
 .simple-mode {
   .editor-title:not(.active),
   #toolbar #result-button,
@@ -1568,8 +1539,6 @@ li.editor-title {
   }
 }
 
-// TODO REMOVE TEST FOCUS : html & var --uifocus
-html,
 .focus-mode {
   #app-menu-button-project,
   #app-menu-button-settings,
@@ -1581,7 +1550,7 @@ html,
   #settings-button,
   .tools-pane-title:not(.console),
   .tool-buttons {
-    visibility: var(--uifocus);
+    visibility: hidden;
   }
 
   #toolbar {
@@ -1601,7 +1570,6 @@ html,
   }
 
   #editor-tools {
-    border-top: 1px solid var(--color1); // TODO dark -> light
     bottom: 0;
     position: absolute;
   }
@@ -1634,7 +1602,7 @@ html,
 
 #console-input {
   .cm-activeLine {
-    // background: var(--console-bg) !important;
+    // background: var(--console-bg) !important; TODO Test this
   }
 
   .cm-gutter {

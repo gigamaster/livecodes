@@ -391,7 +391,6 @@ const setEditorTitle = (editorId: EditorId, title: string) => {
 
 const createCopyButtons = () => {
   const editorIds: EditorId[] = ['markup', 'style', 'script'];
-  // const copyImgHtml = `<span><img src="${baseUrl}assets/images/copy.svg" alt="copy"></span>`;
   const copyImgHtml = `<span><i class="icon-copy" alt="copy"></i></span>`;
   editorIds.forEach((editorId) => {
     const copyButton = document.createElement('div');
@@ -1471,7 +1470,7 @@ const checkRecoverStatus = (isWelcomeScreen = false) => {
   return new Promise((resolve) => {
     const welcomeRecover = UI.getModalWelcomeRecover();
     if (isWelcomeScreen) {
-      welcomeRecover.style.display = 'unset';
+      welcomeRecover.style.display = 'block';
     } else {
       const div = document.createElement('div');
       div.innerHTML = recoverPromptScreen;
@@ -1506,7 +1505,10 @@ const checkRecoverStatus = (isWelcomeScreen = false) => {
         );
       }
       if (isWelcomeScreen) {
-        welcomeRecover.style.maxHeight = '0';
+        welcomeRecover.style.cssText = `
+         display: none;
+         order: 10;
+       `;
       } else {
         modal.close();
       }
@@ -1515,7 +1517,10 @@ const checkRecoverStatus = (isWelcomeScreen = false) => {
     });
     eventsManager.addEventListener(UI.getModalCancelRecoverButton(), 'click', () => {
       if (isWelcomeScreen) {
-        welcomeRecover.style.maxHeight = '0';
+        welcomeRecover.style.cssText = `
+        display: none;
+        order: 10;
+      `;
       } else {
         modal.close();
       }
