@@ -8,7 +8,7 @@ import { addSnippetScreen, snippetsScreen } from '../html';
 import { getLanguageTitle, languages } from '../languages';
 import { copyToClipboard, isMobile, loadScript } from '../utils';
 import { flexSearchUrl } from '../vendors';
-import { edit as editIcon, copy as copyIcon } from '../UI/icons';
+import { edit as editIcon, copy as copyIcon, iconDelete as deleteIcon } from '../UI/icons';
 
 import {
   getAddSnippetButton,
@@ -58,12 +58,16 @@ const createSnippetItem = (
     'snippets.copy.clickToCopySnippet',
     'Click to copy snippet',
   );
-  link.classList.add('snippet-item', 'hint--top');
+  link.classList.add('snippet-link', 'hint--top');
   link.title = item.description;
   link.onclick = (ev) => {
     ev.preventDefault();
     copySnippet(item.code, notifications);
   };
+
+  const container = document.createElement('div');
+  container.classList.add('snippet-item');
+  link.appendChild(container);
 
   const lastModified = isMobile()
     ? new Date(item.lastModified).toLocaleDateString()
@@ -72,7 +76,7 @@ const createSnippetItem = (
   const title = document.createElement('div');
   title.classList.add('open-title', 'overflow-text');
   title.textContent = item.title;
-  link.appendChild(title);
+  container.appendChild(title);
 
   if (!isMobile()) {
     const lastModifiedText = document.createElement('div');
@@ -84,7 +88,7 @@ const createSnippetItem = (
         modified: lastModified,
       },
     );
-    link.appendChild(lastModifiedText);
+    container.appendChild(lastModifiedText);
   }
 
   const tags = document.createElement('div');
@@ -95,11 +99,11 @@ const createSnippetItem = (
   langEl.title = window.deps.translateString('snippets.filter.language', 'filter by language');
   langEl.textContent = getLanguage(item.language);
   tags.append(langEl);
-  link.appendChild(tags);
+  container.appendChild(tags);
 
   const editorContainer = document.createElement('div');
   editorContainer.classList.add('editor', 'custom-editor');
-  link.appendChild(editorContainer);
+  container.appendChild(editorContainer);
   li.appendChild(link);
 
   const actions = document.createElement('div');
@@ -125,14 +129,11 @@ const createSnippetItem = (
   };
   actions.appendChild(editButton);
 
-  const deleteWrapper = document.createElement('div');
-  deleteWrapper.dataset.hint = window.deps.translateString('snippets.action.delete', 'Delete');
-  deleteWrapper.classList.add('hint--left');
-  actions.appendChild(deleteWrapper);
-
-  const deleteButton = document.createElement('button');
-  deleteButton.classList.add('delete-button');
-  deleteWrapper.appendChild(deleteButton);
+  const deleteButton = document.createElement('div');
+  deleteButton.innerHTML = deleteIcon;
+  deleteButton.classList.add('action-button', 'delete-button', 'hint--left');
+  deleteButton.dataset.hint = window.deps.translateString('snippets.action.delete', 'Delete');
+  actions.appendChild(deleteButton);
 
   return { link, deleteButton };
 };

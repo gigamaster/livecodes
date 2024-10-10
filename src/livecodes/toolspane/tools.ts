@@ -62,7 +62,7 @@ export const createToolsPane = (
   const tools = [...allTools];
 
   const result = getResultElement();
-  const gutterSize = 30;
+  const gutterSize = 32;
   type Sizes = {
     [key in ToolsPaneStatus]: [number, number];
   };
@@ -293,13 +293,14 @@ export const createToolsPane = (
 
     const buttons = document.createElement('div');
     buttons.id = 'tools-pane-buttons';
+    buttons.classList.add('tool-buttons');
     toolsPaneBar.appendChild(buttons);
 
-    const btnContainer = document.createElement('span');
-    btnContainer.classList.add('hint--top-left');
-    btnContainer.dataset.hint = window.deps.translateString('toolspane.close', 'Close');
     const closeButton = document.createElement('button');
-    closeButton.classList.add('delete-button');
+    closeButton.classList.add('console-close-button', 'hint--top-left');
+    closeButton.dataset.hint = window.deps.translateString('toolspane.close', 'Close');
+    const iconCSS = '<i class="icon-close"></i>';
+    closeButton.innerHTML = iconCSS;
 
     eventsManager.addEventListener(
       closeButton,
@@ -317,8 +318,7 @@ export const createToolsPane = (
       },
       false,
     );
-    btnContainer.appendChild(closeButton);
-    buttons.appendChild(btnContainer);
+    buttons.appendChild(closeButton);
 
     return toolsSplit;
   };

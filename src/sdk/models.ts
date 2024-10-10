@@ -1395,6 +1395,7 @@ export interface Console extends Tool {
   // filterLog: (filter: string) => void;
   evaluate: (code: string) => void;
   reloadEditor: (config: Config) => Promise<void>;
+  setTheme?: (theme: Theme) => void;
 }
 
 export interface CompiledCodeViewer extends Tool {
@@ -1673,7 +1674,20 @@ export interface BlocklyContent {
   js?: string;
 }
 
-export type AppLanguage = 'auto' | 'en' | 'zh-CN';
+export type AppLanguage =
+  | 'auto'
+  | 'ar'
+  | 'de'
+  | 'en'
+  | 'es'
+  | 'fr'
+  | 'hi'
+  | 'it'
+  | 'ja'
+  | 'pt'
+  | 'ru'
+  | 'ur'
+  | 'zh-CN';
 
 export interface User {
   uid: string;

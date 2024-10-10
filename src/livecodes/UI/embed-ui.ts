@@ -9,7 +9,6 @@ import { cloneObject, copyToClipboard, encodeHTML, escapeCode, indentCode } from
 import { permanentUrlService } from '../services/permanent-url';
 
 export const createEmbedUI = async ({
-  baseUrl,
   config,
   editorLanguages,
   modal,
@@ -18,7 +17,6 @@ export const createEmbedUI = async ({
   createEditorFn,
   getUrlFn,
 }: {
-  baseUrl: string;
   config: ContentConfig;
   editorLanguages: { [key in EditorId]: string };
   modal: ReturnType<typeof createModal>;
@@ -242,8 +240,8 @@ export const createEmbedUI = async ({
       helpLink.title = window.deps.translateString('generic.clickForInfo', 'Click for info...');
       title.appendChild(helpLink);
 
-      const helpIcon: HTMLImageElement = document.createElement('img');
-      helpIcon.src = baseUrl + 'assets/icons/info.svg';
+      const helpIcon = document.createElement('i');
+      helpIcon.classList.add('icon-info');
       helpLink.appendChild(helpIcon);
     }
 
@@ -436,7 +434,7 @@ export default function App() {
       nonEmbeddedUrl.searchParams.delete('lite');
       const projectUrl = decodeURIComponent(nonEmbeddedUrl.href);
       return `
-<iframe title="${title}" scrolling="no" loading="lazy" style="height:300px; width: 100%; border:1px solid black; border-radius:5px;" src="${iframeUrl}">
+<iframe title="${title}" scrolling="no" loading="lazy" style="height:300px; width: 100%; border:1px solid black; border-radius:4px;" src="${iframeUrl}">
   See the project <a href="${projectUrl}" target="_blank">${title}</a> on <a href="${livecodesUrl}" target="_blank">LiveCodes</a>.
 </iframe>
 `.trimStart();

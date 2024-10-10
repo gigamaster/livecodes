@@ -12,8 +12,19 @@ html {
 body,
 #livecodes {
   background-color: #fff;
+  color: #111;
   height: 100%;
   overflow: hidden;
+}
+
+@media (prefers-color-scheme: dark) {
+  body,
+  #livecodes {
+    background-color: #111;
+    color: #fff;
+    height: 100%;
+    overflow: hidden;
+  }
 }
 
 #livecodes {
@@ -82,9 +93,10 @@ body,
 
 .click-to-load #loading-text {
   animation: none;
-  background-color: rgb(235, 235, 235);
+  background: rgba(48, 48, 48, 0.5);
   border: 1px solid rgba(48, 48, 48, 0.5);
   border-radius: 2px;
+  color: rgb(235, 235, 235);
   padding: 5px;
 }
 

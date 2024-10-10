@@ -70,7 +70,9 @@ import { getFormatter } from './formatter';
 import { createNotifications } from './notifications';
 import { createModal } from './modal';
 import {
-  settingsMenuHTML,
+  menuProjectHTML,
+  menuSettingsHTML,
+  menuHelpHTML,
   resultTemplate,
   customSettingsScreen,
   testEditorScreen,
@@ -389,7 +391,7 @@ const setEditorTitle = (editorId: EditorId, title: string) => {
 
 const createCopyButtons = () => {
   const editorIds: EditorId[] = ['markup', 'style', 'script'];
-  const copyImgHtml = `<span><img src="${baseUrl}assets/images/copy.svg" alt="copy"></span>`;
+  const copyImgHtml = `<span><i class="icon-copy" alt="copy"></i></span>`;
   editorIds.forEach((editorId) => {
     const copyButton = document.createElement('div');
     copyButton.innerHTML = copyImgHtml;
@@ -560,7 +562,6 @@ const showMode = (mode?: Config['mode']) => {
   const resultElement = UI.getResultElement();
   const gutterElement = UI.getGutterElement();
   const runButton = UI.getRunButton();
-  const codeRunButton = UI.getCodeRunButton();
   const editorTools = UI.getEditorToolbar();
 
   const showToolbar = modeConfig[0] === '1';
@@ -572,7 +573,6 @@ const showMode = (mode?: Config['mode']) => {
   resultElement.style.display = 'flex';
   outputElement.style.display = 'block';
   runButton.style.visibility = 'visible';
-  codeRunButton.style.visibility = 'visible';
   if (gutterElement) {
     gutterElement.style.display = 'block';
   }
@@ -591,13 +591,11 @@ const showMode = (mode?: Config['mode']) => {
     editorsElement.style.flexBasis = '100%';
     outputElement.style.display = 'none';
     resultElement.style.display = 'none';
-    codeRunButton.style.display = 'none';
     split?.destroy(true);
     split = null;
   }
   if (mode === 'editor' || mode === 'codeblock') {
     runButton.style.visibility = 'hidden';
-    codeRunButton.style.visibility = 'hidden';
   }
   if (mode === 'codeblock') {
     editorTools.style.display = 'none';
@@ -1472,7 +1470,7 @@ const checkRecoverStatus = (isWelcomeScreen = false) => {
   return new Promise((resolve) => {
     const welcomeRecover = UI.getModalWelcomeRecover();
     if (isWelcomeScreen) {
-      welcomeRecover.style.display = 'unset';
+      welcomeRecover.style.display = 'block';
     } else {
       const div = document.createElement('div');
       div.innerHTML = recoverPromptScreen;
@@ -1507,7 +1505,10 @@ const checkRecoverStatus = (isWelcomeScreen = false) => {
         );
       }
       if (isWelcomeScreen) {
-        welcomeRecover.style.maxHeight = '0';
+        welcomeRecover.style.cssText = `
+         display: none;
+         order: 10;
+       `;
       } else {
         modal.close();
       }
@@ -1516,7 +1517,10 @@ const checkRecoverStatus = (isWelcomeScreen = false) => {
     });
     eventsManager.addEventListener(UI.getModalCancelRecoverButton(), 'click', () => {
       if (isWelcomeScreen) {
-        welcomeRecover.style.maxHeight = '0';
+        welcomeRecover.style.cssText = `
+        display: none;
+        order: 10;
+      `;
       } else {
         modal.close();
       }
@@ -1750,6 +1754,7 @@ const setTheme = (theme: Theme, editorTheme: Config['editorTheme']) => {
     editor?.setTheme(theme, editorTheme);
     customEditors[editor?.getLanguage()]?.setTheme(theme);
   });
+  toolsPane?.console?.setTheme?.(theme);
 };
 
 const setLayout = (layout: Config['layout']) => {
@@ -2277,7 +2282,6 @@ const handleRunButton = () => {
     await run();
   };
   eventsManager.addEventListener(UI.getRunButton(), 'click', handleRun);
-  eventsManager.addEventListener(UI.getCodeRunButton(), 'click', handleRun);
 };
 
 const handleResultButton = () => {
@@ -2419,26 +2423,67 @@ const handleProcessors = () => {
   });
 };
 
-const handleSettingsMenu = () => {
-  const menuContainer = UI.getSettingsMenuScroller();
-  const settingsButton = UI.getSettingsButton();
-  if (!menuContainer || !settingsButton) return;
-  menuContainer.innerHTML = settingsMenuHTML;
-
-  translateElement(menuContainer);
-
+const handleAppMenuProject = () => {
+  const menuProjectContainer = UI.getAppMenuProjectScroller();
+  const menuProjectButton = UI.getAppMenuProjectButton();
+  if (!menuProjectContainer || !menuProjectButton) return;
+  menuProjectContainer.innerHTML = menuProjectHTML; // settingsMenuHTML;
+  translateElement(menuProjectContainer);
   // This fixes the behaviour where :
   // clicking outside the settings menu but inside settings menu container,
   // hides the settings menu but not the container
   // on small screens the container covers most of the screen
   // which gives the effect of a non-responsive app
-  eventsManager.addEventListener(menuContainer, 'mousedown', (event) => {
-    if (event.target === menuContainer) {
-      menuContainer.classList.add('hidden');
+  eventsManager.addEventListener(menuProjectContainer, 'mousedown', (event) => {
+    if (event.target === menuProjectContainer) {
+      menuProjectContainer.classList.add('hidden');
     }
   });
-  eventsManager.addEventListener(settingsButton, 'mousedown', () => {
-    menuContainer.classList.remove('hidden');
+  eventsManager.addEventListener(menuProjectButton, 'mousedown', () => {
+    menuProjectContainer.classList.remove('hidden');
+  });
+};
+
+const handleAppMenuSettings = () => {
+  const menuSettingsContainer = UI.getAppMenuSettingsScroller();
+  const menuSettingsButton = UI.getAppMenuSettingsButton();
+  if (!menuSettingsContainer || !menuSettingsButton) return;
+  menuSettingsContainer.innerHTML = menuSettingsHTML; // settingsMenuHTML;
+
+  translateElement(menuSettingsContainer);
+  // This fixes the behaviour where :
+  // clicking outside the settings menu but inside settings menu container,
+  // hides the settings menu but not the container
+  // on small screens the container covers most of the screen
+  // which gives the effect of a non-responsive app
+  eventsManager.addEventListener(menuSettingsContainer, 'mousedown', (event) => {
+    if (event.target === menuSettingsContainer) {
+      menuSettingsContainer.classList.add('hidden');
+    }
+  });
+  eventsManager.addEventListener(menuSettingsButton, 'mousedown', () => {
+    menuSettingsContainer.classList.remove('hidden');
+  });
+};
+
+const handleAppMenuHelp = () => {
+  const menuHelpContainer = UI.getAppMenuHelpScroller();
+  const menuHelpButton = UI.getAppMenuHelpButton();
+  if (!menuHelpContainer || !menuHelpButton) return;
+  menuHelpContainer.innerHTML = menuHelpHTML;
+  translateElement(menuHelpContainer);
+  // This fixes the behaviour where :
+  // clicking outside the settings menu but inside settings menu container,
+  // hides the settings menu but not the container
+  // on small screens the container covers most of the screen
+  // which gives the effect of a non-responsive app
+  eventsManager.addEventListener(menuHelpContainer, 'mousedown', (event) => {
+    if (event.target === menuHelpContainer) {
+      menuHelpContainer.classList.add('hidden');
+    }
+  });
+  eventsManager.addEventListener(menuHelpButton, 'mousedown', () => {
+    menuHelpContainer.classList.remove('hidden');
   });
 };
 
@@ -3219,7 +3264,7 @@ const handleWelcome = () => {
 
     const defaultTemplateId = getAppData()?.defaultTemplate;
     if (!defaultTemplateId) {
-      UI.getWelcomeLinkNoDefaultTemplate(welcomeContainer).style.display = 'unset';
+      UI.getWelcomeLinkNoDefaultTemplate(welcomeContainer).style.display = 'inline-block';
     } else {
       const loadTemplateLink = UI.getWelcomeLinkLoadDefault(welcomeContainer);
       eventsManager.addEventListener(
@@ -3233,7 +3278,7 @@ const handleWelcome = () => {
         },
         false,
       );
-      loadTemplateLink.style.display = 'unset';
+      loadTemplateLink.style.display = 'block';
     }
     UI.getWelcomeLinkDefaultTemplateLi(welcomeContainer).style.visibility = 'visible';
 
@@ -3382,7 +3427,6 @@ const handleEmbed = () => {
       baseUrl + '{{hash:embed-ui.js}}'
     );
     await embedModule.createEmbedUI({
-      baseUrl,
       config: getContentConfig(getConfig()),
       editorLanguages: {
         markup: getLanguageTitle(getConfig().markup.language),
@@ -3903,8 +3947,8 @@ const handleResultPopup = () => {
     'Show result in new window',
   );
   popupBtn.style.pointerEvents = 'all'; //  override setting to 'none' on toolspane bar
-  const imgUrl = baseUrl + 'assets/images/new-window.svg';
-  popupBtn.innerHTML = `<span id="show-result"><img src="${imgUrl}" /></span>`;
+  const iconCSS = '<i class="icon-window-new"></i>';
+  popupBtn.innerHTML = `<button id="show-result">${iconCSS}</button>`;
   let url: string | undefined;
   const openWindow = async () => {
     if (resultPopup && !resultPopup.closed) {
@@ -3943,10 +3987,10 @@ const handleResultZoom = () => {
   zoomBtn.dataset.hint = window.deps.translateString('core.zoom.hint', 'Zoom');
   zoomBtn.style.pointerEvents = 'all'; //  override setting to 'none' on toolspane bar
   zoomBtn.innerHTML = `
-  <span class="text">
+  <button class="text">
     <span id="zoom-value">${String(Number(getConfig().zoom))}</span>
     &times;
-  </span>`;
+  </button>`;
 
   const toggleZoom = () => {
     const config = getConfig();
@@ -3973,12 +4017,9 @@ const handleBroadcastStatus = () => {
     'Broadcast',
   );
   broadcastStatusBtn.style.pointerEvents = 'all'; //  override setting to 'none' on toolspane bar
-  const imgUrl = baseUrl + 'assets/images/broadcast.svg';
-  broadcastStatusBtn.innerHTML = `
-  <span id="broadcast-status">
-    <img src="${imgUrl}" />
-    <span class="mark"></span>
-  </span>`;
+  const iconCSS = '<i class="icon-broadcast"></i>';
+  broadcastStatusBtn.innerHTML = `<button id="broadcast-status">${iconCSS}<span class="mark"></span></button>`;
+
   const showBroadcast = () => {
     showScreen('broadcast');
   };
@@ -4221,7 +4262,9 @@ const basicHandlers = () => {
 
 const extraHandlers = async () => {
   handleTitleEdit();
-  handleSettingsMenu();
+  handleAppMenuProject();
+  handleAppMenuSettings();
+  handleAppMenuHelp();
   handleSettings();
   handleProjectInfo();
   handleCustomSettings();
@@ -4265,7 +4308,7 @@ const configureEmbed = (config: Config, eventsManager: ReturnType<typeof createE
   }
 
   const logoLink = UI.getLogoLink();
-  logoLink.classList.add('hint--bottom-left');
+  logoLink.classList.add('hint--bottom-right');
   logoLink.dataset.hint = 'Edit in LiveCodes 🡕';
   logoLink.title = '';
 
