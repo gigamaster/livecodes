@@ -4,6 +4,14 @@ import type { I18nTranslation } from '../models';
 
 const translation: I18nTranslation = {
   about: {
+    credits: {
+      author: "Livecodes by Hatem Hosny © 2024 MIT License",
+      heading: "Credits",
+      i18n: "i18n Internationalization by Max Alex, aka zyf722",
+      para: "Livecodes is made possible by open source projects, web services and contributions:",
+      thirdparty: "Software packages and web services",
+      ui: "User Interface by Nuno Luciano, aka gigamaster",
+    },
     documentations: {
       aboutUs: '关于我们',
       contact: '联系方式',
@@ -493,6 +501,18 @@ const translation: I18nTranslation = {
   },
   menu: {
     about: '关于',
+    appHelp: {
+      heading: '帮助',
+      hint: '帮助',
+    },
+    appProject: {
+      heading: '项目',
+      hint: '项目',
+    },
+    appSettings: {
+      heading: '设置',
+      hint: '设置',
+    },
     assets: '资产 ...',
     autoSave: '自动保存',
     autoUpdate: '自动更新',

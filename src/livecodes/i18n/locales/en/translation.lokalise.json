@@ -1,8 +1,32 @@
 {
   "$comment": "ATTENTION: This file is auto-generated from source code. Do not edit manually!",
+  "about.credits.author": {
+    "notes": "",
+    "translation": "Livecodes by Hatem Hosny © 2024 MIT License"
+  },
+  "about.credits.heading": {
+    "notes": "",
+    "translation": "Credits"
+  },
+  "about.credits.i18n": {
+    "notes": "",
+    "translation": "i18n Internationalization by Max Alex, aka zyf722"
+  },
+  "about.credits.para": {
+    "notes": "",
+    "translation": "Livecodes is made possible by open source projects, web services and contributions:"
+  },
+  "about.credits.thirdparty": {
+    "notes": "",
+    "translation": "Software packages and web services"
+  },
+  "about.credits.ui": {
+    "notes": "",
+    "translation": "User Interface by Nuno Luciano, aka gigamaster"
+  },
   "about.documentations.aboutUs": {
     "notes": "",
-    "translation": "About us"
+    "translation": "About Livecodes"
   },
   "about.documentations.contact": {
     "notes": "",
@@ -1195,6 +1219,30 @@
   "menu.about": {
     "notes": "",
     "translation": "About"
+  },
+  "menu.appHelp.heading": {
+    "notes": "",
+    "translation": "Help"
+  },
+  "menu.appHelp.hint": {
+    "notes": "",
+    "translation": "Help"
+  },
+  "menu.appProject.heading": {
+    "notes": "",
+    "translation": "Project"
+  },
+  "menu.appProject.hint": {
+    "notes": "",
+    "translation": "Project"
+  },
+  "menu.appSettings.heading": {
+    "notes": "",
+    "translation": "Settings"
+  },
+  "menu.appSettings.hint": {
+    "notes": "",
+    "translation": "Settings"
   },
   "menu.assets": {
     "notes": "",
