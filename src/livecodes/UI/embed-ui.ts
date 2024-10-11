@@ -315,7 +315,7 @@ export const createEmbedUI = async ({
     };
     const importId = urlObj.searchParams.get('x');
     return {
-      ...(appUrl !== 'https://gigamaster.github.io/livecodes/' ? { appUrl } : {}),
+      ...(appUrl !== 'https://livecodes.io/' ? { appUrl } : {}), // TODO APPURL
       ...(Object.keys(config).length > 0 ? { config } : {}),
       ...(importId ? { import: importId } : {}),
       ...(data.lite ? { lite: data.lite } : {}),

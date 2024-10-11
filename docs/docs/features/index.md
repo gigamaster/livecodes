@@ -68,7 +68,7 @@ Do you work on multiple devices? No Problem! You may [sync](./sync.md), [backup 
 
 ## Client-side!
 
-LiveCodes runs in the browser, where all the processing/transpilation occurs, with no server rounds required. So, after the initial load, it becomes pretty fast. It can be hosted on any static file server or CDN. No `npm install` just the browser!
+LiveCodes runs in the browser, where all the processing/transpilation occurs, with no server rounds required. So, after the initial load, it becomes pretty fast. It can be hosted on any static file server or CDN. No `npm install` required, just the browser!
 
 ## Developer-friendly
 
@@ -86,6 +86,6 @@ Projects are private by default. The code you write in LiveCodes never leaves yo
 
 LiveCodes is free, with no limits for use and no ads.
 No account is even required (unless [GitHub integration](./github-integration.md) is needed).
-Do you want to [self-host](./self-hosting.md) it for commercial use? No problem! It is [MIT-licensed](../license.md) 🎉. Please consider [sponsoring LiveCodes](../sponsor.md) ❤.
+Do you want to [self-host](./self-hosting.md) it for commercial use? No problem! It is [MIT-licensed](../license.md) ?. Please consider [sponsoring LiveCodes](../sponsor.md) ❤.
 
 This was a quick overview of the important features of LiveCodes. A more detailed description of each feature is described in the following sections.
