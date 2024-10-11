@@ -441,7 +441,7 @@ const translation: I18nTranslation = {
       gettingStarted: '快速开始',
       github: 'GitHub',
       sdk: 'SDK',
-      sponsor: '赞助 LiveCodes',
+      sponsor: '赞助',
       twitter: '𝕏 / Twitter',
     },
     clickForInfo: '点击以获取信息...',

@@ -448,7 +448,7 @@ const translation = {
       gettingStarted: 'Getting Started',
       github: 'GitHub',
       sdk: 'SDK',
-      sponsor: 'Sponsor LiveCodes',
+      sponsor: 'Sponsor',
       twitter: '𝕏 / Twitter',
     },
     clickForInfo: 'Click for info...',

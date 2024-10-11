@@ -441,7 +441,7 @@ const translation: I18nTranslation = {
       gettingStarted: 'はじめに',
       github: 'GitHub',
       sdk: 'SDK',
-      sponsor: 'LiveCodesをスポンサー',
+      sponsor: 'をスポンサー',
       twitter: '𝕏 / Twitter',
     },
     clickForInfo: 'クリックして詳細を表示...',
