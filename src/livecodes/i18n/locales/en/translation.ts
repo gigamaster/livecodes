@@ -12,7 +12,7 @@ import type { I18nTranslationTemplate } from '../models';
 const translation = {
   about: {
     documentations: {
-      aboutUs: 'About us',
+      aboutUs: 'About Livecodes',
       contact: 'Contact',
       heading: 'Documentations',
       home: 'Home',
