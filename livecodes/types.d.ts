@@ -4001,8 +4001,16 @@ declare module "livecodes/i18n/i18n" {
 declare module "livecodes/i18n/locales/en/translation" {
     const translation: {
         readonly about: {
+            readonly credits: {
+                readonly author: "Livecodes by Hatem Hosny © 2024 MIT License";
+                readonly heading: "Credits";
+                readonly i18n: "i18n Internationalization by Max Alex, aka zyf722";
+                readonly para: "Livecodes is made possible by open source projects, web services and contributions:";
+                readonly thirdparty: "Software packages and web services";
+                readonly ui: "User Interface by Nuno Luciano, aka gigamaster";
+            };
             readonly documentations: {
-                readonly aboutUs: "About us";
+                readonly aboutUs: "About Livecodes";
                 readonly contact: "Contact";
                 readonly heading: "Documentations";
                 readonly home: "Home";
@@ -4428,7 +4436,7 @@ declare module "livecodes/i18n/locales/en/translation" {
                 readonly gettingStarted: "Getting Started";
                 readonly github: "GitHub";
                 readonly sdk: "SDK";
-                readonly sponsor: "Sponsor LiveCodes";
+                readonly sponsor: "Sponsor";
                 readonly twitter: "𝕏 / Twitter";
             };
             readonly clickForInfo: "Click for info...";
@@ -4488,6 +4496,18 @@ declare module "livecodes/i18n/locales/en/translation" {
         };
         readonly menu: {
             readonly about: "About";
+            readonly appHelp: {
+                readonly heading: "Help";
+                readonly hint: "Help";
+            };
+            readonly appProject: {
+                readonly heading: "Project";
+                readonly hint: "Project";
+            };
+            readonly appSettings: {
+                readonly heading: "Settings";
+                readonly hint: "Settings";
+            };
             readonly assets: "Assets …";
             readonly autoSave: "Auto Save";
             readonly autoUpdate: "Auto Update";
