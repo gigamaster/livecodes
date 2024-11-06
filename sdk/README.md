@@ -1,123 +1,127 @@
-[![Ceasefire_Now-techforpalestine.org](https://img.shields.io/badge/%F0%9F%87%B5%F0%9F%87%B8_Ceasefire_Now-techforpalestine.org-D83838?color=D83838)](https://www.techforpalestine.org)  
-[![LiveCodes: app version](https://img.shields.io/github/v/release/live-codes/livecodes?label=app)](https://livecodes.io)
-[![LiveCodes: languages](https://img.shields.io/badge/languages-91-blue)](https://livecodes.io/docs/languages/)
-[![license - MIT](https://img.shields.io/github/license/live-codes/livecodes)](https://github.com/live-codes/livecodes/blob/develop/LICENSE)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3d39f15618e048db9d13c2a0e8002b33)](https://www.codacy.com/gh/live-codes/livecodes/dashboard?utm_source=github.com&utm_medium=referral&utm_content=live-codes/livecodes&utm_campaign=Badge_Grade)
-[![LiveCodes: GitHub repo](https://img.shields.io/github/stars/live-codes/livecodes?style=social)](https://github.com/live-codes/livecodes)  
+[![Ceasefire_Now-techforpalestine.org](https://img.shields.io/badge/%F0%9F%87%B5%F0%9F%87%B8_Ceasefire_Now-techforpalestine.org-D83838?color=D83838)](https://www.techforpalestine.org)
+
+# LiveCodes
+
+Code Playground That Just Works!
+
+<p align="center">
+<img width="300" src="https://dev.livecodes.io/docs/img/livecodes-logo.svg"></img>
+</p>
+
+A [feature-rich](https://livecodes.io/docs/features/), open-source, **client-side** code playground for React, Vue, Svelte, Solid, Typescript, Python, Go, Ruby, PHP and [90+ languages/frameworks](https://livecodes.io/docs/languages/).
+
 [![LiveCodes: uptime status](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/live-codes/upptime/master/api/live-codes/uptime.json)](https://status.livecodes.io)
+[![LiveCodes: app version](https://img.shields.io/github/v/release/live-codes/livecodes?label=app)](https://livecodes.io)
 [![LiveCodes: npm version](https://img.shields.io/npm/v/livecodes)](https://www.npmjs.com/package/livecodes)
 [![LiveCodes: npm downloads](https://img.shields.io/npm/dw/livecodes)](https://www.npmjs.com/package/livecodes)
-[![LiveCodes: jsdelivr downloads](https://data.jsdelivr.com/v1/package/npm/livecodes/badge?style=rounded)](https://www.jsdelivr.com/package/npm/livecodes)  
+[![LiveCodes: jsdelivr downloads](https://data.jsdelivr.com/v1/package/npm/livecodes/badge?style=rounded)](https://www.jsdelivr.com/package/npm/livecodes)
+[![LiveCodes: languages](https://img.shields.io/badge/languages-91-blue)](https://livecodes.io/docs/languages/)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3d39f15618e048db9d13c2a0e8002b33)](https://www.codacy.com/gh/live-codes/livecodes/dashboard?utm_source=github.com&utm_medium=referral&utm_content=live-codes/livecodes&utm_campaign=Badge_Grade)
+[![Lokalise: translated](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/live-codes/lokalise-badge/main/badges/translated.json)](https://app.lokalise.com/public/34958094667a72e9454592.95108106/)
+[![Lokalise: UI languages](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/live-codes/lokalise-badge/main/badges/languages.json)](https://app.lokalise.com/public/34958094667a72e9454592.95108106/)
+[![license - MIT](https://img.shields.io/github/license/live-codes/livecodes)](https://github.com/live-codes/livecodes/blob/develop/LICENSE)
+[![LiveCodes: GitHub repo](https://img.shields.io/github/stars/live-codes/livecodes?style=social)](https://github.com/live-codes/livecodes)
 
+[Try it now on livecodes.io](https://livecodes.io)
 
------
+[Documentations](https://livecodes.io/docs)
 
-<h1 align="center">
-<br />
-<img width="300" src="./images/logo/livecodes-text-logo-nowrap.svg" alt="Live code playground free opensource for most popular programming languages and frameworks" /><br />
-Code Playground That Just Works!
-<br /><br />
-</h1>
+[What makes LiveCodes different?](https://livecodes.io/docs/why)
 
-<p align="center">Livecodes playground for React, Vue, Svelte, Solid, Typescript, Python, Go, Ruby, PHP</p>
-<p align="center">90+ programming languages, CSS processors, JavaScript libraries and frameworks !</p>
+![LiveCodes list of languages screenshot](https://dev.livecodes.io/docs/img/screenshots/livecodes-languages.jpg)
 
-<p align="center"><a href="https://gigamaster.github.io/livecodes/?new" target="_blank" title="Get Started with Livecodes Playground">
-<img width="100%" height="auto" alt="Live code playground web app for React, Vue, Svelte, Solid, Typescript, Python, Go, Ruby, PHP and most popular languages and frameworks" src="./images/livecodes-screenshot-1360x764.jpg" />
-</a></p>
+## Code Playground That Just Works!
 
----
+- No servers to configure (or pay for!)
+- No databases to maintain (or pay for!)
+- No installs
+- No configuration files
+- No build steps
+- No subscription fees (free and open-source)
+- No account required \*
+- No limits for usage (unlimited private projects)
+- 90+ languages/frameworks/processors
+- Large set of features and integrations
+- Import code from a wide variety of sources
+- Use modules from npm, deno.land/x, jsr, GitHub, and others
+- Easily embed it in your web pages
+- It runs in the browser (client-side)
 
-<h1 align="center"><br />
-Features Overview
-<br /><br />
-</h1>
+<sub>\* GitHub account is required only for features that use <a href="https://livecodes.io/docs/features/github-integration" target="_blank" rel="noopener">GitHub Integration</a>.</sub>
 
-<table align="center" with="100%">
-<tr>
-<td width="33%"><h3 align="center">Online Code Playground</h3><hr /></td>
-<td width="33%"><h3 align="center">Free and open-source</h3><hr /></td>
-<td width="33%"><h3 align="center">Embedded Playground</h3><hr /></td>
-</tr>
-<tr>
-<td><h3 align="center">No account required</h3></td>
-<td><h3 align="center">AI Code Assistant</h3></td>
-<td><h3 align="center">No limits for usage</h3></td>
-</tr>
-<tr>
-<td><h3 align="center">No servers to configure</h3></td>
-<td><h3 align="center">No databases to maintain</h3></td>
-<td><h3 align="center">No subscription fees</h3></td>
-</tr>
-<tr>
-<td><h3 align="center">Starter Templates</h3></td>
-<td><h3 align="center">Import and Export</h3></td>
-<td><h3 align="center">Deploy and Synchronize</h3></td>
-</tr>
-<tr>
-<td><h3 align="center">External resources</h3></td>
-<td><h3 align="center">Assets Manager</h3></td>
-<td><h3 align="center">Snippets manager</h3></td>
-</tr>
-</table>
+### Quick Start
 
-<p align="center">
-For details check the <a href="https://livecodes.io/docs/features/" target="_blank">full list of features</a>
-</p>
-<p align="center">
-<sub>* GitHub account is required only for features that use <a href="https://livecodes.io/docs/features/github-integration" target="_blank">GitHub Integration</a> !</sub>
-</p>
+#### Standalone App
 
----
+1. Go to [livecodes.io](https://livecodes.io)
 
-<h1 align="center"><br />
-Quick Start
-<br /><br />
-</h1>
+... and enjoy all the [features](https://livecodes.io/docs/features/)!
 
-<p align="center"><a href="https://gigamaster.github.io/livecodes/?new" target="_blank" title="Start Templates">
-<img width="100%" height="auto" alt="Live code playground web app for React, Vue, Svelte, Solid, Typescript, Python, Go, Ruby, PHP and most popular languages and frameworks" src="./images/livecodes-starter.jpg" />
-</a></p>
+#### Embedded Playground
 
-
-## Standalone App
-
-Go to [livecodes](https://gigamaster.github.io/livecodes/) ...select a Starter Template and enjoy all the [features](https://gigamaster.github.io/livecodes/docs/features/)!
-
-## Embedded Playground
-
-Add this code in a web application or website page:
+Add this code to your page:
 
 ```html
 <div id="container"></div>
 <script type="module">
-  import { createPlayground } from 'livecodes'
+  import { createPlayground } from 'https://cdn.jsdelivr.net/npm/livecodes';
 
   createPlayground('#container', {
-    appUrl: 'https://gigamaster.github.io/livecodes/',
     params: {
       markdown: '# Hello LiveCodes!',
-      css: 'body{background:#111;font-family:system-ui} h1 {color:dodgerblue;}',
+      css: 'h1 {color: dodgerblue;}',
       js: 'console.log("Hello, from JS!");',
       console: 'open',
     },
-  })
+  });
 </script>
-
 ```
 
 <sup>Check documentations for <a href="https://livecodes.io/docs/features/embeds" target="_blank" rel="noopener">Embedded Playgrounds</a>.</sup>
 
-## Self-hosted
+#### Self-hosted
 
 1. Download a [release](https://github.com/live-codes/livecodes/releases)
-2. Put it on a static file server (for free!) <a href="https://pages.cloudflare.com/" target="_blank" rel="noopener">Cloudfare</a>, <a href="https://vercel.com/" target="_blank" rel="noopener">Vercel</a>, <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a>, <a href="https://firebase.google.com/" target="_blank" rel="noopener">Firebase</a>, <a href="https://pages.github.com/" target="_blank" rel="noopener">Github Pages</a>
+2. Put it on a static file server (for free!) <sup><a href="https://pages.cloudflare.com/" target="_blank" rel="noopener">1</a>, <a href="https://vercel.com/" target="_blank" rel="noopener">2</a>, <a href="https://www.netlify.com/" target="_blank" rel="noopener">3</a>, <a href="https://firebase.google.com/" target="_blank" rel="noopener">4</a>, <a href="https://pages.github.com/" target="_blank" rel="noopener">5</a></sup>
 
    <sup>Check the guide for <a href="https://livecodes.io/docs/features/self-hosting" target="_blank" rel="noopener">self-hosting</a> (including the built-in setup to deploy to GitHub Pages).</sup>
 
 ... and it just works!
 
------
+## Feature Summary
+
+- A wide range of [language support](https://livecodes.io/docs/languages/) (90+ languages/frameworks/processors)
+- [Powerful Editor](https://livecodes.io/docs/features/editor-settings)
+- Mobile-friendly
+- [External resources/libraries](https://livecodes.io/docs/features/external-resources)
+- [Import modules](https://livecodes.io/docs/features/module-resolution) from npm, deno.land/x, jsr, GitHub and others
+- [Code Pre-fill](https://livecodes.io/docs/features/code-prefill)
+- [Import](https://livecodes.io/docs/features/import)/[Export](https://livecodes.io/docs/features/export) [projects](https://livecodes.io/docs/features/projects)
+- [Share](https://livecodes.io/docs/features/share)
+- [Embed the playground](https://livecodes.io/docs/features/embeds) in any web page
+- [Display modes](https://livecodes.io/docs/features/display-modes)
+- [Deploy](https://livecodes.io/docs/features/deploy)
+- [Starter Templates](https://livecodes.io/docs/features/templates)
+- [Assets](https://livecodes.io/docs/features/assets)
+- [Themes](https://livecodes.io/docs/features/themes)
+- [Dev Tools](https://livecodes.io/docs/features/tools-pane) ([console](https://livecodes.io/docs/features/console), [compiled code viewer](https://livecodes.io/docs/features/compiled-code), [test runner](https://livecodes.io/docs/features/tests))
+- [Code formatting](https://livecodes.io/docs/features/code-format)
+- [Intellisense](https://livecodes.io/docs/features/intellisense)
+- [AI Code Assistant 🪄](https://livecodes.io/docs/features/ai)
+- [Lite mode](https://livecodes.io/docs/features/lite)
+- [Read-only mode](https://livecodes.io/docs/features/read-only)
+- [Broadcast](https://livecodes.io/docs/features/broadcast)
+- [Sync](https://livecodes.io/docs/features/sync)
+- [Backup/Restore](https://livecodes.io/docs/features/backup-restore)
+- [Client-side!](https://livecodes.io/docs/why#client-side)
+- Very [configurable](https://livecodes.io/docs/configuration/)
+- Developer-friendly build-free environment
+- Powerful [SDK](https://livecodes.io/docs/sdk/) (available for [vanilla JavaScript, TypeScript](https://livecodes.io/docs/sdk/js-ts), [React](https://livecodes.io/docs/sdk/react), [Vue](https://livecodes.io/docs/sdk/vue) and [Svelte](https://livecodes.io/docs/sdk/svelte))
+- Comprehensive [Documentations](https://livecodes.io/docs/)
+- Focused on [privacy and security](https://livecodes.io/docs/features/security)
+- Free and [Open-Source](https://livecodes.io/docs/license)
+
+For details check the [full list of features](https://livecodes.io/docs/features/).
 
 ## LiveCodes SDK
 
@@ -222,62 +226,76 @@ Please refer to the [contribution guide](https://github.com/live-codes/livecodes
 
 LiveCodes uses services that are generously provided by:
 
-<table align="center" with="100%">
-<tr>
-<td width="33%">
+<p>
 <a href="https://pages.cloudflare.com/" target="_blank" title="Cloudflare Pages">
-  <img alt="Cloudflare Pages" width="200" src="./docs/static/img/credits/cloudflare-pages.svg">
-</img></a>
-</td>
-<td width="33%"><a href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr">
-  <img alt="jsDelivr" width="200" src="./docs/static/img/credits/jsdelivr.svg">
-</img></a></td>
-<td width="33%"><a href="https://esm.sh/" target="_blank" title="esm.sh">
-  <img alt="esm.sh" width="200" src="./docs/static/img/credits/esm.sh.png">
-</img></a></td>
-</tr>
-<tr>
-<td><a href="https://unpkg.com/" target="_blank" title="unpkg">
-  <img alt="unpkg" width="200" src="./docs/static/img/credits/unpkg.png">
-</img></a></td>
-<td><a href="https://codeium.com/" target="_blank" title="Codeium">
-  <img alt="Codeium" width="200" src="./docs/static/img/credits/codeium.svg">
-</img></a></td>
-<td><a href="https://bundlejs.com/" target="_blank" title="bundlejs">
-  <img alt="bundlejs" width="200" src="./docs/static/img/credits/bundlejs.jpg">
-</img></a></td>
-</tr>
-<tr>
-<td><a href="https://dpaste.com/" target="_blank" title="dpaste">
-  <img alt="dpaste" width="200" src="./docs/static/img/credits/dpaste.png">
-</img></a></td>
-<td><a href="https://github.com/" target="_blank" title="GitHub">
-  <img alt="GitHub" width="200" src="./docs/static/img/credits/github.png">
-</img></a></td>
-<td><a href="https://www.sonarsource.com/products/sonarcloud/" target="_blank" title="SonarCloud">
-  <img alt="SonarCloud" width="200" src="./docs/static/img/credits/sonarcloud.svg">
-</img></a></td>
-</tr>
-<tr>
-<td><a href="https://www.codacy.com/" target="_blank" title="Codacy">
-  <img alt="Codacy" width="200" src="./docs/static/img/credits/codacy.svg">
-</img></a></td>
-<td><a href="https://bundlewatch.io/" target="_blank" title="BundleWatch">
-  <img alt="BundleWatch" width="200" src="./docs/static/img/credits/bundlewatch.svg">
-</img></a></td>
-<td><a href="https://www.browserstack.com/" target="_blank" title="BrowserStack">
-  <img alt="BrowserStack" width="200" src="./docs/static/img/credits/browserstack.svg">
-</img></a></td>
-</tr>
-<tr>
-<td><a href="https://lokalise.com/" target="_blank" title="Lokalise">
-  <img alt="Lokalise" width="200" src="./docs/static/img/credits/lokalise.png">
-</img></a></td>
-<td></td>
-<td></td>
-</tr>
-</table>
-
+  <img alt="Cloudflare Pages" width="200" src="https://dev.livecodes.io/docs/img/credits/cloudflare-pages.svg">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://www.jsdelivr.com/" target="_blank" title="jsDelivr">
+  <img alt="jsDelivr" width="200" src="https://dev.livecodes.io/docs/img/credits/jsdelivr.svg">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://esm.sh/" target="_blank" title="esm.sh">
+  <img alt="esm.sh" width="200" src="https://dev.livecodes.io/docs/img/credits/esm.sh.png">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://unpkg.com/" target="_blank" title="unpkg">
+  <img alt="unpkg" width="200" src="https://dev.livecodes.io/docs/img/credits/unpkg.png">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://codeium.com/" target="_blank" title="Codeium">
+  <img alt="Codeium" width="200" src="https://dev.livecodes.io/docs/img/credits/codeium.svg">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://bundlejs.com/" target="_blank" title="bundlejs">
+  <img alt="bundlejs" width="200" src="https://dev.livecodes.io/docs/img/credits/bundlejs.jpg">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://dpaste.com/" target="_blank" title="dpaste">
+  <img alt="dpaste" width="200" src="https://dev.livecodes.io/docs/img/credits/dpaste.png">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://github.com/" target="_blank" title="GitHub">
+  <img alt="GitHub" width="200" src="https://dev.livecodes.io/docs/img/credits/github.png">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://netlify.com/" target="_blank" title="Netlify">
+  <img alt="Netlify" width="200" src="https://dev.livecodes.io/docs/img/credits/netlify.svg">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://www.sonarsource.com/products/sonarcloud/" target="_blank" title="SonarCloud">
+  <img alt="SonarCloud" width="200" src="https://dev.livecodes.io/docs/img/credits/sonarcloud.svg">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://www.codacy.com/" target="_blank" title="Codacy">
+  <img alt="Codacy" width="200" src="https://dev.livecodes.io/docs/img/credits/codacy.svg">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://bundlewatch.io/" target="_blank" title="BundleWatch">
+  <img alt="BundleWatch" width="200" src="https://dev.livecodes.io/docs/img/credits/bundlewatch.svg">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://www.browserstack.com/" target="_blank" title="BrowserStack">
+  <img alt="BrowserStack" width="200" src="https://dev.livecodes.io/docs/img/credits/browserstack.svg">
+</img></a><br /><br />
+</p>
+<p>
+<a href="https://lokalise.com/" target="_blank" title="Lokalise">
+  <img alt="Lokalise" width="200" src="https://dev.livecodes.io/docs/img/credits/lokalise.png">
+</img></a><br /><br />
+</p>
 
 ## Third Party Packages
 

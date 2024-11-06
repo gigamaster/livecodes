@@ -323,7 +323,7 @@ declare module 'livecodes/models' {
                 * (e.g. a [self-hosted app](https://livecodes.io/docs/features/self-hosting) or a [permanent URL](https://livecodes.io/docs/features/permanent-url)).
                 *
                 * If supplied with an invalid URL, an error is thrown.
-                * @default 'https://gigamaster.github.io/livecodes/'
+                * @default 'https://livecodes.io'
                 */
             appUrl?: string;
             /**
@@ -674,6 +674,12 @@ declare module 'livecodes/models' {
                 */
             theme: Theme;
             /**
+                * Sets the app theme color.
+                * If `undefined`, it is set to `"hsl(214, 40%, 50%)"`.
+                * @default undefined
+                */
+            themeColor: string | undefined;
+            /**
                 * Sets the [code editor](https://livecodes.io/docs/features/editor-settings) themes.
                 *
                 * See docs for [editor themes](https://livecodes.io/docs/configuration/configuration-object#editortheme) for details.
@@ -690,7 +696,7 @@ declare module 'livecodes/models' {
                 */
             fontFamily: string | undefined;
             /**
-                * Sets the [code editor](https://livecodes.io/docs/features/editor-settings) font size.
+                * Sets the font size.
                 *
                 * If `undefined` (the default), the font size is set to 14 for the full app and 12 for [embeds](https://livecodes.io/docs/features/embeds).
                 * @default undefined
