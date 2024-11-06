@@ -99,6 +99,7 @@ import {
 } from './config';
 import { isGithub } from './import/check-src';
 import {
+  colorToHsla,
   copyToClipboard,
   debounce,
   getValidUrl,
@@ -107,6 +108,7 @@ import {
   stringToValidJson,
   toDataUrl,
   predefinedValues,
+  colorToHex,
 } from './utils';
 import { compress } from './utils/compression';
 import { getCompiler, getAllCompilers, cjs2esm, getCompileResult } from './compiler';
@@ -151,6 +153,7 @@ import type {
   I18nTranslationTemplate,
 } from './i18n';
 import { appLanguages } from './i18n/app-languages';
+import { themeColors } from './UI/theme-colors';
 
 // declare global dependencies
 declare global {
@@ -211,6 +214,7 @@ const broadcastInfo: BroadcastInfo = {
   broadcastSource: false,
 };
 let resultPopup: Window | null = null;
+let defaultColor: string | null = null;
 const sdkWatchers = {
   load: createPub<void>(),
   ready: createPub<void>(),
@@ -1303,7 +1307,7 @@ const applyConfig = async (newConfig: Partial<Config>) => {
   if (newConfig.zoom) {
     zoom(newConfig.zoom);
   }
-  if (newConfig.theme || newConfig.editorTheme) {
+  if (newConfig.theme || newConfig.editorTheme || newConfig.themeColor || newConfig.fontSize) {
     setTheme(
       newConfig.theme || getConfig().theme,
       newConfig.editorTheme || getConfig().editorTheme,
@@ -1505,10 +1509,7 @@ const checkRecoverStatus = (isWelcomeScreen = false) => {
         );
       }
       if (isWelcomeScreen) {
-        welcomeRecover.style.cssText = `
-         display: none;
-         order: 10;
-       `;
+        welcomeRecover.classList.add('cancelled');
       } else {
         modal.close();
       }
@@ -1517,10 +1518,7 @@ const checkRecoverStatus = (isWelcomeScreen = false) => {
     });
     eventsManager.addEventListener(UI.getModalCancelRecoverButton(), 'click', () => {
       if (isWelcomeScreen) {
-        welcomeRecover.style.cssText = `
-        display: none;
-        order: 10;
-      `;
+        welcomeRecover.classList.add('cancelled');
       } else {
         modal.close();
       }
@@ -1746,15 +1744,71 @@ const setTheme = (theme: Theme, editorTheme: Config['editorTheme']) => {
   const root = document.querySelector(':root');
   root?.classList.remove(...themes);
   root?.classList.add(theme);
+  changeThemeColor();
+  setFontSize();
   const themeToggle = UI.getThemeToggle();
   if (themeToggle) {
     themeToggle.checked = theme === 'dark';
+  }
+  const darkThemeButton = UI.getDarkThemeButton();
+  if (darkThemeButton && !isEmbed) {
+    if (theme === 'dark') {
+      darkThemeButton.style.display = 'inherit';
+    } else {
+      darkThemeButton.style.display = 'none';
+    }
+  }
+  const lightThemeButton = UI.getLightThemeButton();
+  if (lightThemeButton && !isEmbed) {
+    if (theme === 'light') {
+      lightThemeButton.style.display = 'inherit';
+    } else {
+      lightThemeButton.style.display = 'none';
+    }
   }
   getAllEditors().forEach((editor) => {
     editor?.setTheme(theme, editorTheme);
     customEditors[editor?.getLanguage()]?.setTheme(theme);
   });
   toolsPane?.console?.setTheme?.(theme);
+};
+
+const changeThemeColor = () => {
+  const { themeColor, theme } = getConfig();
+  const color = themeColor || getDefaultColor();
+  const { h, s, l } = colorToHsla(color);
+  const root = document.querySelector(':root') as HTMLElement;
+  root.style.setProperty('--hue', `${h}`);
+  root.style.setProperty('--st', `${s}%`);
+  root.style.setProperty('--lt', `${theme === 'light' ? 100 : l}%`);
+
+  const customColorInput = UI.getThemeColorSelector()?.querySelector(
+    'input[type="color"]',
+  ) as HTMLInputElement;
+  if (customColorInput) {
+    customColorInput.value = colorToHex(color);
+  }
+};
+
+const getDefaultColor = () => {
+  if (defaultColor) return defaultColor;
+  const root = document.querySelector(':root') as HTMLElement;
+  const theme = getConfig().theme;
+  root.classList.remove('light');
+  const h = getComputedStyle(root).getPropertyValue('--hue');
+  const s = getComputedStyle(root).getPropertyValue('--st');
+  const l = getComputedStyle(root).getPropertyValue('--lt');
+  if (theme === 'light') {
+    root.classList.add('light');
+  }
+  defaultColor = `hsl(${h}, ${s}, ${l})`;
+  return defaultColor;
+};
+
+const setFontSize = () => {
+  const fontSize = getConfig().fontSize || (isEmbed ? 12 : 14);
+  const root = document.querySelector(':root') as HTMLElement;
+  root.style.setProperty('--font-size', `${fontSize + 2}px`);
 };
 
 const setLayout = (layout: Config['layout']) => {
@@ -2030,6 +2084,69 @@ const getVersion = (log = true) => {
   };
 };
 
+const showConsoleMessage = () => {
+  if (isEmbed) return;
+  const docsBaseUrl = predefinedValues.DOCS_BASE_URL || 'docs';
+  const docsUrl = docsBaseUrl?.startsWith('http')
+    ? docsBaseUrl
+    : new URL(docsBaseUrl, location.href).href;
+
+  const items = [
+    {
+      content: ' ',
+      style:
+        'padding-left: 2.5em; line-height: 4em; background-size: 2.5em; background-repeat: no-repeat; background-position: left center; background-image: url("data:image/svg+xml;charset=UTF-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3MzciIGhlaWdodD0iNDg4IiAgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCI+PHN0eWxlPjwhW0NEQVRBWy5Ce3N0cm9rZTpub25lfS5De2ZpbGw6dXJsKCNDKX0uRHtmaWxsOiM5NmJmM2R9LkV7ZmlsbC1ydWxlOm5vbnplcm99XV0+PC9zdHlsZT48ZGVmcz48ZmlsdGVyIGlkPSJBIiB4PSItMS44MTgyJSIgeT0iLTIuNzIyOSUiIHdpZHRoPSIxMDQuMDU1OSUiIGhlaWdodD0iMTA2LjA3NDElIj48ZmVHYXVzc2lhbkJsdXIgaW49IlNvdXJjZUFscGhhIiBzdGREZXZpYXRpb249IjUiLz48ZmVPZmZzZXQgZHg9IjMiIGR5PSIzIiByZXN1bHQ9IkIiLz48ZmVGbG9vZCBmbG9vZC1jb2xvcj0iIzAwMCIgZmxvb2Qtb3BhY2l0eT0iLjUiLz48ZmVDb21wb3NpdGUgaW4yPSJCIiBvcGVyYXRvcj0iaW4iIHJlc3VsdD0iQyIvPjxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iQyIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT48L2ZpbHRlcj48ZmlsdGVyIGlkPSJCIiB4PSItNC40MDY4JSIgeT0iLTMuNjExMSUiIHdpZHRoPSIxMDkuODMwNSUiIGhlaWdodD0iMTA4LjA1NTYlIj48ZmVHYXVzc2lhbkJsdXIgaW49IlNvdXJjZUFscGhhIiBzdGREZXZpYXRpb249IjUiLz48ZmVPZmZzZXQgZHg9IjMiIGR5PSIzIiByZXN1bHQ9IkIiLz48ZmVGbG9vZCBmbG9vZC1jb2xvcj0iIzAwMCIgZmxvb2Qtb3BhY2l0eT0iLjUiLz48ZmVDb21wb3NpdGUgaW4yPSJCIiBvcGVyYXRvcj0iaW4iIHJlc3VsdD0iQyIvPjxmZU1lcmdlPjxmZU1lcmdlTm9kZSBpbj0iQyIvPjxmZU1lcmdlTm9kZSBpbj0iU291cmNlR3JhcGhpYyIvPjwvZmVNZXJnZT48L2ZpbHRlcj48bGluZWFyR3JhZGllbnQgaWQ9IkMiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNkN2Q3ZDciLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM2MjYyNjIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48ZyBmaWx0ZXI9InVybCgjQSkiIGZpbGw9IiNjMWMxYzEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkuNSA0LjUpIiBjbGFzcz0iQiBFIj48cGF0aCBkPSJNMTYuNzUyNSAyODYuNzI5OEM2LjcwNjYgMjc1Ljc0NTUgMCAyNTMuODA5NyAwIDIzNC41OTA5YzAtMTkuMjA2MSA1LjAyNjYtMzcuMDMyIDE3LjU4OTEtNDYuNjMzNmgtLjgzNTdMMjE0LjQyOTIgMHYxMjcuNTk2NGMtMjEuNzc4NCAyMC41NzYyLTUxLjA5MzkgNDMuOTA1Ny0xMjQuODAyOCAxMDguMzg5MWwuODM1NyAxLjM1NTJjMzkuMzY3MyAyOC44MjIgODQuNTk4OCA3Mi43MTYzIDEyMy45NjYyIDExMS4xMjk3djEyOC45NjZ6Ii8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNTAwLjU3MTYgLjAwMTcpIj48cGF0aCBkPSJNMTk3LjY3NjEgMTkwLjY5NTZjMTAuMDM4NSAxMC45ODUgMTYuNzUyMyAzMi45MzE3IDE2Ljc1MjMgNTIuMTM5NnMtNS4wMjY4IDM3LjAzMDgtMTcuNTk2MiA0Ni42MzM2aC44NDQzTDAgNDc3LjQyNjZWMzQ5LjgyOTdjMjEuNzc5My0yMC41NjQ4IDUxLjA5NC00My44OTM3IDEyNC44MDM0LTEwOC4zNzc3bC0uODM1Ny0xLjM1NTNDODQuNjA3IDIxMS4yNzQ3IDM5LjM2OTIgMTY3LjM3OTkuMDAwOSAxMjguOTY3NlYweiIvPjwvZz48L2c+PGcgZmlsdGVyPSJ1cmwoI0IpIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyMTkuNSA1OS41KSIgY2xhc3M9IkIiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0Ny4yMjkgOTIuNTk1MSkiPjxwYXRoIGQ9Ik0wIDI2MS45MjM4bDE0My4xNjk4LTg3LjQ1MzRWMEwwIDg3LjIxMDl2MTc0LjcxMjl6Ii8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDQuMzMwMiA5Mi43NDA1KSI+PHBhdGggZD0iTTAgMTc0LjI3NjRsMTQyLjk4OTQgODcuMzA4MVY4Ny4xMTQyTDAgMHYxNzQuMjc2NHoiLz48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNS4yMzI1IDYuMDE0NykiPjxwYXRoIGQ9Ik0yODQuMTc0MyA4Ni41ODA1TDE0Mi4wODcyIDAgMCA4Ni41ODA1bDE0Mi4wODcyIDg2LjcyNTcgMTQyLjA4NzEtODYuNzI1N3oiLz48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ3LjMxOTYgOTIuNTk1MSkiPjxwYXRoIGQ9Ik0wIDgxLjU4NDVMMTMzLjgzMjcuMDk2NyAxMzMuNjk3NCAwIDAgODEuNTg0NXoiLz48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTMuNDg3IDkyLjU5NTEpIj48cGF0aCBkPSJNLjEzNTMgMEwwIC4wOTY3bDEzMy44MzI3IDgxLjQ4NzhMLjEzNTMgMHoiLz48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ3LjMxOTYgMTc0LjE3OTIpIj48cGF0aCBkPSJNMCAweiIvPjwvZz48cGF0aCBkPSJNMjkwLjEyODcgODcuMDE3TDE0Ny4zMTk2IDAgNC41MTA2IDg3LjAxNyAwIDg5Ljg3ODl2MTgwLjA0ODJMMTQ3LjUgMzYwbDQuNTEwNi0yLjc2NDhMMjk1IDI2OS45MjcxVjg5LjgzMDN6bS00LjUxMSAxNzcuMjgzN2wtMTMzLjc4NzUgODEuNzc4NlYxODIuNjE5NGwxMzMuOTY3OS04MS42MzMxem0tMTQyLjgwOSA4MS43Nzg2TDguODQwNyAyNjQuMjUyMVYxMDAuOTg2M2wxMzMuOTY4IDgxLjYzMzF6TTEzLjYyMjMgOTIuNjkxOWwxMzMuNjk3My04MS41MzYgMTMzLjY5NzQgODEuNTM2LTEzMy42OTc0IDgxLjQ4NzNMMTMuNDg3IDkyLjY5MTl6IiBmaWxsPSIjNDQ0Ii8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQ3LjkwNTggMTMzLjQ4NDQpIiBjbGFzcz0iQyI+PHBhdGggZD0iTTAgMTQwLjU2Nmw3Ni45MDczLTQ2LjkwMzlWMEwwIDQ2Ljg1NTN2OTMuNzEwN3oiLz48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjkuODI1NyAxMzMuNDg0NCkiIGNsYXNzPSJDIj48cGF0aCBkPSJNMCA5My42NjIxbDc2LjkwNzMgNDYuOTAzOVY0Ni44NTUzTDAgMHY5My42NjIxeiIvPjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MC42MzczIDg1LjUxMykiIGNsYXNzPSJDIj48cGF0aCBkPSJNMTUzLjM2MzggNDYuNzFMNzYuNjgxOSAwIDAgNDYuNzFsNzYuNjgxOSA0Ni44NTU0TDE1My4zNjM4IDQ2LjcxeiIvPjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNDcuMzE5NiAxMzIuMjIzKSIgY2xhc3M9IkQiPjxwYXRoIGQ9Ik0wIDQyLjEwMkw2OC45Njg1LjA5NjggNjguODc4NyAwIDAgNDIuMDUzNHYuMDQ4NnoiLz48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNzguMzUwNyAxMzIuMjIzKSIgY2xhc3M9IkQiPjxwYXRoIGQ9Ik0uMDkwMiAwTDAgLjA5NjggNjguOTY4NSA0Mi4xMDJ2LS4wNDg2TC4wOTAyIDB6Ii8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE0Ny4zMTk2IDE3NC4yNzY0KSIgY2xhc3M9IkQiPjxwYXRoIGQ9Ik0wIDB6Ii8+PC9nPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDY0Ljc3MzYgNzkuMTU5KSI+PHBhdGggZD0iTTE2MC41ODExIDQ3LjQ4NThMODIuNTQ1NiAwIDQuNTEwNiA0Ny40ODU4IDAgNTAuMjk5MnYxMDAuOTM3N2w4Mi41NDU2IDUwLjQ0NDYgNC41MTEtMi43NjQ4IDc4LjEyNTMtNDcuNjc5OFY1MC4yOTkyem0tNC41MTA5IDk4LjA3NjJsLTY5LjAxMzYgNDIuMTk4N3YtODQuMjAzNWw2OS4xMDQyLTQyLjEwMnptLTc4LjAzNTEgNDIuMTk4N0w4LjkzMDkgMTQ1LjU2MlY2MS40NTUybDY5LjEwNDIgNDIuMTAyek0xMy42Njc0IDUzLjA2NGw2OC44NzgyLTQxLjkwOCA2OC44Nzg3IDQxLjk1NjYtNjguODc4NyA0Mi4wMDQ4LTY4Ljk2ODQtNDEuOTU2NnoiLz48L2c+PC9nPjwvc3ZnPg==");',
+    },
+    { content: 'LiveCodes', style: 'font-weight: bold; font-size: 1.2em;' },
+    { content: ' - ', style: 'font-size: 1.2em;' },
+    {
+      content:
+        window.deps.translateString('generic.tagline', 'A Code Playground That Just Works!') + '\n',
+      style: 'font-style: italic; font-size: 1.2em;',
+    },
+    {
+      content: window.deps.translateString('about.version.app', `App version: {{APP_VERSION}}`, {
+        APP_VERSION: predefinedValues.APP_VERSION,
+      }),
+      style: 'padding: 0.2em 0.4em; border-radius: 0.5em; background: hsl(0,0%,40%); color: white;',
+    },
+    { content: ' ', style: '' },
+    {
+      content: window.deps.translateString('about.version.sdk', `SDK version: {{SDK_VERSION}}`, {
+        SDK_VERSION: predefinedValues.SDK_VERSION,
+      }),
+      style: 'padding: 0.2em 0.4em; border-radius: 0.5em; background: hsl(0,0%,40%); color: white;',
+    },
+    { content: ' ', style: '' },
+    {
+      content: window.deps.translateString('about.version.commit', `Git commit: {{COMMIT_SHA}}`, {
+        COMMIT_SHA: predefinedValues.COMMIT_SHA,
+      }),
+      style: 'padding: 0.2em 0.4em; border-radius: 0.5em; background: hsl(0,0%,40%); color: white;',
+    },
+    { content: '\n\n', style: '' },
+    {
+      content: window.deps.translateString(
+        'app.consoleMessage.learnMore',
+        'Learn more! {{docsUrl}} 🚀',
+        { docsUrl },
+      ),
+      style: 'padding: 0.2em 0.4em; font-size: 1.1em;',
+    },
+  ];
+
+  const message = items.reduce(
+    (acc, item) => {
+      acc[0] += `%c${item.content}`;
+      acc.push(item.style);
+      return acc;
+    },
+    [''],
+  );
+
+  parent.postMessage({ args: 'console-message', payload: message }, location.origin);
+};
+
 const resizeEditors = () => {
   Object.values(editors).forEach((editor: CodeEditor) => {
     setTimeout(() => {
@@ -2290,6 +2407,51 @@ const handleResultButton = () => {
 
 const handleShareButton = () => {
   eventsManager.addEventListener(UI.getShareButton(), 'click', () => showScreen('share'));
+};
+
+const handleI18nMenu = () => {
+  const menuContainer = UI.getI18nMenuContainer();
+  const i18nMenu = document.createElement('ul');
+  i18nMenu.id = 'app-menu-i18n';
+  i18nMenu.className = 'dropdown-menu';
+  Object.entries(appLanguages).forEach(([langCode, langLabel]) => {
+    const li = document.createElement('li');
+    li.classList.toggle('active', langCode === getConfig().appLanguage);
+    const link = document.createElement('a');
+    link.href = `#`;
+    link.textContent = langLabel;
+    eventsManager.addEventListener(link, 'click', (ev) => {
+      ev.preventDefault();
+      if (langCode === getConfig().appLanguage) return;
+      checkSavedAndExecute(async () => {
+        setUserConfig({ appLanguage: langCode as AppLanguage });
+        if (!i18n && langCode !== 'en') {
+          modal.show(loadingMessage(), { size: 'small' });
+          await loadI18n(langCode as AppLanguage);
+        }
+        await i18n?.changeLanguage(langCode);
+        setAppLanguage(true);
+      })();
+    });
+    li.appendChild(link);
+    i18nMenu.appendChild(li);
+  });
+  const sep = document.createElement('li');
+  sep.role = 'separator';
+  i18nMenu.appendChild(sep);
+  const contributeLi = document.createElement('li');
+  const contributeLink = document.createElement('a');
+  contributeLink.href =
+    'https://github.com/live-codes/livecodes/blob/develop/docs/docs/contribution/i18n.md';
+  contributeLink.textContent = window.deps.translateString(
+    'app.i18nMenu.helpTranslate',
+    'Help Us Translate',
+  );
+  contributeLink.target = '_blank';
+  contributeLink.rel = 'noopener noreferrer';
+  contributeLi.appendChild(contributeLink);
+  i18nMenu.appendChild(contributeLi);
+  menuContainer.appendChild(i18nMenu);
 };
 
 const handleEditorTools = () => {
@@ -2559,6 +2721,49 @@ const handleSettings = () => {
     setConfig({ ...getConfig(), delay: value });
     setUserConfig(getUserConfig(getConfig()));
   });
+
+  const themeColorSelector = UI.getThemeColorSelector()!;
+  themeColors.forEach((colorItem) => {
+    const customColor = colorItem.name === 'custom';
+    const label = document.createElement('label');
+    label.htmlFor = 'theme-color-' + colorItem.name;
+    if (customColor) {
+      label.title = window.deps.translateString('app.themeColors.custom', 'Custom');
+    }
+    if (colorItem.themeColor) {
+      label.style.backgroundColor = colorItem.themeColor;
+    }
+
+    const input = document.createElement('input');
+    input.type = customColor ? 'color' : 'radio';
+    input.id = 'theme-color-' + colorItem.name;
+    input.name = 'theme-color';
+
+    label.appendChild(input);
+    themeColorSelector.appendChild(label);
+
+    eventsManager.addEventListener(input, 'input', () => {
+      setUserConfig({ themeColor: customColor ? input.value : colorItem.themeColor });
+      changeThemeColor();
+    });
+  });
+};
+
+const handleChangeTheme = () => {
+  const lightThemeButton = UI.getLightThemeButton();
+  const darkThemeButton = UI.getDarkThemeButton();
+  if (lightThemeButton) {
+    eventsManager.addEventListener(lightThemeButton, 'click', () => {
+      setUserConfig({ theme: 'dark' });
+      setTheme('dark', getConfig().editorTheme);
+    });
+  }
+  if (darkThemeButton) {
+    eventsManager.addEventListener(darkThemeButton, 'click', () => {
+      setUserConfig({ theme: 'light' });
+      setTheme('light', getConfig().editorTheme);
+    });
+  }
 };
 
 const handleLogin = () => {
@@ -2754,7 +2959,7 @@ const handleSaveAsTemplate = () => {
 
 const handleOpen = () => {
   const createList = async () => {
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
     const openModule: typeof import('./UI/open') = await import(baseUrl + '{{hash:open.js}}');
     await openModule.createSavedProjectsList({
       eventsManager,
@@ -2783,7 +2988,7 @@ const handleOpen = () => {
 
 const handleImport = () => {
   const createImportUI = async () => {
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
     const importModule: typeof import('./UI/import') = await import(baseUrl + '{{hash:import.js}}');
     importModule.createImportUI({
       baseUrl,
@@ -2967,7 +3172,7 @@ const handleDeploy = () => {
       );
       return;
     }
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
 
     const getProjectDeployRepo = async () => {
       if (!projectId) return;
@@ -3018,7 +3223,7 @@ const handleSync = () => {
       );
       return;
     }
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
 
     const syncUIModule: typeof import('./UI/sync-ui') = await import(
       baseUrl + '{{hash:sync-ui.js}}'
@@ -3128,7 +3333,7 @@ const handlePersistentStorage = async () => {
 
 const handleBackup = () => {
   const createBackupUI = async () => {
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
     const backupModule: typeof import('./UI/backup') = await import(baseUrl + '{{hash:backup.js}}');
     backupModule.createBackupUI({
       baseUrl,
@@ -3150,7 +3355,7 @@ const handleBroadcast = () => {
   if (isEmbed) return;
 
   const createBroadcastUI = async () => {
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
 
     const syncUIModule: typeof import('./UI/broadcast') = await import(
       baseUrl + '{{hash:broadcast.js}}'
@@ -3186,7 +3391,7 @@ const handleWelcome = () => {
   if (isEmbed) return;
 
   const createWelcomeUI = async () => {
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
 
     const div = document.createElement('div');
     div.innerHTML = welcomeScreen.replace(/{{baseUrl}}/g, baseUrl);
@@ -3421,7 +3626,7 @@ const handleEmbed = () => {
       getFontFamily,
     });
   const createEmbedUI = async () => {
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
 
     const embedModule: typeof import('./UI/embed-ui') = await import(
       baseUrl + '{{hash:embed-ui.js}}'
@@ -3480,7 +3685,7 @@ const handleEditorSettings = () => {
   const createEditorSettingsUI = async ({
     scrollToSelector = '',
   }: { scrollToSelector?: string } = {}) => {
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
 
     const editorSettingsModule: typeof import('./UI/editor-settings') = await import(
       baseUrl + '{{hash:editor-settings.js}}'
@@ -3513,7 +3718,7 @@ const handleEditorSettings = () => {
 const handleAssets = () => {
   let assetsModule: typeof import('./UI/assets');
   const loadModule = async () => {
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
     assetsModule = assetsModule || (await import(baseUrl + '{{hash:assets.js}}'));
   };
 
@@ -3570,7 +3775,7 @@ const handleAssets = () => {
 const handleSnippets = () => {
   let snippetsModule: typeof import('./UI/snippets');
   const loadModule = async () => {
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
     snippetsModule = snippetsModule || (await import(baseUrl + '{{hash:snippets.js}}'));
   };
 
@@ -3641,7 +3846,7 @@ const handleExternalResources = () => {
       dispatchChangeEvent();
     };
 
-    modal.show(loadingMessage());
+    modal.show(loadingMessage(), { size: 'small' });
     const resourcesModule: typeof import('./UI/resources') = await import(
       baseUrl + '{{hash:resources.js}}'
     );
@@ -4205,6 +4410,7 @@ const setAppLanguage = (reload: boolean = false) => {
   document.documentElement.lang = lang;
   document.documentElement.dir = i18n?.getLanguageDirection() ?? 'ltr';
   if (isEmbed || params.appLanguage) return;
+
   const flatten = (obj: I18nTranslationTemplate, prefix = ''): { [k: string]: string } =>
     Object.keys(obj).reduce((acc, key) => {
       const value = obj[key];
@@ -4265,6 +4471,8 @@ const extraHandlers = async () => {
   handleAppMenuSettings();
   handleAppMenuHelp();
   handleSettings();
+  handleI18nMenu();
+  handleChangeTheme();
   handleProjectInfo();
   handleCustomSettings();
   handleTestEditor();
@@ -4295,6 +4503,7 @@ const extraHandlers = async () => {
   handleBroadcastStatus();
   handleDropFiles();
   handleUnload();
+  showConsoleMessage();
 };
 
 const configureEmbed = (config: Config, eventsManager: ReturnType<typeof createEventsManager>) => {
@@ -4307,8 +4516,11 @@ const configureEmbed = (config: Config, eventsManager: ReturnType<typeof createE
   }
 
   const logoLink = UI.getLogoLink();
-  logoLink.classList.add('hint--bottom-right');
-  logoLink.dataset.hint = 'Edit in LiveCodes 🡕';
+  logoLink.classList.add('hint--bottom-left');
+  logoLink.dataset.hint = window.deps.translateString(
+    'generic.embed.logoHint',
+    'Edit on LiveCodes 🡕',
+  );
   logoLink.title = '';
 
   eventsManager.addEventListener(logoLink, 'click', async (event: Event) => {
