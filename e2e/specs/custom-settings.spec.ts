@@ -8,7 +8,7 @@ test.describe('Custom Settings', () => {
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -31,7 +31,7 @@ test.describe('Custom Settings', () => {
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -58,7 +58,7 @@ test.describe('Custom Settings', () => {
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -88,7 +88,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -111,7 +111,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -134,7 +134,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -158,7 +158,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -182,7 +182,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -192,7 +192,7 @@ body
     );
     await app.click('button:has-text("Load"):visible');
 
-    await app.click('text=HTML');
+    await app.click('text="HTML"');
     await waitForEditorFocus(app);
     await page.keyboard.type('<span class="text-dark-blue-800">Hello</span>');
 
@@ -217,7 +217,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -227,7 +227,7 @@ body
     );
     await app.click('button:has-text("Load"):visible');
 
-    await app.click('text=HTML');
+    await app.click('text="HTML"');
     await waitForEditorFocus(app);
     await page.keyboard.type('<span class="text-dark-blue-800">Hello</span>');
 
@@ -251,7 +251,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -274,7 +274,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -297,7 +297,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -324,7 +324,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -344,7 +344,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -362,7 +362,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');
@@ -385,7 +385,7 @@ body
 
     const { app, getResult, waitForResultUpdate } = await getLoadedApp(page);
 
-    await app.click('[aria-label="Menu"]');
+    await app.click('[aria-label="Project"]');
     await app.click('text=Custom Settings');
     await waitForEditorFocus(app, '#custom-settings-editor');
     await page.keyboard.press('Control+A');

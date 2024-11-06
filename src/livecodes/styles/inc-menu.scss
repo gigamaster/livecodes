@@ -17,6 +17,11 @@
   left: 13rem;
 }
 
+#app-menu-container-i18n {
+  left: 15rem;
+  width: 250px;
+}
+
 @media only screen and (max-width: 1179px) {
   #app-menu-container-project {
     left: 3em;
@@ -28,6 +33,10 @@
 
   #app-menu-container-help {
     left: 7em;
+  }
+
+  #app-menu-container-i18n {
+    left: 8em;
   }
 }
 
@@ -41,7 +50,8 @@
 
     &#app-menu-project,
     &#app-menu-settings,
-    &#app-menu-help {
+    &#app-menu-help,
+    &#app-menu-i18n {
       display: block;
     }
   }
@@ -50,7 +60,8 @@
 // active
 #app-menu-help,
 #app-menu-settings,
-#app-menu-project {
+#app-menu-project,
+#app-menu-i18n {
   column-count: 1;
   left: 0;
   margin-top: 0;
@@ -61,6 +72,12 @@
     animation: fadeIn 0.4s forwards;
     display: block !important;
   }
+}
+
+#app-menu-i18n {
+  left: unset;
+  right: 15px;
+  width: 200px;
 }
 
 .menu-scroller {
@@ -151,6 +168,13 @@
   svg {
     font-size: var(--s14);
   }
+
+  a[target='_blank']::after {
+    content: '\2197';
+    display: inline-block;
+    margin: 0 0.3em;
+    width: 0.7em;
+  }
 }
 
 .dropdown-menu li:not(li[role='separator']) {
@@ -174,10 +198,9 @@
   a.subtitle {
     border-radius: inherit;
     color: inherit;
-    cursor: default;
     display: inherit;
     justify-content: space-between;
-    padding: 6px 8px; // TODO css var rel to li height (fontsize+padding)
+    padding: var(--s6) var(--s8); // TODO css var rel to li height (fontsize+padding)
     text-decoration: none;
     white-space: nowrap;
     width: 100%;
@@ -357,20 +380,6 @@ i.arrow {
   }
 }
 
-@media only screen and (max-width: 480px) and (orientation: portrait) {
-  .menu-scroller-markup,
-  .menu-scroller-style,
-  .menu-scroller-script {
-    max-width: 98vw;
-    position: fixed;
-    transform: translateX(-1vw);
-  }
-
-  .dropdown-menu-script {
-    column-count: 2;
-  }
-}
-
 .switch {
   cursor: pointer;
   display: inherit;
@@ -449,6 +458,43 @@ i.arrow {
 @media only screen and (max-width: 480px) {
   .switch div {
     transform: scale(0.6);
+  }
+}
+
+#theme-color-item {
+  padding: 6px 8px;
+
+  #theme-color-selector {
+    display: flex;
+
+    input {
+      border: 0;
+      clip: rect(1px, 1px, 1px, 1px);
+      height: 1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+
+    label {
+      border-radius: var(--rs);
+      cursor: pointer;
+      display: inline-block;
+      height: var(--s16);
+      margin: var(--s2);
+      width: var(--s16);
+
+      &[for='theme-color-custom'] {
+        background: conic-gradient(in hsl longer hue, red 0 0);
+        filter: contrast(0.5);
+      }
+
+      &:has(input:checked),
+      &:has(input:focus) {
+        outline: 1px solid var(--input-active);
+      }
+    }
   }
 }
 

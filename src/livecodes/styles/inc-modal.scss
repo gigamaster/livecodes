@@ -37,7 +37,6 @@
   font-size: var(--s12);
   max-width: 140px;
   overflow: hidden;
-  // width: fit-content; // TODO TEST
 }
 
 #modal {
@@ -53,7 +52,13 @@
   position: relative;
   width: 80vw;
 
+  &.large {
+    height: 85vh;
+    max-height: 85vh;
+  }
+
   .modal-message {
+    min-height: 3rem;
     text-align: center;
     width: 100%;
 
@@ -113,7 +118,7 @@
     a[id*='reset'],
     a[id*='sort'],
     #language-filter {
-      background-color: transparent; // todo css var
+      background-color: transparent;
       border-left: 1px solid var(--dark-bg-color);
       border-right: 1px solid var(--dark-bg-color);
       color: var(--darker-color);
@@ -226,7 +231,7 @@
     display: inline-block;
     height: 100%;
     margin: 0 auto;
-    overflow: auto; // TODO MODAL HEIGHT
+    overflow: auto;
     scrollbar-gutter: stable;
     width: 100%;
   }
@@ -330,7 +335,7 @@
     border-bottom: 1px solid var(--btn-modal-bg-active);
     display: flex;
     gap: var(--s8);
-    margin-bottom: 2rem; // TODO MARGIN
+    margin-bottom: 2rem;
     width: 100%;
 
     li {
@@ -368,10 +373,10 @@
   }
 
   &.small {
-    max-height: 32rem; // 32=512 px // TODO MODAL HEIGHT
-    min-height: 200px;
+    max-height: 32rem;
+    // min-height: 200px;
     overflow-y: auto;
-    width: 25rem; // 25=400px;
+    width: 25rem;
   }
 
   a[target='_blank']::after {
@@ -382,8 +387,32 @@
   }
 
   #about-screen-container {
-    #about-logo img {
+    .about-logo {
+      width: 100%;
+
+      img {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .about-version {
+      background: var(--darker-bg-color);
+      border-radius: var(--rs);
       margin-bottom: 1rem;
+      padding: 0.5rem 1rem;
+
+      li {
+        display: inline-block;
+        width: 100%;
+      }
+
+      a {
+        display: inline-block;
+      }
+    }
+
+    .about-credits {
+      margin-bottom: 0;
     }
   }
 
@@ -437,14 +466,13 @@
       cursor: pointer;
       height: auto;
       margin: 0;
-      // opacity: 0.6;
       padding: 8px;
       text-align: center;
       width: 32px;
 
       &:focus,
       &:hover {
-        background: var(--btn-modal-bg-active); // TODO var bg
+        background: var(--btn-modal-bg-active);
         color: var(--btn-modal-active);
         opacity: 1;
       }
@@ -595,7 +623,7 @@
     border: 1px solid var(--color3);
     border-radius: var(--rs);
     font-variant-ligatures: discretionary-ligatures;
-    height: 140px; // TODO  HEIGHT
+    height: 140px;
     margin-bottom: var(--s16);
     max-height: 40vh;
     min-height: 5rem;
@@ -609,7 +637,7 @@
   }
 
   .error {
-    color: rgb(255, 0, 0); // TODO COLOR
+    color: rgb(255, 0, 0);
     font-weight: normal;
     margin-left: 1em;
   }
@@ -673,17 +701,17 @@
   }
 
   .img-preview {
-    aspect-ratio: 16 / 9; // 120 × 68
+    aspect-ratio: 16 / 9;
     background: var(--color2);
     border-radius: var(--rs);
-    height: auto; // 68px; // 64px;
+    height: auto;
     margin: 1rem 0 0.5rem;
-    min-width: calc(100% + 32px); // todo test 110% 120px; // 64px;
-    object-fit: contain; // cover;
+    min-width: calc(100% + 32px);
+    object-fit: contain;
   }
 
   .img-preview-larger {
-    aspect-ratio: 16 / 9; // 240 × 135
+    aspect-ratio: 16 / 9;
     height: 135px;
     margin: 0 auto var(--s8);
     object-fit: cover;
@@ -750,7 +778,6 @@
   }
 
   .label-description {
-    color: var(--light);
     float: right;
     font-size: var(--s14);
     font-weight: normal;
@@ -790,7 +817,7 @@
     height: var(--s32);
     margin: 1rem;
     max-width: calc(100% - 2rem);
-    padding: 0 1rem;
+    padding: 0.1rem 1rem;
     position: absolute;
     top: 0;
     width: 100%;
@@ -920,7 +947,7 @@
     }
 
     .user-tag {
-      background-color: var(--btn-bg-active); // todo css var
+      background-color: var(--btn-bg-active);
       color: var(--btn-active);
     }
   }
@@ -1083,16 +1110,17 @@
     width: 100%;
 
     li {
-      background: var(--btn-modal-bg-color);
+      background: var(--thumbnail-bg-color);
       border-radius: var(--rs);
-      color: var(--btn-modal-color);
+      color: var(--thumbnail-color);
       text-align: center;
       transition: background 0.5s ease-in-out;
-      width: calc(20% - var(--s4));
+      width: calc(25% - var(--s4));
     }
 
     li:hover {
-      background: var(--btn-modal-bg-active);
+      background: var(--thumbnail-bg-active);
+      color: var(--thumbnail-active);
     }
 
     a {
@@ -1103,8 +1131,8 @@
     }
 
     img {
-      height: 32px;
-      width: 32px;
+      height: 48px;
+      max-width: 40%;
     }
   }
 
@@ -1407,7 +1435,19 @@
     margin-bottom: 1rem;
   }
 
+  #welcome-screen-container {
+    flex-direction: column;
+    margin: 1rem 1rem 2rem;
+    max-height: 38rem;
 
+    &.no-recent {
+      height: 26rem;
+    }
+
+    li {
+      white-space: nowrap;
+    }
+  }
 
   #welcome-start {
     .default-template-li {
@@ -1426,7 +1466,13 @@
 
   #welcome-recover {
     display: none;
+    max-height: 15em;
     overflow: hidden;
+    transition: max-height 0.7s ease-out;
+
+    &.cancelled {
+      max-height: 0;
+    }
 
     .welcome-recover-content {
       background: var(--darker-bg-color);
@@ -1446,7 +1492,7 @@
       display: flex;
 
       font-size: var(--s14);
-      margin: 0.5rem 0.25rem;
+      margin: 0.5rem 0;
 
       a {
         color: var(--light);
@@ -1482,18 +1528,27 @@
   }
 
   @media only screen and (max-width: 768px) {
-    #modal {
-      .modal-section {
-        width: 100%; // todo column
+    #welcome-container {
+      .modal-screen-container {
+        flex-wrap: nowrap;
+        max-height: unset;
 
-        ul.modal-docs {
-          columns: 1;
+        &.no-recent {
+          height: unset;
         }
       }
+    }
 
-      .modal-section#welcome-recover {
-        order: -1;
+    .modal-section {
+      width: 100%;
+
+      ul.modal-docs {
+        columns: 1;
       }
+    }
+
+    .modal-section#welcome-recover {
+      order: -1;
     }
   }
 }
@@ -1503,7 +1558,7 @@
     align-items: flex-start;
     display: flex;
     flex-direction: column;
-    flex-grow: 0.8; // TODO FLEX ?
+    flex-grow: 0.8;
     justify-content: space-around;
     width: 100%;
   }
@@ -1665,12 +1720,12 @@
 }
 
 @media only screen and (max-width: 1024px) {
-  #modal,
-  #modal.small {
+  #modal {
     min-height: 23rem;
   }
 
   #modal.small {
+    min-height: 3rem;
     width: 23rem;
   }
 
@@ -1690,13 +1745,17 @@
     display: none !important;
   }
 
+  #modal ul.thumbnails li {
+    width: calc(33% - var(--s4));
+  }
+
   #modal input#search-assets,
   #modal input#search-projects {
     width: 50%;
   }
 }
 
-@media only screen and (max-width: 480px) and (orientation: portrait) {
+@media only screen and (max-width: 480px) {
   #modal {
     .modal-screen-container {
       padding: 1rem 0 0;
@@ -1775,7 +1834,7 @@
     }
 
     ul.thumbnails li {
-      width: calc(33% - var(--s4));
+      width: calc(50% - var(--s4));
     }
   }
 

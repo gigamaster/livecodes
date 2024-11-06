@@ -702,6 +702,13 @@ export interface EditorConfig {
   theme: Theme;
 
   /**
+   * Sets the app theme color.
+   * If `undefined`, it is set to `"hsl(214, 40%, 50%)"`.
+   * @default undefined
+   */
+  themeColor: string | undefined;
+
+  /**
    * Sets the [code editor](https://livecodes.io/docs/features/editor-settings) themes.
    *
    * See docs for [editor themes](https://livecodes.io/docs/configuration/configuration-object#editortheme) for details.
@@ -720,7 +727,7 @@ export interface EditorConfig {
   fontFamily: string | undefined;
 
   /**
-   * Sets the [code editor](https://livecodes.io/docs/features/editor-settings) font size.
+   * Sets the font size.
    *
    * If `undefined` (the default), the font size is set to 14 for the full app and 12 for [embeds](https://livecodes.io/docs/features/embeds).
    * @default undefined
