@@ -88,10 +88,11 @@ const translation = {
       hint: 'UI Language',
     },
     i18nMenu: {
+      docs: 'i18n Documentation',
       helpTranslate: 'Help Us Translate',
     },
     logo: {
-      title: 'LiveCodes: Code Playground That Just Works!',
+      title: 'LiveCodes: A Code Playground That Just Works!',
     },
     projectInfo: {
       hint: 'Project Info',
@@ -357,10 +358,6 @@ const translation = {
     searchRepo: 'Search your public repos...',
   },
   editorSettings: {
-    appLanguage: {
-      heading: 'App UI Language',
-      note: 'Will reload the app to apply the changes after switching the language.',
-    },
     closeBrackets: 'Auto-close brackets and quotes',
     codeJarDesc: '<1></1> * The marked features are not available in CodeJar.',
     default: 'Default',
@@ -600,6 +597,9 @@ const translation = {
     showSpacing: {
       heading: 'Show Spacing',
       hint: 'Press Alt/Option and move your cursor over result page',
+    },
+    showWelcome: {
+      title: 'Show Welcome screen on startup',
     },
     snippets: 'Code Snippets …',
     source: 'Source code on GitHub',

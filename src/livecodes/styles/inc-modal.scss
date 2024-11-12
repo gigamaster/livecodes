@@ -767,7 +767,8 @@
     margin-bottom: var(--s8);
   }
 
-  label + .input-container {
+  label + .input-container,
+  #editor-settings-form .input-container:not(.field-note) {
     background: var(--input-container);
     border-radius: var(--rs);
     padding: var(--s6);
@@ -1461,6 +1462,19 @@
 
     #no-default-template {
       padding: var(--s4) var(--s12);
+    }
+
+    #welcome-link-load-default {
+      width: fit-content;
+    }
+
+    #welcome-default-template-info {
+      display: inline-block;
+      width: fit-content;
+
+      &::after {
+        display: none;
+      }
     }
   }
 
