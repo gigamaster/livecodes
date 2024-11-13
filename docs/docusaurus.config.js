@@ -198,8 +198,7 @@ const config = {
             ],
           },
         ],
-        copyright: `<br /> Released under the MIT License
-        © ${new Date().getFullYear()}
+        copyright: `<br /> Released under the MIT License © ${new Date().getFullYear()}
         <a href="https://github.com/hatemhosny" target="_blank" rel="noopener noreferrer">Hatem Hosny</a>`,
       },
       prism: {

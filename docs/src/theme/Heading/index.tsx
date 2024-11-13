@@ -13,7 +13,8 @@ import styles from './styles.module.css';
  */
 export default function HeadingWrapper(props) {
   const { docContent, updateContent } = useContext(CustomContentContext);
-  const [id] = props.id;
+  //const [id] = props.id;
+  const [id, customContentOption] = props.id?.split('-custom-content-') || [''];
 
   useEffect(() => {
     if (props.as === 'h1') {
