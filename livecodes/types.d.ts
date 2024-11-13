@@ -298,7 +298,7 @@ declare module "sdk/models" {
          * (e.g. a [self-hosted app](https://livecodes.io/docs/features/self-hosting) or a [permanent URL](https://livecodes.io/docs/features/permanent-url)).
          *
          * If supplied with an invalid URL, an error is thrown.
-         * @default 'https://livecodes.io'
+         * @default 'https://gigamaster.github.io/livecodes/'
          */
         appUrl?: string;
         /**
@@ -1418,7 +1418,6 @@ declare module "livecodes/vendors" {
     export const graphreCdnUrl: string;
     export const handlebarsBaseUrl: string;
     export const highlightjsUrl: string;
-    export const hintCssUrl: string;
     export const hpccJsCdnUrl: string;
     export const imbaBaseUrl: string;
     export const jestTypesUrl: string;
@@ -4094,10 +4093,11 @@ declare module "livecodes/i18n/locales/en/translation" {
                 readonly hint: "UI Language";
             };
             readonly i18nMenu: {
+                readonly docs: "i18n Documentation";
                 readonly helpTranslate: "Help Us Translate";
             };
             readonly logo: {
-                readonly title: "LiveCodes: Code Playground That Just Works!";
+                readonly title: "LiveCodes: A Code Playground That Just Works!";
             };
             readonly projectInfo: {
                 readonly hint: "Project Info";
@@ -4363,10 +4363,6 @@ declare module "livecodes/i18n/locales/en/translation" {
             readonly searchRepo: "Search your public repos...";
         };
         readonly editorSettings: {
-            readonly appLanguage: {
-                readonly heading: "App UI Language";
-                readonly note: "Will reload the app to apply the changes after switching the language.";
-            };
             readonly closeBrackets: "Auto-close brackets and quotes";
             readonly codeJarDesc: "<1></1> * The marked features are not available in CodeJar.";
             readonly default: "Default";
@@ -4606,6 +4602,9 @@ declare module "livecodes/i18n/locales/en/translation" {
             readonly showSpacing: {
                 readonly heading: "Show Spacing";
                 readonly hint: "Press Alt/Option and move your cursor over result page";
+            };
+            readonly showWelcome: {
+                readonly title: "Show Welcome screen on startup";
             };
             readonly snippets: "Code Snippets …";
             readonly source: "Source code on GitHub";
@@ -5588,14 +5587,13 @@ declare module "livecodes/editor/codejar/prism-themes" {
 declare module "livecodes/UI/editor-settings" {
     import type { createEventsManager } from "livecodes/events/index";
     import type { createModal } from "livecodes/modal";
-    import type { AppLanguage, EditorLibrary, FormatFn, UserConfig } from "livecodes/models";
+    import type { EditorLibrary, FormatFn, UserConfig } from "livecodes/models";
     import type { createEditor } from "livecodes/editor/create-editor";
-    export const createEditorSettingsUI: ({ baseUrl, modal, eventsManager, scrollToSelector, appLanguages, deps, }: {
+    export const createEditorSettingsUI: ({ baseUrl, modal, eventsManager, scrollToSelector, deps, }: {
         baseUrl: string;
         modal: ReturnType<typeof createModal>;
         eventsManager: ReturnType<typeof createEventsManager>;
         scrollToSelector: string;
-        appLanguages: Record<Exclude<AppLanguage, 'auto'>, string>;
         deps: {
             getUserConfig: () => UserConfig;
             createEditor: typeof createEditor;
