@@ -688,7 +688,7 @@ a#result-button {
 
 .result {
   #toolbar {
-    background: rgb(0, 0, 0, 0.05);
+    background: var(--toolbar-bg-color, rgb(0, 0, 0, 0.05));
     border-bottom: var(--toolbar-border, 1px solid black);
     border-bottom-left-radius: var(--rs);
     border-left: var(--toolbar-border, 1px solid black);

@@ -106,10 +106,12 @@ Source: https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
 @import "github-markdown-css";
 
 body {
-  border: 1px solid #e1e4e8;
-  border-radius: 4px;
-  padding: 20px;
-  margin: 20px !important;
+  background: #fff;
+  border-radius: 0.5em;
+  color: #111;
+  margin: 1em;
+  padding: 1em;
+  font: 1em sans-serif;
 }
 `.trimStart(),
   },

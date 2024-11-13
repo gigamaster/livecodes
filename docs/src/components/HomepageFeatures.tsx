@@ -20,6 +20,56 @@ interface FeatureItem {
 
 const FeatureList1: FeatureItem[] = [
   {
+    title: 'Standalone App',
+    image: './img/star.svg',
+    description: (
+      <>
+        Use the <Link to="./getting-started#standalone-app">standalone web app</Link> for quick
+        prototyping, testing new ideas or learning a new framework/language.
+        Local storage is used to store user preferences and{' '}
+        <Link to="./features/user-settings">settings</Link>. Organize your{' '}
+        <Link to="./features/projects">projects</Link> and{' '}
+        <Link to="./features/assets">assets</Link>. <Link to="./features/share">Share</Link> code
+        with friends. <Link to="./features/deploy">Deploy</Link> projects to public URLs.
+      </>
+    ),
+  },
+  {
+    title: 'Embedded Playgrounds',
+    image: './img/add-frame.svg',
+    description: (
+      <>
+        LiveCodes can be <Link to="./features/embeds">embedded</Link> in your web pages. Code can be
+        easily <Link to="./features/code-prefill">prefilled</Link>. This is particularly useful for
+        educational websites and for library documentations. It is{' '}
+        <Link to="./features/security">secure</Link> and highly{' '}
+        <Link to="./configuration">configurable</Link>.{' '}
+        <Link to="./features/intellisense">Intellisense</Link> is available even for custom
+        libraries!
+      </>
+    ),
+  },
+  {
+    title: 'Developer-Friendly',
+    image: './img/code.svg',
+    description: (
+      <>
+        It is easy to <Link to="./getting-started">get started</Link>. LiveCodes is highly{' '}
+        <Link to="./configuration/configuration-object">configurable</Link> (even by URL{' '}
+        <Link to="./configuration/query-params">query params</Link>). The{' '}
+        <Link to="./sdk/">SDK</Link> facilitates <Link to="./features/embeds">embedding</Link>{' '}
+        playgrounds and allows easy <Link to="./sdk/js-ts#sdk-methods">communication</Link> with
+        them. The SDK is available for <Link to="./sdk/js-ts">vanilla JS/TS</Link>,{' '}
+        <Link to="./sdk/react">React</Link>, <Link to="./sdk/vue">Vue</Link> and{' '}
+        <Link to="./sdk/svelte">Svelte</Link>. There is also a{' '}
+        <Link to="./sdk/headless">headless mode</Link> for full control over the UI.
+      </>
+    ),
+  },
+];
+
+const FeatureList2: FeatureItem[] = [
+  {
     title: 'Feature-Rich',
     image: './img/light-bulb.svg',
     description: (
@@ -66,7 +116,7 @@ const FeatureList1: FeatureItem[] = [
   },
 ];
 
-const FeatureList2: FeatureItem[] = [
+const FeatureList3: FeatureItem[] = [
   {
     title: 'Powerful Editor',
     image: './img/feather.svg',
@@ -112,54 +162,7 @@ const FeatureList2: FeatureItem[] = [
   },
 ];
 
-const FeatureList3: FeatureItem[] = [
-  {
-    title: 'Standalone App',
-    image: './img/star.svg',
-    description: (
-      <>
-        Use the <Link to="./getting-started#standalone-app">standalone app</Link> for quick
-        prototyping, testing new ideas or learning a new framework/language. The app remembers your{' '}
-        <Link to="./features/user-settings">settings</Link>. Organize your{' '}
-        <Link to="./features/projects">projects</Link> and{' '}
-        <Link to="./features/assets">assets</Link>. <Link to="./features/share">Share</Link> code
-        with friends. <Link to="./features/deploy">Deploy</Link> projects to public URLs.
-      </>
-    ),
-  },
-  {
-    title: 'Embedded Playgrounds',
-    image: './img/add-frame.svg',
-    description: (
-      <>
-        LiveCodes can be <Link to="./features/embeds">embedded</Link> in your web pages. Code can be
-        easily <Link to="./features/code-prefill">prefilled</Link>. This is particularly useful for
-        educational websites and for library documentations. It is{' '}
-        <Link to="./features/security">secure</Link> and highly{' '}
-        <Link to="./configuration">configurable</Link>.{' '}
-        <Link to="./features/intellisense">Intellisense</Link> is available even for custom
-        libraries!
-      </>
-    ),
-  },
-  {
-    title: 'Developer-Friendly',
-    image: './img/code.svg',
-    description: (
-      <>
-        It is easy to <Link to="./getting-started">get started</Link>. LiveCodes is highly{' '}
-        <Link to="./configuration/configuration-object">configurable</Link> (even by URL{' '}
-        <Link to="./configuration/query-params">query params</Link>). The{' '}
-        <Link to="./sdk/">SDK</Link> facilitates <Link to="./features/embeds">embedding</Link>{' '}
-        playgrounds and allows easy <Link to="./sdk/js-ts#sdk-methods">communication</Link> with
-        them. The SDK is available for <Link to="./sdk/js-ts">vanilla JS/TS</Link>,{' '}
-        <Link to="./sdk/react">React</Link>, <Link to="./sdk/vue">Vue</Link> and{' '}
-        <Link to="./sdk/svelte">Svelte</Link>. There is also a{' '}
-        <Link to="./sdk/headless">headless mode</Link> for full control over the UI.
-      </>
-    ),
-  },
-];
+
 
 const FeatureList4: FeatureItem[] = [
   {
@@ -201,7 +204,7 @@ const FeatureList4: FeatureItem[] = [
           <Link to="./license">
             <strong>MIT-licensed</strong>
           </Link>{' '}
-          🎉
+          ?
         </span>
         <br></br>
         Please consider <Link to="./sponsor">sponsoring LiveCodes</Link> ❤
@@ -218,7 +221,7 @@ function Feature({ title, image, description }: FeatureItem) {
           <img className={styles.featureSvg} alt={title} src={image} />
         </div>
       )}
-      <div className="text--center padding-horiz--md">
+      <div className="text--justify padding-horiz--md">
         <h3>{title}</h3>
         <p>{description}</p>
       </div>
@@ -227,9 +230,20 @@ function Feature({ title, image, description }: FeatureItem) {
 }
 
 const codeSample = `
-import { createPlayground } from "livecodes";
+<div id="my-livecodes"></div>
+<script type="module">
+  import { createPlayground } from 'livecodes'
 
-createPlayground("#container", { template: "react" });
+  createPlayground('#my-livecodes', {
+    appUrl: 'https://gigamaster.github.io/livecodes/',
+    params: {
+      markdown: '# Hello World!',
+      css: 'body{background:#111;font-family:system-ui} h1{color:dodgerblue;}',
+      js: 'console.log("Hello, from JS!");',
+      console: 'open',
+    },
+  })
+</script>
 `.trimStart();
 
 const ESMCode = () => {
@@ -256,7 +270,7 @@ createPlayground('#container', {
 export default function HomepageFeatures(): JSX.Element {
   return (
     <>
-      <section className={styles.features}>
+      <section id="features-editor" className={styles.features}>
         <div className="container">
           <div className="row">
             <Sliders></Sliders>
@@ -265,14 +279,14 @@ export default function HomepageFeatures(): JSX.Element {
             <LiveCodes
               template="react"
               style={{
-                height: '70vh',
-                width: '95%',
+                height: '65vh',
+                width: '90%',
                 boxShadow: '0 0 20px var(--ifm-color-secondary-darkest)',
               }}
               showCode={false}
               loading="eager"
             ></LiveCodes>
-            <div className="margin-vert--md">
+            <div className={'margin-vert--md ' + styles.embedPlayground}>
               <p>
                 Psst. This is an interactive playground!
                 <img
@@ -290,138 +304,28 @@ export default function HomepageFeatures(): JSX.Element {
               </p>
             </div>
           </div>
-          <div className={'row ' + styles.center}>
-            <p>Want a similar playground for your website?</p>
-          </div>
-          <div style={{ maxWidth: '35em', margin: 'auto' }}>
-            <CodeBlock language="js">{codeSample}</CodeBlock>
-          </div>
-          <div className={`row ${styles.center} ${styles.buttons}`}>
-            <Link
-              className=" button button--info button--outline button--lg"
-              to="./getting-started"
-            >
-              Get Started ✈️
-            </Link>
-            <Link className="button button--primary button--outline button--lg" to="./overview">
-              Documentations 📖
-            </Link>
-          </div>
         </div>
       </section>
       <section className={styles.rowDark}>
         <div className="container padding-vert--lg">
-          <div className="text--center padding-horiz--md">
-            <h2 className={styles.padding}>Code Playground That Just Works!</h2>
-            <div className={'row ' + styles.center}>
-              <div className={clsx('col col--6', styles.left)}>
-                <ul>
-                  <li>No servers to configure (or pay for!)</li>
-                  <li>No databases to maintain (or pay for!)</li>
-                  <li>No installs</li>
-                  <li>No configuration files</li>
-                  <li>No build steps</li>
-                  <li>
-                    No subscription fees (free and <Link to="./license/">open-source</Link>)
-                  </li>
-                  <li>No account required *</li>
-                  <li>No limits for usage (unlimited private projects)</li>
-                  <li>
-                    <Link to="./languages/">80+ languages/frameworks/processors</Link>
-                  </li>
-                  <li>
-                    Large set of <Link to="./features/">features</Link> and integrations
-                  </li>
-                  <li>
-                    <Link to="./features/import">Import</Link> code from a wide variety of sources
-                  </li>
-                  <li>
-                    Use modules from <Link to="./features/module-resolution">npm</Link>,{' '}
-                    <Link to="./features/module-resolution#deno-modules">deno.land/x</Link>,{' '}
-                    <Link to="./features/module-resolution#jsr-modules">jsr</Link>,{' '}
-                    <Link to="./features/module-resolution#githubgitlabbitbucket">GitHub</Link>, and
-                    others
-                  </li>
-                  <li>
-                    Easily <Link to="./features/embeds">embed</Link> it in your web pages
-                  </li>
-                  <li>It runs in the browser (client-side)</li>
-                </ul>
-              </div>
-              <div className={clsx('col col--6', styles.left)}>
-                <div>
-                  <p>
-                    <strong>Steps:</strong>
-                  </p>
-                  <ol className={styles.steps}>
-                    <li>
-                      Go to{' '}
-                      <a href="https://livecodes.io/" target="_blank">
-                        livecodes.io
-                      </a>
-                    </li>
-                  </ol>
-                  ... and enjoy all the <Link to="./features/">features</Link>!
-                </div>
-                <hr />
-                <div>
-                  <p>
-                    Do you want to <Link to="./features/embeds">embed</Link> it in a web page?
-                  </p>
-                  <p>Add this code to your page:</p>
-                  <div className={styles.border}>
-                    <ESMCode />
-                  </div>
-                </div>
-                <hr />
-                <div>
-                  <p>
-                    Ok, do you want to <Link to="./features/self-hosting">self-host</Link> it?
-                  </p>
-                  <ol className={styles.steps}>
-                    <li>
-                      Download a{' '}
-                      <a href="https://github.com/live-codes/livecodes/releases" target="_blank">
-                        release
-                      </a>
-                    </li>
-                    <li>
-                      Put it on a static file server (for free!)
-                      <sup>
-                        {' '}
-                        <a href="https://pages.cloudflare.com/" target="_blank" rel="noopener">
-                          1
-                        </a>
-                        ,{' '}
-                        <a href="https://vercel.com/" target="_blank" rel="noopener">
-                          2
-                        </a>
-                        ,{' '}
-                        <a href="https://www.netlify.com/" target="_blank" rel="noopener">
-                          3
-                        </a>
-                        ,{' '}
-                        <a href="https://firebase.google.com/" target="_blank" rel="noopener">
-                          4
-                        </a>
-                        ,{' '}
-                        <a href="https://pages.github.com/" target="_blank" rel="noopener">
-                          5
-                        </a>
-                      </sup>
-                    </li>
-                  </ol>
-                  ... and it just works!
-                </div>
-              </div>
-            </div>
-            <p className={styles.finePrint}>
-              * GitHub account is required only for features that use{' '}
-              <Link to="./features/github-integration">GitHub Integration</Link>.
+          <h2 className={`row ${styles.center} ${styles.padding}`}>Embedding Livecodes Playground</h2>
+          <div className={'row ' + styles.embedPlayground}>
+            <p>LiveCodes playgrounds can be embedded in any web page.<br />
+            The playground can be prefilled with code in any supported language.
+            </p>
+          </div>
+          <div style={{ maxWidth: '44em', margin: '1rem auto 2rem', borderRadius: '0.45em', boxShadow: '0 0 20px hsl(232, 29%, 30%)' }}>
+            <CodeBlock language="js">{codeSample}</CodeBlock>
+          </div>
+          <div className={'row ' + styles.embedPlayground}>
+            <p>No servers to configure and no databases to maintain or pay for!<br />
+            No account required and no limits for usage (unlimited private projects).
             </p>
           </div>
         </div>
+        <hr />
       </section>
+
       <section className={styles.rowLight}>
         <div className="container padding-vert--lg">
           <div className={'row ' + styles.center}>
@@ -471,20 +375,23 @@ export default function HomepageFeatures(): JSX.Element {
           </div>
         </div>
       </section>
+      <hr />
       <section>
         <div className={'container padding-vert--lg ' + styles.center}>
           <div className={['row', styles.carousel, styles.center].join(' ')}>
             <div className={styles.buttons}>
-              <Link className="button button--primary button--outline button--lg" to="./overview">
-                Documentations 📖
-              </Link>
-              <Link
-                className=" button button--info button--outline button--lg"
-                href="pathname:///../?new"
-                target="_blank"
-              >
-                New Project ✨
-              </Link>
+            <Link
+              className=" button button--info button--outline button--lg"
+              to="./getting-started"
+            >
+              Get Started ✈️
+            </Link>
+              <Link className="button button--primary button--outline button--lg"
+              href="pathname:///../?new"
+              target="_blank"
+            >
+              New Project ✨
+            </Link>
             </div>
           </div>
         </div>

@@ -282,7 +282,7 @@ export const createEmbedUI = async ({
   };
 
   const editor = await createEditorFn(codeArea);
-  const livecodesUrl = 'https://livecodes.io';
+  const livecodesUrl = 'https://gigamaster.github.io/livecodes/';
   const sdkUrl = permanentUrlService.getSDKUrl('umd');
   let shareUrl = await getUrlFn(true);
   let urlObj = new URL(shareUrl);
@@ -315,7 +315,7 @@ export const createEmbedUI = async ({
     };
     const importId = urlObj.searchParams.get('x');
     return {
-      ...(appUrl !== 'https://livecodes.io/' ? { appUrl } : {}),
+      ...(appUrl !== 'https://gigamaster.github.io/livecodes/' ? { appUrl } : {}), // TODO APPURL
       ...(Object.keys(config).length > 0 ? { config } : {}),
       ...(importId ? { import: importId } : {}),
       ...(data.lite ? { lite: data.lite } : {}),

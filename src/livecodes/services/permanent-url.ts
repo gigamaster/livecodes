@@ -10,6 +10,7 @@ const sdkFiles: Record<SDKFile, string> = {
   types: 'index.d.ts',
 };
 
+// TODO APPURL
 export const permanentUrlService = {
   getAppUrl: () => `https://v${process.env.VERSION}.livecodes.io/`,
   getSDKUrl: (file: SDKFile = 'esm') =>

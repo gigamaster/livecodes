@@ -66,9 +66,14 @@ export default function App() {
 
 const styles = StyleSheet.create({
   app: {
+    backgroundColor: '#fff',
+    borderRadius: 8,
+    color: '#111',
     marginHorizontal: "auto",
     marginVertical: 20,
     maxWidth: 500,
+    padding: 16,
+    textAlign: 'center',
   },
   logo: {
     height: 150,

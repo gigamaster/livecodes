@@ -13,7 +13,7 @@ import styles from './styles.module.css';
  */
 export default function HeadingWrapper(props) {
   const { docContent, updateContent } = useContext(CustomContentContext);
-  const [id, customContentOption] = props.id?.split('-custom-content-') || [''];
+  const [id] = props.id;
 
   useEffect(() => {
     if (props.as === 'h1') {
@@ -26,12 +26,6 @@ export default function HeadingWrapper(props) {
     return (
       <>
         <Heading {...{ ...props, id }} />
-        {docContent && (
-          <div
-            className={`custom-content custom-content-header ${styles.content} ${styles[customContentOption]}`}
-            dangerouslySetInnerHTML={{ __html: docContent }}
-          ></div>
-        )}
       </>
     );
   }

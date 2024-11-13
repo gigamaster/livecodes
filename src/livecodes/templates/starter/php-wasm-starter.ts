@@ -8,16 +8,22 @@ export const phpWasmStarter: Template = {
   markup: {
     language: 'html',
     content: `
-<p>
+<div class="container">
   <h1>Hello, <span id="title">world</span>!</h1>
   <img class="logo" alt="logo" src="{{ __livecodes_baseUrl__ }}assets/templates/php.svg" />
-</p>
+  <h2 id="great"></h2>
+  <p id="today"></p>
+</div>
 `.trimStart(),
   },
   style: {
     language: 'css',
     content: `
-body {
+.container {
+  background: #fff;
+  border-radius: 0.5em;
+  color: #111;
+  padding: 1em;
   text-align: center;
   font: 1em sans-serif;
 }
@@ -43,10 +49,12 @@ if ($time < 12) {
 } else {
   $greeting = "Good night!";
 }
+vrzno_eval('document.getElementById("great").innerText = "' . $greeting . '"');
 
 $date = date("l jS \\of F, Y");
 
-echo $greeting . "<br>Today is:<br>" . $date;
+vrzno_eval('document.getElementById("today").innerText = "' . $date . '"');
+
 `.trimStart(),
   },
 };

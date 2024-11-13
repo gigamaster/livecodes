@@ -3,7 +3,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 
 const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const darkCodeTheme = require('prism-react-renderer/themes/vsDark');
 
 const appPkg = require('../package.json');
 const sdkPkg = require('../src/sdk/package.sdk.json');
@@ -32,7 +32,7 @@ const config = {
         docs: {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/live-codes/livecodes/tree/develop/docs/',
+          editUrl: 'https://github.com/gigamaster/livecodes/tree/develop/docs/',
           async sidebarItemsGenerator({ defaultSidebarItemsGenerator, ...args }) {
             const sidebarItems = await defaultSidebarItemsGenerator(args);
             return excludeSidebarItems(sidebarItems);
@@ -53,8 +53,8 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'light',
-        disableSwitch: true,
+        defaultMode: 'dark',
+        disableSwitch: false,
       },
       docs: {
         sidebar: {
@@ -79,26 +79,10 @@ const config = {
             position: 'left',
             label: 'SDK',
           },
-          { href: 'https://blog.livecodes.io', target: '_self', label: 'Blog', position: 'left' },
           {
             href: 'pathname:///../stories',
             position: 'left',
             label: 'Storybook',
-          },
-          {
-            href: 'pathname:///../',
-            label: 'App',
-            position: 'right',
-          },
-          {
-            href: 'https://twitter.com/livecodes_io',
-            label: '𝕏',
-            position: 'right',
-          },
-          {
-            href: 'https://github.com/live-codes/livecodes',
-            label: 'GitHub',
-            position: 'right',
           },
         ],
       },
@@ -150,7 +134,7 @@ const config = {
                 href: 'pathname:///../?screen=import',
               },
               {
-                label: 'AI Code Assistant 🪄',
+                label: 'AI Code Assistant ?',
                 to: '/features/ai',
               },
               {
@@ -171,7 +155,7 @@ const config = {
                 to: '/license',
               },
               {
-                label: 'Sponsor 💚',
+                label: 'Sponsor',
                 to: '/sponsor',
               },
               {
@@ -197,7 +181,7 @@ const config = {
                 href: 'https://github.com/live-codes/livecodes',
               },
               {
-                label: '𝕏 / Twitter',
+                label: '?  / Twitter',
                 href: 'https://twitter.com/livecodes_io',
               },
               {
@@ -214,8 +198,8 @@ const config = {
             ],
           },
         ],
-        copyright: `<br /> Released under the MIT License <br />
-        Copyright © ${new Date().getFullYear()}
+        copyright: `<br /> Released under the MIT License
+        © ${new Date().getFullYear()}
         <a href="https://github.com/hatemhosny" target="_blank" rel="noopener noreferrer">Hatem Hosny</a>`,
       },
       prism: {

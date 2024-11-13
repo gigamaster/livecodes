@@ -9,17 +9,27 @@ export const pythonWasmStarter: Template = {
   markup: {
     language: 'html',
     content: `
-<h1 id="title">Hello, World!</h1>
-<div id="loading">Loading...</div>
-<div id="plots"></div>
-`.trimStart(),
+    <div class="container">
+    <h1 id="title">Hello, World!</h1>
+    <div id="loading">Loading...</div>
+    <div id="plots"></div>
+    </div>
+    `.trimStart(),
   },
   style: {
     language: 'css',
-    content: `h1 {
-  text-align: center;
-}
-`.trimStart(),
+    content: `
+    .container {
+      background: #fff;
+      border-radius: 0.5em;
+      color: #111;
+      padding: 1em;
+      text-align: center;
+      font: 1em sans-serif;
+      }
+      h1 {
+        text-align: center;
+      }`.trimStart(),
   },
   script: {
     language: 'python-wasm',
@@ -51,7 +61,7 @@ def prepare_data(dataframe):
   return df
 
 
-data = load_data("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/iris.csv")
+data = load_data("https://gist.githubusercontent.com/gigamaster/8bb02b9c4637baa922f51632eede0fe7/raw/seaborn.csv")
 df = pd.read_csv(data)
 df = prepare_data(df)
 

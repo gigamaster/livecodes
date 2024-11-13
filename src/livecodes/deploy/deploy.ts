@@ -174,7 +174,7 @@ export const deployedConfirmation = (deployResult: DeployResult, sourcePublished
       <p>
         Permanent link:
         <a
-          href="https://livecodes.io/?config=https://raw.githubusercontent.com/${username}/${repo}/${commit}/src/livecodes.json"
+          href="https://gigamaster.github.io/livecodes/?config=https://raw.githubusercontent.com/${username}/${repo}/${commit}/src/livecodes.json"
           target="_blank"
         >
           Edit in LiveCodes

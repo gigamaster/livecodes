@@ -52,9 +52,10 @@ export const postgresqlStarter: Template = {
 }
 
 #output table {
+  background: #ddd;
   border: 1px solid #ddd;
   border-collapse: separate;
-  border-radius: 4px;
+  border-radius: 5px;
   border-spacing: 0;
   font-size: 0.9em;
   margin: 1em;
@@ -73,7 +74,7 @@ export const postgresqlStarter: Template = {
 #output pre {
   background-color: #fafafa;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 5px;
   box-sizing: border-box;
   display: inline-block;
   margin: 1em;

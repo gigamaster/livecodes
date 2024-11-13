@@ -20,9 +20,7 @@ tag app-counter
 	prop name = "Imba"
 	prop count = 0
 
-	css self
-		text-align: center
-		font: 1em sans-serif
+	css self bg:#ffffff rd:0.5em c:#111 p:1em ta:center font: 1em sans-serif
 
 	css .btn h:2em	w:10em	fs:1em
 

@@ -4,25 +4,21 @@ import styles from './HomepageCarousel.module.css';
 
 const screenshots = [
   {
-    label: 'A large collection of languages',
-    url: './img/screenshots/slider/languages.jpg',
-  },
-  {
-    label: 'Lots of features',
-    url: './img/screenshots/slider/export.jpg',
+    label: 'Welcome screen - for a quick start',
+    url: './img/screenshots/slider/welcome.jpg',
   },
   {
     label: 'Starter templates for new projects',
     url: './img/screenshots/slider/templates1.jpg',
   },
-  {
+/*  {
+    label: 'A large collection of languages',
+    url: './img/screenshots/slider/languages.jpg',
+  },
+   {
     label: '... many starter templates',
     url: './img/screenshots/slider/templates2.jpg',
-  },
-  {
-    label: 'Welcome screen - for a quick start',
-    url: './img/screenshots/slider/welcome.jpg',
-  },
+  }, */
   {
     label: 'Keep your projects organized',
     url: './img/screenshots/slider/saved-projects.jpg',
@@ -52,8 +48,8 @@ const screenshots = [
     url: './img/screenshots/slider/import.png',
   },
   {
-    label: 'Embed projects into your web pages',
-    url: './img/screenshots/slider/embed.jpg',
+    label: 'Lots of features',
+    url: './img/screenshots/slider/export.jpg',
   },
   {
     label: 'Share your projects with others',
@@ -90,18 +86,6 @@ const screenshots = [
   {
     label: 'Backup and restore your data',
     url: './img/screenshots/slider/backup-restore.png',
-  },
-  {
-    label: 'Fine-tune your editor settings',
-    url: './img/screenshots/slider/editor-settings.png',
-  },
-  {
-    label: 'Emmet support and Vim/Emacs modes',
-    url: './img/screenshots/slider/editor-settings2.png',
-  },
-  {
-    label: 'Light theme',
-    url: './img/screenshots/slider/light-theme.jpg',
   },
   {
     label: 'Responsive layout',

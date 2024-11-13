@@ -60,6 +60,10 @@ export const prologStarter: Template = {
     content: `
 .container,
 .container button {
+  background: #fff;
+  border-radius: 0.5em;
+  color: #111;
+  padding: 1em;
   text-align: center;
   font: 1em sans-serif;
 }
@@ -72,7 +76,7 @@ export const prologStarter: Template = {
 #result {
   background-color: #fafafa;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 5px;
   box-sizing: border-box;
   color: #3d3d3d;
   margin: 1em;

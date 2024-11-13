@@ -41,7 +41,11 @@ export const vueSfcStarter: Template = {
 <style scoped>
   .container,
   .container button {
-    text-align: v-bind("align");
+    background: #fff;
+    border-radius: 0.5em;
+    color: #111;
+    padding: 1em;
+    text-align: center;
     font: 1em sans-serif;
   }
   .logo {

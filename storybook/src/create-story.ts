@@ -287,7 +287,9 @@ const argTypes: Partial<ArgTypes<LiveCodesArgs>> = {
 const appUrl =
   location.hostname.startsWith('localhost') || location.hostname.startsWith('127.0.0.1')
     ? 'http://127.0.0.1:8080'
-    : location.origin;
+    : 'https://gigamaster.github.io/livecodes/' 
+
+// TODO windows.location.origin = '/livecodes/';
 
 export const createStory =
   (createComponent: (args: LiveCodesArgs) => HTMLElement) => (args: LiveCodesArgs) => {

@@ -18,12 +18,12 @@ module.exports = {
     // },
     {
       path: './build/livecodes/*.css',
-      maxSize: '20kB',
+      maxSize: '15kB',
     },
-    // {
-    //   path: './build/livecodes/i18n-*.json',
-    //   maxSize: '10kB',
-    // },
+    {
+      path: './build/livecodes/i18n-*.json',
+      maxSize: '10kB',
+    },
   ],
   defaultCompression: 'brotli',
   normalizeFilenames: /^.+?((\.[^.]{8,}}?)|())\.\w+$/,

@@ -38,6 +38,10 @@ export const tclStarter: Template = {
     content: `
 .container,
 .container button {
+  background: #fff;
+  border-radius: 0.5em;
+  color: #111;
+  padding: 1em;
   text-align: center;
   font: 1em sans-serif;
 }

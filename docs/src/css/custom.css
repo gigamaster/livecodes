@@ -1,5 +1,6 @@
 :root {
-  --ifm-color-primary: #25c2a0;
+  --ifm-button-border-color: #2196f3;
+  --ifm-color-primary: #2196f3;
   --ifm-color-primary-dark: rgb(33, 175, 144);
   --ifm-color-primary-darker: rgb(31, 165, 136);
   --ifm-color-primary-darkest: rgb(26, 136, 112);
@@ -7,11 +8,44 @@
   --ifm-color-primary-lighter: rgb(102, 212, 189);
   --ifm-color-primary-lightest: rgb(146, 224, 208);
   --ifm-code-font-size: 95%;
+  --ifm-color-secondary-darkest: #3f7bb8;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --scrollbar-color-thumb: var(--ifm-color-secondary-dark);
+  --scrollbar-color-track: var(--ifm-navbar-background-color);
+  --scrollbar-width: thin;
+}
+
+@supports (scrollbar-width: auto) {
+  * {
+    scrollbar-color: var(--scrollbar-color-thumb) var(--scrollbar-color-track);
+    scrollbar-width: var(--scrollbar-width);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 2em;
 }
 
 html[data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+html[data-theme='dark'] .navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+html[data-theme='light'] .navbar {
+  background-color: rgba(250, 250, 250, 0.8);
+}
+
+.navbar {
+  backdrop-filter: blur(10px);
+  box-shadow: var(--ifm-navbar-shadow);
+  display: flex;
+  height: var(--ifm-navbar-height);
+  opacity: 0.7;
+  padding: var(--ifm-navbar-padding-vertical) var(--ifm-navbar-padding-horizontal);
 }
 
 [target='_self'] svg {
@@ -31,6 +65,17 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
   padding: 0;
 }
 
+hr {
+  background-color: var(--ifm-navbar-background-color);
+  background-image: linear-gradient(270deg, rgba(0, 0, 0, 0) 14%, #3f51b5, rgba(0, 0, 0, 0) 86%) !important;
+  border: 0;
+  box-sizing: content-box;
+  color: hsla(var(--white-color-hsl), 0.05);
+  height: 1px !important;
+  margin: 2rem 0;
+  overflow: visible;
+}
+
 .status-link > span::after {
   background-color: #20bf6b;
   border-radius: 50%;
@@ -47,4 +92,15 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 
 body[data-origin-not-allowed='true'] #kapa-widget-container {
   display: none !important;
+}
+
+.footer {
+  background-color: var(--ifm-footer-background-color);
+  color: var(--ifm-footer-color);
+  padding: var(--ifm-footer-padding-vertical) var(--ifm-footer-padding-horizontal) 0.5em;
+}
+
+.footer__copyright {
+  border-top: 1px dotted rgba(0, 0, 0, 0.5);
+  font-size: 0.85rem;
 }

@@ -309,7 +309,7 @@ export interface EmbedOptions {
    * (e.g. a [self-hosted app](https://livecodes.io/docs/features/self-hosting) or a [permanent URL](https://livecodes.io/docs/features/permanent-url)).
    *
    * If supplied with an invalid URL, an error is thrown.
-   * @default 'https://livecodes.io'
+   * @default 'https://gigamaster.github.io/livecodes/'
    */
   appUrl?: string;
 

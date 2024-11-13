@@ -1,5 +1,16 @@
+html[data-theme='dark'] .features {
+  background-color: #18191c;
+}
+
+html[data-theme='light'] .features {
+  background-color: #eee;
+}
+
 .features {
   align-items: center;
+  background: radial-gradient(#4c4f5a 6%, transparent 6%), #18191c;
+  background-position: 0 0, 25px 25px;
+  background-size: 25px 25px;
   display: flex;
   padding: 1rem 0;
   width: 100%;
@@ -9,6 +20,21 @@
   display: flex;
   justify-content: center;
   text-align: center;
+}
+
+.embedPlayground {
+  background-color: var(--ifm-navbar-background-color);
+  border: 1px solid #3f51b5;
+  border-radius: 0.45em;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  width: 44em;
+}
+
+.embedPlayground p {
+  margin: 1rem 0;
 }
 
 .left {
@@ -28,7 +54,7 @@
 
 .steps {
   background-color: var(--ifm-pre-background);
-  border: 1px solid grey;
+  border: 1px solid var(--ifm-color-secondary-dark);
   border-radius: 3px;
   margin-bottom: 2em;
   padding: 0.5em;
@@ -36,7 +62,7 @@
 }
 
 .border {
-  border: 1px solid grey;
+  border: 1px solid var(--ifm-color-secondary-dark);
   border-radius: 3px;
   overflow: hidden;
   padding: 0;
@@ -52,11 +78,19 @@
   width: 100px;
 }
 
-.rowLight {
-  background-color: rgb(250, 250, 250);
+html[data-theme='dark'] .rowLight {
+  background-color: transparent;
 }
 
-.rowDark {
+html[data-theme='light'].rowLight {
+  background-color: hsl(0, 0%, 98%);
+}
+
+html[data-theme='dark'] .rowDark {
+  background-color: hsl(227, 28%, 15%);
+}
+
+html[data-theme='light'] .rowDark {
   background-color: var(--ifm-color-secondary-lighter);
 }
 
@@ -74,4 +108,8 @@
   margin-bottom: -2em;
   margin-top: 2em;
   text-align: center;
+}
+
+.text--justify {
+  text-align: justify;
 }
